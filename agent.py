@@ -145,9 +145,9 @@ def llm_summary(state: AgentState) -> AgentState:
 
 def clear_output_dir():
     files_to_keep = [".gitignore", "graph.png", "generate_plots.py"]
-    for file_name in os.listdir("./agent/output/"):
+    for file_name in os.listdir("./output/"):
         if file_name not in files_to_keep:
-            file_path = os.path.join("./agent/output/", file_name)
+            file_path = os.path.join("./output/", file_name)
             try:
                 if os.path.isfile(file_path):
                     os.remove(file_path)
@@ -172,13 +172,13 @@ def llm_generate_code(state: AgentState) -> AgentState:
         der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
         
         Die Daten können mit folgendem Befehl geladen werden:
-        `df = pd.read_csv("./agent/data/pegel.csv", sep=";")`
+        `df = pd.read_csv("./data/pegel.csv", sep=";")`
         
         Vorgaben für den Code:
         - Verwende ausschließlich `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, `basemap`.
         - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
         - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
-          `./agent/output/<plot_name>.png`
+          `./output/<plot_name>.png`
         - Wähle Diagrammtypen entsprechend der Datenbedeutung:
           - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
           - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
@@ -210,7 +210,7 @@ def llm_generate_code(state: AgentState) -> AgentState:
 
 def test_generated_code(state: AgentState) -> AgentState:
     """Testet den vom LLM generierten Code für die Datenvisualisierung."""
-    generated_code_test_result = subprocess.run([sys.executable, "./agent/output/generate_plots.py"],
+    generated_code_test_result = subprocess.run([sys.executable, "./output/generate_plots.py"],
                                                 capture_output=True, text=True)
     # we save both stdout and stderr to see what the LLM produced and to determine if code must be regenerated
     if generated_code_test_result.stdout:
@@ -307,7 +307,7 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
 def _generate_and_write_code(state: AgentState, temp_agent) -> AgentState:
     llm_response = temp_agent.invoke({"messages": state["messages"]})
     state["messages"] = llm_response["messages"]
-    with open("./agent/output/generate_plots.py", "w", encoding="UTF-8") as f:
+    with open("./output/generate_plots.py", "w", encoding="UTF-8") as f:
         print(f"{bcolors.HEADER}LLM regenerated code: {bcolors.ENDC}")
         code: Code = llm_response["structured_response"]
         state["code"] = code
@@ -358,15 +358,15 @@ agent = graph.compile()
 
 png_bytes = agent.get_graph().draw_mermaid_png()
 
-with open("./agent/output/graph.png", "wb") as f:
+with open("./output/graph.png", "wb") as f:
     f.write(png_bytes)
 
 print("Saved graph.png successfully.")
 
 result = agent.invoke(
     {
-        "dataset_path": "./agent/data/pegel.csv",
-        "metadata_path": "./agent/data/pegel.rdf",
+        "dataset_path": "./data/pegel.csv",
+        "metadata_path": "./data/pegel.rdf",
         "regeneration_attempts": 0
     }
 )

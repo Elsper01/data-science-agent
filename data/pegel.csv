@@ -1,0 +1,820 @@
+pegelNummer;pegelName;betreiber;gewaesser;geogrLaenge;geogrBreite;von;bis;parameter;stillgelegtAm;isDFUE;einzugsgebiet;pnp;pnp_gueltig_ab;gewaesserfolge
+114538;Amtmannseck;LKN, Husum;Bongsieler Kanal;8.811173;54.686359;2003-11-28;;Wasserstand;2011-11-14;false;;-5.030000;2003-11-24;
+114232;Aumühle;LKN, Itzehoe;Schwarze Au;10.291988;53.531593;1984-11-01;;Wasserstand;1992-10-31;false;83.9;14.060000;1994-11-01;
+114082;Farchau;LKN, Kiel;Jutebek;10.756040;53.677513;1999-05-01;;Wasserstand;2001-01-31;false;;0.000000;1999-05-01;
+114430;Flensburg-Nikolaiallee;LKN, Husum;Mühlenstrom (Flensburg);9.422582;54.774818;2000-02-01;;Wasserstand;2012-01-10;false;34.5;10.000000;2000-02-01;
+114549;Aebtissinwisch;LKN, Itzehoe;Graben 21;9.285390;53.964619;2005-03-23;;Wasserstand;2012-01-19;false;;-5.000000;2004-12-20;
+114324;Ammersbek;LKN, Itzehoe;Ammersbek;10.173985;53.708050;1991-01-01;2020-01-22;Wasserstand;;true;100.06;20.122999;2018-01-01;Elbe, Nordsee
+114121;Brokstedt;LKN, Itzehoe;Brokstedter Au;9.811051;53.994877;1984-11-01;2020-01-22;Wasserstand;;true;99.32;-0.021000;2002-11-01;Elbe, Nordsee
+114208;Holm/Osterbek;LKN, Kiel;Osterbek;9.715348;54.485561;1984-11-01;;Wasserstand;2009-02-23;false;27.4;-0.777000;2008-05-15;
+111025;Holmer Siel Salzwasserbiotop;LKN, Husum;Salzwasserbiotop Beltringharde;8.873465;54.528042;2003-08-01;2020-01-22;Wasserstand;;true;312.08;-5.010000;1994-11-01;
+114209;Gelting;LKN, Kiel;Knorr-Au;9.905687;54.739784;1984-11-01;;Wasserstand;1999-11-01;false;7.96;0.000000;1981-05-04;
+114257;Gr.Hansdorf;LKN, Itzehoe;Viehbach;10.275533;53.666195;1984-11-01;;Wasserstand;1987-04-01;false;14.07;0.000000;1999-01-22;
+114299;Gr.Segeberger See;LKN, Itzehoe;Segeberger See;10.317094;53.940338;1989-11-01;;Wasserstand;;false;8.55;0.000000;2002-09-18;
+114264;Lanker See;LKN, Kiel;Lanker See;10.316483;54.215107;1985-11-01;;Wasserstand;;false;456.0;0.000000;1994-11-01;
+111017;Hoyerswort;LKN, Husum;Alte Eider;8.951035;54.359184;1952-11-10;;Wasserstand;;false;18.76;-5.030000;2018-01-01;Nordsee
+114269;Lehbek;LKN, Husum;Lehbek;9.877816;54.743137;1986-07-01;;Wasserstand;2000-09-06;false;7.39;0.324000;1986-07-07;
+114334;Gr. Wittensee;LKN, Kiel;Mühlenbek;9.783959;54.403042;1991-12-01;;Wasserstand;1995-11-30;false;12.6;;;
+114434;Habernis 1.0;LKN, Husum;Habernisau;9.768056;54.789310;2000-06-06;;Wasserstand;2009-02-02;false;24.15;0.000000;2000-06-22;
+114361;Haby I;LKN, Kiel;Brobach;9.805752;54.398037;1993-12-01;;Wasserstand;1997-01-31;false;;0.000000;1992-01-01;
+114128;Ihlsee;LKN, Itzehoe;Ihlsee;10.292450;53.960732;1971-11-01;;Wasserstand;;false;0.81;-0.055000;2013-10-10;
+114220;Hemmelsdorfer See;LKN, Kiel;Hemmelsdorfer See;10.775053;53.947342;1977-05-01;;Wasserstand;;false;35.04;-5.000000;1994-11-01;
+114527;Kellinghusen-Parkplatz;LKN, Itzehoe;Stör;9.725967;53.946892;2002-02-19;2020-01-22;Wasserstand;;true;648.35;-0.017000;2002-01-01;
+114080;Kl.Eutiner See;LKN, Kiel;Kl.Eutiner See;10.609451;54.131775;1973-11-01;;Wasserstand;;false;3.5;0.000000;2002-10-01;
+114042;Kosel;LKN, Kiel;Koseler Au;9.758005;54.509289;1984-11-01;2020-01-22;Wasserstand;;true;48.6;1.089000;2008-04-29;
+114520;Lübeck A20;LKN, Kiel;Trave;10.609059;53.840363;2002-06-18;;Wasserstand;2012-01-01;false;;-0.417000;2003-04-07;
+114185;Lütjenholm;LKN, Husum;Kleine Au;9.018334;54.684158;1984-11-01;;Wasserstand;;false;46.41;-5.000000;1994-11-01;
+114531;Lütjenhorn;LKN, Husum;Lecker Au;9.109677;54.798737;2003-09-10;;Wasserstand;;false;31.48;-4.990000;2018-01-01;Nordsee (Schlütt, Süderaue)
+114423;Malkendorf;LKN, Kiel;Curau;10.666973;53.964695;1999-07-01;2020-01-22;Wasserstand;;true;45.96;7.729000;2007-09-14;
+114584;Meyn;LKN, Husum;---;9.224650;54.757706;2009-04-02;;Wasserstand;;false;30.51;12.980000;2009-04-01;
+114422;Nehmten;LKN, Kiel;Tensfelder Au;10.382949;54.086464;1998-01-01;2020-01-22;Wasserstand;;true;72.7;0.000000;1994-11-01;
+114348;Neuhörup;LKN, Husum;Rodau;9.112839;54.721539;1994-11-01;;Wasserstand;;false;49.68;-4.990000;2018-01-01;
+111031;Speicherbecken Arlau;LKN, Husum;Speicherbecken Arlau;8.873527;54.528000;1974-01-30;2020-01-22;Wasserstand;;true;312.08;-5.010000;1994-11-01;
+114311;Tappendorf;LKN, Kiel;Hafselbek;9.689569;54.099220;1987-08-01;;Wasserstand;1991-09-02;false;1.4;0.000000;1990-07-01;
+114454;Obdrup;LKN, Husum;Mühlenstrom (Bondenau);9.581980;54.695038;2001-12-07;;Wasserstand;;false;14.14;23.000000;2018-01-01;
+114398;Pronsdorf;LKN, Itzehoe;Goldenbek;10.467812;53.947571;1996-06-01;;Wasserstand;1997-10-31;false;15.0;24.230000;1996-06-01;
+114234;Rantzel;LKN, Itzehoe;Bilsbek;9.783077;53.706722;1984-11-01;2020-01-22;Wasserstand;;true;30.58;2.743000;1994-11-01;
+111022;Tümlau BP;LKN, Husum;Tümlauer Sielzug;8.674956;54.350613;1997-11-04;2020-01-22;Wasserstand;;true;30.77;-5.000000;1994-11-01;
+114130;Tungendorf;LKN, Kiel;Dosenbek;10.013938;54.086021;1984-11-01;2020-01-22;Wasserstand;;true;29.4;21.198000;2003-01-16;Stör, Elbe, Nordsee
+114312;Vaasbüttel;LKN, Kiel;Hafselbek;9.712912;54.088032;1987-08-01;;Wasserstand;1993-05-31;false;3.1;0.000000;1990-03-29;
+114249;Nusse;LKN, Kiel;Steinau;10.580059;53.659729;1984-12-01;2020-01-22;Wasserstand;;true;75.2;0.000000;2010-04-28;
+114464;Oldesloe B75;LKN, Itzehoe;Trave;10.396484;53.813416;2002-09-30;;Wasserstand;;false;;2.116000;2002-09-11;
+114462;Oldesloe Sohlgleite;LKN, Itzehoe;Trave;10.373481;53.810886;2002-01-22;;Wasserstand;2013-05-28;false;;4.064000;2002-03-08;
+114281;Rehagen;LKN, Itzehoe;Bunsbach;10.196230;53.708164;1988-05-01;;Wasserstand;2012-01-16;false;31.29;-0.028000;1994-11-01;
+114579;Riesbriek-Mitte;LKN, Husum;Linnau;9.103950;54.700012;2009-04-02;;Wasserstand;;false;70.96;-4.490000;2018-06-18;
+114318;Steinwehr;LKN, Kiel;Haaler Au;9.544814;54.146053;1988-01-01;;Wasserstand;2004-10-31;false;96.0;-5.000000;1994-11-01;
+114174;Oeversee;LKN, Husum;Bek;9.423178;54.708298;1979-11-01;;Wasserstand;;false;18.71;23.704000;2018-01-01;
+114316;Papenau oben;LKN, Kiel;Papenau;9.616680;54.109180;1989-08-01;;Wasserstand;2012-01-01;false;11.5;0.000000;1994-11-01;
+114440;Oldesloe 4 Mühlenarm;LKN, Itzehoe;Trave;10.377483;53.810204;2000-01-27;;Wasserstand;;false;;3.848000;2000-01-27;
+111046;Schülper Altensiel;LKN, Husum;Schülper Sielzug;8.944239;54.252419;2002-03-04;;Wasserstand;;false;15.43;-5.020000;2018-01-01;
+114065;Sorgbrück;LKN, Kiel;Sorge;9.554734;54.356537;1970-01-01;2020-01-22;Wasserstand;;true;131.44;-5.015000;2011-04-06;Nordsee
+114526;Witzeeze-Kiessee 8;LKN, Kiel;Kiessee;10.631835;53.455017;2003-05-12;;Wasserstand;2010-04-07;false;;8.402000;2003-05-01;
+114446;Wolkenwehe;LKN, Itzehoe;Trave;10.348888;53.820244;2000-01-26;2020-01-22;Wasserstand;;true;509.33;5.352000;2001-09-18;
+114252;Ziegelhof;LKN, Kiel;Grinau;10.585460;53.806301;1984-11-29;;Wasserstand;;false;32.5;0.000000;2012-07-02;
+110033;Nordstrandischmoor-Anleger;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.822130;54.543076;1983-11-01;;Wasserstand;2007-06-28;false;;-5.010000;1994-11-01;
+110187;Mittelplate;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.750493;54.061329;1999-10-29;2020-01-22;Wasserstand;;true;;-5.000000;2018-01-01;
+114450;Achtrupfeld;LKN, Husum;Brebek;9.060335;54.776279;2001-11-08;;Abfluss;;false;26.55;-4.990000;2018-01-01;Bongsieler Kanal, Nordsee
+114014;Borsbüll;LKN, Husum;Borsbüllerbach;8.983885;54.603512;1984-11-01;;Abfluss;;false;6.17;-5.000000;2018-01-01;Arlau, Speicherbecken Arlau, Nordsee (Holmer Fähre, Hever)
+114573;Brunsbüttel Alter Hafen BP;LKN, Husum;---;9.128697;53.896320;2008-01-20;;Abfluss;2008-05-31;false;87.91;-3.500000;2008-01-18;
+114079;Bünningstedt;LKN, Itzehoe;Hunnau;10.215851;53.697144;1984-11-01;;Abfluss;;false;61.49;-0.026000;1994-11-01;Alster, Elbe
+114232;Aumühle;LKN, Itzehoe;Schwarze Au;10.291988;53.531593;1984-11-01;;Abfluss;1992-10-31;false;83.9;14.060000;1994-11-01;
+114215;Dannewerk;LKN, Husum;Dannewerkgraben;9.528188;54.506115;1984-11-01;;Abfluss;2009-01-08;false;5.98;-0.605000;1982-02-25;
+114267;Depenau;LKN, Kiel;Kührener Au;10.241073;54.159218;1986-04-30;;Abfluss;2005-10-31;false;65.75;0.000000;1994-11-01;
+114299;Gr.Segeberger See;LKN, Itzehoe;Segeberger See;10.317094;53.940338;;;Abfluss;;false;8.55;0.000000;2002-09-18;
+111111;Friedrichstadt-Eidermühle;LKN, Husum;Treene;9.083144;54.374821;1999-01-01;2020-01-22;Abfluss;;true;794.4;-5.010000;2018-05-07;Eider, Nordsee
+114304;Kl.Hansdorf;LKN, Itzehoe;Bunsbach;10.211242;53.731823;;;Abfluss;1992-10-31;false;;26.889000;1990-12-01;
+114397;Krems 2;LKN, Itzehoe;Börnsee;10.355929;53.992023;1996-06-01;;Abfluss;1997-10-31;false;3.9;0.000000;1996-06-01;
+114040;Kupfermühle;LKN, Husum;Krusau;9.415825;54.837490;1984-11-01;;Abfluss;2000-09-06;false;20.2;-4.812000;1976-03-24;
+114185;Lütjenholm;LKN, Husum;Kleine Au;9.018334;54.684158;1984-11-01;;Abfluss;;false;46.41;-5.000000;1994-11-01;
+114202;Westensee;LKN, Kiel;Westensee;9.952400;54.295864;1984-11-01;;Wasserstand;;false;;0.000000;2012-06-01;
+114325;Böken/Höllenau;LKN, Kiel;Höllenau;9.804735;54.083378;1991-11-01;;Abfluss;;false;58.9;8.610000;2003-04-01;
+114013;Bordelumfeld;LKN, Husum;Bordelumer Bach;8.932981;54.634922;1984-11-01;;Abfluss;2003-01-08;false;1.48;0.000000;1968-09-23;
+112233;Wohlde;LKN, Husum;Treene;9.279246;54.410290;1965-10-01;2020-01-22;Wasserstand;;true;696.57;-5.010000;2018-01-01;Eider, Nordsee
+110051;Neufelderkoog-Siel AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;9.016454;53.905556;2004-11-03;2020-01-22;Wasserstand;;true;;-5.030000;2018-01-01;
+110055;Luebke Koog AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.610842;54.839672;2006-01-21;2020-01-22;Wasserstand;;true;;-5.000000;2018-01-01;
+110056;Rochelsteert;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.407405;54.291725;2006-10-31;2020-01-22;Wasserstand;;true;;-5.000000;2006-10-31;
+110101;Ochsensand;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.697152;54.503853;1977-04-19;;Wasserstand;1995-12-05;false;;-5.000000;1994-11-01;
+110107;Rummelloch-West;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.666411;54.563869;1977-05-04;;Wasserstand;1997-12-01;false;;-5.000000;1994-11-01;
+110134;Hooge-Loch;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.487915;54.547237;1976-05-01;;Wasserstand;1992-12-14;false;;-5.000000;1994-11-01;
+110143;Everschopsiel Hever;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.836477;54.422523;1979-05-04;;Wasserstand;1985-10-30;false;;-5.000000;2005-10-19;
+110167;Norderoogsand Sued;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.473225;54.494717;1997-06-04;;Wasserstand;1997-10-28;false;;-5.000000;2005-10-19;
+114442;Schmalstede-Neu-;LKN, Kiel;Eider;10.045791;54.196278;2000-10-25;;Abfluss;;false;119.0;13.000000;2012-01-12;Nord-Ostsee-Kanal, Elbe, Nordsee
+114335;Schackendorf;LKN, Itzehoe;Trave;10.281770;53.957897;1991-07-01;;Abfluss;;false;333.66;20.974001;1991-07-01;
+114238;Plön;LKN, Kiel;Schwentine;10.406615;54.160984;1984-11-01;;Abfluss;;false;254.0;18.040001;1994-11-01;
+114340;Schmalstede;LKN, Kiel;Eider;10.041092;54.201443;1996-11-01;;Abfluss;2003-10-31;false;119.0;0.000000;1992-06-29;Nord-Ostsee-Kanal, Elbe, Nordsee
+114314;Rantzau;LKN, Kiel;Kossau;10.515836;54.235523;1987-12-01;;Abfluss;;false;75.0;0.000000;2001-09-25;
+114069;Treia;LKN, Husum;Treene;9.317290;54.514347;1998-10-26;2020-01-22;Abfluss;;true;480.72;-4.990000;2018-01-01;Eider, Nordsee
+114431;Niesgrau;LKN, Kiel;Lippingau;9.804083;54.746685;2000-08-01;;Abfluss;;false;47.49;1.985000;2000-06-22;
+114424;Schulendorf;LKN, Kiel;Schwartau;10.675548;54.008556;2000-01-01;;Abfluss;;false;123.99;9.513000;2007-09-14;
+114156;Oldesloe OP;LKN, Itzehoe;Trave;10.370004;53.812759;1999-11-29;;Abfluss;;false;527.55;-0.021000;1994-11-01;
+114383;Trittau;LKN, Kiel;Trittauer Mühlenbach;10.417490;53.605618;1999-04-01;;Abfluss;;false;75.0;0.000000;2010-06-16;
+114103;Wulksfelde;LKN, Itzehoe;Alster;10.115644;53.718506;1984-11-01;;Abfluss;;false;139.12;14.420000;2000-11-01;Nordsee
+110128;Rantum West;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.282516;54.832462;2006-07-06;;Wasserstand;2007-10-23;false;;-5.000000;2005-10-19;
+114377;Kölln-Reisiek A23;LKN, Itzehoe;Krückau;9.708301;53.766396;1995-06-01;2020-01-22;Abfluss;;true;129.94;1.539000;2007-05-10;Nordsee
+114612;Bovenau;LKN, Kiel;---;9.831105;54.329380;2012-12-04;;Abfluss;2014-12-18;false;18.81;5.015000;2012-10-04;
+110204;St. Peter-Ording;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;---;8.578000;54.308807;2012-06-12;;Wasserstand;2013-10-28;false;;-5.000000;2012-06-07;
+111058;Dieksander Koog;LKN, Husum;Dieksander Priel;8.886937;54.001316;2018-09-20;2020-01-22;Abfluss;;true;11.15;-5.020000;2018-01-01;
+114224;Eggebek;LKN, Husum;Treene;9.376074;54.616074;1984-11-01;2020-01-22;Wasserstand;;true;194.58;5.000000;1994-11-01;Eider, Nordsee
+114563;Averfleth;LKN, Itzehoe;Wilsterau;9.317082;53.936939;2005-12-01;;Wasserstand;;false;9.64;-5.000000;2005-12-01;
+114333;Föhrden-Barl;LKN, Itzehoe;Bramau;9.787522;53.925789;1991-07-01;2020-01-22;Wasserstand;;true;458.6;1.144000;1994-11-01;Elbe
+114460;Bad Schwartau;LKN, Kiel;Schwartau;10.698393;53.923470;2002-10-20;2020-01-22;Wasserstand;;true;207.89;-1.277000;2008-06-11;
+111051;Bargenstedt;LKN, Husum;Südermiele;9.123571;54.108189;1997-10-20;;Wasserstand;;false;37.12;-5.020000;2018-01-01;
+114530;Boholz;LKN, Husum;Wellspanger Au;9.681932;54.628517;2003-09-02;;Wasserstand;2012-01-10;false;;8.000000;2003-09-19;
+114233;Altenkattbek;LKN, Kiel;Jevenau;9.721908;54.236221;1984-11-01;;Wasserstand;1987-07-31;false;76.5;0.000000;1994-11-01;
+114286;Bültsee;LKN, Kiel;Bültsee;9.750741;54.493858;1986-05-01;;Wasserstand;;false;1.85;0.000000;1994-11-01;
+114018;Bünsdorf;LKN, Kiel;Schirnau;9.745614;54.368145;2003-09-01;2020-01-22;Wasserstand;;true;48.15;2.450000;2003-09-01;
+111058;Dieksander Koog;LKN, Husum;Dieksander Priel;8.886937;54.001316;1997-10-15;2020-01-22;Wasserstand;;true;11.15;-5.020000;2018-01-01;
+114212;Alt Duvenstedt;LKN, Kiel;Otternbek;9.645651;54.370625;1984-11-01;;Wasserstand;2013-07-11;false;3.99;-0.088000;2010-03-26;
+111065;Arlau-Schleuse AP;LKN, Husum;Speicherbecken Arlau;8.940144;54.546158;2000-01-01;2020-01-22;Wasserstand;;true;;-5.000000;1999-12-08;
+114332;Bargfeld;LKN, Kiel;Bünzau;9.819099;54.045864;1992-08-01;;Wasserstand;;false;199.0;0.000000;2011-09-12;Elbe, Nordsee
+111061;Barlter Neuendeich;LKN, Husum;Meentenstrom;9.011357;54.025772;1997-12-09;2020-01-22;Wasserstand;;true;21.86;-5.000000;2018-01-01;
+114453;Bondebrück;LKN, Husum;Bondenau;9.631142;54.699600;2001-12-07;2020-01-22;Wasserstand;;true;20.31;20.000000;2018-01-01;Tideeider, Nordsee
+114595;Hörup;LKN, Husum;---;9.104856;54.744488;2005-01-11;;Wasserstand;;false;85.87;-3.000000;2005-01-11;
+112211;Hollingstedt;LKN, Husum;Treene;9.327206;54.456074;1965-10-01;2020-01-22;Wasserstand;;true;596.74;-5.020000;2018-01-01;Eider, Nordsee
+111019;Katingwatt-Strassenbrücke;LKN, Husum;Staubecken Katingwatt;8.862778;54.272423;1997-11-04;2020-01-22;Wasserstand;;true;50.35;-5.020000;2018-01-01;
+114420;Klenzauer See;LKN, Kiel;Klenzauer See;10.573412;54.091953;1997-07-10;;Wasserstand;2017-03-22;false;6.85;26.000000;1997-07-10;
+111016;Kotzenbüll;LKN, Husum;Norderbootfahrt;8.916196;54.328491;1980-11-04;;Wasserstand;;false;17.86;-5.030000;1994-11-01;
+111042;Kronprinzenkoog-Mitte;LKN, Husum;Westerfleth;8.975327;53.929821;1998-01-05;;Wasserstand;;false;10.94;-4.990000;2018-01-01;
+114534;Efkebüll AP;LKN, Husum;Soholmer Au;8.879502;54.713013;2003-11-13;;Wasserstand;2009-02-26;false;;-5.000000;2003-11-24;Nordsee (Schlütt, Süderaue)
+114555;Hetlinger Schanze;LKN, Itzehoe;Haseldorfer Binnenelbe;9.610394;53.609894;2005-04-15;;Wasserstand;2012-01-17;false;;-5.000000;2004-12-20;
+114322;Hochfelder See;LKN, Kiel;Hochfelder See;10.145016;54.195835;1990-11-22;;Wasserstand;2010-09-09;false;7.1;0.000000;1994-11-01;
+114540;Kesdorf;LKN, Kiel;Schwartau;10.655534;54.069473;2003-10-29;;Wasserstand;;false;66.1;16.405001;2003-10-29;
+114456;Frörup-OW;LKN, Husum;Treene;9.431046;54.696613;2001-12-07;;Wasserstand;;false;159.05;20.000000;2018-06-11;Eider, Nordsee
+114302;Lilienthal;LKN, Kiel;Vorfl. Lilienthal;10.295824;54.309032;1989-12-01;;Wasserstand;1995-05-31;false;;0.000000;1994-11-01;
+114350;Meldorf;LKN, Husum;Miele;9.041220;54.091663;1992-11-25;2020-01-22;Wasserstand;;true;237.35;-4.980000;2018-01-01;
+111054;Meldorf-Sperrwerk BP;LKN, Husum;Speicherbecken Miele;8.951501;54.093117;2002-04-01;2020-01-22;Wasserstand;;true;403.95;-5.020000;2018-01-01;
+111006;Morsum;LKN, Husum;Morsumgraben;8.411379;54.861084;2002-04-01;;Wasserstand;2003-11-01;false;;-5.000000;1978-10-26;
+114124;Naherfurth;LKN, Itzehoe;Alster;10.124371;53.771809;1984-11-01;2020-01-22;Wasserstand;;true;77.1;21.601999;1999-11-01;Nordsee
+114248;Neritz;LKN, Flintbek;Norderbeste;10.294273;53.783703;1984-12-01;;Wasserstand;2006-12-01;false;48.0;0.000000;1984-11-01;
+114346;Spölbek;LKN, Husum;Schafflunder Mühlenstrom;9.081999;54.718533;1994-11-01;;Wasserstand;;false;86.96;-4.990000;2018-04-10;
+114268;Stolpe;LKN, Kiel;Lachsbach;10.779927;54.158470;1986-07-01;2020-01-22;Wasserstand;;true;17.3;19.379000;2010-05-03;
+111009;Strucklahnungshörn BP;LKN, Husum;Staubecken Strucklahnungshörn;8.807819;54.496368;1997-11-03;2020-01-22;Wasserstand;;true;19.71;-5.020000;1994-11-01;
+111003;Süderhöft;LKN, Husum;Treene;9.256477;54.373734;1999-01-01;;Wasserstand;2012-02-01;false;;-5.010000;1994-11-01;Eider, Nordsee
+114591;Tiebensee;LKN, Husum;---;9.023922;54.215122;2007-03-29;;Wasserstand;;false;4.38;-5.000000;2018-01-01;
+114544;Niebuhrschleuse 1;LKN, Itzehoe;Riedebek;10.637472;53.455902;2004-01-22;;Wasserstand;2010-04-07;false;;9.306000;2004-03-29;
+114272;Sarnekower See;LKN, Itzehoe;Sarnekower See;10.748400;53.549999;1986-12-08;;Wasserstand;;false;62.6;23.469000;1994-11-01;
+114596;Schafflund-Wassermühle;LKN, Husum;Schafflunder Mühlenstrom;9.189043;54.759563;2005-01-11;;Wasserstand;;false;62.88;4.500000;2005-01-01;
+114357;Spersdiek;LKN, Itzehoe;Panzergraben;9.161373;54.031738;1985-02-01;;Wasserstand;;false;10.72;-5.009000;1994-11-01;
+114089;Oldesloe;LKN, Itzehoe;Trave;10.382864;53.810310;1984-11-01;;Wasserstand;;false;723.0;1.451000;1994-11-01;
+114418;Rottensee;LKN, Kiel;Rottensee;10.476134;54.216843;1997-11-01;;Wasserstand;2009-01-05;false;22.5;0.000000;1998-10-01;
+114204;Osterrönfeld/Wehrau;LKN, Kiel;Wehrau;9.702339;54.284676;1984-11-01;2020-01-22;Wasserstand;;true;110.0;0.000000;2010-07-29;
+114197;Rellingen;LKN, Itzehoe;Mühlenau (Rellingen);9.848274;53.658108;1984-11-01;2020-01-22;Wasserstand;;true;74.79;3.319000;1994-11-01;
+114349;Riesbriek;LKN, Husum;Linnau;9.090168;54.706200;1994-11-01;;Wasserstand;;false;72.17;-4.990000;2018-05-28;
+114308;Schalkholz;LKN, Husum;Mühlenbach (Schalkholz);9.299476;54.249249;1996-11-01;;Wasserstand;2003-01-07;false;6.075;5.000000;1991-04-19;
+114178;Schlesen;LKN, Kiel;Selkau;10.326921;54.315796;1989-12-01;;Wasserstand;1994-10-31;false;7.98;19.000000;1994-11-01;
+111010;Porrenkoog;LKN, Husum;Porrenkoog Sielzug;9.038270;54.473614;1997-11-04;;Wasserstand;;false;20.17;-5.010000;1994-11-01;
+114463;Schönberg;LKN, Itzehoe;Schönau;10.413977;53.666481;2002-03-27;;Wasserstand;2009-01-06;false;17.12;46.740002;2002-07-10;
+114524;Sieversdorf;LKN, Kiel;Malenter Au;10.556661;54.196224;2003-04-28;2020-01-22;Wasserstand;;true;44.4;0.000000;2003-05-26;
+111029;Sönke-Nissen-Koog Rhynschlotsiel;LKN, Husum;Rhynschlot;8.895426;54.598953;2003-01-16;2020-01-22;Wasserstand;;true;;-5.010000;2018-01-01;
+111048;Warwerort;LKN, Husum;Hauptkanal;8.919860;54.151791;1970-01-04;2020-01-22;Wasserstand;;true;61.11;-5.030000;2018-01-01;
+114103;Wulksfelde;LKN, Itzehoe;Alster;10.115644;53.718506;1984-11-01;2020-01-22;Wasserstand;;true;139.12;14.420000;2000-11-01;Nordsee
+110012;Suederhafen;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.914963;54.471272;1973-04-11;2020-01-22;Wasserstand;;true;;-5.020000;2018-01-01;
+114288;Behl;LKN, Kiel;Behler Au;10.475632;54.180382;1988-12-01;;Abfluss;;false;6.41;0.000000;2012-05-30;
+114290;Bokel/Störbek;LKN, Itzehoe;Störbek;9.724338;53.870384;1988-12-01;;Abfluss;;false;32.95;2.186000;1994-11-01;
+114011;Bredeneek;LKN, Kiel;Spolsau;10.304488;54.263187;1984-11-01;;Abfluss;2009-02-11;false;47.9;0.000000;1994-11-01;
+114361;Haby I;LKN, Kiel;Brobach;9.805752;54.398037;1993-12-01;;Abfluss;1997-01-31;false;;0.000000;1992-01-01;
+114540;Kesdorf;LKN, Kiel;Schwartau;10.655534;54.069473;2003-10-29;;Abfluss;;false;66.1;16.405001;2003-10-29;
+114519;Kiel-Oppendorf;LKN, Kiel;Schwentine;10.203833;54.323380;2003-07-17;2020-01-22;Abfluss;;true;722.55;0.000000;2003-03-06;
+114345;Dörpstedt;LKN, Husum;Rheider Au;9.350012;54.444462;1995-12-01;;Abfluss;;false;57.65;-5.000000;2018-01-01;
+114531;Lütjenhorn;LKN, Husum;Lecker Au;9.109677;54.798737;2003-09-10;;Abfluss;;false;31.48;-4.990000;2018-01-01;Nordsee (Schlütt, Süderaue)
+114350;Meldorf;LKN, Husum;Miele;9.041220;54.091663;1992-11-25;2020-01-22;Abfluss;;true;237.35;-4.980000;2018-01-01;
+114415;Mönkhof;LKN, Kiel;Vorrader Landgraben;10.697353;53.827972;1997-07-01;;Abfluss;2012-01-01;false;18.18;3.374000;2000-11-01;
+111049;Wackenhusen;LKN, Husum;Norderstrom;8.999863;54.150169;2001-04-01;;Wasserstand;;false;38.02;-5.030000;2018-01-01;
+114300;Ahrensburg;LKN, Itzehoe;Aue;0.000000;0.000000;1988-09-01;;Abfluss;1990-07-31;false;;0.000000;1988-09-01;
+114292;Frestedt-Feld;LKN, Itzehoe;Dohrlehnsbach;9.171488;54.033218;1988-06-01;;Abfluss;2012-01-10;false;4.71;-5.000000;1988-05-19;
+114247;Hamfelde;LKN, Kiel;Bille;10.434354;53.605507;1984-12-01;;Abfluss;;false;66.5;0.000000;1994-11-01;Nordsee
+114527;Kellinghusen-Parkplatz;LKN, Itzehoe;Stör;9.725967;53.946892;2003-06-23;2020-01-22;Abfluss;;true;648.35;-0.017000;2002-01-01;
+110027;Buesum-Landespegel;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.859115;54.121769;1920-05-01;;Wasserstand;2009-01-27;false;;-5.040000;1994-11-01;
+110048;Hilligenley;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.547339;54.618500;1981-11-01;2020-01-22;Wasserstand;;true;;-5.010000;2018-01-01;
+110164;Osterley;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.559003;54.858513;1997-04-09;;Wasserstand;2005-11-17;false;;-4.990000;2018-01-01;
+110165;Langeness Nordost;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.631053;54.665302;1997-04-16;;Wasserstand;1997-10-23;false;;-5.000000;2005-10-20;
+110170;Meyers Loch;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.702917;54.411667;1997-04-01;;Wasserstand;2004-11-06;false;;-5.000000;1997-01-01;
+110179;Suederhoeft;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.692532;54.265396;1999-10-25;;Wasserstand;2002-11-11;false;;-5.000000;2004-02-05;
+114245;Schafstedt;LKN, Itzehoe;Mühlenbach (Schafstedt);9.293017;54.076267;1984-11-01;;Abfluss;;false;22.58;-5.015000;1994-11-01;
+114357;Spersdiek;LKN, Itzehoe;Panzergraben;9.161373;54.031738;1985-02-01;;Abfluss;;false;10.72;-5.009000;1994-11-01;
+114167;Wildenhorst;LKN, Kiel;Passau;10.314730;54.270916;1984-11-01;;Abfluss;1990-04-30;false;13.3;0.000000;1986-06-01;
+114096;Sachsenwaldau;LKN, Itzehoe;Bille;10.299097;53.542492;1984-11-01;;Abfluss;;false;221.13;-0.025000;2018-01-01;Nordsee
+114422;Nehmten;LKN, Kiel;Tensfelder Au;10.382949;54.086464;1998-01-01;;Abfluss;;false;72.7;0.000000;1994-11-01;
+114440;Oldesloe 4 Mühlenarm;LKN, Itzehoe;Trave;10.377483;53.810204;2000-02-01;;Abfluss;;false;;3.848000;2000-01-27;
+114316;Papenau oben;LKN, Kiel;Papenau;9.616680;54.109180;1991-06-01;;Abfluss;2012-01-01;false;11.5;0.000000;1994-11-01;
+114213;Ridders;LKN, Itzehoe;Rantzau;9.602630;54.003021;1984-11-01;;Abfluss;;false;26.3;0.000000;2002-11-01;
+114234;Rantzel;LKN, Itzehoe;Bilsbek;9.783077;53.706722;1984-11-01;;Abfluss;;false;30.58;2.743000;1994-11-01;
+114417;Schönweide;LKN, Kiel;Kossau;10.492124;54.223026;1997-11-01;;Abfluss;;false;68.5;0.000000;1997-11-01;
+114132;Segeberg;LKN, Itzehoe;Trave;10.292153;53.938316;1984-11-01;;Abfluss;1991-06-01;false;337.0;20.490000;1953-03-06;
+111101;Pinneberg-Mühlenstraße;LKN, Itzehoe;Pinnau;9.781307;53.660198;2009-11-16;;Abfluss;2010-06-23;false;;0.000000;2009-11-14;Nordsee
+110036;Rickelsbüll AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.637412;54.910137;1982-11-01;2020-01-22;Wasserstand;;true;;-5.020000;2018-01-01;
+114458;Wensin-Rote Kate;LKN, Itzehoe;Trave;10.454889;53.992203;2002-09-05;2020-01-22;Abfluss;;true;125.04;0.000000;2002-02-06;
+114515;Schöhsee;LKN, Kiel;---;10.431130;54.162563;2013-07-09;;Wasserstand;;false;215.0;20.900999;2000-08-01;
+114228;Stendorfer See;LKN, Kiel;Stendorfer See;10.698229;54.163631;2013-07-09;;Wasserstand;;false;18.4;31.136000;2004-03-23;
+114600;Hobbersdorfer Mühle;LKN, Kiel;Schwartau;10.711689;53.960316;2010-04-23;2020-01-22;Wasserstand;;true;;0.000000;2010-04-01;
+114606;Friedrichsruh;LKN, Itzehoe;Schwarze Au;10.355245;53.525192;2011-10-28;;Abfluss;;false;75.45;19.466999;2011-11-01;
+114365;Gr.Binnensee;LKN, Kiel;Gr.Binnensee;10.644694;54.336086;2012-05-08;2020-01-22;Wasserstand;;true;;-5.000000;2012-05-08;
+114508;Tresdorfer See;LKN, Kiel;---;10.465736;54.229866;2012-07-31;;Wasserstand;;false;;23.636000;1998-12-01;
+114193;Hohner See;LKN, Kiel;Hohner See;9.470904;54.308170;1981-04-01;;Wasserstand;;false;15.12;-1.801000;2018-01-01;
+114608;Brokenlande;LKN, Itzehoe;Brokstedter Au;9.945385;54.019314;2011-12-06;;Abfluss;2018-11-08;false;13.49;16.344999;2011-11-03;Elbe, Nordsee
+114488;Poggensee;LKN, Flintbek;Poggensee;10.384763;53.825535;2016-01-12;;Wasserstand;;false;;7.832000;2012-10-08;
+114627;Sterley;LKN, Husum;Schaalseekanal;10.858123;53.640564;2016-03-09;;Wasserstand;2018-06-06;false;;0.000000;2016-03-09;
+114020;Dieksee;LKN, Kiel;Dieksee;10.494411;54.158489;1978-11-01;2020-01-22;Wasserstand;;true;166.0;0.000000;1996-11-01;
+114339;Eiderheim;LKN, Kiel;Eider;10.036477;54.229633;1992-08-01;;Wasserstand;;false;124.0;0.000000;1994-11-01;Nord-Ostsee-Kanal, Elbe, Nordsee
+114532;Engbrück;LKN, Husum;Bollingstedter Au;9.447243;54.590462;2003-09-25;;Wasserstand;;false;83.1;5.010000;2018-01-01;Tideeider, Nordsee
+114026;Esperstoftfeld;LKN, Husum;Bollingstedter Au;9.365951;54.578503;1984-11-01;;Wasserstand;;false;98.9;0.000000;1994-11-01;Tideeider, Nordsee
+114529;Barkauer See;LKN, Kiel;Barkauer See;10.646019;54.083942;2007-03-23;;Wasserstand;;false;62.7;16.687000;2003-09-17;
+114360;Borgdorfer See;LKN, Kiel;Wennebek;9.891868;54.180187;1993-10-01;;Wasserstand;;false;6.94;0.000000;2012-03-13;
+114548;Burger Fähre;LKN, Itzehoe;Graben 21;9.284222;53.983353;2004-12-09;;Wasserstand;2018-01-10;false;7.59;-5.081000;2004-12-20;
+114244;Dellbrück;LKN, Itzehoe;Dellbrückau;9.191048;54.103416;1984-11-01;2020-01-22;Wasserstand;;true;16.03;-5.026000;2018-01-01;Speicherbecken Dithmarscher Speicherkoog, Nordsee
+114450;Achtrupfeld;LKN, Husum;Brebek;9.060335;54.776279;2001-11-08;;Wasserstand;;false;26.55;-4.990000;2018-01-01;Bongsieler Kanal, Nordsee
+114320;Bokel-Dorf;LKN, Kiel;Bokeler Au;9.796609;54.212933;1997-12-01;;Wasserstand;;false;20.4;0.000000;2011-08-18;
+114011;Bredeneek;LKN, Kiel;Spolsau;10.304488;54.263187;1984-11-01;;Wasserstand;2009-02-11;false;47.9;0.000000;1994-11-01;
+114081;Gr.Eutiner See;LKN, Kiel;Gr.Eutiner See;10.614163;54.143135;1976-01-01;2020-01-22;Wasserstand;;true;56.0;0.000000;1994-11-01;
+114206;Mehlbek;LKN, Itzehoe;Stegau;9.441890;54.009464;1984-06-01;;Wasserstand;1991-10-31;false;32.4;6.801000;1996-07-11;
+114373;Holm/Aue;LKN, Itzehoe;Holmau;9.670496;53.636883;1995-03-01;;Wasserstand;;false;12.55;0.751000;2007-11-01;
+114594;Linnau;LKN, Husum;Linnau;9.176705;54.699032;2007-10-18;;Wasserstand;;false;56.11;0.010000;2018-06-18;
+114425;Geschendorf 2/Bißnitz;LKN, Kiel;Bißnitz;10.420301;53.923424;1999-07-15;;Wasserstand;2019-11-14;false;33.1;26.780001;2000-11-27;Ostsee
+114084;Kellersee;LKN, Kiel;Kellersee;10.573988;54.167694;1982-11-01;2020-01-22;Wasserstand;;true;148.0;0.000000;2009-07-30;
+114342;Kembs 2;LKN, Kiel;Vorfluter Panker;10.579644;54.347294;1992-12-01;;Wasserstand;1996-05-20;false;5.8;0.000000;1994-11-01;
+114054;Kl.Plöner See;LKN, Kiel;Kl.Plöner See;10.405465;54.154167;1969-11-01;;Wasserstand;1984-10-31;false;407.04;0.000000;1953-05-01;
+111053;Meldorf Hafen BP;LKN, Husum;Miele;9.032734;54.091694;1998-10-19;;Wasserstand;;false;237.98;-5.020000;2018-01-01;
+111015;Tönning BP;LKN, Husum;Norderbootfahrt;8.942661;54.315887;1978-09-08;2020-01-22;Wasserstand;;true;37.36;-5.020000;1994-11-01;
+114283;Schmalsee;LKN, Itzehoe;Schmalsee;10.709828;53.619526;1988-01-01;;Wasserstand;;false;79.73;-0.005000;2011-07-05;
+114412;Scholderup;LKN, Husum;Füsinger Au;9.679818;54.562965;1996-01-01;;Wasserstand;2003-11-07;false;225.11;0.000000;1996-11-21;
+114181;Redingsdorfer See;LKN, Kiel;Redingsdorfer See;10.714909;54.107655;1977-11-01;;Wasserstand;2009-01-05;false;1.63;0.000000;1994-11-01;
+114383;Trittau;LKN, Kiel;Trittauer Mühlenbach;10.417490;53.605618;1999-04-01;2020-01-22;Wasserstand;;true;75.0;0.000000;2010-06-16;
+114094;Reinbek;LKN, Itzehoe;Bille;10.240906;53.505428;1984-11-01;2020-01-22;Wasserstand;;true;337.39;3.362000;1994-11-01;Nordsee
+114382;Sachsenwaldau 2/Oher Graben;LKN, Itzehoe;Oher Graben;10.298897;53.542377;1999-04-01;;Wasserstand;1999-08-31;false;4.06;0.000000;1999-04-01;
+114027;Selenter See;LKN, Kiel;Selenter See;10.388740;54.321751;1967-11-01;2020-01-22;Wasserstand;;true;60.99;0.000000;1994-11-01;
+114451;Sprakebüll;LKN, Husum;Lecker Au;9.074467;54.776398;2001-11-08;;Wasserstand;2012-01-11;false;82.2;-5.000000;2001-11-30;Nordsee (Schlütt, Süderaue)
+111047;Nordgroven BP;LKN, Husum;Staubecken Nordgroven;8.818830;54.167103;2009-07-07;;Wasserstand;;false;13.78;-5.040000;2018-01-01;
+114087;Nütschau;LKN, Itzehoe;Trave;10.335901;53.826977;1999-09-01;2020-01-22;Wasserstand;;true;475.16;0.000000;1999-08-18;
+114586;Schafflund-West;LKN, Husum;---;9.153644;54.755661;2009-05-13;;Wasserstand;2017-03-23;false;;0.000000;2009-05-13;
+114287;Schluensee;LKN, Kiel;Schluensee;10.454487;54.185665;1988-12-01;;Wasserstand;;false;6.04;0.000000;1994-11-01;
+114310;Schmarkau-Brücke;LKN, Kiel;Schmarkau;10.490068;54.182137;1986-10-01;;Wasserstand;2009-02-03;false;9.5;0.000000;1994-11-01;
+114562;Schmoel-Auslauf;LKN, Kiel;---;10.445880;54.402039;2005-12-20;;Wasserstand;2010-06-15;false;;-0.092000;2005-12-20;
+114561;Schmoel-Einlauf;LKN, Kiel;---;10.443151;54.398457;2005-12-20;;Wasserstand;2010-06-15;false;;-0.002000;2005-12-20;
+114250;Pötrau;LKN, Kiel;Steinau;10.612840;53.476788;1984-12-01;2020-01-22;Wasserstand;;true;92.39;0.000000;1994-11-01;
+114516;Sehlendorfer See;LKN, Kiel;---;10.656441;54.301903;2004-11-18;;Wasserstand;;false;68.59;-5.000000;2004-11-18;
+114254;Sörup;LKN, Husum;Bönstrupau;0.000000;0.000000;1984-11-01;;Wasserstand;1986-05-31;false;;0.000000;1984-11-01;
+114344;Wardersee (RD);LKN, Kiel;Wardersee;9.869566;54.211979;1994-11-01;;Wasserstand;;false;62.24;0.000000;1994-11-01;
+114564;Weißenhaus BP;LKN, Kiel;Oldenburger Graben;10.785211;54.307724;2006-11-01;2020-01-22;Wasserstand;;true;110.05;-5.000000;2006-11-01;
+114073;Wennebek;LKN, Kiel;Wennebek;9.893595;54.189251;1984-11-01;;Wasserstand;1991-10-31;false;9.82;0.000000;1986-08-01;
+114135;Willenscharen;LKN, Itzehoe;Stör;9.806866;54.009590;1984-11-01;2020-01-22;Wasserstand;;true;484.41;2.018000;1994-11-01;
+114460;Bad Schwartau;LKN, Kiel;Schwartau;10.698393;53.923470;2002-10-22;;Abfluss;;false;207.89;-1.277000;2008-06-11;
+114280;Bokel/Bokeler Au;LKN, Kiel;Bokeler Au;9.769238;54.223679;1987-09-01;;Abfluss;;false;30.1;0.000000;2011-08-18;
+114246;Breitenfelde;LKN, Kiel;Priesterbach;10.649094;53.604477;1984-12-05;;Abfluss;;false;32.8;0.000000;1994-11-01;
+114108;Wennbüttel;LKN, Itzehoe;Gieselau;9.323566;54.132839;1984-11-01;2020-01-22;Wasserstand;;true;35.01;-5.015000;1994-11-01;Nord-Ostsee-Kanal, Elbe
+114273;Gudow;LKN, Flintbek;Stichelsbach;10.769542;53.556351;;;Abfluss;1989-10-31;false;;0.000000;1986-12-01;
+114323;Warnau;LKN, Kiel;Warnauer Graben;10.139256;54.187080;1990-11-01;;Wasserstand;1995-07-31;false;;0.000000;1994-11-01;
+114523;Hasselburger Muehle;LKN, Kiel;Kremper Au;10.847067;54.151779;2003-03-27;;Abfluss;;false;27.6;0.000000;2003-05-26;
+114042;Kosel;LKN, Kiel;Koseler Au;9.758005;54.509289;1984-11-01;;Abfluss;;false;48.6;1.089000;2008-04-29;
+114119;Bokholtermühle;LKN, Itzehoe;Krückau;9.694757;53.769360;1995-11-01;;Abfluss;;false;131.79;1.490000;1994-11-01;Nordsee
+114307;Dragerborn 2;LKN, Itzehoe;Bekau;9.522902;54.005905;1991-05-02;;Abfluss;;false;38.6;-0.006000;2018-01-01;
+114333;Föhrden-Barl;LKN, Itzehoe;Bramau;9.787522;53.925789;1991-07-01;;Abfluss;;false;458.6;1.144000;1994-11-01;Elbe
+114598;Lensahn;LKN, Kiel;Walkerbach;10.883674;54.223366;2009-06-01;;Abfluss;2017-03-30;false;;0.000000;2008-11-29;
+114302;Lilienthal;LKN, Kiel;Vorfl. Lilienthal;10.295824;54.309032;1990-01-01;;Abfluss;1995-05-31;false;;0.000000;1994-11-01;
+114116;Bad Bramstedt/Schmalfelder Au;LKN, Itzehoe;Schmalfelder Au;9.890013;53.909286;1984-11-01;;Abfluss;;false;176.13;0.000000;1984-11-01;Bramau, Stör, Elbe
+114448;Dassendorf;LKN, Itzehoe;Süsterbek;10.363177;53.514801;2001-05-03;;Abfluss;2012-01-10;false;14.84;25.007999;2001-09-19;
+114557;Witzeeze-Campingplatz;LKN, Kiel;Stecknitz;10.624001;53.446655;2005-01-12;;Wasserstand;2010-04-07;false;;8.388000;2005-03-18;
+110043;Soenke-Nissen-Koog AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.890830;54.592812;1991-05-15;2020-01-22;Wasserstand;;true;;-5.020000;2018-01-01;
+110069;Nordergruende;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;0.000000;0.000000;2009-03-25;;Wasserstand;2013-04-03;false;;-5.000000;2009-03-25;
+110037;Hoernum-West;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.274614;54.758270;1985-01-01;;Wasserstand;2013-10-28;false;;-5.010000;1994-11-01;
+110162;Westerley;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.488195;54.847847;1994-04-19;;Wasserstand;1994-12-21;false;;-5.000000;2005-10-20;
+110173;Hooge-Loch West;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.450115;54.538200;2001-05-01;;Wasserstand;2007-11-19;false;;-5.000000;2005-10-20;
+114178;Schlesen;LKN, Kiel;Selkau;10.326921;54.315796;;;Abfluss;1994-10-31;false;7.98;19.000000;1994-11-01;
+114075;Westerakeby;LKN, Kiel;Loiter Au;9.684505;54.587078;1984-11-01;;Abfluss;;false;203.99;0.039000;1994-11-01;
+114377;Kölln-Reisiek A23;LKN, Itzehoe;Krückau;9.708301;53.766396;1995-06-01;2020-01-22;Wasserstand;;true;129.94;1.539000;2007-05-10;Nordsee
+114197;Rellingen;LKN, Itzehoe;Mühlenau (Rellingen);9.848274;53.658108;1984-11-01;;Abfluss;;false;74.79;3.319000;1994-11-01;
+114547;Tarp;LKN, Husum;Treene;9.411041;54.665409;2004-04-16;;Abfluss;;false;177.88;9.000000;2018-01-01;Eider, Nordsee
+114130;Tungendorf;LKN, Kiel;Dosenbek;10.013938;54.086021;1984-11-01;;Abfluss;;false;29.4;21.198000;2003-01-16;Stör, Elbe, Nordsee
+114524;Sieversdorf;LKN, Kiel;Malenter Au;10.556661;54.196224;2003-04-28;;Abfluss;;false;44.4;0.000000;2003-05-26;
+114544;Niebuhrschleuse 1;LKN, Itzehoe;Riedebek;10.637472;53.455902;2004-02-01;;Abfluss;2010-04-07;false;;9.306000;2004-03-29;
+114065;Sorgbrück;LKN, Kiel;Sorge;9.554734;54.356537;1984-11-01;;Abfluss;;false;131.44;-5.015000;2011-04-06;Nordsee
+114568;Blankensee;LKN, Itzehoe;Blankensee;10.728878;53.799072;2014-10-30;;Wasserstand;;false;;8.590000;2005-11-01;
+114620;Gut Salzau;LKN, Kiel;Salzau;10.382351;54.330238;2015-05-22;;Wasserstand;;false;;0.000000;2015-05-01;
+114242;Fargau;LKN, Kiel;Salzau;10.387120;54.322514;1984-11-01;;Wasserstand;;false;13.8;0.000000;1994-11-01;
+114617;Bollingstedt;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Bollingstedter Au;9.409938;54.589680;2014-10-27;;Wasserstand;;false;89.11;6.390000;2018-01-01;Tideeider, Nordsee
+114606;Friedrichsruh;LKN, Itzehoe;Schwarze Au;10.355245;53.525192;2011-10-27;2020-01-22;Wasserstand;;true;75.45;19.466999;2011-11-01;
+114602;Vollstedter See;LKN, Kiel;---;9.859366;54.241398;2011-09-06;;Wasserstand;;false;;13.393000;2011-09-06;
+114572;Schwansener See (FP) Schöpfwerk;LKN, Kiel;---;10.009578;54.603130;2011-11-09;;Wasserstand;;false;21.28;-1.332000;2011-11-09;
+114613;Innien-Mitte;LKN, Kiel;Bünzau;9.796762;54.081322;2014-04-01;;Abfluss;;false;164.2;7.760000;2014-03-24;"Elbe
+
+, Nordsee"
+114151;Zarpen;LKN, Kiel;Heilsau;10.521238;53.869305;1984-11-01;2020-01-22;Wasserstand;;true;49.6;0.000000;1994-11-01;
+114243;Pülsen;LKN, Kiel;Mühlenau;10.465696;54.324795;1984-11-01;;Abfluss;2017-03-09;false;49.5;0.000000;2002-09-03;
+114619;Wallsbüll K78;LKN, Husum;Schafflunder Mühlenstrom;9.246618;54.785046;2015-02-19;;Abfluss;;false;13.2;8.000000;2015-02-19;
+114627;Sterley;LKN, Husum;Schaalseekanal;10.858123;53.640564;2017-10-15;;Abfluss;2018-06-06;false;;0.000000;2016-03-09;
+114376;Ekholt;LKN, Itzehoe;Ekholter Au;9.717705;53.737801;1995-04-01;;Wasserstand;;false;7.25;8.091000;1995-03-13;
+111097;Altneukoog-Nord;LKN, Husum;---;8.887889;54.389725;2005-06-13;;Wasserstand;2007-09-02;false;;-5.000000;2005-06-10;
+114187;Flensburg-Papierfabrik;LKN, Husum;Mühlenstrom (Flensburg);9.432861;54.779602;1984-11-01;;Wasserstand;1989-04-13;false;36.8;0.000000;1979-11-05;
+114031;Flintbek;LKN, Kiel;Eider;10.051229;54.241421;1974-01-30;2020-01-22;Wasserstand;;true;129.168;0.000000;1994-11-01;Nord-Ostsee-Kanal, Elbe, Nordsee
+114106;Frestedt;LKN, Husum;Dohrlehnsbach;9.178843;54.025333;1984-11-01;;Wasserstand;1988-10-27;false;3.47;0.000000;1986-06-27;
+114300;Ahrensburg;LKN, Itzehoe;Aue;0.000000;0.000000;1988-09-01;;Wasserstand;1990-07-31;false;;0.000000;1988-09-01;
+111036;Alt Bennebek;LKN, Husum;Bennebek;9.437191;54.368378;1997-10-20;;Wasserstand;;false;30.21;-5.010000;2018-01-01;
+114435;Augaard;LKN, Husum;Treene;9.460017;54.700928;1998-06-30;;Wasserstand;;false;135.05;20.000000;2018-01-01;Eider, Nordsee
+114117;Bad Bramstedt/Osterau;LKN, Itzehoe;Osterau;9.899987;53.917931;1984-11-01;2020-01-22;Wasserstand;;true;166.12;8.467000;1994-11-01;
+114427;Bäk OP;LKN, Flintbek;Bäk;10.783557;53.711681;1999-08-01;;Wasserstand;2004-11-15;false;;1.118000;1998-11-01;
+114120;Brachenfeld;LKN, Kiel;Schwale;10.014767;54.079266;1984-11-01;2020-01-22;Wasserstand;;true;73.04;21.299999;1994-11-01;Elbe, Nordsee
+114241;Brammerau;LKN, Kiel;Brammerau;9.755451;54.208702;1984-11-01;;Wasserstand;1988-06-14;false;32.2;11.000000;1994-11-01;
+111096;Adenbüller Koog;LKN, Husum;---;8.875803;54.363201;2005-06-13;;Wasserstand;2007-09-02;false;;-5.000000;2005-06-10;
+114437;Arlau-Schleuse BP;LKN, Husum;Arlau;8.940065;54.547329;1998-10-15;2020-01-22;Wasserstand;;true;286.566;-5.000000;2018-01-01;
+114326;Böken/Fuhlenau;LKN, Kiel;Fuhlenau;9.781796;54.104813;1991-07-01;2020-01-22;Wasserstand;;true;36.7;0.000000;2011-09-13;
+114138;Hamdorf;LKN, Kiel;Brandsau;10.288119;53.975014;1984-11-01;;Wasserstand;2009-01-01;false;42.95;21.900000;1994-11-01;
+114331;Grauel unten;LKN, Kiel;Buckener Au;9.703702;54.076859;1991-11-01;;Wasserstand;2003-10-31;false;30.0;0.000000;1994-11-01;
+114236;Hohenhorst;LKN, Itzehoe;Pinnau;9.898675;53.757381;1984-11-01;;Wasserstand;;false;33.3;12.620000;1990-12-20;Nordsee
+114043;Langwedel;LKN, Kiel;Oldendieksau;9.925315;54.203476;1984-11-01;;Wasserstand;1993-10-31;false;32.2;0.000000;1986-08-01;
+114168;Leck-Karlsmark;LKN, Husum;Lecker Au;8.991078;54.767979;1984-11-01;;Wasserstand;2011-12-13;false;134.0;-5.010000;1994-11-01;Nordsee (Schlütt, Süderaue)
+114528;Füsing;LKN, Kiel;Füsinger Au;9.642506;54.535812;2003-03-22;2020-01-22;Wasserstand;;true;237.34;-5.000000;2003-09-03;
+114372;Kölln;LKN, Itzehoe;Ekholter Au;9.720600;53.759903;1995-04-01;2020-01-22;Wasserstand;;true;35.03;3.586000;1995-04-01;
+111063;Lieth;LKN, Husum;Nehringer Strom;9.063583;54.168335;2001-04-01;;Wasserstand;2014-03-04;false;;-5.020000;1994-11-01;
+114153;Löhrstorf;LKN, Kiel;Godderstorfer Au;11.041509;54.332596;1984-11-01;2020-01-22;Wasserstand;;true;54.0;0.600000;2000-10-31;
+114399;Geschendorf;LKN, Itzehoe;Bißnitz;10.428103;53.929344;1996-06-01;2020-01-22;Wasserstand;;true;39.0;25.823000;1996-06-01;Ostsee
+114588;Himmelreich;LKN, Husum;---;9.083292;54.013580;2007-03-29;;Wasserstand;;false;2.27;-5.000000;2007-03-29;
+114503;Garrensee;LKN, Itzehoe;Garrensee;10.852992;53.689663;2014-12-09;;Wasserstand;;false;;-0.002000;2011-08-03;
+114285;Grambek;LKN, Itzehoe;Hellbach;10.723395;53.575462;1987-12-01;;Wasserstand;1989-10-31;false;69.05;13.430000;1987-12-01;
+111027;Lüttmoorsiel Salzwasserbiotop;LKN, Husum;Salzwasserbiotop Beltringharde;8.875296;54.555996;2003-08-01;2020-01-22;Wasserstand;;true;;-5.010000;1994-11-01;
+111035;Meggerdorf;LKN, Husum;Alte Sorge;9.330220;54.345711;2002-03-04;2020-01-22;Wasserstand;;true;17.04;-5.010000;2018-01-01;
+114415;Mönkhof;LKN, Kiel;Vorrader Landgraben;10.697353;53.827972;1997-07-01;;Wasserstand;2012-01-01;false;18.18;3.374000;2000-11-01;
+114166;Mözener See;LKN, Itzehoe;Mözener See;10.255427;53.910534;1977-12-01;;Wasserstand;;false;53.95;0.000000;2002-10-10;
+111040;Neufeld Feld;LKN, Husum;Neufelder Fleth;9.002178;53.938057;2002-03-07;;Wasserstand;;false;6.48;-5.030000;2018-01-01;
+111039;Neufelderkoog-Siel BP;LKN, Husum;Hauptentwässerungsstrom;9.015769;53.905682;1998-08-31;2020-01-22;Wasserstand;;true;30.92;-5.030000;2019-03-08;
+114319;Steinberg;LKN, Kiel;Haaler Au;9.525900;54.155163;1986-11-01;;Wasserstand;2004-10-31;false;97.0;-5.000000;1994-11-01;
+114179;Stocksee;LKN, Itzehoe;Stocksee;10.340478;54.086010;1978-11-01;;Wasserstand;;false;14.52;0.000000;2001-11-01;
+114253;Südensee;LKN, Husum;Südensee;9.637606;54.704124;1984-11-01;;Wasserstand;;false;13.72;29.035999;2018-01-01;
+114129;Traventhal;LKN, Itzehoe;Trave;10.313358;53.892685;1984-11-01;;Wasserstand;;false;419.59;11.462000;1996-07-08;
+111057;Rugenort;LKN, Husum;Rugenorter Loch;8.883447;54.005535;1997-10-27;2020-01-22;Wasserstand;;true;22.03;-5.030000;2018-01-01;
+114131;Sarlhusen;LKN, Kiel;Bünzau;9.815755;54.034195;1984-11-01;2020-01-22;Wasserstand;;true;207.0;0.000000;1994-11-01;"Elbe
+
+, Nordsee"
+114442;Schmalstede-Neu-;LKN, Kiel;Eider;10.045791;54.196278;2000-10-25;2020-01-22;Wasserstand;;true;119.0;13.000000;2012-01-12;Nord-Ostsee-Kanal, Elbe, Nordsee
+114297;Schmarkau-Schöpfwerk;LKN, Kiel;Schmarkau;10.484086;54.178112;1986-10-01;;Wasserstand;1991-06-01;false;10.0;0.000000;1986-09-30;
+114417;Schönweide;LKN, Kiel;Kossau;10.492124;54.223026;1997-11-01;;Wasserstand;;false;68.5;0.000000;1997-11-01;
+114156;Oldesloe OP;LKN, Itzehoe;Trave;10.370004;53.812759;1984-11-01;2020-01-22;Wasserstand;;true;527.55;-0.021000;1994-11-01;
+114061;Sollerupmühle;LKN, Husum;Jerrisbek;9.313270;54.582355;1984-11-01;2020-01-22;Wasserstand;;true;84.27;0.000000;1994-11-01;Eider, Nordsee
+114069;Treia;LKN, Husum;Treene;9.317290;54.514347;1999-12-02;2020-01-22;Wasserstand;;true;480.72;-4.990000;2018-01-01;Eider, Nordsee
+114314;Rantzau;LKN, Kiel;Kossau;10.515836;54.235523;1987-12-01;2020-01-22;Wasserstand;;true;75.0;0.000000;2001-09-25;
+114165;Neversdorfer See;LKN, Itzehoe;Neversdorfer See;10.275950;53.869617;1978-01-01;;Wasserstand;;false;26.5;0.000000;2002-10-09;
+114200;Padenstedt;LKN, Kiel;Stör;9.916700;54.051029;1984-11-01;2020-01-22;Wasserstand;;true;199.0;10.510000;2006-10-30;
+114095;Ritzerauer Hofsee;LKN, Itzehoe;Ritzerauer Hofsee;10.585325;53.663761;1974-03-01;;Wasserstand;1986-06-30;false;;0.000000;1974-03-01;
+114238;Plön;LKN, Kiel;Schwentine;10.406615;54.160984;1984-11-01;2020-01-22;Wasserstand;;true;254.0;18.040001;1994-11-01;
+114125;Renzel;LKN, Itzehoe;Pinnau;9.874762;53.722656;1984-11-01;2020-01-22;Wasserstand;;true;71.26;6.475000;2000-01-01;Nordsee
+114533;Scheinmark AP;LKN, Husum;Soholmer Au;8.955339;54.716316;2003-11-26;;Wasserstand;2009-02-11;false;;-5.000000;2003-11-24;Nordsee (Schlütt, Süderaue)
+114243;Pülsen;LKN, Kiel;Mühlenau;10.465696;54.324795;1984-11-01;;Wasserstand;2017-03-09;false;49.5;0.000000;2002-09-03;
+114424;Schulendorf;LKN, Kiel;Schwartau;10.675548;54.008556;1999-07-01;2020-01-22;Wasserstand;;true;123.99;9.513000;2007-09-14;
+114100;Sehmsdorf;LKN, Itzehoe;Trave;10.418445;53.813313;1984-11-01;2020-01-22;Wasserstand;;true;731.16;-5.020000;1994-11-01;
+114395;Wensin;LKN, Itzehoe;Trave;10.428958;53.981529;1996-07-01;;Wasserstand;2009-02-02;false;130.0;0.000000;1996-07-01;
+114075;Westerakeby;LKN, Kiel;Loiter Au;9.684505;54.587078;1984-11-01;2020-01-22;Wasserstand;;true;203.99;0.039000;1994-11-01;
+114105;Witzeeze;LKN, Kiel;Linau;10.599081;53.453930;1984-11-01;2020-01-22;Wasserstand;;true;105.7;10.806000;1994-11-01;Elbe
+114134;Wrist;LKN, Itzehoe;Bramau;9.746604;53.930145;1984-11-01;2020-01-22;Wasserstand;;true;471.0;0.501000;2019-04-29;Elbe
+114265;Wulfsdorf;LKN, Kiel;Hagener Au;10.300781;54.344383;1985-11-01;;Wasserstand;1999-01-06;false;76.8;0.000000;1994-11-01;
+110013;Finkhaushallig AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.978111;54.457504;1976-11-01;;Wasserstand;2013-09-12;false;;-5.030000;1994-11-01;
+114324;Ammersbek;LKN, Itzehoe;Ammersbek;10.173985;53.708050;1991-01-01;;Abfluss;;false;100.06;20.122999;2018-01-01;Elbe, Nordsee
+114289;Bad Bramstedt/Ohlau;LKN, Itzehoe;Ohlau;9.885325;53.901405;1988-12-01;;Abfluss;;false;75.68;7.683000;2001-01-10;
+114117;Bad Bramstedt/Osterau;LKN, Itzehoe;Osterau;9.899987;53.917931;1984-11-01;;Abfluss;;false;166.12;8.467000;1994-11-01;
+114241;Brammerau;LKN, Kiel;Brammerau;9.755451;54.208702;;;Abfluss;1988-06-14;false;32.2;11.000000;1994-11-01;
+114592;Wehren;LKN, Husum;---;8.962930;54.204964;2007-03-29;;Wasserstand;;false;12.85;-5.000000;2018-01-01;
+114421;Dersau;LKN, Kiel;Vorfl.Kalübbe;10.335715;54.120991;1997-12-01;;Abfluss;1999-11-01;false;;0.000000;1998-11-01;
+114025;Esperstoft;LKN, Husum;Jübek;9.341438;54.542610;1984-11-01;;Abfluss;;false;29.95;0.000000;1994-11-01;Eider, Nordsee
+114242;Fargau;LKN, Kiel;Salzau;10.387120;54.322514;1984-11-01;;Abfluss;;false;13.8;0.000000;1994-11-01;
+114187;Flensburg-Papierfabrik;LKN, Husum;Mühlenstrom (Flensburg);9.432861;54.779602;1984-11-01;;Abfluss;1989-04-13;false;36.8;0.000000;1979-11-05;
+114334;Gr. Wittensee;LKN, Kiel;Mühlenbek;9.783959;54.403042;1991-12-01;;Abfluss;1995-11-30;false;12.6;;;
+114285;Grambek;LKN, Itzehoe;Hellbach;10.723395;53.575462;1987-12-01;;Abfluss;1989-10-31;false;69.05;13.430000;1987-12-01;
+114294;Grauel;LKN, Kiel;Buckener Au;9.681186;54.063606;1988-07-01;;Abfluss;1994-04-30;false;14.7;0.000000;1994-11-01;
+114138;Hamdorf;LKN, Kiel;Brandsau;10.288119;53.975014;1984-11-01;;Abfluss;2009-01-01;false;42.95;21.900000;1994-11-01;
+114034;Hammer;LKN, Kiel;Eider;10.073149;54.286018;1984-11-01;;Abfluss;;false;151.06;8.727000;2010-09-08;Nord-Ostsee-Kanal, Elbe, Nordsee
+114168;Leck-Karlsmark;LKN, Husum;Lecker Au;8.991078;54.767979;1984-11-01;;Abfluss;2011-12-13;false;134.0;-5.010000;1994-11-01;Nordsee (Schlütt, Süderaue)
+114553;Wehr 1;LKN, Itzehoe;Haseldorfer Binnenelbe;9.578056;53.632607;2005-02-17;;Wasserstand;2012-01-17;false;;-5.000000;2004-12-20;
+114396;Westerrade;LKN, Itzehoe;Struckau;10.450934;53.939873;1996-06-01;;Wasserstand;1997-10-31;false;9.6;25.653999;1996-06-01;
+114338;Voorde;LKN, Kiel;Eider;10.066359;54.249146;1992-08-01;2020-01-22;Wasserstand;;true;140.0;-0.003000;2018-01-01;Nord-Ostsee-Kanal, Elbe, Nordsee
+114218;Wacken;LKN, Itzehoe;Otterkrugsbach;9.342448;54.009789;1988-11-01;;Wasserstand;1991-04-24;false;6.44;1.192000;1982-08-26;
+114332;Bargfeld;LKN, Kiel;Bünzau;9.819099;54.045864;1992-08-01;;Abfluss;;false;199.0;0.000000;2011-09-12;Elbe, Nordsee
+114326;Böken/Fuhlenau;LKN, Kiel;Fuhlenau;9.781796;54.104813;1991-07-01;;Abfluss;;false;36.7;0.000000;2011-09-13;
+114373;Holm/Aue;LKN, Itzehoe;Holmau;9.670496;53.636883;1995-03-01;;Abfluss;;false;12.55;0.751000;2007-11-01;
+114295;Innien;LKN, Kiel;Buckener Au;9.769997;54.098679;1988-07-01;;Abfluss;;false;58.6;0.000000;2006-10-23;
+110001;Westerland W6;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.277163;54.903820;1984-11-01;;Wasserstand;1999-01-01;false;;-5.000000;2005-10-20;
+110049;Husum-Sperrwerk BP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;9.025739;54.472343;1993-09-01;2020-01-22;Wasserstand;;true;121.91;-5.010000;2018-01-01;
+110149;Langeness Nord;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.629180;54.668343;2009-03-06;;Wasserstand;;false;;-5.010000;2018-01-01;
+110159;Buttersand;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.487099;54.908546;1994-04-12;;Wasserstand;2008-02-20;false;;-5.000000;2004-03-31;
+110121;Suederoog-Hever;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.574002;54.449745;1976-05-03;;Wasserstand;1997-12-02;false;;-5.000000;1994-11-01;
+110147;Finkhaushallig Hever;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.953954;54.472523;1979-05-21;;Wasserstand;1985-10-30;false;;-5.000000;2005-10-19;
+110169;Steinloch;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.639658;54.475826;1997-03-10;;Wasserstand;1997-12-09;false;;-5.000000;2005-10-20;
+114100;Sehmsdorf;LKN, Itzehoe;Trave;10.418445;53.813313;1984-11-01;;Abfluss;;false;731.16;-5.020000;1994-11-01;
+114261;Soltfeld;LKN, Husum;Kielstau;9.495998;54.709503;1985-12-01;;Abfluss;;false;48.0;26.570999;2018-01-01;
+114198;Wedel 1;LKN, Itzehoe;Wedeler Au;9.724187;53.586430;1984-11-01;;Abfluss;;false;34.3;3.680000;1994-11-01;
+114131;Sarlhusen;LKN, Kiel;Bünzau;9.815755;54.034195;1984-11-01;;Abfluss;;false;207.0;0.000000;1994-11-01;"Elbe
+
+, Nordsee"
+114454;Obdrup;LKN, Husum;Mühlenstrom (Bondenau);9.581980;54.695038;2001-12-07;;Abfluss;;false;14.14;23.000000;2018-01-01;
+114250;Pötrau;LKN, Kiel;Steinau;10.612840;53.476788;1984-12-01;;Abfluss;;false;92.39;0.000000;1994-11-01;
+114056;Preetz;LKN, Kiel;Schwentine;10.284450;54.235458;1984-11-01;;Abfluss;;false;445.45;0.000000;1994-11-01;
+114125;Renzel;LKN, Itzehoe;Pinnau;9.874762;53.722656;1984-11-01;;Abfluss;;false;71.26;6.475000;2000-01-01;Nordsee
+114248;Neritz;LKN, Flintbek;Norderbeste;10.294273;53.783703;1993-11-01;;Abfluss;2006-12-01;false;48.0;0.000000;1984-11-01;
+114134;Wrist;LKN, Itzehoe;Bramau;9.746604;53.930145;1984-11-01;;Abfluss;;false;471.0;0.501000;2019-04-29;Elbe
+114451;Sprakebüll;LKN, Husum;Lecker Au;9.074467;54.776398;2001-11-08;;Abfluss;2012-01-11;false;82.2;-5.000000;2001-11-30;Nordsee (Schlütt, Süderaue)
+114189;Osterrönfeld/Linnbek;LKN, Kiel;Linnbek;9.732095;54.282970;1984-11-01;;Abfluss;1991-05-21;false;33.4;0.000000;1979-11-26;
+114007;Sensby;LKN, Kiel;Bienebek;9.900289;54.595005;1984-11-01;;Abfluss;;false;7.0;7.610000;1994-11-01;
+114597;Sipsdorf;LKN, Kiel;Johannisbek;10.870992;54.255692;2009-06-11;;Abfluss;;false;;0.000000;2008-11-29;
+114481;Suhrer See;LKN, Kiel;---;10.473464;54.156464;2010-08-05;;Wasserstand;;false;3.3;0.000000;2010-08-05;
+111059;Sommerkoog Steertloch BP;LKN, Husum;Staubecken Sommerkoog;8.958975;54.033340;1997-10-20;2020-01-22;Wasserstand;;true;64.68;-5.040000;1997-04-16;
+110201;Langeness Kirchhofswarf;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;---;8.542344;54.629005;2009-11-22;2020-01-22;Wasserstand;;true;;-5.010000;2018-01-01;
+114507;Trammer See;LKN, Kiel;---;10.433307;54.174126;2013-07-09;;Wasserstand;;false;4.7;18.721001;1998-12-01;
+114466;Behlendorfer See;LKN, Itzehoe;Behlendorfer See;10.673945;53.703068;2013-07-17;;Wasserstand;;false;;33.771999;1994-11-01;
+114608;Brokenlande;LKN, Itzehoe;Brokstedter Au;9.945385;54.019314;2011-11-01;;Wasserstand;2018-11-08;false;13.49;16.344999;2011-11-03;Elbe, Nordsee
+114609;Lippe;LKN, Husum;Ostsee;10.645835;54.336143;2012-06-26;2020-01-22;Wasserstand;;true;;-5.010000;2018-01-01;
+114607;Langeln OP;LKN, Itzehoe;Krückau;9.897362;53.808167;2011-10-30;;Wasserstand;;false;20.99;19.233999;2011-11-01;Nordsee
+114628;Grube;LKN, Kiel;Oldenburger Graben;11.031224;54.241257;2016-07-04;2020-01-22;Wasserstand;;true;;-3.512000;2016-06-08;
+114605;Eutin Neumühle;LKN, Kiel;Schwentine;10.605474;54.150055;;;Abfluss;;false;;25.382999;2011-09-05;
+114345;Dörpstedt;LKN, Husum;Rheider Au;9.350012;54.444462;1994-11-01;;Wasserstand;;false;57.65;-5.000000;2018-01-01;
+114307;Dragerborn 2;LKN, Itzehoe;Bekau;9.522902;54.005905;1991-05-01;2020-01-22;Wasserstand;;true;38.6;-0.006000;2018-01-01;
+114284;Drüsensee;LKN, Itzehoe;Drüsensee;10.716055;53.598213;1988-01-01;;Wasserstand;;false;74.9;-0.005000;2011-07-22;
+114049;Einfelder See;LKN, Kiel;Einfelder See;9.989837;54.131310;1953-11-01;;Wasserstand;;false;10.45;0.000000;2001-02-01;
+114537;Fahretofter Koog AP;LKN, Husum;Bottschlotter See;8.812173;54.705044;2003-11-28;;Wasserstand;;false;;-5.040000;2018-06-06;
+111024;Finkhaushallig BP;LKN, Husum;Staubecken Finkhaus;8.979207;54.456337;1997-11-04;;Wasserstand;;false;13.2;-5.030000;1994-11-01;
+114292;Frestedt-Feld;LKN, Itzehoe;Dohrlehnsbach;9.171488;54.033218;1988-05-01;;Wasserstand;2012-01-10;false;4.71;-5.000000;1988-05-19;
+114118;Blunker See;LKN, Itzehoe;Blunker See;10.327979;54.012947;1965-11-01;;Wasserstand;2003-04-09;false;1.18;0.000000;1965-11-01;
+114014;Borsbüll;LKN, Husum;Borsbüllerbach;8.983885;54.603512;1984-11-01;2020-01-22;Wasserstand;;true;6.17;-5.000000;2018-01-01;Arlau, Speicherbecken Arlau, Nordsee (Holmer Fähre, Hever)
+114321;Brammer;LKN, Kiel;Brammerau;9.755430;54.208389;1988-07-01;;Wasserstand;2009-01-13;false;32.2;0.000000;1994-11-01;
+114448;Dassendorf;LKN, Itzehoe;Süsterbek;10.363177;53.514801;2001-05-03;;Wasserstand;2012-01-10;false;14.84;25.007999;2001-09-19;
+114267;Depenau;LKN, Kiel;Kührener Au;10.241073;54.159218;1985-11-01;;Wasserstand;2005-10-31;false;65.75;0.000000;1994-11-01;
+111032;Arlau-Bahndamm;LKN, Husum;Arlau;9.005955;54.566322;1999-01-01;;Wasserstand;2012-01-18;false;;-5.000000;1992-06-17;
+114294;Grauel;LKN, Kiel;Buckener Au;9.681186;54.063606;1988-07-01;;Wasserstand;1994-04-30;false;14.7;0.000000;1994-11-01;
+114296;Grebin;LKN, Kiel;Schmarkau (Grebin);10.497079;54.192505;1986-10-01;;Wasserstand;;false;6.2;0.000000;1994-11-01;
+114235;Halstenbek;LKN, Itzehoe;Düpenau;9.824323;53.640423;1984-11-01;2020-01-22;Wasserstand;;true;44.84;2.830000;2018-01-01;
+114461;Lübeck-Moisling;LKN, Itzehoe;Trave;10.641576;53.847103;2002-09-06;2020-01-22;Wasserstand;;true;879.05;-5.005000;2002-02-22;
+111013;Garding-Süd;LKN, Husum;Süderbootfahrt;8.786201;54.319031;1997-11-04;2020-01-22;Wasserstand;;true;3.38;-5.020000;2018-01-01;
+111060;Heringsand BP;LKN, Husum;Ringschlot;8.841203;54.220512;2002-04-01;;Wasserstand;2003-07-02;false;;-5.000000;1997-12-10;
+110068;Krückau-Sperrwerk DMA;LKN, Itzehoe;Krückau;9.526090;53.716091;2006-04-12;;Wasserstand;2019-09-16;false;265.75;-5.000000;2003-03-06;Nordsee
+114201;Langballig;LKN, Kiel;Langballigau;9.660787;54.806866;1984-11-01;;Wasserstand;;false;44.2;0.000000;1994-11-01;
+114444;Langelohe;LKN, Itzehoe;Krückau;9.673190;53.758526;2000-06-27;;Wasserstand;2013-11-15;false;;1.288000;2000-12-04;Nordsee
+114589;Hohensiel;LKN, Husum;---;9.057548;54.035789;2007-03-29;;Wasserstand;;false;0.43;-5.000000;2018-01-01;
+111018;Katingwatt-Norderlochgraben;LKN, Husum;Norderlochgraben;8.867184;54.296829;1997-11-04;;Wasserstand;;false;41.06;-5.020000;1994-11-01;
+114536;Fröddegaard AP;LKN, Husum;Lecker Au;8.843107;54.715809;2003-11-13;;Wasserstand;2009-02-26;false;;-5.000000;2003-11-24;Nordsee (Schlütt, Süderaue)
+114432;Habernis AP;LKN, Kiel;Habernisau;9.767848;54.796394;2000-09-13;;Wasserstand;;false;24.91;-0.500000;2000-06-22;
+111062;Kronprinzenkoog-Nord;LKN, Husum;Trennewurther Fleth;8.991803;54.022930;1997-12-08;;Wasserstand;;false;20.44;-5.000000;2018-01-01;
+114535;Efkebüll BP;LKN, Husum;Geltinger See;8.879580;54.712551;2003-11-28;;Wasserstand;2004-09-23;false;;-5.000000;2003-11-24;Bongsieler Kanal, Nordsee
+114341;Kembs 1;LKN, Kiel;Vorfluter Futterkamp;10.580926;54.350628;1992-11-01;;Wasserstand;1996-04-30;false;8.1;0.000000;1994-11-01;
+114455;Frörup-UW;LKN, Husum;Treene;9.428366;54.694008;2001-12-07;;Wasserstand;2012-01-09;false;160.0;20.000000;2001-11-30;Eider, Nordsee
+114397;Krems 2;LKN, Itzehoe;Börnsee;10.355929;53.992023;1996-06-01;;Wasserstand;1997-10-31;false;3.9;0.000000;1996-06-01;
+114598;Lensahn;LKN, Kiel;Walkerbach;10.883674;54.223366;2008-11-29;;Wasserstand;2017-03-30;false;;0.000000;2008-11-29;
+114195;Lütjensee;LKN, Flintbek;---;10.370504;53.645916;1981-01-01;;Wasserstand;1999-01-12;false;10.0;42.000000;1981-01-01;
+114223;Malente;LKN, Kiel;Malenter Au;10.556539;54.196236;1984-11-01;;Wasserstand;1987-01-31;false;;0.000000;1984-11-01;
+111045;Nesserdeich;LKN, Husum;Hauptau;8.997633;54.313744;1997-09-26;;Wasserstand;;false;24.39;-5.020000;2019-10-30;
+114107;Süderrade;LKN, Itzehoe;Süderau;9.372350;54.198551;1984-11-01;2020-01-22;Wasserstand;;true;9.35;-5.017000;1994-11-01;Nordsee
+114101;Sühlen;LKN, Itzehoe;Trave;10.318371;53.859989;1984-11-01;2020-01-22;Wasserstand;;true;458.94;-0.010000;1994-11-01;
+114547;Tarp;LKN, Husum;Treene;9.411041;54.665409;2004-04-16;2020-01-22;Wasserstand;;true;177.88;9.000000;2018-01-01;Eider, Nordsee
+114558;Tetenbüllspieker BP;LKN, Husum;Tetenbüll-Sielzug;8.830503;54.398636;1993-01-05;2020-01-22;Wasserstand;;true;50.86;-5.010000;2018-01-01;
+114585;Timmersiek;LKN, Husum;Meyner Mühlenstrom;9.281527;54.762524;2009-04-02;;Wasserstand;;false;22.56;16.500000;2009-04-02;
+114245;Schafstedt;LKN, Itzehoe;Mühlenbach (Schafstedt);9.293017;54.076267;1984-11-01;2020-01-22;Wasserstand;;true;22.58;-5.015000;1994-11-01;
+114439;Oldesloe 3 Stadtpark;LKN, Itzehoe;Beste;10.372116;53.805363;2000-01-31;2020-01-22;Wasserstand;;true;198.0;4.509000;2000-01-31;Ostsee
+114574;Pötrau OP;LKN, Kiel;Steinau;10.605156;53.479641;2008-01-29;;Wasserstand;2016-12-08;false;;15.270000;2008-01-29;
+114007;Sensby;LKN, Kiel;Bienebek;9.900289;54.595005;1984-11-01;;Wasserstand;;false;7.0;7.610000;1994-11-01;
+114428;Oldesloe Stadtarm OP;LKN, Itzehoe;Trave;10.372043;53.811012;1999-09-01;;Wasserstand;;false;527.13;0.015000;1999-09-01;
+114056;Preetz;LKN, Kiel;Schwentine;10.284450;54.235458;1981-10-31;2020-01-22;Wasserstand;;true;445.45;0.000000;1994-11-01;
+111007;Rickelsbüll BP;LKN, Husum;Staubecken Rickelsbüll;8.638784;54.910152;1998-11-01;;Wasserstand;;false;5.61;-5.020000;2018-01-01;
+114438;Schlüttsiel BP;LKN, Husum;Bongsieler Kanal;8.760818;54.684193;1998-09-01;2020-01-22;Wasserstand;;true;722.748;-5.030000;1998-09-01;
+114340;Schmalstede;LKN, Kiel;Eider;10.041092;54.201443;1992-08-01;;Wasserstand;2003-10-31;false;119.0;0.000000;1992-06-29;Nord-Ostsee-Kanal, Elbe, Nordsee
+114582;Wallsbüll-Nord;LKN, Husum;Schafflunder Mühlenstrom;9.246001;54.796200;2009-04-02;;Wasserstand;;false;;11.000000;2009-03-01;
+114126;Wendlohe;LKN, Itzehoe;Rugenwedelsau;9.939358;53.658848;1984-11-01;;Wasserstand;;false;9.21;9.515000;1994-11-01;
+110029;Nordstrandischmoor;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.797844;54.549824;2007-05-01;2020-01-22;Wasserstand;;true;;-5.000000;2018-01-01;
+114121;Brokstedt;LKN, Itzehoe;Brokstedter Au;9.811051;53.994877;1984-11-01;;Abfluss;;false;99.32;-0.021000;2002-11-01;Elbe, Nordsee
+114541;Dahme BP;LKN, Kiel;Oldenburger Graben;11.082775;54.234211;2004-03-30;;Abfluss;2010-06-03;false;113.6;-3.500000;2004-03-26;
+114525;Dückerschleuse;LKN, Kiel;Stecknitz;10.627381;53.446465;2003-05-20;;Abfluss;2010-04-07;false;0.16;7.508000;2003-05-01;
+114224;Eggebek;LKN, Husum;Treene;9.376074;54.616074;1984-11-01;;Abfluss;;false;194.58;5.000000;1994-11-01;Eider, Nordsee
+114122;Eversdorf;LKN, Itzehoe;Bekau;9.476411;53.987141;;;Abfluss;1991-01-11;false;105.0;-5.026000;1958-12-04;
+114031;Flintbek;LKN, Kiel;Eider;10.051229;54.241421;1984-11-01;;Abfluss;;false;129.168;0.000000;1994-11-01;Nord-Ostsee-Kanal, Elbe, Nordsee
+114235;Halstenbek;LKN, Itzehoe;Düpenau;9.824323;53.640423;1984-11-01;;Abfluss;;false;44.84;2.830000;2018-01-01;
+110068;Krückau-Sperrwerk DMA;LKN, Itzehoe;Krückau;9.526090;53.716091;2006-04-12;;Abfluss;2019-09-16;false;265.75;-5.000000;2003-03-06;Nordsee
+114201;Langballig;LKN, Kiel;Langballigau;9.660787;54.806866;1984-11-01;;Abfluss;;false;44.2;0.000000;1994-11-01;
+114375;Langeln;LKN, Itzehoe;Krückau;9.844699;53.795525;1995-04-01;;Abfluss;;false;38.262;14.437000;1995-04-01;Nordsee
+114429;Langeln B4;LKN, Itzehoe;Krückau;9.878230;53.803967;1999-09-06;;Abfluss;2012-01-17;false;24.7;0.000000;2000-06-16;Nordsee
+114236;Hohenhorst;LKN, Itzehoe;Pinnau;9.898675;53.757381;1984-11-01;;Abfluss;;false;33.3;12.620000;1990-12-20;Nordsee
+114145;Lütau;LKN, Kiel;Linau;10.540814;53.438229;1984-11-01;;Abfluss;;false;90.3;0.000000;1999-09-01;Elbe
+114146;Lütau OP;LKN, Itzehoe;Au-Graben;10.534616;53.434155;1984-11-01;;Abfluss;2009-01-06;false;34.1;18.554001;1974-12-09;
+114423;Malkendorf;LKN, Kiel;Curau;10.666973;53.964695;2000-04-12;;Abfluss;;false;45.96;7.729000;2007-09-14;
+114427;Bäk OP;LKN, Flintbek;Bäk;10.783557;53.711681;1999-08-01;;Abfluss;2004-11-15;false;;1.118000;1998-11-01;
+114528;Füsing;LKN, Kiel;Füsinger Au;9.642506;54.535812;2003-09-14;2020-01-22;Abfluss;;true;237.34;-5.000000;2003-09-03;
+114208;Holm/Osterbek;LKN, Kiel;Osterbek;9.715348;54.485561;1984-11-01;;Abfluss;2009-02-23;false;27.4;-0.777000;2008-05-15;
+114546;Heiligenstedten;LKN, Itzehoe;Stör;9.470220;53.930332;2004-04-15;2020-01-22;Wasserstand;;true;1416.0;-5.000000;2004-03-26;
+110045;Hoyer-Schleuse;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.663212;54.962345;1985-11-01;2020-01-22;Wasserstand;;true;;-4.990000;2018-01-01;
+110050;Rantumdamm;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.313450;54.860012;1984-11-01;2020-01-22;Wasserstand;;true;;-5.010000;2018-01-01;
+110178;Blauort-Norderpiep;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.671433;54.168667;1980-11-01;2020-01-22;Wasserstand;;true;;-5.000000;2018-01-01;
+110030;Hooge-Landsende;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.573954;54.558403;1980-11-01;;Wasserstand;2003-11-05;false;;-5.010000;1994-11-01;
+110141;Butterloch;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.792871;54.570011;1978-05-01;;Wasserstand;1992-12-15;false;;-5.000000;1994-11-01;
+110144;Arlau Aussentief;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.913125;54.537514;1978-11-01;;Wasserstand;1987-05-31;false;;-5.000000;2005-10-19;
+110148;Japsand;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.457099;54.580292;1981-05-01;;Wasserstand;2002-12-01;false;;-5.000000;1994-11-01;
+110168;Stegel-Ost;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.566995;54.480968;1997-07-01;;Wasserstand;2002-01-01;false;;-5.000000;1997-07-01;
+110175;Lister Tief;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.233633;55.060577;1992-12-21;;Wasserstand;1994-11-08;false;;-5.000000;2005-10-20;
+110195;Krabbenloch;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.790023;54.008736;1996-05-05;;Wasserstand;2004-12-09;false;;-5.000000;2004-02-05;
+110004;Suedwesthoern;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.659583;54.796494;1981-11-01;2020-01-22;Wasserstand;;true;;-5.000000;2018-01-01;
+114308;Schalkholz;LKN, Husum;Mühlenbach (Schalkholz);9.299476;54.249249;1996-11-01;;Abfluss;2003-01-07;false;6.075;5.000000;1991-04-19;
+114058;Schlesw.-Noorstr.;LKN, Husum;Mühlenbach (Schleswig);9.571872;54.515614;1984-11-01;;Abfluss;2012-01-10;false;17.1;-0.354000;1994-11-01;
+114310;Schmarkau-Brücke;LKN, Kiel;Schmarkau;10.490068;54.182137;1987-02-01;;Abfluss;2009-02-03;false;9.5;0.000000;1994-11-01;
+114135;Willenscharen;LKN, Itzehoe;Stör;9.806866;54.009590;1984-11-01;;Abfluss;;false;484.41;2.018000;1994-11-01;
+111091;Hooge Schulwarft;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.537905;54.568298;1981-11-24;2020-01-22;Wasserstand;;true;;-5.010000;2018-01-01;
+114249;Nusse;LKN, Kiel;Steinau;10.580059;53.659729;1985-11-01;;Abfluss;;false;75.2;0.000000;2010-04-28;
+114124;Naherfurth;LKN, Itzehoe;Alster;10.124371;53.771809;1984-11-01;;Abfluss;;false;77.1;21.601999;1999-11-01;Nordsee
+114522;Pohnsdorfer Stauung unten;LKN, Kiel;Neuwührener Au;10.236357;54.238857;2003-04-05;;Abfluss;2009-04-20;false;38.5;20.499001;2003-04-15;
+114281;Rehagen;LKN, Itzehoe;Bunsbach;10.196230;53.708164;1988-05-01;;Abfluss;2012-01-16;false;31.29;-0.028000;1994-11-01;
+114436;Sollerup;LKN, Husum;Treene;9.323866;54.570293;1998-08-18;;Abfluss;;false;314.34;0.000000;1997-11-03;Eider, Nordsee
+114413;Stutebüll;LKN, Kiel;Grimsau;9.921250;54.684280;1997-03-01;;Abfluss;;false;25.6;0.000000;1996-10-25;
+114348;Neuhörup;LKN, Husum;Rodau;9.112839;54.721539;1994-11-01;;Abfluss;;false;49.68;-4.990000;2018-01-01;
+114174;Oeversee;LKN, Husum;Bek;9.423178;54.708298;1984-11-01;;Abfluss;;false;18.71;23.704000;2018-01-01;
+114398;Pronsdorf;LKN, Itzehoe;Goldenbek;10.467812;53.947571;1996-06-01;;Abfluss;1997-10-31;false;15.0;24.230000;1996-06-01;
+114105;Witzeeze;LKN, Kiel;Linau;10.599081;53.453930;1984-11-01;;Abfluss;;false;105.7;10.806000;1994-11-01;Elbe
+114465;Großensee;LKN, Itzehoe;Großensee;10.348449;53.614697;2014-10-27;;Wasserstand;;false;;-0.026000;2014-10-27;
+110203;Oland Hafensiel Binnen;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;---;8.686745;54.673115;2009-11-22;2020-01-22;Wasserstand;;true;;-5.000000;2018-01-01;
+114458;Wensin-Rote Kate;LKN, Itzehoe;Trave;10.454889;53.992203;2002-09-09;2020-01-22;Wasserstand;;true;125.04;0.000000;2002-02-06;
+114605;Eutin Neumühle;LKN, Kiel;Schwentine;10.605474;54.150055;2011-09-05;;Wasserstand;;false;;25.382999;2011-09-05;
+114612;Bovenau;LKN, Kiel;---;9.831105;54.329380;2012-12-04;;Wasserstand;2014-12-18;false;18.81;5.015000;2012-10-04;
+114188;Glücksburg;LKN, Kiel;Schwennau;9.542206;54.842140;1970-01-01;;Wasserstand;;false;33.3;-0.010000;2010-07-08;
+114607;Langeln OP;LKN, Itzehoe;Krückau;9.897362;53.808167;;;Abfluss;;false;20.99;19.233999;2011-11-01;Nordsee
+114570;Windebyer Noor;LKN, Kiel;---;9.823769;54.463074;2012-06-28;;Wasserstand;;false;;-1.515000;2018-01-01;
+114621;Grönauer Mühle;LKN, Kiel;Grönau;10.755494;53.807728;2015-11-01;;Abfluss;;false;19.74;2.422000;2015-10-29;Wakenitz, Trave
+114631;Dahme AP;LKN, Kiel;Ostsee;11.083563;54.234322;2015-10-25;2020-01-22;Abfluss;;true;113.6;-5.000000;2011-04-24;
+114293;Bucken;LKN, Kiel;Buckener Au;9.707803;54.079819;1990-06-01;;Wasserstand;2009-01-28;false;32.0;0.000000;1994-11-01;
+111021;Ehstensiel BP;LKN, Husum;Ehster Sielzug;8.713559;54.301785;1997-11-04;2020-01-22;Wasserstand;;true;19.35;-5.020000;2018-01-01;
+114025;Esperstoft;LKN, Husum;Jübek;9.341438;54.542610;1984-11-01;;Wasserstand;;false;29.95;0.000000;1994-11-01;Eider, Nordsee
+111030;Biotop III Nord;LKN, Husum;Süsswasserbiotop III;8.872945;54.565968;1998-11-01;;Wasserstand;2002-10-08;false;3.63;-5.000000;1991-06-01;
+114289;Bad Bramstedt/Ohlau;LKN, Itzehoe;Ohlau;9.885325;53.901405;1988-12-01;2020-01-22;Wasserstand;;true;75.68;7.683000;2001-01-10;
+111026;Beltringharderkoog SWB Mitte;LKN, Husum;Salzwasserbiotop Beltringharde;8.891693;54.547493;2002-01-19;2020-01-22;Wasserstand;;true;10.83;-5.010000;1994-11-01;
+114022;Dörpum;LKN, Husum;Dörpum-Bach;9.009299;54.653992;1984-11-01;;Wasserstand;2014-02-10;false;3.0;-5.000000;1994-11-01;Soholmer Au, Bongsieler Kanal, Nordsee (Schlütt, Süderaue)
+114325;Böken/Höllenau;LKN, Kiel;Höllenau;9.804735;54.083378;1991-11-01;2020-01-22;Wasserstand;;true;58.9;8.610000;2003-04-01;
+114019;Bordelumerkoog;LKN, Husum;Bordelumer Bach;8.926661;54.625526;1998-05-28;;Wasserstand;2001-10-31;false;;0.000000;1999-11-10;
+114573;Brunsbüttel Alter Hafen BP;LKN, Husum;---;9.128697;53.896320;2008-01-18;;Wasserstand;2008-05-31;false;87.91;-3.500000;2008-01-18;
+114380;Hopen;LKN, Husum;Neuwiesenzuggraben;9.144373;53.989391;1989-06-01;;Wasserstand;2009-01-08;false;2.76;0.000000;1984-12-14;
+114457;Kellinghusen;LKN, Itzehoe;Stör;9.727705;53.947773;2002-02-19;;Wasserstand;2015-03-25;false;648.3;0.445000;2000-05-15;
+114040;Kupfermühle;LKN, Husum;Krusau;9.415825;54.837490;1984-11-01;;Wasserstand;2000-09-06;false;20.2;-4.812000;1976-03-24;
+114044;Leck;LKN, Husum;Lecker Au;8.976109;54.770676;2004-03-19;2020-01-22;Wasserstand;;true;134.26;-4.990000;2018-01-01;Nordsee (Schlütt, Süderaue)
+114429;Langeln B4;LKN, Itzehoe;Krückau;9.878230;53.803967;1999-06-16;;Wasserstand;2012-01-17;false;24.7;0.000000;2000-06-16;Nordsee
+114362;Hainholzgraben;LKN, Kiel;Hainholzgraben;10.771885;53.981522;1993-01-01;;Wasserstand;1996-01-31;false;;0.000000;1994-11-01;
+114247;Hamfelde;LKN, Kiel;Bille;10.434354;53.605507;1984-12-01;;Wasserstand;;false;66.5;0.000000;1994-11-01;Nordsee
+114035;Hochmutskate;LKN, Kiel;Drögeneider;10.121636;54.187775;1976-11-01;;Wasserstand;;false;18.5;0.000000;1994-11-01;
+114519;Kiel-Oppendorf;LKN, Kiel;Schwentine;10.203833;54.323380;2003-07-17;2020-01-22;Wasserstand;;true;722.55;0.000000;2003-03-06;
+114330;Grauel mitte;LKN, Kiel;Buckener Au;9.697871;54.074554;1991-11-01;;Wasserstand;2003-10-31;false;21.0;0.000000;1994-11-01;
+114329;Grauel oben;LKN, Kiel;Buckener Au;9.694084;54.072006;1992-03-01;;Wasserstand;2012-01-01;false;20.8;0.000000;1994-11-01;
+111041;Kaiser-Wilhelm-Koog;LKN, Husum;Hauptentwässerungsstrom;8.962605;53.917622;1997-10-27;;Wasserstand;2017-03-02;false;;-5.030000;1994-11-01;
+111020;Katingwatt-Ringpriel;LKN, Husum;Ringpriel;8.862615;54.289230;1997-11-04;;Wasserstand;;false;;-5.020000;1994-11-01;
+111014;Kleihörn;LKN, Husum;Norderbootfahrt;8.883459;54.349865;2000-11-01;2020-01-22;Wasserstand;;true;12.59;-5.020000;2018-01-01;
+111098;Klerenbüll;LKN, Husum;---;8.776768;54.377708;2005-06-13;;Wasserstand;2007-07-19;false;;-5.000000;2007-06-10;
+114315;Kossau LIO 55;LKN, Kiel;Kossau;10.522851;54.247272;1987-12-01;;Wasserstand;2012-01-01;false;84.6;0.000000;1994-11-01;
+114146;Lütau OP;LKN, Itzehoe;Au-Graben;10.534616;53.434155;1984-11-01;;Wasserstand;2009-01-06;false;34.1;18.554001;1974-12-09;
+114050;Mühlenbrück;LKN, Husum;Bondenau;9.523184;54.707699;1984-11-01;2020-01-22;Wasserstand;;true;75.68;20.152000;2018-01-01;Tideeider, Nordsee
+114182;Stolper See;LKN, Kiel;Stolper See;10.230658;54.138561;1978-11-01;;Wasserstand;;false;61.3;0.000000;2010-05-04;
+114413;Stutebüll;LKN, Kiel;Grimsau;9.921250;54.684280;1997-03-01;;Wasserstand;;false;25.6;0.000000;1996-10-25;
+114282;Schulsee;LKN, Kiel;Schulsee;10.693277;53.631744;1987-12-15;;Wasserstand;1998-10-30;false;85.8;10.372000;1994-11-01;
+114132;Segeberg;LKN, Itzehoe;Trave;10.292153;53.938316;1984-11-01;;Wasserstand;1991-06-01;false;337.0;20.490000;1953-03-06;
+114055;Postsee;LKN, Kiel;Postsee;10.265323;54.241711;1994-07-01;2020-01-22;Wasserstand;;true;173.0;0.000000;1994-11-01;
+111005;Rantumdammsiel;LKN, Husum;Rantumbecken;8.337576;54.879387;2002-04-01;2020-01-22;Wasserstand;;true;30.8;-5.010000;2018-01-01;
+114274;Sarnekow;LKN, Itzehoe;Mühlenbach;10.744810;53.545673;1986-12-01;;Wasserstand;1989-10-31;false;63.02;21.150000;1986-12-01;
+114452;Treßsee;LKN, Husum;Bondenau;9.491280;54.700409;2001-11-20;;Wasserstand;;false;126.38;20.000000;2018-01-01;Tideeider, Nordsee
+114431;Niesgrau;LKN, Kiel;Lippingau;9.804083;54.746685;2000-07-04;;Wasserstand;;false;47.49;1.985000;2000-06-22;
+114263;Passader See;LKN, Kiel;Passader See;10.309929;54.351925;1985-11-01;;Wasserstand;;false;76.4;0.000000;2010-12-08;
+114091;Quellenthal/Beste;LKN, Itzehoe;Beste;10.357403;53.795570;1984-11-01;2020-01-22;Wasserstand;;true;136.61;-0.017000;1994-11-01;Ostsee
+114447;Radekamp;LKN, Itzehoe;Schwarze Au;10.445378;53.510475;2001-05-03;;Wasserstand;2009-11-26;false;27.2;32.230000;2001-09-17;
+114092;Ratzeburger See;LKN, Itzehoe;Ratzeburger See;10.768077;53.699928;1983-11-01;2020-01-22;Wasserstand;;true;317.53;-0.004000;2011-07-28;Wakenitz, Trave
+110067;Pinnau-Sperrwerk DMA;LKN, Itzehoe;Pinnau;9.557531;53.671383;2006-06-12;;Wasserstand;2009-03-23;false;348.35;-5.000000;2003-03-06;Nordsee
+114096;Sachsenwaldau;LKN, Itzehoe;Bille;10.299097;53.542492;1984-11-01;2020-01-22;Wasserstand;;true;221.13;-0.025000;2018-01-01;Nordsee
+114303;Schaalsee;LKN, Itzehoe;Schaalsee;10.876071;53.619759;1990-06-01;2020-01-22;Wasserstand;;true;180.0;-0.007000;2012-06-12;
+114064;Soholm;LKN, Husum;Soholmer Au;9.022825;54.699760;2004-03-29;2020-01-22;Wasserstand;;true;342.308;-5.000000;2018-01-01;Nordsee (Schlütt, Süderaue)
+110010;Strucklahnungshoern AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.806326;54.498829;1962-11-01;2020-01-22;Wasserstand;;true;;-5.020000;2018-01-01;
+110014;Everschopsiel AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.827643;54.408527;1976-11-01;2020-01-22;Wasserstand;;true;;-5.010000;2018-01-01;
+110025;Sommerkoog Steertloch AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.958838;54.033890;1986-01-01;2020-01-22;Wasserstand;;true;;-5.040000;2018-01-01;
+110185;Flackstrom;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.792004;54.061337;1999-05-20;;Wasserstand;2012-05-08;false;;-5.000000;2004-02-05;
+111095;Neufeld Spuelbecken;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;9.023838;53.908028;2005-11-29;2020-01-22;Wasserstand;;true;;-5.030000;2018-01-01;
+114374;Appen;LKN, Itzehoe;Appener Au;9.749495;53.660053;1995-03-01;;Abfluss;2009-01-14;false;14.09;1.783000;1995-03-01;
+114120;Brachenfeld;LKN, Kiel;Schwale;10.014767;54.079266;1984-11-01;;Abfluss;;false;73.04;21.299999;1994-11-01;Elbe, Nordsee
+114293;Bucken;LKN, Kiel;Buckener Au;9.707803;54.079819;;;Abfluss;2009-01-28;false;32.0;0.000000;1994-11-01;
+114291;Gr.Offenseht;LKN, Itzehoe;Offenau;9.709226;53.814045;1988-12-01;;Abfluss;;false;10.66;2.596000;1994-11-01;
+114133;Wardersee (SE);LKN, Itzehoe;Trave;10.389562;53.976357;2003-07-01;;Wasserstand;;false;246.4;0.000000;1994-11-01;
+111101;Pinneberg-Mühlenstraße;LKN, Itzehoe;Pinnau;9.781307;53.660198;2009-11-14;;Wasserstand;2010-06-23;false;;0.000000;2009-11-14;Nordsee
+114372;Kölln;LKN, Itzehoe;Ekholter Au;9.720600;53.759903;1995-04-01;;Abfluss;;false;35.03;3.586000;1995-04-01;
+114106;Frestedt;LKN, Husum;Dohrlehnsbach;9.178843;54.025333;1984-11-01;;Abfluss;1988-10-27;false;3.47;0.000000;1986-06-27;
+114399;Geschendorf;LKN, Itzehoe;Bißnitz;10.428103;53.929344;1996-06-01;;Abfluss;;false;39.0;25.823000;1996-06-01;Ostsee
+114206;Mehlbek;LKN, Itzehoe;Stegau;9.441890;54.009464;1984-06-01;;Abfluss;1991-10-31;false;32.4;6.801000;1996-07-11;
+114317;Fitzbek;LKN, Kiel;Kirchweddelbach;9.756205;53.997829;1990-07-05;;Abfluss;1994-06-23;false;6.3;0.000000;1994-11-01;
+114209;Gelting;LKN, Kiel;Knorr-Au;9.905687;54.739784;1984-11-01;;Abfluss;1999-11-01;false;7.96;0.000000;1981-05-04;
+114380;Hopen;LKN, Husum;Neuwiesenzuggraben;9.144373;53.989391;1998-02-25;;Abfluss;2009-01-08;false;2.76;0.000000;1984-12-14;
+114046;Husum-Nord;LKN, Husum;Maade;9.045545;54.493286;1996-11-01;;Abfluss;;false;4.33;-0.010000;1994-11-01;
+114259;Wittensee;LKN, Kiel;Wittensee;9.744575;54.370216;1984-11-01;;Wasserstand;;false;48.7;0.000000;1994-11-01;
+110035;Munkmarsch;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.363350;54.921242;1982-11-01;2020-01-22;Wasserstand;;true;;-5.000000;2018-01-01;
+110100;Strand;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.791081;54.611481;1976-03-12;2020-01-22;Wasserstand;;true;;-5.000000;2018-01-01;
+110111;Foehrer-Ley-Sued;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.608736;54.759449;1976-05-19;;Wasserstand;1991-12-12;false;;-5.000000;2005-10-19;
+110116;Liinsand;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.441256;54.766659;1994-04-20;;Wasserstand;2004-06-17;false;;-5.000000;1994-11-01;
+110160;Pandertief;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.376592;54.930668;1994-05-05;;Wasserstand;1995-01-04;false;;-5.000000;2005-10-19;
+110171;Hoernum West Hilfspegel;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.275351;54.758778;1999-04-26;;Wasserstand;1999-07-29;false;;-5.000000;2005-10-19;
+110182;Wesselburener-Loch;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.691659;54.230000;1999-05-05;;Wasserstand;2009-01-01;false;;-5.000000;2004-02-05;
+114274;Sarnekow;LKN, Itzehoe;Mühlenbach;10.744810;53.545673;;;Abfluss;1989-10-31;false;63.02;21.150000;1986-12-01;
+114346;Spölbek;LKN, Husum;Schafflunder Mühlenstrom;9.081999;54.718533;1995-07-01;;Abfluss;;false;86.96;-4.990000;2018-04-10;
+114126;Wendlohe;LKN, Itzehoe;Rugenwedelsau;9.939358;53.658848;1984-11-01;;Abfluss;;false;9.21;9.515000;1994-11-01;
+110067;Pinnau-Sperrwerk DMA;LKN, Itzehoe;Pinnau;9.557531;53.671383;2006-06-13;;Abfluss;2009-03-23;false;348.35;-5.000000;2003-03-06;Nordsee
+114108;Wennbüttel;LKN, Itzehoe;Gieselau;9.323566;54.132839;1984-11-01;;Abfluss;;false;35.01;-5.015000;1994-11-01;Nord-Ostsee-Kanal, Elbe
+114087;Nütschau;LKN, Itzehoe;Trave;10.335901;53.826977;1999-09-01;;Abfluss;;false;475.16;0.000000;1999-08-18;
+114091;Quellenthal/Beste;LKN, Itzehoe;Beste;10.357403;53.795570;1984-11-01;;Abfluss;;false;136.61;-0.017000;1994-11-01;Ostsee
+114107;Süderrade;LKN, Itzehoe;Süderau;9.372350;54.198551;1984-11-01;;Abfluss;;false;9.35;-5.017000;1994-11-01;Nordsee
+114268;Stolpe;LKN, Kiel;Lachsbach;10.779927;54.158470;1986-07-01;;Abfluss;;false;17.3;19.379000;2010-05-03;
+111022;Tümlau BP;LKN, Husum;Tümlauer Sielzug;8.674956;54.350613;2003-05-15;;Abfluss;;false;30.77;-5.000000;1994-11-01;
+114251;Quellenthal 2;LKN, Itzehoe;Barnitz;10.368368;53.794739;1984-12-01;;Abfluss;;false;58.77;-0.018000;1994-11-01;
+114564;Weißenhaus BP;LKN, Kiel;Oldenburger Graben;10.785211;54.307724;2006-11-01;2020-01-22;Abfluss;;true;110.05;-5.000000;2006-11-01;
+110145;Kolumbusloch;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.606493;54.385864;1979-05-23;;Wasserstand;2005-11-04;false;;-5.000000;1994-11-01;
+112252;Neuendeich;LKN, Itzehoe;Pinnau;9.608242;53.674641;2009-05-17;;Abfluss;;false;324.93;-5.000000;2009-03-01;Nordsee
+114582;Wallsbüll-Nord;LKN, Husum;Schafflunder Mühlenstrom;9.246001;54.796200;2013-04-01;;Abfluss;;false;;11.000000;2009-03-01;
+114479;Lankauer See;LKN, Flintbek;Lankauer See;10.650696;53.663345;2016-03-03;;Wasserstand;;false;;22.341000;2010-11-09;
+114518;Pinnsee;LKN, Itzehoe;Pinnsee;10.739105;53.633614;2016-03-03;;Wasserstand;;false;;27.424999;2018-10-11;
+114631;Dahme AP;LKN, Kiel;Ostsee;11.083563;54.234322;2011-04-20;2020-01-22;Wasserstand;;true;113.6;-5.000000;2011-04-24;
+114176;Dobersdorfer See;LKN, Kiel;Dobersdorfer See;10.290336;54.321781;1979-11-01;;Wasserstand;;false;22.95;0.000000;1998-11-01;
+114221;Dragerborn;LKN, Itzehoe;Bekau;9.522917;54.005840;1983-11-01;;Wasserstand;1985-10-31;false;38.6;2.033000;1983-08-18;
+111011;Everschopsiel BP;LKN, Husum;Staubecken Everschop;8.827892;54.407818;1997-11-04;2020-01-22;Wasserstand;;true;65.28;-5.010000;2018-01-01;
+114122;Eversdorf;LKN, Itzehoe;Bekau;9.476411;53.987141;1984-11-01;;Wasserstand;1991-01-11;false;105.0;-5.026000;1958-12-04;
+111050;Fiel;LKN, Husum;Dehringstrom;9.148496;54.140472;2001-04-01;2020-01-22;Wasserstand;;true;18.64;-5.020000;2019-03-07;Speicherbecken Speicherkoog Nord, Nordsee
+114347;Friedrichsfeld;LKN, Husum;Silberstedter Au;9.343499;54.486183;1994-11-01;;Wasserstand;;false;66.87;-5.000000;2018-01-01;
+114116;Bad Bramstedt/Schmalfelder Au;LKN, Itzehoe;Schmalfelder Au;9.890013;53.909286;1984-11-01;2020-01-22;Wasserstand;;true;176.13;0.000000;1984-11-01;Bramau, Stör, Elbe
+114280;Bokel/Bokeler Au;LKN, Kiel;Bokeler Au;9.769238;54.223679;1987-09-01;;Wasserstand;;false;30.1;0.000000;2011-08-18;
+114119;Bokholtermühle;LKN, Itzehoe;Krückau;9.694757;53.769360;1994-11-01;;Wasserstand;;false;131.79;1.490000;1994-11-01;Nordsee
+114374;Appen;LKN, Itzehoe;Appener Au;9.749495;53.660053;1995-03-01;;Wasserstand;2009-01-14;false;14.09;1.783000;1995-03-01;
+114288;Behl;LKN, Kiel;Behler Au;10.475632;54.180382;1988-12-01;;Wasserstand;;false;6.41;0.000000;2012-05-30;
+114222;Billwatt;LKN, Kiel;Oxbek;9.704095;54.637222;1984-11-01;2020-01-22;Wasserstand;;true;80.6;9.500000;2014-06-23;
+114013;Bordelumfeld;LKN, Husum;Bordelumer Bach;8.932981;54.634922;1984-11-01;;Wasserstand;2003-01-08;false;1.48;0.000000;1968-09-23;
+114215;Dannewerk;LKN, Husum;Dannewerkgraben;9.528188;54.506115;1984-11-01;;Wasserstand;2009-01-08;false;5.98;-0.605000;1982-02-25;
+114237;Behler See;LKN, Kiel;Behler See;10.487944;54.170341;1983-11-01;;Wasserstand;;false;192.0;0.000000;2010-08-23;
+114290;Bokel/Störbek;LKN, Itzehoe;Störbek;9.724338;53.870384;1988-12-01;2020-01-22;Wasserstand;;true;32.95;2.186000;1994-11-01;
+114016;Bordesholmer See;LKN, Kiel;Bordesholmer See;10.017457;54.176674;1969-11-01;;Wasserstand;;false;20.5;0.000000;1994-11-01;
+114246;Breitenfelde;LKN, Kiel;Priesterbach;10.649094;53.604477;1984-12-05;;Wasserstand;;false;32.8;0.000000;1994-11-01;
+111112;Friedrichstadt/Spülschleuse;LKN, Husum;Ostersielzug;9.088280;54.371716;2000-01-01;2020-01-22;Wasserstand;;true;794.64;-5.010000;2018-05-07;
+114053;Gr.Plöner See;LKN, Kiel;Gr.Plöner See;10.427700;54.159477;1969-11-01;2020-01-22;Wasserstand;;true;386.0;0.000000;2002-09-03;
+114034;Hammer;LKN, Kiel;Eider;10.073149;54.286018;1984-11-01;2020-01-22;Wasserstand;;true;151.06;8.727000;2010-09-08;Nord-Ostsee-Kanal, Elbe, Nordsee
+114587;Gudendorf;LKN, Husum;---;9.091558;54.024891;2007-03-29;;Wasserstand;;false;2.59;-5.000000;2018-01-01;
+114445;Herrenmühle OP;LKN, Itzehoe;Trave;10.301972;53.903854;1983-03-28;2020-01-22;Wasserstand;;true;413.38;0.064000;2001-08-01;
+114304;Kl.Hansdorf;LKN, Itzehoe;Bunsbach;10.211242;53.731823;1990-12-01;;Wasserstand;1992-10-31;false;;26.889000;1990-12-01;
+114115;Leezen;LKN, Flintbek;Gr.Niendorfer Au;10.254970;53.864807;1984-11-01;;Wasserstand;1989-11-15;false;20.2;21.500000;1980-11-01;
+114578;Lindewitt-L12;LKN, Husum;Linnau;9.213120;54.692509;2009-04-02;;Wasserstand;;false;47.16;2.510000;2018-06-18;
+114046;Husum-Nord;LKN, Husum;Maade;9.045545;54.493286;1974-02-24;;Wasserstand;;false;4.33;-0.010000;1994-11-01;
+114270;Gudower See;LKN, Itzehoe;Gudower See;10.769656;53.552582;1986-12-01;;Wasserstand;;false;58.8;23.653999;2011-07-05;
+114580;Knorburg;LKN, Husum;Soholmer Au;9.082108;54.711353;2009-04-02;;Wasserstand;;false;167.53;-4.990000;2018-05-07;Nordsee (Schlütt, Süderaue)
+114414;Kücknitz;LKN, Itzehoe;Kücknitzermühlenbach;10.790821;53.900642;1997-07-01;;Wasserstand;2009-01-08;false;9.08;0.000000;1997-07-01;
+114577;Lindewitt;LKN, Husum;Linnau;9.196071;54.696033;2010-04-03;;Wasserstand;;false;53.11;0.510000;2018-01-01;
+111012;Garding-Nord;LKN, Husum;Norderbootfahrt;8.782865;54.348438;1978-02-24;2020-01-22;Wasserstand;;true;4.49;-5.030000;1994-11-01;
+114459;Herrenmühle UP;LKN, Itzehoe;Trave;10.303332;53.902061;2002-10-01;2020-01-22;Wasserstand;;true;415.1;0.064000;2002-02-13;
+114559;Hungriger Wolf;LKN, Itzehoe;Rantzau;9.593184;53.987907;2005-09-13;;Wasserstand;2017-04-24;false;28.45;5.700000;2005-09-01;
+114370;Grammsee;LKN, Itzehoe;Grammsee;10.871312;53.701488;1994-11-01;;Wasserstand;2005-11-01;false;2.0;0.000000;1998-11-01;
+114551;Kasenort-Binnen;LKN, Itzehoe;Wilsterau;9.407386;53.912247;1999-11-01;2020-01-22;Wasserstand;;true;39.12;-4.976000;1994-11-01;
+114145;Lütau;LKN, Kiel;Linau;10.540814;53.438229;1984-11-01;2020-01-22;Wasserstand;;true;90.3;0.000000;1999-09-01;Elbe
+114169;Mechower See;LKN, Itzehoe;Bäk;10.817731;53.716686;1984-11-01;;Wasserstand;1991-01-31;false;44.2;30.000000;1979-05-15;
+114306;Mehlbek 2;LKN, Itzehoe;Stegau;9.440945;54.013870;1991-11-01;2020-01-22;Wasserstand;;true;29.78;6.818000;1994-11-01;
+112252;Neuendeich;LKN, Itzehoe;Pinnau;9.608242;53.674641;2009-05-17;;Wasserstand;;false;324.93;-5.000000;2009-03-01;Nordsee
+111037;Tetenhusen/Umleitungsdeich;LKN, Husum;Bennebek;9.409903;54.363846;1998-10-19;;Wasserstand;2012-01-18;false;;-5.010000;1994-11-01;
+114058;Schlesw.-Noorstr.;LKN, Husum;Mühlenbach (Schleswig);9.571872;54.515614;1984-11-01;;Wasserstand;2012-01-10;false;17.1;-0.354000;1994-11-01;
+114261;Soltfeld;LKN, Husum;Kielstau;9.495998;54.709503;1985-12-01;;Wasserstand;;false;48.0;26.570999;2018-01-01;
+111028;Sönke-Nissen-Koog BP;LKN, Husum;Staubecken Sönke-Nissen-Koog;8.891851;54.592598;2003-01-16;2020-01-22;Wasserstand;;true;;-5.010000;2018-01-01;
+114599;Treia-Goosholz;LKN, Husum;Treene;9.323746;54.500473;2017-07-19;;Wasserstand;2017-08-15;false;485.13;-5.000000;2009-07-14;Eider, Nordsee
+114426;Ratzeburg Süd;LKN, Flintbek;---;10.779534;53.691776;1999-08-01;;Wasserstand;2001-01-31;false;;0.000000;1999-07-27;
+114213;Ridders;LKN, Itzehoe;Rantzau;9.602630;54.003021;1984-11-01;2020-01-22;Wasserstand;;true;26.3;0.000000;2002-11-01;
+111100;Trockenkoog;LKN, Husum;---;8.841609;54.370712;2005-06-13;;Wasserstand;2007-07-19;false;;;;
+114313;Uhlenhorst;LKN, Kiel;Mühlenau;10.133805;54.423786;1986-07-01;;Wasserstand;1993-11-01;false;20.0;0.000000;1990-03-15;
+114226;Ukleisee;LKN, Kiel;Ukleisee;10.628758;54.183800;1983-01-01;;Wasserstand;;false;12.8;22.040001;2012-08-01;
+114419;Reesdorf;LKN, Kiel;Eider;10.062605;54.183090;1997-10-01;;Wasserstand;2009-01-08;false;90.0;0.000000;1997-09-30;Nord-Ostsee-Kanal, Elbe, Nordsee
+114590;Reinsbüttel;LKN, Husum;---;8.927125;54.173958;2007-03-29;;Wasserstand;;false;53.62;-5.000000;2007-03-29;
+114597;Sipsdorf;LKN, Kiel;Johannisbek;10.870992;54.255692;2008-11-29;;Wasserstand;;false;;0.000000;2008-11-29;
+114328;Papenau unten;LKN, Kiel;Papenau;9.610537;54.109535;1991-11-01;;Wasserstand;1998-07-31;false;;0.000000;1994-11-01;
+114550;Neustädter Binnenwasser;LKN, Kiel;---;10.810611;54.106659;2004-09-15;;Wasserstand;2014-05-01;false;;-4.971000;2010-04-29;
+114336;Schulensee;LKN, Kiel;Schulensee;10.097894;54.284771;1992-07-01;;Wasserstand;;false;154.0;0.002000;2018-01-01;
+114436;Sollerup;LKN, Husum;Treene;9.323866;54.570293;1998-06-24;;Wasserstand;;false;314.34;0.000000;1997-11-03;Eider, Nordsee
+114198;Wedel 1;LKN, Itzehoe;Wedeler Au;9.724187;53.586430;1984-11-01;;Wasserstand;;false;34.3;3.680000;1994-11-01;
+111033;Westerhever;LKN, Husum;Westerhever Sielzug;8.674968;54.382259;1994-06-14;2020-01-22;Wasserstand;;true;6.86;-5.030000;1994-11-01;
+111055;Windbergen;LKN, Husum;Süderau;9.119058;54.059677;1997-11-01;;Wasserstand;;false;64.05;-5.030000;2018-01-01;
+110006;Hooge-Anleger;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.556274;54.578728;1976-12-01;2020-01-22;Wasserstand;;true;;-5.020000;2018-01-01;
+110019;Nordgroven AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.817820;54.166958;2003-12-27;;Wasserstand;;false;;-5.040000;2018-01-01;
+110031;Hooger-Faehre Pellworm;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.597851;54.535690;1980-11-01;2020-01-22;Wasserstand;;true;;-5.020000;2018-01-01;
+114212;Alt Duvenstedt;LKN, Kiel;Otternbek;9.645651;54.370625;1984-11-01;;Abfluss;2013-07-11;false;3.99;-0.088000;2010-03-26;
+114453;Bondebrück;LKN, Husum;Bondenau;9.631142;54.699600;2001-12-07;;Abfluss;;false;20.31;20.000000;2018-01-01;Tideeider, Nordsee
+114437;Arlau-Schleuse BP;LKN, Husum;Arlau;8.940065;54.547329;2000-01-01;2020-01-22;Abfluss;;true;286.566;-5.000000;2018-01-01;
+114435;Augaard;LKN, Husum;Treene;9.460017;54.700928;1998-07-01;;Abfluss;;false;135.05;20.000000;2018-01-01;Eider, Nordsee
+114026;Esperstoftfeld;LKN, Husum;Bollingstedter Au;9.365951;54.578503;1984-11-01;;Abfluss;;false;98.9;0.000000;1994-11-01;Tideeider, Nordsee
+114362;Hainholzgraben;LKN, Kiel;Hainholzgraben;10.771885;53.981522;;;Abfluss;1996-01-31;false;;0.000000;1994-11-01;
+114430;Flensburg-Nikolaiallee;LKN, Husum;Mühlenstrom (Flensburg);9.422582;54.774818;2000-02-01;;Abfluss;2012-01-10;false;34.5;10.000000;2000-02-01;
+114535;Efkebüll BP;LKN, Husum;Geltinger See;8.879580;54.712551;2003-12-01;;Abfluss;2004-09-23;false;;-5.000000;2003-11-24;Bongsieler Kanal, Nordsee
+114043;Langwedel;LKN, Kiel;Oldendieksau;9.925315;54.203476;1984-11-01;;Abfluss;1993-10-31;false;32.2;0.000000;1986-08-01;
+114167;Wildenhorst;LKN, Kiel;Passau;10.314730;54.270916;1984-11-01;;Wasserstand;1990-04-30;false;13.3;0.000000;1986-06-01;
+114018;Bünsdorf;LKN, Kiel;Schirnau;9.745614;54.368145;2003-09-24;;Abfluss;;false;48.15;2.450000;2003-09-01;
+114021;Drelsdorf;LKN, Husum;Ostenau;9.035567;54.595490;1984-11-01;;Abfluss;;false;71.62;-4.990000;2018-01-01;Speicherbecken Arlau, Nordsee (Holmer Fähre, Hever)
+114546;Heiligenstedten;LKN, Itzehoe;Stör;9.470220;53.930332;2004-04-15;2020-01-22;Abfluss;;true;1416.0;-5.000000;2004-03-26;
+114153;Löhrstorf;LKN, Kiel;Godderstorfer Au;11.041509;54.332596;1984-11-01;;Abfluss;;false;54.0;0.600000;2000-10-31;
+114169;Mechower See;LKN, Itzehoe;Bäk;10.817731;53.716686;1984-11-01;;Abfluss;1991-01-31;false;44.2;30.000000;1979-05-15;
+111004;Waadenssiel;LKN, Husum;Rantumbecken;8.314842;54.882652;2002-04-01;2020-01-22;Wasserstand;;true;6.49;-5.020000;1994-11-01;
+114566;Winseldorf;LKN, Itzehoe;Rantzau;9.601936;53.943344;2007-11-01;2020-01-22;Wasserstand;;true;57.58;0.084000;2007-11-08;
+114222;Billwatt;LKN, Kiel;Oxbek;9.704095;54.637222;1984-11-01;;Abfluss;;false;80.6;9.500000;2014-06-23;
+114244;Dellbrück;LKN, Itzehoe;Dellbrückau;9.191048;54.103416;1984-11-01;;Abfluss;;false;16.03;-5.026000;2018-01-01;Speicherbecken Dithmarscher Speicherkoog, Nordsee
+114425;Geschendorf 2/Bißnitz;LKN, Kiel;Bißnitz;10.420301;53.923424;2000-07-06;;Abfluss;2019-11-14;false;33.1;26.780001;2000-11-27;Ostsee
+114038;Jägerkrug;LKN, Husum;Arlau;9.079451;54.550373;2004-12-16;2020-01-22;Abfluss;;true;106.89;-5.000000;1994-11-01;
+110024;Heringsand AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.840220;54.220619;2002-11-01;;Wasserstand;2004-02-04;false;;-5.030000;1994-11-01;
+110039;Westerland-Messpfahl;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.271211;54.908638;1987-12-22;2020-01-22;Wasserstand;;true;;-5.010000;2018-01-01;
+110046;Neufeld-Hafen AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Elbe;9.022437;53.907307;1998-10-16;2020-01-22;Wasserstand;;true;;-5.040000;2018-01-01;
+110042;List-West;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.378487;55.037437;1986-04-09;;Wasserstand;2002-04-25;false;;-5.000000;1994-11-01;
+110053;Friedrichskoog BP;LKN, Husum;Rugenorter Loch;8.876385;53.999527;2004-03-11;2020-01-22;Wasserstand;;true;35.95;-5.040000;2004-03-11;
+110140;Sandshoern;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.620948;54.586670;1978-05-01;;Wasserstand;1997-09-15;false;;-5.000000;1994-11-01;
+110180;Tertius-Suederpiep;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.647529;54.126854;1999-10-20;;Wasserstand;2001-10-25;false;;-5.000000;2004-02-05;
+114449;Vorrade;LKN, Kiel;Niemarker Landgraben;10.679358;53.813824;2001-07-03;;Abfluss;2015-11-09;false;12.85;3.918000;2001-05-03;Wakenitz, Trave
+114151;Zarpen;LKN, Kiel;Heilsau;10.521238;53.869305;1984-11-01;;Abfluss;;false;49.6;0.000000;1994-11-01;
+114463;Schönberg;LKN, Itzehoe;Schönau;10.413977;53.666481;2002-04-24;;Abfluss;2009-01-06;false;17.12;46.740002;2002-07-10;
+114395;Wensin;LKN, Itzehoe;Trave;10.428958;53.981529;2000-02-01;;Abfluss;2009-02-02;false;130.0;0.000000;1996-07-01;
+114094;Reinbek;LKN, Itzehoe;Bille;10.240906;53.505428;1984-11-01;;Abfluss;;false;337.39;3.362000;1994-11-01;Nordsee
+114349;Riesbriek;LKN, Husum;Linnau;9.090168;54.706200;1995-11-02;;Abfluss;;false;72.17;-4.990000;2018-05-28;
+114428;Oldesloe Stadtarm OP;LKN, Itzehoe;Trave;10.372043;53.811012;1999-11-29;;Abfluss;;false;527.13;0.015000;1999-09-01;
+114571;Langsee (Idstedt);LKN, Kiel;Langsee;9.610400;54.587837;2014-09-15;;Wasserstand;2018-04-08;false;;14.946000;2018-04-18;
+114611;Lübeck-Strecknitz;LKN, Itzehoe;Wakenitz;10.723230;53.840927;2012-11-05;2020-01-22;Abfluss;;true;;;;Trave
+114618;Ipernstedt;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Husumer Mühlenau;9.145838;54.476776;2014-02-20;;Wasserstand;;false;32.99;-4.990000;2018-01-01;
+114621;Grönauer Mühle;LKN, Kiel;Grönau;10.755494;53.807728;2015-10-29;;Wasserstand;;false;19.74;2.422000;2015-10-29;Wakenitz, Trave
+114583;Wallsbüll-Süd;LKN, Husum;Schafflunder Mühlenstrom;9.229381;54.769821;2013-04-01;;Abfluss;;false;;8.000000;2009-03-01;
+114619;Wallsbüll K78;LKN, Husum;Schafflunder Mühlenstrom;9.246618;54.785046;2015-02-19;;Wasserstand;;false;13.2;8.000000;2015-02-19;
+114630;Weißenhaus AP;LKN, Kiel;Ostsee;10.784628;54.308113;2014-04-01;2020-01-22;Wasserstand;;true;;-5.000000;2014-04-01;
+111057;Rugenort;LKN, Husum;Rugenorter Loch;8.883447;54.005535;2018-09-03;2020-01-22;Abfluss;;true;22.03;-5.030000;2018-01-01;
+114421;Dersau;LKN, Kiel;Vorfl.Kalübbe;10.335715;54.120991;1997-12-01;;Wasserstand;1999-11-01;false;;0.000000;1998-11-01;
+114021;Drelsdorf;LKN, Husum;Ostenau;9.035567;54.595490;1984-11-01;;Wasserstand;;false;71.62;-4.990000;2018-01-01;Speicherbecken Arlau, Nordsee (Holmer Fähre, Hever)
+114525;Dückerschleuse;LKN, Kiel;Stecknitz;10.627381;53.446465;2003-05-15;;Wasserstand;2010-04-07;false;0.16;7.508000;2003-05-01;
+114343;Eider B4;LKN, Kiel;Eider;10.092113;54.278172;1993-12-01;;Wasserstand;2009-02-11;false;;0.000000;1998-09-23;Nord-Ostsee-Kanal, Elbe, Nordsee
+114416;Eiderkaten;LKN, Kiel;Eider;10.055327;54.189785;1998-11-01;2020-01-22;Wasserstand;;true;91.4;15.800000;2003-04-03;Nord-Ostsee-Kanal, Elbe, Nordsee
+114029;Bistensee;LKN, Kiel;Bistensee;9.694622;54.400166;1969-11-01;;Wasserstand;;false;22.9;0.000000;2010-09-08;
+114317;Fitzbek;LKN, Kiel;Kirchweddelbach;9.756205;53.997829;1990-07-01;;Wasserstand;1994-06-23;false;6.3;0.000000;1994-11-01;
+114110;Bornhöveder See;LKN, Itzehoe;Bornhöveder See;10.250057;54.081760;1984-11-01;;Wasserstand;;false;11.65;0.000000;2002-10-08;
+114079;Bünningstedt;LKN, Itzehoe;Hunnau;10.215851;53.697144;1984-11-01;2020-01-22;Wasserstand;;true;61.49;-0.026000;1994-11-01;Alster, Elbe
+114541;Dahme BP;LKN, Kiel;Oldenburger Graben;11.082775;54.234211;2004-03-30;;Wasserstand;2010-06-03;false;113.6;-3.500000;2004-03-26;
+114001;Achterwehr;LKN, Kiel;Eider;9.962053;54.315132;1984-11-01;;Wasserstand;;false;269.0;0.000000;2003-06-18;Nord-Ostsee-Kanal, Elbe, Nordsee
+114180;Belauer See;LKN, Kiel;Belauer See;10.252461;54.110851;1978-11-01;;Wasserstand;;false;31.6;0.000000;2010-05-04;
+114539;Hamberge;LKN, Kiel;Trave;10.564538;53.835415;2004-03-17;2020-01-22;Wasserstand;;true;855.7;-5.000000;2003-11-25;
+114207;Jevenstedt;LKN, Kiel;Jevenau;9.632496;54.229698;1984-11-01;2020-01-22;Wasserstand;;true;104.2;-1.134000;1994-11-01;
+114085;Lokfeld;LKN, Itzehoe;Trave;10.504431;53.807816;1984-11-01;;Wasserstand;1991-03-31;false;828.0;-5.000000;1939-05-25;
+114433;Habernis BP;LKN, Husum;Habernisau;9.767612;54.796295;2000-06-06;;Wasserstand;2012-01-10;false;24.91;0.000000;2000-06-22;
+114291;Gr.Offenseht;LKN, Itzehoe;Offenau;9.709226;53.814045;1988-12-01;;Wasserstand;;false;10.66;2.596000;1994-11-01;
+114210;Gr.Pönitzer See;LKN, Kiel;Gr.Pönitzer See;10.694623;54.026207;1981-11-01;;Wasserstand;;false;3.05;17.500000;2016-09-28;
+114545;Hohenstiege;LKN, Kiel;Trave;10.628923;53.850117;2004-03-30;;Wasserstand;2012-01-01;false;;-5.000000;1998-09-08;
+114295;Innien;LKN, Kiel;Buckener Au;9.769997;54.098679;1988-07-01;2020-01-22;Wasserstand;;true;58.6;0.000000;2006-10-23;
+114375;Langeln;LKN, Itzehoe;Krückau;9.844699;53.795525;1995-04-01;2020-01-22;Wasserstand;;true;38.262;14.437000;1995-04-01;Nordsee
+111111;Friedrichstadt-Eidermühle;LKN, Husum;Treene;9.083144;54.374821;1965-11-01;2020-01-22;Wasserstand;;true;794.4;-5.010000;2018-05-07;Eider, Nordsee
+114273;Gudow;LKN, Flintbek;Stichelsbach;10.769542;53.556351;1986-12-01;;Wasserstand;1989-10-31;false;;0.000000;1986-12-01;
+114523;Hasselburger Muehle;LKN, Kiel;Kremper Au;10.847067;54.151779;2003-03-27;2020-01-22;Wasserstand;;true;27.6;0.000000;2003-05-26;
+111034;Hochbrücksiel;LKN, Husum;Westersielzug;8.911021;54.367790;1997-11-04;2020-01-22;Wasserstand;;true;6.69;-4.990000;2018-01-01;
+114038;Jägerkrug;LKN, Husum;Arlau;9.079451;54.550373;2004-12-16;2020-01-22;Wasserstand;;true;106.89;-5.000000;1994-11-01;
+114575;Ipland;LKN, Husum;Treene;9.317730;54.529114;2008-10-17;;Wasserstand;;false;464.24;-4.990000;2018-01-01;Eider, Nordsee
+111052;Meldorf Auhof;LKN, Husum;Miele;9.061992;54.097794;1997-10-27;;Wasserstand;;false;128.73;-5.030000;2018-01-01;
+114337;Molfsee;LKN, Kiel;Eider;10.076310;54.262943;1992-08-01;;Wasserstand;2009-02-23;false;144.0;0.000000;1994-11-01;Nord-Ostsee-Kanal, Elbe, Nordsee
+114113;Mözen;LKN, Flintbek;Mözener Au;10.261936;53.909298;1984-11-01;;Wasserstand;1992-01-06;false;57.0;16.299999;1980-11-01;
+114364;Mühlenteich;LKN, Itzehoe;Bille;10.252923;53.506443;1986-09-01;;Wasserstand;;false;337.39;-0.007000;1994-11-01;Nordsee
+111038;Neufeld Hafen BP;LKN, Husum;Neufelder Fleth;9.021219;53.908081;1994-01-10;2020-01-22;Wasserstand;;true;18.38;-5.040000;1994-11-01;
+114068;Todenbüttel;LKN, Kiel;Todenbütteler  Au;9.546954;54.128384;1984-11-01;;Wasserstand;;false;87.83;0.000000;1994-11-01;Nord-Ostsee-Kanal, Elbe, Nordsee
+114522;Pohnsdorfer Stauung unten;LKN, Kiel;Neuwührener Au;10.236357;54.238857;2003-04-05;;Wasserstand;2009-04-20;false;38.5;20.499001;2003-04-15;
+114576;Treia-Nord;LKN, Husum;Treene;9.314428;54.517807;2008-10-17;;Wasserstand;2017-02-01;false;478.5;-5.000000;2008-10-01;Eider, Nordsee
+114581;Unaften;LKN, Husum;Meyner Mühlenstrom;9.300920;54.779190;2009-04-02;;Wasserstand;;false;16.82;21.010000;2018-06-18;
+114189;Osterrönfeld/Linnbek;LKN, Kiel;Linnbek;9.732095;54.282970;1984-11-01;;Wasserstand;1991-05-21;false;33.4;0.000000;1979-11-26;
+114251;Quellenthal 2;LKN, Itzehoe;Barnitz;10.368368;53.794739;1984-12-01;2020-01-22;Wasserstand;;true;58.77;-0.018000;1994-11-01;
+111023;Spitzsiel;LKN, Husum;Spitzsieler Sielzug;9.000278;54.378597;1997-11-04;2020-01-22;Wasserstand;;true;8.09;-5.020000;2018-01-01;
+112251;Nordfeld-Siel;LKN, Husum;Eider;9.138429;54.339252;2003-04-01;2020-01-22;Wasserstand;;true;945.46;-5.000000;2003-03-14;
+111064;Reimersbude;LKN, Husum;Eider;9.009422;54.379803;2002-01-01;;Wasserstand;2003-03-31;false;;-5.000000;1984-10-20;
+114441;Pahlhude;LKN, Husum;Eider;9.300508;54.272938;1965-10-01;2020-01-22;Wasserstand;;true;570.6;-5.020000;2018-01-01;
+111008;Reussenkoog;LKN, Husum;Bordelumer Sielzug;8.903335;54.625687;1998-10-15;;Wasserstand;;false;11.14;-5.020000;1994-11-01;
+114335;Schackendorf;LKN, Itzehoe;Trave;10.281770;53.957897;1991-07-01;2020-01-22;Wasserstand;;true;333.66;20.974001;1991-07-01;
+114583;Wallsbüll-Süd;LKN, Husum;Schafflunder Mühlenstrom;9.229381;54.769821;2010-04-20;;Wasserstand;;false;;8.000000;2009-03-01;
+114593;Warwerort-Siel;LKN, Husum;---;8.929937;54.141434;2007-12-02;2020-01-22;Wasserstand;2009-07-03;true;74.39;-5.030000;2018-01-01;
+114552;Wehr 2;LKN, Itzehoe;Randgraben;9.578457;53.634270;2005-02-17;;Wasserstand;2012-01-17;false;;-5.000000;2004-12-20;
+110021;Friedrichskoog AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.876096;53.999454;1936-10-18;2020-01-22;Wasserstand;;true;;-5.030000;2018-01-01;
+110026;Meldorf Sperrwerk AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.949101;54.092171;1978-10-01;2020-01-22;Wasserstand;;true;;-5.020000;2018-01-01;
+114321;Brammer;LKN, Kiel;Brammerau;9.755430;54.208389;1993-11-01;;Abfluss;2009-01-13;false;32.2;0.000000;1994-11-01;
+114416;Eiderkaten;LKN, Kiel;Eider;10.055327;54.189785;1998-11-01;;Abfluss;;false;91.4;15.800000;2003-04-03;Nord-Ostsee-Kanal, Elbe, Nordsee
+114376;Ekholt;LKN, Itzehoe;Ekholter Au;9.717705;53.737801;1995-04-01;;Abfluss;;false;7.25;8.091000;1995-03-13;
+114532;Engbrück;LKN, Husum;Bollingstedter Au;9.447243;54.590462;2003-09-25;;Abfluss;;false;83.1;5.010000;2018-01-01;Tideeider, Nordsee
+114347;Friedrichsfeld;LKN, Husum;Silberstedter Au;9.343499;54.486183;1995-07-01;;Abfluss;;false;66.87;-5.000000;2018-01-01;
+114459;Herrenmühle UP;LKN, Itzehoe;Trave;10.303332;53.902061;2003-02-15;2020-01-22;Abfluss;;true;415.1;0.064000;2002-02-13;
+114022;Dörpum;LKN, Husum;Dörpum-Bach;9.009299;54.653992;1984-11-01;;Abfluss;2014-02-10;false;3.0;-5.000000;1994-11-01;Soholmer Au, Bongsieler Kanal, Nordsee (Schlütt, Süderaue)
+111112;Friedrichstadt/Spülschleuse;LKN, Husum;Ostersielzug;9.088280;54.371716;2000-01-01;2020-01-22;Abfluss;;true;794.64;-5.010000;2018-05-07;
+114315;Kossau LIO 55;LKN, Kiel;Kossau;10.522851;54.247272;1987-12-01;;Abfluss;2012-01-01;false;84.6;0.000000;1994-11-01;
+114414;Kücknitz;LKN, Itzehoe;Kücknitzermühlenbach;10.790821;53.900642;1997-07-01;;Abfluss;2009-01-08;false;9.08;0.000000;1997-07-01;
+114444;Langelohe;LKN, Itzehoe;Krückau;9.673190;53.758526;2000-10-23;;Abfluss;2013-11-15;false;;1.288000;2000-12-04;Nordsee
+114044;Leck;LKN, Husum;Lecker Au;8.976109;54.770676;2004-03-22;2020-01-22;Abfluss;;true;134.26;-4.990000;2018-01-01;Nordsee (Schlütt, Süderaue)
+114269;Lehbek;LKN, Husum;Lehbek;9.877816;54.743137;1986-07-01;;Abfluss;2000-09-06;false;7.39;0.324000;1986-07-07;
+111056;Westerbüttel;LKN, Husum;Helser Fleth;9.141772;53.915092;1997-11-01;;Wasserstand;;false;64.98;5.020000;2018-01-01;
+114257;Gr.Hansdorf;LKN, Itzehoe;Viehbach;10.275533;53.666195;1984-11-01;;Abfluss;1987-04-01;false;14.07;0.000000;1999-01-22;
+114461;Lübeck-Moisling;LKN, Itzehoe;Trave;10.641576;53.847103;2002-09-02;2020-01-22;Abfluss;;true;879.05;-5.005000;2002-02-22;
+114306;Mehlbek 2;LKN, Itzehoe;Stegau;9.440945;54.013870;1991-12-01;;Abfluss;;false;29.78;6.818000;1994-11-01;
+114050;Mühlenbrück;LKN, Husum;Bondenau;9.523184;54.707699;1984-11-01;;Abfluss;;false;75.68;20.152000;2018-01-01;Tideeider, Nordsee
+114449;Vorrade;LKN, Kiel;Niemarker Landgraben;10.679358;53.813824;2001-06-14;;Wasserstand;2015-11-09;false;12.85;3.918000;2001-05-03;Wakenitz, Trave
+114329;Grauel oben;LKN, Kiel;Buckener Au;9.694084;54.072006;1992-03-01;;Abfluss;2012-01-01;false;20.8;0.000000;1994-11-01;
+114207;Jevenstedt;LKN, Kiel;Jevenau;9.632496;54.229698;1984-11-01;;Abfluss;;false;104.2;-1.134000;1994-11-01;
+110022;Kasenort;LKN, Itzehoe;Stör;9.409466;53.911644;1985-11-01;2020-01-22;Wasserstand;;true;1621.05;-4.977000;2001-10-01;
+110040;Holmer Siel AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.869168;54.528210;1983-12-29;2020-01-22;Wasserstand;;true;;-5.010000;2018-01-01;
+110041;Luettmoor-Siel AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.873813;54.555435;1997-01-16;2020-01-22;Wasserstand;;true;;-5.020000;2018-01-01;
+110129;Utersum;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.392361;54.700001;1991-06-12;;Wasserstand;2007-11-27;false;;-5.000000;1994-11-01;
+110118;Langeness-Neuwarf;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.655174;54.632652;2002-05-01;;Wasserstand;1976-11-10;false;;-5.000000;1994-11-01;
+110126;Amrum Bank;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.127582;54.661087;1992-12-01;;Wasserstand;1994-11-08;false;;-5.000000;2005-10-26;
+110161;Hoyer Kanal;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.652352;54.968307;1994-04-13;;Wasserstand;1994-12-07;false;;-5.000000;2005-10-20;
+110163;Kampen West;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.334365;54.970139;1996-06-10;;Wasserstand;1996-11-26;false;;-5.000000;2005-10-20;
+110166;Ilef-Langeness;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.532524;54.634335;1997-05-20;;Wasserstand;1997-10-22;false;;-5.000000;2005-10-20;
+110197;Piep;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.293221;54.195812;1993-02-11;;Wasserstand;1994-11-08;false;;-5.000000;2005-10-19;
+110200;Friedrichskoog-Mole;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.844365;53.991066;2002-08-10;;Wasserstand;2004-11-25;false;;-5.000000;2004-02-05;
+110005;Wyk Foehr;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.576263;54.693459;1950-11-01;2020-01-22;Wasserstand;;true;;-5.030000;2018-01-01;
+114438;Schlüttsiel BP;LKN, Husum;Bongsieler Kanal;8.760818;54.684193;1998-09-01;2020-01-22;Abfluss;;true;722.748;-5.030000;1998-09-01;
+114064;Soholm;LKN, Husum;Soholmer Au;9.022825;54.699760;2004-03-29;2020-01-22;Abfluss;;true;342.308;-5.000000;2018-01-01;Nordsee (Schlütt, Süderaue)
+114593;Warwerort-Siel;LKN, Husum;---;8.929937;54.141434;2007-09-20;2020-01-22;Abfluss;2009-07-03;true;74.39;-5.030000;2018-01-01;
+114382;Sachsenwaldau 2/Oher Graben;LKN, Itzehoe;Oher Graben;10.298897;53.542377;1999-04-01;;Abfluss;1999-08-31;false;4.06;0.000000;1999-04-01;
+114396;Westerrade;LKN, Itzehoe;Struckau;10.450934;53.939873;1996-06-01;;Abfluss;1997-10-31;false;9.6;25.653999;1996-06-01;
+114439;Oldesloe 3 Stadtpark;LKN, Itzehoe;Beste;10.372116;53.805363;2000-02-01;;Abfluss;;false;198.0;4.509000;2000-01-31;Ostsee
+114204;Osterrönfeld/Wehrau;LKN, Kiel;Wehrau;9.702339;54.284676;1984-11-01;;Abfluss;;false;110.0;0.000000;2010-07-29;
+114412;Scholderup;LKN, Husum;Füsinger Au;9.679818;54.562965;1996-01-01;;Abfluss;2003-11-07;false;225.11;0.000000;1996-11-21;
+112251;Nordfeld-Siel;LKN, Husum;Eider;9.138429;54.339252;2003-04-01;2020-01-22;Abfluss;;true;945.46;-5.000000;2003-03-14;
+114447;Radekamp;LKN, Itzehoe;Schwarze Au;10.445378;53.510475;2001-05-07;;Abfluss;2009-11-26;false;27.2;32.230000;2001-09-17;
+114061;Sollerupmühle;LKN, Husum;Jerrisbek;9.313270;54.582355;1984-11-01;;Abfluss;;false;84.27;0.000000;1994-11-01;Eider, Nordsee
+114254;Sörup;LKN, Husum;Bönstrupau;0.000000;0.000000;1984-11-01;;Abfluss;1986-05-31;false;;0.000000;1984-11-01;
+114558;Tetenbüllspieker BP;LKN, Husum;Tetenbüll-Sielzug;8.830503;54.398636;2005-07-19;;Abfluss;;false;50.86;-5.010000;2018-01-01;
+114068;Todenbüttel;LKN, Kiel;Todenbütteler  Au;9.546954;54.128384;1984-11-01;;Abfluss;;false;87.83;0.000000;1994-11-01;Nord-Ostsee-Kanal, Elbe, Nordsee
+111015;Tönning BP;LKN, Husum;Norderbootfahrt;8.942661;54.315887;2003-12-01;2020-01-22;Abfluss;;true;37.36;-5.020000;1994-11-01;
+114200;Padenstedt;LKN, Kiel;Stör;9.916700;54.051029;1984-11-01;;Abfluss;;false;199.0;10.510000;2006-10-30;
+114252;Ziegelhof;LKN, Kiel;Grinau;10.585460;53.806301;1984-11-29;;Abfluss;;false;32.5;0.000000;2012-07-02;
+114188;Glücksburg;LKN, Kiel;Schwennau;9.542206;54.842140;1984-11-01;;Abfluss;;false;33.3;-0.010000;2010-07-08;
+110016;Tuemlau AP;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;Nordsee;8.674768;54.351017;2001-08-13;2020-01-22;Wasserstand;;true;;-4.990000;2018-01-01;
+111059;Sommerkoog Steertloch BP;LKN, Husum;Staubecken Sommerkoog;8.958975;54.033340;2009-04-09;;Abfluss;;false;64.68;-5.040000;1997-04-16;
+114610;Hobbersdorfer Mühle Unterlauf;LKN, Kiel;Schwartau;10.713442;53.959942;2012-10-18;;Wasserstand;;false;;0.000000;2012-08-10;
+114611;Lübeck-Strecknitz;LKN, Itzehoe;Wakenitz;10.723230;53.840927;2012-11-05;2020-01-22;Wasserstand;;true;;;;Trave
+114603;Dätgen;LKN, Kiel;Oldendieksau;9.924279;54.190701;2011-09-06;;Wasserstand;2018-07-12;false;14.16;18.781000;2011-09-06;
+111102;Büsum-Erlengrund;Landesbetrieb für Küstenschutz, Nationalpark und Meeresschutz;---;8.843901;54.135422;2011-05-04;2020-01-22;Wasserstand;;true;12.18;-5.000000;2018-01-01;
+114604;Kleiner Binnensee;LKN, Kiel;---;10.619926;54.353619;2011-06-30;2020-01-22;Wasserstand;;true;;-1.525000;2011-09-07;
+114601;Bünzen;LKN, Kiel;Bünzau;9.807290;54.069305;2011-07-07;;Wasserstand;;false;;6.666000;2011-06-09;"Elbe
+
+, Nordsee"
+114613;Innien-Mitte;LKN, Kiel;Bünzau;9.796762;54.081322;2014-03-24;;Wasserstand;;false;164.2;7.760000;2014-03-24;"Elbe
+
+, Nordsee"
+111113;Krabbenloch BP;LKN, Husum;Sielzug Krabbenloch;8.903138;53.982098;2015-11-30;2020-01-22;Wasserstand;;true;5.04;-5.020000;2018-01-01;

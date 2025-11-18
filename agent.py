@@ -144,7 +144,7 @@ def llm_summary(state: AgentState) -> AgentState:
 
 
 def clear_output_dir():
-    files_to_keep = [".gitignore", "graph.png", "generate_plots.py"]
+    files_to_keep = [".gitignore", "graph.png", "generate_plots.r"]
     for file_name in os.listdir("./output/"):
         if file_name not in files_to_keep:
             file_path = os.path.join("./output/", file_name)
@@ -166,42 +166,77 @@ def llm_generate_code(state: AgentState) -> AgentState:
     clear_output_dir()
 
     human_msg = HumanMessage(
+        # content= \
+        #     f"""
+        # Erzeuge mir basierend auf der vorherigen Zusammenfassung und der Datenstruktur Python-Code,
+        # der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
+        #
+        # Die Daten können mit folgendem Befehl geladen werden:
+        # `df = pd.read_csv("./data/pegel.csv", sep=";")`
+        #
+        # Vorgaben für den Code:
+        # - Verwende ausschließlich `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, `basemap`.
+        # - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
+        # - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
+        #   `./output/<plot_name>.png`
+        # - Wähle Diagrammtypen entsprechend der Datenbedeutung:
+        #   - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
+        #   - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
+        #   - Numerische Variablen → Histogramme, Boxplots und Scatterplots für Zusammenhänge.
+        #   - Kategorische Variablen → Balkendiagramme der Häufigkeitsverteilung (ggf. Top 10 für lange Listen).
+        # - Führe auch kurze statistische Analysen durch, gegebenen falls mit Visualisierung:
+        #   - Anteil fehlender Werte je Spalte,
+        #   - Korrelationen numerischer Variablen,
+        #   - Übersichtstabellen zu zentralen Kennwerten (Mittelwert, Standardabweichung etc.).
+        # - Verwende Farben, Beschriftungen und Titel sinnvoll:
+        #   - Titel sollen beschreiben, was gezeigt wird (auf Deutsch),
+        #   - Legenden und Achsenbeschriftungen sollen keine Information abschneiden,
+        #   - Achsen in SI-Einheiten oder sinnvollen Skalen beschriften.
+        # - Füge kurze erklärende Kommentare hinzu, **warum** bestimmte Visualisierungen sinnvoll sind.
+        # - Priorisiere Plot-Typen, die einem Data-Science-Workflow entsprechen (Datenqualität, Verteilung, Beziehung, Geografie, Zeit).
+        # - Es soll bei allen Berechnungen und Plots beachtet und berücksichtigt werden, dass fehlende Werte und auch String und Boolean Werte im Datensatz vorhanden sind. Also entsprechend damit umgehen.
+        # - Der zurückgegebene Code soll bitte in UTF-8 kodiert sein.
+        # - Für jede Visualisierung soll eine separate Methode erstellt werden, welche am Ende des Skripte mit try except ausgeführt wird. Die Fehler Meldung soll ausgegeben werden, aber die Ausführung des restlichen Codes soll nicht abgebrochen werden.
+        #
+        # Zum besseren Verständnis:
+        # Das ist das Ergebnis von `df.head(10)`:
+        # {str(state["dataset_df"].head().to_markdown())}
+        # """
         content= \
             f"""
-        Erzeuge mir basierend auf der vorherigen Zusammenfassung und der Datenstruktur Python-Code, 
-        der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
-        
-        Die Daten können mit folgendem Befehl geladen werden:
-        `df = pd.read_csv("./data/pegel.csv", sep=";")`
-        
-        Vorgaben für den Code:
-        - Verwende ausschließlich `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, `basemap`.
-        - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
-        - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
-          `./output/<plot_name>.png`
-        - Wähle Diagrammtypen entsprechend der Datenbedeutung:
-          - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
-          - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
-          - Numerische Variablen → Histogramme, Boxplots und Scatterplots für Zusammenhänge.
-          - Kategorische Variablen → Balkendiagramme der Häufigkeitsverteilung (ggf. Top 10 für lange Listen).
-        - Führe auch kurze statistische Analysen durch, gegebenen falls mit Visualisierung:
-          - Anteil fehlender Werte je Spalte,
-          - Korrelationen numerischer Variablen,
-          - Übersichtstabellen zu zentralen Kennwerten (Mittelwert, Standardabweichung etc.).
-        - Verwende Farben, Beschriftungen und Titel sinnvoll:
-          - Titel sollen beschreiben, was gezeigt wird (auf Deutsch),
-          - Legenden und Achsenbeschriftungen sollen keine Information abschneiden,
-          - Achsen in SI-Einheiten oder sinnvollen Skalen beschriften.
-        - Füge kurze erklärende Kommentare hinzu, **warum** bestimmte Visualisierungen sinnvoll sind.
-        - Priorisiere Plot-Typen, die einem Data-Science-Workflow entsprechen (Datenqualität, Verteilung, Beziehung, Geografie, Zeit).
-        - Es soll bei allen Berechnungen und Plots beachtet und berücksichtigt werden, dass fehlende Werte und auch String und Boolean Werte im Datensatz vorhanden sind. Also entsprechend damit umgehen.
-        - Der zurückgegebene Code soll bitte in UTF-8 kodiert sein.
-        - Für jede Visualisierung soll eine separate Methode erstellt werden, welche am Ende des Skripte mit try except ausgeführt wird. Die Fehler Meldung soll ausgegeben werden, aber die Ausführung des restlichen Codes soll nicht abgebrochen werden.
-        
-        Zum besseren Verständnis:  
-        Das ist das Ergebnis von `df.head(10)`:
-        {str(state["dataset_df"].head().to_markdown())}
-        """
+            Erzeuge mir basierend auf der vorherigen Zusammenfassung und der Datenstruktur R-Code, 
+            der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
+
+            Die Daten können mit folgendem Befehl geladen werden:
+            `read.csv("./data/pegel.csv", sep = ";")`
+
+            Vorgaben für den Code:
+            - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
+            - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
+              `./output/<plot_name>.png`
+            - Wähle Diagrammtypen entsprechend der Datenbedeutung:
+              - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
+              - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
+              - Numerische Variablen → Histogramme, Boxplots und Scatterplots für Zusammenhänge.
+              - Kategorische Variablen → Balkendiagramme der Häufigkeitsverteilung (ggf. Top 10 für lange Listen).
+            - Führe auch kurze statistische Analysen durch, gegebenen falls mit Visualisierung:
+              - Anteil fehlender Werte je Spalte,
+              - Korrelationen numerischer Variablen,
+              - Übersichtstabellen zu zentralen Kennwerten (Mittelwert, Standardabweichung etc.).
+            - Verwende Farben, Beschriftungen und Titel sinnvoll:
+              - Titel sollen beschreiben, was gezeigt wird (auf Deutsch),
+              - Legenden und Achsenbeschriftungen sollen keine Information abschneiden,
+              - Achsen in SI-Einheiten oder sinnvollen Skalen beschriften.
+            - Füge kurze erklärende Kommentare hinzu, **warum** bestimmte Visualisierungen sinnvoll sind.
+            - Priorisiere Plot-Typen, die einem Data-Science-Workflow entsprechen (Datenqualität, Verteilung, Beziehung, Geografie, Zeit).
+            - Es soll bei allen Berechnungen und Plots beachtet und berücksichtigt werden, dass fehlende Werte und auch String und Boolean Werte im Datensatz vorhanden sind. Also entsprechend damit umgehen.
+            - Der zurückgegebene Code soll bitte in UTF-8 kodiert sein.
+            - Für jede Visualisierung soll eine separate Methode erstellt werden, welche am Ende des Skripte mit try except ausgeführt wird. Die Fehler Meldung soll ausgegeben werden, aber die Ausführung des restlichen Codes soll nicht abgebrochen werden.
+
+            Zum besseren Verständnis:  
+            Das ist das Ergebnis von `df.head(10)`:
+            {str(state["dataset_df"].head().to_markdown())}
+            """
     )
 
     state["messages"].append(human_msg)
@@ -210,7 +245,7 @@ def llm_generate_code(state: AgentState) -> AgentState:
 
 def test_generated_code(state: AgentState) -> AgentState:
     """Testet den vom LLM generierten Code für die Datenvisualisierung."""
-    generated_code_test_result = subprocess.run([sys.executable, "./output/generate_plots.py"],
+    generated_code_test_result = subprocess.run([sys.executable, "./output/generate_plots.r"],
                                                 capture_output=True, text=True)
     # we save both stdout and stderr to see what the LLM produced and to determine if code must be regenerated
     if generated_code_test_result.stdout:
@@ -307,7 +342,7 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
 def _generate_and_write_code(state: AgentState, temp_agent) -> AgentState:
     llm_response = temp_agent.invoke({"messages": state["messages"]})
     state["messages"] = llm_response["messages"]
-    with open("./output/generate_plots.py", "w", encoding="UTF-8") as f:
+    with open("output/generate_plots.r", "w", encoding="UTF-8") as f:
         print(f"{bcolors.HEADER}LLM regenerated code: {bcolors.ENDC}")
         code: Code = llm_response["structured_response"]
         state["code"] = code

@@ -21,6 +21,9 @@ from dtos.responses.summary import Summary
 
 load_dotenv()
 
+class ProgrammingLanguage(StrEnum):
+    PYTHON = "py"
+    R = "r"
 
 class AgentState(TypedDict):
     messages: List[Union[HumanMessage, AIMessage]]
@@ -33,25 +36,37 @@ class AgentState(TypedDict):
     code_test_stdout: str
     code_test_stderr: str
     code: Code
+    script_path: str
     regeneration_attempts: int
+    programming_language: ProgrammingLanguage
 
 
 class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
+    HEADER = "\033[95m"
+    OKBLUE = "\033[94m"
+    OKCYAN = "\033[96m"
+    OKGREEN = "\033[92m"
+    WARNING = "\033[93m"
+    FAIL = "\033[91m"
+    ENDC = "\033[0m"
+    BOLD = "\033[1m"
+    UNDERLINE = "\033[4m"
 
 
 class LLMModel(StrEnum):
     GPT_4o = "gpt-4o"
     GPT_5 = "gpt-5"
     GROK = "x-ai/grok-code-fast-1"
+
+def decide_programming_language(state: AgentState) -> AgentState:
+    """Entscheidet die Programmiersprache, in welcher der Code erzeugt werden soll."""
+    language: ProgrammingLanguage = state["programming_language"]
+    if language == ProgrammingLanguage.PYTHON:
+        return "python"
+    elif language == ProgrammingLanguage.R:
+        return "r"
+    else:
+        raise ValueError("Unsupported programming language")
 
 
 def load_dataset(state: AgentState) -> AgentState:
@@ -66,7 +81,7 @@ def analyse_dataset(state: AgentState) -> AgentState:
     df: DataFrame = state["dataset_df"]
     state["columns"] = list(df.columns)
 
-    desc_df = df.describe(include="all").T.reset_index().rename(columns={'index': 'column_name'})
+    desc_df = df.describe(include="all").T.reset_index().rename(columns={"index": "column_name"})
     desc = [
         Description(**convert_nan_to_none(row.to_dict()))
         for _, row in desc_df.iterrows()
@@ -105,9 +120,9 @@ def load_messages(state: AgentState) -> AgentState:
                 Ein Experte soll aber auch eine Eindruck davon bekommen ob der Datensatz für ihn geeignet ist oder nicht.
 
                 Hier sind alle relevanten Daten:
-                - Columns: {state['columns']}
-                - Descriptions: {state['descriptions']}
-                - Metadata: {state['metadata'][:30]}
+                - Columns: {state["columns"]}
+                - Descriptions: {state["descriptions"]}
+                - Metadata: {state["metadata"][:30]}
             """
     )
 
@@ -155,8 +170,8 @@ def clear_output_dir():
                 print(f"Error deleting file {file_path}: {e}")
 
 
-def llm_generate_code(state: AgentState) -> AgentState:
-    """Generiert Code für die Datenvisualisierung."""
+def llm_generate_python_code(state: AgentState) -> AgentState:
+    """Generiert Python Code für die Datenvisualisierung."""
     temp_agent = create_agent(
         model=get_llm_model(LLMModel.GPT_5),
         response_format=Code
@@ -166,49 +181,67 @@ def llm_generate_code(state: AgentState) -> AgentState:
     clear_output_dir()
 
     human_msg = HumanMessage(
-        # content= \
-        #     f"""
-        # Erzeuge mir basierend auf der vorherigen Zusammenfassung und der Datenstruktur Python-Code,
-        # der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
-        #
-        # Die Daten können mit folgendem Befehl geladen werden:
-        # `df = pd.read_csv("./data/pegel.csv", sep=";")`
-        #
-        # Vorgaben für den Code:
-        # - Verwende ausschließlich `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, `basemap`.
-        # - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
-        # - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
-        #   `./output/<plot_name>.png`
-        # - Wähle Diagrammtypen entsprechend der Datenbedeutung:
-        #   - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
-        #   - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
-        #   - Numerische Variablen → Histogramme, Boxplots und Scatterplots für Zusammenhänge.
-        #   - Kategorische Variablen → Balkendiagramme der Häufigkeitsverteilung (ggf. Top 10 für lange Listen).
-        # - Führe auch kurze statistische Analysen durch, gegebenen falls mit Visualisierung:
-        #   - Anteil fehlender Werte je Spalte,
-        #   - Korrelationen numerischer Variablen,
-        #   - Übersichtstabellen zu zentralen Kennwerten (Mittelwert, Standardabweichung etc.).
-        # - Verwende Farben, Beschriftungen und Titel sinnvoll:
-        #   - Titel sollen beschreiben, was gezeigt wird (auf Deutsch),
-        #   - Legenden und Achsenbeschriftungen sollen keine Information abschneiden,
-        #   - Achsen in SI-Einheiten oder sinnvollen Skalen beschriften.
-        # - Füge kurze erklärende Kommentare hinzu, **warum** bestimmte Visualisierungen sinnvoll sind.
-        # - Priorisiere Plot-Typen, die einem Data-Science-Workflow entsprechen (Datenqualität, Verteilung, Beziehung, Geografie, Zeit).
-        # - Es soll bei allen Berechnungen und Plots beachtet und berücksichtigt werden, dass fehlende Werte und auch String und Boolean Werte im Datensatz vorhanden sind. Also entsprechend damit umgehen.
-        # - Der zurückgegebene Code soll bitte in UTF-8 kodiert sein.
-        # - Für jede Visualisierung soll eine separate Methode erstellt werden, welche am Ende des Skripte mit try except ausgeführt wird. Die Fehler Meldung soll ausgegeben werden, aber die Ausführung des restlichen Codes soll nicht abgebrochen werden.
-        #
-        # Zum besseren Verständnis:
-        # Das ist das Ergebnis von `df.head(10)`:
-        # {str(state["dataset_df"].head().to_markdown())}
-        # """
+        content= \
+        f"""
+        Erzeuge mir basierend auf der vorherigen Zusammenfassung und der Datenstruktur Python-Code,
+        der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
+
+        Die Daten können mit folgendem Befehl geladen werden:
+        `df = pd.read_csv("./data/pegel.csv", sep=";")`
+
+        Vorgaben für den Code:
+        - Verwende ausschließlich `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, `basemap`.
+        - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
+        - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
+          `./output/<plot_name>.png`
+        - Wähle Diagrammtypen entsprechend der Datenbedeutung:
+          - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
+          - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
+          - Numerische Variablen → Histogramme, Boxplots und Scatterplots für Zusammenhänge.
+          - Kategorische Variablen → Balkendiagramme der Häufigkeitsverteilung (ggf. Top 10 für lange Listen).
+        - Führe auch kurze statistische Analysen durch, gegebenen falls mit Visualisierung:
+          - Anteil fehlender Werte je Spalte,
+          - Korrelationen numerischer Variablen,
+          - Übersichtstabellen zu zentralen Kennwerten (Mittelwert, Standardabweichung etc.).
+        - Verwende Farben, Beschriftungen und Titel sinnvoll:
+          - Titel sollen beschreiben, was gezeigt wird (auf Deutsch),
+          - Legenden und Achsenbeschriftungen sollen keine Information abschneiden,
+          - Achsen in SI-Einheiten oder sinnvollen Skalen beschriften.
+        - Füge kurze erklärende Kommentare hinzu, **warum** bestimmte Visualisierungen sinnvoll sind.
+        - Priorisiere Plot-Typen, die einem Data-Science-Workflow entsprechen (Datenqualität, Verteilung, Beziehung, Geografie, Zeit).
+        - Es soll bei allen Berechnungen und Plots beachtet und berücksichtigt werden, dass fehlende Werte und auch String und Boolean Werte im Datensatz vorhanden sind. Also entsprechend damit umgehen.
+        - Der zurückgegebene Code soll bitte in UTF-8 kodiert sein.
+        - Für jede Visualisierung soll eine separate Methode erstellt werden, welche am Ende des Skripte mit try except ausgeführt wird. Die Fehler Meldung soll ausgegeben werden, aber die Ausführung des restlichen Codes soll nicht abgebrochen werden.
+
+        Zum besseren Verständnis:
+        Das ist das Ergebnis von `df.head(10)`:
+        {str(state["dataset_df"].head().to_markdown())}
+        """
+    )
+
+    state["messages"].append(human_msg)
+    return _generate_and_write_code(state, temp_agent)
+
+def llm_generate_r_code(state: AgentState) -> AgentState:
+    """Generiert R Code für die Datenvisualisierung."""
+    temp_agent = create_agent(
+        model=get_llm_model(LLMModel.GPT_5),
+        response_format=Code
+    )
+
+    # clear output directory before generating new plots
+    clear_output_dir()
+
+    human_msg = HumanMessage(
+        # TODO: hier später noch anpassen, welche Dateityp die Datei ist und welcher Seperator verwendet wird
         content= \
             f"""
             Erzeuge mir basierend auf der vorherigen Zusammenfassung und der Datenstruktur R-Code, 
             der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
 
-            Die Daten können mit folgendem Befehl geladen werden:
-            `read.csv("./data/pegel.csv", sep = ";")`
+            Die Daten können  aus folgender CSV geladen werden:
+            - Pfad zur CSV Datei: `{state["dataset_path"]}`
+            - Trennzeichen: `;`
 
             Vorgaben für den Code:
             - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
@@ -245,16 +278,25 @@ def llm_generate_code(state: AgentState) -> AgentState:
 
 def test_generated_code(state: AgentState) -> AgentState:
     """Testet den vom LLM generierten Code für die Datenvisualisierung."""
-    generated_code_test_result = subprocess.run([sys.executable, "./output/generate_plots.r"],
-                                                capture_output=True, text=True)
+    language: ProgrammingLanguage = state["programming_language"]
+    script_path = state["script_path"]
+    if language is ProgrammingLanguage.R:
+        cmd = ["Rscript", script_path]
+    else:  # default to python
+        cmd = [sys.executable, script_path]
+
+    print(f"{bcolors.HEADER}Testing generated code ({language.value}): {bcolors.ENDC}")
+    generated_code_test_result = subprocess.run(
+        cmd, capture_output=True, text=True
+    )
     # we save both stdout and stderr to see what the LLM produced and to determine if code must be regenerated
     if generated_code_test_result.stdout:
         state["code_test_stdout"] = generated_code_test_result.stdout
     if generated_code_test_result.stderr:
         state["code_test_stderr"] = generated_code_test_result.stderr
     print(f"{bcolors.HEADER}Testing generated code: {bcolors.ENDC}")
-    print('output: ', generated_code_test_result.stdout)
-    print('error: ', generated_code_test_result.stderr)
+    print("output: ", generated_code_test_result.stdout)
+    print("error: ", generated_code_test_result.stderr)
     return state
 
 
@@ -277,10 +319,10 @@ def decide_regenerate_code(state: AgentState) -> AgentState:
             f"""
                     Hier ist die Ausgabe (stdout) und die Fehlerausgabe (stderr) des Codes:
                     stdout:
-                    {state['code_test_stdout']}
+                    {state["code_test_stdout"]}
                     
                     stderr:
-                    {state['code_test_stderr'] if state['code_test_stderr'] else 'Keine Fehlerausgabe.'}
+                    {state["code_test_stderr"] if state["code_test_stderr"] else "Keine Fehlerausgabe."}
                     
                     Bitte entscheide, ob der Code unbedingt neu generiert werden muss.
                 """
@@ -299,7 +341,7 @@ def decide_regenerate_code(state: AgentState) -> AgentState:
         print(regeneration_response.should_be_regenerated)
         MAX_ATTEMPTS = 3
         if regeneration_response.should_be_regenerated and state["regeneration_attempts"] < MAX_ATTEMPTS:
-            print(f"{bcolors.WARNING}Regenerating code, attempt {state['regeneration_attempts']}{bcolors.ENDC}")
+            print(f"{bcolors.WARNING}Regenerating code, attempt {state["regeneration_attempts"]}{bcolors.ENDC}")
             return "regenerate_code"
         else:
             print(f"{bcolors.OKGREEN}No regeneration needed or max attempts reached.{bcolors.ENDC}")
@@ -315,14 +357,14 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
             content=f"""
             Der vorherige Code hatte folgende Fehler:
             stdout:
-            {state['code_test_stdout']}
+            {state["code_test_stdout"]}
             stderr:
-            {state['code_test_stderr']}
+            {state["code_test_stderr"]}
             Bitte generiere den Code erneut und behebe die oben genannten Fehler.
             Das ist die Beschreibung des Codes:
-            {state['code'].explanation}
+            {state["code"].explanation}
             Das ist der vorherige Code:
-            {state['code'].code}
+            {state["code"].code}
             """
         )
     )
@@ -330,7 +372,6 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
     # clean output directory before regenerating plots
     clear_output_dir()
 
-    # TODO: LLM einbauen, ob das in stdout / stderr überhaupt tatsächliche Fehler sind oder Infos bzw. Deprecated Warnungen
     state["regeneration_attempts"] += 1
     temp_agent = create_agent(
         model=get_llm_model(LLMModel.GPT_5),
@@ -342,7 +383,9 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
 def _generate_and_write_code(state: AgentState, temp_agent) -> AgentState:
     llm_response = temp_agent.invoke({"messages": state["messages"]})
     state["messages"] = llm_response["messages"]
-    with open("output/generate_plots.r", "w", encoding="UTF-8") as f:
+    path_base = "./output/generate_plots."
+    state["script_path"] = path_base + state["programming_language"].value
+    with open(state["script_path"], "w", encoding="UTF-8") as f:
         print(f"{bcolors.HEADER}LLM regenerated code: {bcolors.ENDC}")
         code: Code = llm_response["structured_response"]
         state["code"] = code
@@ -375,10 +418,17 @@ graph.add_node("load_messages", load_messages)
 graph.add_edge("load_metadata", "load_messages")
 graph.add_node("LLM create_summary", llm_summary)
 graph.add_edge("load_messages", "LLM create_summary")
-graph.add_node("LLM generate_code", llm_generate_code)
-graph.add_edge("LLM create_summary", "LLM generate_code")
+graph.add_node("LLM generate_python_code", llm_generate_python_code)
+graph.add_node("LLM generate_r_code", llm_generate_r_code)
+graph.add_conditional_edges(
+    "LLM create_summary",
+    decide_programming_language,{
+        "python": "LLM generate_python_code",
+        "r": "LLM generate_r_code"
+    })
 graph.add_node("test_generated_code", test_generated_code)
-graph.add_edge("LLM generate_code", "test_generated_code")
+graph.add_edge("LLM generate_python_code", "test_generated_code")
+graph.add_edge("LLM generate_r_code", "test_generated_code")
 graph.add_conditional_edges(
     "test_generated_code",
     decide_regenerate_code,
@@ -402,6 +452,7 @@ result = agent.invoke(
     {
         "dataset_path": "./data/pegel.csv",
         "metadata_path": "./data/pegel.rdf",
-        "regeneration_attempts": 0
+        "regeneration_attempts": 0,
+        "programming_language": ProgrammingLanguage.R
     }
 )

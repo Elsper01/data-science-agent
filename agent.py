@@ -285,16 +285,19 @@ def test_generated_code(state: AgentState) -> AgentState:
     else:  # default to python
         cmd = [sys.executable, script_path]
 
-    print(f"{bcolors.HEADER}Testing generated code ({language.value}): {bcolors.ENDC}")
     generated_code_test_result = subprocess.run(
         cmd, capture_output=True, text=True
     )
     # we save both stdout and stderr to see what the LLM produced and to determine if code must be regenerated
     if generated_code_test_result.stdout:
         state["code_test_stdout"] = generated_code_test_result.stdout
+    else:
+        state["code_test_stdout"] = "No output from generated code."
     if generated_code_test_result.stderr:
         state["code_test_stderr"] = generated_code_test_result.stderr
-    print(f"{bcolors.HEADER}Testing generated code: {bcolors.ENDC}")
+    else:
+        state["code_test_stderr"] = "No errors from generated code."
+    print(f"{bcolors.HEADER}Testing generated code ({language.value}): {bcolors.ENDC}")
     print("output: ", generated_code_test_result.stdout)
     print("error: ", generated_code_test_result.stderr)
     return state
@@ -322,7 +325,7 @@ def decide_regenerate_code(state: AgentState) -> AgentState:
                     {state["code_test_stdout"]}
                     
                     stderr:
-                    {state["code_test_stderr"] if state["code_test_stderr"] else "Keine Fehlerausgabe."}
+                    {state["code_test_stderr"]}
                     
                     Bitte entscheide, ob der Code unbedingt neu generiert werden muss.
                 """

@@ -31,8 +31,9 @@ class AgentState(TypedDict):
     dataset_df: Any  # any because otherwise we get problems because of strict typing
     metadata_path: str
     metadata: list[Metadata]
-    columns: list[str]  # TODO: wieso verwenden wir hier noch nie das Column DTO?
+    column_names: list[str]  # TODO: wieso verwenden wir hier noch nie das Column DTO?
     descriptions: list[Description]
+    summary: Summary
     code_test_stdout: str
     code_test_stderr: str
     code: Code
@@ -79,7 +80,7 @@ def load_dataset(state: AgentState) -> AgentState:
 def analyse_dataset(state: AgentState) -> AgentState:
     """Analysiert den Datensatz und speichert das Analyseergebnis im Zustand."""
     df: DataFrame = state["dataset_df"]
-    state["columns"] = list(df.columns)
+    state["column_names"] = list(df.columns)
 
     desc_df = df.describe(include="all").T.reset_index().rename(columns={"index": "column_name"})
     desc = [
@@ -120,12 +121,12 @@ def load_messages(state: AgentState) -> AgentState:
                 Ein Experte soll aber auch eine Eindruck davon bekommen ob der Datensatz für ihn geeignet ist oder nicht.
 
                 Hier sind alle relevanten Daten:
-                - Columns: {state["columns"]}
+                - Columns: {state["column_names"]}
                 - Descriptions: {state["descriptions"]}
                 - Metadata: {state["metadata"][:30]}
             """
     )
-
+    # TODO: metadata passender laden / filter
     user_msg = HumanMessage(
         content= \
             """
@@ -154,12 +155,13 @@ def llm_summary(state: AgentState) -> AgentState:
     print(summary.columns)
 
     state["messages"] = llm_response["messages"]
+    state["summary"] = summary
 
     return state
 
 
 def clear_output_dir():
-    files_to_keep = [".gitignore", "graph.png", "generate_plots.r"]
+    files_to_keep = [".gitignore", ".gitkeep", "graph.png", "generate_plots.r"]
     for file_name in os.listdir("./output/"):
         if file_name not in files_to_keep:
             file_path = os.path.join("./output/", file_name)
@@ -236,10 +238,9 @@ def llm_generate_r_code(state: AgentState) -> AgentState:
         # TODO: hier später noch anpassen, welche Dateityp die Datei ist und welcher Seperator verwendet wird
         content= \
             f"""
-            Erzeuge mir basierend auf der vorherigen Zusammenfassung und der Datenstruktur R-Code, 
-            der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
+            Erzeuge mir basierend ein R-Skript, das eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
 
-            Die Daten können  aus folgender CSV geladen werden:
+            Die Daten können aus folgender CSV geladen werden:
             - Pfad zur CSV Datei: `{state["dataset_path"]}`
             - Trennzeichen: `;`
 
@@ -247,28 +248,32 @@ def llm_generate_r_code(state: AgentState) -> AgentState:
             - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
             - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
               `./output/<plot_name>.png`
-            - Wähle Diagrammtypen entsprechend der Datenbedeutung:
+            - Wähle Diagrammtypen entsprechend der Datenbedeutung. Dies sind Hinweise, überlege selber ob die Hinweise für die entsprechenden Spalten passend sind:
               - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
               - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
               - Numerische Variablen → Histogramme, Boxplots und Scatterplots für Zusammenhänge.
               - Kategorische Variablen → Balkendiagramme der Häufigkeitsverteilung (ggf. Top 10 für lange Listen).
-            - Führe auch kurze statistische Analysen durch, gegebenen falls mit Visualisierung:
+            - Führe auch kurze statistische Analysen durch, falls sie sich anbieten und dsinnvoll sind. Gegebenen falls mit Visualisierung:
               - Anteil fehlender Werte je Spalte,
               - Korrelationen numerischer Variablen,
               - Übersichtstabellen zu zentralen Kennwerten (Mittelwert, Standardabweichung etc.).
             - Verwende Farben, Beschriftungen und Titel sinnvoll:
               - Titel sollen beschreiben, was gezeigt wird (auf Deutsch),
               - Legenden und Achsenbeschriftungen sollen keine Information abschneiden,
-              - Achsen in SI-Einheiten oder sinnvollen Skalen beschriften.
-            - Füge kurze erklärende Kommentare hinzu, **warum** bestimmte Visualisierungen sinnvoll sind.
-            - Priorisiere Plot-Typen, die einem Data-Science-Workflow entsprechen (Datenqualität, Verteilung, Beziehung, Geografie, Zeit).
+              - Achsen in Einheiten oder sinnvollen Skalen beschriften.
             - Es soll bei allen Berechnungen und Plots beachtet und berücksichtigt werden, dass fehlende Werte und auch String und Boolean Werte im Datensatz vorhanden sind. Also entsprechend damit umgehen.
             - Der zurückgegebene Code soll bitte in UTF-8 kodiert sein.
-            - Für jede Visualisierung soll eine separate Methode erstellt werden, welche am Ende des Skripte mit try except ausgeführt wird. Die Fehler Meldung soll ausgegeben werden, aber die Ausführung des restlichen Codes soll nicht abgebrochen werden.
+            - Für jede Visualisierung soll eine separate Methode erstellt werden, welche eine passende Fehlerbehandlung hat. Die Fehler Meldung soll ausgegeben werden, aber die Ausführung des restlichen Codes soll nicht abgebrochen werden.
 
             Zum besseren Verständnis:  
-            Das ist das Ergebnis von `df.head(10)`:
-            {str(state["dataset_df"].head().to_markdown())}
+            Das ist das Ergebnis von `df.head(10)` auf den Datensatz:
+            {str(state["dataset_df"].head(10).to_markdown())}
+            
+            Das ist das Ergebnis der vorherigen Analyse der einzelnen Spalten, beziehe diese Informationen in der Entscheidung mit ein, welche Diagramme sinnvoll sind:
+            {state["summary"].columns}
+            
+            Das ist eine Beschreibung des Datensatzes:
+            {state["summary"].summary}
             """
     )
 

@@ -13,11 +13,12 @@ from langgraph.graph import StateGraph, START, END
 from pandas import DataFrame
 from rdflib import Graph
 
-from dtos.description import Description
-from dtos.metadata import Metadata
-from dtos.responses.code import Code
-from dtos.responses.regeneration import Regeneration
-from dtos.responses.summary import Summary
+# German DTO's
+from dtos.de.description import Description
+from dtos.de.metadata import Metadata
+from dtos.de.responses.code import Code
+from dtos.de.responses.regeneration import Regeneration
+from dtos.de.responses.summary import Summary
 
 load_dotenv()
 

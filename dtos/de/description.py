@@ -1,7 +1,9 @@
 from typing import Optional, Union
-from pydantic import BaseModel, Field
+from pydantic import Field
+from dtos.base.description_base import DescriptionBase
 
-class Description(BaseModel):
+
+class Description(DescriptionBase):
     """
     Repräsentiert die beschreibenden Statistiken (Descriptive Statistics)
     einer einzelnen Spalte aus der Ausgabe von pandas.DataFrame.describe().

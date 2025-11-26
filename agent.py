@@ -3,6 +3,7 @@ import subprocess
 import sys
 from enum import StrEnum
 from typing import TypedDict, List, Union, Any
+import importlib
 
 import pandas as pd
 from dotenv import load_dotenv
@@ -13,12 +14,35 @@ from langgraph.graph import StateGraph, START, END
 from pandas import DataFrame
 from rdflib import Graph
 
-# German DTO's
-from dtos.de.description import Description
-from dtos.de.metadata import Metadata
-from dtos.de.responses.code import Code
-from dtos.de.responses.regeneration import Regeneration
-from dtos.de.responses.summary import Summary
+
+class Language(StrEnum):
+    DE = "de"
+    EN = "en"
+
+
+def import_language_dtos(language: Language):
+    """Importiert DTO-Klassen je nach Sprachwahl dynamisch."""
+    try:
+        code_module = importlib.import_module(f"dtos.{language}.responses.code")
+        regeneration_module = importlib.import_module(f"dtos.{language}.responses.regeneration")
+        summary_module = importlib.import_module(f"dtos.{language}.responses.summary")
+        description_module = importlib.import_module(f"dtos.{language}.description")
+        metadata_module = importlib.import_module(f"dtos.{language}.metadata")
+
+        Description = getattr(description_module, "Description")
+        Metadata = getattr(metadata_module, "Metadata")
+        Code = getattr(code_module, "Code")
+        Regeneration = getattr(regeneration_module, "Regeneration")
+        Summary = getattr(summary_module, "Summary")
+
+        return Description, Metadata, Code, Regeneration, Summary
+
+    except ModuleNotFoundError as e:
+        raise ImportError(f"DTO modules for language '{language}' not found: {e}")
+
+# default is german
+LANGUAGE = Language(os.getenv("AGENT_LANGUAGE", "de").lower())
+Description, Metadata, Code, Regeneration, Summary = import_language_dtos(LANGUAGE)
 
 load_dotenv()
 
@@ -143,7 +167,7 @@ def load_messages(state: AgentState) -> AgentState:
 def llm_summary(state: AgentState) -> AgentState:
     """Dieser Knoten generiert mittel einem LLM die Zusammenfassung des Datensatzes."""
     temp_agent = create_agent(
-        model=get_llm_model(LLMModel.GROK),
+        model=get_llm_model(LLMModel.GPT_5),
         response_format=Summary,
     )
 

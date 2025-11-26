@@ -1,8 +1,11 @@
-from pydantic import BaseModel, Field
 from typing import Optional
 
+from pydantic import Field
 
-class Column(BaseModel):
+from dtos.base.responses.column_base import ColumnBase
+
+
+class Column(ColumnBase):
     """Beschreibt eine Spalte in der Zusammenfassung des Datensatzes."""
     name: str = Field(..., description="Name der Spalte in der Zusammenfassung des Datensatzes.")
     unit: Optional[str] = Field(..., description="Einheit der Werte in dieser Spalte.")

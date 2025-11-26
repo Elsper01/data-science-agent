@@ -1,8 +1,10 @@
-from pydantic import BaseModel, Field
-from .column import Column
+from pydantic import Field
+
+from dtos.base.responses.summary_base import SummaryBase
+from dtos.de.responses.column import Column
 
 
-class Summary(BaseModel):
+class Summary(SummaryBase):
     """Describes the response format of the LLM when asked for a summary of the dataset and its columns."""
     summary: str = Field(..., description="Detailed description of the dataset.")
     columns: list[Column] = Field(...,

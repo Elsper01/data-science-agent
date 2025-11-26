@@ -11,5 +11,5 @@ class SummaryBase(BaseModel):
 
     # allow population by field name or alias and validate on every assignment
     class Config:
-        allow_population_by_field_name = True
+        validate_by_name = True
         validate_assignment = True

@@ -9,13 +9,13 @@ class ColumnBase(BaseModel):
     name: str = Field(...)
     unit: Optional[str] = Field(None)
     description: str = Field(...)
-    missing_values: int = Field(...)
-    unique_values: int = Field(...)
-    most_frequent_value: str = Field(...)
+    missing_values: Optional[int] = Field(...)
+    unique_values: Optional[int] = Field(...)
+    most_frequent_value: Optional[str | int | float] = Field(...)
     visualization_hint: Optional[str] = Field(None)
     note: Optional[str] = Field(None)
 
     # allow population by field name or alias and validate on every assignment
     class Config:
-        allow_population_by_field_name = True
+        validate_by_name = True
         validate_assignment = True

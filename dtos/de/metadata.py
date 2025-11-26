@@ -1,6 +1,7 @@
-from pydantic import BaseModel, Field
+from pydantic import Field
+from dtos.base.metadata_base import MetadataBase
 
-class Metadata(BaseModel):
+class Metadata(MetadataBase):
     """
     Repräsentiert ein Triple aus dem RDF Graphen.
     """

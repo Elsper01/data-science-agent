@@ -1,9 +1,9 @@
+import importlib
 import os
 import subprocess
 import sys
 from enum import StrEnum
 from typing import TypedDict, List, Union, Any
-import importlib
 
 import pandas as pd
 from dotenv import load_dotenv
@@ -14,10 +14,25 @@ from langgraph.graph import StateGraph, START, END
 from pandas import DataFrame
 from rdflib import Graph
 
+from prompts import get_prompt
+
 
 class Language(StrEnum):
     DE = "de"
     EN = "en"
+
+
+def determine_language() -> Language:
+    """Entscheidet initial, welche Sprache geladen werden soll."""
+    env = os.getenv("AGENT_LANGUAGE")
+    if env:
+        v = env.lower()
+        if v.startswith("de"):
+            return Language.DE
+        elif v.startswith("en"):
+            return Language.EN
+    # Fallback: use german
+    return Language.DE
 
 
 def import_language_dtos(language: Language):
@@ -40,15 +55,18 @@ def import_language_dtos(language: Language):
     except ModuleNotFoundError as e:
         raise ImportError(f"DTO modules for language '{language}' not found: {e}")
 
-# default is german
-LANGUAGE = Language(os.getenv("AGENT_LANGUAGE", "de").lower())
-Description, Metadata, Code, Regeneration, Summary = import_language_dtos(LANGUAGE)
 
 load_dotenv()
+
+# determine language and load corresponding DTOs and prompts
+language = determine_language()
+Description, Metadata, Code, Regeneration, Summary = import_language_dtos(language)
+
 
 class ProgrammingLanguage(StrEnum):
     PYTHON = "py"
     R = "r"
+
 
 class AgentState(TypedDict):
     messages: List[Union[HumanMessage, AIMessage]]
@@ -56,7 +74,7 @@ class AgentState(TypedDict):
     dataset_df: Any  # any because otherwise we get problems because of strict typing
     metadata_path: str
     metadata: list[Metadata]
-    column_names: list[str]  # TODO: wieso verwenden wir hier noch nie das Column DTO?
+    column_names: list[str]
     descriptions: list[Description]
     summary: Summary
     code_test_stdout: str
@@ -84,12 +102,13 @@ class LLMModel(StrEnum):
     GPT_5 = "gpt-5"
     GROK = "x-ai/grok-code-fast-1"
 
+
 def decide_programming_language(state: AgentState) -> AgentState:
     """Entscheidet die Programmiersprache, in welcher der Code erzeugt werden soll."""
-    language: ProgrammingLanguage = state["programming_language"]
-    if language == ProgrammingLanguage.PYTHON:
+    programming_language: ProgrammingLanguage = state["programming_language"]
+    if programming_language == ProgrammingLanguage.PYTHON:
         return "python"
-    elif language == ProgrammingLanguage.R:
+    elif programming_language == ProgrammingLanguage.R:
         return "r"
     else:
         raise ValueError("Unsupported programming language")
@@ -97,8 +116,10 @@ def decide_programming_language(state: AgentState) -> AgentState:
 
 def load_dataset(state: AgentState) -> AgentState:
     """Lädt den Datensatz und speichert ihn in einem pandas DataFrame."""
-    state["dataset_df"] = pd.read_csv(state["dataset_path"],
-                                      sep=";")
+    state["dataset_df"] = pd.read_csv(
+        state["dataset_path"],
+        sep=";"
+    )
     return state
 
 
@@ -136,30 +157,22 @@ def load_metadata(state: AgentState) -> AgentState:
 
 
 def load_messages(state: AgentState) -> AgentState:
-    """Lädt neue Nachrichten und fügt sie dem Zustand hinzu."""
-    sys_msg = SystemMessage(
-        content= \
-            f"""
-                Du bist ein Data Science-Experte und hilft mir dabei den tabellarische Datensatz zu analysieren.
-                Als Antwort hätte ich gerne eine Zusammenfassung über den Datensatz. Das heißt, um was geht es im Datensatz, was ist auffällig, gibt es Trends, fehlen Werte. 
-                Das Ganze soll so dargestellt werden, dass ein beliebiger Nutzer etwas damit anfangen kann. 
-                Ein Experte soll aber auch eine Eindruck davon bekommen ob der Datensatz für ihn geeignet ist oder nicht.
+    """Lädt neue Nachrichten und fügt sie dem Zustand hinzu. Nutzt zentrale Prompts."""
+    sys_content = get_prompt(
+        language.value,
+        "summary_system_prompt",
+        column_names=str(state.get("column_names", [])),
+        descriptions=str(state.get("descriptions", [])),
+        metadata=str(state.get("metadata", [])[:30])
+    )
+    sys_msg = SystemMessage(content=sys_content)
 
-                Hier sind alle relevanten Daten:
-                - Columns: {state["column_names"]}
-                - Descriptions: {state["descriptions"]}
-                - Metadata: {state["metadata"][:30]}
-            """
+    user_content = get_prompt(
+        language.value,
+        "summary_user_prompt"
     )
-    # TODO: metadata passender laden / filter
-    user_msg = HumanMessage(
-        content= \
-            """
-             Fasse mir den Datensatz passend zusammen.
-             Ich möchte als Ergebnis eine Zusammenfassung bzw. Erklärung des Datensatzes und eine Erklärung / Beschreibung der einzelnen Spalten des Datensatzes.
-             Die verwendete Sprache soll Deutsch sein.  
-            """
-    )
+    user_msg = HumanMessage(content=user_content)
+
     state["messages"] = [sys_msg, user_msg]
     return state
 
@@ -207,47 +220,19 @@ def llm_generate_python_code(state: AgentState) -> AgentState:
     # clear output directory before generating new plots
     clear_output_dir()
 
-    human_msg = HumanMessage(
-        content= \
-        f"""
-        Erzeuge mir basierend auf der vorherigen Zusammenfassung und der Datenstruktur Python-Code,
-        der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
-
-        Die Daten können mit folgendem Befehl geladen werden:
-        `df = pd.read_csv("./data/pegel.csv", sep=";")`
-
-        Vorgaben für den Code:
-        - Verwende ausschließlich `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, `basemap`.
-        - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
-        - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
-          `./output/<plot_name>.png`
-        - Wähle Diagrammtypen entsprechend der Datenbedeutung:
-          - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
-          - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
-          - Numerische Variablen → Histogramme, Boxplots und Scatterplots für Zusammenhänge.
-          - Kategorische Variablen → Balkendiagramme der Häufigkeitsverteilung (ggf. Top 10 für lange Listen).
-        - Führe auch kurze statistische Analysen durch, gegebenen falls mit Visualisierung:
-          - Anteil fehlender Werte je Spalte,
-          - Korrelationen numerischer Variablen,
-          - Übersichtstabellen zu zentralen Kennwerten (Mittelwert, Standardabweichung etc.).
-        - Verwende Farben, Beschriftungen und Titel sinnvoll:
-          - Titel sollen beschreiben, was gezeigt wird (auf Deutsch),
-          - Legenden und Achsenbeschriftungen sollen keine Information abschneiden,
-          - Achsen in SI-Einheiten oder sinnvollen Skalen beschriften.
-        - Füge kurze erklärende Kommentare hinzu, **warum** bestimmte Visualisierungen sinnvoll sind.
-        - Priorisiere Plot-Typen, die einem Data-Science-Workflow entsprechen (Datenqualität, Verteilung, Beziehung, Geografie, Zeit).
-        - Es soll bei allen Berechnungen und Plots beachtet und berücksichtigt werden, dass fehlende Werte und auch String und Boolean Werte im Datensatz vorhanden sind. Also entsprechend damit umgehen.
-        - Der zurückgegebene Code soll bitte in UTF-8 kodiert sein.
-        - Für jede Visualisierung soll eine separate Methode erstellt werden, welche am Ende des Skripte mit try except ausgeführt wird. Die Fehler Meldung soll ausgegeben werden, aber die Ausführung des restlichen Codes soll nicht abgebrochen werden.
-
-        Zum besseren Verständnis:
-        Das ist das Ergebnis von `df.head(10)`:
-        {str(state["dataset_df"].head().to_markdown())}
-        """
+    human_content = get_prompt(
+        language.value,
+        "generate_python_code",
+        dataset_path=state["dataset_path"],
+        dataset_sep=";",
+        df_head_markdown=str(state["dataset_df"].head().to_markdown())
     )
+
+    human_msg = HumanMessage(content=human_content)
 
     state["messages"].append(human_msg)
     return _generate_and_write_code(state, temp_agent)
+
 
 def llm_generate_r_code(state: AgentState) -> AgentState:
     """Generiert R Code für die Datenvisualisierung."""
@@ -259,48 +244,17 @@ def llm_generate_r_code(state: AgentState) -> AgentState:
     # clear output directory before generating new plots
     clear_output_dir()
 
-    human_msg = HumanMessage(
-        # TODO: hier später noch anpassen, welche Dateityp die Datei ist und welcher Seperator verwendet wird
-        content= \
-            f"""
-            Erzeuge mir basierend ein R-Skript, das eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
-
-            Die Daten können aus folgender CSV geladen werden:
-            - Pfad zur CSV Datei: `{state["dataset_path"]}`
-            - Trennzeichen: `;`
-
-            Vorgaben für den Code:
-            - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
-            - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
-              `./output/<plot_name>.png`
-            - Wähle Diagrammtypen entsprechend der Datenbedeutung. Dies sind Hinweise, überlege selber ob die Hinweise für die entsprechenden Spalten passend sind:
-              - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
-              - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
-              - Numerische Variablen → Histogramme, Boxplots und Scatterplots für Zusammenhänge.
-              - Kategorische Variablen → Balkendiagramme der Häufigkeitsverteilung (ggf. Top 10 für lange Listen).
-            - Führe auch kurze statistische Analysen durch, falls sie sich anbieten und dsinnvoll sind. Gegebenen falls mit Visualisierung:
-              - Anteil fehlender Werte je Spalte,
-              - Korrelationen numerischer Variablen,
-              - Übersichtstabellen zu zentralen Kennwerten (Mittelwert, Standardabweichung etc.).
-            - Verwende Farben, Beschriftungen und Titel sinnvoll:
-              - Titel sollen beschreiben, was gezeigt wird (auf Deutsch),
-              - Legenden und Achsenbeschriftungen sollen keine Information abschneiden,
-              - Achsen in Einheiten oder sinnvollen Skalen beschriften.
-            - Es soll bei allen Berechnungen und Plots beachtet und berücksichtigt werden, dass fehlende Werte und auch String und Boolean Werte im Datensatz vorhanden sind. Also entsprechend damit umgehen.
-            - Der zurückgegebene Code soll bitte in UTF-8 kodiert sein.
-            - Für jede Visualisierung soll eine separate Methode erstellt werden, welche eine passende Fehlerbehandlung hat. Die Fehler Meldung soll ausgegeben werden, aber die Ausführung des restlichen Codes soll nicht abgebrochen werden.
-
-            Zum besseren Verständnis:  
-            Das ist das Ergebnis von `df.head(10)` auf den Datensatz:
-            {str(state["dataset_df"].head(10).to_markdown())}
-            
-            Das ist das Ergebnis der vorherigen Analyse der einzelnen Spalten, beziehe diese Informationen in der Entscheidung mit ein, welche Diagramme sinnvoll sind:
-            {state["summary"].columns}
-            
-            Das ist eine Beschreibung des Datensatzes:
-            {state["summary"].summary}
-            """
+    human_content = get_prompt(
+        language.value,
+        "generate_r_code",
+        dataset_path=state["dataset_path"],
+        dataset_sep=";",
+        df_head_markdown=str(state["dataset_df"].head(10).to_markdown()),
+        summary_columns=str(getattr(state.get("summary", None), "columns", "")),
+        summary=str(getattr(state.get("summary", None), "summary", ""))
     )
+
+    human_msg = HumanMessage(content=human_content)
 
     state["messages"].append(human_msg)
     return _generate_and_write_code(state, temp_agent)
@@ -334,31 +288,20 @@ def test_generated_code(state: AgentState) -> AgentState:
 
 
 def decide_regenerate_code(state: AgentState) -> AgentState:
-    """Überprüft, ob eine erneute Codegenerierung erforderlich ist. Eine erneute Generierung wird durchgeführt, wenn Fehler im Code auftreten und die maximale Anzahl an Versuchen noch nicht erreicht ist."""
+    """Überprüft, ob eine erneute Codegenerierung erforderlich ist."""
     # LLM decides if the text in stdout and stderr are actual errors or just infos / deprecated warnings.
     if state["code_test_stdout"] or state["code_test_stderr"]:
         model = get_llm_model(LLMModel.GPT_4o)
         system_prompt = SystemMessage(
-            content= \
-                f"""
-                    Du bist ein Experte darin Python Code Output zu interpretieren, der entscheidet, ob der gegebene Text Fehler enthält, die eine erneute Generierung des Codes erforderlich machen.
-                    Antworte mit einer bool Antwort, welche true ist, genau dann wenn der Code Fehler enthält, die eine erneute Erzeugung des Codes zwingend notwendig machen.
-                    Ansonsten antworte mit false.
-                    Wichtig, du bekommst den Text von stdout und stderr des Codes. Das heißt gegebenfalls sind dort auch nur Infos oder Deprecated Warnings enthalten, diese musst du von wahren Fehlern bzw. Exceptions unterscheiden, welche unbedingt korrigiert werden müssen damit ein Diagramm erzeugt werden kann und den restlichen Ablauf des Skriptes nicht behindern.
-                """
+            content=get_prompt(language.value, "decide_regenerate_code_system_prompt")
         )
         user_prompt = HumanMessage(
-            content=
-            f"""
-                    Hier ist die Ausgabe (stdout) und die Fehlerausgabe (stderr) des Codes:
-                    stdout:
-                    {state["code_test_stdout"]}
-                    
-                    stderr:
-                    {state["code_test_stderr"]}
-                    
-                    Bitte entscheide, ob der Code unbedingt neu generiert werden muss.
-                """
+            content=get_prompt(
+                language.value,
+                "decide_regenerate_code_user_prompt",
+                test_stdout=state.get("code_test_stdout", ""),
+                test_stderr=state.get("code_test_stderr", "")
+            )
         )
 
         decide_agent = create_agent(
@@ -374,7 +317,7 @@ def decide_regenerate_code(state: AgentState) -> AgentState:
         print(regeneration_response.should_be_regenerated)
         MAX_ATTEMPTS = 3
         if regeneration_response.should_be_regenerated and state["regeneration_attempts"] < MAX_ATTEMPTS:
-            print(f"{bcolors.WARNING}Regenerating code, attempt {state["regeneration_attempts"]}{bcolors.ENDC}")
+            print(f"{bcolors.WARNING}Regenerating code, attempt {state['regeneration_attempts']}{bcolors.ENDC}")
             return "regenerate_code"
         else:
             print(f"{bcolors.OKGREEN}No regeneration needed or max attempts reached.{bcolors.ENDC}")
@@ -387,18 +330,14 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
     """Regeneriert den Code für die Datenvisualisierung basierend auf den aufgetretenen Fehlern."""
     state["messages"].append(
         HumanMessage(
-            content=f"""
-            Der vorherige Code hatte folgende Fehler:
-            stdout:
-            {state["code_test_stdout"]}
-            stderr:
-            {state["code_test_stderr"]}
-            Bitte generiere den Code erneut und behebe die oben genannten Fehler.
-            Das ist die Beschreibung des Codes:
-            {state["code"].explanation}
-            Das ist der vorherige Code:
-            {state["code"].code}
-            """
+            content=get_prompt(
+                language.value,
+                "regenerate_code_user_prompt",
+                test_stdout=state.get("code_test_stdout", ""),
+                test_stderr=state.get("code_test_stderr", ""),
+                code_explanation=getattr(state.get("code"), "explanation", ""),
+                code=getattr(state.get("code"), "code", "")
+            )
         )
     )
 
@@ -455,7 +394,7 @@ graph.add_node("LLM generate_python_code", llm_generate_python_code)
 graph.add_node("LLM generate_r_code", llm_generate_r_code)
 graph.add_conditional_edges(
     "LLM create_summary",
-    decide_programming_language,{
+    decide_programming_language, {
         "python": "LLM generate_python_code",
         "r": "LLM generate_r_code"
     })

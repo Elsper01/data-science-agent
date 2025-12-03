@@ -4,6 +4,7 @@ import subprocess
 import sys
 from enum import StrEnum
 from typing import TypedDict, List, Union, Any
+from time import time
 
 import pandas as pd
 from dotenv import load_dotenv
@@ -41,6 +42,7 @@ def import_language_dtos(language: Language):
         code_module = importlib.import_module(f"dtos.{language}.responses.code")
         regeneration_module = importlib.import_module(f"dtos.{language}.responses.regeneration")
         summary_module = importlib.import_module(f"dtos.{language}.responses.summary")
+        judge_module = importlib.import_module(f"dtos.{language}.responses.judge")
         description_module = importlib.import_module(f"dtos.{language}.description")
         metadata_module = importlib.import_module(f"dtos.{language}.metadata")
 
@@ -49,8 +51,9 @@ def import_language_dtos(language: Language):
         Code = getattr(code_module, "Code")
         Regeneration = getattr(regeneration_module, "Regeneration")
         Summary = getattr(summary_module, "Summary")
+        Judge = getattr(judge_module, "Judge")
 
-        return Description, Metadata, Code, Regeneration, Summary
+        return Description, Metadata, Code, Regeneration, Summary, Judge
 
     except ModuleNotFoundError as e:
         raise ImportError(f"DTO modules for language '{language}' not found: {e}")
@@ -60,7 +63,7 @@ load_dotenv()
 
 # determine language and load corresponding DTOs and prompts
 language = determine_language()
-Description, Metadata, Code, Regeneration, Summary = import_language_dtos(language)
+Description, Metadata, Code, Regeneration, Summary, Judge = import_language_dtos(language)
 
 
 class ProgrammingLanguage(StrEnum):
@@ -70,6 +73,7 @@ class ProgrammingLanguage(StrEnum):
 
 class AgentState(TypedDict):
     messages: List[Union[HumanMessage, AIMessage]]
+    judge_messages: List[Union[HumanMessage, AIMessage]]
     dataset_path: str
     dataset_df: Any  # any because otherwise we get problems because of strict typing
     metadata_path: str
@@ -156,16 +160,16 @@ def load_metadata(state: AgentState) -> AgentState:
     return state
 
 
-def load_messages(state: AgentState) -> AgentState:
-    """Lädt neue Nachrichten und fügt sie dem Zustand hinzu. Nutzt zentrale Prompts."""
-    sys_content = get_prompt(
+def llm_summary(state: AgentState) -> AgentState:
+    """Dieser Knoten generiert mittel einem LLM die Zusammenfassung des Datensatzes."""
+
+    system_prompt = get_prompt(
         language.value,
         "summary_system_prompt",
         column_names=str(state.get("column_names", [])),
         descriptions=str(state.get("descriptions", [])),
         metadata=str(state.get("metadata", [])[:30])
     )
-    sys_msg = SystemMessage(content=sys_content)
 
     user_content = get_prompt(
         language.value,
@@ -173,18 +177,13 @@ def load_messages(state: AgentState) -> AgentState:
     )
     user_msg = HumanMessage(content=user_content)
 
-    state["messages"] = [sys_msg, user_msg]
-    return state
-
-
-def llm_summary(state: AgentState) -> AgentState:
-    """Dieser Knoten generiert mittel einem LLM die Zusammenfassung des Datensatzes."""
     temp_agent = create_agent(
         model=get_llm_model(LLMModel.GPT_5),
         response_format=Summary,
+        system_prompt=system_prompt
     )
 
-    llm_response = temp_agent.invoke({"messages": state["messages"]})
+    llm_response = temp_agent.invoke({"messages": [user_msg]})
     print(f"{bcolors.HEADER}LLM result: {bcolors.ENDC}")
     summary: Summary = llm_response["structured_response"]
     print(f"{bcolors.OKGREEN}Dataset Summary:{bcolors.ENDC}")
@@ -192,7 +191,6 @@ def llm_summary(state: AgentState) -> AgentState:
     print(f"\n{bcolors.OKBLUE}Column Descriptions:{bcolors.ENDC}")
     print(summary.columns)
 
-    state["messages"] = llm_response["messages"]
     state["summary"] = summary
 
     return state
@@ -212,15 +210,11 @@ def clear_output_dir():
 
 def llm_generate_python_code(state: AgentState) -> AgentState:
     """Generiert Python Code für die Datenvisualisierung."""
-    temp_agent = create_agent(
-        model=get_llm_model(LLMModel.GPT_5),
-        response_format=Code
-    )
+    # TODO: einen neuen Prompt erstellen mit System Prompt, und alle bis jetzt erarbeiteten Infos mit übergeben
 
-    # clear output directory before generating new plots
-    clear_output_dir()
+    description_user_message, temp_agent = _get_generate_code_agent(state)
 
-    human_content = get_prompt(
+    code_user_message = get_prompt(
         language.value,
         "generate_python_code",
         dataset_path=state["dataset_path"],
@@ -228,23 +222,72 @@ def llm_generate_python_code(state: AgentState) -> AgentState:
         df_head_markdown=str(state["dataset_df"].head().to_markdown())
     )
 
-    human_msg = HumanMessage(content=human_content)
+    code_user_message = HumanMessage(content=code_user_message)
 
-    state["messages"].append(human_msg)
-    return _generate_and_write_code(state, temp_agent)
+    messages = [description_user_message, code_user_message]
+    return _generate_and_write_code(state, temp_agent, messages)
+
+
+def _get_generate_code_agent(state: AgentState):
+    programming_language = state["programming_language"]
+    system_prompt = \
+        f"""
+        Du bist ein Experte für Data Science, {programming_language.value}‑Programmierung und Datenvisualisierung. 
+        Deine Hauptaufgabe ist Code zur Berechnung und Visualisierung von Data-Science Analysen eines Datensatzes zu erzeugen.
+        Allgemeine Prinzipien deines Handelns:
+        
+        1. Schreibe stets korrekten und ausführungssicheren {programming_language.value}‑Code.
+        {
+            """
+            2. Nutze ausschließlich die folgenden Bibliotheken, wenn nicht anders erlaubt: 
+            pandas, numpy, matplotlib.pyplot, seaborn, geopandas, basemap.
+            """ 
+        if programming_language == ProgrammingLanguage.PYTHON 
+        else "2. Installiere alle benötigten Pakete am Anfang des Skripts."
+        }
+        3. Beachte bei der Erstellung oder Bewertung von Visualisierungen die Qualitätskriterien für gute Datenvisualisierung:
+           - Angemessenheit des Diagrammtyps (z.B. Karte bei Geokoordinaten),
+           - Klarheit und Lesbarkeit,
+           - Daten-Treue,
+           - Ästhetische Gestaltung,
+           - Technische Korrektheit,
+           - Effektivität der Kommunikation,
+           - Konstruktive Verbesserungsvorschläge.
+        4. Du darfst keinerlei vertrauliche oder urheberrechtlich geschützte Daten erzeugen oder wiedergeben.
+        5. Alle Antworten sollen UTF‑8‑kompatiblen {programming_language.value}‑Code enthalten.
+        
+        Wenn du Code generierst, soll dieser sofort lauffähig, sauber strukturiert, modulartig und kommentiert sein. 
+    """
+
+    temp_agent = create_agent(
+        model=get_llm_model(LLMModel.GPT_5),
+        response_format=Code,
+        system_prompt=system_prompt
+    )
+
+    description_user_message = \
+        f"""
+        Folgende Daten wurden in einem vorherigen Schritt durch einen anderen Agenten ermittelt und analysiert:
+           
+        Beschreibung bzw. Zusammenfassung des Datensatzes:
+        {state["summary"].summary}
+        
+        Beschreibung der Spalten des Datensatzes:
+        {state["summary"].columns}
+    """
+    description_user_message = HumanMessage(content=description_user_message)
+
+    # clear output directory before generating new plots / code
+    clear_output_dir()
+    return description_user_message, temp_agent
 
 
 def llm_generate_r_code(state: AgentState) -> AgentState:
     """Generiert R Code für die Datenvisualisierung."""
-    temp_agent = create_agent(
-        model=get_llm_model(LLMModel.GPT_5),
-        response_format=Code
-    )
+    # TODO: einen neuen Prompt erstellen mit System Prompt, und alle bis jetzt erarbeiteten Infos mit übergeben
+    description_user_message, temp_agent = _get_generate_code_agent(state)
 
-    # clear output directory before generating new plots
-    clear_output_dir()
-
-    human_content = get_prompt(
+    code_user_message = get_prompt(
         language.value,
         "generate_r_code",
         dataset_path=state["dataset_path"],
@@ -254,10 +297,10 @@ def llm_generate_r_code(state: AgentState) -> AgentState:
         summary=str(getattr(state.get("summary", None), "summary", ""))
     )
 
-    human_msg = HumanMessage(content=human_content)
+    code_user_message = HumanMessage(content=code_user_message)
 
-    state["messages"].append(human_msg)
-    return _generate_and_write_code(state, temp_agent)
+    messages = [description_user_message, code_user_message]
+    return _generate_and_write_code(state, temp_agent, messages)
 
 
 def test_generated_code(state: AgentState) -> AgentState:
@@ -315,15 +358,18 @@ def decide_regenerate_code(state: AgentState) -> AgentState:
         regeneration_response: Regeneration = llm_response["structured_response"]
         print(f"{bcolors.OKCYAN}Regeneration decision: {regeneration_response.should_be_regenerated}{bcolors.ENDC}")
         print(regeneration_response.should_be_regenerated)
-        MAX_ATTEMPTS = 3
+        MAX_ATTEMPTS = 5 # TODO: ins env file packen
         if regeneration_response.should_be_regenerated and state["regeneration_attempts"] < MAX_ATTEMPTS:
             print(f"{bcolors.WARNING}Regenerating code, attempt {state['regeneration_attempts']}{bcolors.ENDC}")
             return "regenerate_code"
+        elif state["regeneration_attempts"] == MAX_ATTEMPTS:
+            print(f"{bcolors.OKGREEN}Max attempts limit ({MAX_ATTEMPTS}) succeeded.{bcolors.ENDC}")
+            return "judge"
         else:
-            print(f"{bcolors.OKGREEN}No regeneration needed or max attempts reached.{bcolors.ENDC}")
-            return "end"
+            print(f"{bcolors.OKGREEN}Code is functionally working.{bcolors.ENDC}")
+            return "judge"
     else:
-        return "end"
+        return "judge"
 
 
 def llm_regenerate_code(state: AgentState) -> AgentState:
@@ -349,21 +395,93 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
         model=get_llm_model(LLMModel.GPT_5),
         response_format=Code
     )
-    return _generate_and_write_code(state, temp_agent)
+    return _generate_and_write_code(state, temp_agent, state["messages"])
 
 
-def _generate_and_write_code(state: AgentState, temp_agent) -> AgentState:
-    llm_response = temp_agent.invoke({"messages": state["messages"]})
-    state["messages"] = llm_response["messages"]
+def _generate_and_write_code(state: AgentState, temp_agent, messages) -> AgentState:
+    llm_response = temp_agent.invoke({"messages": messages})
     path_base = "./output/generate_plots."
     state["script_path"] = path_base + state["programming_language"].value
-    with open(state["script_path"], "w", encoding="UTF-8") as f:
+    with open(state["script_path"], "w", encoding="UTF-8") as file:
         print(f"{bcolors.HEADER}LLM regenerated code: {bcolors.ENDC}")
         code: Code = llm_response["structured_response"]
         state["code"] = code
         print(f"\n{bcolors.OKGREEN}Generated Code:{bcolors.ENDC}")
-        print(state["code"].code)
-        f.write(state["code"].code)
+        print(code.code)
+        file.write(code.code)
+    state["messages"] = llm_response["messages"]
+    return state
+
+def llm_judge_plots(state: AgentState) -> AgentState:
+    system_prompt = \
+        f"""
+            Du bist eine Expertin bzw. ein Experte für Datenvisualisierung und analytische Kommunikation. 
+            Deine Aufgabe ist es, Code zu überprüfen und zu bewerten, der Diagramme oder andere Visualisierungen erzeugt. 
+            Erstelle eine detaillierte Kritik auf Grundlage der folgenden Kriterien:
+            
+            1. **Angemessenheit des Visualisierungstyps**  
+               - Stellt der gewählte Diagrammtyp die Daten effektiv dar?  
+               - Gibt es eine geeignetere Visualisierungsart für den Datentyp (z.B. kartenbasierte Darstellungen für geografische Daten, Streudiagramme für Zusammenhänge usw.)?
+            
+            2. **Klarheit und Verständlichkeit**  
+               - Ist die Visualisierung für die Zielgruppe leicht verständlich?  
+               - Sind Beschriftungen, Legenden und Titel klar, informativ und ausreichend?  
+               - Ist das gewählte Farbschema nachvollziehbar und barrierefrei?
+            
+            3. **Treue zu den Daten**  
+               - Spiegelt die Visualisierung die zugrunde liegenden Daten korrekt wider?  
+               - Sind Skalierungen, Achsen und Transformationen korrekt angewendet und nicht irreführend?  
+               - Werden die Daten ohne Verzerrung oder unnötige Verzierungen dargestellt?
+            
+            4. **Ästhetik und Gestaltungsqualität**  
+               - Werden visuelle Elemente (Farben, Größen, Abstände, Schriftarten) effektiv und konsistent eingesetzt?  
+               - Entspricht das Design bewährten Prinzipien der Datenvisualisierung (z.B. wenig „Chartjunk“, sinnvoller Weißraum)?
+            
+            5. **Technische Korrektheit**  
+               - Scheint der Code korrekt zu sein und erfolgreich ausführbar?  
+               - Werden Bibliotheken angemessen verwendet?  
+               - Sind alle erforderlichen Komponenten definiert (Datenvariablen, Figurenobjekte usw.)?
+            
+            6. **Wirksamkeit in der Kommunikationsleistung**  
+               - Beantwortet die Visualisierung die beabsichtigte analytische Fragestellung oder verdeutlicht sie den zentralen Punkt?  
+               - Ist die Kernaussage leicht zu erkennen?
+            
+            7. **Verbesserungsvorschläge**  
+               - Gib konkrete Empfehlungen, wie das Diagramm klarer, exakter oder informativer gestaltet werden kann.
+            
+            Deine Kritik soll detailliert, konstruktiv und gut begründet sein und bewerten, ob die Visualisierung die Daten für die Zielgruppe effektiv vermittelt.
+         """
+    temp_agent = create_agent(
+        model=get_llm_model(LLMModel.GPT_5),
+        system_prompt=SystemMessage(content=system_prompt),
+        response_format=Judge
+    )
+
+    with open(state["script_path"], "r", encoding="UTF-8") as file:
+        code_content = \
+            f"""
+                Mit dem folgenden Code wurden Diagramme zur Visualisierung eines Datensatzes erzeugt.
+                Bitte bewerte die erzeugten Visualisierungen anhand der zuvor genannten Kriterien und gib eine ausführliche Kritik ab.
+                Gib explizite Verbesserungsvorschläge, falls die Visualisierungen nicht optimal sind.
+                Generierter Code:
+                {file.read()}
+            """
+
+    llm_response = temp_agent.invoke({"messages": [HumanMessage(content=code_content)]})
+    judge_result: Judge = llm_response["structured_response"]
+    state["judge_messages"] = judge_result.verdicts
+    print(f"{bcolors.OKGREEN} LLM Judge {bcolors.ENDC}")
+    for x in judge_result.verdicts:
+        print(f"Figure: {x.figure_name}, File: {x.file_name}")
+        print(f"From line {x.line_number_from} to {x.line_number_to}")
+        print(f"Critic notes: {x.critic_notes}")
+        print(f"Suggested code: {x.suggestion_code}")
+        print(f"Needs regeneration: {x.needs_regeneration}")
+        print(f"Can be deleted: {x.can_be_deleted}")
+        print("-----")
+
+    # TODO: ich muss jetzt noch irgendwie das ganze generierete zeugs zu neu generierung weiterreichen
+    # TODO: step two - we judge the generated plots as well -> das lagern wir direkt in einen evaluate agent aus, der uns alle erzeugten plots bewertet
     return state
 
 
@@ -378,6 +496,7 @@ def get_llm_model(model: LLMModel) -> ChatOpenAI:
     )
     return llm
 
+start = time()
 
 graph = StateGraph(AgentState)
 graph.add_node("load_data", load_dataset)
@@ -386,10 +505,8 @@ graph.add_node("analyse_data", analyse_dataset)
 graph.add_edge("load_data", "analyse_data")
 graph.add_node("load_metadata", load_metadata)
 graph.add_edge("analyse_data", "load_metadata")
-graph.add_node("load_messages", load_messages)
-graph.add_edge("load_metadata", "load_messages")
 graph.add_node("LLM create_summary", llm_summary)
-graph.add_edge("load_messages", "LLM create_summary")
+graph.add_edge("load_metadata", "LLM create_summary")
 graph.add_node("LLM generate_python_code", llm_generate_python_code)
 graph.add_node("LLM generate_r_code", llm_generate_r_code)
 graph.add_conditional_edges(
@@ -406,10 +523,12 @@ graph.add_conditional_edges(
     decide_regenerate_code,
     {
         "regenerate_code": "LLM regenerate_code",
-        "end": END
+        "judge": "LLM judge_plots"
     }
 )
 graph.add_node("LLM regenerate_code", llm_regenerate_code)
+graph.add_node("LLM judge_plots", llm_judge_plots)
+graph.add_edge("LLM judge_plots", END)
 graph.add_edge("LLM regenerate_code", "test_generated_code")
 agent = graph.compile()
 
@@ -428,3 +547,5 @@ result = agent.invoke(
         "programming_language": ProgrammingLanguage.R
     }
 )
+
+print(f"{bcolors.WARNING}Agent finished in {time() - start} seconds.{bcolors.ENDC}")

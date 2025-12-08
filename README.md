@@ -18,7 +18,7 @@ This project uses `uv` for dependency management. To set up the project, follow 
     touch ./.venv/Scripts/activate
     uv pip install -e .
     ```
-4. **Run the Agent**: Create a `.env` file and add your open-router / open-ai key.
+4. **Run the Agent**: Create a `.env` file and add your open-router / open-ai key. For other configurations, refer to the .env section.
     ```bash
     touch .env
     python agent.py
@@ -29,11 +29,19 @@ This project uses `uv` for dependency management. To set up the project, follow 
     uv run --with jupyter jupyter lab
     ```
    The prompeted URL and token can be used to access the Jupyter Lab interface in your web browser or added in your IDE as external server.
-    
+
+## .env Configuration
+In order to run the Data-Science-Agent, you need to create a `.env` file in the root directory of the project. This file should contain the following environment variables:
+
+```env
+OPENROUTER_API_KEY=<your_openrouter_api_key> # this agent was developed with open-route to test more different models
+AGENT_LANGUAGE=<your_preferred_language> # Optional. Valid options are: `en`, `de`. Default is `de`. This specifies the language the agent will use intern and for outputs.
+MAX_REGENERATION_ATTEMPTS=<your_max_regeneration_attempts> # Optional. Default is `3`. This specifies the maximum number of attempts the agent will make to regenerate outputs in case of failures.
+```
 
 ## Project Structure
 
-````
+```
 my-project/
 ├── data/
 │   └── ...
@@ -47,7 +55,7 @@ my-project/
 ├── pyproject.toml
 ├── README.md
 └── uv.lock
-````
+```
 
 - `data/`: Directory for storing datasets and data-related files. 
 - `dtos/`: Directory for Data Transfer Objects (DTOs) used in the project.
@@ -56,3 +64,9 @@ my-project/
 - `agent.py`: Main script for the Data-Science-Agent functionality.
 - `pyproject.toml`: Configuration file for the Python project, specifying dependencies and settings.
 - `uv.lock`: Lock file for managing project dependencies.
+
+## Agent Workflow
+![Agent Workflow Graph](./img/graph.png)
+
+[//]: # (# TODO: Add more details about the agent's workflow and functionalities.)
+

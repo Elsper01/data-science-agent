@@ -5,10 +5,5 @@ from dtos.de.responses.judge_verdict import JudgeVerdict
 class Judge(JudgeBase):
     """Urteil des Judge-LLMs bezüglich eines ganzen Skripts das alle Grafiken und Figuren erzeugt."""
 
-    verdicts: list[JudgeVerdict] = Field(...)
-    needs_regeneration: bool = Field(...)
-
-    # allow population by field name or alias and validate on every assignment
-    class Config:
-        validate_by_name = True
-        validate_assignment = True
+    verdicts: list[JudgeVerdict] = Field(..., description="Liste der Urteile des Judge-LLMs bezüglich jeder einzelnen Figur und dem entsprechenden Code.")
+    needs_regeneration: bool = Field(..., description="Gibt an, ob überhaupt etwas am Skript angepasst werden sollte.")

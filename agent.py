@@ -65,6 +65,7 @@ load_dotenv()
 language = determine_language()
 Description, Metadata, Code, Regeneration, Summary, Judge = import_language_dtos(language)
 
+MAX_REGENERATION_ATTEMPTS = int(os.getenv("MAX_REGENERATION_ATTEMPTS", "3"))
 
 class ProgrammingLanguage(StrEnum):
     PYTHON = "py"
@@ -87,6 +88,7 @@ class AgentState(TypedDict):
     script_path: str
     regeneration_attempts: int
     programming_language: ProgrammingLanguage
+    is_refactoring: bool
 
 
 class bcolors:
@@ -358,18 +360,26 @@ def decide_regenerate_code(state: AgentState) -> AgentState:
         regeneration_response: Regeneration = llm_response["structured_response"]
         print(f"{bcolors.OKCYAN}Regeneration decision: {regeneration_response.should_be_regenerated}{bcolors.ENDC}")
         print(regeneration_response.should_be_regenerated)
-        MAX_ATTEMPTS = 5 # TODO: ins env file packen
-        if regeneration_response.should_be_regenerated and state["regeneration_attempts"] < MAX_ATTEMPTS:
+        if regeneration_response.should_be_regenerated and state["regeneration_attempts"] < MAX_REGENERATION_ATTEMPTS:
             print(f"{bcolors.WARNING}Regenerating code, attempt {state['regeneration_attempts']}{bcolors.ENDC}")
             return "regenerate_code"
-        elif state["regeneration_attempts"] == MAX_ATTEMPTS:
-            print(f"{bcolors.OKGREEN}Max attempts limit ({MAX_ATTEMPTS}) succeeded.{bcolors.ENDC}")
-            return "judge"
+        elif state["regeneration_attempts"] == MAX_REGENERATION_ATTEMPTS:
+            print(f"{bcolors.OKGREEN}Max attempts limit ({MAX_REGENERATION_ATTEMPTS}) succeeded.{bcolors.ENDC}")
+            if not state["is_refactoring"]:
+                return "judge"
+            else:
+                return "end"
         else:
             print(f"{bcolors.OKGREEN}Code is functionally working.{bcolors.ENDC}")
-            return "judge"
+            if not state["is_refactoring"]:
+                return "judge"
+            else:
+                return "end"
     else:
-        return "judge"
+        if not state["is_refactoring"]:
+            return "judge"
+        else:
+            return "end"
 
 
 def llm_regenerate_code(state: AgentState) -> AgentState:
@@ -406,8 +416,6 @@ def _generate_and_write_code(state: AgentState, temp_agent, messages) -> AgentSt
         print(f"{bcolors.HEADER}LLM regenerated code: {bcolors.ENDC}")
         code: Code = llm_response["structured_response"]
         state["code"] = code
-        print(f"\n{bcolors.OKGREEN}Generated Code:{bcolors.ENDC}")
-        print(code.code)
         file.write(code.code)
     state["messages"] = llm_response["messages"]
     return state
@@ -457,15 +465,14 @@ def llm_judge_plots(state: AgentState) -> AgentState:
         response_format=Judge
     )
 
-    with open(state["script_path"], "r", encoding="UTF-8") as file:
-        code_content = \
-            f"""
-                Mit dem folgenden Code wurden Diagramme zur Visualisierung eines Datensatzes erzeugt.
-                Bitte bewerte die erzeugten Visualisierungen anhand der zuvor genannten Kriterien und gib eine ausführliche Kritik ab.
-                Gib explizite Verbesserungsvorschläge, falls die Visualisierungen nicht optimal sind.
-                Generierter Code:
-                {file.read()}
-            """
+    code_content = \
+        f"""
+            Mit dem folgenden Code wurden Diagramme zur Visualisierung eines Datensatzes erzeugt.
+            Bitte bewerte die erzeugten Visualisierungen anhand der zuvor genannten Kriterien und gib eine ausführliche Kritik ab.
+            Gib explizite Verbesserungsvorschläge, falls die Visualisierungen nicht optimal sind.
+            Generierter Code:
+            {state["code"].code}
+        """
 
     llm_response = temp_agent.invoke({"messages": [HumanMessage(content=code_content)]})
     judge_result: Judge = llm_response["structured_response"]
@@ -473,16 +480,88 @@ def llm_judge_plots(state: AgentState) -> AgentState:
     print(f"{bcolors.OKGREEN} LLM Judge {bcolors.ENDC}")
     for x in judge_result.verdicts:
         print(f"Figure: {x.figure_name}, File: {x.file_name}")
-        print(f"From line {x.line_number_from} to {x.line_number_to}")
         print(f"Critic notes: {x.critic_notes}")
         print(f"Suggested code: {x.suggestion_code}")
         print(f"Needs regeneration: {x.needs_regeneration}")
         print(f"Can be deleted: {x.can_be_deleted}")
         print("-----")
 
-    # TODO: ich muss jetzt noch irgendwie das ganze generierete zeugs zu neu generierung weiterreichen
     # TODO: step two - we judge the generated plots as well -> das lagern wir direkt in einen evaluate agent aus, der uns alle erzeugten plots bewertet
     return state
+
+def llm_refactor_plots(state: AgentState) -> AgentState:
+    system_prompt = \
+        """
+            Du bist ein erfahrener Entwickler und Code-Refactoring-Agent.  
+            Du erhältst eine Liste von Bewertungen (Verdicts) vom Judge-Agenten, der verschiedene Codeabschnitte und die dazugehörigen Figuren beurteilt hat.
+            
+            Jeder Eintrag in dieser Liste enthält:
+            - den betroffenen Dateinamen (`file_name`)
+            - den Namen der Figur (`figure_name`)
+            - Kritikpunkte oder Verbesserungshinweise (`critic_notes`)
+            - eventuell vom Judge vorgeschlagenen Beispielcode (`suggestion_code`)
+            - Flags, die angeben, ob die Figur bzw. der Code neu generiert oder gelöscht werden sollen
+            
+            Deine Aufgaben:
+            1. Analysiere jedes Urteil (`verdict`).
+            2. Überarbeite die betroffenen Codeabschnitte gemäß den Hinweisen.
+               - Wenn `suggestion_code` vorhanden ist, nutze diesen als Grundlage.
+               - Wenn `needs_regeneration` wahr ist, schreibe den entsprechenden Codeabschnitt neu.
+               - Wenn `can_be_deleted` wahr ist, entferne den betreffenden Codeabschnitt.
+               - Wenn nur `critic_notes` angegeben sind, verbessere den existierenden Code inhaltlich anhand dieser Hinweise.
+            3. Gib am Ende den **vollständigen, überarbeiteten Code** zurück — nicht nur Diff oder Teilstücke.
+            4. Dokumentiere dabei sinnvolle Änderungen mit knappen Kommentaren (`# Änderung basierend auf Judge-Feedback: …`)
+            
+            Ergebnis:
+            Ein sauber überarbeiteter, funktionsfähiger und qualitativ verbesserter Code.        
+        """
+    instructions = \
+        f"""
+            Hier ist der aktuelle Code, der überarbeitet werden soll:
+
+            --- CODE START ---
+            {state["code"].code}
+            --- CODE END ---
+            
+            Hier sind die vom Judge-Agenten zurückgegebenen Bewertungen (Verdicts):
+            
+            --- VERDICTS START ---
+            {state['judge_messages']}
+            --- VERDICTS END ---
+            
+            Jedes Element in dieser Liste entspricht einer Beurteilung gemäß dem folgenden Schema:
+            
+            file_name: Name der Quelldatei
+            figure_name: Figur, auf die sich das Urteil bezieht
+            critic_notes: Detaillierte Kritikpunkte und Hinweise
+            suggestion_code: (Optional) Beispielcode oder Vorschläge zur Verbesserung
+            needs_regeneration: Ob der Codeabschnitt komplett neu generiert werden soll
+            can_be_deleted: Ob der Codeabschnitt gelöscht werden soll
+            
+            Bitte überarbeite den Code basierend auf diesen Bewertungen und liefere den vollständig überarbeiteten Quellcode zurück.
+        """
+
+    temp_agent = create_agent(
+        model=get_llm_model(LLMModel.GPT_5),
+        system_prompt=SystemMessage(content=system_prompt),
+        response_format=Code
+    )
+
+    llm_response = temp_agent.invoke({"messages": [HumanMessage(content=instructions)]})
+    code: Code = llm_response["structured_response"]
+    state["code"] = code
+
+    # reset the regeneration attempts
+    state["regeneration_attempts"] = 0
+
+    # set flag for decide_regenerate_code to determine if agent is allowed to stop
+    state["is_refactoring"] = True
+
+    print(f"{bcolors.OKGREEN} LLM Refactor {bcolors.ENDC}")
+    with open(state["script_path"], "w", encoding="UTF-8") as file:
+        file.write(code.code)
+    return state
+
 
 
 def get_llm_model(model: LLMModel) -> ChatOpenAI:
@@ -523,12 +602,15 @@ graph.add_conditional_edges(
     decide_regenerate_code,
     {
         "regenerate_code": "LLM regenerate_code",
-        "judge": "LLM judge_plots"
+        "judge": "LLM judge_plots",
+        "end": END
     }
 )
 graph.add_node("LLM regenerate_code", llm_regenerate_code)
 graph.add_node("LLM judge_plots", llm_judge_plots)
-graph.add_edge("LLM judge_plots", END)
+graph.add_node("LLM refactor_plots", llm_refactor_plots)
+graph.add_edge("LLM judge_plots", "LLM refactor_plots")
+graph.add_edge("LLM refactor_plots", "test_generated_code")
 graph.add_edge("LLM regenerate_code", "test_generated_code")
 agent = graph.compile()
 
@@ -544,7 +626,8 @@ result = agent.invoke(
         "dataset_path": "./data/pegel.csv",
         "metadata_path": "./data/pegel.rdf",
         "regeneration_attempts": 0,
-        "programming_language": ProgrammingLanguage.R
+        "programming_language": ProgrammingLanguage.R,
+        "is_refactoring": False
     }
 )
 

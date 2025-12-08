@@ -6,8 +6,6 @@ class JudgeVerdictBase(BaseModel):
 
     file_name: str = Field(...)
     figure_name: str = Field(...)
-    line_number_from: int = Field(...)
-    line_number_to: int = Field(...)
     critic_notes: str = Field(...)
     suggestion_code: str = Field(...)
     needs_regeneration: bool = Field(...)

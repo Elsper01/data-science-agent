@@ -232,34 +232,22 @@ def llm_generate_python_code(state: AgentState) -> AgentState:
 
 def _get_generate_code_agent(state: AgentState):
     programming_language = state["programming_language"]
-    system_prompt = \
-        f"""
-        Du bist ein Experte für Data Science, {programming_language.value}‑Programmierung und Datenvisualisierung. 
-        Deine Hauptaufgabe ist Code zur Berechnung und Visualisierung von Data-Science Analysen eines Datensatzes zu erzeugen.
-        Allgemeine Prinzipien deines Handelns:
-        
-        1. Schreibe stets korrekten und ausführungssicheren {programming_language.value}‑Code.
-        {
-            """
-            2. Nutze ausschließlich die folgenden Bibliotheken, wenn nicht anders erlaubt: 
-            pandas, numpy, matplotlib.pyplot, seaborn, geopandas, basemap.
-            """ 
-        if programming_language == ProgrammingLanguage.PYTHON 
-        else "2. Installiere alle benötigten Pakete am Anfang des Skripts."
-        }
-        3. Beachte bei der Erstellung oder Bewertung von Visualisierungen die Qualitätskriterien für gute Datenvisualisierung:
-           - Angemessenheit des Diagrammtyps (z.B. Karte bei Geokoordinaten),
-           - Klarheit und Lesbarkeit,
-           - Daten-Treue,
-           - Ästhetische Gestaltung,
-           - Technische Korrektheit,
-           - Effektivität der Kommunikation,
-           - Konstruktive Verbesserungsvorschläge.
-        4. Du darfst keinerlei vertrauliche oder urheberrechtlich geschützte Daten erzeugen oder wiedergeben.
-        5. Alle Antworten sollen UTF‑8‑kompatiblen {programming_language.value}‑Code enthalten.
-        
-        Wenn du Code generierst, soll dieser sofort lauffähig, sauber strukturiert, modulartig und kommentiert sein. 
-    """
+
+    # bestimme sprachspezifische Anweisung für Bibliotheken / Installationen
+    lib_instruction_key = (
+        "generate_code_python_lib_instruction"
+        if programming_language == ProgrammingLanguage.PYTHON
+        else "generate_code_r_lib_instruction"
+    )
+    library_instruction = get_prompt(language.value, lib_instruction_key)
+
+    # System-Prompt via prompts.py holen und formatieren
+    system_prompt = get_prompt(
+        language.value,
+        "generate_code_system_prompt",
+        programming_language=programming_language.value,
+        library_instruction=library_instruction
+    )
 
     temp_agent = create_agent(
         model=get_llm_model(LLMModel.GPT_5),
@@ -267,16 +255,13 @@ def _get_generate_code_agent(state: AgentState):
         system_prompt=system_prompt
     )
 
-    description_user_message = \
-        f"""
-        Folgende Daten wurden in einem vorherigen Schritt durch einen anderen Agenten ermittelt und analysiert:
-           
-        Beschreibung bzw. Zusammenfassung des Datensatzes:
-        {state["summary"].summary}
-        
-        Beschreibung der Spalten des Datensatzes:
-        {state["summary"].columns}
-    """
+    # Beschreibung/User-Message ebenfalls über prompts.py (mit summary/columns)
+    description_user_message = get_prompt(
+        language.value,
+        "generate_code_description_user_prompt",
+        summary=str(getattr(state.get("summary", None), "summary", "")),
+        columns=str(getattr(state.get("summary", None), "columns", ""))
+    )
     description_user_message = HumanMessage(content=description_user_message)
 
     # clear output directory before generating new plots / code
@@ -421,58 +406,16 @@ def _generate_and_write_code(state: AgentState, temp_agent, messages) -> AgentSt
     return state
 
 def llm_judge_plots(state: AgentState) -> AgentState:
-    system_prompt = \
-        f"""
-            Du bist eine Expertin bzw. ein Experte für Datenvisualisierung und analytische Kommunikation. 
-            Deine Aufgabe ist es, Code zu überprüfen und zu bewerten, der Diagramme oder andere Visualisierungen erzeugt. 
-            Erstelle eine detaillierte Kritik auf Grundlage der folgenden Kriterien:
-            
-            1. **Angemessenheit des Visualisierungstyps**  
-               - Stellt der gewählte Diagrammtyp die Daten effektiv dar?  
-               - Gibt es eine geeignetere Visualisierungsart für den Datentyp (z.B. kartenbasierte Darstellungen für geografische Daten, Streudiagramme für Zusammenhänge usw.)?
-            
-            2. **Klarheit und Verständlichkeit**  
-               - Ist die Visualisierung für die Zielgruppe leicht verständlich?  
-               - Sind Beschriftungen, Legenden und Titel klar, informativ und ausreichend?  
-               - Ist das gewählte Farbschema nachvollziehbar und barrierefrei?
-            
-            3. **Treue zu den Daten**  
-               - Spiegelt die Visualisierung die zugrunde liegenden Daten korrekt wider?  
-               - Sind Skalierungen, Achsen und Transformationen korrekt angewendet und nicht irreführend?  
-               - Werden die Daten ohne Verzerrung oder unnötige Verzierungen dargestellt?
-            
-            4. **Ästhetik und Gestaltungsqualität**  
-               - Werden visuelle Elemente (Farben, Größen, Abstände, Schriftarten) effektiv und konsistent eingesetzt?  
-               - Entspricht das Design bewährten Prinzipien der Datenvisualisierung (z.B. wenig „Chartjunk“, sinnvoller Weißraum)?
-            
-            5. **Technische Korrektheit**  
-               - Scheint der Code korrekt zu sein und erfolgreich ausführbar?  
-               - Werden Bibliotheken angemessen verwendet?  
-               - Sind alle erforderlichen Komponenten definiert (Datenvariablen, Figurenobjekte usw.)?
-            
-            6. **Wirksamkeit in der Kommunikationsleistung**  
-               - Beantwortet die Visualisierung die beabsichtigte analytische Fragestellung oder verdeutlicht sie den zentralen Punkt?  
-               - Ist die Kernaussage leicht zu erkennen?
-            
-            7. **Verbesserungsvorschläge**  
-               - Gib konkrete Empfehlungen, wie das Diagramm klarer, exakter oder informativer gestaltet werden kann.
-            
-            Deine Kritik soll detailliert, konstruktiv und gut begründet sein und bewerten, ob die Visualisierung die Daten für die Zielgruppe effektiv vermittelt.
-         """
+    # System-Prompt aus prompts.py
+    system_prompt = get_prompt(language.value, "judge_system_prompt")
     temp_agent = create_agent(
         model=get_llm_model(LLMModel.GPT_5),
         system_prompt=SystemMessage(content=system_prompt),
         response_format=Judge
     )
 
-    code_content = \
-        f"""
-            Mit dem folgenden Code wurden Diagramme zur Visualisierung eines Datensatzes erzeugt.
-            Bitte bewerte die erzeugten Visualisierungen anhand der zuvor genannten Kriterien und gib eine ausführliche Kritik ab.
-            Gib explizite Verbesserungsvorschläge, falls die Visualisierungen nicht optimal sind.
-            Generierter Code:
-            {state["code"].code}
-        """
+    # User-Message: übergebe den generierten Code
+    code_content = get_prompt(language.value, "judge_user_prompt", code=state["code"].code)
 
     llm_response = temp_agent.invoke({"messages": [HumanMessage(content=code_content)]})
     judge_result: Judge = llm_response["structured_response"]
@@ -490,61 +433,20 @@ def llm_judge_plots(state: AgentState) -> AgentState:
     return state
 
 def llm_refactor_plots(state: AgentState) -> AgentState:
-    system_prompt = \
-        """
-            Du bist ein erfahrener Entwickler und Code-Refactoring-Agent.  
-            Du erhältst eine Liste von Bewertungen (Verdicts) vom Judge-Agenten, der verschiedene Codeabschnitte und die dazugehörigen Figuren beurteilt hat.
-            
-            Jeder Eintrag in dieser Liste enthält:
-            - den betroffenen Dateinamen (`file_name`)
-            - den Namen der Figur (`figure_name`)
-            - Kritikpunkte oder Verbesserungshinweise (`critic_notes`)
-            - eventuell vom Judge vorgeschlagenen Beispielcode (`suggestion_code`)
-            - Flags, die angeben, ob die Figur bzw. der Code neu generiert oder gelöscht werden sollen
-            
-            Deine Aufgaben:
-            1. Analysiere jedes Urteil (`verdict`).
-            2. Überarbeite die betroffenen Codeabschnitte gemäß den Hinweisen.
-               - Wenn `suggestion_code` vorhanden ist, nutze diesen als Grundlage.
-               - Wenn `needs_regeneration` wahr ist, schreibe den entsprechenden Codeabschnitt neu.
-               - Wenn `can_be_deleted` wahr ist, entferne den betreffenden Codeabschnitt.
-               - Wenn nur `critic_notes` angegeben sind, verbessere den existierenden Code inhaltlich anhand dieser Hinweise.
-            3. Gib am Ende den **vollständigen, überarbeiteten Code** zurück — nicht nur Diff oder Teilstücke.
-            4. Dokumentiere dabei sinnvolle Änderungen mit knappen Kommentaren (`# Änderung basierend auf Judge-Feedback: …`)
-            
-            Ergebnis:
-            Ein sauber überarbeiteter, funktionsfähiger und qualitativ verbesserter Code.        
-        """
-    instructions = \
-        f"""
-            Hier ist der aktuelle Code, der überarbeitet werden soll:
-
-            --- CODE START ---
-            {state["code"].code}
-            --- CODE END ---
-            
-            Hier sind die vom Judge-Agenten zurückgegebenen Bewertungen (Verdicts):
-            
-            --- VERDICTS START ---
-            {state['judge_messages']}
-            --- VERDICTS END ---
-            
-            Jedes Element in dieser Liste entspricht einer Beurteilung gemäß dem folgenden Schema:
-            
-            file_name: Name der Quelldatei
-            figure_name: Figur, auf die sich das Urteil bezieht
-            critic_notes: Detaillierte Kritikpunkte und Hinweise
-            suggestion_code: (Optional) Beispielcode oder Vorschläge zur Verbesserung
-            needs_regeneration: Ob der Codeabschnitt komplett neu generiert werden soll
-            can_be_deleted: Ob der Codeabschnitt gelöscht werden soll
-            
-            Bitte überarbeite den Code basierend auf diesen Bewertungen und liefere den vollständig überarbeiteten Quellcode zurück.
-        """
-
+    # System-Prompt aus prompts.py
+    system_prompt = get_prompt(language.value, "refactor_system_prompt")
     temp_agent = create_agent(
         model=get_llm_model(LLMModel.GPT_5),
         system_prompt=SystemMessage(content=system_prompt),
         response_format=Code
+    )
+
+    # Instructions/User-Message mit Platzhaltern für Code und Verdicts
+    instructions = get_prompt(
+        language.value,
+        "refactor_user_prompt",
+        code=state["code"].code,
+        judge_messages=str(state.get('judge_messages', []))
     )
 
     llm_response = temp_agent.invoke({"messages": [HumanMessage(content=instructions)]})

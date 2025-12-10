@@ -66,7 +66,7 @@ my-project/
 - `uv.lock`: Lock file for managing project dependencies.
 
 ## Agent Workflow
-![Agent Workflow Graph](./img/graph.png)
+![Agent Workflow Graph](ressources/img/graph.png)
 
 [//]: # (# TODO: Add more details about the agent's workflow and functionalities.)
 

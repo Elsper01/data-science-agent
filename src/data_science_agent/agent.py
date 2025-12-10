@@ -109,7 +109,7 @@ class LLMModel(StrEnum):
     GROK = "x-ai/grok-code-fast-1"
 
 
-def decide_programming_language(state: AgentState) -> AgentState:
+def decide_programming_language(state: AgentState):
     """Entscheidet die Programmiersprache, in welcher der Code erzeugt werden soll."""
     programming_language: ProgrammingLanguage = state["programming_language"]
     if programming_language == ProgrammingLanguage.PYTHON:

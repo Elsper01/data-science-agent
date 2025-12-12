@@ -1,1 +1,1 @@
-from .loader import import_language_dtos
+from .loader import import_language_dto, import_all_language_dtos

@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import List
-from dtos.base.responses.column_base import ColumnBase
+from . import ColumnBase
 
 
 class SummaryBase(BaseModel):

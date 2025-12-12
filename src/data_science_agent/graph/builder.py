@@ -1,6 +1,9 @@
 from langgraph.graph import StateGraph, START, END
 
-from src.data_science_agent.graph.agent_state import AgentState
+from src.data_science_agent.graph import AgentState
+from src.data_science_agent.pipeline import (
+    load_dataset,
+)
 
 
 def build_graph():

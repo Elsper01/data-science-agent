@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from . import JudgeVerdictBase
+from data_science_agent.dtos.base.responses.judge_verdict_base import JudgeVerdictBase
 
 
 class JudgeBase(BaseModel):

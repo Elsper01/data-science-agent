@@ -1,11 +1,11 @@
 import importlib
 from types import ModuleType
 
-from src.data_science_agent.utils.enums import Language
+from data_science_agent.utils.enums import Language
 
 from pydantic import BaseModel
 
-IMPORT_BASE_PATH = "src.data_science_agent.dtos"
+IMPORT_BASE_PATH = "data_science_agent.dtos"
 
 def import_all_language_dtos(language: Language):
     code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module = __get_all_dto_paths(
@@ -37,17 +37,17 @@ def import_language_dto(language: Language, requested_dto: BaseModel) -> BaseMod
     """Imports a specific language DTO."""
     code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module = __get_all_dto_paths(
         language)
-    if requested_dto.__name__ == "Code":
+    if requested_dto.__name__ == "CodeBase":
         return getattr(code_module, "Code")
-    elif requested_dto.__name__ == "Regeneration":
+    elif requested_dto.__name__ == "RegenerationBase":
         return getattr(regeneration_module, "Regeneration")
-    elif requested_dto.__name__ == "Summary":
+    elif requested_dto.__name__ == "SummaryBase":
         return getattr(summary_module, "Summary")
-    elif requested_dto.__name__ == "Judge":
+    elif requested_dto.__name__ == "JudgeBase":
         return getattr(judge_module, "Judge")
-    elif requested_dto.__name__ == "Description":
+    elif requested_dto.__name__ == "DescriptionBase":
         return getattr(description_module, "Description")
-    elif requested_dto.__name__ == "Metadata":
+    elif requested_dto.__name__ == "MetadataBase":
         return getattr(metadata_module, "Metadata")
     else:
         raise ValueError(f"Requested DTO {requested_dto.__name__} not found for language {language}.")

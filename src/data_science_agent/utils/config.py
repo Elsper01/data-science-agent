@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 
-from enums import Language
+from data_science_agent.utils.enums import Language
 
 
 def __load_language() -> Language:

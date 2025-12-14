@@ -1,7 +1,7 @@
 from typing import Optional, Union
 from pydantic import Field
 
-from dtos.base.description_base import DescriptionBase
+from data_science_agent.dtos.base.description_base import DescriptionBase
 
 class Description(DescriptionBase):
     """

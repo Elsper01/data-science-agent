@@ -2,7 +2,7 @@ from typing import Optional
 
 from pydantic import Field
 
-from dtos.base.responses.column_base import ColumnBase
+from data_science_agent.dtos.base.responses.column_base import ColumnBase
 
 
 class Column(ColumnBase):

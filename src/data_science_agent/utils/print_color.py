@@ -1,4 +1,4 @@
-from enums import Color
+from data_science_agent.utils.enums import Color
 
 
 def print_color(text: str, color: Color) -> None:

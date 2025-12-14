@@ -1,7 +1,7 @@
 from pydantic import Field
 from typing import Optional
 
-from dtos.base.responses.judge_verdict_base import JudgeVerdictBase
+from data_science_agent.dtos.base.responses.judge_verdict_base import JudgeVerdictBase
 
 
 class JudgeVerdict(JudgeVerdictBase):

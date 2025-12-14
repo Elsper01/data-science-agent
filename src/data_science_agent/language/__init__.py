@@ -1,1 +1,1 @@
-from .loader import import_language_dto, import_all_language_dtos
+from data_science_agent.language.loader import import_language_dto, import_all_language_dtos

@@ -1,6 +1,6 @@
 from pydantic import Field
-from dtos.base.responses.judge_base import JudgeBase
-from dtos.de.responses.judge_verdict import JudgeVerdict
+from data_science_agent.dtos.base.responses.judge_base import JudgeBase
+from data_science_agent.dtos.de.responses.judge_verdict import JudgeVerdict
 
 class Judge(JudgeBase):
     """Urteil des Judge-LLMs bezüglich eines ganzen Skripts das alle Grafiken und Figuren erzeugt."""

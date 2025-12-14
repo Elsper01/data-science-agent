@@ -1,7 +1,7 @@
 from pydantic import Field
 
-from dtos.base.responses.summary_base import SummaryBase
-from dtos.de.responses.column import Column
+from data_science_agent.dtos.base.responses.summary_base import SummaryBase
+from data_science_agent.dtos.de.responses.column import Column
 
 
 class Summary(SummaryBase):

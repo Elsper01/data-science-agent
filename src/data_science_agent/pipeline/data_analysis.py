@@ -1,8 +1,8 @@
 import pandas as pd
-from src.data_science_agent.graph import AgentState
-from src.data_science_agent.language import import_language_dto
-from src.data_science_agent.dtos.base import DescriptionBase
-from src.data_science_agent.utils import AGENT_LANGUAGE
+from data_science_agent.graph import AgentState
+from data_science_agent.language import import_language_dto
+from data_science_agent.dtos.base import DescriptionBase
+from data_science_agent.utils import AGENT_LANGUAGE
 
 Description = import_language_dto(AGENT_LANGUAGE, DescriptionBase)
 

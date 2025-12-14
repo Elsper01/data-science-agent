@@ -1,6 +1,6 @@
 from pydantic import Field
 
-from dtos.base.responses.regeneration_base import RegenerationBase
+from data_science_agent.dtos.base.responses.regeneration_base import RegenerationBase
 
 
 class Regeneration(RegenerationBase):

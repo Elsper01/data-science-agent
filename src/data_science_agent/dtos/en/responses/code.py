@@ -1,6 +1,6 @@
 from pydantic import Field
 
-from dtos.base.metadata_base import MetadataBase
+from data_science_agent.dtos.base.metadata_base import MetadataBase
 
 
 class Code(MetadataBase):

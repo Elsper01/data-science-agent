@@ -1,9 +1,9 @@
 from typing import Any, Union, TypedDict
 from langchain_core.messages import HumanMessage, AIMessage
 
-from src.data_science_agent.language import import_all_language_dtos
-from src.data_science_agent.utils import AGENT_LANGUAGE
-from src.data_science_agent.utils.enums import ProgrammingLanguage
+from data_science_agent.language import import_all_language_dtos
+from data_science_agent.utils import AGENT_LANGUAGE
+from data_science_agent.utils.enums import ProgrammingLanguage
 
 Description, Metadata, Code, _, Summary, _ = import_all_language_dtos(AGENT_LANGUAGE)
 

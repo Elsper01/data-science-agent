@@ -1,4 +1,4 @@
-from .responses import (
+from data_science_agent.dtos.base.responses import (
     CodeBase,
     ColumnBase,
     JudgeBase,
@@ -6,5 +6,5 @@ from .responses import (
     RegenerationBase,
     SummaryBase
 )
-from .description_base import DescriptionBase
-from .metadata_base import MetadataBase
+from data_science_agent.dtos.base.description_base import DescriptionBase
+from data_science_agent.dtos.base.metadata_base import MetadataBase

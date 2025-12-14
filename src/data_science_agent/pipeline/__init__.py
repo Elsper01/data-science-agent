@@ -1,1 +1,2 @@
-from data_loading import load_dataset
+from data_science_agent.pipeline.data_loading import load_dataset
+from data_science_agent.pipeline.data_analysis import analyse_dataset

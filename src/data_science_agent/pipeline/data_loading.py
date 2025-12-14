@@ -1,4 +1,4 @@
-from src.data_science_agent.graph import AgentState
+from data_science_agent.graph import AgentState
 
 import pandas as pd
 

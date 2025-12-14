@@ -1,3 +1,20 @@
 *.env
 .idea/
 *.pyc
+
+# Cache / temporary files
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.cache/
+*.cache
+.pytest_cache/
+.mypy_cache/
+pip-wheel-metadata/
+build/
+dist/
+*.egg-info/
+.eggs/
+# Optional: editor/OS caches
+.DS_Store
+Thumbs.db

@@ -1,2 +1,5 @@
 from data_science_agent.pipeline.data_loading import load_dataset
 from data_science_agent.pipeline.data_analysis import analyse_dataset
+from data_science_agent.pipeline.metadata_loading import load_metadata
+from data_science_agent.pipeline.llm_operations.summary_generation import llm_generate_summary
+from data_science_agent.pipeline.llm_operations.code_generation import llm_generate_r_code, llm_generate_python_code, decide_programming_language

@@ -1,9 +1,7 @@
-from graph import build_graph
 from time import time
-from utils import print_color, enums
 
-import os
-print(os.listdir("./src/data_science_agent/"))
+from data_science_agent.graph import build_graph
+from data_science_agent.utils import print_color, enums
 
 start = time()
 
@@ -22,7 +20,8 @@ result = agent.invoke(
         "metadata_path": "./src/resources/data/pegel.rdf",
         "regeneration_attempts": 0,
         "programming_language": enums.ProgrammingLanguage.R,
-        "is_refactoring": False
+        "is_refactoring": False,
+        "output_path": "./src/resources/output/"
     }
 )
 

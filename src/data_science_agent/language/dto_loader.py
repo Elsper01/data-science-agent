@@ -1,13 +1,15 @@
 import importlib
 from types import ModuleType
 
-from data_science_agent.utils.enums import Language
-
 from pydantic import BaseModel
+
+from data_science_agent.utils.enums import Language
 
 IMPORT_BASE_PATH = "data_science_agent.dtos"
 
+
 def import_all_language_dtos(language: Language):
+    """Imports all language specific DTO's."""
     code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module = __get_all_dto_paths(
         language)
 
@@ -23,7 +25,7 @@ def import_all_language_dtos(language: Language):
 
 def __get_all_dto_paths(language: Language) -> tuple[
     ModuleType, ModuleType, ModuleType, ModuleType, ModuleType, ModuleType]:
-    """Imports the language specific DTO's."""
+    """Gets all module paths for a specific language DTO."""
     code_module = importlib.import_module(f"dtos.{language}.responses.code")
     regeneration_module = importlib.import_module(f"dtos.{language}.responses.regeneration")
     summary_module = importlib.import_module(f"dtos.{language}.responses.summary")
@@ -33,23 +35,21 @@ def __get_all_dto_paths(language: Language) -> tuple[
     return code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module
 
 
-def import_language_dto(language: Language, requested_dto: BaseModel) -> BaseModel:
+def import_language_dto(language: Language, base_dto_class: BaseModel) -> BaseModel:
     """Imports a specific language DTO."""
     code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module = __get_all_dto_paths(
         language)
-    if requested_dto.__name__ == "CodeBase":
+    if base_dto_class.__name__ == "CodeBase":
         return getattr(code_module, "Code")
-    elif requested_dto.__name__ == "RegenerationBase":
+    elif base_dto_class.__name__ == "RegenerationBase":
         return getattr(regeneration_module, "Regeneration")
-    elif requested_dto.__name__ == "SummaryBase":
+    elif base_dto_class.__name__ == "SummaryBase":
         return getattr(summary_module, "Summary")
-    elif requested_dto.__name__ == "JudgeBase":
+    elif base_dto_class.__name__ == "JudgeBase":
         return getattr(judge_module, "Judge")
-    elif requested_dto.__name__ == "DescriptionBase":
+    elif base_dto_class.__name__ == "DescriptionBase":
         return getattr(description_module, "Description")
-    elif requested_dto.__name__ == "MetadataBase":
+    elif base_dto_class.__name__ == "MetadataBase":
         return getattr(metadata_module, "Metadata")
     else:
-        raise ValueError(f"Requested DTO {requested_dto.__name__} not found for language {language}.")
-
-
+        raise ValueError(f"Requested DTO {base_dto_class.__name__} not found for language {language}.")

@@ -1,4 +1,5 @@
 from typing import Any, TypedDict
+from langchain_core.messages import HumanMessage, AIMessage
 
 from data_science_agent.language import import_all_language_dtos
 from data_science_agent.utils import AGENT_LANGUAGE
@@ -11,6 +12,7 @@ class AgentState(TypedDict):
     """Represents the state of the data science agent throughout its workflow."""
     # General
     output_path: str
+    messages: list[HumanMessage, AIMessage]
     # Dataset
     dataset_path: str
     dataset_df: Any  # any because typing of np.dataframe is not easily possible

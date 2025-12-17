@@ -3,11 +3,13 @@ from langchain_core.messages import HumanMessage
 
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
-from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color
-from data_science_agent.utils.enums import LLMModel, ProgrammingLanguage, Color
+from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model
+from data_science_agent.utils.enums import LLMModel, ProgrammingLanguage
 from data_science_agent.dtos.base.responses import CodeBase
 
-import os
+from data_science_agent.pipeline.utils import generate_and_write_code
+
+from data_science_agent.utils.pipeline import clear_output_dir
 
 prompt: Prompt = Prompt(
     de={
@@ -54,7 +56,7 @@ prompt: Prompt = Prompt(
                 - Verwende ausschließlich `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, `basemap`.
                 - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
                 - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
-                  `./output/<plot_name>.png`
+                  `{output_path}<plot_name>.png`
                 - Wähle Diagrammtypen entsprechend der Datenbedeutung:
                   - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
                   - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
@@ -89,7 +91,7 @@ prompt: Prompt = Prompt(
                 Vorgaben für den Code:
                 - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
                 - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
-                  `./output/<plot_name>.png`
+                  `{output_path}<plot_name>.png`
                 - Wähle Diagrammtypen entsprechend der Datenbedeutung. Dies sind Hinweise, überlege selber ob die Hinweise für die entsprechenden Spalten passend sind:
                   - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
                   - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
@@ -131,7 +133,7 @@ prompt: Prompt = Prompt(
                 - Use only `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, and `basemap`.
                 - The code must be modular, well‑commented, directly executable, and free of syntax errors.
                 - All plots must be visually appealing, clearly labeled (in English), readable, and saved as PNG files under:
-                  `./output/<plot_name>.png`
+                  `{output_path}<plot_name>.png`
                 - Choose chart types based on data meaning:
                   - Geographic variables → spatial distribution (e.g., map with point markers)
                   - Temporal variables → investigate whether temporal trends relate to other variables
@@ -166,7 +168,7 @@ prompt: Prompt = Prompt(
                 Code requirements:
                 - The code must be modular, well‑commented, directly runnable, and free of syntax errors.
                 - All plots must be visually appealing, clearly labeled (in English), readable, and saved as PNG files under:
-                  `./output/<plot_name>.png`
+                  `{output_path}<plot_name>.png`
                 - Choose chart types according to the data’s meaning. The following hints may help, but apply your judgment:
                   - Geographic variables → spatial distribution (e.g., map with points)
                   - Temporal variables → study if variable values change over time
@@ -233,13 +235,14 @@ def llm_generate_python_code(state: AgentState) -> AgentState:
         "generate_python_code",
         dataset_path=state["dataset_path"],
         dataset_sep=";",
-        df_head_markdown=str(state["dataset_df"].head().to_markdown())
+        df_head_markdown=str(state["dataset_df"].head().to_markdown()),
+        output_path=state["output_path"]
     )
 
     code_user_message = HumanMessage(content=code_user_message)
 
     messages = [description_user_message, code_user_message]
-    return _generate_and_write_code(state, temp_agent, messages)
+    return generate_and_write_code(state, temp_agent, messages)
 
 
 def _get_generate_code_agent(state: AgentState):
@@ -277,7 +280,7 @@ def _get_generate_code_agent(state: AgentState):
     description_user_message = HumanMessage(content=description_user_message)
 
     # clear output directory before generating new plots / code
-    _clear_output_dir(state)
+    clear_output_dir(state["output_path"])
     return description_user_message, temp_agent
 
 
@@ -292,42 +295,17 @@ def llm_generate_r_code(state: AgentState) -> AgentState:
         dataset_sep=";",
         df_head_markdown=str(state["dataset_df"].head(10).to_markdown()),
         summary_columns=str(getattr(state.get("summary", None), "columns", "")),
-        summary=str(getattr(state.get("summary", None), "summary", ""))
+        summary=str(getattr(state.get("summary", None), "summary", "")),
+        output_path=state["output_path"]
     )
 
     code_user_message = HumanMessage(content=code_user_message)
 
     messages = [description_user_message, code_user_message]
-    return _generate_and_write_code(state, temp_agent, messages)
-
-
-def _generate_and_write_code(state: AgentState, temp_agent, messages) -> AgentState:
-    """Helper function to generate code and write it to a file."""
-    llm_response = temp_agent.invoke({"messages": messages})
-    file_name = "generated_plots"
-    state["script_path"] = os.path.join(state["output_path"] , file_name + state["programming_language"].value)
-    with open(state["script_path"], "w", encoding="UTF-8") as file:
-        print_color(f"LLM regenerated code: ", Color.HEADER)
-        code: Code = llm_response["structured_response"]
-        state["code"] = code
-        file.write(code.code)
-    state["messages"] = llm_response["messages"]
-    return state
-
-def _clear_output_dir(state: AgentState):
-    """Clears the output directory except for specific files."""
-    files_to_keep = [".gitignore", ".gitkeep", "graph.png", "generate_plots.r", "generate_plots.py"]
-    for file_name in os.listdir(state["output_path"]):
-        if file_name not in files_to_keep:
-            file_path = os.path.join(state["output_path"], file_name)
-            try:
-                if os.path.isfile(file_path):
-                    os.remove(file_path)
-            except Exception as e:
-                print(f"Error deleting file {file_path}: {e}")
+    return generate_and_write_code(state, temp_agent, messages)
 
 def decide_programming_language(state: AgentState):
-    """Decides the programming lnaguage, which should be used for code generation."""
+    """Decides the programming language, which should be used for code generation."""
     programming_language: ProgrammingLanguage = state["programming_language"]
     if programming_language == ProgrammingLanguage.PYTHON:
         return "python"

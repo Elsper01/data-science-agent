@@ -21,7 +21,9 @@ result = agent.invoke(
         "regeneration_attempts": 0,
         "programming_language": enums.ProgrammingLanguage.R,
         "is_refactoring": False,
-        "output_path": "./src/resources/output/"
+        "output_path": "./src/resources/output/",
+        "durations": [],
+        "llm_metadata": [],
     }
 )
 

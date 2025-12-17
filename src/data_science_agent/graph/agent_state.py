@@ -2,7 +2,7 @@ from typing import Any, TypedDict
 from langchain_core.messages import HumanMessage, AIMessage
 
 from data_science_agent.language import import_all_language_dtos
-from data_science_agent.utils import AGENT_LANGUAGE
+from data_science_agent.utils import AGENT_LANGUAGE, DurationMetadata, LLMMetadata
 from data_science_agent.utils.enums import ProgrammingLanguage
 
 Description, Metadata, Code, _, Summary, _ = import_all_language_dtos(AGENT_LANGUAGE)
@@ -13,6 +13,8 @@ class AgentState(TypedDict):
     # General
     output_path: str
     messages: list[HumanMessage, AIMessage]
+    durations: list[DurationMetadata]
+    llm_metadata: list[LLMMetadata]
     # Dataset
     dataset_path: str
     dataset_df: Any  # any because typing of np.dataframe is not easily possible

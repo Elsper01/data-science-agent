@@ -1,14 +1,15 @@
+import inspect
+
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 
+from data_science_agent.dtos.base.responses import CodeBase
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
+from data_science_agent.pipeline.decorator.duration_tracking import track_duration
+from data_science_agent.pipeline.utils import generate_and_write_code
 from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model
 from data_science_agent.utils.enums import LLMModel, ProgrammingLanguage
-from data_science_agent.dtos.base.responses import CodeBase
-
-from data_science_agent.pipeline.utils import generate_and_write_code
-
 from data_science_agent.utils.pipeline import clear_output_dir
 
 prompt: Prompt = Prompt(
@@ -226,6 +227,8 @@ prompt: Prompt = Prompt(
 
 Code = import_language_dto(AGENT_LANGUAGE, CodeBase)
 
+
+@track_duration
 def llm_generate_python_code(state: AgentState) -> AgentState:
     """Generates python code for data visualization."""
     description_user_message, temp_agent = _get_generate_code_agent(state)
@@ -242,7 +245,7 @@ def llm_generate_python_code(state: AgentState) -> AgentState:
     code_user_message = HumanMessage(content=code_user_message)
 
     messages = [description_user_message, code_user_message]
-    return generate_and_write_code(state, temp_agent, messages)
+    return generate_and_write_code(state, temp_agent, messages, inspect.currentframe().f_code.co_name)
 
 
 def _get_generate_code_agent(state: AgentState):
@@ -284,6 +287,7 @@ def _get_generate_code_agent(state: AgentState):
     return description_user_message, temp_agent
 
 
+@track_duration
 def llm_generate_r_code(state: AgentState) -> AgentState:
     """Generates R code for data visualization."""
     description_user_message, temp_agent = _get_generate_code_agent(state)
@@ -302,7 +306,8 @@ def llm_generate_r_code(state: AgentState) -> AgentState:
     code_user_message = HumanMessage(content=code_user_message)
 
     messages = [description_user_message, code_user_message]
-    return generate_and_write_code(state, temp_agent, messages)
+    return generate_and_write_code(state, temp_agent, messages, inspect.currentframe().f_code.co_name)
+
 
 def decide_programming_language(state: AgentState):
     """Decides the programming language, which should be used for code generation."""

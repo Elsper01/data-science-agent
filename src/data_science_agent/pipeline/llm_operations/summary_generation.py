@@ -1,3 +1,5 @@
+import inspect
+
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 
@@ -5,8 +7,10 @@ from data_science_agent.dtos.base.responses import SummaryBase
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt
 from data_science_agent.language import import_language_dto
+from data_science_agent.pipeline.decorator.duration_tracking import track_duration
 from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color
 from data_science_agent.utils.enums import LLMModel, Color
+from data_science_agent.utils.llm_metadata import LLMMetadata
 
 prompt: Prompt = Prompt(
     de={
@@ -56,6 +60,7 @@ prompt: Prompt = Prompt(
 Summary = import_language_dto(AGENT_LANGUAGE, SummaryBase)
 
 
+@track_duration
 def llm_generate_summary(state: AgentState) -> AgentState:
     """Dieser Knoten generiert mittel einem LLM die Zusammenfassung des Datensatzes."""
 
@@ -80,6 +85,10 @@ def llm_generate_summary(state: AgentState) -> AgentState:
     )
 
     llm_response = temp_agent.invoke({"messages": [user_msg]})
+
+    state["llm_metadata"].append(
+        LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
+
     print_color(f"LLM result: ", Color.HEADER)
     summary: Summary = llm_response["structured_response"]
     print_color(f"Dataset Summary: ", Color.OK_GREEN)

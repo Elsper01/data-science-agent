@@ -15,7 +15,23 @@ from data_science_agent.pipeline import (
     llm_judge_code,
     llm_refactor_plots
 )
+from data_science_agent.utils import print_color
+from data_science_agent.utils.enums import Color
 
+
+def __print_statistics(state: AgentState) -> AgentState:
+    """Prints the statistics of the graph."""
+    # TODO: hier auch noch die LLM Kost und Token Statistiken ausgeben
+    print_color("Graph Duration Statistics:", Color.HEADER)
+    for duration in state["durations"]:
+        print_color(f"{duration.method_name}", Color.OK_BLUE)
+        print_color(f"  Duration: {duration.get_total_duration()} seconds", Color.OK_GREEN)
+    print_color("\n\nGraph LLM Cost & Token Statistics:", Color.HEADER)
+    for metadata in state["llm_metadata"]:
+        print_color(f"{metadata.method_name}", Color.OK_BLUE)
+        print_color(f"  Token total: {metadata.token_usage.total_tokens} tokens", Color.OK_GREEN)
+        print_color(f"  Costs total: {metadata.cost_details.total_cost} $", Color.OK_GREEN)
+    return state
 
 def build_graph():
     """Builds the state graph for the data science agent."""
@@ -46,7 +62,7 @@ def build_graph():
         {
             "regenerate_code": "LLM regenerate_code",
             "judge": "LLM judge_plots",
-            "end": END
+            "end": "statistics"
         }
     )
     graph.add_node("LLM regenerate_code", llm_regenerate_code)
@@ -55,4 +71,6 @@ def build_graph():
     graph.add_edge("LLM judge_plots", "LLM refactor_plots")
     graph.add_edge("LLM refactor_plots", "test_generated_code")
     graph.add_edge("LLM regenerate_code", "test_generated_code")
+    graph.add_node("statistics", __print_statistics)
+    graph.add_edge("statistics", END)
     return graph.compile()

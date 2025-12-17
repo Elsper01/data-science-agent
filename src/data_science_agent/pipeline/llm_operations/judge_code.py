@@ -1,10 +1,13 @@
+import inspect
+
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from data_science_agent.dtos.base import JudgeBase
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
-from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color
+from data_science_agent.pipeline.decorator.duration_tracking import track_duration
+from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color, LLMMetadata
 from data_science_agent.utils.enums import LLMModel, Color
 
 prompt: Prompt = Prompt(
@@ -43,6 +46,7 @@ prompt: Prompt = Prompt(
 Judge = import_language_dto(AGENT_LANGUAGE, JudgeBase)
 
 
+@track_duration
 def llm_judge_code(state: AgentState) -> AgentState:
     """Ask the LLM to judge the generated code."""
     system_prompt = prompt.get_prompt(AGENT_LANGUAGE, "judge_system_prompt")
@@ -65,6 +69,9 @@ def llm_judge_code(state: AgentState) -> AgentState:
         print(f"Needs regeneration: {x.needs_regeneration}")
         print(f"Can be deleted: {x.can_be_deleted}")
         print("-----")
+
+    state["llm_metadata"].append(
+        LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
 
     # TODO: step two - we judge the generated plots as well -> das lagern wir direkt in einen evaluate agent aus, der uns alle erzeugten plots bewertet
     return state

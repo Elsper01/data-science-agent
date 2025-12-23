@@ -5,6 +5,7 @@ from data_science_agent.pipeline import (
     load_dataset,
     analyse_dataset,
     load_metadata,
+    analyse_metadata,
     llm_generate_summary,
     llm_generate_python_code,
     llm_generate_r_code,
@@ -21,7 +22,6 @@ from data_science_agent.utils.enums import Color
 
 def __print_statistics(state: AgentState) -> AgentState:
     """Prints the statistics of the graph."""
-    # TODO: hier auch noch die LLM Kost und Token Statistiken ausgeben
     print_color("Graph Duration Statistics:", Color.HEADER)
     for duration in state["durations"]:
         print_color(f"{duration.method_name}", Color.OK_BLUE)
@@ -41,10 +41,11 @@ def build_graph():
     graph.add_edge(START, "load_data")
     graph.add_node("analyse_data", analyse_dataset)
     graph.add_edge("load_data", "analyse_data")
-    graph.add_node("load_metadata", load_metadata)
-    graph.add_edge("analyse_data", "load_metadata")
+    # graph.add_node("load_metadata", load_metadata)
+    graph.add_edge("analyse_data", "analyse_metadata")
+    graph.add_node("analyse_metadata", analyse_metadata)
     graph.add_node("LLM generate_summary", llm_generate_summary)
-    graph.add_edge("load_metadata", "LLM generate_summary")
+    graph.add_edge("analyse_metadata", "LLM generate_summary")
     graph.add_node("LLM generate_python_code", llm_generate_python_code)
     graph.add_node("LLM generate_r_code", llm_generate_r_code)
     graph.add_conditional_edges(

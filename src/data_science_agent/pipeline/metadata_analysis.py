@@ -8,19 +8,19 @@ from data_science_agent.utils import AGENT_LANGUAGE
 
 Metadata = import_language_dto(AGENT_LANGUAGE, base_dto_class=MetadataBase)
 
-RDF        = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+RDF = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 RDF_SCHEMA = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-DC         = Namespace("http://purl.org/dc/terms/")
-DCAT       = Namespace("http://www.w3.org/ns/dcat#")
-DCATDE     = Namespace("http://dcat-ap.de/def/dcatde/")
-ADMS       = Namespace("http://www.w3.org/ns/adms#")
-SPDX       = Namespace("http://spdx.org/rdf/terms#")
-VCARD      = Namespace("http://www.w3.org/2006/vcard/ns#")
-FOAF       = Namespace("http://xmlns.com/foaf/0.1/")
-SKOS       = Namespace("http://www.w3.org/2004/02/skos/core#")
-LOCN       = Namespace("http://www.w3.org/ns/locn#")
-OWL        = Namespace("http://www.w3.org/2002/07/owl#")
-DATAEU     = Namespace("http://data.europa.eu/r5r/")
+DC = Namespace("http://purl.org/dc/terms/")
+DCAT = Namespace("http://www.w3.org/ns/dcat#")
+DCATDE = Namespace("http://dcat-ap.de/def/dcatde/")
+ADMS = Namespace("http://www.w3.org/ns/adms#")
+SPDX = Namespace("http://spdx.org/rdf/terms#")
+VCARD = Namespace("http://www.w3.org/2006/vcard/ns#")
+FOAF = Namespace("http://xmlns.com/foaf/0.1/")
+SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
+LOCN = Namespace("http://www.w3.org/ns/locn#")
+OWL = Namespace("http://www.w3.org/2002/07/owl#")
+DATAEU = Namespace("http://data.europa.eu/r5r/")
 
 excluded_predicates = {
     # --- Generic / structural
@@ -111,6 +111,7 @@ excluded_predicates_uris = {str(p) for p in excluded_predicates}
 
 # Manually remove DC.format
 excluded_predicates_uris.add("http://purl.org/dc/terms/format")
+
 
 @track_duration
 def analyse_metadata(state: AgentState) -> AgentState:

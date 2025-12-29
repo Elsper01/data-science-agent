@@ -30,7 +30,7 @@ This project uses `uv` for dependency management. To set up the project, follow 
     ```bash
     uv run --with jupyter jupyter lab
     ```
-   The prompeted URL and token can be used to access the Jupyter Lab interface in your web browser or added in your IDE as external server.
+   The prompted URL and token can be used to access the Jupyter Lab interface in your web browser or added in your IDE as external server.
 
 ## .env Configuration
 In order to run the Data-Science-Agent, you need to create a `.env` file in the root directory of the project. This file should contain the following environment variables:

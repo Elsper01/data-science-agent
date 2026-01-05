@@ -128,9 +128,4 @@ def analyse_metadata(state: AgentState) -> AgentState:
             metadata.append(Metadata(subject=str(s), predicate=str(p), object=str(o)))
 
     state["metadata"] = metadata
-
-    print("Metadata (filtered):")
-    for x in metadata:
-        print(f"  {x.subject} -- {x.predicate} --> {x.object}")
-
     return state

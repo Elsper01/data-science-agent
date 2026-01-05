@@ -4,3 +4,5 @@ from data_science_agent.dtos.base.responses.judge_base import JudgeBase
 from data_science_agent.dtos.base.responses.judge_verdict_base import JudgeVerdictBase
 from data_science_agent.dtos.base.responses.regeneration_base import RegenerationBase
 from data_science_agent.dtos.base.responses.summary_base import SummaryBase
+from data_science_agent.dtos.base.responses.goal_container_base import GoalContainerBase
+from data_science_agent.dtos.base.responses.goal_base import GoalBase

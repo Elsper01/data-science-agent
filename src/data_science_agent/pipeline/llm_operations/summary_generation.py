@@ -62,7 +62,7 @@ Summary = import_language_dto(AGENT_LANGUAGE, SummaryBase)
 
 @track_duration
 def llm_generate_summary(state: AgentState) -> AgentState:
-    """Dieser Knoten generiert mittel einem LLM die Zusammenfassung des Datensatzes."""
+    """This node generates the dataset summary by using a LLM."""
 
     system_prompt = prompt.get_prompt(
         AGENT_LANGUAGE,

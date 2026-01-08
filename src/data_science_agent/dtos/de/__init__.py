@@ -7,6 +7,8 @@ from data_science_agent.dtos.de.responses import (
     Summary,
     Goal,
     GoalContainer,
+    Visualization,
+    VisualizationContainer,
 )
 from data_science_agent.dtos.de.description import Description
 from data_science_agent.dtos.de.metadata import Metadata

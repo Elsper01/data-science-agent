@@ -6,3 +6,5 @@ from data_science_agent.dtos.en.responses.regeneration import Regeneration
 from data_science_agent.dtos.en.responses.summary import Summary
 from data_science_agent.dtos.en.responses.goal_container import GoalContainer
 from data_science_agent.dtos.en.responses.goal import Goal
+from data_science_agent.dtos.en.responses.visualization import Visualization
+from data_science_agent.dtos.en.responses.visualization_container import VisualizationContainer

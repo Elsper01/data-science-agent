@@ -3,7 +3,7 @@ import inspect
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 
-from data_science_agent.dtos.base.responses import CodeBase
+from data_science_agent.dtos.base.responses.visualization_container_base import VisualizationContainerBase
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
@@ -18,8 +18,7 @@ prompt: Prompt = Prompt(
             """
                 Du bist ein Experte für Data Science, {programming_language}‑Programmierung und Datenvisualisierung.
                 {library_instruction}
-                Deine Hauptaufgabe ist Code zur Berechnung und Visualisierung von Data-Science Analysen eines Datensatzes zu erzeugen.
-                Allgemeine Prinzipien deines Handelns:
+                Deine Hauptaufgabe ist Code zu Generieren, um die Visualierungsziele für den Datensatz zu berechnen und zu visualisieren.:
                 1. Schreibe stets korrekten und ausführungssicheren {programming_language}‑Code.
                 2. Beachte bei der Erstellung oder Bewertung von Visualisierungen die Qualitätskriterien für gute Datenvisualisierung:
                    - Angemessenheit des Diagrammtyps,
@@ -39,18 +38,28 @@ prompt: Prompt = Prompt(
             "Installiere und lade alle benötigten Pakete am Anfang des Skripts (füge install.packages/libraries hinzu).",
         "generate_code_description_user_prompt": \
             """
-                Folgende Daten wurden in einem vorherigen Schritt ermittelt:
+                Du erhältst eine Zusammenfassung des Datensatzes, eine Erklärung aller Spalten und eine Liste von Visualisierungszielen.
+                Deine Aufgabe ist es, basierend darauf Code zu generieren, der eine explorative Datenanalyse (EDA) durchführt und passende Visualisierungen für die Visualisierungsziel erstellt.
+                Es soll für jedes Visualisierungsziel ein separates Skript erstellt werden.
+                All Visualisierungsziele sollen umgesetzt werden.
+                
                 Beschreibung bzw. Zusammenfassung des Datensatzes:
                 '{summary}'
+                
                 Beschreibung der relevanten Spalten:
                 '{columns}'
+                
+                Liste der Visualisierungsziele, welche umgesetzt werden sollen:
+                '{visualization_goals}' 
             """,
         "generate_python_code": \
             """
-                Erzeuge mir basierend auf der vorherigen Zusammenfassung und der Datenstruktur Python-Code,
-                der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
+                Erzeuge mir basierend auf den vorherigen Informationen Python-Code,
+                der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und die Visualierungsziele umsetzt.
+                Es soll pro Visualisierungsziel ein separates Skript erstellt werden.
+                Verwende hierfür die Informationen aus der vorherigen Nachricht.
 
-                Die Daten können mit folgendem Befehl geladen werden:
+                Der Datensatz kann mit folgendem Befehl geladen werden:
                 `df = pd.read_csv("'{dataset_path}'", sep="'{dataset_sep}'")`
 
                 Vorgaben für den Code:
@@ -58,12 +67,8 @@ prompt: Prompt = Prompt(
                 - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
                 - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
                   `{output_path}<plot_name>.png`
-                - Wähle Diagrammtypen entsprechend der Datenbedeutung:
-                  - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
-                  - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
-                  - Numerische Variablen → Histogramme, Boxplots und Scatterplots für Zusammenhänge.
-                  - Kategorische Variablen → Balkendiagramme der Häufigkeitsverteilung (ggf. Top 10 für lange Listen).
-                - Führe auch kurze statistische Analysen durch, gegebenen falls mit Visualisierung:
+                - Wähle Diagrammtypen basierend auf die Hinweise im Visualisierungsziel. 
+                - Führe auch kurze statistische Analysen durch, wenn diese benötigt werden um das Visualisierungsziel zu erreichen. Beispiele für kurze, sinnvolle Analysen:
                   - Anteil fehlender Werte je Spalte,
                   - Korrelationen numerischer Variablen,
                   - Übersichtstabellen zu zentralen Kennwerten (Mittelwert, Standardabweichung etc.).
@@ -78,27 +83,24 @@ prompt: Prompt = Prompt(
                 - Für jede Visualisierung soll eine separate Methode erstellt werden, welche am Ende des Skripte mit try except ausgeführt wird. Die Fehler Meldung soll ausgegeben werden, aber die Ausführung des restlichen Codes soll nicht abgebrochen werden.
 
                 Zum besseren Verständnis:
-                Das ist das Ergebnis von `df.head(10)`:
+                Das ist das Ergebnis von `df.head(10)` auf den Datensatz:
                 '{df_head_markdown}'
             """,
         "generate_r_code": \
             """
-                Erzeuge mir basierend ein R-Skript, das eine explorative Datenanalyse (EDA) des Datensatzes durchführt und passende Visualisierungen erstellt.
+                Erzeuge mir ein R-Skript, das eine explorative Datenanalyse (EDA) des Datensatzes durchführt und die Visualisierungsziele umsetzt.
+                Verwende hierfür die Informationen aus der vorherigen Nachricht.
 
-                Die Daten können aus folgender CSV geladen werden:
-                - Pfad zur CSV Datei: `'{dataset_path}'`
+                Der Datensatz kann aus der folgenden Datei geladen werden:
+                - Pfad zur Datei: `'{dataset_path}'`
                 - Trennzeichen: `'{dataset_sep}'`
 
                 Vorgaben für den Code:
-                - Der Code soll modular, gut kommentiert und direkt ausführbar sein, ohne syntaktische Fehler.
+                - Der Code soll modular und direkt ausführbar sein, ohne syntaktische Fehler.
                 - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
                   `{output_path}<plot_name>.png`
-                - Wähle Diagrammtypen entsprechend der Datenbedeutung. Dies sind Hinweise, überlege selber ob die Hinweise für die entsprechenden Spalten passend sind:
-                  - Geographische Variablen → räumliche Verteilung (z.B. Karte mit Markierung der Punkte).
-                  - Zeitliche Variablen → Untersuchen ob sich ein zeitlicher Verlauf einer anderen Variable abbilden lässt.
-                  - Numerische Variablen → Histogramme, Boxplots und Scatterplots für Zusammenhänge.
-                  - Kategorische Variablen → Balkendiagramme der Häufigkeitsverteilung (ggf. Top 10 für lange Listen).
-                - Führe auch kurze statistische Analysen durch, falls sie sich anbieten und dsinnvoll sind. Gegebenen falls mit Visualisierung:
+                - Wähle Diagrammtypen entsprechend der Hinweise im Visualisierungsziel.
+                - Führe auch kurze statistische Analysen durch, falls diese benötigt werden im das Visualisierungsziel zu erreichen. Beispiele für kurze, sinnvolle Analysen:
                   - Anteil fehlender Werte je Spalte,
                   - Korrelationen numerischer Variablen,
                   - Übersichtstabellen zu zentralen Kennwerten (Mittelwert, Standardabweichung etc.).
@@ -113,15 +115,10 @@ prompt: Prompt = Prompt(
                 Zum besseren Verständnis:  
                 Das ist das Ergebnis von `df.head(10)` auf den Datensatz:
                 '{df_head_markdown}'
-
-                Das ist das Ergebnis der vorherigen Analyse der einzelnen Spalten, beziehe diese Informationen in der Entscheidung mit ein, welche Diagramme sinnvoll sind:
-                '{summary_columns}'
-
-                Das ist eine Beschreibung des Datensatzes:
-                '{summary}'
             """,
     },
-    en={
+    en={ # TODO: wir müssen, encoding und seperator direkt beim load_data in den agentstate packen
+         # TODO: die deutschen prompts wurden alle angepasst, die englischen müssen noch angepasst werden
         "generate_python_code": \
             """
                 Based on the previous summary and the data structure, generate Python code
@@ -225,12 +222,13 @@ prompt: Prompt = Prompt(
     }
 )
 
-Code = import_language_dto(AGENT_LANGUAGE, CodeBase)
+VisualizationContainerBase = import_language_dto(AGENT_LANGUAGE, VisualizationContainerBase)
 
 
 @track_duration
 def llm_generate_python_code(state: AgentState) -> AgentState:
     """Generates python code for data visualization."""
+    # TODO: bis jetzt wurde nur der r code funktion angepasst, diese muss noch nachgezogen werden
     description_user_message, temp_agent = _get_generate_code_agent(state)
 
     code_user_message = prompt.get_prompt(
@@ -270,7 +268,7 @@ def _get_generate_code_agent(state: AgentState):
 
     temp_agent = create_agent(
         model=get_llm_model(LLMModel.GPT_5),
-        response_format=Code,
+        response_format=VisualizationContainerBase,
         system_prompt=system_prompt
     )
 
@@ -278,7 +276,8 @@ def _get_generate_code_agent(state: AgentState):
         AGENT_LANGUAGE,
         "generate_code_description_user_prompt",
         summary=str(getattr(state.get("summary", None), "summary", "")),
-        columns=str(getattr(state.get("summary", None), "columns", ""))
+        columns=str(getattr(state.get("summary", None), "columns", "")),
+        visualization_goals=str(getattr(state.get("goals", None), "goals", ""))
     )
     description_user_message = HumanMessage(content=description_user_message)
 
@@ -298,8 +297,6 @@ def llm_generate_r_code(state: AgentState) -> AgentState:
         dataset_path=state["dataset_path"],
         dataset_sep=";",
         df_head_markdown=str(state["dataset_df"].head(10).to_markdown()),
-        summary_columns=str(getattr(state.get("summary", None), "columns", "")),
-        summary=str(getattr(state.get("summary", None), "summary", "")),
         output_path=state["output_path"]
     )
 

@@ -58,7 +58,7 @@ def build_graph():
         })
     graph.add_node("test_generated_code", test_generated_code)
     graph.add_edge("LLM generate_python_code", "test_generated_code")
-    graph.add_edge("LLM generate_r_code", "test_generated_code")
+    graph.add_edge("LLM generate_r_code", "statistics") # test_generated_code
     graph.add_conditional_edges(
         "test_generated_code",
         decide_regenerate_code,

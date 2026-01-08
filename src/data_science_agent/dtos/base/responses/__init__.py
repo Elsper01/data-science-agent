@@ -6,3 +6,5 @@ from data_science_agent.dtos.base.responses.regeneration_base import Regeneratio
 from data_science_agent.dtos.base.responses.summary_base import SummaryBase
 from data_science_agent.dtos.base.responses.goal_container_base import GoalContainerBase
 from data_science_agent.dtos.base.responses.goal_base import GoalBase
+from data_science_agent.dtos.base.responses.visualization_base import VisualizationBase
+from data_science_agent.dtos.base.responses.visualization_container_base import VisualizationContainerBase

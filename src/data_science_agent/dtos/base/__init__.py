@@ -7,6 +7,8 @@ from data_science_agent.dtos.base.responses import (
     SummaryBase,
     GoalBase,
     GoalContainerBase,
+    VisualizationBase,
+    VisualizationContainerBase,
 )
 from data_science_agent.dtos.base.description_base import DescriptionBase
 from data_science_agent.dtos.base.metadata_base import MetadataBase

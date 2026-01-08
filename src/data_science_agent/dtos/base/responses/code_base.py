@@ -6,6 +6,8 @@ class CodeBase(BaseModel):
 
     explanation: str = Field(...)
     code: str = Field(...)
+    std_out: str = Field(...)
+    std_err: str = Field(...)
 
     # allow population by field name or alias and validate on every assignment
     class Config:

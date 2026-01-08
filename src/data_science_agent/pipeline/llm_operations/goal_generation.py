@@ -105,8 +105,6 @@ def llm_generate_goals(state: AgentState) -> AgentState:
         print_color(f"- Goal Question: {goal.question}", Color.OK_BLUE)
         print_color(f"- Visualization: {goal.visualization}", Color.OK_BLUE)
         print_color(f"- Rationale: {goal.rationale}", Color.OK_BLUE)
-    print_color(f"\nColumn Descriptions:", Color.OK_BLUE)
-
     state["goals"] = goals
 
     return state

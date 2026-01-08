@@ -7,7 +7,7 @@ import os
 
 datasets = os.listdir("./src/resources/data/")
 
-for dataset in datasets:
+for dataset in datasets[:1]:
     start = time()
 
     agent = build_graph()

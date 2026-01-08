@@ -69,7 +69,7 @@ def llm_generate_summary(state: AgentState) -> AgentState:
         "summary_system_prompt",
         column_names=str(state.get("column_names", [])),
         descriptions=str(state.get("descriptions", [])),
-        metadata=str(state.get("metadata", [])[:30])
+        metadata=str(state.get("metadata", []))
     )
 
     user_content = prompt.get_prompt(

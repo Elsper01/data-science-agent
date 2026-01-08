@@ -1,6 +1,9 @@
 import subprocess
 import sys
+import os
+import tempfile
 
+from data_science_agent.dtos.base import VisualizationBase
 from data_science_agent.graph import AgentState
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
 from data_science_agent.utils import print_color
@@ -11,25 +14,55 @@ from data_science_agent.utils.enums import ProgrammingLanguage, Color
 def test_generated_code(state: AgentState) -> AgentState:
     """Test the generated code by executing it and capturing its output and errors."""
     language: ProgrammingLanguage = state["programming_language"]
-    script_path = state["script_path"]
-    if language is ProgrammingLanguage.R:
-        cmd = ["Rscript", script_path]
-    else:  # default to python
-        cmd = [sys.executable, script_path]
 
-    generated_code_test_result = subprocess.run(
-        cmd, capture_output=True, text=True
-    )
-    # we save both stdout and stderr to see what the LLM produced and to determine if code must be regenerated
-    if generated_code_test_result.stdout:
-        state["code_test_stdout"] = generated_code_test_result.stdout
-    else:
-        state["code_test_stdout"] = "No output from generated code."
-    if generated_code_test_result.stderr:
-        state["code_test_stderr"] = generated_code_test_result.stderr
-    else:
-        state["code_test_stderr"] = "No errors from generated code."
-    print_color(f"Testing generated code ({language.value}): ", Color.HEADER)
-    print("output: ", generated_code_test_result.stdout)
-    print("error: ", generated_code_test_result.stderr)
+    # Projekt-Root setzen (wo die src/resources/ Ordner liegen)
+    project_root = state.get("project_root", os.getcwd())
+    working_dir = project_root  # Wichtig für relative Pfade im R-Code
+
+    for vis in state["visualizations"].visualizations:
+        vis: VisualizationBase
+        code = vis.code.code
+
+        if language is ProgrammingLanguage.R:
+            with tempfile.NamedTemporaryFile(
+                    mode='w',
+                    suffix='.R',
+                    delete=False,
+                    encoding='utf-8'
+            ) as f:
+                f.write(code)
+                temp_file = f.name
+
+            try:
+                cmd = ["Rscript", temp_file]
+                result = subprocess.run(
+                    cmd,
+                    capture_output=True,
+                    text=True,
+                    cwd=working_dir  # Projekt-Root, nicht output_path!
+                )
+            finally:
+                if os.path.exists(temp_file):
+                    os.unlink(temp_file)
+        else:
+            cmd = [sys.executable, "-c", code]
+            result = subprocess.run(
+                cmd,
+                capture_output=True,
+                text=True,
+                cwd=working_dir
+            )
+
+        if result.stdout:
+            vis.code.std_out = result.stdout
+        else:
+            vis.code.std_out = "No output from generated code."
+        if result.stderr:
+            vis.code.std_err = result.stderr
+        else:
+            vis.code.std_err = "No errors from generated code."
+        print_color(f"Testing generated code ({language.value}) for vis#{vis.goal.index}: ", Color.HEADER)
+        print("output: ", result.stdout)
+        print("error: ", result.stderr)
+
     return state

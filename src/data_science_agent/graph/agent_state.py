@@ -26,10 +26,6 @@ class AgentState(TypedDict):
     descriptions: list[Description]
     summary: Summary
     # Code Generation and Testing
-    code_test_stdout: str
-    code_test_stderr: str
-    code: Code
-    script_path: str
     regeneration_attempts: int
     programming_language: ProgrammingLanguage
     is_refactoring: bool

@@ -12,9 +12,14 @@ from data_science_agent.utils import get_llm_model, AGENT_LANGUAGE
 from data_science_agent.utils.enums import LLMModel
 from data_science_agent.utils.pipeline import clear_output_dir
 
-# TODO: we dont we have any system prompt here?
+# TODO: we dont we have any system prompt here? -> because we use the messages from before so its hard
 prompt = Prompt(
     de={
+        "system_prompt":
+            """
+                Du bist ein erfahrener Datenanalyst, der Experte darin ist existierenden Code zu verbessern, refactoren und Fehler zu beheben.
+                Du bekommst als Input ein Visualiesierungsziel, das mit dem Code umgesetzt werden soll, sowie den Code selbst und die Fehlermeldungen, die bei der Ausführung des Codes entstanden sind.
+            """,
         "regenerate_code_user_prompt":
             """
                 Der vorherige Code hatte folgende Fehler:

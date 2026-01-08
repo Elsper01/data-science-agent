@@ -31,6 +31,7 @@ prompt: Prompt = Prompt(
                 3. Du darfst keinerlei vertrauliche oder urheberrechtlich geschützte Daten erzeugen oder wiedergeben.
                 4. Alle Antworten sollen UTF‑8‑kompatiblen {programming_language}‑Code enthalten.
                 Wenn du Code generierst, soll dieser sofort lauffähig, sauber strukturiert, modular und kommentiert sein.
+                5. PRO VISUALISIERUNGSZIEL soll EIN SEPARATES SKRIPT erstellt werden und PRO SKRIPT MAXIMAL EINE VISUALISIERUNG umgesetzt werden.
             """,
         "generate_code_python_lib_instruction": \
             "Nutze ausschließlich die folgenden Bibliotheken: pandas, numpy, matplotlib.pyplot, seaborn, geopandas, basemap.",
@@ -39,9 +40,9 @@ prompt: Prompt = Prompt(
         "generate_code_description_user_prompt": \
             """
                 Du erhältst eine Zusammenfassung des Datensatzes, eine Erklärung aller Spalten und eine Liste von Visualisierungszielen.
-                Deine Aufgabe ist es, basierend darauf Code zu generieren, der eine explorative Datenanalyse (EDA) durchführt und passende Visualisierungen für die Visualisierungsziel erstellt.
+                Deine Aufgabe ist es, basierend darauf Code zu generieren, der eine explorative Datenanalyse (EDA) durchführt und jeweils EINE passende Visualisierungen PRO Visualisierungsziel erstellt.
                 Es soll für jedes Visualisierungsziel ein separates Skript erstellt werden.
-                All Visualisierungsziele sollen umgesetzt werden.
+                ALLE Visualisierungsziele sollen umgesetzt werden.
                 
                 Beschreibung bzw. Zusammenfassung des Datensatzes:
                 '{summary}'

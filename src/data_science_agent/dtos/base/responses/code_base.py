@@ -1,13 +1,14 @@
+from typing import Optional
+
 from pydantic import BaseModel, Field
 
 
 class CodeBase(BaseModel):
     """Base DTO for code responses (natural language neutral)."""
 
-    explanation: str = Field(...)
     code: str = Field(...)
-    std_out: str = Field(...)
-    std_err: str = Field(...)
+    std_out: Optional[str] = Field(...)
+    std_err: Optional[str] = Field(...)
 
     # allow population by field name or alias and validate on every assignment
     class Config:

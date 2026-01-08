@@ -13,8 +13,6 @@ def generate_and_write_code(state: AgentState, temp_agent, messages, calling_met
     llm_response = temp_agent.invoke({"messages": messages})
     file_name = "generated_plots"
 
-    state["script_path"] = os.path.join(state["output_path"], file_name + "." + state["programming_language"].value)
-
     # with open(state["script_path"], "w", encoding="UTF-8") as file:
     #     print_color(f"LLM regenerated code: ", Color.HEADER)
     #     visualization_container:

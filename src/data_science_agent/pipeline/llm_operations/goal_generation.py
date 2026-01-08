@@ -41,7 +41,7 @@ prompt: Prompt = Prompt(
     de={
         "system_prompt": \
             """
-                Du bist ein erfahrener Datenanalyst, der anhand einer Datenzusammenfassung und einer festgelegten Persona eine vorgegebene Anzahl an aussagekräftigen ZIELEN generieren kann. DIE EMPFOHLENEN VISUALISIERUNGEN MÜSSEN DEN BESTEN PRAKTIKEN FÜR VISUALISIERUNGEN FOLGEN (z.B. Balkendiagramme statt Kreisdiagramme zur Vergleich von Mengen) UND SINNVOLL SEIN (z.B. Längen- und Breitengrade nur auf Karten darstellen, wo es angemessen ist). Sie müssen außerdem auf die angegebene Persona zugeschnitten sein. Jedes Ziel muss eine Frage, eine Visualisierung (DIE VISUALISIERUNG MUSS DIE EXAKTEN SPALTENFELDER AUS DER ZUSAMMENFASSUNG NENNEN) und eine Begründung enthalten (RECHTFERTIGUNG, WARUM GENAU DIESE DATENFELDER VERWENDET WERDEN UND WAS DURCH DIE VISUALISIERUNG GELERNT WIRD). Jedes Ziel MUSST die exakten Felder aus der obigen Datensummary erwähnen.
+                Du bist ein erfahrener Datenanalyst, der anhand einer Datenzusammenfassung eine vorgegebene Anzahl an aussagekräftigen ZIELEN generieren kann. DIE EMPFOHLENEN VISUALISIERUNGEN MÜSSEN DEN BESTEN PRAKTIKEN FÜR VISUALISIERUNGEN FOLGEN (z.B. Balkendiagramme statt Kreisdiagramme zur Vergleich von Mengen) UND SINNVOLL SEIN (z.B. Längen- und Breitengrade nur auf Karten darstellen, wo es angemessen ist). Die Ziel Person ist eine Open-Data Portal Nutzer, welche einen ersten Einblick in die Daten haben möchte, um rauszufinden, ob das der Datensatz ist, nach dem er sucht. Jedes Ziel muss eine Frage, eine Visualisierung (DIE VISUALISIERUNG MUSS DIE EXAKTEN SPALTENFELDER AUS DER ZUSAMMENFASSUNG NENNEN) und eine Begründung enthalten (RECHTFERTIGUNG, WARUM GENAU DIESE DATENFELDER VERWENDET WERDEN UND WAS DURCH DIE VISUALISIERUNG GELERNT WIRD). Jedes Ziel MUSST die exakten Felder aus der obigen Datensummary erwähnen.
             """,
         "user_prompt": \
             """
@@ -52,7 +52,7 @@ prompt: Prompt = Prompt(
     en={
         "system_prompt": \
             """
-                You are a an experienced data analyst who can generate a given number of insightful GOALS about data, when given a summary of the data, and a specified persona. The VISUALIZATIONS YOU RECOMMEND MUST FOLLOW VISUALIZATION BEST PRACTICES (e.g., must use bar charts instead of pie charts for comparing quantities) AND BE MEANINGFUL (e.g., plot longitude and latitude on maps where appropriate). They must also be relevant to the specified persona. Each goal must include a question, a visualization (THE VISUALIZATION MUST REFERENCE THE EXACT COLUMN FIELDS FROM THE SUMMARY), and a rationale (JUSTIFICATION FOR WHICH dataset FIELDS ARE USED and what we will learn from the visualization). Each goal MUST mention the exact fields from the dataset summary above
+                You are an experienced data analyst who can generate a specified number of meaningful goals based on a data summary. THE RECOMMENDED VISUALIZATIONS MUST FOLLOW BEST PRACTICES FOR VISUALIZATIONS (e.g. bar charts instead of pie charts for comparing quantities) AND BE MEANINGFUL (e.g. latitude and longitude only displayed on maps where appropriate). The target person is an open data portal user who wants to get a first insight into the data to find out whether this is the dataset they are looking for. Each goal must contain a question, a visualization (THE VISUALIZATION MUST NAME THE EXACT COLUMN FIELDS FROM THE SUMMARY) and a rationale (JUSTIFICATION WHY THESE SPECIFIC DATA FIELDS ARE USED AND WHAT IS LEARNED THROUGH THE VISUALIZATION). EACH GOAL MUST MENTION THE EXACT FIELDS FROM THE DATA SUMMARY ABOVE.
             """,
         "user_prompt": \
             """
@@ -81,7 +81,7 @@ def llm_generate_goals(state: AgentState) -> AgentState:
     user_prompt = prompt.get_prompt(
         AGENT_LANGUAGE,
         "user_prompt",
-        n=10,
+        n=1,
         summary=state["summary"].summary
     )
     user_msg = HumanMessage(content=user_prompt)

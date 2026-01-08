@@ -10,7 +10,7 @@ IMPORT_BASE_PATH = "data_science_agent.dtos"
 
 def import_all_language_dtos(language: Language):
     """Imports all language specific DTO's."""
-    code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module = __get_all_dto_paths(
+    code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module, goal_container_module = __get_all_dto_paths(
         language)
 
     Description = getattr(description_module, "Description")
@@ -19,12 +19,13 @@ def import_all_language_dtos(language: Language):
     Regeneration = getattr(regeneration_module, "Regeneration")
     Summary = getattr(summary_module, "Summary")
     Judge = getattr(judge_module, "Judge")
+    GoalContainer = getattr(goal_container_module, "GoalContainer")
 
-    return Description, Metadata, Code, Regeneration, Summary, Judge
+    return Description, Metadata, Code, Regeneration, Summary, Judge, GoalContainer
 
 
 def __get_all_dto_paths(language: Language) -> tuple[
-    ModuleType, ModuleType, ModuleType, ModuleType, ModuleType, ModuleType]:
+    ModuleType, ModuleType, ModuleType, ModuleType, ModuleType, ModuleType, ModuleType]:
     """Gets all module paths for a specific language DTO."""
     code_module = importlib.import_module(f"dtos.{language}.responses.code")
     regeneration_module = importlib.import_module(f"dtos.{language}.responses.regeneration")
@@ -32,12 +33,13 @@ def __get_all_dto_paths(language: Language) -> tuple[
     judge_module = importlib.import_module(f"dtos.{language}.responses.judge")
     description_module = importlib.import_module(f"dtos.{language}.description")
     metadata_module = importlib.import_module(f"dtos.{language}.metadata")
-    return code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module
+    goal_container_module = importlib.import_module(f"dtos.{language}.responses.goal_container")
+    return code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module, goal_container_module
 
 
 def import_language_dto(language: Language, base_dto_class: BaseModel) -> BaseModel:
     """Imports a specific language DTO."""
-    code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module = __get_all_dto_paths(
+    code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module, goal_container_module = __get_all_dto_paths(
         language)
     if base_dto_class.__name__ == "CodeBase":
         return getattr(code_module, "Code")
@@ -51,5 +53,7 @@ def import_language_dto(language: Language, base_dto_class: BaseModel) -> BaseMo
         return getattr(description_module, "Description")
     elif base_dto_class.__name__ == "MetadataBase":
         return getattr(metadata_module, "Metadata")
+    elif base_dto_class.__name__ == "GoalContainerBase":
+        return getattr(goal_container_module, "GoalContainer")
     else:
         raise ValueError(f"Requested DTO {base_dto_class.__name__} not found for language {language}.")

@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Any
 
 from pydantic import Field
 
@@ -13,4 +13,4 @@ class Code(CodeBase):
     std_out: Optional[str] = Field(..., description="Output that was printed while executing the code.")
     needs_regeneration: Optional[bool] = Field(..., description="Indicates whether the code needs to be regenerated based on the test results.")
     regeneration_attempts: Optional[int] = Field(..., description="The number of previous attempts to regenerate the code.")
-    judge_result: Optional[JudgeVerdict] = Field(..., description="The verdict given by the LLM after evaluating the code.")
+    judge_result: Optional[Any] = Field(..., description="The verdict given by the LLM after evaluating the code.")

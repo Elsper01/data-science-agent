@@ -14,7 +14,7 @@ def get_llm_model(model: LLMModel) -> ChatOpenAI:
         base_url=BASE_URL,
         temperature=0,  # for less hallucination
         max_tokens=50000,
-        timeout=10, # TODO: reset to 60 seconds after testing
+        timeout=60, # TODO: reset to 60 seconds after testing
     )
     return llm
 

@@ -79,7 +79,7 @@ def llm_generate_summary(state: AgentState) -> AgentState:
     user_msg = HumanMessage(content=user_content)
 
     temp_agent = create_agent(
-        model=get_llm_model(LLMModel.GPT_5),
+        model=get_llm_model(LLMModel.MISTRAL),
         response_format=Summary,
         system_prompt=system_prompt
     )

@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Any
 
 from pydantic import Field
 from data_science_agent.dtos.base.responses.code_base import CodeBase
@@ -12,4 +12,4 @@ class Code(CodeBase):
     std_out: Optional[str] = Field(..., description="Die Ausgabe, die bei der Ausführung des Codes ausgegeben wurde.")
     needs_regeneration: Optional[bool] = Field(..., description="Gibt an, ob der Code basierend auf den Testergebnissen neu generiert werden muss.")
     regeneration_attempts: Optional[int] = Field(..., description="Die Anzahl der bisherigen Versuche, den Code neu zu generieren.")
-    judge_result: Optional[JudgeVerdict] = Field(..., description="Das Urteil des LLM über die Qualität des generierten Codes.")
+    judge_result: Optional[Any] = Field(..., description="Das Urteil des LLM über die Qualität des generierten Codes.")

@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Any
 
 from pydantic import BaseModel, Field
 
@@ -13,7 +13,7 @@ class CodeBase(BaseModel):
     std_err: Optional[str] = Field(...)
     needs_regeneration: Optional[bool] = Field(...)
     regeneration_attempts: Optional[int] = Field(...)
-    judge_result: Optional[JudgeVerdictBase] = Field(...)
+    judge_result: Optional[Any] = Field(...)
 
     # allow population by field name or alias and validate on every assignment
     class Config:

@@ -14,7 +14,7 @@ from data_science_agent.pipeline import (
     decide_regenerate_code,
     llm_regenerate_code,
     llm_judge_code,
-    llm_refactor_plots,
+    llm_refactor_visualizations,
     llm_generate_goals,
 )
 from data_science_agent.utils import print_color
@@ -70,9 +70,9 @@ def build_graph():
     )
     graph.add_node("LLM regenerate_code", llm_regenerate_code)
     graph.add_node("LLM judge_plots", llm_judge_code)
-    graph.add_node("LLM refactor_plots", llm_refactor_plots)
-    graph.add_edge("LLM judge_plots", "LLM refactor_plots")
-    graph.add_edge("LLM refactor_plots", "test_generated_code")
+    graph.add_node("LLM refactor_visualizations", llm_refactor_visualizations)
+    graph.add_edge("LLM judge_plots", "LLM refactor_visualizations")
+    graph.add_edge("LLM refactor_visualizations", "test_generated_code")
     graph.add_edge("LLM regenerate_code", "test_generated_code")
     graph.add_node("statistics", __print_statistics)
     graph.add_edge("statistics", END)

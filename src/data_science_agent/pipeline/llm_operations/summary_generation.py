@@ -3,7 +3,7 @@ import inspect
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 
-from data_science_agent.dtos.base.responses import SummaryBase
+from data_science_agent.dtos.base.responses.summary_base import SummaryBase
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt
 from data_science_agent.language import import_language_dto

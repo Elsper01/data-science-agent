@@ -3,7 +3,7 @@ import inspect
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 
-from data_science_agent.dtos.base.responses import GoalContainerBase
+from data_science_agent.dtos.base.responses.goal_container_base import GoalContainerBase
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt
 from data_science_agent.language import import_language_dto
@@ -62,7 +62,7 @@ prompt: Prompt = Prompt(
     }
 )
 
-GoalContainerBase = import_language_dto(AGENT_LANGUAGE, GoalContainerBase)
+GoalContainer = import_language_dto(AGENT_LANGUAGE, GoalContainerBase)
 
 
 @track_duration
@@ -88,7 +88,7 @@ def llm_generate_goals(state: AgentState) -> AgentState:
 
     temp_agent = create_agent(
         model=get_llm_model(LLMModel.GPT_5),
-        response_format=GoalContainerBase,
+        response_format=GoalContainer,
         system_prompt=system_prompt
     )
 
@@ -98,7 +98,7 @@ def llm_generate_goals(state: AgentState) -> AgentState:
         LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
 
     print_color(f"LLM result: ", Color.HEADER)
-    goals: GoalContainerBase = llm_response["structured_response"]
+    goals: GoalContainer = llm_response["structured_response"]
     print_color(f"Dataset Summary: ", Color.OK_GREEN)
     for goal in goals.goals:
         print_color(f"Goal Nr. {goal.index}", Color.OK_GREEN)

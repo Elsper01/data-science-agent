@@ -1,41 +1,41 @@
 import inspect
 
 from langchain.agents import create_agent
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, SystemMessage
 
-from data_science_agent.dtos.base import CodeBase
+from data_science_agent.dtos.base.responses.code_base import CodeBase
+from data_science_agent.dtos.base.responses.visualization_base import VisualizationBase
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
-from data_science_agent.pipeline.utils import generate_and_write_code
-from data_science_agent.utils import get_llm_model, AGENT_LANGUAGE
-from data_science_agent.utils.enums import LLMModel
+from data_science_agent.utils import get_llm_model, AGENT_LANGUAGE, print_color, MAX_REGENERATION_ATTEMPTS, LLMMetadata
+from data_science_agent.utils.enums import LLMModel, Color
 from data_science_agent.utils.pipeline import clear_output_dir
 
-# TODO: we dont we have any system prompt here? -> because we use the messages from before so its hard
 prompt = Prompt(
     de={
         "system_prompt":
             """
                 Du bist ein erfahrener Datenanalyst, der Experte darin ist existierenden Code zu verbessern, refactoren und Fehler zu beheben.
-                Du bekommst als Input ein Visualiesierungsziel, das mit dem Code umgesetzt werden soll, sowie den Code selbst und die Fehlermeldungen, die bei der Ausführung des Codes entstanden sind.
+                Du bekommst als Input ein Visualisierungsziel, das mit dem Code umgesetzt werden soll, sowie den Code selbst und die Fehlermeldungen, die bei der Ausführung des Codes entstanden sind.
             """,
-        "regenerate_code_user_prompt":
+        "user_prompt":
             """
                 Der vorherige Code hatte folgende Fehler:
                 stdout:
                 '{test_stdout}'
                 stderr:
                 '{test_stderr}'
+                
                 Bitte generiere den Code erneut und behebe die oben genannten Fehler.
-                Das ist die Beschreibung des Codes:
-                '{code_explanation}'
                 Das ist der vorherige Code:
                 '{code}'
+                Das ist das Visualisierungsziel, das mit dem Code umgesetzt werden soll:
+                '{visualization_goal}'
             """,
     },
-    en={
-        "regenerate_code_user_prompt":
+    en={ # TODO: add english system prompt and adjust the user prompt
+        "user_prompt":
             """
                 The previous code produced the following errors:
                 stdout:
@@ -44,39 +44,75 @@ prompt = Prompt(
                 '{test_stderr}'
 
                 Please regenerate the code and fix the errors above.
-                This is the description of the code:
-                '{code_explanation}'
                 This is the previous code:
                 '{code}'
+                This is the visualization goal that the code should achieve:
+                '{visualization_goal}'
             """,
     }
 )
 
 Code = import_language_dto(AGENT_LANGUAGE, CodeBase)
-
+Visualization = import_language_dto(AGENT_LANGUAGE, VisualizationBase)
 
 @track_duration
 def llm_regenerate_code(state: AgentState) -> AgentState:
-    """Regenerates code using an LLM based on previous test results."""
-    state["messages"].append(
-        HumanMessage(
-            content=prompt.get_prompt(
-                AGENT_LANGUAGE,
-                "regenerate_code_user_prompt",
-                test_stdout=state.get("code_test_stdout", ""),
-                test_stderr=state.get("code_test_stderr", ""),
-                code_explanation=getattr(state.get("code"), "explanation", ""),
-                code=getattr(state.get("code"), "code", "")
-            )
-        )
-    )
+    """Regenerates code using an LLM based on previous test results for each visualization."""
 
     # clean output directory before regenerating plots
     clear_output_dir(state["output_path"])
 
+    # increment global regeneration attempt counter
     state["regeneration_attempts"] += 1
-    temp_agent = create_agent(
-        model=get_llm_model(LLMModel.GPT_5),
-        response_format=Code
-    )
-    return generate_and_write_code(state, temp_agent, state["messages"], inspect.currentframe().f_code.co_name)
+
+    # we iterate over all visualizations and regenerate code for those that need it
+    for vis in state["visualizations"].visualizations:
+        vis: Visualization
+        # check the current number of regeneration attempts for this visualization, default is None so we set it to 0
+        current_attempts = vis.code.regeneration_attempts
+        if current_attempts is None:
+            current_attempts = 0
+        # if the code needs regeneration, and we haven't exceeded the max attempts, regenerate
+        if vis.code.needs_regeneration and current_attempts < MAX_REGENERATION_ATTEMPTS:
+            vis.code.regeneration_attempts = current_attempts + 1
+
+            print_color(f"Regenerating code for vis#{vis.goal.index}, attempt {current_attempts}", Color.WARNING)
+
+            # TODO: eigtl kann state["messages"] gelöscht werden, da wir ja jedes Mal einen neuen Agenten erstellen
+            messages = [
+                SystemMessage(
+                    content=prompt.get_prompt(
+                        AGENT_LANGUAGE,
+                        "system_prompt"
+                    )
+                ),
+                HumanMessage(
+                    content=prompt.get_prompt(
+                        AGENT_LANGUAGE,
+                        "user_prompt",
+                        test_stdout=vis.code.std_out or "",
+                        test_stderr=vis.code.std_err or "",
+                        code=vis.code.code or "",
+                        visualization_goal=vis.goal
+                    )
+                )
+            ]
+
+            temp_agent = create_agent(
+                model=get_llm_model(LLMModel.GPT_5),
+                response_format=Code
+            )
+
+            llm_response = temp_agent.invoke({"messages": messages})
+
+            # only update code.code, other fields remain
+            regenerated_code: Code = llm_response["structured_response"]
+
+            vis.code.code = regenerated_code.code
+
+            state["llm_metadata"].append(
+                LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
+
+            vis.code.needs_regeneration = False # TODO: für was wird das verwendet? kann das gelöscht werden?
+
+    return state

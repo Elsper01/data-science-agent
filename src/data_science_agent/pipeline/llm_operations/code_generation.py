@@ -7,9 +7,8 @@ from data_science_agent.dtos.base.responses.visualization_container_base import 
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
-from data_science_agent.pipeline.utils import generate_and_write_code
-from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model
-from data_science_agent.utils.enums import LLMModel, ProgrammingLanguage
+from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, LLMMetadata, print_color
+from data_science_agent.utils.enums import LLMModel, ProgrammingLanguage, Color
 from data_science_agent.utils.pipeline import clear_output_dir
 
 prompt: Prompt = Prompt(
@@ -118,8 +117,8 @@ prompt: Prompt = Prompt(
                 '{df_head_markdown}'
             """,
     },
-    en={ # TODO: wir müssen, encoding und seperator direkt beim load_data in den agentstate packen
-         # TODO: die deutschen prompts wurden alle angepasst, die englischen müssen noch angepasst werden
+    en={  # TODO: wir müssen, encoding und seperator direkt beim load_data in den agentstate packen
+        # TODO: die deutschen prompts wurden alle angepasst, die englischen müssen noch angepasst werden
         "generate_python_code": \
             """
                 Based on the previous summary and the data structure, generate Python code
@@ -223,7 +222,7 @@ prompt: Prompt = Prompt(
     }
 )
 
-VisualizationContainerBase = import_language_dto(AGENT_LANGUAGE, VisualizationContainerBase)
+VisualizationContainer = import_language_dto(AGENT_LANGUAGE, VisualizationContainerBase)
 
 
 @track_duration
@@ -244,7 +243,22 @@ def llm_generate_python_code(state: AgentState) -> AgentState:
     code_user_message = HumanMessage(content=code_user_message)
 
     messages = [description_user_message, code_user_message]
-    return generate_and_write_code(state, temp_agent, messages, inspect.currentframe().f_code.co_name)
+
+    llm_response = temp_agent.invoke({"messages": messages})
+
+    vis_container: VisualizationContainer = llm_response["structured_response"]
+
+    for vis in vis_container.visualizations:
+        print_color(f"LLM generated visualization code: ", Color.OK_GREEN)
+        print_color(vis.code.code, Color.OK_BLUE)
+        print_color(f"visualization goal: ", Color.OK_GREEN)
+        print_color(vis.goal.question, Color.OK_BLUE)
+
+    state["visualizations"] = vis_container
+
+    state["llm_metadata"].append(
+        LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
+    return state
 
 
 def _get_generate_code_agent(state: AgentState):
@@ -269,7 +283,7 @@ def _get_generate_code_agent(state: AgentState):
 
     temp_agent = create_agent(
         model=get_llm_model(LLMModel.GPT_5),
-        response_format=VisualizationContainerBase,
+        response_format=VisualizationContainer,
         system_prompt=system_prompt
     )
 
@@ -304,7 +318,21 @@ def llm_generate_r_code(state: AgentState) -> AgentState:
     code_user_message = HumanMessage(content=code_user_message)
 
     messages = [description_user_message, code_user_message]
-    return generate_and_write_code(state, temp_agent, messages, inspect.currentframe().f_code.co_name)
+    llm_response = temp_agent.invoke({"messages": messages})
+
+    vis_container: VisualizationContainer = llm_response["structured_response"]
+
+    for vis in vis_container.visualizations:
+        print_color(f"LLM generated visualization code: ", Color.OK_GREEN)
+        print_color(vis.code.code, Color.OK_BLUE)
+        print_color(f"visualization goal: ", Color.OK_GREEN)
+        print_color(vis.goal.question, Color.OK_BLUE)
+
+    state["visualizations"] = vis_container
+
+    state["llm_metadata"].append(
+        LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
+    return state
 
 
 def decide_programming_language(state: AgentState):

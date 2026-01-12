@@ -59,16 +59,15 @@ def build_graph():
     graph.add_node("test_generated_code", test_generated_code)
     graph.add_edge("LLM generate_python_code", "test_generated_code")
     graph.add_edge("LLM generate_r_code", "test_generated_code")
-    graph.add_edge("test_generated_code", "statistics")
-    # graph.add_conditional_edges(
-    #     "test_generated_code",
-    #     decide_regenerate_code,
-    #     {
-    #         "regenerate_code": "LLM regenerate_code",
-    #         "judge": "LLM judge_plots",
-    #         "end": "statistics"
-    #     }
-    # )
+    graph.add_conditional_edges(
+        "test_generated_code",
+        decide_regenerate_code,
+        {
+            "regenerate_code": "LLM regenerate_code",
+            "judge": "LLM judge_plots",
+            "end": "statistics"
+        }
+    )
     graph.add_node("LLM regenerate_code", llm_regenerate_code)
     graph.add_node("LLM judge_plots", llm_judge_code)
     graph.add_node("LLM refactor_plots", llm_refactor_plots)

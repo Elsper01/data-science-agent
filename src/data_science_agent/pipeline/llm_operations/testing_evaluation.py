@@ -3,7 +3,8 @@ import inspect
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 
-from data_science_agent.dtos.base import RegenerationBase
+from data_science_agent.dtos.base.responses.regeneration_base import RegenerationBase
+from data_science_agent.dtos.base.responses.visualization_base import VisualizationBase
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.utils import get_llm_model, AGENT_LANGUAGE, print_color, MAX_REGENERATION_ATTEMPTS, LLMMetadata
@@ -57,52 +58,63 @@ prompt = Prompt(
 )
 
 Regeneration = import_language_dto(AGENT_LANGUAGE, RegenerationBase)
-
+Visualization = import_language_dto(AGENT_LANGUAGE, VisualizationBase)
 
 def decide_regenerate_code(state: AgentState) -> AgentState:
-    """Decides whether the code should be regenerated based on test results."""
-    # LLM decides if the text in stdout and stderr are actual errors or just infos / deprecated warnings.
-    if state["code_test_stdout"] or state["code_test_stderr"]:
-        model = get_llm_model(LLMModel.GPT_4o)
-        user_prompt = HumanMessage(
-            content=prompt.get_prompt(
-                AGENT_LANGUAGE,
-                "decide_regenerate_code_user_prompt",
-                test_stdout=state.get("code_test_stdout", ""),
-                test_stderr=state.get("code_test_stderr", "")
+    """Decides whether the code should be regenerated based on test results for each visualization."""
+    model = get_llm_model(LLMModel.GPT_4o)
+    any_needs_regeneration = False
+
+    for vis in state["visualizations"].visualizations:
+        vis: Visualization
+
+        test_stdout = vis.code.std_out or ""
+        test_stderr = vis.code.std_err or ""
+
+        if test_stdout or test_stderr:
+            user_prompt = HumanMessage(
+                content=prompt.get_prompt(
+                    AGENT_LANGUAGE,
+                    "decide_regenerate_code_user_prompt",
+                    test_stdout=test_stdout,
+                    test_stderr=test_stderr
+                )
             )
-        )
 
-        decide_agent = create_agent(
-            model=model,
-            response_format=Regeneration,
-            system_prompt=prompt.get_prompt(AGENT_LANGUAGE, "decide_regenerate_code_system_prompt")
-        )
+            decide_agent = create_agent(
+                model=model,
+                response_format=Regeneration,
+                system_prompt=prompt.get_prompt(AGENT_LANGUAGE, "decide_regenerate_code_system_prompt")
+            )
 
-        messages = [user_prompt]
+            messages = [user_prompt]
+            llm_response = decide_agent.invoke({"messages": messages})
 
-        llm_response = decide_agent.invoke({"messages": messages})
-        state["llm_metadata"].append(
-            LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
-        regeneration_response: Regeneration = llm_response["structured_response"]
-        print_color(f"Regeneration decision: {regeneration_response.should_be_regenerated}", Color.OK_CYAN)
-        print(regeneration_response.should_be_regenerated)
-        if regeneration_response.should_be_regenerated and state["regeneration_attempts"] < MAX_REGENERATION_ATTEMPTS:
-            print_color(f"Regenerating code, attempt {state['regeneration_attempts']}", Color.WARNING)
-            return "regenerate_code"
-        elif state["regeneration_attempts"] == MAX_REGENERATION_ATTEMPTS:
-            print_color(f"Max attempts limit ({MAX_REGENERATION_ATTEMPTS}) succeeded.", Color.OK_GREEN)
-            if not state["is_refactoring"]:
-                return "judge"
-            else:
-                return "end"
+            state["llm_metadata"].append(
+                LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
+
+            regeneration_response: Regeneration = llm_response["structured_response"]
+
+            vis.code.needs_regeneration = regeneration_response.should_be_regenerated
+            print_color(f"Vis#{vis.goal.index} - Regeneration decision: {regeneration_response.should_be_regenerated}",
+                        Color.OK_CYAN)
+
+            if regeneration_response.should_be_regenerated:
+                any_needs_regeneration = True
         else:
-            print_color(f"Code is functionally working.", Color.OK_GREEN)
-            if not state["is_refactoring"]:
-                return "judge"
-            else:
-                return "end"
+            vis.code.needs_regeneration = False
+
+    if any_needs_regeneration and state["regeneration_attempts"] < MAX_REGENERATION_ATTEMPTS:
+        print_color(f"Regenerating code, attempt {state['regeneration_attempts']}", Color.WARNING)
+        return "regenerate_code"
+    elif state["regeneration_attempts"] == MAX_REGENERATION_ATTEMPTS:
+        print_color(f"Max attempts limit ({MAX_REGENERATION_ATTEMPTS}) reached.", Color.OK_GREEN)
+        if not state["is_refactoring"]:
+            return "judge"
+        else:
+            return "end"
     else:
+        print_color(f"All visualizations are functionally working.", Color.OK_GREEN)
         if not state["is_refactoring"]:
             return "judge"
         else:

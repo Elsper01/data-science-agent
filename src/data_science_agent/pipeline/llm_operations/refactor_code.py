@@ -3,7 +3,7 @@ import inspect
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from data_science_agent.dtos.base import CodeBase
+from data_science_agent.dtos.base.responses.code_base import CodeBase
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration

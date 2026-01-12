@@ -212,7 +212,6 @@ def clear_output_dir():
 
 def llm_generate_python_code(state: AgentState) -> AgentState:
     """Generiert Python Code für die Datenvisualisierung."""
-    # TODO: einen neuen Prompt erstellen mit System Prompt, und alle bis jetzt erarbeiteten Infos mit übergeben
 
     description_user_message, temp_agent = _get_generate_code_agent(state)
 
@@ -271,7 +270,6 @@ def _get_generate_code_agent(state: AgentState):
 
 def llm_generate_r_code(state: AgentState) -> AgentState:
     """Generiert R Code für die Datenvisualisierung."""
-    # TODO: einen neuen Prompt erstellen mit System Prompt, und alle bis jetzt erarbeiteten Infos mit übergeben
     description_user_message, temp_agent = _get_generate_code_agent(state)
 
     code_user_message = get_prompt(

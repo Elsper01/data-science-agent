@@ -1,5 +1,5 @@
 import importlib
-from types import ModuleType
+from typing import Dict, Type
 
 from pydantic import BaseModel
 
@@ -7,61 +7,58 @@ from data_science_agent.utils.enums import Language
 
 IMPORT_BASE_PATH = "data_science_agent.dtos"
 
-
-def import_all_language_dtos(language: Language):
-    """Imports all language specific DTO's."""
-    code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module, goal_container_module, visualization_module, visualization_container_module = __get_all_dto_paths(
-        language)
-
-    Description = getattr(description_module, "Description")
-    Metadata = getattr(metadata_module, "Metadata")
-    Code = getattr(code_module, "Code")
-    Regeneration = getattr(regeneration_module, "Regeneration")
-    Summary = getattr(summary_module, "Summary")
-    Judge = getattr(judge_module, "Judge")
-    GoalContainer = getattr(goal_container_module, "GoalContainer")
-    Visualization = getattr(visualization_module, "Visualization")
-    VisualizationContainer = getattr(visualization_container_module, "VisualizationContainer")
-
-    return Description, Metadata, Code, Regeneration, Summary, Judge, GoalContainer, Visualization, VisualizationContainer
+DTO_MODULES = {
+    "Description": "description",
+    "Metadata": "metadata",
+    "Code": "responses.code",
+    "Regeneration": "responses.regeneration",
+    "Summary": "responses.summary",
+    "Judge": "responses.judge",
+    "JudgeVerdict": "responses.judge_verdict",
+    "GoalContainer": "responses.goal_container",
+    "Visualization": "responses.visualization",
+    "VisualizationContainer": "responses.visualization_container",
+}
 
 
-def __get_all_dto_paths(language: Language) -> tuple[
-    ModuleType, ModuleType, ModuleType, ModuleType, ModuleType, ModuleType, ModuleType, ModuleType, ModuleType]:
-    """Gets all module paths for a specific language DTO."""
-    code_module = importlib.import_module(f"dtos.{language}.responses.code")
-    regeneration_module = importlib.import_module(f"dtos.{language}.responses.regeneration")
-    summary_module = importlib.import_module(f"dtos.{language}.responses.summary")
-    judge_module = importlib.import_module(f"dtos.{language}.responses.judge")
-    description_module = importlib.import_module(f"dtos.{language}.description")
-    metadata_module = importlib.import_module(f"dtos.{language}.metadata")
-    goal_container_module = importlib.import_module(f"dtos.{language}.responses.goal_container")
-    visualization_module = importlib.import_module(f"dtos.{language}.responses.visualization")
-    visualization_container_module = importlib.import_module(f"dtos.{language}.responses.visualization_container")
-    return code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module, goal_container_module, visualization_module, visualization_container_module
+def import_all_language_dtos(language: Language) -> Dict[str, Type]:
+    """
+    Dynamically import all DTO classes for a language.
+    Returns a dictionary with {class name: class}.
+    """
+    dtos: Dict[str, Type] = {}
+
+    for class_name, rel_module_path in DTO_MODULES.items():
+        module_path = f"dtos.{language.value}.{rel_module_path}"
+        try:
+            module = importlib.import_module(module_path)
+            dto_class = getattr(module, class_name)
+            dtos[class_name] = dto_class
+        except (ImportError, AttributeError) as e:
+            raise ImportError(f"Error occurred while importing {class_name} from {module_path}: {e}") from e
+
+    return dtos
 
 
-def import_language_dto(language: Language, base_dto_class: BaseModel) -> BaseModel:
-    """Imports a specific language DTO."""
-    code_module, description_module, judge_module, metadata_module, regeneration_module, summary_module, goal_container_module, visualization_module, visualization_container_module = __get_all_dto_paths(
-        language)
-    if base_dto_class.__name__ == "CodeBase":
-        return getattr(code_module, "Code")
-    elif base_dto_class.__name__ == "RegenerationBase":
-        return getattr(regeneration_module, "Regeneration")
-    elif base_dto_class.__name__ == "SummaryBase":
-        return getattr(summary_module, "Summary")
-    elif base_dto_class.__name__ == "JudgeBase":
-        return getattr(judge_module, "Judge")
-    elif base_dto_class.__name__ == "DescriptionBase":
-        return getattr(description_module, "Description")
-    elif base_dto_class.__name__ == "MetadataBase":
-        return getattr(metadata_module, "Metadata")
-    elif base_dto_class.__name__ == "GoalContainerBase":
-        return getattr(goal_container_module, "GoalContainer")
-    elif base_dto_class.__name__ == "VisualizationBase":
-        return getattr(visualization_module, "Visualization")
-    elif base_dto_class.__name__ == "VisualizationContainerBase":
-        return getattr(visualization_container_module, "VisualizationContainer")
-    else:
-        raise ValueError(f"Requested DTO {base_dto_class.__name__} not found for language {language}.")
+def import_language_dto(language: Language, base_dto_class: Type[BaseModel]) -> Type[BaseModel]:
+    """
+    Gets the module path for a specific language DTO.
+    """
+    base_name = base_dto_class.__name__
+
+    dto_name = base_name.removesuffix("Base")
+    module_path = DTO_MODULES.get(dto_name)
+
+    if not module_path:
+        raise ValueError(f"No DTO-module found for the base class '{base_name}'.")
+
+    full_module_path = f"dtos.{language.value}.{module_path}"
+
+    try:
+        module = importlib.import_module(full_module_path)
+        dto_class = getattr(module, dto_name)
+        return dto_class
+    except (ImportError, AttributeError) as e:
+        raise ImportError(
+            f"Error occurred while importing '{dto_name}' for language '{language.value}': {e}"
+        ) from e

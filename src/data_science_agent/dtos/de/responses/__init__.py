@@ -8,3 +8,4 @@ from data_science_agent.dtos.de.responses.goal_container import GoalContainer
 from data_science_agent.dtos.de.responses.goal import Goal
 from data_science_agent.dtos.de.responses.visualization import Visualization
 from data_science_agent.dtos.de.responses.visualization_container import VisualizationContainer
+from data_science_agent.dtos.de.responses.lida_evaluation import LidaEvaluation

@@ -1,10 +1,12 @@
+from datetime import datetime
+from pathlib import Path
+
 from langgraph.graph import StateGraph, START, END
 
 from data_science_agent.graph import AgentState
 from data_science_agent.pipeline import (
     load_dataset,
     analyse_dataset,
-    load_metadata,
     analyse_metadata,
     llm_generate_summary,
     llm_generate_python_code,
@@ -22,17 +24,58 @@ from data_science_agent.utils.enums import Color
 
 
 def __print_statistics(state: AgentState) -> AgentState:
-    """Prints the statistics of the graph."""
-    print_color("Graph Duration Statistics:", Color.HEADER)
-    for duration in state["durations"]:
-        print_color(f"{duration.method_name}", Color.OK_BLUE)
-        print_color(f"  Duration: {duration.get_total_duration()} seconds", Color.OK_GREEN)
-    print_color("\n\nGraph LLM Cost & Token Statistics:", Color.HEADER)
-    for metadata in state["llm_metadata"]:
-        print_color(f"{metadata.method_name}", Color.OK_BLUE)
-        print_color(f"  Token total: {metadata.token_usage.total_tokens} tokens", Color.OK_GREEN)
-        print_color(f"  Costs total: {metadata.cost_details.total_cost} $", Color.OK_GREEN)
+    """Prints and saves the statistics of the graph to a file."""
+
+    # Total values
+    total_duration = sum(d.get_total_duration() for d in state["durations"])
+    total_tokens = sum(m.token_usage.total_tokens for m in state["llm_metadata"])
+    total_cost = sum(m.cost_details.total_cost for m in state["llm_metadata"])
+
+    # Headerline
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    header_lines = [
+        "=" * 60,
+        "Graph Statistics Report",
+        "=" * 60,
+        f"Timestamp: {timestamp}",
+        f"Total Duration: {total_duration:.2f} seconds",
+        f"Total Token Usage: {total_tokens} tokens",
+        f"Total Costs: ${total_cost:.4f}",
+        "=" * 60,
+        "",
+    ]
+
+    stats_dir = Path(state["statistics_path"])
+    stats_dir.mkdir(parents=True, exist_ok=True)
+
+    timestamp_filename = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    statistics_path = stats_dir / f"statistics_{timestamp_filename}.txt"
+
+    with open(statistics_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(header_lines))
+
+        # Duration Statistics
+        f.write("Duration Statistics:\n")
+        f.write("-" * 40 + "\n")
+        for duration in state["durations"]:
+            f.write(f"Method: {duration.method_name}\n")
+            f.write(f"  Duration: {duration.get_total_duration():.4f} seconds\n\n")
+
+        f.write("\n")
+
+        # LLM Cost & Token Statistics
+        f.write("LLM Cost & Token Statistics:\n")
+        f.write("-" * 40 + "\n")
+        for metadata in state["llm_metadata"]:
+            f.write(f"Method: {metadata.method_name}\n")
+            f.write(f"  Model: {metadata.model_name}\n")
+            f.write(f"  Token total: {metadata.token_usage.total_tokens} tokens\n")
+            f.write(f"  Costs total: ${metadata.cost_details.total_cost:.4f}\n\n")
+
+    print_color(f"Statistics saved to: {statistics_path}", Color.OK_GREEN)
+
     return state
+
 
 def build_graph():
     """Builds the state graph for the data science agent."""

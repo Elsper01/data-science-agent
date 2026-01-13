@@ -15,6 +15,7 @@ class AgentState(TypedDict):
     messages: list[HumanMessage, AIMessage]
     durations: list[DurationMetadata]
     llm_metadata: list[LLMMetadata]
+    statistics_path: str
     # Dataset
     dataset_path: str
     dataset_df: Any  # any because typing of np.dataframe is not easily possible

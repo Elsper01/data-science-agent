@@ -30,13 +30,16 @@ class LLMMetadata:
     message: AIMessage
     token_usage: TokenUsage
     cost_details: CostDetails
+    model_name: str
 
     @classmethod
     def from_ai_message(cls, ai_message: AIMessage, calling_method_name) -> "LLMMetadata":
         """Create an LLMMetadata instance from an AIMessage containing response metadata."""
+        print(ai_message)
         metadata = getattr(ai_message, "response_metadata", {}) or {}
         token_usage_data = metadata.get("token_usage", {}) or {}
         cost_details_data = token_usage_data.get("cost_details", {}) or {}
+        model_name = metadata.get("model_name", "Unknown")
 
         token_usage = TokenUsage(
             completion_tokens=token_usage_data.get("completion_tokens"),
@@ -52,7 +55,7 @@ class LLMMetadata:
         )
 
         return cls(message=ai_message, token_usage=token_usage, cost_details=cost_details,
-                   method_name=calling_method_name)
+                   method_name=calling_method_name, model_name=model_name)
 
     def print_costs(self):
         """Print the token and cost summary."""

@@ -30,6 +30,7 @@ for dataset in datasets[:1]:
             "output_path": "./src/resources/output/",
             "durations": [],
             "llm_metadata": [],
+            "statistics_path": "./src/resources/statistics/",
         }
     )
 

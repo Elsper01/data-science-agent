@@ -9,7 +9,8 @@ from data_science_agent.dtos.base.responses import (
     GoalContainerBase,
     VisualizationBase,
     VisualizationContainerBase,
-    LidaEvaluationBase
+    LidaEvaluationBase,
+    LidaEvaluationMetrikBase
 )
 from data_science_agent.dtos.base.description_base import DescriptionBase
 from data_science_agent.dtos.base.metadata_base import MetadataBase

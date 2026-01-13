@@ -9,7 +9,8 @@ from data_science_agent.dtos.de.responses import (
     GoalContainer,
     Visualization,
     VisualizationContainer,
-    LidaEvaluation
+    LidaEvaluation,
+    LidaEvaluationMetrik
 )
 from data_science_agent.dtos.de.description import Description
 from data_science_agent.dtos.de.metadata import Metadata

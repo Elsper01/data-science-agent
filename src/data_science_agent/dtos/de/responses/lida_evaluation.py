@@ -2,12 +2,14 @@ from pydantic import Field
 
 from data_science_agent.dtos.base.responses.lida_evaluation_base import LidaEvaluationBase
 
+from data_science_agent.dtos.de.responses.lida_evaluation_metrik import LidaEvaluationMetrik
 
 class LidaEvaluation(LidaEvaluationBase):
-    """DTO zur Bewertung einer Visualisierung nach verschiedenen Kriterien durch ein LLM."""
+    """DTO für die LIDA Bewertung einer Visualisierung."""
 
-    dimension: str = Field(...,
-                           description="Die zu bewertende Dimension. Es gibt folgende Dimensionen: bugs, transformation, compliance, type, encoding, aesthetics")
-    score: int = Field(...,
-                       description="Der Score ist ein ganzzahliger Wert zwischen 1 und 10, wobei 1 die schlechteste und 10 die beste Bewertung darstellt.")
-    rationale: str = Field(..., description="Begründung für den vergebenen Score.")
+    bugs: LidaEvaluationMetrik = Field(..., description="Bewertung wie viele Bugs im Code der Visualisierung vorhanden sind.")
+    transformation: LidaEvaluationMetrik = Field(..., description="Bewertung ob die Daten-Transformation korrekt und sinnvoll durchgeführt wurde.")
+    compliance: LidaEvaluationMetrik = Field(..., description="Bewertung ob der Code das Visualisierungsziel erfüllt.")
+    type: LidaEvaluationMetrik = Field(..., description="Bewertung ob der Visualisierungstyp passend für das Visualisierungsziel, die Daten und die Intention gewählt wurde.")
+    encoding: LidaEvaluationMetrik = Field(..., description="Bewertung ob die Daten korrekt kodiert sind.")
+    aesthetics: LidaEvaluationMetrik = Field(..., description="Bewertung ob die Visualisierung ästhetisch ansprechend gestaltet ist.")

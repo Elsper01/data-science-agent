@@ -9,3 +9,4 @@ from data_science_agent.dtos.base.responses.goal_base import GoalBase
 from data_science_agent.dtos.base.responses.visualization_base import VisualizationBase
 from data_science_agent.dtos.base.responses.visualization_container_base import VisualizationContainerBase
 from data_science_agent.dtos.base.responses.lida_evaluation_base import LidaEvaluationBase
+from data_science_agent.dtos.base.responses.lida_evaluation_metrik_base import LidaEvaluationMetrikBase

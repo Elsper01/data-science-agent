@@ -12,8 +12,6 @@ class ColumnBase(BaseModel):
     missing_values: Optional[int] = Field(...)
     unique_values: Optional[int] = Field(...)
     most_frequent_value: Optional[str | int | float] = Field(...)
-    visualization_hint: Optional[str] = Field(None)
-    note: Optional[str] = Field(None)
 
     # allow population by field name or alias and validate on every assignment
     class Config:

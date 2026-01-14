@@ -13,5 +13,3 @@ class Column(ColumnBase):
     missing_values: Optional[int] = Field(..., description="Number of missing values in this column.")
     unique_values: Optional[int] = Field(..., description="Number of unique values in this column.")
     most_frequent_value: Optional[str | int | float] = Field(..., description="The most frequent value in this column.")
-    visualization_hint: str = Field(None, description="Suggestion for how to best visualize this column.")
-    note: Optional[str] = Field(None, description="Additional notes about the column.")

@@ -18,6 +18,7 @@ DTO_MODULES = {
     "GoalContainer": "responses.goal_container",
     "Visualization": "responses.visualization",
     "VisualizationContainer": "responses.visualization_container",
+    "LidaEvaluation": "responses.lida_evaluation",
 }
 
 

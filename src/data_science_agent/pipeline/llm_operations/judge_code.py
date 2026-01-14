@@ -1,7 +1,7 @@
 import inspect
 
 from langchain.agents import create_agent
-from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
 from data_science_agent.dtos.base.responses.judge_base import JudgeBase
 from data_science_agent.dtos.base.responses.judge_verdict_base import JudgeVerdictBase
@@ -69,7 +69,7 @@ def llm_judge_code(state: AgentState) -> AgentState:
         vis: Visualization
 
         temp_agent = create_agent(
-            model=get_llm_model(LLMModel.MISTRAL),
+            model=get_llm_model(LLMModel.GPT_5),
             system_prompt=SystemMessage(content=system_prompt),
             response_format=JudgeVerdict
         )
@@ -83,13 +83,6 @@ def llm_judge_code(state: AgentState) -> AgentState:
 
         llm_response = temp_agent.invoke({"messages": [HumanMessage(content=code_content)]})
         judge_result: JudgeVerdict = llm_response["structured_response"]
-        print_color(f"structured_response Type: {type(judge_result)}", Color.WARNING)
-        print_color(f"vis.code.judge_result Type: {type(vis.code.judge_result)}", Color.WARNING)
-        # print_color(f"isinstance(structured_response, vis.code.judge_result): {isinstance(judge_result, vis.code.judge_result)}",
-        #             Color.WARNING)
-        # print_color(f"Same class object? {type(judge_result) is vis.code.judge_result}", Color.WARNING)
-
-        print_color(vis.code, Color.WARNING)
 
         vis.code.judge_result = JudgeVerdict(
             figure_name=judge_result.figure_name,
@@ -108,7 +101,10 @@ def llm_judge_code(state: AgentState) -> AgentState:
         print(f"Can be deleted: {judge_result.can_be_deleted}")
         print("-----")
 
-        state["llm_metadata"].append(
-            LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
+        for message in reversed(llm_response["messages"]):
+            if isinstance(message, AIMessage):
+                state["llm_metadata"].append(
+                    LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
+                break
 
     return state

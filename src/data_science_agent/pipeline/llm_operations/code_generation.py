@@ -31,6 +31,7 @@ prompt: Prompt = Prompt(
                 4. Alle Antworten sollen UTF‑8‑kompatiblen {programming_language}‑Code enthalten.
                 Wenn du Code generierst, soll dieser sofort lauffähig, sauber strukturiert, modular und kommentiert sein.
                 5. PRO VISUALISIERUNGSZIEL soll EIN SEPARATES SKRIPT erstellt werden und PRO SKRIPT MAXIMAL EINE VISUALISIERUNG umgesetzt werden.
+                6. JEDES SKRIPT soll die Visualisierung als PNG-Datei im Output Verzeichnis speichern.
             """,
         "generate_code_python_lib_instruction": \
             "Nutze ausschließlich die folgenden Bibliotheken: pandas, numpy, matplotlib.pyplot, seaborn, geopandas, basemap.",
@@ -98,7 +99,7 @@ prompt: Prompt = Prompt(
                 Vorgaben für den Code:
                 - Der Code soll modular und direkt ausführbar sein, ohne syntaktische Fehler.
                 - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
-                  `{output_path}<plot_name>.png`
+                  `{output_path}<goal_index>_<plot_name>.png`
                 - Wähle Diagrammtypen entsprechend der Hinweise im Visualisierungsziel.
                 - Führe auch kurze statistische Analysen durch, falls diese benötigt werden im das Visualisierungsziel zu erreichen. Beispiele für kurze, sinnvolle Analysen:
                   - Anteil fehlender Werte je Spalte,

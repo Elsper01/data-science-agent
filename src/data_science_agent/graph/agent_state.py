@@ -34,3 +34,5 @@ class AgentState(TypedDict):
     goals: all_dtos["GoalContainer"]
     # visualizations
     visualizations: all_dtos["VisualizationContainer"]
+    # LIDA evaluation
+    is_before_refactoring: bool

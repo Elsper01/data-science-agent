@@ -87,7 +87,7 @@ def llm_generate_goals(state: AgentState) -> AgentState:
     user_msg = HumanMessage(content=user_prompt)
 
     temp_agent = create_agent(
-        model=get_llm_model(LLMModel.MISTRAL),
+        model=get_llm_model(LLMModel.GPT_5),
         response_format=GoalContainer,
         system_prompt=system_prompt
     )

@@ -1,7 +1,7 @@
 import inspect
 
 from langchain.agents import create_agent
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, AIMessage
 
 from data_science_agent.dtos.base.responses.summary_base import SummaryBase
 from data_science_agent.graph import AgentState
@@ -79,15 +79,19 @@ def llm_generate_summary(state: AgentState) -> AgentState:
     user_msg = HumanMessage(content=user_content)
 
     temp_agent = create_agent(
-        model=get_llm_model(LLMModel.MISTRAL),
+        model=get_llm_model(LLMModel.MINIMAX),
         response_format=Summary,
         system_prompt=system_prompt
     )
 
     llm_response = temp_agent.invoke({"messages": [user_msg]})
 
-    state["llm_metadata"].append(
-        LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
+    # TODO: das so für alle LLM Operationen machen
+    for message in reversed(llm_response["messages"]):
+        if isinstance(message, AIMessage):
+            state["llm_metadata"].append(
+                LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
+            break
 
     print_color(f"LLM result: ", Color.HEADER)
     summary: Summary = llm_response["structured_response"]

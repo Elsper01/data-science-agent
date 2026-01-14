@@ -110,12 +110,12 @@ def decide_regenerate_code(state: AgentState) -> AgentState:
     elif state["regeneration_attempts"] == MAX_REGENERATION_ATTEMPTS:
         print_color(f"Max attempts limit ({MAX_REGENERATION_ATTEMPTS}) reached.", Color.OK_GREEN)
         if not state["is_refactoring"]:
-            return "judge"
+            return "evaluate"
         else:
             return "end"
     else:
         print_color(f"All visualizations are functionally working.", Color.OK_GREEN)
         if not state["is_refactoring"]:
-            return "judge"
+            return "evaluate"
         else:
             return "end"

@@ -18,6 +18,7 @@ from data_science_agent.pipeline import (
     llm_judge_code,
     llm_refactor_visualizations,
     llm_generate_goals,
+    llm_evaluate_visualizations,
 )
 from data_science_agent.utils import print_color
 from data_science_agent.utils.enums import Color
@@ -27,11 +28,10 @@ def __print_statistics(state: AgentState) -> AgentState:
     """Prints and saves the statistics of the graph to a file."""
 
     # Total values
-    total_duration = sum(d.get_total_duration() for d in state["durations"])
-    total_tokens = sum(m.token_usage.total_tokens for m in state["llm_metadata"])
-    total_cost = sum(m.cost_details.total_cost for m in state["llm_metadata"])
+    total_duration = sum(d.get_total_duration() or 0 for d in state["durations"])
+    total_tokens = sum(m.token_usage.total_tokens or 0 for m in state["llm_metadata"])
+    total_cost = sum(m.cost_details.total_cost or 0.0 for m in state["llm_metadata"])
 
-    # Headerline
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     header_lines = [
         "=" * 60,
@@ -107,16 +107,20 @@ def build_graph():
         decide_regenerate_code,
         {
             "regenerate_code": "LLM regenerate_code",
-            "judge": "LLM judge_plots",
-            "end": "statistics"
+            "evaluate": "LLM evaluate_visualizations #1",
+            "end": "LLM evaluate_visualizations #2"
         }
     )
+    graph.add_node("LLM evaluate_visualizations #1", llm_evaluate_visualizations)
+    graph.add_edge("LLM evaluate_visualizations #1", "LLM judge_plots")
     graph.add_node("LLM regenerate_code", llm_regenerate_code)
     graph.add_node("LLM judge_plots", llm_judge_code)
     graph.add_node("LLM refactor_visualizations", llm_refactor_visualizations)
     graph.add_edge("LLM judge_plots", "LLM refactor_visualizations")
     graph.add_edge("LLM refactor_visualizations", "test_generated_code")
     graph.add_edge("LLM regenerate_code", "test_generated_code")
+    graph.add_edge("LLM evaluate_visualizations #2", "statistics")
+    graph.add_node("LLM evaluate_visualizations #2", llm_evaluate_visualizations)
     graph.add_node("statistics", __print_statistics)
     graph.add_edge("statistics", END)
     return graph.compile()

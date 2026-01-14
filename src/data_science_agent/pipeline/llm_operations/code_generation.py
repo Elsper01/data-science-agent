@@ -1,7 +1,7 @@
 import inspect
 
 from langchain.agents import create_agent
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, AIMessage
 
 from data_science_agent.dtos.base.responses.visualization_container_base import VisualizationContainerBase
 from data_science_agent.graph import AgentState
@@ -331,8 +331,11 @@ def llm_generate_r_code(state: AgentState) -> AgentState:
 
     state["visualizations"] = vis_container
 
-    state["llm_metadata"].append(
-        LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
+    for message in reversed(llm_response["messages"]):
+        if isinstance(message, AIMessage):
+            state["llm_metadata"].append(
+                LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
+            break
     return state
 
 

@@ -1,7 +1,7 @@
 import inspect
 
 from langchain.agents import create_agent
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, AIMessage
 
 from data_science_agent.dtos.base.responses.regeneration_base import RegenerationBase
 from data_science_agent.dtos.base.responses.visualization_base import VisualizationBase
@@ -90,8 +90,11 @@ def decide_regenerate_code(state: AgentState) -> AgentState:
             messages = [user_prompt]
             llm_response = decide_agent.invoke({"messages": messages})
 
-            state["llm_metadata"].append(
-                LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
+            for message in reversed(llm_response["messages"]):
+                if isinstance(message, AIMessage):
+                    state["llm_metadata"].append(
+                        LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
+                    break
 
             regeneration_response: Regeneration = llm_response["structured_response"]
 

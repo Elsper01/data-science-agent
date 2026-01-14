@@ -69,7 +69,7 @@ def llm_judge_code(state: AgentState) -> AgentState:
         vis: Visualization
 
         temp_agent = create_agent(
-            model=get_llm_model(LLMModel.GPT_5),
+            model=get_llm_model(LLMModel.MISTRAL),
             system_prompt=SystemMessage(content=system_prompt),
             response_format=JudgeVerdict
         )

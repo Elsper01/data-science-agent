@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Any
 
 from pydantic import Field
 
@@ -12,5 +12,5 @@ class Visualization(VisualizationBase):
     """DTO containing all information about a visualization."""
     goal: Goal = Field(..., description="The visualization goal to be achieved with this visualization.")
     code: Code = Field(..., description="The generated code to create the visualization.")
-    pre_refactoring_evaluation: Optional[LidaEvaluation] = Field(..., description="The LIDA-Evaluation of the visualization before refactoring.")
-    post_refactoring_evaluation: Optional[LidaEvaluation] = Field(..., description="The LIDA-Evaluation of the visualization after refactoring.")
+    pre_refactoring_evaluation: Optional[Any] = Field(..., description="The LIDA-Evaluation of the visualization before refactoring.")
+    post_refactoring_evaluation: Optional[Any] = Field(..., description="The LIDA-Evaluation of the visualization after refactoring.")

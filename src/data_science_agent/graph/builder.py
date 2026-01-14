@@ -72,6 +72,93 @@ def __print_statistics(state: AgentState) -> AgentState:
             f.write(f"  Token total: {metadata.token_usage.total_tokens} tokens\n")
             f.write(f"  Costs total: ${metadata.cost_details.total_cost:.4f}\n\n")
 
+        # Evaluation Results (neu)
+        f.write("\n")
+        f.write("Visualization Results:\n")
+        f.write("-" * 40 + "\n")
+
+        visualizations = state.get("visualizations")
+        if visualizations:
+            for vis in visualizations.visualizations:
+                # print all visualization information
+                vis_index = getattr(getattr(vis, "goal", None), "index", None)
+                vis_desc = getattr(getattr(vis, "goal", None), "description", None) or str(getattr(vis, "goal", ""))
+
+                f.write(f"Visualization #{vis_index if vis_index is not None else 'n/a'} - Goal: {vis_desc}\n")
+
+                # helper to handle an evaluation object
+                def _write_eval(prefix, eval_obj):
+                    if not eval_obj:
+                        return
+                    try:
+                        bugs = eval_obj.bugs
+                        transformation = eval_obj.transformation
+                        compliance = eval_obj.compliance
+                        vtype = eval_obj.type
+                        encoding = eval_obj.encoding
+                        aesthetics = eval_obj.aesthetics
+                    except Exception:
+                        f.write(f"  {prefix}: {repr(eval_obj)}\n")
+                        return
+
+                    f.write(f"  {prefix}:\n")
+                    f.write(f"    - bugs: {bugs.score} / 10\n")
+                    f.write(f"      -> {bugs.rationale}\n")
+                    f.write(f"    - transformation: {transformation.score} / 10\n")
+                    f.write(f"      -> {transformation.rationale}\n")
+                    f.write(f"    - compliance: {compliance.score} / 10\n")
+                    f.write(f"      -> {compliance.rationale}\n")
+                    f.write(f"    - type: {vtype.score} / 10\n")
+                    f.write(f"      -> {vtype.rationale}\n")
+                    f.write(f"    - encoding: {encoding.score} / 10\n")
+                    f.write(f"      -> {encoding.rationale}\n")
+                    f.write(f"    - aesthetics: {aesthetics.score} / 10\n")
+                    f.write(f"      -> {aesthetics.rationale}\n")
+                    total_score = bugs.score + transformation.score + compliance.score + vtype.score + encoding.score + aesthetics.score
+                    avg = float(total_score) / 6
+                    f.write(f"    Total Score: {total_score:.2f}/60\n")
+                    f.write(f"    Average Score: {avg:.2f}/10\n")
+
+                _write_eval("pre_refactoring_evaluation", getattr(vis, "pre_refactoring_evaluation", None))
+                _write_eval("post_refactoring_evaluation", getattr(vis, "post_refactoring_evaluation", None))
+
+                f.write("\n")
+
+    # zusätzlich auch auf Konsole ausgeben
+    visualizations = state.get("visualizations")
+    if visualizations:
+        for vis in visualizations.visualizations:
+            vis_index = getattr(getattr(vis, "goal", None), "index", None)
+            print_color(f"LIDA Judge for vis#{vis_index if vis_index is not None else 'n/a'}", Color.WARNING)
+
+            # prefer post if exists, else pre if exists; also print both if both present
+            for label in ("pre_refactoring_evaluation", "post_refactoring_evaluation"):
+                lida_result = getattr(vis, label, None)
+                if not lida_result:
+                    continue
+
+                print_color(f"   - {label}:", Color.OK_BLUE)
+                try:
+                    print_color(f"      - bugs: {lida_result.bugs.score} / 10", Color.OK_BLUE)
+                    print_color(f"      - transformation: {lida_result.transformation.score} / 10", Color.OK_BLUE)
+                    print_color(f"      - compliance: {lida_result.compliance.score} / 10", Color.OK_BLUE)
+                    print_color(f"      - type: {lida_result.type.score} / 10", Color.OK_BLUE)
+                    print_color(f"      - encoding: {lida_result.encoding.score} / 10", Color.OK_BLUE)
+                    print_color(f"      - aesthetics: {lida_result.aesthetics.score} / 10", Color.OK_BLUE)
+
+                    total_score = (
+                        lida_result.bugs.score
+                        + lida_result.transformation.score
+                        + lida_result.compliance.score
+                        + lida_result.type.score
+                        + lida_result.encoding.score
+                        + lida_result.aesthetics.score
+                    )
+                    print_color(f"  Total Score: {total_score:.2f}/60", Color.OK_GREEN)
+                    print_color(f"  Average Score: {round(float(total_score) / 6, 1)}/10", Color.OK_GREEN)
+                except Exception:
+                    print_color(f"  Could not read structured evaluation for {label}", Color.WARNING)
+
     print_color(f"Statistics saved to: {statistics_path}", Color.OK_GREEN)
 
     return state

@@ -79,14 +79,13 @@ def llm_generate_summary(state: AgentState) -> AgentState:
     user_msg = HumanMessage(content=user_content)
 
     temp_agent = create_agent(
-        model=get_llm_model(LLMModel.MINIMAX),
+        model=get_llm_model(LLMModel.MISTRAL),
         response_format=Summary,
         system_prompt=system_prompt
     )
 
     llm_response = temp_agent.invoke({"messages": [user_msg]})
 
-    # TODO: das so für alle LLM Operationen machen
     for message in reversed(llm_response["messages"]):
         if isinstance(message, AIMessage):
             state["llm_metadata"].append(

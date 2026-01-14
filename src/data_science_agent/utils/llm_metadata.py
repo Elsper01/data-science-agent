@@ -35,7 +35,6 @@ class LLMMetadata:
     @classmethod
     def from_ai_message(cls, ai_message: AIMessage, calling_method_name) -> "LLMMetadata":
         """Create an LLMMetadata instance from an AIMessage containing response metadata."""
-        print(ai_message)
         metadata = getattr(ai_message, "response_metadata", {}) or {}
         token_usage_data = metadata.get("token_usage", {}) or {}
         cost_details_data = token_usage_data.get("cost_details", {}) or {}

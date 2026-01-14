@@ -1,6 +1,6 @@
 import inspect
 from langchain.agents import create_agent
-from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from data_science_agent.dtos.base.responses.code_base import CodeBase
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
@@ -82,8 +82,11 @@ def llm_refactor_visualizations(state: AgentState) -> AgentState:
 
         # TODO: speichere ab wie oft eine abbildung refactored werden musste
         vis.code.code = code.code
-        state["llm_metadata"].append(
-            LLMMetadata.from_ai_message(llm_response["messages"][-1], inspect.currentframe().f_code.co_name))
+        for message in reversed(llm_response["messages"]):
+            if isinstance(message, AIMessage):
+                state["llm_metadata"].append(
+                    LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
+                break
 
     state["is_refactoring"] = True
     state["regeneration_attempts"] = 0

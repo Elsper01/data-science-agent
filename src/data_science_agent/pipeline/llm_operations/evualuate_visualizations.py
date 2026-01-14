@@ -111,7 +111,7 @@ def llm_evaluate_visualizations(state: AgentState) -> AgentState:
         vis: Visualization
 
         temp_agent = create_agent(
-            model=get_llm_model(LLMModel.GPT_5),
+            model=get_llm_model(LLMModel.MISTRAL),
             system_prompt=SystemMessage(content=system_prompt),
             response_format=LidaEvaluation
         )
@@ -121,7 +121,7 @@ def llm_evaluate_visualizations(state: AgentState) -> AgentState:
             "user_prompt",
             goal_description=vis.goal,
             code=vis.code.code,
-            language=programming_language
+            programming_language=programming_language
         )
 
         llm_response = temp_agent.invoke({"messages": [HumanMessage(content=user_prompt)]})

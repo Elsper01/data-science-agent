@@ -82,7 +82,7 @@ def llm_generate_goals(state: AgentState) -> AgentState:
         AGENT_LANGUAGE,
         "user_prompt",
         n=state["number_visualization_goals"],
-        summary=state["summary"].summary
+        summary=state["summary"]
     )
     user_msg = HumanMessage(content=user_prompt)
 

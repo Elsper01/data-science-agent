@@ -4,7 +4,6 @@ from pydantic import BaseModel, Field
 class GoalBase(BaseModel):
     """Base DTO for visualization goals."""
 
-    index: int = Field(...)
     question: str = Field(...)
     visualization: str = Field(...)
     rationale: str = Field(...)

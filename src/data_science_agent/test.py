@@ -32,6 +32,7 @@ for dataset in datasets[:1]:
             "llm_metadata": [],
             "statistics_path": "./src/resources/statistics/",
             "is_before_refactoring": True,
+            "number_visualization_goals": 3,
         }
     )
 

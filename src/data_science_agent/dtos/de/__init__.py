@@ -7,8 +7,6 @@ from data_science_agent.dtos.de.responses import (
     Summary,
     Goal,
     GoalContainer,
-    Visualization,
-    VisualizationContainer,
     LidaEvaluation,
     LidaEvaluationMetrik
 )

@@ -7,8 +7,6 @@ from data_science_agent.dtos.base.responses import (
     SummaryBase,
     GoalBase,
     GoalContainerBase,
-    VisualizationBase,
-    VisualizationContainerBase,
     LidaEvaluationBase,
     LidaEvaluationMetrikBase
 )

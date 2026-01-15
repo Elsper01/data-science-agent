@@ -4,7 +4,7 @@ from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
 from data_science_agent.dtos.base import LidaEvaluationBase
-from data_science_agent.dtos.base.responses.visualization_base import VisualizationBase
+from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
@@ -98,7 +98,6 @@ prompt: Prompt = Prompt(
 )
 
 LidaEvaluation = import_language_dto(AGENT_LANGUAGE, LidaEvaluationBase)
-Visualization = import_language_dto(AGENT_LANGUAGE, VisualizationBase)
 
 
 @track_duration
@@ -107,8 +106,8 @@ def llm_evaluate_visualizations(state: AgentState) -> AgentState:
     system_prompt = prompt.get_prompt(AGENT_LANGUAGE, "system_prompt")
     programming_language = state["programming_language"].value
 
-    for vis in state["visualizations"].visualizations:
-        vis: Visualization
+    for i, vis in enumerate(state["visualizations"]):
+        vis: VisualizationWrapper
 
         temp_agent = create_agent(
             model=get_llm_model(LLMModel.MISTRAL),
@@ -127,7 +126,8 @@ def llm_evaluate_visualizations(state: AgentState) -> AgentState:
         llm_response = temp_agent.invoke({"messages": [HumanMessage(content=user_prompt)]})
         lida_result: LidaEvaluation = llm_response["structured_response"]
 
-        print_color(f"LIDA Judge for vis#{vis.goal.index}", Color.WARNING)
+        # wir printen genau das Gleiche in statistics
+        print_color(f"LIDA Judge for vis#{i}", Color.WARNING)
 
         print_color(f"   - bugs: {lida_result.bugs.score} / 10", Color.OK_BLUE)
         print_color(f"   - transformation: {lida_result.transformation.score} / 10", Color.OK_BLUE)

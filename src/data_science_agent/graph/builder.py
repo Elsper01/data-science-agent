@@ -3,6 +3,7 @@ from pathlib import Path
 
 from langgraph.graph import StateGraph, START, END
 
+from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.pipeline import (
     load_dataset,
@@ -72,16 +73,16 @@ def __print_statistics(state: AgentState) -> AgentState:
             f.write(f"  Token total: {metadata.token_usage.total_tokens} tokens\n")
             f.write(f"  Costs total: ${metadata.cost_details.total_cost:.4f}\n\n")
 
-        # Evaluation Results (neu)
+        # Evaluation Results
         f.write("\n")
         f.write("Visualization Results:\n")
         f.write("-" * 40 + "\n")
 
-        visualizations = state.get("visualizations")
+        visualizations: [VisualizationWrapper] = state.get("visualizations")
         if visualizations:
-            for vis in visualizations.visualizations:
+            for index, vis in enumerate(visualizations):
                 # print all visualization information
-                vis_index = getattr(getattr(vis, "goal", None), "index", None)
+                vis_index = index
                 vis_desc = getattr(getattr(vis, "goal", None), "description", None) or str(getattr(vis, "goal", ""))
 
                 f.write(f"Visualization #{vis_index if vis_index is not None else 'n/a'} - Goal: {vis_desc}\n")
@@ -124,8 +125,8 @@ def __print_statistics(state: AgentState) -> AgentState:
 
                 f.write("\n")
 
-    # zusätzlich auch auf Konsole ausgeben
     visualizations = state.get("visualizations")
+    # TODO: das kann direkt im oberen Loop mit ausgegeben werden
     if visualizations:
         for vis in visualizations.visualizations:
             vis_index = getattr(getattr(vis, "goal", None), "index", None)
@@ -199,14 +200,14 @@ def build_graph():
         }
     )
     graph.add_node("LLM evaluate_visualizations #1", llm_evaluate_visualizations)
-    graph.add_edge("LLM evaluate_visualizations #1", "LLM judge_plots")
+    graph.add_edge("LLM evaluate_visualizations #1", "statistics")
     graph.add_node("LLM regenerate_code", llm_regenerate_code)
-    graph.add_node("LLM judge_plots", llm_judge_code)
-    graph.add_node("LLM refactor_visualizations", llm_refactor_visualizations)
-    graph.add_edge("LLM judge_plots", "LLM refactor_visualizations")
-    graph.add_edge("LLM refactor_visualizations", "test_generated_code")
-    graph.add_edge("LLM regenerate_code", "test_generated_code")
-    graph.add_edge("LLM evaluate_visualizations #2", "statistics")
+    # graph.add_node("LLM judge_plots", llm_judge_code)
+    # graph.add_node("LLM refactor_visualizations", llm_refactor_visualizations)
+    # graph.add_edge("LLM judge_plots", "LLM refactor_visualizations")
+    # graph.add_edge("LLM refactor_visualizations", "test_generated_code")
+    # graph.add_edge("LLM regenerate_code", "test_generated_code")
+    # graph.add_edge("LLM evaluate_visualizations #2", "statistics")
     graph.add_node("LLM evaluate_visualizations #2", llm_evaluate_visualizations)
     graph.add_node("statistics", __print_statistics)
     graph.add_edge("statistics", END)

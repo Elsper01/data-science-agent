@@ -24,7 +24,7 @@ for dataset in datasets[:1]:
         {
             "dataset_path": os.path.join(path, "data.csv"),
             "metadata_path": os.path.join(path, "metadata.rdf"),
-            "regeneration_attempts": 2, # TODO: später wieder auf 0 setzen
+            "regeneration_attempts": 0,
             "programming_language": enums.ProgrammingLanguage.R,
             "is_refactoring": False,
             "output_path": "./src/resources/output/",

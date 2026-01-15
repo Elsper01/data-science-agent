@@ -4,7 +4,7 @@ from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, AIMessage
 
 from data_science_agent.dtos.base.responses.regeneration_base import RegenerationBase
-from data_science_agent.dtos.base.responses.visualization_base import VisualizationBase
+from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.utils import get_llm_model, AGENT_LANGUAGE, print_color, MAX_REGENERATION_ATTEMPTS, LLMMetadata
@@ -58,15 +58,14 @@ prompt = Prompt(
 )
 
 Regeneration = import_language_dto(AGENT_LANGUAGE, RegenerationBase)
-Visualization = import_language_dto(AGENT_LANGUAGE, VisualizationBase)
 
 def decide_regenerate_code(state: AgentState) -> AgentState:
     """Decides whether the code should be regenerated based on test results for each visualization."""
     model = get_llm_model(LLMModel.GPT_4o)
     any_needs_regeneration = False
 
-    for vis in state["visualizations"].visualizations:
-        vis: Visualization
+    for i, vis in enumerate(state["visualizations"]):
+        vis: VisualizationWrapper
 
         test_stdout = vis.code.std_out or ""
         test_stderr = vis.code.std_err or ""
@@ -99,7 +98,7 @@ def decide_regenerate_code(state: AgentState) -> AgentState:
             regeneration_response: Regeneration = llm_response["structured_response"]
 
             vis.code.needs_regeneration = regeneration_response.should_be_regenerated
-            print_color(f"Vis#{vis.goal.index} - Regeneration decision: {regeneration_response.should_be_regenerated}",
+            print_color(f"Vis#{i} - Regeneration decision: {regeneration_response.should_be_regenerated}",
                         Color.OK_CYAN)
 
             if regeneration_response.should_be_regenerated:

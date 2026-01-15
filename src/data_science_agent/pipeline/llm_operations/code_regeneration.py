@@ -4,7 +4,7 @@ from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
 from data_science_agent.dtos.base.responses.code_base import CodeBase
-from data_science_agent.dtos.base.responses.visualization_base import VisualizationBase
+from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
@@ -53,7 +53,6 @@ prompt = Prompt(
 )
 
 Code = import_language_dto(AGENT_LANGUAGE, CodeBase)
-Visualization = import_language_dto(AGENT_LANGUAGE, VisualizationBase)
 
 @track_duration
 def llm_regenerate_code(state: AgentState) -> AgentState:
@@ -66,8 +65,8 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
     state["regeneration_attempts"] += 1
 
     # we iterate over all visualizations and regenerate code for those that need it
-    for vis in state["visualizations"].visualizations:
-        vis: Visualization
+    for i, vis in enumerate(state["visualizations"]):
+        vis: VisualizationWrapper
         # check the current number of regeneration attempts for this visualization, default is None so we set it to 0
         current_attempts = vis.code.regeneration_attempts
         if current_attempts is None:
@@ -76,9 +75,8 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
         if vis.code.needs_regeneration and current_attempts < MAX_REGENERATION_ATTEMPTS:
             vis.code.regeneration_attempts = current_attempts + 1
 
-            print_color(f"Regenerating code for vis#{vis.goal.index}, attempt {current_attempts}", Color.WARNING)
+            print_color(f"Regenerating code for vis#{i}, attempt {current_attempts}", Color.WARNING)
 
-            # TODO: eigtl kann state["messages"] gelöscht werden, da wir ja jedes Mal einen neuen Agenten erstellen
             messages = [
                 SystemMessage(
                     content=prompt.get_prompt(

@@ -2,6 +2,7 @@ import inspect
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from data_science_agent.dtos.base.responses.code_base import CodeBase
+from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
@@ -68,8 +69,8 @@ def llm_refactor_visualizations(state: AgentState) -> AgentState:
         response_format=Code,
     )
 
-    for vis in state["visualizations"].visualizations:
-
+    for vis in state["visualizations"]:
+        vis: VisualizationWrapper
         instructions = prompt.get_prompt(
             AGENT_LANGUAGE,
             "refactor_user_prompt",

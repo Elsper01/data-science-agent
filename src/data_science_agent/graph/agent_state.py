@@ -1,6 +1,7 @@
 from typing import Any, TypedDict
 from langchain_core.messages import HumanMessage, AIMessage
 
+from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
 from data_science_agent.language import import_all_language_dtos
 from data_science_agent.utils import AGENT_LANGUAGE, DurationMetadata, LLMMetadata
 from data_science_agent.utils.enums import ProgrammingLanguage
@@ -30,10 +31,8 @@ class AgentState(TypedDict):
     regeneration_attempts: int
     programming_language: ProgrammingLanguage
     is_refactoring: bool
-    # visualization goals
-    goals: all_dtos["GoalContainer"]
     # visualizations
-    visualizations: all_dtos["VisualizationContainer"]
+    visualizations: [VisualizationWrapper]
     number_visualization_goals: int
     # LIDA evaluation
     is_before_refactoring: bool

@@ -4,6 +4,7 @@ from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, AIMessage
 
 from data_science_agent.dtos.base.responses.goal_container_base import GoalContainerBase
+from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt
 from data_science_agent.language import import_language_dto
@@ -103,11 +104,17 @@ def llm_generate_goals(state: AgentState) -> AgentState:
     print_color(f"LLM result: ", Color.HEADER)
     goals: GoalContainer = llm_response["structured_response"]
     print_color(f"Dataset Summary: ", Color.OK_GREEN)
+    # save goals in a list of VisualizationWrapper's in the agent state
+    visualizations = []
     for goal in goals.goals:
-        print_color(f"Goal Nr. {goal.index}", Color.OK_GREEN)
+        # for each goal, create a new VisualizationWrapper
+        vis = VisualizationWrapper(goal=goal, code=None, pre_refactoring_evaluation=None, post_refactoring_evaluation=None)
+        visualizations.append(vis)
+
+        # print the results
         print_color(f"- Goal Question: {goal.question}", Color.OK_BLUE)
         print_color(f"- Visualization: {goal.visualization}", Color.OK_BLUE)
         print_color(f"- Rationale: {goal.rationale}", Color.OK_BLUE)
-    state["goals"] = goals
+    state["visualizations"] = visualizations
 
     return state

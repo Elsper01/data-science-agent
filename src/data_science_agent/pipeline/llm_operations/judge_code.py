@@ -5,7 +5,7 @@ from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
 from data_science_agent.dtos.base.responses.judge_base import JudgeBase
 from data_science_agent.dtos.base.responses.judge_verdict_base import JudgeVerdictBase
-from data_science_agent.dtos.base.responses.visualization_base import VisualizationBase
+from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
@@ -56,7 +56,6 @@ prompt: Prompt = Prompt(
 )
 
 JudgeVerdict = import_language_dto(AGENT_LANGUAGE, JudgeVerdictBase)
-Visualization = import_language_dto(AGENT_LANGUAGE, VisualizationBase)
 Judge = import_language_dto(AGENT_LANGUAGE, JudgeBase)
 
 
@@ -65,8 +64,8 @@ def llm_judge_code(state: AgentState) -> AgentState:
     """Ask the LLM to judge the generated code for each visualization."""
     system_prompt = prompt.get_prompt(AGENT_LANGUAGE, "judge_system_prompt")
 
-    for vis in state["visualizations"].visualizations:
-        vis: Visualization
+    for i, vis in enumerate(state["visualizations"]):
+        vis: VisualizationWrapper
 
         temp_agent = create_agent(
             model=get_llm_model(LLMModel.MISTRAL),
@@ -93,7 +92,7 @@ def llm_judge_code(state: AgentState) -> AgentState:
             can_be_deleted=judge_result.can_be_deleted
         )
 
-        print_color(f"LLM Judge for vis#{vis.goal.index}", Color.WARNING)
+        print_color(f"LLM Judge for vis#{i}", Color.WARNING)
         print(f"Figure: {judge_result.figure_name}, File: {judge_result.file_name}")
         print(f"Critic notes: {judge_result.critic_notes}")
         print(f"Suggested code: {judge_result.suggestion_code}")

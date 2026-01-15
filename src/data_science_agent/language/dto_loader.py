@@ -17,8 +17,6 @@ DTO_MODULES = {
     "JudgeVerdict": "responses.judge_verdict",
     "GoalContainer": "responses.goal_container",
     "Goal": "responses.goal",
-    "Visualization": "responses.visualization",
-    "VisualizationContainer": "responses.visualization_container",
     "LidaEvaluation": "responses.lida_evaluation",
 }
 

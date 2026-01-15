@@ -1,15 +1,17 @@
 import inspect
+from typing import Any
 
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, AIMessage
 
 from data_science_agent.dtos.base.responses.summary_base import SummaryBase
+from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt
 from data_science_agent.language import import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
-from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color
-from data_science_agent.utils.enums import LLMModel, Color
+from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color, DurationMetadata, LLMMetadata
+from data_science_agent.utils.enums import LLMModel, Color, ProgrammingLanguage
 from data_science_agent.utils.llm_metadata import LLMMetadata
 
 prompt: Prompt = Prompt(
@@ -64,6 +66,27 @@ Summary = import_language_dto(AGENT_LANGUAGE, SummaryBase)
 def llm_generate_summary(state: AgentState) -> AgentState:
     """This node generates the dataset summary by using a LLM."""
 
+    llm_response = _get_agent_and_messages(state)
+
+    for message in reversed(llm_response["messages"]):
+        if isinstance(message, AIMessage):
+            state["llm_metadata"].append(
+                LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
+            break
+
+    print_color(f"LLM result: ", Color.HEADER)
+    summary: Summary = llm_response["structured_response"]
+    print_color(f"Dataset Summary: ", Color.OK_GREEN)
+    print(summary.summary)
+    print_color(f"\nColumn Descriptions:", Color.OK_BLUE)
+    print(summary.columns)
+
+    state["summary"] = summary
+
+    return state
+
+
+def _get_agent_and_messages(state: AgentState) -> dict[str, Any] | Any:
     system_prompt = prompt.get_prompt(
         AGENT_LANGUAGE,
         "summary_system_prompt",
@@ -85,20 +108,4 @@ def llm_generate_summary(state: AgentState) -> AgentState:
     )
 
     llm_response = temp_agent.invoke({"messages": [user_msg]})
-
-    for message in reversed(llm_response["messages"]):
-        if isinstance(message, AIMessage):
-            state["llm_metadata"].append(
-                LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
-            break
-
-    print_color(f"LLM result: ", Color.HEADER)
-    summary: Summary = llm_response["structured_response"]
-    print_color(f"Dataset Summary: ", Color.OK_GREEN)
-    print(summary.summary)
-    print_color(f"\nColumn Descriptions:", Color.OK_BLUE)
-    print(summary.columns)
-
-    state["summary"] = summary
-
-    return state
+    return llm_response

@@ -11,7 +11,7 @@ from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
 from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, LLMMetadata, print_color
 from data_science_agent.utils.enums import LLMModel, ProgrammingLanguage, Color
-from data_science_agent.utils.pipeline import clear_output_dir
+from data_science_agent.utils.pipeline import clear_output_dir, archive_images
 
 prompt: Prompt = Prompt(
     de={
@@ -35,6 +35,8 @@ prompt: Prompt = Prompt(
                 Wenn du Code generierst, soll dieser sofort lauffähig sein.
                 5. PRO VISUALISIERUNGSZIEL soll EIN SEPARATES SKRIPT erstellt werden und PRO SKRIPT MAXIMAL EINE VISUALISIERUNG umgesetzt werden.
                 6. JEDES SKRIPT soll die Visualisierung als PNG-Datei im Output Verzeichnis speichern.
+                7. Gib nur dann Text auf die Systemausgabe aus, wenn es wirklich notwendig ist, z. B. wenn ein Fehler vorliegt.
+                8. Verwende keine Kommentare und dokumentiere den Code nicht.
             """,
         "generate_code_python_lib_instruction": \
             "Nutze ausschließlich die folgenden Bibliotheken: pandas, numpy, matplotlib.pyplot, seaborn, geopandas, basemap und plotly.",
@@ -134,6 +136,8 @@ prompt: Prompt = Prompt(
                 When generating code, it should be immediately executable.
                 5. FOR EACH VISUALIZATION GOAL, A SEPARATE SCRIPT shall be created and MAXIMALLY ONE VISUALIZATION PER SCRIPT.
                 6. EACH SCRIPT shall save the visualization as a PNG file in the output directory.
+                7. Only print text to system output, if really necessary, like there is a error.
+                8. Do not use comments and dont document the code.
             """,
         "generate_code_python_lib_instruction": \
             "Use only the following libraries: pandas, numpy, matplotlib.pyplot, seaborn, geopandas, basemap, and plotly.",
@@ -220,7 +224,8 @@ Code = import_language_dto(AGENT_LANGUAGE, CodeBase)
 @track_duration
 def llm_generate_python_code(state: AgentState) -> AgentState:
     """Generates Python code for data visualization."""
-
+    archive_images(state["output_path"], state["regeneration_attempts"])
+    clear_output_dir(state["output_path"])
     for index, vis in enumerate(state["visualizations"]):
         vis: VisualizationWrapper
         description_user_message, temp_agent = _get_generate_code_agent(state, vis.goal)
@@ -243,10 +248,7 @@ def llm_generate_python_code(state: AgentState) -> AgentState:
         code: Code = llm_response["structured_response"]
         vis.code = code
 
-        print_color(f"LLM generated visualization code: ", Color.OK_GREEN)
-        print_color(vis.code.code, Color.OK_BLUE)
-        print_color(f"visualization goal: ", Color.OK_GREEN)
-        print_color(vis.goal.question, Color.OK_BLUE)
+        print_color(f"LLM generated visualization code.", Color.OK_GREEN)
 
         for message in reversed(llm_response["messages"]):
             if isinstance(message, AIMessage):
@@ -294,15 +296,14 @@ def _get_generate_code_agent(state: AgentState, goal: Goal):
     )
     description_user_message = HumanMessage(content=description_user_message)
 
-    # clear output directory before generating new plots / code
-    clear_output_dir(state["output_path"])
     return description_user_message, temp_agent
 
 
 @track_duration
 def llm_generate_r_code(state: AgentState) -> AgentState:
     """Generates R code for data visualization."""
-
+    archive_images(state["output_path"], state["regeneration_attempts"])
+    clear_output_dir(state["output_path"])
     for index, vis in enumerate(state["visualizations"]):
         vis: VisualizationWrapper
         description_user_message, temp_agent = _get_generate_code_agent(state, vis.goal)
@@ -332,10 +333,7 @@ def llm_generate_r_code(state: AgentState) -> AgentState:
             refactoring_attempts=None,
             judge_result=None
         )
-        print_color(f"LLM generated visualization code: ", Color.OK_GREEN)
-        print_color(vis.code.code, Color.OK_BLUE)
-        print_color(f"visualization goal: ", Color.OK_GREEN)
-        print_color(vis.goal.question, Color.OK_BLUE)
+        print_color(f"LLM generated visualization code.", Color.OK_GREEN)
 
         for message in reversed(llm_response["messages"]):
             if isinstance(message, AIMessage):

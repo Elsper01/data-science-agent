@@ -101,11 +101,10 @@ def llm_generate_goals(state: AgentState) -> AgentState:
                 LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
             break
 
-    print_color(f"LLM result: ", Color.HEADER)
     goals: GoalContainer = llm_response["structured_response"]
-    print_color(f"Dataset Summary: ", Color.OK_GREEN)
     # save goals in a list of VisualizationWrapper's in the agent state
     visualizations = []
+    print_color("Generated Visualization Goals:", Color.OK_GREEN)
     for goal in goals.goals:
         # for each goal, create a new VisualizationWrapper
         vis = VisualizationWrapper(goal=goal, code=None, pre_refactoring_evaluation=None, post_refactoring_evaluation=None)
@@ -113,8 +112,6 @@ def llm_generate_goals(state: AgentState) -> AgentState:
 
         # print the results
         print_color(f"- Goal Question: {goal.question}", Color.OK_BLUE)
-        print_color(f"- Visualization: {goal.visualization}", Color.OK_BLUE)
-        print_color(f"- Rationale: {goal.rationale}", Color.OK_BLUE)
     state["visualizations"] = visualizations
 
     return state

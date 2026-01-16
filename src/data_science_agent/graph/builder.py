@@ -38,6 +38,7 @@ def __print_statistics(state: AgentState) -> AgentState:
         "=" * 60,
         "Graph Statistics Report",
         "=" * 60,
+        f"Dataset Path: {state['dataset_path']}",
         f"Timestamp: {timestamp}",
         f"Total Duration: {total_duration:.2f} seconds",
         f"Total Token Usage: {total_tokens} tokens",
@@ -51,6 +52,7 @@ def __print_statistics(state: AgentState) -> AgentState:
 
     timestamp_filename = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     statistics_path = stats_dir / f"statistics_{timestamp_filename}.txt"
+    state["stats_file_path"] = statistics_path
 
     with open(statistics_path, "w", encoding="utf-8") as f:
         f.write("\n".join(header_lines))
@@ -128,8 +130,8 @@ def __print_statistics(state: AgentState) -> AgentState:
     visualizations = state.get("visualizations")
     # TODO: das kann direkt im oberen Loop mit ausgegeben werden
     if visualizations:
-        for vis in visualizations.visualizations:
-            vis_index = getattr(getattr(vis, "goal", None), "index", None)
+        for i, vis in enumerate(visualizations):
+            vis_index = i
             print_color(f"LIDA Judge for vis#{vis_index if vis_index is not None else 'n/a'}", Color.WARNING)
 
             # prefer post if exists, else pre if exists; also print both if both present
@@ -206,8 +208,8 @@ def build_graph():
     # graph.add_node("LLM refactor_visualizations", llm_refactor_visualizations)
     # graph.add_edge("LLM judge_plots", "LLM refactor_visualizations")
     # graph.add_edge("LLM refactor_visualizations", "test_generated_code")
-    # graph.add_edge("LLM regenerate_code", "test_generated_code")
-    # graph.add_edge("LLM evaluate_visualizations #2", "statistics")
+    graph.add_edge("LLM regenerate_code", "test_generated_code")
+    graph.add_edge("LLM evaluate_visualizations #2", "statistics")
     graph.add_node("LLM evaluate_visualizations #2", llm_evaluate_visualizations)
     graph.add_node("statistics", __print_statistics)
     graph.add_edge("statistics", END)

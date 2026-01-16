@@ -61,7 +61,5 @@ def test_generated_code(state: AgentState) -> AgentState:
         else:
             vis.code.std_err = "No errors from generated code."
         print_color(f"Testing generated code ({language.value}) for vis#{i}: ", Color.HEADER)
-        print("output: ", result.stdout)
-        print("error: ", result.stderr)
 
     return state

@@ -36,3 +36,5 @@ class AgentState(TypedDict):
     number_visualization_goals: int
     # LIDA evaluation
     is_before_refactoring: bool
+    # statistics
+    stats_file_path: str

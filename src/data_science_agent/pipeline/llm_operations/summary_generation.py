@@ -74,12 +74,8 @@ def llm_generate_summary(state: AgentState) -> AgentState:
                 LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
             break
 
-    print_color(f"LLM result: ", Color.HEADER)
     summary: Summary = llm_response["structured_response"]
-    print_color(f"Dataset Summary: ", Color.OK_GREEN)
-    print(summary.summary)
-    print_color(f"\nColumn Descriptions:", Color.OK_BLUE)
-    print(summary.columns)
+    print_color(f"Generated Dataset Summary.", Color.OK_GREEN)
 
     state["summary"] = summary
 

@@ -1,4 +1,5 @@
 import os
+import shutil
 
 from langchain_openai import ChatOpenAI
 
@@ -30,3 +31,11 @@ def clear_output_dir(path: str):
                     os.remove(file_path)
             except Exception as e:
                 print(f"Error deleting file {file_path}: {e}")
+
+def archive_images(path, index):
+    files = os.listdir(path)
+    for file in files:
+        if file.endswith(".png") and not file == "graph.png":
+            os.makedirs(os.path.join(path, f"code_generation_#{index}"), exist_ok=True)
+            archive_dir = os.path.join(path, f"code_generation_#{index}")
+            shutil.copy(os.path.join(path, file), os.path.join(archive_dir, file))

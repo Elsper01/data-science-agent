@@ -10,7 +10,7 @@ from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
 from data_science_agent.utils import get_llm_model, AGENT_LANGUAGE, print_color, MAX_REGENERATION_ATTEMPTS, LLMMetadata
 from data_science_agent.utils.enums import LLMModel, Color
-from data_science_agent.utils.pipeline import clear_output_dir
+from data_science_agent.utils.pipeline import clear_output_dir, archive_images
 
 prompt = Prompt(
     de={
@@ -34,7 +34,7 @@ prompt = Prompt(
                 '{visualization_goal}'
             """,
     },
-    en={ # TODO: add english system prompt and adjust the user prompt
+    en={  # TODO: add english system prompt and adjust the user prompt
         "user_prompt":
             """
                 The previous code produced the following errors:
@@ -54,11 +54,13 @@ prompt = Prompt(
 
 Code = import_language_dto(AGENT_LANGUAGE, CodeBase)
 
+
 @track_duration
 def llm_regenerate_code(state: AgentState) -> AgentState:
     """Regenerates code using an LLM based on previous test results for each visualization."""
 
     # clean output directory before regenerating plots
+    archive_images(state["output_path"], state["regeneration_attempts"])
     clear_output_dir(state["output_path"])
 
     # increment global regeneration attempt counter
@@ -114,6 +116,6 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
                         LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
                     break
 
-            vis.code.needs_regeneration = False # TODO: für was wird das verwendet? kann das gelöscht werden?
+            vis.code.needs_regeneration = False  # TODO: für was wird das verwendet? kann das gelöscht werden?
 
     return state

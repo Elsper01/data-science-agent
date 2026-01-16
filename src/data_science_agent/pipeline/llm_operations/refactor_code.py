@@ -6,7 +6,7 @@ from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWr
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
-from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color, LLMMetadata
+from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, LLMMetadata
 from data_science_agent.utils.enums import LLMModel, Color
 
 prompt: Prompt = Prompt(
@@ -64,7 +64,7 @@ def llm_refactor_visualizations(state: AgentState) -> AgentState:
     system_prompt = prompt.get_prompt(AGENT_LANGUAGE, "refactor_system_prompt")
 
     base_agent = create_agent(
-        model=get_llm_model(LLMModel.GPT_5),
+        model=get_llm_model(LLMModel.MISTRAL),
         system_prompt=SystemMessage(content=system_prompt),
         response_format=Code,
     )

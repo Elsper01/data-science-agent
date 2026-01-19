@@ -61,7 +61,7 @@ prompt: Prompt = Prompt(
                 Verwende hierfür die Informationen aus der vorherigen Nachricht.
 
                 Der Datensatz kann mit folgendem Befehl geladen werden:
-                `df = pd.read_csv("'{dataset_path}'", sep="'{dataset_sep}'")`
+                `df = pd.read_csv("'{dataset_path}'", sep="'{dataset_sep}'", encoding="'{dataset_encoding}'")`
 
                 Vorgaben für den Code:
                 - Verwende ausschließlich `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, `basemap` und `plotly`.
@@ -92,6 +92,7 @@ prompt: Prompt = Prompt(
                 Der Datensatz kann aus der folgenden Datei geladen werden:
                 - Pfad zur Datei: `'{dataset_path}'`
                 - Trennzeichen: `'{dataset_sep}'`
+                - Encoding: `'{dataset_encoding}'`
 
                 Vorgaben für den Code:
                 - Der Code soll direkt ausführbar sein, ohne syntaktische Fehler.
@@ -162,7 +163,7 @@ prompt: Prompt = Prompt(
                 Use the information from the previous message for this purpose.
 
                 The dataset can be loaded using the following command:
-                `df = pd.read_csv("'{dataset_path}'", sep="'{dataset_sep}'")`
+                `df = pd.read_csv("'{dataset_path}'", sep="'{dataset_sep}'", encoding="'{dataset_encoding}'")`
 
                 Requirements for the code:
                 - Use only `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, `basemap`, and `plotly`.
@@ -193,6 +194,7 @@ prompt: Prompt = Prompt(
                 The dataset can be loaded from the following file:
                 - File path: `'{dataset_path}'`
                 - Separator: `'{dataset_sep}'`
+                - Encoding: `'{dataset_encoding}'`
 
                 Requirements for the code:
                 - The code shall be directly executable without syntax errors.
@@ -234,7 +236,8 @@ def llm_generate_python_code(state: AgentState) -> AgentState:
             AGENT_LANGUAGE,
             "generate_python_code",
             dataset_path=state["dataset_path"],
-            dataset_sep=";",
+            dataset_sep=state["dataset_delimiter"],
+            dataset_encoding=state["dataset_encoding"],
             df_head_markdown=str(state["dataset_df"].head(10).to_markdown()),
             output_path=state["output_path"],
             goal_index=index
@@ -312,7 +315,8 @@ def llm_generate_r_code(state: AgentState) -> AgentState:
             AGENT_LANGUAGE,
             "generate_r_code",
             dataset_path=state["dataset_path"],
-            dataset_sep=";",
+            dataset_sep=state["dataset_delimiter"],
+            dataset_encoding=state["dataset_encoding"],
             df_head_markdown=str(state["dataset_df"].head(10).to_markdown()),
             output_path=state["output_path"],
             goal_index=index

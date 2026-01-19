@@ -1,5 +1,9 @@
+import csv
 import re
+from typing import Any
+
 import chardet
+from pandas import DataFrame
 
 from data_science_agent.graph import AgentState
 
@@ -36,7 +40,7 @@ Citation:
 @track_duration
 def load_dataset(state: AgentState) -> AgentState:
     """Loads dataset and saves it as a dataframe in the agent state."""
-    state["dataset_df"] = read_dataframe(state["dataset_path"])
+    state["dataset_df"], state["dataset_delimiter"], state["dataset_encoding"] = read_dataframe(state["dataset_path"])
     return state
 
 
@@ -66,7 +70,7 @@ def clean_column_names(df: pd.DataFrame) -> pd.DataFrame:
     return cleaned_df
 
 
-def read_dataframe(file_location: str, encoding: str = 'utf-8') -> pd.DataFrame:
+def read_dataframe(file_location: str, encoding: str = 'utf-8') -> tuple[DataFrame, str, Any]:
     """
     Read a dataframe from a given file location and clean its column names.
 
@@ -79,8 +83,10 @@ def read_dataframe(file_location: str, encoding: str = 'utf-8') -> pd.DataFrame:
 
     with open(file_location, 'rb') as f:
         data = f.read()
+        dialect = csv.Sniffer().sniff(data[:1024].decode(errors='ignore'))
     encoding_result = chardet.detect(data)
     encoding = encoding_result['encoding']
+    delimiter = dialect.delimiter
 
     file_extension = file_location.split('.')[-1]
 
@@ -126,7 +132,7 @@ def read_dataframe(file_location: str, encoding: str = 'utf-8') -> pd.DataFrame:
             print(f"Failed to write file: {file_location}. Error: {e}")
             raise
 
-    return cleaned_df
+    return cleaned_df, delimiter, encoding
 
 
 def file_to_df(file_location: str):

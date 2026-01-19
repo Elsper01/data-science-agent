@@ -20,6 +20,8 @@ class AgentState(TypedDict):
     # Dataset
     dataset_path: str
     dataset_df: Any  # any because typing of np.dataframe is not easily possible
+    dataset_encoding: str
+    dataset_delimiter: str
     # Metadata
     metadata_path: str
     metadata: list[all_dtos["Metadata"]]
@@ -38,3 +40,4 @@ class AgentState(TypedDict):
     is_before_refactoring: bool
     # statistics
     stats_file_path: str
+    #

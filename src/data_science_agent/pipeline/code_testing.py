@@ -2,6 +2,7 @@ import subprocess
 import sys
 import os
 import tempfile
+import os
 
 from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
 from data_science_agent.graph import AgentState
@@ -9,6 +10,15 @@ from data_science_agent.pipeline.decorator.duration_tracking import track_durati
 from data_science_agent.utils import print_color
 from data_science_agent.utils.enums import ProgrammingLanguage, Color
 
+
+def _count_generated_imgs(state: AgentState, vis_index: int) -> int:
+    all_output_files = os.listdir(state["output_path"])
+    img_files = [f for f in all_output_files if f.lower().endswith(".png")]
+    img_count = 0
+    for img in img_files:
+        if img.startswith(f"{vis_index}_"):
+            img_count += 1
+    return img_count
 
 @track_duration
 def test_generated_code(state: AgentState) -> AgentState:
@@ -51,6 +61,10 @@ def test_generated_code(state: AgentState) -> AgentState:
                 text=True,
                 cwd=working_dir
             )
+
+        img_count = _count_generated_imgs(state, i)
+        key = f"{state["regeneration_attempts"]}"
+        vis.VER_values[key] = img_count
 
         if result.stdout:
             vis.code.std_out = result.stdout

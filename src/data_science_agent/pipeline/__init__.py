@@ -13,3 +13,4 @@ from data_science_agent.pipeline.decorator.duration_tracking import track_durati
 from data_science_agent.pipeline.metadata_analysis import analyse_metadata
 from data_science_agent.pipeline.llm_operations.goal_generation import llm_generate_goals
 from data_science_agent.pipeline.llm_operations.evualuate_visualizations import llm_evaluate_visualizations
+from data_science_agent.pipeline.statistics import print_statistics

@@ -107,7 +107,7 @@ def decide_regenerate_code(state: AgentState) -> AgentState:
             vis.code.needs_regeneration = False
 
     if any_needs_regeneration and state["regeneration_attempts"] < MAX_REGENERATION_ATTEMPTS:
-        print_color(f"Regenerating code, attempt {state['regeneration_attempts']}", Color.WARNING)
+        print_color(f"Regenerating code, attempt {state['regeneration_attempts'] + 1}", Color.WARNING)
         return "regenerate_code"
     elif state["regeneration_attempts"] == MAX_REGENERATION_ATTEMPTS:
         print_color(f"Max attempts limit ({MAX_REGENERATION_ATTEMPTS}) reached.", Color.OK_GREEN)

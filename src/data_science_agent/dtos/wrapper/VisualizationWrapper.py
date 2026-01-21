@@ -11,3 +11,4 @@ class VisualizationWrapper(BaseModel):
     code: Optional[Any] = Field(...)
     pre_refactoring_evaluation: Optional[Any] = Field(...)
     post_refactoring_evaluation: Optional[Any] = Field(...)
+    VER_values: dict = Field(default_factory=dict)

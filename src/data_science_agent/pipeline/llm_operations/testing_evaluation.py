@@ -97,14 +97,17 @@ def decide_regenerate_code(state: AgentState) -> AgentState:
 
             regeneration_response: Regeneration = llm_response["structured_response"]
 
-            vis.code.needs_regeneration = regeneration_response.should_be_regenerated
+            if vis.code.needs_regeneration is None:
+                vis.code.needs_regeneration = []
+
+            vis.code.needs_regeneration.append(regeneration_response.should_be_regenerated)
             print_color(f"Vis#{i} - Regeneration decision: {regeneration_response.should_be_regenerated}",
                         Color.OK_CYAN)
 
             if regeneration_response.should_be_regenerated:
                 any_needs_regeneration = True
         else:
-            vis.code.needs_regeneration = False
+            vis.code.needs_regeneration.append(False)
 
     if any_needs_regeneration and state["regeneration_attempts"] < MAX_REGENERATION_ATTEMPTS:
         print_color(f"Regenerating code, attempt {state['regeneration_attempts'] + 1}", Color.WARNING)

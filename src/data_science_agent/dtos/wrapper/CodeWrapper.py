@@ -9,7 +9,7 @@ class CodeWrapper(BaseModel):
     code: str = Field(...)
     std_out: Optional[str] = Field(...)
     std_err: Optional[str] = Field(...)
-    needs_regeneration: Optional[bool] = Field(...)
+    needs_regeneration: Optional[list[bool]] = Field(..., default_factory=list)
     regeneration_attempts: Optional[int] = Field(...)
     refactoring_attempts: Optional[int] = Field(...)
     judge_result: Optional[Any] = Field(...)

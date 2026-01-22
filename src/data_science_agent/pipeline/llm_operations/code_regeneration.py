@@ -74,7 +74,7 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
         if current_attempts is None:
             current_attempts = 0
         # if the code needs regeneration, and we haven't exceeded the max attempts, regenerate
-        if vis.code.needs_regeneration and current_attempts < MAX_REGENERATION_ATTEMPTS:
+        if vis.code.needs_regeneration[-1] and current_attempts < MAX_REGENERATION_ATTEMPTS:
             vis.code.regeneration_attempts = current_attempts + 1
 
             print_color(f"Regenerating code for vis#{i}, attempt {current_attempts}", Color.WARNING)
@@ -116,6 +116,6 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
                         LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
                     break
 
-            vis.code.needs_regeneration = False  # TODO: für was wird das verwendet? kann das gelöscht werden?
+            vis.code.needs_regeneration.append(False)
 
     return state

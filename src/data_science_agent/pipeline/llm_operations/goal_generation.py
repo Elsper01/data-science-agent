@@ -53,14 +53,14 @@ prompt: Prompt = Prompt(
     en={
         "system_prompt": \
             """
-                You are an experienced data analyst who can generate a specified number of meaningful goals based on a data summary. THE RECOMMENDED VISUALIZATIONS MUST FOLLOW BEST PRACTICES FOR VISUALIZATIONS (e.g. bar charts instead of pie charts for comparing quantities) AND BE MEANINGFUL (e.g. latitude and longitude only displayed on maps where appropriate). The target person is an open data portal user who wants to get a first insight into the data to find out whether this is the dataset they are looking for. Each goal must contain a question, a visualization (THE VISUALIZATION MUST NAME THE EXACT COLUMN FIELDS FROM THE SUMMARY) and a rationale (JUSTIFICATION WHY THESE SPECIFIC DATA FIELDS ARE USED AND WHAT IS LEARNED THROUGH THE VISUALIZATION). EACH GOAL MUST MENTION THE EXACT FIELDS FROM THE DATA SUMMARY ABOVE.
+                You are an experienced data analyst who can generate a specified number of meaningful GOALS based on a data summary. THE RECOMMENDED VISUALIZATIONS MUST FOLLOW VISUALIZATION BEST PRACTICES (e.g., bar charts instead of pie charts for comparing quantities) AND BE MEANINGFUL (e.g., only display latitude and longitude on maps where appropriate). The target person is an Open Data Portal user who wants a first insight into the data to find out if this is the dataset they are looking for. Each goal must include a question, a visualization (THE VISUALIZATION MUST MENTION THE EXACT COLUMN FIELDS FROM THE SUMMARY) and a justification (EXPLANATION WHY THESE DATA FIELDS ARE USED AND WHAT IS LEARNED THROUGH THE VISUALIZATION). Each goal MUST mention the exact fields from the data summary above.
             """,
         "user_prompt": \
             """
-                The number of GOALS to generate is {n}. The goals should be based on the data summary below:
+                The number of GOALS to generate is {n}. The goals should be based on the following data summary:
                 {summary}
-            """,
-    }
+            """
+    },
 )
 
 GoalContainer = import_language_dto(AGENT_LANGUAGE, GoalContainerBase)

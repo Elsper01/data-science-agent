@@ -34,19 +34,24 @@ prompt = Prompt(
                 '{visualization_goal}'
             """,
     },
-    en={  # TODO: add english system prompt and adjust the user prompt
+    en={
+        "system_prompt":
+            """
+                You are an experienced data analyst, expert at improving, refactoring, and fixing bugs in existing code.
+                You receive as input a visualization goal to be implemented with the code, the code itself, and the error messages that occurred during code execution.
+            """,
         "user_prompt":
             """
-                The previous code produced the following errors:
+                The previous code had the following errors:
                 stdout:
                 '{test_stdout}'
                 stderr:
                 '{test_stderr}'
 
-                Please regenerate the code and fix the errors above.
+                Please regenerate the code and fix the errors mentioned above.
                 This is the previous code:
                 '{code}'
-                This is the visualization goal that the code should achieve:
+                This is the visualization goal to be implemented with the code:
                 '{visualization_goal}'
             """,
     }
@@ -99,7 +104,7 @@ def llm_regenerate_code(state: AgentState) -> AgentState:
             ]
 
             temp_agent = create_agent(
-                model=get_llm_model(LLMModel.MISTRAL),
+                model=get_llm_model(LLMModel.GPT_5),
                 response_format=Code
             )
 

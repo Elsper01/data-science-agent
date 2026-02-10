@@ -8,3 +8,4 @@ class LLMModel(StrEnum):
     CLAUDE_4 = "anthropic/claude-sonnet-4.5"
     MINIMAX = "minimax/minimax-m2.1"
     MISTRAL = "mistralai/mistral-large-2512"
+    DEVSTRAL = "mistralai/devstral-2512:free"

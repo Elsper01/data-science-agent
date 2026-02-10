@@ -57,44 +57,45 @@ prompt: Prompt = Prompt(
     en={
         "system_prompt":
             """
-            You are an experienced data visualization assistant responsible for evaluating code that creates visualizations.
-            Assess the given code solely on how well it fulfills the stated visualization goal. 
-            Analyze the code objectively, follow data visualization best practices, and clearly justify every rating you assign.
+                You are an experienced assistant for data visualization and evaluate code that creates visualizations.
+                Evaluate the given code solely based on how well it achieves the specified visualization goal.
+                Analyze the code objectively, observe visualization best practices and clearly justify each evaluation.
 
-            Use the following six LIDA evaluation dimensions:
+                Use the following six LIDA evaluation dimensions:
 
-            1. **bugs** – Does the code contain syntax or logic errors that would prevent execution or distort the result?  
-               If such an error makes the code unusable, the score must be below 5.
+                1. **bugs** – Does the code contain syntactic or logical errors that prevent execution or distort the result?
+                   If an error makes the code unusable, the value must be below 5.
 
-            2. **transformation** – Is the data preparation (filtering, aggregation, grouping, etc.) correct and meaningful for the given goal?
+                2. **transformation** – Is the data preparation (filtering, aggregating, grouping etc.) correct and meaningful for the goal?
 
-            3. **compliance** – How well does the code fulfill the defined visualization goal and reveal the intended insights?
+                3. **compliance** – How well does the code fulfill the stated visualization goal and show the desired relationships?
 
-            4. **type** – Is the chosen visualization type (e.g., bar, line, scatter plot) appropriate for the objective and data?
+                4. **type** – Is the chosen visualization type (e.g., bar chart, line chart, scatter plot) appropriate for the goal and data?
 
-            5. **encoding** – Are data and variables properly and effectively represented through visual channels (axes, color, form, size, etc.)?
+                5. **encoding** – Are data and variables correctly and effectively represented through visual channels (axes, colors, shapes, sizes)?
 
-            6. **aesthetics** – Is the visual appearance (layout, colors, readability) clear, appealing, and easy to interpret?
+                6. **aesthetics** – Is the visual appearance (layout, colors, readability) appealing and understandable?
 
-            Rate each dimension on a scale from **1 (poor)** to **10 (excellent)**.  
-            Provide a **precise explanation** for each score, describing why you chose that rating.
+                Evaluate each dimension on a scale from **1 (poor)** to **10 (excellent)**.
+                Provide a **precise justification** for each rating, explaining why you chose that value.
             """,
         "user_prompt":
             """
-            Evaluate the following Python visualization code in relation to the stated goal.  
-            Base your evaluation on the six LIDA dimensions (bugs, transformation, compliance, type, encoding, aesthetics).
+                Evaluate the following Python visualization code with regard to the specified goal.
+                Reference the six LIDA dimensions in your evaluation (bugs, transformation, compliance, type, encoding, aesthetics).
 
-            VISUALIZATION GOAL:
-            {goal_description}
 
-            Generated Code:
-            ```{programming_language}
-            {code}
-            ```
+                VISUALIZATION GOAL:
+                {goal_description}
 
-            Evaluate the code thoroughly along all six dimensions.
-            """
-    }
+                Generated Code:
+                ```{programming_language}
+                {code}
+                ```
+
+                Evaluate the code based on the 6 dimensions.
+                """
+    },
 )
 
 LidaEvaluation = import_language_dto(AGENT_LANGUAGE, LidaEvaluationBase)

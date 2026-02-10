@@ -34,18 +34,14 @@ prompt = Prompt(
     en={
         "decide_regenerate_code_system_prompt": \
             """
-                You are an expert in interpreting code output.
-                Determine whether the given text contains errors that make regeneration of the code necessary.
-                Answer with a boolean: true if the code contains critical errors that require regeneration,
-                false otherwise.
-                Note: You receive the content of stdout and stderr.
-                Some lines may contain informational or deprecated warnings — these must be distinguished from real exceptions
-                that prevent a plot from being created or block the rest of the script.
+                You are an expert at interpreting code output and deciding whether the given text contains errors that require code regeneration.
+                Answer with a boolean value, which is true only if the code contains errors that make regeneration absolutely necessary.
+                Otherwise, respond with false.
+                Important: You receive the text from stdout and stderr of the code. This means there may only be informational messages or deprecated warnings included, which you must distinguish from true errors or exceptions that absolutely need to be corrected in order for a chart to be generated and not hinder the remaining execution of the script.
             """,
         "decide_regenerate_code_user_prompt": \
             """
-                Here is the program output (stdout) and the error output (stderr):
-
+                Here is the standard output (stdout) and error output (stderr) of the code:
                 stdout:
                 '{test_stdout}'
 
@@ -54,7 +50,7 @@ prompt = Prompt(
 
                 Please decide whether the code absolutely needs to be regenerated.
             """,
-    }
+    },
 )
 
 Regeneration = import_language_dto(AGENT_LANGUAGE, RegenerationBase)

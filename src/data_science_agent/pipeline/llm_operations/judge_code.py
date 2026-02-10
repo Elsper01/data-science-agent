@@ -37,22 +37,22 @@ prompt: Prompt = Prompt(
         "judge_system_prompt":
             """
                 You are an expert in data visualization and analytical communication.
-                Your task is to review and evaluate code that produces individual charts or visualizations.
-                Create a detailed critique for EACH visualization based on appropriateness, clarity, data-fidelity, aesthetics, technical correctness and improvement suggestions.
+                Your task is to review and evaluate code that generates individual diagrams or visualizations.
+                Create a detailed critique for EACH visualization based on appropriateness, clarity, fidelity to the data, aesthetics, technical correctness, and improvement suggestions.
                 Evaluate whether the code correctly implements the specified visualization goal.
             """,
         "judge_user_prompt":
             """
                 The following code was used to create a visualization for the specified goal.
-                Please evaluate this visualization according to the criteria and provide a detailed critique.
+                Please evaluate this visualization based on the mentioned criteria and provide a detailed critique.
 
                 VISUALIZATION GOAL:
                 {goal_description}
 
-                Generated code:
+                Generated Code:
                 {code}
-            """,
-    }
+            """
+    },
 )
 
 JudgeVerdict = import_language_dto(AGENT_LANGUAGE, JudgeVerdictBase)

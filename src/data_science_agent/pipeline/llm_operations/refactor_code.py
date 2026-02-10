@@ -33,10 +33,10 @@ prompt: Prompt = Prompt(
     },
     en={
         "refactor_system_prompt": """
-            You are an experienced developer and code‑refactoring agent.
-            You receive judgments from a Judge agent and should refactor
-            the affected code accordingly. Return the full, refactored
-            code and briefly comment changes.
+            You are an experienced developer and code refactoring agent.
+            You receive evaluations (verdicts) from the Judge agent and should
+            revise the affected code. At the end, return the complete,
+            revised code and briefly comment on the changes.
         """,
         "refactor_user_prompt": """
             Here is the current code to be refactored:
@@ -45,13 +45,13 @@ prompt: Prompt = Prompt(
             {code}
             --- CODE END ---
 
-            Here are the verdicts from the Judge agent:
+            Here are the evaluations (verdicts) returned by the Judge agent:
             {judge_messages}
 
-            Please refactor the code based on these verdicts and return
-            the full source code.
+            Please refactor the code based on these evaluations
+            and return the completely revised source code.
         """
-    }
+    },
 )
 
 Code = import_language_dto(AGENT_LANGUAGE, CodeBase)

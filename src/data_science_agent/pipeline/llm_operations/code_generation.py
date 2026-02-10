@@ -56,31 +56,31 @@ prompt: Prompt = Prompt(
             """,
         "generate_python_code": \
             """
-                Erzeuge mir basierend auf den vorherigen Informationen Python-Code,
-                der eine explorative Datenanalyse (EDA) des Datensatzes durchführt und das Visualierungsziel umsetzt.
+                Erzeuge mir ein Python-Skript, das eine explorative Datenanalyse (EDA) des Datensatzes durchführt und das Visualisierungsziel umsetzt.
                 Verwende hierfür die Informationen aus der vorherigen Nachricht.
 
-                Der Datensatz kann mit folgendem Befehl geladen werden:
-                `df = pd.read_csv("'{dataset_path}'", sep="'{dataset_sep}'", encoding="'{dataset_encoding}'")`
+                Der Datensatz kann aus der folgenden Datei geladen werden:
+                - Pfad zur Datei: `'{dataset_path}'`
+                - Trennzeichen: `'{dataset_sep}'`
+                - Encoding: `'{dataset_encoding}'`
 
                 Vorgaben für den Code:
-                - Verwende ausschließlich `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, `basemap` und `plotly`.
-                - Der Code direkt ausführbar sein, ohne syntaktische Fehler.
-                - Alle Diagramme sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
+                - Der Code soll direkt ausführbar sein, ohne syntaktische Fehler.
+                - Alle Visualisierungen sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
                   `{output_path}{goal_index}_<plot_name>.png`
-                - Wähle Diagrammtypen basierend auf die Hinweise im Visualisierungsziel. 
-                - Führe auch kurze statistische Analysen durch, wenn diese benötigt werden um das Visualisierungsziel zu erreichen. Beispiele für kurze, sinnvolle Analysen:
+                - Wähle Diagrammtypen entsprechend der Hinweise im Visualisierungsziel.
+                - Führe auch kurze statistische Analysen durch, falls diese benötigt werden um das Visualisierungsziel zu erreichen. Beispiele für kurze, sinnvolle Analysen:
                   - Anteil fehlender Werte je Spalte,
                   - Korrelationen numerischer Variablen,
                   - Übersichtstabellen zu zentralen Kennwerten (Mittelwert, Standardabweichung etc.).
                 - Verwende Farben, Beschriftungen und Titel sinnvoll:
                   - Titel sollen beschreiben, was gezeigt wird (auf Deutsch),
                   - Legenden und Achsenbeschriftungen sollen keine Information abschneiden,
-                  - Achsen in SI-Einheiten oder sinnvollen Skalen beschriften.
+                  - Achsen in Einheiten oder sinnvollen Skalen beschriften.
                 - Es soll bei allen Berechnungen und Plots beachtet und berücksichtigt werden, dass fehlende Werte und auch String und Boolean Werte im Datensatz vorhanden sind. Also entsprechend damit umgehen.
                 - Der zurückgegebene Code soll in UTF-8 kodiert sein.
 
-                Zum besseren Verständnis:
+                Zum besseren Verständnis:  
                 Das ist das Ergebnis von `df.head(10)` auf den Datensatz:
                 '{df_head_markdown}'
             """,
@@ -115,11 +115,10 @@ prompt: Prompt = Prompt(
                 '{df_head_markdown}'
             """,
     },
-    # TODO: wir müssen, encoding und seperator direkt beim load_data in den agentstate packen
     en={
         "generate_code_system_prompt": \
             """
-                You are an expert in data science, {programming_language} programming, and data visualization.
+                You are an expert in data science, {programming_language} programming and data visualization.
                 {library_instruction}
                 Your main task is to generate code to implement and visualize a visualization goal for the dataset.
                 Observe the following principles:
@@ -130,57 +129,57 @@ prompt: Prompt = Prompt(
                    - Data fidelity,
                    - Aesthetic design,
                    - Technical correctness,
-                   - Communication effectiveness,
+                   - Effectiveness of communication,
                    - Constructive improvement suggestions
-                3. You must not generate or reproduce any confidential or copyrighted data.
+                3. Do not generate or reproduce any confidential or copyrighted data.
                 4. All responses shall contain UTF-8 compatible {programming_language} code.
                 When generating code, it should be immediately executable.
-                5. FOR EACH VISUALIZATION GOAL, A SEPARATE SCRIPT shall be created and MAXIMALLY ONE VISUALIZATION PER SCRIPT.
+                5. ONE SEPARATE SCRIPT shall be created FOR EACH VISUALIZATION GOAL and MAXIMALLY ONE VISUALIZATION per script.
                 6. EACH SCRIPT shall save the visualization as a PNG file in the output directory.
-                7. Only print text to system output, if really necessary, like there is a error.
-                8. Do not use comments and dont document the code.
+                7. Only output text to stdout if absolutely necessary, e.g., if an error occurs.
+                8. Do not use comments and do not document the code.
             """,
         "generate_code_python_lib_instruction": \
-            "Use only the following libraries: pandas, numpy, matplotlib.pyplot, seaborn, geopandas, basemap, and plotly.",
+            "Use only the following libraries: pandas, numpy, matplotlib.pyplot, seaborn, geopandas, basemap and plotly.",
         "generate_code_r_lib_instruction": \
             "Install and load all required packages at the beginning of the script (add install.packages/libraries).",
         "generate_code_description_user_prompt": \
             """
-                You receive a summary of the dataset, an explanation of all columns, and the visualization goal to implement.
-                Your task is to generate code based on this that performs an exploratory data analysis (EDA) and creates ONE suitable visualization for each visualization goal.
+                You receive a summary of the dataset, an explanation of all columns, and the visualization goal to be implemented.
+                Your task is to generate code based on this information that performs an exploratory data analysis (EDA) and creates ONE appropriate visualization for the visualization goal.
                 The visualization goal must always be implemented.
 
                 Summary of the dataset and explanation of the columns:
                 '{summary}'
 
-                The visualization goals to implement:
-                '{visualization_goal}' 
+                The visualization goal to be implemented:
+                '{visualization_goal}'
             """,
         "generate_python_code": \
             """
-                Generate {programming_language} code based on the previous information,
-                that performs an exploratory data analysis (EDA) of the dataset and implements the visualization goal.
-                Use the information from the previous message for this purpose.
+                Generate a Python script that performs an exploratory data analysis (EDA) of the dataset and implements the visualization goal.
+                Use the information from the previous message for this.
 
-                The dataset can be loaded using the following command:
-                `df = pd.read_csv("'{dataset_path}'", sep="'{dataset_sep}'", encoding="'{dataset_encoding}'")`
+                The dataset can be loaded from the following file:
+                - File path: `'{dataset_path}'`
+                - Separator: `'{dataset_sep}'`
+                - Encoding: `'{dataset_encoding}'`
 
-                Requirements for the code:
-                - Use only `pandas`, `numpy`, `matplotlib.pyplot`, `seaborn`, `geopandas`, `basemap`, and `plotly`.
-                - The code must be directly executable without syntax errors.
-                - All charts shall be visually appealing, well-labeled (in German), readable, and saved as PNG files at:
+                Specifications for the code:
+                - The code should be directly executable without syntax errors.
+                - All visualizations should be visually appealing, well labeled (in German), readable and saved as PNG files under:
                   `{output_path}{goal_index}_<plot_name>.png`
-                - Choose chart types based on the hints in the visualization goal.
+                - Choose chart types according to the hints in the visualization goal.
                 - Also perform short statistical analyses if needed to achieve the visualization goal. Examples of short, meaningful analyses:
                   - Proportion of missing values per column,
                   - Correlations of numerical variables,
                   - Overview tables of central measures (mean, standard deviation, etc.).
-                - Use colors, labels, and titles meaningfully:
+                - Use colors, labels and titles meaningfully:
                   - Titles should describe what is shown (in German),
-                  - Legends and axis labels should not cut off information,
-                  - Label axes in SI units or meaningful scales.
-                - All calculations and plots shall consider and account for missing values as well as string and Boolean values in the dataset.
-                - The returned code shall be UTF-8 encoded.
+                  - Legends and axis labels should not cut off any information,
+                  - Label axes with units or appropriate scales.
+                - It should be considered and taken into account in all calculations and plots that missing values as well as string and boolean values are present in the dataset. Handle them accordingly.
+                - The returned code should be UTF-8 encoded.
 
                 For better understanding:
                 This is the result of `df.head(10)` on the dataset:
@@ -189,34 +188,34 @@ prompt: Prompt = Prompt(
         "generate_r_code": \
             """
                 Generate an R script that performs an exploratory data analysis (EDA) of the dataset and implements the visualization goal.
-                Use the information from the previous message for this purpose.
+                Use the information from the previous message for this.
 
                 The dataset can be loaded from the following file:
                 - File path: `'{dataset_path}'`
                 - Separator: `'{dataset_sep}'`
                 - Encoding: `'{dataset_encoding}'`
 
-                Requirements for the code:
-                - The code shall be directly executable without syntax errors.
-                - All visualizations shall be visually appealing, well-labeled (in German), readable, and saved as PNG files at:
+                Specifications for the code:
+                - The code should be directly executable without syntax errors.
+                - All visualizations should be visually appealing, well labeled (in German), readable and saved as PNG files under:
                   `{output_path}{goal_index}_<plot_name>.png`
                 - Choose chart types according to the hints in the visualization goal.
                 - Also perform short statistical analyses if needed to achieve the visualization goal. Examples of short, meaningful analyses:
                   - Proportion of missing values per column,
                   - Correlations of numerical variables,
                   - Overview tables of central measures (mean, standard deviation, etc.).
-                - Use colors, labels, and titles meaningfully:
+                - Use colors, labels and titles meaningfully:
                   - Titles should describe what is shown (in German),
-                  - Legends and axis labels should not cut off information,
-                  - Label axes in units or meaningful scales.
-                - All calculations and plots shall consider and account for missing values as well as string and Boolean values in the dataset.
-                - The returned code shall be UTF-8 encoded.
+                  - Legends and axis labels should not cut off any information,
+                  - Label axes with units or appropriate scales.
+                - It should be considered and taken into account in all calculations and plots that missing values as well as string and boolean values are present in the dataset. Handle them accordingly.
+                - The returned code should be UTF-8 encoded.
 
-                For better understanding:  
+                For better understanding:
                 This is the result of `df.head(10)` on the dataset:
                 '{df_head_markdown}'
             """,
-    }
+    },
 )
 
 Goal = import_language_dto(AGENT_LANGUAGE, GoalBase)
@@ -249,16 +248,22 @@ def llm_generate_python_code(state: AgentState) -> AgentState:
         llm_response = temp_agent.invoke({"messages": messages})
 
         code: Code = llm_response["structured_response"]
-        vis.code = code
-
+        vis.code = CodeWrapper(
+            code=code.code,
+            std_out=None,
+            std_err=None,
+            needs_regeneration=None,
+            regeneration_attempts=None,
+            refactoring_attempts=None,
+            judge_result=None
+        )
         print_color(f"LLM generated visualization code.", Color.OK_GREEN)
 
         for message in reversed(llm_response["messages"]):
             if isinstance(message, AIMessage):
                 state["llm_metadata"].append(
-                    LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name)
-                )
-                break
+                    LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
+            break
 
     return state
 

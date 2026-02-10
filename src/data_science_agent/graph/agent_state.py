@@ -12,6 +12,7 @@ all_dtos = import_all_language_dtos(AGENT_LANGUAGE)
 class AgentState(TypedDict):
     """Represents the state of the data science agent throughout its workflow."""
     # General
+    dataset_dir: str
     output_path: str
     messages: list[HumanMessage, AIMessage]
     durations: list[DurationMetadata]

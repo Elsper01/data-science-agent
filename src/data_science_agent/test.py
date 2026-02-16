@@ -1,5 +1,4 @@
 import os
-import random
 import shutil
 import traceback
 from time import time
@@ -10,15 +9,20 @@ from data_science_agent.utils import print_color, enums
 datasets = os.listdir("./src/resources/data/study")
 
 # random.seed(42)
-selected_datasets = datasets #random.sample(datasets, k=20)
+selected_datasets = datasets  # random.sample(datasets, k=20)
 
 counter_success = 0
 counter_fail = 0
 start = time()
 
-for i, dataset in enumerate(selected_datasets):
-    print(f"Dataset: {i}")
+from tqdm import tqdm
 
+total_datasets = len(selected_datasets)
+start_time_total = time()
+
+for i, dataset in tqdm(enumerate(selected_datasets), total=total_datasets, desc="Processing datasets"):
+    iteration_start = time()
+    print(f"\nDataset: {dataset}")
 
     agent = build_graph()
 
@@ -57,9 +61,14 @@ for i, dataset in enumerate(selected_datasets):
         counter_fail += 1
         continue
 
-    print_color(f"Agent finished in {time() - start} seconds.", enums.Color.WARNING)
-    print_color(f"Generations failed: {counter_fail}", enums.Color.WARNING)
-    print_color(f"Generations {counter_success} successful", enums.Color.WARNING)
+    elapsed_this = time() - iteration_start
+    elapsed_total = time() - start_time_total
+
+    # Estimate remaining time
+    avg_per_dataset = elapsed_total / (i + 1)
+    remaining = avg_per_dataset * (total_datasets - i - 1)
+
+    print(f"Dataset {i}/{total_datasets} | Elapsed: {elapsed_total:.1f}s | Remaining: ~{remaining:.1f}s")
 
     # copy the summary to the output folder
     files = os.listdir("./src/resources/statistics/")
@@ -68,3 +77,6 @@ for i, dataset in enumerate(selected_datasets):
         key=os.path.getctime,
     )
     shutil.copy(latest_file, f"./src/resources/output/{dataset}/")
+
+print_color(f"Generations failed: {counter_fail}", enums.Color.WARNING)
+print_color(f"Generations {counter_success} successful", enums.Color.WARNING)

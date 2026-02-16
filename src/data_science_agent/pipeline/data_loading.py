@@ -81,18 +81,34 @@ def read_dataframe(file_location: str, encoding: str = 'utf-8') -> tuple[DataFra
     :return: A cleaned DataFrame.
     """
 
+    # with open(file_location, 'rb') as f:
+    #     data = f.read()
+    #     dialect = csv.Sniffer().sniff(data[:1024].decode(errors='ignore'))
+    # encoding_result = chardet.detect(data)
+    # encoding = encoding_result['encoding']
+    # delimiter = dialect.delimiter
+
     with open(file_location, 'rb') as f:
-        data = f.read()
-        dialect = csv.Sniffer().sniff(data[:1024].decode(errors='ignore'))
-    encoding_result = chardet.detect(data)
-    encoding = encoding_result['encoding']
-    delimiter = dialect.delimiter
+        raw_data = f.read(4096)
+    encoding_guess = chardet.detect(raw_data).get('encoding', encoding) or encoding
+
+    try:
+        preview = raw_data.decode(encoding_guess)
+    except Exception:
+        encoding_guess = 'latin1'
+        preview = raw_data.decode(encoding_guess, errors='ignore')
+
+    try:
+        dialect = csv.Sniffer().sniff(preview)
+        delimiter = dialect.delimiter
+    except csv.Error:
+        delimiter = ';'
 
     file_extension = file_location.split('.')[-1]
 
     read_funcs = {
         'json': lambda: pd.read_json(file_location, orient='records', encoding=encoding),
-        'csv': lambda: pd.read_csv(file_location, sep=None, engine='python', encoding=encoding),
+        'csv': lambda: pd.read_csv(file_location, engine='python', encoding=encoding_guess, delimiter=delimiter),
         'xls': lambda: pd.read_excel(file_location, encoding=encoding),
         'xlsx': lambda: pd.read_excel(file_location, encoding=encoding),
         'parquet': pd.read_parquet,

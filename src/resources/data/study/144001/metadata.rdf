@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <dcat:Dataset rdf:about="https://www-genesis.destatis.de/genesis-old/downloads/00/tables/42111-0021_00.csv#dataset">
+    <dct:title>Beschäftigte und Umsatz der fachlichen Betriebsteile imVerarbeitenden Gewerbe: Deutschland, Jahre,Wirtschaftszweige (WZ2008 Hauptgruppen und Aggregate)</dct:title>
+    <dct:description>Beschäftigte und Umsatz der fachlichen Betriebsteile imVerarbeitenden Gewerbe: Deutschland, Jahre,Wirtschaftszweige (WZ2008 Hauptgruppen und Aggregate)</dct:description>
+    <dct:identifier rdf:resource="https://www-genesis.destatis.de/genesis-old/downloads/00/tables/42111-0021_00"/>
+    <dcat:keyword>auslandsumsatz</dcat:keyword>
+    <dcat:keyword>auslandsumsatz-mit-dem-sonstigen-ausland</dcat:keyword>
+    <dcat:keyword>auslandsumsatz-mit-der-eurozone</dcat:keyword>
+    <dcat:keyword>bergbau-und-gewinnung-von-steinen-und-erden</dcat:keyword>
+    <dcat:keyword>bergbau-und-verarbeitendes-gewerbe</dcat:keyword>
+    <dcat:keyword>beschäftigte</dcat:keyword>
+    <dcat:keyword>betriebe</dcat:keyword>
+    <dcat:keyword>deutschland</dcat:keyword>
+    <dcat:keyword>deutschland-insgesamt</dcat:keyword>
+    <dcat:keyword>energie-ohne-abschnitt-d</dcat:keyword>
+    <dcat:keyword>fachliche-betriebsteile</dcat:keyword>
+    <dcat:keyword>gebrauchsgüter</dcat:keyword>
+    <dcat:keyword>inlandsumsatz</dcat:keyword>
+    <dcat:keyword>investitionsgüter</dcat:keyword>
+    <dcat:keyword>jahr</dcat:keyword>
+    <dcat:keyword>monatsbericht-im-verarbeitenden-gewerbe</dcat:keyword>
+    <dcat:keyword>umsatz</dcat:keyword>
+    <dcat:keyword>verarbeitendes-gewerbe</dcat:keyword>
+    <dcat:keyword>verbrauchsgüter</dcat:keyword>
+    <dcat:keyword>vorleistungsgüter</dcat:keyword>
+    <dcat:keyword>wz2008-hauptgruppen-aggregate--verarb.-gewerbe</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-10-02T11:30:33</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-28T17:02:30</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ECON"/>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="N1fdfa84e108c4c9dbba29b9c459c2527">
+        <vcard:fn>Statistisches Bundesamt</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:https://www.destatis.de/kontakt"/>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:nodeID="N3cd6f610b34244ef83e72484a8c91b93">
+        <foaf:name>Statistisches Bundesamt</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://www-genesis.destatis.de/genesis-old/downloads/00/tables/42111-0021_00.csv#distribution">
+        <dct:description>Beschäftigte und Umsatz der fachlichen Betriebsteile imVerarbeitenden Gewerbe: Deutschland, Jahre,Wirtschaftszweige (WZ2008 Hauptgruppen und Aggregate)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www-genesis.destatis.de/genesis-old/downloads/00/tables/42111-0021_00.csv"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-19T07:51:50.258842</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-19T07:51:50.224967</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://www-genesis.destatis.de/genesis-old/downloads/00/tables/42111-0021_00.xml#distribution">
+        <dct:description>Beschäftigte und Umsatz der fachlichen Betriebsteile imVerarbeitenden Gewerbe: Deutschland, Jahre,Wirtschaftszweige (WZ2008 Hauptgruppen und Aggregate)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www-genesis.destatis.de/genesis-old/downloads/00/tables/42111-0021_00.xml"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/xml"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-19T07:51:50.258847</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-19T07:51:50.225206</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/federal"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/genesisDestatis"/>
+  </dcat:Dataset>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/2.0">
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/xml"/>
+  <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/DEU"/>
+  <rdfs:Resource rdf:about="https://www-genesis.destatis.de/genesis-old/downloads/00/tables/42111-0021_00.xml"/>
+  <rdfs:Resource rdf:about="https://www-genesis.destatis.de/genesis-old/downloads/00/tables/42111-0021_00.csv"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+</rdf:RDF>

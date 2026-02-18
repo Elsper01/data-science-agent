@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <dcat:Dataset rdf:about="https://open.bydata.de/api/hub/repo/datasets/21111-101-09678181">
+    <dct:title>Stadtlauringen, M: Allgemein bildende Schulen</dct:title>
+    <dct:description>Allgemein bildende Schulen: Gemeinden, Schulen, Lehrkräfte,Klassen, Schüler, Unterrichtswochenstunden, Art derallgemein bildenden Schulen, Schuljahre</dct:description>
+    <dct:identifier>21111-101-09678181</dct:identifier>
+    <dcat:keyword>abendgymnasien</dcat:keyword>
+    <dcat:keyword>abendrealschulen</dcat:keyword>
+    <dcat:keyword>allg.bild.schulen-insg.-mit-wirtschaftsschulen</dcat:keyword>
+    <dcat:keyword>allg.bild.schulen-insg.-ohne-wirtschaftsschulen</dcat:keyword>
+    <dcat:keyword>allg.bild.schulen-ohne-sonstige-einschl.wirtsch.</dcat:keyword>
+    <dcat:keyword>art-der-allgemein-bildenden-schulen-1</dcat:keyword>
+    <dcat:keyword>freie-waldorfschulen</dcat:keyword>
+    <dcat:keyword>förderschulen</dcat:keyword>
+    <dcat:keyword>förderzentren</dcat:keyword>
+    <dcat:keyword>gemeinden-bayerns-einschl.-gemeindefreie-gebiete</dcat:keyword>
+    <dcat:keyword>grund--sowie-mittel-hauptschulen</dcat:keyword>
+    <dcat:keyword>grundschulen</dcat:keyword>
+    <dcat:keyword>gymnasien</dcat:keyword>
+    <dcat:keyword>klassen</dcat:keyword>
+    <dcat:keyword>kollegs</dcat:keyword>
+    <dcat:keyword>mittel-hauptschulen</dcat:keyword>
+    <dcat:keyword>realschulen</dcat:keyword>
+    <dcat:keyword>realschulen-einschließlich-wirtschaftsschulen</dcat:keyword>
+    <dcat:keyword>realschulen-zur-sonderpädagogischen-förderung</dcat:keyword>
+    <dcat:keyword>schulen</dcat:keyword>
+    <dcat:keyword>schulen-bes.art-schulartunabh.orientierungsstufen</dcat:keyword>
+    <dcat:keyword>schulen-besonderer-art-gesamtschulen</dcat:keyword>
+    <dcat:keyword>schulen-des-zweiten-bildungswegs</dcat:keyword>
+    <dcat:keyword>schuljahr</dcat:keyword>
+    <dcat:keyword>schüler</dcat:keyword>
+    <dcat:keyword>sonstige-allgemein-bildende-schulen</dcat:keyword>
+    <dcat:keyword>stadtlauringen-m</dcat:keyword>
+    <dcat:keyword>statistik-der-allgemein-bildenden-schulen</dcat:keyword>
+    <dcat:keyword>unterrichtswochenstunden</dcat:keyword>
+    <dcat:keyword>volksschulen-z.sonderpäd.förd.-indiv.lebensbew.</dcat:keyword>
+    <dcat:keyword>voll--und-teilzeitbeschäftigte-lehrkräfte</dcat:keyword>
+    <dcat:keyword>wirtschaftsschulen</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-17T17:23:03</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-17T17:23:03</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/TECH"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dct:relation>
+      <rdfs:Resource rdf:about="https://open.bydata.de/datasets/21111-101-d"/>
+    </dct:relation>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="Ne7b377368e244255a10cb65d42d939bf">
+        <vcard:fn>Bayerisches Landesamt für Statistik</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:info@statistik.bayern.de"/>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:nodeID="N4fd306dbe94e4721af748ed4431b04d1">
+        <foaf:name>Bayerisches Landesamt für Statistik</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/ddfba316-0a4b-43fd-a9fb-7f06a3ab40f9">
+        <dct:title>Allgemein bildende Schulen - XML</dct:title>
+        <dct:description>Allgemein bildende Schulen: Gemeinden, Schulen, Lehrkräfte,Klassen, Schüler, Unterrichtswochenstunden, Art derallgemein bildenden Schulen, Schuljahre</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=21111-101z&amp;option=xml&amp;regionalschluessel=09678181&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/xml"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/xml"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-26T04:04:02.337991</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-17T17:23:06</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/f8f2c9ac-dc3c-4b87-bcac-d35cf77292d4">
+        <dct:title>Allgemein bildende Schulen - Flat CSV</dct:title>
+        <dct:description>Allgemein bildende Schulen: Gemeinden, Schulen, Lehrkräfte,Klassen, Schüler, Unterrichtswochenstunden, Art derallgemein bildenden Schulen, Schuljahre</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=21111-101z&amp;option=ffcsv&amp;regionalschluessel=09678181&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/csv"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-26T04:04:02.337996</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-17T17:23:06</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/b3160a44-2683-48f3-9298-6517324e4774">
+        <dct:title>Allgemein bildende Schulen - XLSX</dct:title>
+        <dct:description>Allgemein bildende Schulen: Gemeinden, Schulen, Lehrkräfte,Klassen, Schüler, Unterrichtswochenstunden, Art derallgemein bildenden Schulen, Schuljahre</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=21111-101z&amp;option=xlsx&amp;regionalschluessel=09678181&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/xlsx"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/xls"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-26T04:04:02.337998</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-17T17:23:06</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/f645eba0-acbb-46b1-b1c4-6bf967d8d4ce">
+        <dct:title>Allgemein bildende Schulen - CSV</dct:title>
+        <dct:description>Allgemein bildende Schulen: Gemeinden, Schulen, Lehrkräfte,Klassen, Schüler, Unterrichtswochenstunden, Art derallgemein bildenden Schulen, Schuljahre</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=21111-101z&amp;option=csv&amp;regionalschluessel=09678181&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/csv"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-26T04:04:02.338000</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-17T17:23:06</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dct:isReferencedBy>
+      <rdfs:Resource rdf:about="https://app.23degrees.io/view/2X0OEK2X8f9a1Jb5-bar-grouped-vertical-allgemeinbildende-schulen?filter=eyJmaWVsZE5hbWUiOiAiYTAiLCAiZmlsdGVyVmFsdWUiOiAiU3RhZHRsYXVyaW5nZW4ifQ%3D%3D"/>
+    </dct:isReferencedBy>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/municipality"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/genesisDestatis"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/openDataBayern"/>
+  </dcat:Dataset>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/xml"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/xml"/>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/cc-by/4.0">
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=21111-101z&amp;option=xlsx&amp;regionalschluessel=09678181&amp;regionalmerkmal=GEMEIN"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/csv"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/xls"/>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=21111-101z&amp;option=csv&amp;regionalschluessel=09678181&amp;regionalmerkmal=GEMEIN"/>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=21111-101z&amp;option=xml&amp;regionalschluessel=09678181&amp;regionalmerkmal=GEMEIN"/>
+  <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/DEU"/>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=21111-101z&amp;option=ffcsv&amp;regionalschluessel=09678181&amp;regionalmerkmal=GEMEIN"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/xlsx"/>
+</rdf:RDF>

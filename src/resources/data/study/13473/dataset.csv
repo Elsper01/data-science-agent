@@ -1,0 +1,7 @@
+statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label
+12411;Fortschreibung des Bevölkerungsstandes;STAG;Stichtag;2024-12-31;KREISE;Kreise;09464;Hof (Krfr.St);GES;Geschlecht;GESM;männlich;23093;Anzahl;BEVSTD;Bevölkerung
+12411;Fortschreibung des Bevölkerungsstandes;STAG;Stichtag;2024-12-31;KREISE;Kreise;09464;Hof (Krfr.St);GES;Geschlecht;;Insgesamt;46778;Anzahl;BEVSTD;Bevölkerung
+12411;Fortschreibung des Bevölkerungsstandes;STAG;Stichtag;2024-12-31;KREISE;Kreise;09464;Hof (Krfr.St);GES;Geschlecht;GESW;weiblich;23685;Anzahl;BEVSTD;Bevölkerung
+12411;Fortschreibung des Bevölkerungsstandes;STAG;Stichtag;2024-12-31;GEMEIN;Gemeinden (einschl. gemeindefreie Gebiete);09464000;Hof (Krfr.St);GES;Geschlecht;GESW;weiblich;23685;Anzahl;BEVSTD;Bevölkerung
+12411;Fortschreibung des Bevölkerungsstandes;STAG;Stichtag;2024-12-31;GEMEIN;Gemeinden (einschl. gemeindefreie Gebiete);09464000;Hof (Krfr.St);GES;Geschlecht;;Insgesamt;46778;Anzahl;BEVSTD;Bevölkerung
+12411;Fortschreibung des Bevölkerungsstandes;STAG;Stichtag;2024-12-31;GEMEIN;Gemeinden (einschl. gemeindefreie Gebiete);09464000;Hof (Krfr.St);GES;Geschlecht;GESM;männlich;23093;Anzahl;BEVSTD;Bevölkerung

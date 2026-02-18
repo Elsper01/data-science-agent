@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:locn="http://www.w3.org/ns/locn#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Dataset rdf:about="https://region.statistik-nord.de/detail_timeline/23/1901/100/1/346/553/">
+    <dct:title>Betriebe im Verarbeitenden Gewerbe nach Wirtschaftsabteilungen in Langenlehsten</dct:title>
+    <dct:description>
+Industrie, Baugewerbe, Handwerk - Verarbeitendes Gewerbe - Betriebe im Verarbeitenden Gewerbe nach Wirtschaftsabteilungen in Langenlehsten 
+
+[Zum HTML-Angebot der Zeitreihe](https://region.statistik-nord.de/detail_timeline/23/1901/100/1/346/553/)
+
+[Regionaldaten für Schleswig-Holstein](https://region.statistik-nord.de/main/1)
+
+Statistisches Amt für Hamburg und Schleswig-Holstein
+          </dct:description>
+    <dct:identifier rdf:resource="https://region.statistik-nord.de/detail_timeline/23/1901/100/1/346/553/"/>
+    <dct:accrualPeriodicity>
+      <dct:Frequency rdf:about="http://publications.europa.eu/resource/authority/frequency/YEARLY"/>
+    </dct:accrualPeriodicity>
+    <dcat:keyword>baugewerbe</dcat:keyword>
+    <dcat:keyword>betriebe-im-verarbeitenden-gewerbe</dcat:keyword>
+    <dcat:keyword>davon-nach-wirtschaftsabteilungen</dcat:keyword>
+    <dcat:keyword>handwerk</dcat:keyword>
+    <dcat:keyword>industrie</dcat:keyword>
+    <dcat:keyword>langenlehsten</dcat:keyword>
+    <dcat:keyword>verarbeitendes-gewerbe</dcat:keyword>
+    <dcat:keyword>wirtschaftsabteilungen</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-11T00:00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-11T00:00:00</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://opendata.schleswig-holstein.de/organization/statistikamt-nord">
+        <foaf:name>Statistisches Amt für Hamburg und Schleswig-Holstein A.ö.R. (Statistikamt Nord)</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="Nba5e0ef9d5d446bca8b30c90b9e7207d">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-31T00:00:00</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:about="http://dcat-ap.de/def/politicalGeocoding/municipalityKey/01053080">
+        <skos:prefLabel>Gemeinde Langenlehsten</skos:prefLabel>
+      </dct:Location>
+    </dct:spatial>
+    <dct:spatial>
+      <dct:Location rdf:nodeID="N2636d75adbec4ad1b5b02e238803977b">
+        <locn:adminUnitL2 rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/01053080"/>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    </dct:accessRights>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://region.statistik-nord.de/detail_timelineexport/23/1901/100/1/346/553/">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <dct:title>2024-10-15-19-14-Betriebe_im_Verarbeitenden_Gewerbe_nach_Wirtschaftsabteilungen_in_Langenlehsten</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://region.statistik-nord.de/detail_timelineexport/23/1901/100/1/346/553/"/>
+        <dcat:downloadURL rdf:resource="https://region.statistik-nord.de/detail_timelineexport/23/1901/100/1/346/553/"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-30T08:53:11.542260</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-15T17:17:20.969719</dct:modified>
+        <dcatde:licenseAttributionByText>Statistisches Amt für Hamburg und Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/municipality"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/schleswigHolstein"/>
+    <dcatde:politicalGeocodingURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/01053080"/>
+  </dcat:Dataset>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/2.0">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+</rdf:RDF>

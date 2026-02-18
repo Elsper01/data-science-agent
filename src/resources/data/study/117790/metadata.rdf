@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:locn="http://www.w3.org/ns/locn#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Distribution rdf:about="https://region.statistik-nord.de/detail_timelineexport/13/1103/3/1/351/1029/">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dct:title>2025-06-18-06-30-Geborenen-_(+)_bzw__Gestorbenenueberschuss_(-)_in_Nindorf</dct:title>
+    <dct:license>
+      <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/2.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+        <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+      </dct:LicenseDocument>
+    </dct:license>
+    <dcat:accessURL rdf:resource="https://region.statistik-nord.de/detail_timelineexport/13/1103/3/1/351/1029/"/>
+    <dcat:downloadURL rdf:resource="https://region.statistik-nord.de/detail_timelineexport/13/1103/3/1/351/1029/"/>
+    <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+    <dcat:mediaType>
+      <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+    </dcat:mediaType>
+    <dct:format>
+      <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+    </dct:format>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-12T05:44:34.607799</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-18T04:36:16.390786</dct:modified>
+    <dcatde:licenseAttributionByText>Statistisches Amt für Hamburg und Schleswig-Holstein</dcatde:licenseAttributionByText>
+  </dcat:Distribution>
+  <dcat:Dataset rdf:about="https://region.statistik-nord.de/detail_timeline/13/1103/3/1/351/1029/">
+    <dct:title>Geborenen- (+) bzw. Gestorbenenüberschuss (-) in Nindorf</dct:title>
+    <dct:description>
+Bevölkerung - Natürliche Bevölkerungsbewegung (Amtliche Bevölkerungsfortschreibung) - Geborenen- (+) bzw. Gestorbenenüberschuss (-) in Nindorf 
+
+[Zum HTML-Angebot der Zeitreihe](https://region.statistik-nord.de/detail_timeline/13/1103/3/1/351/1029/)
+
+[Regionaldaten für Schleswig-Holstein](https://region.statistik-nord.de/main/1)
+
+Statistisches Amt für Hamburg und Schleswig-Holstein
+          </dct:description>
+    <dct:identifier rdf:resource="https://region.statistik-nord.de/detail_timeline/13/1103/3/1/351/1029/"/>
+    <dct:accrualPeriodicity>
+      <dct:Frequency rdf:about="http://publications.europa.eu/resource/authority/frequency/YEARLY"/>
+    </dct:accrualPeriodicity>
+    <dcat:keyword>bevölkerung</dcat:keyword>
+    <dcat:keyword>geborenen---bzw.-gestorbenenüberschuss--</dcat:keyword>
+    <dcat:keyword>natürliche-bevölkerungsbewegung-amtliche-bevölkerungsfortschreibung</dcat:keyword>
+    <dcat:keyword>nindorf</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-19T00:00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-19T00:00:00</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://opendata.schleswig-holstein.de/organization/statistikamt-nord">
+        <foaf:name>Statistisches Amt für Hamburg und Schleswig-Holstein A.ö.R. (Statistikamt Nord)</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="N4bc255ea2d134dcd9c087b73359a4a74">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-01-01T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-31T00:00:00</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:about="http://dcat-ap.de/def/politicalGeocoding/municipalityKey/01058115">
+        <skos:prefLabel>Gemeinde Nindorf</skos:prefLabel>
+      </dct:Location>
+    </dct:spatial>
+    <dct:spatial>
+      <dct:Location rdf:nodeID="N465537e7ae184358a08c4ac8f8289046">
+        <locn:adminUnitL2 rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/01058115"/>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    </dct:accessRights>
+    <dcat:distribution rdf:resource="https://region.statistik-nord.de/detail_timelineexport/13/1103/3/1/351/1029/"/>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/municipality"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/schleswigHolstein"/>
+    <dcatde:politicalGeocodingURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/01058115"/>
+  </dcat:Dataset>
+</rdf:RDF>

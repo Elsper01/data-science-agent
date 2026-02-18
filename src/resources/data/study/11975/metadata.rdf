@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <dcat:Dataset rdf:about="https://open.bydata.de/api/hub/repo/datasets/13111-006-09679188">
+    <dct:title>Sonderhofen: Sozialversicherungspflichtig Beschäftigte</dct:title>
+    <dct:description>Gemeinden,Beschäftigte am Arbeitsort/Beschäftigte am Wohnort,Wirtschaftsbereiche, Stichtage</dct:description>
+    <dct:identifier>13111-006-09679188</dct:identifier>
+    <dcat:keyword>beschäftigungsstatistik</dcat:keyword>
+    <dcat:keyword>gemeinden-einschl.-gemeindefreie-gebiete</dcat:keyword>
+    <dcat:keyword>handel-verkehr-gastgewerbe</dcat:keyword>
+    <dcat:keyword>land--und-forstwirtschaft-fischerei</dcat:keyword>
+    <dcat:keyword>ohne-angabe-des-wirtschaftszweiges</dcat:keyword>
+    <dcat:keyword>produzierendes-gewerbe</dcat:keyword>
+    <dcat:keyword>sonderhofen</dcat:keyword>
+    <dcat:keyword>sozialversicherungspfl.-beschäftigte-am-arbeitsort</dcat:keyword>
+    <dcat:keyword>sozialversicherungspfl.-beschäftigte-am-wohnort</dcat:keyword>
+    <dcat:keyword>stichtag</dcat:keyword>
+    <dcat:keyword>unternehmensdienstleister</dcat:keyword>
+    <dcat:keyword>wirtschaftsbereiche-wz-2008</dcat:keyword>
+    <dcat:keyword>öffentliche-und-private-dienstleister</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-06T14:12:25</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-10-31T13:36:37</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ECON"/>
+    <dct:relation>
+      <rdfs:Resource rdf:about="https://open.bydata.de/datasets/13111-006-d"/>
+    </dct:relation>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="N545394f8fc684feb8c1bc377bdeef00f">
+        <vcard:fn>Bayerisches Landesamt für Statistik</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:info@statistik.bayern.de"/>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:nodeID="Nf0052a5c3fd4417b875b3bbccb380015">
+        <foaf:name>Bayerisches Landesamt für Statistik</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/51341334-b2e8-49d6-9917-bef606f617bc">
+        <dct:title>Sozialversicherungspflichtig Beschäftigte - XML</dct:title>
+        <dct:description>Sozialversicherungspflichtig Beschäftigte: Gemeinden,Beschäftigte am Arbeitsort/Beschäftigte am Wohnort,Wirtschaftsbereiche, Stichtage</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=13111-006z&amp;option=xml&amp;regionalschluessel=09679188&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/xml"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/xml"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-27T13:53:05.435839</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-05T13:25:26</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/284ae0be-8d19-43c3-902d-2f4a101564ab">
+        <dct:title>Sozialversicherungspflichtig Beschäftigte - Flat CSV</dct:title>
+        <dct:description>Sozialversicherungspflichtig Beschäftigte: Gemeinden,Beschäftigte am Arbeitsort/Beschäftigte am Wohnort,Wirtschaftsbereiche, Stichtage</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=13111-006z&amp;option=ffcsv&amp;regionalschluessel=09679188&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/csv"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-27T13:53:05.435845</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-05T13:25:26</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/33a8ba97-b639-4291-bcfd-7c228bde637e">
+        <dct:title>Sozialversicherungspflichtig Beschäftigte - XLSX</dct:title>
+        <dct:description>Sozialversicherungspflichtig Beschäftigte: Gemeinden,Beschäftigte am Arbeitsort/Beschäftigte am Wohnort,Wirtschaftsbereiche, Stichtage</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=13111-006z&amp;option=xlsx&amp;regionalschluessel=09679188&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/xlsx"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/xls"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-27T13:53:05.435848</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-05T13:25:26</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/a98bf846-bcd6-4b29-b6bb-58ccf989b041">
+        <dct:title>Sozialversicherungspflichtig Beschäftigte - CSV</dct:title>
+        <dct:description>Sozialversicherungspflichtig Beschäftigte: Gemeinden,Beschäftigte am Arbeitsort/Beschäftigte am Wohnort,Wirtschaftsbereiche, Stichtage</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=13111-006z&amp;option=csv&amp;regionalschluessel=09679188&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/csv"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-27T13:53:05.435850</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-05T13:25:26</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dct:isReferencedBy>
+      <rdfs:Resource rdf:about="https://app.23degrees.io/view/NEVeZJYymxkLKdD7-bar-stacked-vertical-sozialversicherungspflichtig?filter=eyJmaWVsZE5hbWUiOiAiYTAiLCAiZmlsdGVyVmFsdWUiOiAiU29uZGVyaG9mZW4ifQ%3D%3D"/>
+    </dct:isReferencedBy>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/municipality"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/genesisDestatis"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/openDataBayern"/>
+  </dcat:Dataset>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/xml"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/xml"/>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/cc-by/4.0">
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/csv"/>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=13111-006z&amp;option=ffcsv&amp;regionalschluessel=09679188&amp;regionalmerkmal=GEMEIN"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/xls"/>
+  <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/DEU"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/xlsx"/>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=13111-006z&amp;option=csv&amp;regionalschluessel=09679188&amp;regionalmerkmal=GEMEIN"/>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=13111-006z&amp;option=xml&amp;regionalschluessel=09679188&amp;regionalmerkmal=GEMEIN"/>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=13111-006z&amp;option=xlsx&amp;regionalschluessel=09679188&amp;regionalmerkmal=GEMEIN"/>
+</rdf:RDF>

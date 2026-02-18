@@ -1,0 +1,5 @@
+Hauptprobenummer,Bezeichnung,Probe_Entnahmeart,Probenahme_Beginn_Datum,Probenahme_Beginn_Zeit,Probenahme_Ende_Datum,Probenahme_Ende_Zeit,Umweltbereich,Messprogrammgruppe,Entnahmestelle,Herkunftsstaat,Methode,Pruefmerkmal,Ergebnis,Einheit
+201700234,Trinkwasser,Einzelprobe,23.05.2017,10:15,23.05.2017,10:15,Reinwasser aus geschützten Rohwasservorkommen,Trinkwasser,"Eigenversorgung, Ellerauer Straße 30",Deutschland,Radon-LSC,Radon-222 Rn-222,"4,04",Bq/l
+201700234,Trinkwasser,Einzelprobe,23.05.2017,10:15,23.05.2017,10:15,Reinwasser aus geschützten Rohwasservorkommen,Trinkwasser,"Eigenversorgung, Ellerauer Straße 30",Deutschland,Radon-LSC,Messzeit,6000,s
+201700234,Trinkwasser,Einzelprobe,23.05.2017,10:15,23.05.2017,10:15,Reinwasser aus geschützten Rohwasservorkommen,Trinkwasser,"Eigenversorgung, Ellerauer Straße 30",Deutschland,Gesamt-Alpha,Gesamt-Alpha-Aktivität,n.n.,Bq/l
+201700234,Trinkwasser,Einzelprobe,23.05.2017,10:15,23.05.2017,10:15,Reinwasser aus geschützten Rohwasservorkommen,Trinkwasser,"Eigenversorgung, Ellerauer Straße 30",Deutschland,Gesamt-Alpha,Messzeit,12000,s

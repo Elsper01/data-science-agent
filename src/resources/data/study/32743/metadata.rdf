@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:adms="http://www.w3.org/ns/adms#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <dcat:Dataset rdf:about="https://ckan.open.nrw.de/dataset/4b93de6b-fdfa-478a-b201-9f65b94569b7">
+    <dct:title>Zugriffsstatistiken von kreis-kleve.de für Dezember 2021</dct:title>
+    <dct:description>CSV-Datei mit den Zugriffszahlen pro Tag im jeweiligem Monat. </dct:description>
+    <dct:identifier>e1bbcab6-fad9-4581-8d00-3acd36e58052</dct:identifier>
+    <owl:versionInfo>2021-12</owl:versionInfo>
+    <dcat:keyword>internet</dcat:keyword>
+    <dcat:keyword>web</dcat:keyword>
+    <dcat:keyword>webanalyse</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T00:36:25.775425</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T00:36:25.775431</dct:modified>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="N148405e1d314454a88dafe303fdd83ec">
+        <vcard:fn>opendata@kreis-kleve.de</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:opendata@kreis-kleve.de"/>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://ckan.open.nrw.de/organization/23e91bf6-9968-4a0f-bafe-6bad1a0f5be8">
+        <foaf:name>Offenesdatenportal</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Agent rdf:nodeID="N93f6deb18386452a9096e668dda499e5">
+        <foaf:name>Kreisverwaltung Kleve</foaf:name>
+        <foaf:mbox>opendata@kreis-kleve.de</foaf:mbox>
+      </foaf:Agent>
+    </dct:creator>
+    <dct:creator>
+      <foaf:Organization rdf:nodeID="N9f94aecca7e041349bd4526851881a0a">
+        <foaf:name>Kreisverwaltung Kleve</foaf:name>
+        <foaf:mbox>opendata@kreis-kleve.de</foaf:mbox>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://ckan.open.nrw.de/dataset/4b93de6b-fdfa-478a-b201-9f65b94569b7/resource/ea27865c-ca89-4828-b418-31ccfe4420ad">
+        <dct:title>etracker-202112.csv</dct:title>
+        <dct:description>* Spalte1 = Datum/Tag&#13;
+* Spalte2 = Besucher&#13;
+* Spalte3 = Seitenaufrufe&#13;
+* Spalte4 = Seitenaufrufe pro Besucher&#13;
+* Spalte5 = Ansichtszeit pro Besucher&#13;
+* Spalte6 = Absprungrate</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-zero-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.offenesdatenportal.de/dataset/e1bbcab6-fad9-4581-8d00-3acd36e58052/resource/ea27865c-ca89-4828-b418-31ccfe4420ad/download/etracker-202112.csv"/>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-01T09:01:10.134444</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-01T09:01:10.091634</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3329</dcat:byteSize>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <adms:identifier>N34b75df68ec945df81420eb9a3a4aca3</adms:identifier>
+    <adms:identifier>e1bbcab6-fad9-4581-8d00-3acd36e58052</adms:identifier>
+    <adms:identifier>N573717956be5474fba1e3b08c1aed230</adms:identifier>
+    <dcatde:contributorID rdf:resource="https://www.offenesdatenportal.de"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/openNRW"/>
+    <dcatde:maintainer>
+      <foaf:Organization rdf:nodeID="Nb27250083a42463288e82cbd9c49c50c">
+        <foaf:name>opendata@kreis-kleve.de</foaf:name>
+        <foaf:mbox>opendata@kreis-kleve.de</foaf:mbox>
+      </foaf:Organization>
+    </dcatde:maintainer>
+  </dcat:Dataset>
+  <rdfs:Resource rdf:about="https://www.offenesdatenportal.de/dataset/e1bbcab6-fad9-4581-8d00-3acd36e58052/resource/ea27865c-ca89-4828-b418-31ccfe4420ad/download/etracker-202112.csv"/>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/dl-zero-de/2.0">
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+</rdf:RDF>

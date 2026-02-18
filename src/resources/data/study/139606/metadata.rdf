@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:locn="http://www.w3.org/ns/locn#"
+  xmlns:spdx="http://spdx.org/rdf/terms#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Dataset rdf:about="http://suche.transparenz.hamburg.de/dataset/56b88bfb-c57e-4c30-bed4-a52ae08e2689">
+    <dct:title>Messergebnisse zur Radioaktivität in: Schweinefiletköpfe (26.02.2020)</dct:title>
+    <dct:description>Messdaten zur Überwachung der Radioaktivität in der Umwelt, in Lebens- und Futtermitteln</dct:description>
+    <dcat:landingPage>
+      <foaf:Document rdf:about="http://www.hamburg.de/bgv/radioaktivitaet"/>
+    </dcat:landingPage>
+    <dct:identifier>LeVeLIMS-Ramis:202000065</dct:identifier>
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <dct:accrualPeriodicity>
+      <dct:Frequency rdf:about="http://publications.europa.eu/resource/authority/frequency/NEVER"/>
+    </dct:accrualPeriodicity>
+    <dcat:keyword>futtermittel</dcat:keyword>
+    <dcat:keyword>lebensmittel</dcat:keyword>
+    <dcat:keyword>strahlenschutzvorsorge</dcat:keyword>
+    <dcat:keyword>umwelt</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-12T00:00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-16T17:02:52.236771</dct:modified>
+    <dct:language>
+      <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/DEU"/>
+    </dct:language>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENER"/>
+    <dct:conformsTo>
+      <dct:Standard rdf:about="http://dcat-ap.de/def/dcatde/1.0/"/>
+    </dct:conformsTo>
+    <foaf:page>
+      <foaf:Document rdf:about="http://suche.transparenz.hamburg.de/dataset/messergebnisse-zur-radioaktivitaet-in-schweinefiletkoepfe-26-02-2020"/>
+    </foaf:page>
+    <dct:source rdf:resource="https://transparenz.hamburg.de"/>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="Nce1a774f51da42e49d0ffda5255d16b8">
+        <vcard:fn>Institut für Hygiene und Umwelt</vcard:fn>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:nodeID="N034698a5244e4e989da06e76c16b5fb3">
+        <foaf:name>Institut für Hygiene und Umwelt</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Agent rdf:nodeID="N9d1dded41d434fd8af10b0f2e3bc18b3">
+        <foaf:name>Institut für Hygiene und Umwelt</foaf:name>
+      </foaf:Agent>
+    </dct:creator>
+    <dct:creator>
+      <foaf:Organization rdf:nodeID="Nfb2722eb3a8b4aef83f911529973e747">
+        <foaf:name>Institut für Hygiene und Umwelt</foaf:name>
+      </foaf:Organization>
+    </dct:creator>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="Nfa6ff4c568dd4c689145608715ee6191">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-02-26T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-02-26T00:00:00</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:nodeID="N29b5f4eac167458e96648e08c8c2ec66">
+        <locn:geometry rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON ((9.9615 53.5310, 9.9655 53.5310, 9.9655 53.5350, 9.9615 53.5350, 9.9615 53.5310))</locn:geometry>
+      </dct:Location>
+    </dct:spatial>
+    <dct:spatial>
+      <dct:Location rdf:nodeID="Na560867232b04b1e80ab1354e832b003">
+        <locn:adminUnitL2 rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/020000000000"/>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://www.govdata.de/dl-de/by-2-0"/>
+    </dct:accessRights>
+    <dct:provenance>
+      <dct:ProvenanceStatement rdf:nodeID="Na34f85dad7f542448075f7a6bc4618a0">
+        <rdfs:label>Der Datensatz wurde geharvestet. Ursprung: Integriertes Mess- und Informationssystem</rdfs:label>
+      </dct:ProvenanceStatement>
+    </dct:provenance>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://suche.transparenz.hamburg.de/dataset/56b88bfb-c57e-4c30-bed4-a52ae08e2689/resource/2782401a-0d86-48ae-95cd-8ed6ac6d0674">
+        <dct:title>Schweinefiletköpfe</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/f26b64df-9327-4580-8669-9187339c2eae/Schweinefiletkoepfe.csv"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dct:conformsTo rdf:resource="http://dcat-ap.de/def/dcatde/1.0/"/>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:format>CSV</dct:format>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-12T00:00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-16T17:02:52.236771</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9041</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="Ne01c836eefa145df8cc70849fdb5b30e">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">8d805a58f8f2ad5f3da5f5f81c020652435cee9f425733a0ab82c8005a8c3673</spdx:checksumValue>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Namensnennung: Freie und Hansestadt Hamburg, Institut für Hygiene und Umwelt</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/level/state"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/transparenzportalHamburg"/>
+    <dcatde:politicalGeocodingURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/020000000000"/>
+    <dcatde:legalBasis>Hamburgisches Transparenzgesetz (HmbTG). URL: http://transparenz.hamburg.de/das-hmbtg/ Gesetzestext: http://transparenz.hamburg.de/contentblob/4318588/c8600b2b27ea31a5de6a92dacc138894/data/gesetzestext-hmbtg.pdf</dcatde:legalBasis>
+    <dcatde:geocodingDescription>Freie und Hansestadt Hamburg</dcatde:geocodingDescription>
+    <dcatde:originator>
+      <foaf:Organization rdf:nodeID="N909a53cd633f4e6c98ce9bb2c20fa846">
+        <foaf:name>Institut für Hygiene und Umwelt</foaf:name>
+      </foaf:Organization>
+    </dcatde:originator>
+    <dcatde:maintainer>
+      <foaf:Organization rdf:nodeID="N430370a62aa44fbeb0fa34ab8f44d915">
+        <foaf:name>Institut für Hygiene und Umwelt</foaf:name>
+      </foaf:Organization>
+    </dcatde:maintainer>
+  </dcat:Dataset>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/2.0">
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <rdfs:Resource rdf:about="https://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/f26b64df-9327-4580-8669-9187339c2eae/Schweinefiletkoepfe.csv"/>
+</rdf:RDF>

@@ -1,0 +1,3 @@
+Hauptprobenummer,Bezeichnung,Probe_Entnahmeart,Probenahme_Beginn_Datum,Probenahme_Beginn_Zeit,Probenahme_Ende_Datum,Probenahme_Ende_Zeit,Umweltbereich,Messprogrammgruppe,Entnahmestelle,Herkunftsstaat,Methode,Pruefmerkmal,Ergebnis,Einheit
+201700572,Trinkwasser,Einzelprobe,28.11.2017,09:20,28.11.2017,09:20,Reinwasser aus geschützten Rohwasservorkommen,Trinkwasser,WW Großensee,Deutschland,Radon-LSC,Radon-222 Rn-222,"<0,82",Bq/l
+201700572,Trinkwasser,Einzelprobe,28.11.2017,09:20,28.11.2017,09:20,Reinwasser aus geschützten Rohwasservorkommen,Trinkwasser,WW Großensee,Deutschland,Radon-LSC,Messzeit,6000,s

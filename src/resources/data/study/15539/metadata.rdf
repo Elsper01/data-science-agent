@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <dcat:Dataset rdf:about="https://open.bydata.de/api/hub/repo/datasets/45511-022-09472116">
+    <dct:title>Bad Berneck i.Fichtelgebirge, St: Tourismus</dct:title>
+    <dct:description>Gemeinden, Ankünfte, Übernachtungen,Herkunftder Gäste, Jahre</dct:description>
+    <dct:identifier>45511-022-09472116</dct:identifier>
+    <dcat:keyword>ausland</dcat:keyword>
+    <dcat:keyword>bad-berneck-i.fichtelgebirge-st</dcat:keyword>
+    <dcat:keyword>berichtsjahr</dcat:keyword>
+    <dcat:keyword>gemeinden-einschl.-gemeindefreie-gebiete</dcat:keyword>
+    <dcat:keyword>gästeankünfte-in-beherbergungsbetrieben</dcat:keyword>
+    <dcat:keyword>gästeübernachtungen-in-beherbergungsbetrieben</dcat:keyword>
+    <dcat:keyword>herkunft-der-gäste</dcat:keyword>
+    <dcat:keyword>inland</dcat:keyword>
+    <dcat:keyword>monatserhebung-im-tourismus</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-14T19:41:13</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-14T19:41:13</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ECON"/>
+    <dct:relation>
+      <rdfs:Resource rdf:about="https://open.bydata.de/datasets/45511-022-d"/>
+    </dct:relation>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="N231081d9f89c4eacbed3e905d7a772f5">
+        <vcard:fn>Bayerisches Landesamt für Statistik</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:https://www.statistik.bayern.de/kontakt"/>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:nodeID="N94584ed08de14da5b17afcdd4319a553">
+        <foaf:name>Bayerisches Landesamt für Statistik</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/f2561fa4-de16-4741-a104-fb52af32d6b7">
+        <dct:title>Tourismus - Flat CSV</dct:title>
+        <dct:description>Tourismus: Gemeinden, Ankünfte, Übernachtungen,Herkunftder Gäste, Jahre</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=45511-022z&amp;option=ffcsv&amp;regionalschluessel=09472116&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/csv"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-27T11:06:27.730881</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T09:31:12</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/5c9a3b1c-d710-49e2-8a69-b65a4ca57801">
+        <dct:title>Tourismus - CSV</dct:title>
+        <dct:description>Tourismus: Gemeinden, Ankünfte, Übernachtungen,Herkunftder Gäste, Jahre</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=45511-022z&amp;option=csv&amp;regionalschluessel=09472116&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/csv"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-27T11:06:27.730887</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T09:31:12</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/51f359af-bc58-465a-9cab-7b22179bbcc1">
+        <dct:title>Tourismus - XML</dct:title>
+        <dct:description>Tourismus: Gemeinden, Ankünfte, Übernachtungen,Herkunftder Gäste, Jahre</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=45511-022z&amp;option=xml&amp;regionalschluessel=09472116&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/xml"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/xml"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-27T11:06:27.730890</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T09:31:12</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/4b5563ad-f48e-44b3-b3ea-c75a3453448c">
+        <dct:title>Tourismus - XLSX</dct:title>
+        <dct:description>Tourismus: Gemeinden, Ankünfte, Übernachtungen,Herkunftder Gäste, Jahre</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=45511-022z&amp;option=xlsx&amp;regionalschluessel=09472116&amp;regionalmerkmal=GEMEIN"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/xlsx"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/xls"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-27T11:06:27.730892</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T09:31:12</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dct:isReferencedBy>
+      <rdfs:Resource rdf:about="https://app.23degrees.io/view/jL45jjBorDe18H8z-bar-stacked-vertical-tourismus-oberfranken?filter=eyJmaWVsZE5hbWUiOiAiYTAiLCAiZmlsdGVyVmFsdWUiOiAiQmFkIEJlcm5lY2sgaS5GaWNodGVsZ2ViaXJnZSJ9"/>
+    </dct:isReferencedBy>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/municipality"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/genesisDestatis"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/openDataBayern"/>
+  </dcat:Dataset>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/xml"/>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=45511-022z&amp;option=xlsx&amp;regionalschluessel=09472116&amp;regionalmerkmal=GEMEIN"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/xml"/>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/cc-by/4.0">
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/csv"/>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=45511-022z&amp;option=ffcsv&amp;regionalschluessel=09472116&amp;regionalmerkmal=GEMEIN"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/xls"/>
+  <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/DEU"/>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=45511-022z&amp;option=xml&amp;regionalschluessel=09472116&amp;regionalmerkmal=GEMEIN"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/xlsx"/>
+  <rdfs:Resource rdf:about="https://www.statistikdaten.bayern.de/genesis/online?operation=download&amp;code=45511-022z&amp;option=csv&amp;regionalschluessel=09472116&amp;regionalmerkmal=GEMEIN"/>
+</rdf:RDF>

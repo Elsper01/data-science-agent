@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <dcat:Dataset rdf:about="https://www.regionalstatistik.de/genesisws/downloader/00/tables/12211-Z-09_00.csv#dataset">
+    <dct:title>Bevölkerung am Hauptwohnort, 15 Jahre und älter nachBildungsstand ISCED (3) und Geschlecht - Jahr - regionaleTiefe: Kreise und kreisfreie Städte</dct:title>
+    <dct:description>Bevölkerung am Hauptwohnort, 15 Jahre und älter nachBildungsstand ISCED (3) und Geschlecht - Jahr - regionaleTiefe: Kreise und kreisfreie Städte</dct:description>
+    <dct:identifier rdf:resource="https://www.regionalstatistik.de/genesisws/downloader/00/tables/12211-Z-09_00"/>
+    <dcat:keyword>bevölkerung-am-hauptwohnort-15-jahre-und-älter</dcat:keyword>
+    <dcat:keyword>bildungsstand-isced</dcat:keyword>
+    <dcat:keyword>geschlecht</dcat:keyword>
+    <dcat:keyword>grundprogramm-des-mikrozensus</dcat:keyword>
+    <dcat:keyword>hoch-isced-5-und-höher</dcat:keyword>
+    <dcat:keyword>jahr</dcat:keyword>
+    <dcat:keyword>kreise-und-kreisfreie-städte</dcat:keyword>
+    <dcat:keyword>mittel--isced-3-bis-4</dcat:keyword>
+    <dcat:keyword>männlich</dcat:keyword>
+    <dcat:keyword>niedrig-isced-0-bis-2</dcat:keyword>
+    <dcat:keyword>weiblich</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-17T10:43:02</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-10-11T18:10:47</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="Ne286a2505f1e4358aeef49f091dd993c">
+        <vcard:fn>Statistische Ämter des Bundes und der Länder</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:regionaldatenbank@it.nrw.de"/>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://opendata.hessen.de/organization/ea800b84-16ca-4e39-8a1e-e03a4686b920">
+        <foaf:name>Hessisches Statistisches Landesamt</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://www.regionalstatistik.de/genesisws/downloader/00/tables/12211-Z-09_00.csv#distribution">
+        <dct:description>Bevölkerung am Hauptwohnort, 15 Jahre und älter nachBildungsstand ISCED (3) und Geschlecht - Jahr - regionaleTiefe: Kreise und kreisfreie Städte</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.regionalstatistik.de/genesisws/downloader/06/tables/12211-Z-09_06.csv"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/TXT"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-02T13:32:23.927751</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-02T23:09:13.532083</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://www.regionalstatistik.de/genesisws/downloader/00/tables/12211-Z-09_00.csv#distribution-custom">
+        <dct:title>CSV (Testverarbeitung)</dct:title>
+        <dct:description>Test CSV</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.regionalstatistik.de/genesisws/downloader/06/tables/12211-Z-09_06.csv"/>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-02T13:32:23.927754</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-02T23:09:13.532212</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://www.regionalstatistik.de/genesisws/downloader/00/tables/12211-Z-09_00.csv#distribution-custom3">
+        <dct:title>Metadaten</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.regionalstatistik.de/genesisws/downloader/06/tables/12211-Z-09_06.csv"/>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-02T13:32:23.927756</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-02T23:09:13.532313</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://www.regionalstatistik.de/genesisws/downloader/00/tables/12211-Z-09_00.csv#distribution-custom2">
+        <dct:title>REST-API</dct:title>
+        <dct:description>Test API</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.regionalstatistik.de/genesisws/rest/2020/GOJsonApi.json"/>
+        <dcat:mediaType>application/json</dcat:mediaType>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/REST"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-02T13:32:23.927757</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-02T23:09:13.532411</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/administrativeDistrict"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/hessen"/>
+  </dcat:Dataset>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/2.0">
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/TXT"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/REST"/>
+  <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/DEU"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+  <rdfs:Resource rdf:about="https://www.regionalstatistik.de/genesisws/rest/2020/GOJsonApi.json"/>
+  <rdfs:Resource rdf:about="https://www.regionalstatistik.de/genesisws/downloader/06/tables/12211-Z-09_06.csv"/>
+</rdf:RDF>

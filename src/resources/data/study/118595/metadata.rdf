@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:locn="http://www.w3.org/ns/locn#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Dataset rdf:about="https://region.statistik-nord.de/detail_timeline/13/1103/3/1/352/1158/">
+    <dct:title>Geborenen- (+) bzw. Gestorbenenüberschuss (-) in Ulsnis</dct:title>
+    <dct:description>
+Bevölkerung - Natürliche Bevölkerungsbewegung (Amtliche Bevölkerungsfortschreibung) - Geborenen- (+) bzw. Gestorbenenüberschuss (-) in Ulsnis 
+
+[Zum HTML-Angebot der Zeitreihe](https://region.statistik-nord.de/detail_timeline/13/1103/3/1/352/1158/)
+
+[Regionaldaten für Schleswig-Holstein](https://region.statistik-nord.de/main/1)
+
+Statistisches Amt für Hamburg und Schleswig-Holstein
+          </dct:description>
+    <dct:identifier rdf:resource="https://region.statistik-nord.de/detail_timeline/13/1103/3/1/352/1158/"/>
+    <dct:accrualPeriodicity>
+      <dct:Frequency rdf:about="http://publications.europa.eu/resource/authority/frequency/YEARLY"/>
+    </dct:accrualPeriodicity>
+    <dcat:keyword>bevölkerung</dcat:keyword>
+    <dcat:keyword>geborenen---bzw.-gestorbenenüberschuss--</dcat:keyword>
+    <dcat:keyword>natürliche-bevölkerungsbewegung-amtliche-bevölkerungsfortschreibung</dcat:keyword>
+    <dcat:keyword>ulsnis</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-19T00:00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-19T00:00:00</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://opendata.schleswig-holstein.de/organization/statistikamt-nord">
+        <foaf:name>Statistisches Amt für Hamburg und Schleswig-Holstein A.ö.R. (Statistikamt Nord)</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="N9398e318029a469782b74f608adb0add">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-01-01T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-31T00:00:00</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:about="http://dcat-ap.de/def/politicalGeocoding/municipalityKey/01059094">
+        <skos:prefLabel>Gemeinde Ulsnis</skos:prefLabel>
+      </dct:Location>
+    </dct:spatial>
+    <dct:spatial>
+      <dct:Location rdf:nodeID="N27647c70b91b4e5291f55e65cee45f87">
+        <locn:adminUnitL2 rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/01059094"/>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    </dct:accessRights>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://region.statistik-nord.de/detail_timelineexport/13/1103/3/1/352/1158/">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <dct:title>2025-06-18-06-30-Geborenen-_(+)_bzw__Gestorbenenueberschuss_(-)_in_Ulsnis</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://region.statistik-nord.de/detail_timelineexport/13/1103/3/1/352/1158/"/>
+        <dcat:downloadURL rdf:resource="https://region.statistik-nord.de/detail_timelineexport/13/1103/3/1/352/1158/"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-12T05:43:03.322446</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-18T04:37:39.116889</dct:modified>
+        <dcatde:licenseAttributionByText>Statistisches Amt für Hamburg und Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/municipality"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/schleswigHolstein"/>
+    <dcatde:politicalGeocodingURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/01059094"/>
+  </dcat:Dataset>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/2.0">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+</rdf:RDF>

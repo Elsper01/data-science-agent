@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:locn="http://www.w3.org/ns/locn#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Distribution rdf:about="https://region.statistik-nord.de/detail_timelineexport/12/1101/31/1/346/557/">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dct:title>2025-09-08-22-01-Siedlungs-_und_Verkehrsflaechen_nach_Nutzungsartengruppen_in_Lehmrade</dct:title>
+    <dct:license>
+      <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/2.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+        <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+      </dct:LicenseDocument>
+    </dct:license>
+    <dcat:accessURL rdf:resource="https://region.statistik-nord.de/detail_timelineexport/12/1101/31/1/346/557/"/>
+    <dcat:downloadURL rdf:resource="https://region.statistik-nord.de/detail_timelineexport/12/1101/31/1/346/557/"/>
+    <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+    <dcat:mediaType>
+      <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+    </dcat:mediaType>
+    <dct:format>
+      <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+    </dct:format>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-08T10:04:59.458522</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-09-08T20:03:38.975703</dct:modified>
+    <dcatde:licenseAttributionByText>Statistisches Amt für Hamburg und Schleswig-Holstein</dcatde:licenseAttributionByText>
+  </dcat:Distribution>
+  <dcat:Dataset rdf:about="https://region.statistik-nord.de/detail_timeline/12/1101/31/1/346/557/">
+    <dct:title>Siedlungs- und Verkehrsflächen nach Nutzungsartengruppen in Lehmrade</dct:title>
+    <dct:description>
+Gebiet, Fläche - Gebiet - Siedlungs- und Verkehrsflächen nach Nutzungsartengruppen in Lehmrade 
+
+[Zum HTML-Angebot der Zeitreihe](https://region.statistik-nord.de/detail_timeline/12/1101/31/1/346/557/)
+
+[Regionaldaten für Schleswig-Holstein](https://region.statistik-nord.de/main/1)
+
+Statistisches Amt für Hamburg und Schleswig-Holstein
+          </dct:description>
+    <dct:identifier rdf:resource="https://region.statistik-nord.de/detail_timeline/12/1101/31/1/346/557/"/>
+    <dct:accrualPeriodicity>
+      <dct:Frequency rdf:about="http://publications.europa.eu/resource/authority/frequency/YEARLY"/>
+    </dct:accrualPeriodicity>
+    <dcat:keyword>davon-nach-nutzungsartengruppen</dcat:keyword>
+    <dcat:keyword>fläche</dcat:keyword>
+    <dcat:keyword>gebiet</dcat:keyword>
+    <dcat:keyword>lehmrade</dcat:keyword>
+    <dcat:keyword>nutzungsartengruppen</dcat:keyword>
+    <dcat:keyword>siedlungs-</dcat:keyword>
+    <dcat:keyword>verkehrsflächen</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-12T00:00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-12T00:00:00</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://opendata.schleswig-holstein.de/organization/statistikamt-nord">
+        <foaf:name>Statistisches Amt für Hamburg und Schleswig-Holstein A.ö.R. (Statistikamt Nord)</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="N6fd8f3190c6f42b79c597b70c607fc51">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-01T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-01T00:00:00</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:about="http://dcat-ap.de/def/politicalGeocoding/municipalityKey/01053084">
+        <skos:prefLabel>Gemeinde Lehmrade</skos:prefLabel>
+      </dct:Location>
+    </dct:spatial>
+    <dct:spatial>
+      <dct:Location rdf:nodeID="N3f6fe95c66ea49c3ae012a95db7aae5c">
+        <locn:adminUnitL2 rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/01053084"/>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    </dct:accessRights>
+    <dcat:distribution rdf:resource="https://region.statistik-nord.de/detail_timelineexport/12/1101/31/1/346/557/"/>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/municipality"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/schleswigHolstein"/>
+    <dcatde:politicalGeocodingURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/01053084"/>
+  </dcat:Dataset>
+</rdf:RDF>

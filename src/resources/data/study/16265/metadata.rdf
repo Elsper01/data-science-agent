@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <dcat:Dataset rdf:about="https://open.bydata.de/api/hub/repo/datasets/odl-info-096761181~~1">
+    <dct:title>Messdaten Gamma-ODL: Station Dorfprozelten</dct:title>
+    <dct:description>Das ODL-Messnetz des BfS überwacht mit rund 1.700 Messsonden rund um die Uhr die Strahlenbelastung durch natürliche Radioaktivität in der Umwelt. Das Messnetz hat eine wichtige Frühwarnfunktion, um erhöhte Strahlung durch radioaktive Stoffe in der Luft in Deutschland schnell zu erkennen.
+
+* [Informationen und Karte mit allen Messstationen](https://odlinfo.bfs.de/ODL/DE/themen/wo-stehen-die-sonden/karte/karte_node.html)
+* [Wichtige Hinweise zu den Daten - PDF](https://odlinfo.bfs.de/SharedDocs/Downloads/ODL/DE/datenbereitstellung.pdf?__blob=publicationFile&amp;v=4)</dct:description>
+    <dct:identifier>odl-info-096761181</dct:identifier>
+    <dct:accrualPeriodicity>
+      <dct:Frequency rdf:about="http://publications.europa.eu/resource/authority/frequency/CONT"/>
+    </dct:accrualPeriodicity>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="Nb86c417a6d81481eb8afa63ab0c268b8">
+        <vcard:fn>Bundesamt für Strahlenschutz</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:info@bfs.de"/>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:nodeID="Neb1356de1cc14aa0b97a5af46f9aba5d">
+        <foaf:name>Bundesamt für Strahlenschutz</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/a65ef579-4458-475c-a1d5-38a9c56db92c">
+        <dct:title>1-Stunden-Messdaten (GeoJSON)</dct:title>
+        <dct:description>1-Stunden-Messdaten (GeoJSON)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_1h&amp;outputFormat=json&amp;viewparams=kenn:096761181"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/geo+json"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/GEOJSON"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+        <dcatde:licenseAttributionByText>Bundesamt für Strahlenschutz</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/4491b368-c95c-4d94-95a6-24d6111e678a">
+        <dct:title>24-Stunden-Messdaten (CSV)</dct:title>
+        <dct:description>24-Stunden-Messdaten (CSV)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_24h&amp;outputFormat=csv&amp;viewparams=kenn:096761181"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+        <dcatde:licenseAttributionByText>Bundesamt für Strahlenschutz</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/aa20c92c-2b80-48fe-b7ed-37d6afe4a19d">
+        <dct:title>24-Stunden-Messdaten (KML)</dct:title>
+        <dct:description>24-Stunden-Messdaten (KML)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_24h&amp;outputFormat=KML&amp;viewparams=kenn:096761181"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/KML"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+        <dcatde:licenseAttributionByText>Bundesamt für Strahlenschutz</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/7c61c44a-0c3f-4576-8d82-d0c766385079">
+        <dct:title>Informationen und Karte zur Messstation</dct:title>
+        <dct:description>Informationen und Karte zur Messstation</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://odlinfo.bfs.de/ODL/DE/themen/wo-stehen-die-sonden/karte/_documents/Messstelle.html?id=096761181"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/html"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+        <dcatde:licenseAttributionByText>Bundesamt für Strahlenschutz</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/a6232574-5b4e-4d2e-9075-13374991da04">
+        <dct:title>1-Stunden-Messdaten (SHAPE-ZIP)</dct:title>
+        <dct:description>1-Stunden-Messdaten (SHAPE-ZIP)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_1h&amp;outputFormat=SHAPE-ZIP&amp;viewparams=kenn:096761181"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/zip"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+        <dcatde:licenseAttributionByText>Bundesamt für Strahlenschutz</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/09e41b05-eafa-40b7-a49c-8871574f5656">
+        <dct:title>1-Stunden-Messdaten (KML)</dct:title>
+        <dct:description>1-Stunden-Messdaten (KML)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_1h&amp;outputFormat=KML&amp;viewparams=kenn:096761181"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/KML"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+        <dcatde:licenseAttributionByText>Bundesamt für Strahlenschutz</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/23a1a767-70a1-4891-845f-ade4fa7828d2">
+        <dct:title>24-Stunden-Messdaten (SHAPE-ZIP)</dct:title>
+        <dct:description>24-Stunden-Messdaten (SHAPE-ZIP)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_24h&amp;outputFormat=SHAPE-ZIP&amp;viewparams=kenn:096761181"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/zip"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+        <dcatde:licenseAttributionByText>Bundesamt für Strahlenschutz</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/df7e7123-05ea-439d-8566-aa422ff0861d">
+        <dct:title>1-Stunden-Messdaten (CSV)</dct:title>
+        <dct:description>1-Stunden-Messdaten (CSV)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_1h&amp;outputFormat=csv&amp;viewparams=kenn:096761181"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+        <dcatde:licenseAttributionByText>Bundesamt für Strahlenschutz</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/cfba879c-ac98-4e3c-a064-79136c7c4cbe">
+        <dct:title>1-Stunden-Messdaten (GML3)</dct:title>
+        <dct:description>1-Stunden-Messdaten (GML3)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_1h&amp;outputFormat=gml3&amp;viewparams=kenn:096761181"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/gml+xml"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/GML"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+        <dcatde:licenseAttributionByText>Bundesamt für Strahlenschutz</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/fb9030db-5b01-4f10-9ba4-99e656e959d9">
+        <dct:title>24-Stunden-Messdaten (GML3)</dct:title>
+        <dct:description>24-Stunden-Messdaten (GML3)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_24h&amp;outputFormat=gml3&amp;viewparams=kenn:096761181"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/gml+xml"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/GML"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+        <dcatde:licenseAttributionByText>Bundesamt für Strahlenschutz</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://open.bydata.de/api/hub/repo/distributions/5b23e1a2-2d82-424b-82c0-00531fa96d51">
+        <dct:title>24-Stunden-Messdaten (GeoJSON)</dct:title>
+        <dct:description>24-Stunden-Messdaten (GeoJSON)</dct:description>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_24h&amp;outputFormat=json&amp;viewparams=kenn:096761181"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/geo+json"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/GEOJSON"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T01:00:06+00:00</dct:modified>
+        <dcatde:licenseAttributionByText>Bundesamt für Strahlenschutz</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/openDataBayern"/>
+  </dcat:Dataset>
+  <rdfs:Resource rdf:about="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_1h&amp;outputFormat=KML&amp;viewparams=kenn:096761181"/>
+  <rdfs:Resource rdf:about="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_1h&amp;outputFormat=gml3&amp;viewparams=kenn:096761181"/>
+  <rdfs:Resource rdf:about="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_24h&amp;outputFormat=csv&amp;viewparams=kenn:096761181"/>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/2.0">
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <rdfs:Resource rdf:about="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_1h&amp;outputFormat=csv&amp;viewparams=kenn:096761181"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/KML"/>
+  <rdfs:Resource rdf:about="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_24h&amp;outputFormat=KML&amp;viewparams=kenn:096761181"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/application/geo+json"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+  <rdfs:Resource rdf:about="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_24h&amp;outputFormat=gml3&amp;viewparams=kenn:096761181"/>
+  <rdfs:Resource rdf:about="https://odlinfo.bfs.de/ODL/DE/themen/wo-stehen-die-sonden/karte/_documents/Messstelle.html?id=096761181"/>
+  <rdfs:Resource rdf:about="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_1h&amp;outputFormat=SHAPE-ZIP&amp;viewparams=kenn:096761181"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/html"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/GML"/>
+  <rdfs:Resource rdf:about="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_24h&amp;outputFormat=SHAPE-ZIP&amp;viewparams=kenn:096761181"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/application/zip"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/application/gml+xml"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/GEOJSON"/>
+  <rdfs:Resource rdf:about="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_1h&amp;outputFormat=json&amp;viewparams=kenn:096761181"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+  <rdfs:Resource rdf:about="https://www.imis.bfs.de/ogc/opendata/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;typeName=opendata:odlinfo_timeseries_odl_24h&amp;outputFormat=json&amp;viewparams=kenn:096761181"/>
+</rdf:RDF>

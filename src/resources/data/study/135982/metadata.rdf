@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:locn="http://www.w3.org/ns/locn#"
+  xmlns:spdx="http://spdx.org/rdf/terms#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Dataset rdf:about="http://suche.transparenz.hamburg.de/dataset/721a8b77-5aa9-440c-b5fa-950878c06af2">
+    <dct:title>Messergebnisse zur Radioaktivität in: Reinwasser (24.11.2015)</dct:title>
+    <dct:description>Messdaten zur Überwachung der Radioaktivität in der Umwelt, in Lebens- und Futtermitteln</dct:description>
+    <dcat:landingPage>
+      <foaf:Document rdf:about="http://www.hamburg.de/bgv/radioaktivitaet"/>
+    </dcat:landingPage>
+    <dct:identifier>LeVeLIMS-Ramis:201500428</dct:identifier>
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <dct:accrualPeriodicity>
+      <dct:Frequency rdf:about="http://publications.europa.eu/resource/authority/frequency/NEVER"/>
+    </dct:accrualPeriodicity>
+    <dcat:keyword>futtermittel</dcat:keyword>
+    <dcat:keyword>lebensmittel</dcat:keyword>
+    <dcat:keyword>strahlenschutzvorsorge</dcat:keyword>
+    <dcat:keyword>umwelt</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-03-03T00:00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-27T14:27:37.970231</dct:modified>
+    <dct:language>
+      <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/DEU"/>
+    </dct:language>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENER"/>
+    <dct:conformsTo>
+      <dct:Standard rdf:about="http://dcat-ap.de/def/dcatde/1.0/"/>
+    </dct:conformsTo>
+    <foaf:page>
+      <foaf:Document rdf:about="http://suche.transparenz.hamburg.de/dataset/messergebnisse-zur-radioaktivitaet-in-reinwasser-24-11-2015"/>
+    </foaf:page>
+    <dct:source rdf:resource="https://transparenz.hamburg.de"/>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="N5f11d26732e24f2f9072642ed152dc53">
+        <vcard:fn>Institut für Hygiene und Umwelt</vcard:fn>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:nodeID="Nd0fe1850c9584858bd32a61721fc1388">
+        <foaf:name>Institut für Hygiene und Umwelt</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Agent rdf:nodeID="Need81b4601c94f8f8643bd5456d1c0fc">
+        <foaf:name>Institut für Hygiene und Umwelt</foaf:name>
+      </foaf:Agent>
+    </dct:creator>
+    <dct:creator>
+      <foaf:Organization rdf:nodeID="Nf24a03c2c7a2458e925ebb4fb41baf7d">
+        <foaf:name>Institut für Hygiene und Umwelt</foaf:name>
+      </foaf:Organization>
+    </dct:creator>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="N1786483828cd45249c99f1f3d4093479">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-11-24T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-11-24T00:00:00</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:nodeID="N1fb8bda1eeff473bb660ffec85dc59ca">
+        <locn:geometry rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON ((10.2261 53.4640, 10.2301 53.4640, 10.2301 53.4680, 10.2261 53.4680, 10.2261 53.4640))</locn:geometry>
+      </dct:Location>
+    </dct:spatial>
+    <dct:spatial>
+      <dct:Location rdf:nodeID="N49664055da5d4556b2726c630f60e9c6">
+        <locn:adminUnitL2 rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/020000000000"/>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://www.govdata.de/dl-de/by-2-0"/>
+    </dct:accessRights>
+    <dct:provenance>
+      <dct:ProvenanceStatement rdf:nodeID="N2fc94c67a8fb450ebaa155ca2625d4c4">
+        <rdfs:label>Der Datensatz wurde geharvestet. Ursprung: Integriertes Mess- und Informationssystem</rdfs:label>
+      </dct:ProvenanceStatement>
+    </dct:provenance>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://suche.transparenz.hamburg.de/dataset/721a8b77-5aa9-440c-b5fa-950878c06af2/resource/45518af8-ffd9-447f-8002-aeba22f01f68">
+        <dct:title>Reinwasser</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:accessURL rdf:resource="https://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/2e695e23-b986-44c2-a231-27dc1a94b28a/Reinwasser.csv"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dct:conformsTo rdf:resource="http://dcat-ap.de/def/dcatde/1.0/"/>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:format>CSV</dct:format>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-03-03T00:00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-27T14:27:37.970231</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10067</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="Nb85ee379c4a64affa5dbefe2c2fb02f9">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">371c61aec9afb8396c235dc10a4a24659376596a24f2c3d2c893202fde299a18</spdx:checksumValue>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Freie und Hansestadt Hamburg, Institut für Hygiene und Umwelt</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/level/state"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/transparenzportalHamburg"/>
+    <dcatde:politicalGeocodingURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/020000000000"/>
+    <dcatde:legalBasis>Hamburgisches Transparenzgesetz (HmbTG). URL: http://transparenz.hamburg.de/das-hmbtg/ Gesetzestext: http://transparenz.hamburg.de/contentblob/4318588/c8600b2b27ea31a5de6a92dacc138894/data/gesetzestext-hmbtg.pdf</dcatde:legalBasis>
+    <dcatde:geocodingDescription>Freie und Hansestadt Hamburg</dcatde:geocodingDescription>
+    <dcatde:originator>
+      <foaf:Organization rdf:nodeID="N44e65c4f2b0f4c1d8bfa0e37f5c5a561">
+        <foaf:name>Institut für Hygiene und Umwelt</foaf:name>
+      </foaf:Organization>
+    </dcatde:originator>
+    <dcatde:maintainer>
+      <foaf:Organization rdf:nodeID="Nd519045810b44ec180c859bb92e4f1fd">
+        <foaf:name>Institut für Hygiene und Umwelt</foaf:name>
+      </foaf:Organization>
+    </dcatde:maintainer>
+  </dcat:Dataset>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/2.0">
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <rdfs:Resource rdf:about="https://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/2e695e23-b986-44c2-a231-27dc1a94b28a/Reinwasser.csv"/>
+</rdf:RDF>

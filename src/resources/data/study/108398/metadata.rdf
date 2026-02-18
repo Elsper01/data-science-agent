@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:spdx="http://spdx.org/rdf/terms#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Dataset rdf:about="https://opendata.schleswig-holstein.de/dataset/4c707d16-8aa0-43ce-849c-09c8b706b634">
+    <dct:title>KFÜ-Messwerte</dct:title>
+    <dct:description>stündliche Messwerte der Kernkraftwerksfernüberwachung Schleswig-Holstein, Gamma-Ortsdosisleistung und meteorologische Ausbreitungsparameter.&#13;
+&#13;
+Die Datei ist in drei Bereiche untergliedert:&#13;
+&#13;
+1. stündliche Messwerte mit einer Spalte pro Messstation/Messwert&#13;
+2. Liste der Messstationen&#13;
+3. Kommentare zu einzelnen Datenpunkten&#13;
+&#13;
+Mehr Informationen zur Kernkraftwerksfernüberwachung Schleswig-Holstein erfahren Sie auf der Webseite https://www.schleswig-holstein.de/DE/fachinhalte/R/reaktorsicherheit/Kernkraftwerksfernueberwachung.&#13;
+</dct:description>
+    <dct:identifier>8958d4f3-e94b-428d-9be4-bb7319155bc6</dct:identifier>
+    <dcat:keyword>gamma-ortsdosisleistung</dcat:keyword>
+    <dcat:keyword>kfü</dcat:keyword>
+    <dcat:keyword>strahlung</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-25T11:05:04.135456</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-25T11:05:04.135456</dct:modified>
+    <dct:language>
+      <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/DEU"/>
+    </dct:language>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/TECH"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dct:isVersionOf rdf:resource="https://opendata.schleswig-holstein.de/dataset/d5d010b0-dce0-4a19-8f55-445612dd389c"/>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://opendata.schleswig-holstein.de/organization/mekun">
+        <foaf:name>Ministerium für Energiewende, Klimaschutz, Umwelt und Natur</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="Nd3e05cc4fd0c4ab19e022e6188c64b95">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-17T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-24T00:00:00</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:about="http://dcat-ap.de/def/politicalGeocoding/stateKey/01">
+        <skos:prefLabel>Bundesland Schleswig-Holstein</skos:prefLabel>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    </dct:accessRights>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/4c707d16-8aa0-43ce-849c-09c8b706b634/resource/388f98fb-e648-4948-b910-c72c35ee2801">
+        <dct:title>OpenData-KFUE-ODL_7T.csv</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-zero"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/4c707d16-8aa0-43ce-849c-09c8b706b634/resource/388f98fb-e648-4948-b910-c72c35ee2801/download/opendata-kfue-odl_7t.csv"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/4c707d16-8aa0-43ce-849c-09c8b706b634/resource/388f98fb-e648-4948-b910-c72c35ee2801/download/opendata-kfue-odl_7t.csv"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-zero"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-25T10:05:06.592048</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-25T10:05:06.472262</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">171362</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="N833506a10d4446feb704c5fed02b051e">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">99657eee648e55b3b261cf293c6c787b</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/schleswigHolstein"/>
+  </dcat:Dataset>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/cc-zero">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+  <spdx:ChecksumAlgorithm rdf:about="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/4c707d16-8aa0-43ce-849c-09c8b706b634/resource/388f98fb-e648-4948-b910-c72c35ee2801/download/opendata-kfue-odl_7t.csv"/>
+</rdf:RDF>

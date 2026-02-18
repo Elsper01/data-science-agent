@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:spdx="http://spdx.org/rdf/terms#"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Dataset rdf:about="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b">
+    <dct:title>Denkmalliste Kreis Segeberg</dct:title>
+    <dct:description>Kulturdenkmale sind gesetzlich geschützt und nachrichtlich in ein Verzeichnis, die sog. Denkmalliste, einzutragen. Von der Aufnahme in die Denkmalliste werden die betroffenen Eigentümerinnen und Eigentümer benachrichtigt. Gleichzeitig wird die Denkmalliste hier veröffentlicht und wöchentlich aktualisiert. Die Denkmalliste ist nicht abschließend, sondern wird ständig überprüft, ergänzt und bereinigt.&#13;
+&#13;
+Alle bisher nach dem Denkmalschutzgesetz von vor 2015 in das alte „Denkmalbuch“ eingetragenen „Kulturdenkmale von besonderer Bedeutung“ sind automatisch in die neue Denkmalliste übernommen worden, ihre Darstellungen konnten aber noch nicht abschließend aktualisiert werden (Beschreibung, Schutzumfang).&#13;
+&#13;
+Die Listen der Kreise gliedern sich in alphabetischer Reihe ihrer Gemeinden und innerhalb der Gemeinden (und kreisfreien Städten) nach&#13;
+- Denkmalbereiche&#13;
+- Sachgesamtheiten&#13;
+- Mehrheiten von baulichen Anlagen&#13;
+- Bauliche Anlagen (Einzeldenkmale)&#13;
+- Teile von baulichen Anlagen&#13;
+- Gründenkmale&#13;
+- Bewegliche Kulturdenkmale&#13;
+- Sonstige Kulturdenkmale&#13;
+</dct:description>
+    <dct:identifier>9fb1061e-bbe6-476c-8fb2-7427fbfc904b</dct:identifier>
+    <dcat:keyword>denkmal</dcat:keyword>
+    <dcat:keyword>denkmalliste</dcat:keyword>
+    <dcat:keyword>kulturdenkmal</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T00:00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-13T07:55:58.408176</dct:modified>
+    <dct:language>
+      <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/DEU"/>
+    </dct:language>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dct:isVersionOf rdf:resource="https://opendata.schleswig-holstein.de/dataset/bcb506b5-4050-408d-9cfb-8b036e2cd27e"/>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="N7451319152fb4fbb9fbe88eafcda5269">
+        <vcard:fn>Landesamt für Denkmalpflege Schleswig-Holstein</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:denkmalamt@ld.landsh.de"/>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://opendata.schleswig-holstein.de/organization/landesamt-fur-denkmalpflege">
+        <foaf:name>Landesamt für Denkmalpflege</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="Ncb27eaff63084424860f98143e0e4ec1">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-22T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-13T09:55:39.540759</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:about="http://dcat-ap.de/def/politicalGeocoding/districtKey/01060">
+        <skos:prefLabel>Kreis Segeberg</skos:prefLabel>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    </dct:accessRights>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/8a3dbba9-3bee-46fa-9a99-d304fefcf797">
+        <dct:title>Kreis Segeberg.pdf</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/8a3dbba9-3bee-46fa-9a99-d304fefcf797/download/kreis-segeberg.pdf"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/8a3dbba9-3bee-46fa-9a99-d304fefcf797/download/kreis-segeberg.pdf"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/pdf"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/PDF"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:05:41.854127</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:05:41.788978</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">710403</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="N0097e664e13f45d9938b4afb79f4d542">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">1efb1f8598184dfeec3d586f07aaf66c</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Landesamt für Denkmalpflege Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/aeb98da6-d291-4d3b-9699-b36801cb63d8">
+        <dct:title>Kreis Segeberg-latin1.csv</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/aeb98da6-d291-4d3b-9699-b36801cb63d8/download/kreis-segeberg-latin1.csv"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/aeb98da6-d291-4d3b-9699-b36801cb63d8/download/kreis-segeberg-latin1.csv"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:05:33.003779</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:05:32.956026</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">101721</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="Na8480aae4cd648fd96877c799e3ac795">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">f37dc7628db69aef316ffac19225967b</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Landesamt für Denkmalpflege Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/ffb9f4a8-005f-4db3-b33c-aa6628f05991">
+        <dct:title>Kreis Segeberg.json</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/ffb9f4a8-005f-4db3-b33c-aa6628f05991/download/kreis-segeberg.json"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/ffb9f4a8-005f-4db3-b33c-aa6628f05991/download/kreis-segeberg.json"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/json"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:05:37.488092</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:05:37.428921</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150331</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="Nb1daad68917044f8886abc80bd68af26">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">6bb13f0a88f6e8e45e017b762dfc6171</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Landesamt für Denkmalpflege Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/572e6185-1b77-480e-a64c-908ddcbe833a">
+        <dct:title>Kreis Segeberg.csv</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/572e6185-1b77-480e-a64c-908ddcbe833a/download/kreis-segeberg.csv"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/572e6185-1b77-480e-a64c-908ddcbe833a/download/kreis-segeberg.csv"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:05:35.026885</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T11:05:34.944903</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">102973</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="N4d41eb7df28849b3b2f9d268d674257d">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">52d5e6163e3b6014723c99067b1d6a80</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Landesamt für Denkmalpflege Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/schleswigHolstein"/>
+    <dcatde:maintainer>
+      <foaf:Organization rdf:nodeID="Naf1c3a08a293465bb17f562dad12ed3b">
+        <foaf:name>Landesamt für Denkmalpflege Schleswig-Holstein</foaf:name>
+        <foaf:mbox>denkmalamt@ld.landsh.de</foaf:mbox>
+      </foaf:Organization>
+    </dcatde:maintainer>
+  </dcat:Dataset>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/cc-by/4.0">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/8a3dbba9-3bee-46fa-9a99-d304fefcf797/download/kreis-segeberg.pdf"/>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/572e6185-1b77-480e-a64c-908ddcbe833a/download/kreis-segeberg.csv"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/ffb9f4a8-005f-4db3-b33c-aa6628f05991/download/kreis-segeberg.json"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/PDF"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/9fb1061e-bbe6-476c-8fb2-7427fbfc904b/resource/aeb98da6-d291-4d3b-9699-b36801cb63d8/download/kreis-segeberg-latin1.csv"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/application/json"/>
+  <spdx:ChecksumAlgorithm rdf:about="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/application/pdf"/>
+</rdf:RDF>

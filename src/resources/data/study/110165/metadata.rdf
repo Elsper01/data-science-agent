@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:spdx="http://spdx.org/rdf/terms#"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Dataset rdf:about="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d">
+    <dct:title>Denkmalliste</dct:title>
+    <dct:description>Kulturdenkmale sind gesetzlich geschützt und nachrichtlich in ein Verzeichnis, die sog. Denkmalliste, einzutragen. Von der Aufnahme in die Denkmalliste werden die betroffenen Eigentümerinnen und Eigentümer benachrichtigt. Gleichzeitig wird die Denkmalliste hier veröffentlicht und wöchentlich aktualisiert. Die Denkmalliste ist nicht abschließend, sondern wird ständig überprüft, ergänzt und bereinigt.&#13;
+&#13;
+Alle bisher nach dem Denkmalschutzgesetz von vor 2015 in das alte „Denkmalbuch“ eingetragenen „Kulturdenkmale von besonderer Bedeutung“ sind automatisch in die neue Denkmalliste übernommen worden, ihre Darstellungen konnten aber noch nicht abschließend aktualisiert werden (Beschreibung, Schutzumfang).</dct:description>
+    <dct:identifier>fe4a8cc6-c0da-4ee9-a232-837a8292a1e4</dct:identifier>
+    <dcat:keyword>denkmal</dcat:keyword>
+    <dcat:keyword>denkmalliste</dcat:keyword>
+    <dcat:keyword>kulturdenkmal</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-20T09:54:55.887236</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-20T09:54:55.887236</dct:modified>
+    <dct:language>
+      <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/DEU"/>
+    </dct:language>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dct:isVersionOf rdf:resource="https://opendata.schleswig-holstein.de/dataset/01de02e8-9065-49af-a60e-1668a4c86ffd"/>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="N0fc111aed5ee4cadbb1a4284aec44b15">
+        <vcard:fn>Landesamt für Denkmalpflege Schleswig-Holstein</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:denkmalamt@ld.landsh.de"/>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://opendata.schleswig-holstein.de/organization/landesamt-fur-denkmalpflege">
+        <foaf:name>Landesamt für Denkmalpflege</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="Nf8e4f80b0a594edfbdc17b52b1f4ecbe">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-20T09:54:55.887236</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-27T02:01:25.603577</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:about="http://dcat-ap.de/def/politicalGeocoding/stateKey/01">
+        <skos:prefLabel>Bundesland Schleswig-Holstein</skos:prefLabel>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    </dct:accessRights>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/65345b9a-626c-43ce-b91c-b31f35a69cda">
+        <dct:title>denkmalliste-latin1.csv</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/65345b9a-626c-43ce-b91c-b31f35a69cda/download/denkmalliste-latin1.csv"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/65345b9a-626c-43ce-b91c-b31f35a69cda/download/denkmalliste-latin1.csv"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-20T07:55:03.800243</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-20T07:55:03.668643</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3500203</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="Nc4e0411d92db4a308b1f7e22dfefb64e">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">9017d845c881982eb34fe411d4d90db8</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Landesamt für Denkmalpflege Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/357dab40-f6aa-4f70-b5b5-a556aa994931">
+        <dct:title>denkmalliste.csv</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/357dab40-f6aa-4f70-b5b5-a556aa994931/download/denkmalliste.csv"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/357dab40-f6aa-4f70-b5b5-a556aa994931/download/denkmalliste.csv"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-20T07:55:01.605245</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-20T07:55:01.430917</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3545267</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="Nba7b5e34356e42c4a19625e5dbe6c6f1">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">280c9ae555c4bf6fdf3b082cce5c6537</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Landesamt für Denkmalpflege Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/81ddc162-1cbe-4f35-af71-bc9f0b43e583">
+        <dct:title>denkmalliste.json</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/81ddc162-1cbe-4f35-af71-bc9f0b43e583/download/denkmalliste.json"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/81ddc162-1cbe-4f35-af71-bc9f0b43e583/download/denkmalliste.json"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/json"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-20T07:54:59.427124</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-20T07:54:59.294248</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6010113</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="N7b15ac5756ac432aaffd4ef0f04d9f9a">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">4d978e566c502ae7639d6e1177ef3357</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Landesamt für Denkmalpflege Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/schleswigHolstein"/>
+    <dcatde:maintainer>
+      <foaf:Organization rdf:nodeID="Ne785b936c24f436cb2a7147b7a7db8fd">
+        <foaf:name>Landesamt für Denkmalpflege Schleswig-Holstein</foaf:name>
+        <foaf:mbox>denkmalamt@ld.landsh.de</foaf:mbox>
+      </foaf:Organization>
+    </dcatde:maintainer>
+  </dcat:Dataset>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/81ddc162-1cbe-4f35-af71-bc9f0b43e583/download/denkmalliste.json"/>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/65345b9a-626c-43ce-b91c-b31f35a69cda/download/denkmalliste-latin1.csv"/>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/cc-by/4.0">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/8f08d3ae-4085-4c35-8b6f-47ab3445e21d/resource/357dab40-f6aa-4f70-b5b5-a556aa994931/download/denkmalliste.csv"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/application/json"/>
+  <spdx:ChecksumAlgorithm rdf:about="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+</rdf:RDF>

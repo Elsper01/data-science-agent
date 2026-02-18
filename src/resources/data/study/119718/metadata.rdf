@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:locn="http://www.w3.org/ns/locn#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Distribution rdf:about="https://region.statistik-nord.de/detail_timelineexport/23/1902/11/1/353/">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dct:title>2025-07-02-19-15-Betriebe_im_Bauhauptgewerbe_nach_WZ-2-Stellern_im_Juni_in_Segeberg</dct:title>
+    <dct:license>
+      <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/2.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+        <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+      </dct:LicenseDocument>
+    </dct:license>
+    <dcat:accessURL rdf:resource="https://region.statistik-nord.de/detail_timelineexport/23/1902/11/1/353/"/>
+    <dcat:downloadURL rdf:resource="https://region.statistik-nord.de/detail_timelineexport/23/1902/11/1/353/"/>
+    <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+    <dcat:mediaType>
+      <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+    </dcat:mediaType>
+    <dct:format>
+      <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+    </dct:format>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T09:24:16.573454</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-07-02T17:23:34.077242</dct:modified>
+    <dcatde:licenseAttributionByText>Statistisches Amt für Hamburg und Schleswig-Holstein</dcatde:licenseAttributionByText>
+  </dcat:Distribution>
+  <dcat:Dataset rdf:about="https://region.statistik-nord.de/detail_timeline/23/1902/11/1/353/">
+    <dct:title>Betriebe im Bauhauptgewerbe nach WZ-2-Stellern im Juni in Segeberg</dct:title>
+    <dct:description>
+Industrie, Baugewerbe, Handwerk - Bauhauptgewerbe - Betriebe im Bauhauptgewerbe nach WZ-2-Stellern im Juni in Segeberg 
+
+[Zum HTML-Angebot der Zeitreihe](https://region.statistik-nord.de/detail_timeline/23/1902/11/1/353/)
+
+[Regionaldaten für Schleswig-Holstein](https://region.statistik-nord.de/main/1)
+
+Statistisches Amt für Hamburg und Schleswig-Holstein
+          </dct:description>
+    <dct:identifier rdf:resource="https://region.statistik-nord.de/detail_timeline/23/1902/11/1/353/"/>
+    <dct:accrualPeriodicity>
+      <dct:Frequency rdf:about="http://publications.europa.eu/resource/authority/frequency/YEARLY"/>
+    </dct:accrualPeriodicity>
+    <dcat:keyword>baugewerbe</dcat:keyword>
+    <dcat:keyword>bauhauptgewerbe</dcat:keyword>
+    <dcat:keyword>betriebe-im-bauhauptgewerbe</dcat:keyword>
+    <dcat:keyword>betriebe-nach-wz-2-stellern</dcat:keyword>
+    <dcat:keyword>handwerk</dcat:keyword>
+    <dcat:keyword>industrie</dcat:keyword>
+    <dcat:keyword>segeberg</dcat:keyword>
+    <dcat:keyword>wz-2-stellern-im-juni</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-16T00:00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-16T00:00:00</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://opendata.schleswig-holstein.de/organization/statistikamt-nord">
+        <foaf:name>Statistisches Amt für Hamburg und Schleswig-Holstein A.ö.R. (Statistikamt Nord)</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="N336aa1a20f1449c7abab7cef718e2af0">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-06-01T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-01T00:00:00</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:about="http://dcat-ap.de/def/politicalGeocoding/districtKey/01060">
+        <skos:prefLabel>Kreis Segeberg</skos:prefLabel>
+      </dct:Location>
+    </dct:spatial>
+    <dct:spatial>
+      <dct:Location rdf:nodeID="N918b0376682e4490a1065562aed096f2">
+        <locn:adminUnitL2 rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/01060"/>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    </dct:accessRights>
+    <dcat:distribution rdf:resource="https://region.statistik-nord.de/detail_timelineexport/23/1902/11/1/353/"/>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/administrativeDistrict"/>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/schleswigHolstein"/>
+    <dcatde:politicalGeocodingURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/01060"/>
+  </dcat:Dataset>
+</rdf:RDF>

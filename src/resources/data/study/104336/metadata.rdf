@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:spdx="http://spdx.org/rdf/terms#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Dataset rdf:about="https://opendata.schleswig-holstein.de/dataset/86ad3444-b943-4588-a4d0-22ebd0a7a34e">
+    <dct:title>Förderung von Investitionsprojekten der deutschen Volksgruppe in Nordschleswig</dct:title>
+    <dct:description>Förderung von Investitionsprojekten der deutschen Volksgruppe in Nordschleswig durch das Land Schleswig-Holstein und den Bund im Jahr 2013. Aufgelistet sind die Investitionen des Bundes und des Landes jeweils in Euro und die Gesamtsumme.&#13;
+&#13;
+Quelle Tabelle: Bund Deutscher Nordschleswiger&#13;
+&#13;
+Quelle: https://transparenz.schleswig-holstein.de/dataset/minderheitenbericht-2021&#13;
+&#13;
+Der Minderheitenbericht 2021 enthält eine Vielzahl von Tabellen, die Sie [hier aufgelistet](https://opendata.schleswig-holstein.de/tag/Minderheitenbericht%202021) finden.</dct:description>
+    <dct:identifier>86ad3444-b943-4588-a4d0-22ebd0a7a34e</dct:identifier>
+    <dcat:keyword>investitionsprojekte</dcat:keyword>
+    <dcat:keyword>minderheitenbericht</dcat:keyword>
+    <dcat:keyword>minderheitenbericht-2021</dcat:keyword>
+    <dcat:keyword>nordschleswig</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-14T00:00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-14T09:28:00.244910</dct:modified>
+    <dct:language>
+      <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/DEU"/>
+    </dct:language>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/INTR"/>
+    <dct:isVersionOf rdf:resource="https://opendata.schleswig-holstein.de/dataset/7bc0aafc-2bb4-4992-bbf2-74d49d5fbcd8"/>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://opendata.schleswig-holstein.de/organization/staatskanzlei">
+        <foaf:name>Staatskanzlei</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="N2281e7f2288846ad94d4f890bba13e42">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-01T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-12-31T00:00:00</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:about="http://dcat-ap.de/def/politicalGeocoding/stateKey/01">
+        <skos:prefLabel>Bundesland Schleswig-Holstein</skos:prefLabel>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    </dct:accessRights>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/86ad3444-b943-4588-a4d0-22ebd0a7a34e/resource/13d447b9-90d5-4f2f-a601-e184933740e4">
+        <dct:title>Tabelle_23.csv</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/ccpdm/1.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/86ad3444-b943-4588-a4d0-22ebd0a7a34e/resource/13d447b9-90d5-4f2f-a601-e184933740e4/download/tabelle_23.csv"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/86ad3444-b943-4588-a4d0-22ebd0a7a34e/resource/13d447b9-90d5-4f2f-a601-e184933740e4/download/tabelle_23.csv"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/ccpdm/1.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-14T09:27:59.459520</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-14T09:27:59.343122</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">292</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="N4c43582c9fc84f2da0fe5ec83c9443fd">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">3e979f611b59811d5b7267b2714035a8</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/schleswigHolstein"/>
+  </dcat:Dataset>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/ccpdm/1.0">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+  <spdx:ChecksumAlgorithm rdf:about="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/86ad3444-b943-4588-a4d0-22ebd0a7a34e/resource/13d447b9-90d5-4f2f-a601-e184933740e4/download/tabelle_23.csv"/>
+</rdf:RDF>

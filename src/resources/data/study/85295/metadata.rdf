@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:spdx="http://spdx.org/rdf/terms#"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <dcat:Dataset rdf:about="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05">
+    <dct:title>Denkmalliste Kreis Stormarn</dct:title>
+    <dct:description>Kulturdenkmale sind gesetzlich geschützt und nachrichtlich in ein Verzeichnis, die sog. Denkmalliste, einzutragen. Von der Aufnahme in die Denkmalliste werden die betroffenen Eigentümerinnen und Eigentümer benachrichtigt. Gleichzeitig wird die Denkmalliste hier veröffentlicht und wöchentlich aktualisiert. Die Denkmalliste ist nicht abschließend, sondern wird ständig überprüft, ergänzt und bereinigt.&#13;
+&#13;
+Alle bisher nach dem Denkmalschutzgesetz von vor 2015 in das alte „Denkmalbuch“ eingetragenen „Kulturdenkmale von besonderer Bedeutung“ sind automatisch in die neue Denkmalliste übernommen worden, ihre Darstellungen konnten aber noch nicht abschließend aktualisiert werden (Beschreibung, Schutzumfang).&#13;
+&#13;
+Die Listen der Kreise gliedern sich in alphabetischer Reihe ihrer Gemeinden und innerhalb der Gemeinden (und kreisfreien Städten) nach&#13;
+- Denkmalbereiche&#13;
+- Sachgesamtheiten&#13;
+- Mehrheiten von baulichen Anlagen&#13;
+- Bauliche Anlagen (Einzeldenkmale)&#13;
+- Teile von baulichen Anlagen&#13;
+- Gründenkmale&#13;
+- Bewegliche Kulturdenkmale&#13;
+- Sonstige Kulturdenkmale&#13;
+</dct:description>
+    <dct:identifier>926a3a75-1bb3-4ee4-9fd7-ae05ef076d05</dct:identifier>
+    <dcat:keyword>denkmal</dcat:keyword>
+    <dcat:keyword>denkmalliste</dcat:keyword>
+    <dcat:keyword>kulturdenkmal</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T00:00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-13T07:52:13.780214</dct:modified>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dct:isVersionOf rdf:resource="https://opendata.schleswig-holstein.de/dataset/977c4957-5748-4247-80a5-b0f279682778"/>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="N027e88613dd841a0b47a0fd1e69877e4">
+        <vcard:fn>Landesamt für Denkmalpflege Schleswig-Holstein</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:denkmalamt@ld.landsh.de"/>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://opendata.schleswig-holstein.de/organization/landesamt-fur-denkmalpflege">
+        <foaf:name>Landesamt für Denkmalpflege</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="Ndd814e031ef2439f824ce825acc9ee11">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-22T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-13T09:51:55.795327</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+    <dct:spatial>
+      <dct:Location rdf:about="http://dcat-ap.de/def/politicalGeocoding/districtKey/01062">
+        <skos:prefLabel>Kreis Stormarn</skos:prefLabel>
+      </dct:Location>
+    </dct:spatial>
+    <dct:accessRights>
+      <dct:RightsStatement rdf:about="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    </dct:accessRights>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/a1601689-5766-4a0d-9492-701fbf4050f0">
+        <dct:title>Kreis Stormarn.json</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/a1601689-5766-4a0d-9492-701fbf4050f0/download/kreis-stormarn.json"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/a1601689-5766-4a0d-9492-701fbf4050f0/download/kreis-stormarn.json"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/json"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T10:55:13.067733</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T10:55:13.010643</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">109798</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="Na6c7c87c29c94503982feaf4c48c389e">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">471623288421b1923652a864b3b522e9</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Landesamt für Denkmalpflege Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/9a2a588d-686b-4305-8047-2beaff31e628">
+        <dct:title>Kreis Stormarn-latin1.csv</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/9a2a588d-686b-4305-8047-2beaff31e628/download/kreis-stormarn-latin1.csv"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/9a2a588d-686b-4305-8047-2beaff31e628/download/kreis-stormarn-latin1.csv"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T10:55:16.003980</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T10:55:15.943627</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71492</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="N5319c62ebd0943ecbe6555c569a45205">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">3eda727d55bce2abe42326fdfa0299cd</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Landesamt für Denkmalpflege Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/99b74338-6e55-4b4f-890b-0cf594039107">
+        <dct:title>Kreis Stormarn.csv</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/99b74338-6e55-4b4f-890b-0cf594039107/download/kreis-stormarn.csv"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/99b74338-6e55-4b4f-890b-0cf594039107/download/kreis-stormarn.csv"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T10:54:57.443662</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T10:54:57.398854</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">72213</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="Nbbc7c15a44bf4c7687181ec524f5f9fa">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">f144c3fd86b26d47fbfa452a7d5b41ec</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Landesamt für Denkmalpflege Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/ab18904e-e340-4a4c-9772-e3709b4e9974">
+        <dct:title>Kreis Stormarn.pdf</dct:title>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:accessURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/ab18904e-e340-4a4c-9772-e3709b4e9974/download/kreis-stormarn.pdf"/>
+        <dcat:downloadURL rdf:resource="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/ab18904e-e340-4a4c-9772-e3709b4e9974/download/kreis-stormarn.pdf"/>
+        <dct:rights rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/pdf"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/PDF"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T10:55:07.539788</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-06T10:55:07.481015</dct:modified>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">637030</dcat:byteSize>
+        <spdx:checksum>
+          <spdx:Checksum rdf:nodeID="Nd839cbfab679473f9a0533fddbfab1bc">
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">70fd4cc5618325f34a702d394e9e99e8</spdx:checksumValue>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+          </spdx:Checksum>
+        </spdx:checksum>
+        <dcatde:licenseAttributionByText>Landesamt für Denkmalpflege Schleswig-Holstein</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/schleswigHolstein"/>
+    <dcatde:maintainer>
+      <foaf:Organization rdf:nodeID="Nb28471a4b9764d98b75ce3173eeaedb2">
+        <foaf:name>Landesamt für Denkmalpflege Schleswig-Holstein</foaf:name>
+        <foaf:mbox>denkmalamt@ld.landsh.de</foaf:mbox>
+      </foaf:Organization>
+    </dcatde:maintainer>
+  </dcat:Dataset>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/9a2a588d-686b-4305-8047-2beaff31e628/download/kreis-stormarn-latin1.csv"/>
+  <dct:LicenseDocument rdf:about="http://dcat-ap.de/def/licenses/cc-by/4.0">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    <dct:type rdf:resource="http://purl.org/adms/licencetype/UnknownIPR"/>
+  </dct:LicenseDocument>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/99b74338-6e55-4b4f-890b-0cf594039107/download/kreis-stormarn.csv"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/a1601689-5766-4a0d-9492-701fbf4050f0/download/kreis-stormarn.json"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/PDF"/>
+  <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/text/csv"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/application/json"/>
+  <spdx:ChecksumAlgorithm rdf:about="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+  <dct:MediaType rdf:about="https://www.iana.org/assignments/media-types/application/pdf"/>
+  <rdfs:Resource rdf:about="https://opendata.schleswig-holstein.de/dataset/926a3a75-1bb3-4ee4-9fd7-ae05ef076d05/resource/ab18904e-e340-4a4c-9772-e3709b4e9974/download/kreis-stormarn.pdf"/>
+</rdf:RDF>

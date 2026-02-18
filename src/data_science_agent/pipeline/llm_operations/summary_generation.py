@@ -1,17 +1,18 @@
 import inspect
+import os
 from typing import Any
 
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, AIMessage
+from assert_llm_tools import evaluate_summary, LLMConfig
 
 from data_science_agent.dtos.base.responses.summary_base import SummaryBase
-from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt
 from data_science_agent.language import import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
-from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color, DurationMetadata, LLMMetadata
-from data_science_agent.utils.enums import LLMModel, Color, ProgrammingLanguage
+from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color, OPENROUTER_API_KEY, BASE_URL
+from data_science_agent.utils.enums import LLMModel, Color
 from data_science_agent.utils.llm_metadata import LLMMetadata
 
 prompt: Prompt = Prompt(
@@ -28,6 +29,7 @@ prompt: Prompt = Prompt(
                 - Columns: '{column_names}'
                 - Descriptions: '{descriptions}'
                 - Metadata: '{metadata}'
+                - Dataset: '{dataset}'
             """,
         "summary_user_prompt": \
             """
@@ -50,6 +52,7 @@ prompt: Prompt = Prompt(
                 - Columns: '{column_names}'
                 - Descriptions: '{descriptions}'
                 - Metadata: '{metadata}'
+                - Dataset: '{dataset}'
             """,
         "summary_user_prompt": \
             """
@@ -73,13 +76,25 @@ def llm_generate_summary(state: AgentState) -> AgentState:
     for message in reversed(llm_response["messages"]):
         if isinstance(message, AIMessage):
             state["llm_metadata"].append(
-                LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name))
+                LLMMetadata.from_ai_message(message, inspect.currentframe().f_code.co_name)
+            )
             break
 
     summary: Summary = llm_response["structured_response"]
     print_color(f"Generated Dataset Summary.", Color.OK_GREEN)
 
     state["summary"] = summary
+
+    # TODO: das kann später wieder raus; wir überlegen uns noch ob das sinnvoll ist
+    output_path = state["output_path"]
+    summary_file_path = os.path.join(output_path, "summary.txt")
+
+    with open(summary_file_path, "w", encoding="utf-8") as f:
+        f.write(str(summary))
+
+    print_color(f"Summary saved to: {summary_file_path}", Color.OK_BLUE)
+
+    # evaluate(state.get("dataset_df", []).to_markdown() ,summary)
 
     return state
 
@@ -90,7 +105,8 @@ def _get_agent_and_messages(state: AgentState) -> dict[str, Any] | Any:
         "summary_system_prompt",
         column_names=str(state.get("column_names", [])),
         descriptions=str(state.get("descriptions", [])),
-        metadata=str(state.get("metadata", []))
+        metadata=str(state.get("metadata", [])),
+        dataset=str(state.get("dataset_df", []).to_markdown()),
     )
 
     user_content = prompt.get_prompt(
@@ -100,10 +116,30 @@ def _get_agent_and_messages(state: AgentState) -> dict[str, Any] | Any:
     user_msg = HumanMessage(content=user_content)
 
     temp_agent = create_agent(
-        model=get_llm_model(LLMModel.MISTRAL),
+        model=get_llm_model(LLMModel.GEMINI),
         response_format=Summary,
         system_prompt=system_prompt
     )
 
     llm_response = temp_agent.invoke({"messages": [user_msg]})
     return llm_response
+
+def evaluate(table, summary):
+    # TODO: das kann raus; wir können diese LLM-as-a-Judge's auch selber bauen und integrieren
+    # Configure LLM for evaluation
+    config = LLMConfig(
+        provider="openai",
+        model_id="entwicklung",#LLMModel.GPT_4o,
+        api_key=OPENROUTER_API_KEY,
+        proxy_url="https://ki-api.scw.ext.seitenbau.net/v1",#BASE_URL
+    )
+
+    # Evaluate the summary
+    results = evaluate_summary(
+        full_text=table,
+        summary=summary.summary,
+        metrics=["rouge", "bleu", "bert_score", "bart_score", "faithfulness", "hallucination"],
+        llm_config=config
+    )
+
+    print(results)

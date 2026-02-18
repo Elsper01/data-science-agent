@@ -20,7 +20,11 @@ from tqdm import tqdm
 total_datasets = len(selected_datasets)
 start_time_total = time()
 
+running = True
+
 for i, dataset in tqdm(enumerate(selected_datasets), total=total_datasets, desc="Processing datasets"):
+    if not running:
+        break
     iteration_start = time()
     print(f"\nDataset: {dataset}")
 
@@ -54,10 +58,9 @@ for i, dataset in tqdm(enumerate(selected_datasets), total=total_datasets, desc=
         }
         result = agent.invoke(state)
         counter_success += 1
+        running = True#False
     except Exception as e:
         print_color(f"Agent failed with error: {e}", enums.Color.WARNING)
-        print(e)
-        print(traceback.format_exc())
         counter_fail += 1
         continue
 

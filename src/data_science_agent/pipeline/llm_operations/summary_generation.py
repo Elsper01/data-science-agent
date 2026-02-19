@@ -4,14 +4,13 @@ from typing import Any
 
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, AIMessage
-from assert_llm_tools import evaluate_summary, LLMConfig
 
 from data_science_agent.dtos.base.responses.summary_base import SummaryBase
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt
 from data_science_agent.language import import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
-from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color, OPENROUTER_API_KEY, BASE_URL
+from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color
 from data_science_agent.utils.enums import LLMModel, Color
 from data_science_agent.utils.llm_metadata import LLMMetadata
 
@@ -106,7 +105,7 @@ def _get_agent_and_messages(state: AgentState) -> dict[str, Any] | Any:
         column_names=str(state.get("column_names", [])),
         descriptions=str(state.get("descriptions", [])),
         metadata=str(state.get("metadata", [])),
-        dataset = str(state["dataset_df"].sample(n=25, random_state=42).to_markdown())
+        dataset=str(state["dataset_df"].sample(n=25, random_state=42).to_markdown())
     )
 
     user_content = prompt.get_prompt(
@@ -123,23 +122,3 @@ def _get_agent_and_messages(state: AgentState) -> dict[str, Any] | Any:
 
     llm_response = temp_agent.invoke({"messages": [user_msg]})
     return llm_response
-
-def evaluate(table, summary):
-    # TODO: das kann raus; wir können diese LLM-as-a-Judge's auch selber bauen und integrieren
-    # Configure LLM for evaluation
-    config = LLMConfig(
-        provider="openai",
-        model_id="entwicklung",#LLMModel.GPT_4o,
-        api_key=OPENROUTER_API_KEY,
-        proxy_url="https://ki-api.scw.ext.seitenbau.net/v1",#BASE_URL
-    )
-
-    # Evaluate the summary
-    results = evaluate_summary(
-        full_text=table,
-        summary=summary.summary,
-        metrics=["rouge", "bleu", "bert_score", "bart_score", "faithfulness", "hallucination"],
-        llm_config=config
-    )
-
-    print(results)

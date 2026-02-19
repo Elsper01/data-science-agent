@@ -106,7 +106,7 @@ def _get_agent_and_messages(state: AgentState) -> dict[str, Any] | Any:
         column_names=str(state.get("column_names", [])),
         descriptions=str(state.get("descriptions", [])),
         metadata=str(state.get("metadata", [])),
-        dataset=str(state.get("dataset_df", []).to_markdown()),
+        dataset = str(state["dataset_df"].sample(n=25, random_state=42).to_markdown())
     )
 
     user_content = prompt.get_prompt(

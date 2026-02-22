@@ -1,7 +1,7 @@
 from typing import Any, TypedDict
 from langchain_core.messages import HumanMessage, AIMessage
 
-from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
+from data_science_agent.dtos.wrapper.visualization import VisualizationWrapper
 from data_science_agent.language import import_all_language_dtos
 from data_science_agent.utils import AGENT_LANGUAGE, DurationMetadata, LLMMetadata
 from data_science_agent.utils.enums import ProgrammingLanguage

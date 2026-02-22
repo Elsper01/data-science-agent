@@ -105,7 +105,7 @@ def _get_agent_and_messages(state: AgentState) -> dict[str, Any] | Any:
         column_names=str(state.get("column_names", [])),
         descriptions=str(state.get("descriptions", [])),
         metadata=str(state.get("metadata", [])),
-        dataset=str(state["dataset_df"].sample(n=25, random_state=42).to_markdown())
+        dataset=str(get_dataset_preview(state["dataset_df"]).to_markdown())
     )
 
     user_content = prompt.get_prompt(
@@ -122,3 +122,12 @@ def _get_agent_and_messages(state: AgentState) -> dict[str, Any] | Any:
 
     llm_response = temp_agent.invoke({"messages": [user_msg]})
     return llm_response
+
+def get_dataset_preview(df, n=25):
+    """Robust sampling."""
+    if df is None:
+        return None
+    sample_size = min(n, len(df))
+    if sample_size == 0:
+        return df
+    return df.sample(n=sample_size, random_state=42, replace=False)

@@ -2,8 +2,13 @@ import inspect
 import os
 from typing import Any
 
+import nltk
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, AIMessage
+from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
+from nltk.translate.meteor_score import meteor_score
+from nltk.tokenize import word_tokenize
+from rouge_score import rouge_scorer
 
 from data_science_agent.dtos.base.responses.summary_base import SummaryBase
 from data_science_agent.graph import AgentState
@@ -13,6 +18,8 @@ from data_science_agent.pipeline.decorator.duration_tracking import track_durati
 from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color
 from data_science_agent.utils.enums import LLMModel, Color
 from data_science_agent.utils.llm_metadata import LLMMetadata
+
+nltk.download('wordnet')
 
 prompt: Prompt = Prompt(
     de={
@@ -84,7 +91,6 @@ def llm_generate_summary(state: AgentState) -> AgentState:
 
     state["summary"] = summary
 
-    # TODO: das kann später wieder raus; wir überlegen uns noch ob das sinnvoll ist
     output_path = state["output_path"]
     summary_file_path = os.path.join(output_path, "summary.txt")
 
@@ -93,7 +99,17 @@ def llm_generate_summary(state: AgentState) -> AgentState:
 
     print_color(f"Summary saved to: {summary_file_path}", Color.OK_BLUE)
 
-    # evaluate(state.get("dataset_df", []).to_markdown() ,summary)
+    dataset_text = get_dataset_preview(state.get("dataset_df", []), 25).to_markdown()
+    metadata_text = str(state.get("metadata", ""))
+    descriptions_text = str(state.get("descriptions", ""))
+    evaluation_scores = evaluate_summary(
+        summary=summary,
+        dataset_text=dataset_text,
+        metadata=metadata_text,
+        column_descriptions=descriptions_text,
+    )
+
+    print_color(f"Evaluation done. Results: {evaluation_scores}", Color.OK_BLUE)
 
     return state
 
@@ -123,6 +139,7 @@ def _get_agent_and_messages(state: AgentState) -> dict[str, Any] | Any:
     llm_response = temp_agent.invoke({"messages": [user_msg]})
     return llm_response
 
+
 def get_dataset_preview(df, n=25):
     """Robust sampling."""
     if df is None:
@@ -131,3 +148,38 @@ def get_dataset_preview(df, n=25):
     if sample_size == 0:
         return df
     return df.sample(n=sample_size, random_state=42, replace=False)
+
+
+def evaluate_summary(summary: Summary, dataset_text: str, metadata: str, column_descriptions: str) -> dict[str, float]:
+    """
+    Evaluates the generated summary using ROUGE, BLEU and METEOR against a reference text constructed from the dataset,
+    metadata and column descriptions.
+    """
+
+    reference_text = f"{column_descriptions}\n{metadata}\n{dataset_text}"
+    summary_text = f"{summary.summary}\n{summary.columns}"
+
+    reference_tokens = word_tokenize(reference_text)
+    summary_tokens = word_tokenize(summary_text)
+
+    smoothie = SmoothingFunction().method4
+    bleu_score = sentence_bleu([reference_tokens], summary_tokens, smoothing_function=smoothie)
+
+    meteor = meteor_score([reference_tokens], summary_tokens)
+
+    rouge = rouge_scorer.RougeScorer(["rouge1", "rouge2", "rougeL"], use_stemmer=True)
+    scores = rouge.score(reference_text, summary_text)
+    rouge1 = scores["rouge1"].fmeasure
+    rouge2 = scores["rouge2"].fmeasure
+    rougeL = scores["rougeL"].fmeasure
+
+    results = {
+        "bleu": bleu_score,
+        "meteor": meteor,
+        "rouge1": rouge1,
+        "rouge2": rouge2,
+        "rougeL": rougeL
+    }
+
+    print_color(f"Evaluation Metrics: {results}", Color.OK_CYAN)
+    return results

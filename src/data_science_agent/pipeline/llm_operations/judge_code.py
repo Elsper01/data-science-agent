@@ -5,7 +5,7 @@ from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
 from data_science_agent.dtos.base.responses.judge_base import JudgeBase
 from data_science_agent.dtos.base.responses.judge_verdict_base import JudgeVerdictBase
-from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
+from data_science_agent.dtos.wrapper.visualization import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
@@ -68,7 +68,7 @@ def llm_judge_code(state: AgentState) -> AgentState:
         vis: VisualizationWrapper
 
         temp_agent = create_agent(
-            model=get_llm_model(LLMModel.MISTRAL),
+            model=get_llm_model(LLMModel.GEMINI),
             system_prompt=SystemMessage(content=system_prompt),
             response_format=JudgeVerdict
         )

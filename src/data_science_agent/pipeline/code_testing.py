@@ -4,7 +4,7 @@ import os
 import tempfile
 import os
 
-from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
+from data_science_agent.dtos.wrapper.visualization import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
 from data_science_agent.utils import print_color

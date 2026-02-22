@@ -1,7 +1,7 @@
 from datetime import datetime
 from pathlib import Path
 
-from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
+from data_science_agent.dtos.wrapper.visualization import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.utils import print_color, MAX_REGENERATION_ATTEMPTS, AGENT_LANGUAGE
 from data_science_agent.utils.enums import Color

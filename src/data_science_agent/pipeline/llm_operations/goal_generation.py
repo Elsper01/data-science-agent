@@ -4,7 +4,7 @@ from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, AIMessage
 
 from data_science_agent.dtos.base.responses.goal_container_base import GoalContainerBase
-from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
+from data_science_agent.dtos.wrapper.visualization import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt
 from data_science_agent.language import import_language_dto
@@ -88,7 +88,7 @@ def llm_generate_goals(state: AgentState) -> AgentState:
     user_msg = HumanMessage(content=user_prompt)
 
     temp_agent = create_agent(
-        model=get_llm_model(LLMModel.MISTRAL),
+        model=get_llm_model(LLMModel.GEMINI),
         response_format=GoalContainer,
         system_prompt=system_prompt
     )

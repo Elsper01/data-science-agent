@@ -4,8 +4,8 @@ from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, AIMessage
 
 from data_science_agent.dtos.base import GoalBase, CodeBase
-from data_science_agent.dtos.wrapper.CodeWrapper import CodeWrapper
-from data_science_agent.dtos.wrapper.VisualizationWrapper import VisualizationWrapper
+from data_science_agent.dtos.wrapper.code import CodeWrapper
+from data_science_agent.dtos.wrapper.visualization import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt, import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
@@ -290,7 +290,7 @@ def _get_generate_code_agent(state: AgentState, goal: Goal):
 
     # create the agent
     temp_agent = create_agent(
-        model=get_llm_model(LLMModel.GPT_5),
+        model=get_llm_model(LLMModel.GEMINI),
         response_format=Code,
         system_prompt=system_prompt
     )

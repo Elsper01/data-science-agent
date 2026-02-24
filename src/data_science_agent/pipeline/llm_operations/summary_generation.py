@@ -1,3 +1,4 @@
+import csv
 import inspect
 import os
 from typing import Any
@@ -8,15 +9,17 @@ from langchain_core.messages import HumanMessage, AIMessage
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from nltk.translate.meteor_score import meteor_score
 from nltk.tokenize import word_tokenize
+from pydantic import BaseModel
 from rouge_score import rouge_scorer
 
 from data_science_agent.dtos.base.responses.summary_base import SummaryBase
+from data_science_agent.dtos.wrapper import VisualizationWrapper
 from data_science_agent.graph import AgentState
 from data_science_agent.language import Prompt
 from data_science_agent.language import import_language_dto
 from data_science_agent.pipeline.decorator.duration_tracking import track_duration
-from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color
-from data_science_agent.utils.enums import LLMModel, Color
+from data_science_agent.utils import AGENT_LANGUAGE, get_llm_model, print_color, DurationMetadata, LLMMetadata
+from data_science_agent.utils.enums import LLMModel, Color, ProgrammingLanguage
 from data_science_agent.utils.llm_metadata import LLMMetadata
 
 nltk.download('wordnet')
@@ -77,8 +80,38 @@ Summary = import_language_dto(AGENT_LANGUAGE, SummaryBase)
 def llm_generate_summary(state: AgentState) -> AgentState:
     """This node generates the dataset summary by using a LLM."""
 
-    llm_response = _get_agent_and_messages(state)
+    gpt5   = _get_agent_and_messages(state, LLMModel.GPT_5)
+    gpt4o  = _get_agent_and_messages(state, LLMModel.GPT_4o)
+    gemini = _get_agent_and_messages(state, LLMModel.GEMINI)
+    grok   = _get_agent_and_messages(state, LLMModel.GROK)
+    claude4= _get_agent_and_messages(state, LLMModel.CLAUDE_4)
 
+    results = []
+    for model_name, response in [
+        ("GPT-5",   gpt5["structured_response"]),
+        ("GPT-4o",  gpt4o["structured_response"]),
+        ("Gemini",  gemini["structured_response"]),
+        ("Grok",    grok["structured_response"]),
+        ("Claude",  claude4["structured_response"]),
+    ]:
+        scores = evaluate_summary_by_model(state, response, model_name)
+        row = {"model": model_name}
+        row.update(scores)
+        results.append(row)
+
+    output_path = state["output_path"]
+    os.makedirs(output_path, exist_ok=True)
+    csv_path = os.path.join(output_path, "summary_evaluation.csv")
+
+    fieldnames = ["model", "bleu", "meteor", "rouge1", "rouge2", "rougeL"]
+    with open(csv_path, mode="w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(results)
+
+    print_color(f"Evaluation metrics saved to: {csv_path}", Color.OK_BLUE)
+
+    llm_response = gemini
     for message in reversed(llm_response["messages"]):
         if isinstance(message, AIMessage):
             state["llm_metadata"].append(
@@ -87,18 +120,20 @@ def llm_generate_summary(state: AgentState) -> AgentState:
             break
 
     summary: Summary = llm_response["structured_response"]
-    print_color(f"Generated Dataset Summary.", Color.OK_GREEN)
-
+    print_color("Generated Dataset Summary.", Color.OK_GREEN)
     state["summary"] = summary
 
-    output_path = state["output_path"]
     summary_file_path = os.path.join(output_path, "summary.txt")
-
     with open(summary_file_path, "w", encoding="utf-8") as f:
         f.write(str(summary))
 
     print_color(f"Summary saved to: {summary_file_path}", Color.OK_BLUE)
+    print_color("Evaluation done.", Color.OK_BLUE)
 
+    return state
+
+
+def evaluate_summary_by_model(state: AgentState, summary: BaseModel, model_name:str) -> dict[str, float]:
     dataset_text = get_dataset_preview(state.get("dataset_df", []), 25).to_markdown()
     metadata_text = str(state.get("metadata", ""))
     descriptions_text = str(state.get("descriptions", ""))
@@ -108,13 +143,12 @@ def llm_generate_summary(state: AgentState) -> AgentState:
         metadata=metadata_text,
         column_descriptions=descriptions_text,
     )
+    print_color(f"  Evaluation Metrics {model_name}: {evaluation_scores}", Color.OK_CYAN)
 
-    print_color(f"Evaluation done. Results: {evaluation_scores}", Color.OK_BLUE)
-
-    return state
+    return evaluation_scores
 
 
-def _get_agent_and_messages(state: AgentState) -> dict[str, Any] | Any:
+def _get_agent_and_messages(state: AgentState, model: LLMModel) -> dict[str, Any] | Any:
     system_prompt = prompt.get_prompt(
         AGENT_LANGUAGE,
         "summary_system_prompt",
@@ -131,7 +165,7 @@ def _get_agent_and_messages(state: AgentState) -> dict[str, Any] | Any:
     user_msg = HumanMessage(content=user_content)
 
     temp_agent = create_agent(
-        model=get_llm_model(LLMModel.GEMINI),
+        model=get_llm_model(model),
         response_format=Summary,
         system_prompt=system_prompt
     )
@@ -181,5 +215,4 @@ def evaluate_summary(summary: Summary, dataset_text: str, metadata: str, column_
         "rougeL": rougeL
     }
 
-    print_color(f"Evaluation Metrics: {results}", Color.OK_CYAN)
     return results

@@ -97,7 +97,7 @@ prompt: Prompt = Prompt(
                 Vorgaben für den Code:
                 - Der Code soll direkt ausführbar sein, ohne syntaktische Fehler.
                 - Alle Visualisierungen sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
-                  `{output_path}{goal_index}_<plot_name>.png`
+                  `{output_path}/{goal_index}_<plot_name>.png`
                 - Wähle Diagrammtypen entsprechend der Hinweise im Visualisierungsziel.
                 - Führe auch kurze statistische Analysen durch, falls diese benötigt werden um das Visualisierungsziel zu erreichen. Beispiele für kurze, sinnvolle Analysen:
                   - Anteil fehlender Werte je Spalte,
@@ -198,7 +198,7 @@ prompt: Prompt = Prompt(
                 Specifications for the code:
                 - The code should be directly executable without syntax errors.
                 - All visualizations should be visually appealing, well labeled (in German), readable and saved as PNG files under:
-                  `{output_path}{goal_index}_<plot_name>.png`
+                  `{output_path}/{goal_index}_<plot_name>.png`
                 - Choose chart types according to the hints in the visualization goal.
                 - Also perform short statistical analyses if needed to achieve the visualization goal. Examples of short, meaningful analyses:
                   - Proportion of missing values per column,
@@ -290,7 +290,7 @@ def _get_generate_code_agent(state: AgentState, goal: Goal):
 
     # create the agent
     temp_agent = create_agent(
-        model=get_llm_model(LLMModel.GEMINI),
+        model=get_llm_model(LLMModel.GPT_5),
         response_format=Code,
         system_prompt=system_prompt
     )

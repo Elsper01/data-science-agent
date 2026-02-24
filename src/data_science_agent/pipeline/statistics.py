@@ -72,9 +72,7 @@ def print_statistics(state: AgentState) -> AgentState:
     stats_dir = Path(state["statistics_path"])
     stats_dir.mkdir(parents=True, exist_ok=True)
 
-    timestamp_filename = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    statistics_path = stats_dir / f"statistics_{timestamp_filename}.txt"
-    state["stats_file_path"] = statistics_path
+    statistics_path = stats_dir / f"statistics.txt"
 
     with open(statistics_path, "w", encoding="utf-8") as f:
         f.write("\n".join(header_lines))

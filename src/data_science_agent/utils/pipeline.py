@@ -22,7 +22,8 @@ def get_llm_model(model: LLMModel) -> ChatOpenAI:
 
 def clear_output_dir(path: str):
     """Clears the output directory except for specific files."""
-    files_to_keep = [".gitignore", ".gitkeep", "graph.png", "generate_plots.r", "generate_plots.py"]
+    files_to_keep = [".gitignore", ".gitkeep", "graph.png", "summary_evaluation.csv", "summary.txt",
+                     "sevq_ira.csv", "sevq.csv", "VER_0.csv", "VER_1.csv", "VER_2.csv", "VER_3.csv"]
     for file_name in os.listdir(path):
         if file_name not in files_to_keep:
             file_path = os.path.join(path, file_name)

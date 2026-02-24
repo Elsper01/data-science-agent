@@ -8,8 +8,7 @@ from data_science_agent.utils import print_color, enums
 
 datasets = os.listdir("./src/resources/data/study")
 
-# random.seed(42)
-selected_datasets = datasets  # random.sample(datasets, k=20)
+selected_datasets = ["13473"]#datasets  # random.sample(datasets, k=20)
 
 counter_success = 0
 counter_fail = 0
@@ -20,16 +19,23 @@ from tqdm import tqdm
 total_datasets = len(selected_datasets)
 start_time_total = time()
 
-running = True
-
-for i, dataset in tqdm(enumerate(selected_datasets), total=total_datasets, desc="Processing datasets"):
-    if not running:
-        break
+for i, dataset in tqdm(enumerate(selected_datasets),
+                       total=total_datasets,
+                       desc="Processing datasets"):
     iteration_start = time()
     print(f"\nDataset: {dataset}")
 
-    agent = build_graph()
+    output_dir = f"./src/resources/output/{dataset}"
 
+    # checks whether output dir exists and is empty
+    if os.path.exists(output_dir) and os.listdir(output_dir):
+        print(f"➡️  Output directory for '{dataset}' is not empty. Skipping...")
+        continue
+
+    # create dir if not exists
+    os.makedirs(output_dir, exist_ok=True)
+
+    agent = build_graph()
     png_bytes = agent.get_graph().draw_mermaid_png()
 
     with open("./src/resources/output/graph.png", "wb") as f:
@@ -39,8 +45,6 @@ for i, dataset in tqdm(enumerate(selected_datasets), total=total_datasets, desc=
 
     try:
         path = os.path.join("./src/resources/data/study/", dataset)
-
-        os.makedirs(f"./src/resources/output/{dataset}", exist_ok=True)
 
         state: AgentState = {
             "dataset_dir": path,
@@ -56,11 +60,13 @@ for i, dataset in tqdm(enumerate(selected_datasets), total=total_datasets, desc=
             "is_before_refactoring": True,
             "number_visualization_goals": 3,
         }
+
         result = agent.invoke(state)
         counter_success += 1
-        running = True#False
+
     except Exception as e:
         print_color(f"Agent failed with error: {e}", enums.Color.WARNING)
+        traceback.print_exc()
         counter_fail += 1
         continue
 
@@ -73,13 +79,13 @@ for i, dataset in tqdm(enumerate(selected_datasets), total=total_datasets, desc=
 
     print(f"Dataset {i}/{total_datasets} | Elapsed: {elapsed_total:.1f}s | Remaining: ~{remaining:.1f}s")
 
-    # copy the summary to the output folder
+    # Copy latest summary to output
     files = os.listdir("./src/resources/statistics/")
     latest_file = max(
         [os.path.join("./src/resources/statistics/", f) for f in files],
         key=os.path.getctime,
     )
-    shutil.copy(latest_file, f"./src/resources/output/{dataset}/")
+    shutil.copy(latest_file, output_dir)
 
 print_color(f"Generations failed: {counter_fail}", enums.Color.WARNING)
 print_color(f"Generations {counter_success} successful", enums.Color.WARNING)

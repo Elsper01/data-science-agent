@@ -1,8 +1,8 @@
+import csv
+import os
 import subprocess
 import sys
-import os
 import tempfile
-import os
 
 from data_science_agent.dtos.wrapper.visualization import VisualizationWrapper
 from data_science_agent.graph import AgentState
@@ -20,6 +20,7 @@ def _count_generated_imgs(state: AgentState, vis_index: int) -> int:
             img_count += 1
     return img_count
 
+
 @track_duration
 def test_generated_code(state: AgentState) -> AgentState:
     """Test the generated code by executing it and capturing its output and errors."""
@@ -27,6 +28,8 @@ def test_generated_code(state: AgentState) -> AgentState:
 
     project_root = state.get("project_root", os.getcwd())
     working_dir = project_root
+
+    rows = []
 
     for i, vis in enumerate(state["visualizations"]):
         vis: VisualizationWrapper
@@ -63,8 +66,13 @@ def test_generated_code(state: AgentState) -> AgentState:
             )
 
         img_count = _count_generated_imgs(state, i)
-        key = f"{state["regeneration_attempts"]}"
+        key = f"{state['regeneration_attempts']}"
         vis.VER_values[key] = img_count
+        rows.append({
+            "iteration": key,
+            "visualization_index": i,
+            "ver_value": img_count,
+        })
 
         if result.stdout:
             vis.code.std_out = result.stdout
@@ -75,5 +83,21 @@ def test_generated_code(state: AgentState) -> AgentState:
         else:
             vis.code.std_err = "No errors from generated code."
         print_color(f"Testing generated code ({language.value}) for vis#{i}: ", Color.HEADER)
+
+    try:
+        out_dir = state["output_path"]
+        os.makedirs(out_dir, exist_ok=True)
+        ver_filename = os.path.join(out_dir, f"VER_{state['regeneration_attempts']}.csv")
+
+        with open(ver_filename, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(
+                f, fieldnames=["iteration", "visualization_index", "ver_value"]
+            )
+            writer.writeheader()
+            writer.writerows(rows)
+
+        print_color(f"💾 Saved VER CSV → {ver_filename}", Color.OK_BLUE)
+    except Exception as e:
+        print_color(f"⚠️  Could not write VER CSV for vis #{i}: {e}", Color.WARNING)
 
     return state

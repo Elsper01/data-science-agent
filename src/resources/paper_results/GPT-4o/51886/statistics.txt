@@ -1,0 +1,378 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\51886\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-23 21:52:53
+Total Duration: 836.96 seconds
+Total Token Usage: 84987 tokens
+Total Costs: $0.2997
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0340 seconds
+
+Method: analyse_dataset
+  Duration: 0.0156 seconds
+
+Method: analyse_metadata
+  Duration: 0.0203 seconds
+
+Method: llm_generate_summary
+  Duration: 209.2996 seconds
+
+Method: llm_generate_goals
+  Duration: 4.6042 seconds
+
+Method: llm_generate_r_code
+  Duration: 13.7236 seconds
+
+Method: test_generated_code
+  Duration: 0.5413 seconds
+
+Method: llm_regenerate_code
+  Duration: 12.5330 seconds
+
+Method: test_generated_code
+  Duration: 3.7671 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 592.4230 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7423 tokens
+  Costs total: $0.0053
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1802 tokens
+  Costs total: $0.0023
+
+Method: llm_generate_r_code
+  Model: openai/gpt-4o
+  Token total: 2846 tokens
+  Costs total: $0.0093
+
+Method: llm_generate_r_code
+  Model: openai/gpt-4o
+  Token total: 2958 tokens
+  Costs total: $0.0103
+
+Method: llm_generate_r_code
+  Model: openai/gpt-4o
+  Token total: 2874 tokens
+  Costs total: $0.0095
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 382 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 382 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 382 tokens
+  Costs total: $0.0010
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 1363 tokens
+  Costs total: $0.0021
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 1561 tokens
+  Costs total: $0.0024
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 1416 tokens
+  Costs total: $0.0022
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 696 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 646 tokens
+  Costs total: $0.0017
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 644 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7204 tokens
+  Costs total: $0.0556
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2183 tokens
+  Costs total: $0.0074
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2371 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5234 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4562 tokens
+  Costs total: $0.0270
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5933 tokens
+  Costs total: $0.0414
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2259 tokens
+  Costs total: $0.0076
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2928 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4003 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4642 tokens
+  Costs total: $0.0268
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5195 tokens
+  Costs total: $0.0350
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2198 tokens
+  Costs total: $0.0071
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2452 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3786 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4662 tokens
+  Costs total: $0.0275
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie hat sich die Gesamtzahl der Baufertigstellungen in Oberschleißheim über die Jahre entwickelt?' visualization="Liniendiagramm mit 'time' auf der x-Achse und 'value' auf der y-Achse, gefiltert nach '2_variable_attribute_label' == 'Insgesamt'." rationale="Ein Liniendiagramm ist die beste Wahl für Zeitreihenanalysen. Durch die Filterung auf den Wert 'Insgesamt' in der Spalte '2_variable_attribute_label' und die Darstellung über die Spalte 'time' lässt sich der Trend der Bautätigkeit von 2014 bis 2024 leicht erfassen und Spitzenjahre sowie Rückgänge identifizieren."
+
+-> Code:
+# Pakete laden (ohne install.packages, da dies in eingeschränkten Umgebungen oft fehlschlägt)
+# Es wird davon ausgegangen, dass die Pakete in der Umgebung bereits vorhanden sind.
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+# Daten laden
+# Korrektur der Pfade: Verwendung von Vorwärts-Slashes für bessere Kompatibilität
+file_path <- './src/resources/data/study/51886/dataset.csv'
+df <- read_csv2(file_path, locale = locale(encoding = 'UTF-8'))
+
+# Daten filtern für die Visualisierung
+# Wir filtern nach 'Insgesamt' und stellen sicher, dass 'time' numerisch ist für ein korrektes Liniendiagramm
+filtered_data <- df %>%
+  filter(`2_variable_attribute_label` == "Insgesamt") %>%
+  mutate(time = as.numeric(as.character(time))) %>%
+  select(time, value) %>%
+  arrange(time)
+
+# Liniendiagramm erstellen
+plot <- ggplot(filtered_data, aes(x = time, y = value)) +
+  geom_line(color = "#0073C2FF", size = 1) +
+  geom_point(color = "#EFC000FF", size = 2) +
+  scale_x_continuous(breaks = seq(min(filtered_data$time), max(filtered_data$time), by = 1)) +
+  labs(title = "Entwicklung der Baufertigstellungen in Oberschleißheim",
+       subtitle = "Zeitraum 2014 - 2024 (Kategorie: Insgesamt)",
+       x = "Jahr",
+       y = "Anzahl der Baufertigstellungen",
+       caption = "Quelle: Datensatz 51886") +
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank())
+
+# Plot speichern
+output_path <- './src/resources/output/51886/0_baufertigstellungen_entwicklung.png'
+
+# Sicherstellen, dass das Verzeichnis existiert (optional, falls ggsave es nicht tut)
+dir.create(dirname(output_path), showWarnings = FALSE, recursive = TRUE)
+
+ggsave(output_path, plot, width = 10, height = 6, dpi = 300)
+
+# Erfolgskontrolle
+print(paste("Visualisierung erfolgreich gespeichert unter:", output_path))
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie verteilt sich die Anzahl der fertiggestellten Wohnungen auf die verschiedenen Raumgrößen über den gesamten Zeitraum?' visualization="Gestapeltes Balkendiagramm mit 'time' auf der x-Achse, 'value' auf der y-Achse und '2_variable_attribute_label' als Farbgruppierung (ohne die Kategorie 'Insgesamt')." rationale="Ein gestapeltes Balkendiagramm ermöglicht den Vergleich der verschiedenen Kategorien in '2_variable_attribute_label' (z.B. 1-Raum, 2-Räume etc.) über die Jahre ('time'). Dies zeigt auf einen Blick, welche Wohnungsgrößen in Oberschleißheim bevorzugt gebaut wurden und wie sich dieser Mix zeitlich verändert hat. Die Spalte 'value' liefert hierzu die quantitativen Daten."
+
+-> Code:
+# Pakete laden (ohne install.packages, da dies in eingeschränkten Umgebungen oft fehlschlägt)
+# Es wird davon ausgegangen, dass die Standard-Bibliotheken vorhanden sind.
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+# Daten laden
+# Korrektur des Pfades (Backslashes in R müssen oft escaped werden oder durch Slashes ersetzt werden)
+file_path <- "./src/resources/data/study/51886/dataset.csv"
+
+# Sicherstellen, dass die Datei existiert, bevor sie gelesen wird
+if (file.exists(file_path)) {
+  df <- read_csv2(file_path, locale = locale(encoding = 'UTF-8'))
+
+  # Daten filtern: 
+  # 1. 'Insgesamt' ausschließen, da es die Summe der anderen Kategorien ist
+  # 2. NAs in der relevanten Spalte entfernen
+  df_filtered <- df %>%
+    filter(!is.na(`2_variable_attribute_label`), 
+           `2_variable_attribute_label` != "Insgesamt")
+
+  # Daten für das gestapelte Balkendiagramm vorbereiten
+  # Wir gruppieren nach Zeit und Raumgröße
+  df_plot <- df_filtered %>%
+    group_by(time, `2_variable_attribute_label`) %>%
+    summarise(total_value = sum(value, na.rm = TRUE), .groups = 'drop')
+
+  # Gestapeltes Balkendiagramm erstellen
+  plot <- ggplot(df_plot, aes(x = factor(time), y = total_value, fill = `2_variable_attribute_label`)) +
+    geom_bar(stat = "identity", position = "stack") +
+    labs(title = "Verteilung der fertiggestellten Wohnungen nach Raumgrößen",
+         subtitle = "Zeitraum: 2014 - 2024",
+         x = "Jahr",
+         y = "Anzahl der Wohnungen",
+         fill = "Raumgrößen") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1),
+          legend.position = "bottom")
+
+  # Output-Verzeichnis sicherstellen (in R Skripten meist manuell oder durch ggsave)
+  output_path <- "./src/resources/output/51886/1_verteilung_raumgroessen.png"
+  
+  # Plot speichern
+  ggsave(filename = output_path, plot = plot, width = 10, height = 6, dpi = 300)
+  
+  print("Visualisierung erfolgreich erstellt und gespeichert.")
+} else {
+  stop(paste("Datei nicht gefunden:", file_path))
+}
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='In welchen Jahren gab es Korrekturen oder Rückbaumaßnahmen bei bestimmten Wohnungsgrößen?' visualization="Balkendiagramm mit 'time' auf der x-Achse und 'value' auf der y-Achse, farblich markiert nach '2_variable_attribute_label', um negative Ausschläge hervorzuheben." rationale="Da der Datensatz negative Werte in der Spalte 'value' enthält, ist ein Balkendiagramm ideal, um diese Ausreißer unter die Nulllinie zu visualisieren. Durch die Verknüpfung von 'value', 'time' und '2_variable_attribute_label' können Nutzer schnell erkennen, in welchen Jahren und bei welchen Raumkategorien Korrekturen oder Abgänge stattgefunden haben."
+
+-> Code:
+# Pakete laden (ohne install.packages, da dies in eingeschränkten Umgebungen oft fehlschlägt)
+# Es wird davon ausgegangen, dass die Standard-Bibliotheken vorhanden sind.
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+# Daten laden mit korrektem Pfad-Handling (Verwendung von Vorwärts-Slashes für R)
+file_path <- "./src/resources/data/study/51886/dataset.csv"
+df <- read_csv2(file_path, locale = locale(encoding = 'UTF-8'))
+
+# Daten filtern: Nur negative Werte (Korrekturen/Rückbau)
+# Wir stellen sicher, dass 'value' numerisch ist
+df$value <- as.numeric(df$value)
+negative_values <- df %>% filter(value < 0)
+
+# Falls keine negativen Werte vorhanden sind, geben wir eine Meldung aus, 
+# aber für die Visualisierung nehmen wir an, dass welche existieren.
+if(nrow(negative_values) > 0) {
+  
+  # Balkendiagramm erstellen
+  # Wir nutzen abs(value) für die Höhe oder lassen sie negativ für die Darstellung unter der Nulllinie
+  plot <- ggplot(negative_values, aes(x = factor(time), y = value, fill = `2_variable_attribute_label`)) +
+    geom_bar(stat = "identity", position = "dodge") +
+    # Eine horizontale Linie bei 0 zur Verdeutlichung
+    geom_hline(yintercept = 0, color = "black") +
+    labs(title = "Jahre mit Korrekturen oder Rückbaumaßnahmen nach Wohnungsgröße",
+         subtitle = "Negative Werte repräsentieren Abgänge/Korrekturen",
+         x = "Jahr",
+         y = "Anzahl der Korrekturen/Rückbauten (negativ)",
+         fill = "Wohnungsgröße") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+  # Verzeichnis erstellen falls nicht vorhanden (optional, ggsave macht das oft nicht automatisch)
+  output_path <- "./src/resources/output/51886/2_korrekturen_rueckbau.png"
+  
+  # Plot speichern
+  ggsave(filename = output_path, plot = plot, width = 10, height = 6, dpi = 300)
+  
+  print("Visualisierung erfolgreich erstellt.")
+} else {
+  print("Keine negativen Werte im Datensatz gefunden, die visualisiert werden könnten.")
+}
+
+
+-> SEVQ:
+
+

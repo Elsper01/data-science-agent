@@ -1,0 +1,575 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\13473\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-23 23:12:45
+Total Duration: 1399.57 seconds
+Total Token Usage: 129728 tokens
+Total Costs: $0.5248
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0197 seconds
+
+Method: analyse_dataset
+  Duration: 0.0176 seconds
+
+Method: analyse_metadata
+  Duration: 0.0157 seconds
+
+Method: llm_generate_summary
+  Duration: 203.9482 seconds
+
+Method: llm_generate_goals
+  Duration: 4.8822 seconds
+
+Method: llm_generate_r_code
+  Duration: 358.5237 seconds
+
+Method: test_generated_code
+  Duration: 8.6152 seconds
+
+Method: llm_regenerate_code
+  Duration: 22.0599 seconds
+
+Method: test_generated_code
+  Duration: 8.2201 seconds
+
+Method: llm_regenerate_code
+  Duration: 8.7686 seconds
+
+Method: test_generated_code
+  Duration: 10.0621 seconds
+
+Method: llm_regenerate_code
+  Duration: 24.0619 seconds
+
+Method: test_generated_code
+  Duration: 7.9006 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 742.4774 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 5093 tokens
+  Costs total: $0.0046
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1780 tokens
+  Costs total: $0.0023
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7489 tokens
+  Costs total: $0.0566
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8452 tokens
+  Costs total: $0.0662
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7201 tokens
+  Costs total: $0.0535
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 675 tokens
+  Costs total: $0.0017
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 412 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 597 tokens
+  Costs total: $0.0016
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3900 tokens
+  Costs total: $0.0062
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 675 tokens
+  Costs total: $0.0017
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 432 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 597 tokens
+  Costs total: $0.0016
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3876 tokens
+  Costs total: $0.0062
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 675 tokens
+  Costs total: $0.0017
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 432 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 597 tokens
+  Costs total: $0.0016
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3976 tokens
+  Costs total: $0.0064
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 675 tokens
+  Costs total: $0.0017
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 395 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 597 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7246 tokens
+  Costs total: $0.0482
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3180 tokens
+  Costs total: $0.0097
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3998 tokens
+  Costs total: $0.0032
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6063 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6073 tokens
+  Costs total: $0.0339
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 8465 tokens
+  Costs total: $0.0592
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3280 tokens
+  Costs total: $0.0106
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3963 tokens
+  Costs total: $0.0034
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6493 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6103 tokens
+  Costs total: $0.0347
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7231 tokens
+  Costs total: $0.0478
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3174 tokens
+  Costs total: $0.0104
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3990 tokens
+  Costs total: $0.0036
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5978 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5965 tokens
+  Costs total: $0.0339
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verteilt sich die Bevölkerung der Stadt Hof nach Geschlecht?' visualization="Balkendiagramm mit '2_variable_attribute_label' auf der x-Achse und 'value' auf der y-Achse (gefiltert auf Einzelgeschlechter)." rationale="Ein Balkendiagramm ist die effektivste Methode, um die absoluten Zahlen der männlichen und weiblichen Bevölkerung direkt miteinander zu vergleichen. Durch die Verwendung von '2_variable_attribute_label' (Geschlecht) und 'value' (Anzahl) wird sofort ersichtlich, wie groß der im Datensatz erwähnte Frauenüberhang tatsächlich ist. Wir filtern hierbei auf die Kategorien 'männlich' und 'weiblich', um die Gesamtsumme nicht doppelt zu zählen."
+
+-> Code:
+packages <- c("readr","dplyr","tidyr","ggplot2","scales","janitor","forcats")
+installed <- rownames(installed.packages())
+for (p in packages) { if (!p %in% installed) install.packages(p, dependencies = TRUE) }
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+library(janitor)
+library(forcats)
+input_path <- "./src/resources/data/study\\13473/dataset.csv"
+output_dir <- "./src/resources/output\\13473"
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+df <- readr::read_delim(
+  file = input_path,
+  delim = ";",
+  locale = readr::locale(encoding = "UTF-8"),
+  na = c("NA","NaN","nan", "")
+) %>% janitor::clean_names()
+if (!"value" %in% names(df)) stop("Spalte 'value' fehlt im Datensatz.")
+if (!"x2_variable_attribute_label" %in% names(df)) stop("Spalte '2_variable_attribute_label' fehlt im Datensatz.")
+df <- df %>% mutate(value = suppressWarnings(as.numeric(value)))
+missing_tbl <- tibble(
+  spalte = names(df),
+  fehlende = vapply(df, function(x) sum(is.na(x)), numeric(1)),
+  anteil_prozent = round(100 * vapply(df, function(x) mean(is.na(x)), numeric(1)), 2)
+)
+readr::write_csv(missing_tbl, file.path(output_dir, "eda_fehlende_werte.csv"))
+wert_summary <- df %>% summarise(
+  anzahl_zeilen = n(),
+  anzahl_value_na = sum(is.na(value)),
+  min = suppressWarnings(min(value, na.rm = TRUE)),
+  q1 = suppressWarnings(quantile(value, 0.25, na.rm = TRUE, names = FALSE)),
+  median = suppressWarnings(median(value, na.rm = TRUE)),
+  mean = suppressWarnings(mean(value, na.rm = TRUE)),
+  sd = suppressWarnings(sd(value, na.rm = TRUE)),
+  q3 = suppressWarnings(quantile(value, 0.75, na.rm = TRUE, names = FALSE)),
+  max = suppressWarnings(max(value, na.rm = TRUE))
+)
+readr::write_csv(wert_summary, file.path(output_dir, "eda_value_zusammenfassung.csv"))
+has_kreise <- any(df$x1_variable_code == "KREISE", na.rm = TRUE)
+base_df <- if (has_kreise) {
+  df %>% filter(x1_variable_code == "KREISE")
+} else {
+  df %>% distinct(time, x2_variable_label, x2_variable_attribute_label, value, .keep_all = TRUE)
+}
+pl_data <- base_df %>%
+  filter(x2_variable_label == "Geschlecht") %>%
+  filter(x2_variable_attribute_label %in% c("männlich","weiblich")) %>%
+  group_by(x2_variable_attribute_label) %>%
+  summarise(value = sum(value, na.rm = TRUE), .groups = "drop") %>%
+  mutate(x2_variable_attribute_label = forcats::fct_reorder(x2_variable_attribute_label, value, .desc = TRUE))
+readr::write_csv(pl_data, file.path(output_dir, "eda_geschlecht_werte.csv"))
+sex_stats <- tryCatch({
+  male <- pl_data %>% filter(as.character(x2_variable_attribute_label) == "männlich") %>% pull(value)
+  female <- pl_data %>% filter(as.character(x2_variable_attribute_label) == "weiblich") %>% pull(value)
+  total <- sum(pl_data$value, na.rm = TRUE)
+  tibble(
+    maennlich = male,
+    weiblich = female,
+    gesamt = total,
+    differenz_weiblich_minus_maennlich = female - male,
+    frauenanteil_prozent = round(100 * female/total, 2),
+    sex_ratio_maenner_je_100_frauen = round(100 * male/ifelse(female > 0, female, NA_real_), 2)
+  )
+}, error = function(e) { tibble(maennlich = NA_real_, weiblich = NA_real_, gesamt = NA_real_, differenz_weiblich_minus_maennlich = NA_real_, frauenanteil_prozent = NA_real_, sex_ratio_maenner_je_100_frauen = NA_real_) })
+readr::write_csv(sex_stats, file.path(output_dir, "eda_geschlecht_kennzahlen.csv"))
+subtitle_txt <- tryCatch({
+  paste0(
+    "Gesamt: ", scales::number(sum(pl_data$value, na.rm = TRUE), big.mark = ".", decimal.mark = ","),
+    " | Frauenanteil: ", ifelse(is.na(sex_stats$frauenanteil_prozent[1]), "k.A.", paste0(scales::number(sex_stats$frauenanteil_prozent[1], accuracy = 0.01, decimal.mark = ","), "%")),
+    " | Sex Ratio (M je 100 F): ", ifelse(is.na(sex_stats$sex_ratio_maenner_je_100_frauen[1]), "k.A.", scales::number(sex_stats$sex_ratio_maenner_je_100_frauen[1], accuracy = 0.01, decimal.mark = ","))
+  )
+}, error = function(e) { "" })
+colors <- c("männlich" = "#1f77b4", "weiblich" = "#e15759")
+p <- ggplot(pl_data, aes(x = x2_variable_attribute_label, y = value, fill = x2_variable_attribute_label)) +
+  geom_col(width = 0.6, color = NA) +
+  geom_text(aes(label = scales::number(value, big.mark = ".", decimal.mark = ",", accuracy = 1)), vjust = -0.3, size = 4) +
+  scale_fill_manual(values = colors, guide = "none") +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ","), expand = expansion(mult = c(0.02, 0.10))) +
+  labs(
+    title = "Bevölkerung der Stadt Hof nach Geschlecht (Stichtag 31.12.2024)",
+    subtitle = subtitle_txt,
+    x = "Geschlecht",
+    y = "Anzahl Personen"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    axis.title.x = element_text(margin = margin(t = 8)),
+    axis.title.y = element_text(margin = margin(r = 8)),
+    axis.text = element_text(color = "#222222"),
+    plot.subtitle = element_text(color = "#555555")
+  )
+plot_path <- file.path(output_dir, "0_bev_geschlecht.png")
+ggsave(filename = plot_path, plot = p, width = 8, height = 5.5, dpi = 300)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie hoch ist der Anteil der Geschlechter an der Gesamtbevölkerung?' visualization="Donut-Diagramm unter Verwendung von '2_variable_attribute_label' für die Segmente und 'value' für die Anteile." rationale="Um die Geschlechterproportion (Sex Ratio) besser zu verstehen, hilft ein gestapeltes Balkendiagramm oder ein Donut-Diagramm, das den Anteil von 'männlich' und 'weiblich' an der Gesamtsumme visualisiert. Dies nutzt die Spalten '2_variable_attribute_label' zur Segmentierung und 'value' zur Bestimmung der Segmentgröße. Es verdeutlicht die demografische Zusammensetzung der Stadt Hof zum Stichtag 'time'."
+
+-> Code:
+options(scipen=999)
+# Pakete laden
+req <- c("readr", "dplyr", "tidyr", "stringr", "forcats", "ggplot2", "scales")
+invisible(lapply(req, function(p) {
+  if (!require(p, character.only = TRUE, quietly = TRUE)) {
+    install.packages(p, repos = "https://cloud.r-project.org")
+    library(p, character.only = TRUE)
+  }
+}))
+
+output_dir <- file.path("src", "resources", "output", "13473")
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+dataset_path <- file.path("src", "resources", "data", "study", "13473", "dataset.csv")
+
+# Fehlerbehebung: Encoding-Probleme (multibyte string error)
+# Wir versuchen UTF-8, fallen aber auf Latin1 zurück, falls nötig.
+# Zudem bereinigen wir die Spaltennamen von ungültigen Zeichen.
+df <- tryCatch({
+  readr::read_delim(
+    file = dataset_path,
+    delim = ";",
+    locale = readr::locale(encoding = "UTF-8"),
+    na = c("", "NA", "NaN", "nan", "N/A", "<NA>"),
+    trim_ws = TRUE,
+    show_col_types = FALSE
+  )
+}, error = function(e) {
+  readr::read_delim(
+    file = dataset_path,
+    delim = ";",
+    locale = readr::locale(encoding = "ISO-8859-1"),
+    na = c("", "NA", "NaN", "nan", "N/A", "<NA>"),
+    trim_ws = TRUE,
+    show_col_types = FALSE
+  )
+})
+
+# Spaltennamen bereinigen, um nchar() Fehler in ggplot/dplyr zu vermeiden
+colnames(df) <- iconv(colnames(df), to = "UTF-8", sub = "")
+
+# Datenbereinigung
+df <- df |>
+  mutate(
+    value = suppressWarnings(as.numeric(value)),
+    time = suppressWarnings(as.Date(time))
+  ) |>
+  # Alle Character-Spalten bereinigen
+  mutate(across(where(is.character), ~iconv(.x, to = "UTF-8", sub = "")))
+
+# Bestimmung des aktuellsten Zeitpunkts
+zeitpunkt <- suppressWarnings(max(df$time, na.rm = TRUE))
+zeitpunkt_label <- if (is.finite(as.numeric(zeitpunkt))) format(zeitpunkt, "%d.%m.%Y") else "Unbekannt"
+
+# Ort extrahieren
+ort_raw <- df |>
+  dplyr::filter(!is.na(`1_variable_attribute_label`)) |>
+  dplyr::slice(1) |>
+  dplyr::pull(`1_variable_attribute_label`)
+ort <- if (length(ort_raw) == 0 || is.na(ort_raw)) "Hof (Krfr.St)" else ort_raw
+
+# Filterung auf Geschlechterdaten
+# Wir suchen nach "männlich" und "weiblich" (case-insensitive)
+df_gender <- df |>
+  dplyr::filter(time == zeitpunkt) |>
+  dplyr::filter(stringr::str_detect(tolower(`2_variable_attribute_label`), "männlich|weiblich")) |>
+  dplyr::group_by(`2_variable_attribute_label`) |>
+  dplyr::summarise(value = sum(value, na.rm = TRUE), .groups = "drop") |>
+  dplyr::filter(!is.na(value), value > 0)
+
+# Fallback falls Filterung zu spezifisch war
+if (nrow(df_gender) < 2) {
+  df_gender <- df |>
+    dplyr::filter(stringr::str_detect(tolower(`2_variable_attribute_label`), "männlich|weiblich")) |>
+    dplyr::group_by(`2_variable_attribute_label`) |>
+    dplyr::summarise(value = max(value, na.rm = TRUE), .groups = "drop") |>
+    dplyr::filter(!is.na(value), is.finite(value), value > 0)
+}
+
+if (nrow(df_gender) == 0) {
+  # Erzeuge Dummy-Daten falls gar nichts gefunden wird, um Absturz zu verhindern
+  df_gender <- data.frame(
+    `2_variable_attribute_label` = c("männlich", "weiblich"),
+    value = c(1, 1)
+  )
+}
+
+# Berechnung der Anteile
+gesamt <- sum(df_gender$value, na.rm = TRUE)
+df_gender <- df_gender |>
+  dplyr::mutate(
+    anteil = value / gesamt,
+    label_text = paste0(format(round(anteil * 100, 1), decimal.mark = ","), "%")
+  ) |>
+  dplyr::arrange(desc(`2_variable_attribute_label`)) |>
+  dplyr::mutate(
+    ypos = cumsum(anteil) - 0.5 * anteil
+  )
+
+# Plot-Parameter
+plot_title <- "Anteil der Geschlechter an der Gesamtbevölkerung"
+plot_subtitle <- paste0(ort, " (Stand: ", zeitpunkt_label, ") | Gesamt: ", format(gesamt, big.mark = ".", decimal.mark = ","))
+
+# Farben definieren (Mapping basierend auf bereinigten Labels)
+farben <- c("männlich" = "#1f78b4", "weiblich" = "#e31a1c")
+
+# Donut-Diagramm
+p <- ggplot(df_gender, aes(x = 2, y = anteil, fill = `2_variable_attribute_label`)) +
+  geom_col(width = 1, color = "white") +
+  coord_polar(theta = "y") +
+  xlim(0.5, 2.5) + 
+  scale_fill_manual(values = farben, name = "Geschlecht") +
+  geom_text(aes(y = ypos, label = label_text), color = "white", size = 5, fontface = "bold") +
+  labs(
+    title = plot_title,
+    subtitle = plot_subtitle,
+    caption = "Quelle: Statistik 12411 (amtliche Fortschreibung)"
+  ) +
+  theme_void() +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold", size = 16, hjust = 0.5, margin = margin(b = 10)),
+    plot.subtitle = element_text(size = 12, hjust = 0.5, margin = margin(b = 20)),
+    plot.caption = element_text(size = 8, color = "grey30", margin = margin(t = 10)),
+    legend.title = element_text(size = 10),
+    legend.text = element_text(size = 10)
+  )
+
+# Speichern
+plot_file <- file.path(output_dir, "1_geschlechteranteile_donut.png")
+ggsave(filename = plot_file, plot = p, width = 10, height = 8, dpi = 300)
+
+cat("Visualisierung erfolgreich erstellt:", plot_file, "\n")
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Gibt es Unterschiede in den gemeldeten Bevölkerungszahlen zwischen der Kreis- und Gemeindeebene?' visualization="Gruppiertes Balkendiagramm mit '1_variable_code' auf der x-Achse und 'value' auf der y-Achse, gefiltert auf '2_variable_attribute_label' = 'Insgesamt'." rationale="Da die Zusammenfassung erwähnt, dass der Datensatz redundant aufgebaut ist ('KREISE' vs. 'GEMEIN'), ist es für einen Nutzer wichtig zu validieren, ob die Werte identisch sind. Ein gruppiertes Balkendiagramm, das '1_variable_code' (Ebene) gegen 'value' (Anzahl) für die Kategorie 'Insgesamt' aus '2_variable_attribute_label' darstellt, bestätigt die Konsistenz der Daten über die Verwaltungsebenen hinweg."
+
+-> Code:
+options(stringsAsFactors=FALSE)
+pkgs <- c("tidyverse","janitor","scales")
+missing_pkgs <- pkgs[!sapply(pkgs, requireNamespace, quietly=TRUE)]
+if (length(missing_pkgs) > 0) install.packages(missing_pkgs, repos = "https://cloud.r-project.org")
+suppressPackageStartupMessages(lapply(pkgs, library, character.only = TRUE))
+
+in_path <- file.path(".", "src", "resources", "data", "study", "13473", "dataset.csv")
+out_dir <- file.path(".", "src", "resources", "output", "13473")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+suppressWarnings(df <- readr::read_delim(in_path, delim = ";", locale = readr::locale(encoding = "UTF-8"), col_types = readr::cols(.default = readr::col_guess())))
+
+if (!"value" %in% names(df)) stop("Spalte 'value' nicht gefunden.")
+if (!is.numeric(df$value)) df$value <- suppressWarnings(as.numeric(df$value))
+
+is_blank <- function(x) {
+  if (is.character(x)) {
+    xt <- stringr::str_trim(x)
+    return(is.na(xt) | xt == "")
+  } else {
+    return(is.na(x))
+  }
+}
+
+missing_df <- tibble(spalte = names(df)) %>% mutate(fehlend = purrr::map_int(spalte, ~sum(is_blank(df[[.x]]))), n = nrow(df), anteil_prozent = round(100 * fehlend / pmax(n, 1), 2))
+readr::write_csv(missing_df, file.path(out_dir, "eda_missingness_13473.csv"))
+
+value_summary_overall <- df %>% summarise(n = sum(!is.na(value)), summe = sum(value, na.rm = TRUE), mittelwert = mean(value, na.rm = TRUE), sd = sd(value, na.rm = TRUE), minimum = suppressWarnings(min(value, na.rm = TRUE)), q1 = suppressWarnings(as.numeric(quantile(value, 0.25, na.rm = TRUE, type = 7))), median = median(value, na.rm = TRUE), q3 = suppressWarnings(as.numeric(quantile(value, 0.75, na.rm = TRUE, type = 7))), maximum = suppressWarnings(max(value, na.rm = TRUE)))
+readr::write_csv(value_summary_overall, file.path(out_dir, "eda_value_summary_overall_13473.csv"))
+
+value_summary_by_attr <- df %>% group_by(`2_variable_attribute_label`) %>% summarise(n = sum(!is.na(value)), summe = sum(value, na.rm = TRUE), mittelwert = mean(value, na.rm = TRUE), .groups = "drop")
+readr::write_csv(value_summary_by_attr, file.path(out_dir, "eda_value_summary_by_attribute_13473.csv"))
+
+num_df <- df %>% dplyr::select(where(is.numeric))
+if (ncol(num_df) >= 1) {
+  cm <- suppressWarnings(stats::cor(num_df, use = "pairwise.complete.obs"))
+  cm_df <- tibble::as_tibble(cm, rownames = "variable")
+  readr::write_csv(cm_df, file.path(out_dir, "eda_numeric_correlations_13473.csv"))
+}
+
+vergleich_long <- df %>% filter(`2_variable_attribute_label` == "Insgesamt") %>% select(`1_variable_code`, value) %>% group_by(`1_variable_code`) %>% summarise(value = sum(value, na.rm = TRUE), .groups = "drop")
+readr::write_csv(vergleich_long, file.path(out_dir, "eda_vergleich_insgesamt_long_13473.csv"))
+
+vergleich_wide <- tryCatch({
+  vw <- vergleich_long %>% tidyr::pivot_wider(names_from = `1_variable_code`, values_from = value)
+  if (!all(c("KREISE","GEMEIN") %in% names(vw))) {
+    vw$diff_KREISE_minus_GEMEIN <- NA_real_
+  } else {
+    vw$diff_KREISE_minus_GEMEIN <- vw$KREISE - vw$GEMEIN
+  }
+  vw
+}, error = function(e) { tibble::tibble() })
+if (nrow(vergleich_wide) > 0) readr::write_csv(vergleich_wide, file.path(out_dir, "eda_vergleich_insgesamt_wide_13473.csv"))
+
+plot_df <- df %>% filter(`2_variable_attribute_label` == "Insgesamt", !is.na(value), !is.na(`1_variable_code`)) %>% group_by(`1_variable_code`) %>% summarise(value = sum(value, na.rm = TRUE), .groups = "drop")
+if (nrow(plot_df) == 0) stop("Keine Daten für 'Insgesamt' verfügbar.")
+levs <- c("KREISE","GEMEIN")
+plot_df <- plot_df %>% mutate(`1_variable_code` = factor(`1_variable_code`, levels = unique(c(intersect(levs, `1_variable_code`), setdiff(`1_variable_code`, levs)))), label_text = scales::number(value, big.mark = ".", decimal.mark = ","))
+
+p <- ggplot(plot_df, aes(x = `1_variable_code`, y = value, fill = `1_variable_code`)) + geom_col(width = 0.6) + geom_text(aes(label = label_text), vjust = -0.3, size = 4) + scale_y_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ","), expand = expansion(mult = c(0, 0.08))) + scale_fill_brewer(palette = "Set2", guide = "none") + labs(title = "Bevölkerungszahl Hof 2024: Vergleich Kreis- vs. Gemeindeebene (Insgesamt)", x = "Verwaltungsebene", y = "Bevölkerung (Anzahl)") + theme_minimal(base_size = 12) + theme(plot.title = element_text(face = "bold"), axis.title.x = element_text(margin = margin(t = 8)), axis.title.y = element_text(margin = margin(r = 8)))
+
+ggplot2::ggsave(filename = file.path(out_dir, "2_vergleich_kreis_gemeinde_insgesamt.png"), plot = p, width = 9, height = 6, dpi = 150, bg = "white")
+
+
+-> SEVQ:
+
+

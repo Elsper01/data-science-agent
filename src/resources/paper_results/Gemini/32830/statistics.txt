@@ -1,0 +1,334 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32830\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-23 21:15:21
+Total Duration: 857.75 seconds
+Total Token Usage: 75819 tokens
+Total Costs: $0.2919
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0065 seconds
+
+Method: analyse_dataset
+  Duration: 0.0084 seconds
+
+Method: analyse_metadata
+  Duration: 0.0106 seconds
+
+Method: llm_generate_summary
+  Duration: 241.0612 seconds
+
+Method: llm_generate_goals
+  Duration: 4.8539 seconds
+
+Method: llm_generate_r_code
+  Duration: 14.6910 seconds
+
+Method: test_generated_code
+  Duration: 3.5130 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 593.6049 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7123 tokens
+  Costs total: $0.0067
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1972 tokens
+  Costs total: $0.0020
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 399 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 349 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 418 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6055 tokens
+  Costs total: $0.0438
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2197 tokens
+  Costs total: $0.0073
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2792 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6169 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6054 tokens
+  Costs total: $0.0379
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7293 tokens
+  Costs total: $0.0564
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2341 tokens
+  Costs total: $0.0079
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2659 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4717 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4913 tokens
+  Costs total: $0.0302
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5904 tokens
+  Costs total: $0.0427
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2261 tokens
+  Costs total: $0.0082
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2772 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4576 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4855 tokens
+  Costs total: $0.0317
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie entwickeln sich die Zugriffszahlen im Verlauf des Monats September 2024?' visualization="Liniendiagramm mit 'Datum' auf der x-Achse und 'Besuche' sowie 'Besucher' auf der y-Achse." rationale="Ein Liniendiagramm der Spalten 'Datum' und 'Besuche' (unter Ausschluss der Summenzeile) verdeutlicht die zyklischen Schwankungen zwischen Werktagen und Wochenenden. Dies hilft dem Nutzer zu verstehen, an welchen Tagen das Informationsbedürfnis im Kreis Kleve am höchsten ist."
+
+-> Code:
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, lubridate, scales)
+
+df <- read.csv("./src/resources/data/study/32830/dataset.csv", sep = ",", encoding = "UTF-8", stringsAsFactors = FALSE)
+
+df_clean <- df %>%
+  filter(!is.na(Datum) & Datum != "") %>%
+  mutate(
+    Datum = dmy(Datum),
+    Besuche = as.numeric(Besuche),
+    Besucher = as.numeric(Besucher)
+  ) %>%
+  arrange(Datum)
+
+dir.create("./src/resources/output/32830/", recursive = TRUE, showWarnings = FALSE)
+
+plot_data <- df_clean %>%
+  select(Datum, Besuche, Besucher) %>%
+  pivot_longer(cols = c(Besuche, Besucher), names_to = "Metrik", values_to = "Anzahl")
+
+p <- ggplot(plot_data, aes(x = Datum, y = Anzahl, color = Metrik, group = Metrik)) +
+  geom_line(size = 1.2) +
+  geom_point(size = 2) +
+  scale_x_date(
+    date_breaks = "2 days",
+    date_labels = "%d.%m.",
+    expand = expansion(mult = c(0.02, 0.02))
+  ) +
+  scale_y_continuous(labels = label_number(big.mark = "."), limits = c(0, NA)) +
+  scale_color_manual(values = c("Besuche" = "#2c7fb8", "Besucher" = "#7fcdbb")) +
+  labs(
+    title = "Entwicklung der Zugriffszahlen (September 2024)",
+    subtitle = "Vergleich von Besuchen und Besuchern auf kreis-kleve.de",
+    x = "Datum",
+    y = "Anzahl",
+    color = "Metrik",
+    caption = "Hinweis: Deutliche Rückgänge an den Wochenenden erkennbar."
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.minor = element_blank(),
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold", size = 16),
+    plot.background = element_rect(fill = "white", color = NA)
+  )
+
+ggsave("./src/resources/output/32830/0_zugriffszahlen_verlauf.png", plot = p, width = 10, height = 6, dpi = 300)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie effizient finden Nutzer Informationen auf der Website?' visualization="Kombiniertes Diagramm (Linie/Balken) mit 'Datum' auf der x-Achse und 'Seiten_pro_Besuch' sowie 'Bounce_Rate' auf den y-Achsen." rationale="Durch die Gegenüberstellung von 'Seiten_pro_Besuch' und 'Bounce_Rate' über den Zeitraum ('Datum') lässt sich analysieren, ob Nutzer bei kurzen Besuchen (hohe Bounce-Rate) dennoch die gesuchten Informationen finden. Da die 'Bounce_Rate' oft über 60% liegt, ist dieser Vergleich entscheidend für die Bewertung der Usability."
+
+-> Code:
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, lubridate, scales)
+
+df <- read.csv("./src/resources/data/study/32830/dataset.csv", sep = ",", encoding = "UTF-8", stringsAsFactors = FALSE)
+
+df_clean <- df %>%
+  filter(!is.na(Datum) & Datum != "" & Datum != "nan") %>%
+  select(-matches("Unnamed"))
+
+df_clean$Datum <- dmy(df_clean$Datum)
+
+clean_percent <- function(x) {
+  as.numeric(gsub("%", "", x)) / 100
+}
+
+df_clean$Bounce_Rate <- clean_percent(df_clean$Bounce_Rate)
+df_clean$Seiten_pro_Besuch <- as.numeric(df_clean$Seiten_pro_Besuch)
+
+df_clean <- df_clean %>% arrange(Datum)
+
+dir.create("./src/resources/output/32830", recursive = TRUE, showWarnings = FALSE)
+
+coeff <- max(df_clean$Seiten_pro_Besuch, na.rm = TRUE) / max(df_clean$Bounce_Rate, na.rm = TRUE)
+
+p <- ggplot(df_clean, aes(x = Datum)) +
+  geom_bar(aes(y = Seiten_pro_Besuch, fill = "Seiten pro Besuch"), stat = "identity", alpha = 0.7) +
+  geom_line(aes(y = Bounce_Rate * coeff, color = "Absprungrate (Bounce Rate)"), size = 1.2, group = 1) +
+  geom_point(aes(y = Bounce_Rate * coeff, color = "Absprungrate (Bounce Rate)"), size = 2) +
+  scale_y_continuous(
+    name = "Seiten pro Besuch",
+    sec.axis = sec_axis(~./coeff, name = "Absprungrate", labels = percent_format(accuracy = 1))
+  ) +
+  scale_x_date(date_labels = "%d.%m.", date_breaks = "2 days") +
+  scale_fill_manual(values = c("Seiten pro Besuch" = "steelblue")) +
+  scale_color_manual(values = c("Absprungrate (Bounce Rate)" = "firebrick")) +
+  labs(
+    title = "Effizienz der Informationssuche: Seiten pro Besuch vs. Absprungrate",
+    subtitle = "Kreis Kleve Web-Analytics - September 2024",
+    x = "Datum",
+    fill = "Metrik (Balken)",
+    color = "Metrik (Linie)"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold", size = 14),
+    panel.grid.minor = element_blank()
+  )
+
+ggsave("./src/resources/output/32830/1_effizienz_suche_kombidiagramm.png", plot = p, width = 10, height = 6, dpi = 300)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Gibt es einen Zusammenhang zwischen der Cookie-Akzeptanz und dem Datum?' visualization="Flächendiagramm oder Liniendiagramm mit 'Datum' auf der x-Achse und 'Anteil_Besuche_mit_Cookies' auf der y-Achse." rationale="Die Zusammenfassung weist auf eine signifikante Änderung der Cookie-Akzeptanz ab dem 22.09. hin. Eine Visualisierung der Spalte 'Anteil_Besuche_mit_Cookies' über das 'Datum' macht diesen technischen Bruch oder die Änderung im Consent-Management für den Nutzer sofort sichtbar."
+
+-> Code:
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, lubridate, scales)
+
+df <- read.csv("./src/resources/data/study/32830/dataset.csv", 
+               sep = ",", 
+               encoding = "UTF-8", 
+               stringsAsFactors = FALSE)
+
+df_clean <- df %>%
+  filter(!is.na(Datum)) %>%
+  mutate(
+    Datum = dmy(Datum),
+    Anteil_Besuche_mit_Cookies = as.numeric(gsub("%", "", Anteil_Besuche_mit_Cookies)) / 100
+  ) %>%
+  arrange(Datum)
+
+dir.create("./src/resources/output/32830/", recursive = TRUE, showWarnings = FALSE)
+
+png("./src/resources/output/32830/2_cookie_akzeptanz_verlauf.png", width = 1000, height = 600, res = 120)
+
+ggplot(df_clean, aes(x = Datum, y = Anteil_Besuche_mit_Cookies)) +
+  geom_area(fill = "steelblue", alpha = 0.4) +
+  geom_line(color = "steelblue", size = 1.2) +
+  geom_point(color = "darkblue", size = 2) +
+  scale_y_continuous(labels = percent_format(accuracy = 0.01), 
+                     limits = c(0, max(df_clean$Anteil_Besuche_mit_Cookies, na.rm = TRUE) * 1.2)) +
+  scale_x_date(date_labels = "%d.%m.", date_breaks = "2 days") +
+  labs(title = "Zeitlicher Verlauf der Cookie-Akzeptanz (September 2024)",
+       subtitle = "Anteil der Besuche mit Cookies auf kreis-kleve.de",
+       x = "Datum",
+       y = "Anteil Besuche mit Cookies (%)",
+       caption = "Hinweis: Deutlicher Rückgang der Akzeptanzrate ab dem 22.09.2024 sichtbar.") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(size = 11, color = "gray30")
+  )
+
+dev.off()
+
+
+-> SEVQ:
+
+

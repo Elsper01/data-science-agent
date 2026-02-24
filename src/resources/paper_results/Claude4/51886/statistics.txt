@@ -1,0 +1,406 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\51886\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-24 12:18:05
+Total Duration: 952.14 seconds
+Total Token Usage: 84644 tokens
+Total Costs: $0.2969
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0198 seconds
+
+Method: analyse_dataset
+  Duration: 0.0099 seconds
+
+Method: analyse_metadata
+  Duration: 0.0136 seconds
+
+Method: llm_generate_summary
+  Duration: 209.5837 seconds
+
+Method: llm_generate_goals
+  Duration: 6.4360 seconds
+
+Method: llm_generate_r_code
+  Duration: 32.0346 seconds
+
+Method: test_generated_code
+  Duration: 5.4573 seconds
+
+Method: llm_regenerate_code
+  Duration: 18.2557 seconds
+
+Method: test_generated_code
+  Duration: 6.7319 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 673.6020 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7570 tokens
+  Costs total: $0.0057
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1861 tokens
+  Costs total: $0.0023
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 410 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 750 tokens
+  Costs total: $0.0019
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 422 tokens
+  Costs total: $0.0011
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 1742 tokens
+  Costs total: $0.0028
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2187 tokens
+  Costs total: $0.0030
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2177 tokens
+  Costs total: $0.0034
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 428 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 720 tokens
+  Costs total: $0.0019
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 406 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5560 tokens
+  Costs total: $0.0378
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2319 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2538 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4707 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5074 tokens
+  Costs total: $0.0326
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6775 tokens
+  Costs total: $0.0499
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2351 tokens
+  Costs total: $0.0092
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2914 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6284 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4895 tokens
+  Costs total: $0.0292
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6974 tokens
+  Costs total: $0.0506
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2583 tokens
+  Costs total: $0.0091
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3156 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4750 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5091 tokens
+  Costs total: $0.0303
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie hat sich die Gesamtzahl der fertiggestellten Wohnungen in Oberschleißheim über die Jahre entwickelt?' visualization="Liniendiagramm mit 'time' auf der X-Achse und 'value' auf der Y-Achse, gefiltert nach '2_variable_attribute_label' == 'Insgesamt'." rationale="Ein Liniendiagramm ist ideal, um Trends über Zeiträume darzustellen. Durch die Filterung auf den Wert 'Insgesamt' in der Spalte '2_variable_attribute_label' und die Nutzung von 'time' auf der X-Achse sowie 'value' auf der Y-Achse wird die allgemeine Bauaktivität der Gemeinde über das letzte Jahrzehnt sichtbar. Dies hilft Nutzern zu verstehen, ob die Bautätigkeit zunimmt oder stagniert."
+
+-> Code:
+if (!require("ggplot2")) install.packages("ggplot2")
+if (!require("dplyr")) install.packages("dplyr")
+if (!require("readr")) install.packages("readr")
+
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+# Behebung des Fehlers 'Invalid multibyte sequence':
+# Wir versuchen 'latin1' (ISO-8859-1), da dies bei deutschen CSV-Dateien oft die Ursache für Encoding-Fehler ist,
+# wenn UTF-8 fehlschlägt.
+file_path <- './src/resources/data/study/51886/dataset.csv'
+
+data <- tryCatch({
+  read_delim(file_path, delim = ';', locale = locale(encoding = 'utf-8'), show_col_types = FALSE)
+}, error = function(e) {
+  read_delim(file_path, delim = ';', locale = locale(encoding = 'latin1'), show_col_types = FALSE)
+})
+
+# Daten filtern und vorbereiten
+data_filtered <- data %>%
+  filter(`2_variable_attribute_label` == "Insgesamt") %>%
+  mutate(time = as.numeric(time),
+         value = as.numeric(value)) %>%
+  filter(!is.na(time) & !is.na(value)) %>%
+  arrange(time)
+
+# Verzeichnis erstellen
+dir.create('./src/resources/output/51886', recursive = TRUE, showWarnings = FALSE)
+
+# Visualisierung erstellen
+png('./src/resources/output/51886/0_entwicklung_wohnungen_gesamt.png', 
+    width = 1200, height = 800, res = 120)
+
+if(nrow(data_filtered) > 0) {
+  p <- ggplot(data_filtered, aes(x = time, y = value)) +
+    geom_line(color = "#2E86AB", size = 1.2) +
+    geom_point(color = "#A23B72", size = 3) +
+    labs(title = "Entwicklung der fertiggestellten Wohnungen in Oberschleißheim",
+         subtitle = "Zeitraum: 2014-2024 (Filter: Insgesamt)",
+         x = "Jahr",
+         y = "Anzahl fertiggestellter Wohnungen") +
+    theme_minimal(base_size = 14) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
+          plot.subtitle = element_text(hjust = 0.5, size = 12),
+          axis.title = element_text(face = "bold"),
+          panel.grid.minor = element_blank(),
+          panel.grid.major = element_line(color = "grey90")) +
+    scale_x_continuous(breaks = seq(min(data_filtered$time), max(data_filtered$time), by = 1))
+  
+  print(p)
+} else {
+  plot.new()
+  text(0.5, 0.5, "Keine Daten für 'Insgesamt' gefunden.")
+}
+
+dev.off()
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Welche Wohnungsgrößen wurden im gesamten Zeitraum am häufigsten fertiggestellt?' visualization="Balkendiagramm mit '2_variable_attribute_label' auf der X-Achse und der Summe von 'value' auf der Y-Achse (ohne die Kategorie 'Insgesamt')." rationale="Ein Balkendiagramm eignet sich am besten für den Vergleich von Kategorien. Durch die Aggregation von 'value' über die verschiedenen Kategorien in '2_variable_attribute_label' (unter Ausschluss der Kategorie 'Insgesamt') lässt sich direkt ablesen, ob der Fokus in Oberschleißheim eher auf kleinen (z.B. 1-2 Räume) oder großen Wohnungen (z.B. 5+ Räume) lag. Dies gibt Aufschluss über die Wohnraumstruktur."
+
+-> Code:
+# Benötigte Bibliotheken laden
+library(tidyverse)
+
+# Daten einlesen
+# Fehlerbehebung: Encoding auf 'latin1' oder 'ISO-8859-1' setzen, falls 'utf-8' fehlschlägt
+# Da der Fehler "Invalid multibyte sequence" auftrat, versuchen wir eine robustere Methode
+file_path <- './src/resources/data/study/51886/dataset.csv'
+
+# Versuche das Einlesen mit automatischer Erkennung oder Fallback auf Latin1
+data <- tryCatch({
+  read_delim(file_path, delim = ';', locale = locale(encoding = 'UTF-8'), show_col_types = FALSE)
+}, error = function(e) {
+  read_delim(file_path, delim = ';', locale = locale(encoding = 'ISO-8859-1'), show_col_types = FALSE)
+})
+
+# Daten filtern und aggregieren
+# Wir entfernen 'Insgesamt' und NA-Werte
+data_filtered <- data %>%
+  filter(!is.na(`2_variable_attribute_label`)) %>%
+  filter(!str_detect(`2_variable_attribute_label`, "Insgesamt")) %>%
+  filter(!is.na(value))
+
+data_aggregated <- data_filtered %>%
+  group_by(`2_variable_attribute_label`) %>%
+  summarise(total_value = sum(value, na.rm = TRUE)) %>%
+  arrange(desc(total_value))
+
+# Verzeichnis erstellen
+dir.create('./src/resources/output/51886', recursive = TRUE, showWarnings = FALSE)
+
+# Visualisierung erstellen
+# Wir nutzen coord_flip() für bessere Lesbarkeit der Kategorien
+p <- ggplot(data_aggregated, aes(x = reorder(`2_variable_attribute_label`, total_value), y = total_value)) +
+  geom_bar(stat = "identity", fill = "#2E86AB", color = "black", width = 0.7) +
+  coord_flip() +
+  labs(title = "Fertiggestellte Wohnungen nach Raumzahl",
+       subtitle = "Gesamtsumme im betrachteten Zeitraum",
+       x = "Wohnungsgroesse (Raumzahl)",
+       y = "Anzahl fertiggestellter Wohnungen") +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold", size = 14, hjust = 0.5),
+        plot.subtitle = element_text(size = 11, hjust = 0.5),
+        axis.title = element_text(face = "bold"),
+        axis.text = element_text(size = 10),
+        panel.grid.major.y = element_blank()) +
+  geom_text(aes(label = total_value), hjust = -0.2, size = 4)
+
+# Speichern des Diagramms
+# Wir verwenden ggsave, da es oft robuster mit Encodings in Pfaden umgeht
+ggsave('./src/resources/output/51886/1_wohnungsgroessen_fertigstellungen.png', 
+       plot = p, width = 10, height = 6, dpi = 150)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie verteilt sich die Anzahl der Räume bei den Baufertigstellungen im Zeitverlauf?' visualization="Gestapeltes Flächendiagramm mit 'time' auf der X-Achse, 'value' auf der Y-Achse und '2_variable_attribute_label' als Farblegende (ohne 'Insgesamt')." rationale="Ein gestapeltes Flächendiagramm oder ein gruppiertes Balkendiagramm zeigt die Zusammensetzung der Fertigstellungen pro Jahr. Durch die Kombination von 'time', 'value' und der farblichen Differenzierung nach '2_variable_attribute_label' wird deutlich, wie sich die Nachfrage oder das Angebot an spezifischen Wohnungsgrößen (z.B. Trend zu Single-Wohnungen vs. Familienwohnungen) über die Jahre 2014 bis 2024 verändert hat."
+
+-> Code:
+# Benötigte Pakete laden
+if (!require("ggplot2")) install.packages("ggplot2")
+if (!require("dplyr")) install.packages("dplyr")
+if (!require("tidyr")) install.packages("tidyr")
+if (!require("readr")) install.packages("readr")
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(readr)
+
+# Daten einlesen mit Fehlerbehandlung für Encoding
+# 'ISO-8859-1' oder 'latin1' wird oft benötigt, wenn 'utf-8' fehlschlägt (Invalid multibyte sequence)
+file_path <- './src/resources/data/study/51886/dataset.csv'
+
+df <- tryCatch({
+  read_delim(file_path, delim = ';', locale = locale(encoding = 'utf-8'), show_col_types = FALSE)
+}, error = function(e) {
+  read_delim(file_path, delim = ';', locale = locale(encoding = 'ISO-8859-1'), show_col_types = FALSE)
+})
+
+# Datenbereinigung und Filterung
+df_filtered <- df %>%
+  filter(!is.na(`2_variable_attribute_label`),
+         `2_variable_attribute_label` != "Insgesamt",
+         !is.na(value),
+         !is.na(time)) %>%
+  mutate(
+    value = as.numeric(value),
+    time = as.numeric(time)
+  ) %>%
+  filter(!is.na(value)) # Falls Konvertierung fehlschlug
+
+# Aggregation der Daten
+df_aggregated <- df_filtered %>%
+  group_by(time, `2_variable_attribute_label`) %>%
+  summarise(total_value = sum(value, na.rm = TRUE), .groups = 'drop')
+
+# Sortierung der Kategorien für die Legende (Vermeidung von Umlaut-Problemen im Code-Vergleich)
+# Wir nutzen die vorhandenen Labels direkt aus den Daten
+labels_present <- unique(df_aggregated$`2_variable_attribute_label`)
+df_aggregated$`2_variable_attribute_label` <- factor(df_aggregated$`2_variable_attribute_label`)
+
+# Verzeichnis erstellen
+dir.create('./src/resources/output/51886', recursive = TRUE, showWarnings = FALSE)
+
+# Visualisierung erstellen
+png('./src/resources/output/51886/2_raumverteilung_zeitverlauf.png', 
+    width = 1200, height = 800, res = 120)
+
+p <- ggplot(df_aggregated, aes(x = time, y = total_value, fill = `2_variable_attribute_label`)) +
+  geom_area(alpha = 0.8, position = "stack") +
+  scale_fill_brewer(palette = "Set2", name = "Anzahl Räume") +
+  labs(title = "Verteilung der Raumanzahl bei Baufertigstellungen (2014-2024)",
+       subtitle = "Oberschleißheim",
+       x = "Jahr",
+       y = "Anzahl fertiggestellter Wohnungen") +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+        plot.subtitle = element_text(hjust = 0.5),
+        legend.position = "right",
+        legend.title = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 0),
+        panel.grid.minor = element_blank()) +
+  scale_x_continuous(breaks = seq(min(df_aggregated$time, na.rm = TRUE), 
+                                  max(df_aggregated$time, na.rm = TRUE), by = 1))
+
+print(p)
+dev.off()
+
+
+-> SEVQ:
+
+

@@ -1,0 +1,510 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\13473\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-24 12:17:22
+Total Duration: 904.68 seconds
+Total Token Usage: 98959 tokens
+Total Costs: $0.3219
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 2
+  - Exactly One Visualization: 1 / 3 = (33.33%)
+  - One or More Visualization: 1 / 3 =  (33.33%)
+VER for generation attempt #2:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0112 seconds
+
+Method: analyse_dataset
+  Duration: 0.0103 seconds
+
+Method: analyse_metadata
+  Duration: 0.0128 seconds
+
+Method: llm_generate_summary
+  Duration: 206.9450 seconds
+
+Method: llm_generate_goals
+  Duration: 4.7949 seconds
+
+Method: llm_generate_r_code
+  Duration: 35.8813 seconds
+
+Method: test_generated_code
+  Duration: 4.7515 seconds
+
+Method: llm_regenerate_code
+  Duration: 16.9284 seconds
+
+Method: test_generated_code
+  Duration: 3.6547 seconds
+
+Method: llm_regenerate_code
+  Duration: 19.7427 seconds
+
+Method: test_generated_code
+  Duration: 3.8008 seconds
+
+Method: llm_regenerate_code
+  Duration: 6.6571 seconds
+
+Method: test_generated_code
+  Duration: 3.7844 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 597.7056 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 4720 tokens
+  Costs total: $0.0039
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1733 tokens
+  Costs total: $0.0021
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 425 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 857 tokens
+  Costs total: $0.0022
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1001 tokens
+  Costs total: $0.0026
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2147 tokens
+  Costs total: $0.0033
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2571 tokens
+  Costs total: $0.0035
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2517 tokens
+  Costs total: $0.0032
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 764 tokens
+  Costs total: $0.0020
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 702 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 488 tokens
+  Costs total: $0.0013
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2760 tokens
+  Costs total: $0.0040
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2619 tokens
+  Costs total: $0.0037
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2358 tokens
+  Costs total: $0.0037
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 393 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 458 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 833 tokens
+  Costs total: $0.0021
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2862 tokens
+  Costs total: $0.0037
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 393 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 458 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 415 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6100 tokens
+  Costs total: $0.0414
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2487 tokens
+  Costs total: $0.0077
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2880 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5859 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5100 tokens
+  Costs total: $0.0294
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 8118 tokens
+  Costs total: $0.0630
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2493 tokens
+  Costs total: $0.0080
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3167 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5080 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4908 tokens
+  Costs total: $0.0275
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5614 tokens
+  Costs total: $0.0371
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2525 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3171 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4567 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5416 tokens
+  Costs total: $0.0348
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verteilt sich die Bevölkerung der Stadt Hof nach Geschlecht?' visualization="Balkendiagramm mit '2_variable_attribute_label' auf der X-Achse und 'value' auf der Y-Achse." rationale="Ein Balkendiagramm ist die effektivste Methode, um die absoluten Zahlen der männlichen und weiblichen Bevölkerung sowie den Gesamtwert direkt miteinander zu vergleichen. Durch die Verwendung von '2_variable_attribute_label' auf der X-Achse und 'value' auf der Y-Achse sieht der Nutzer sofort die demografische Struktur und das Verhältnis zwischen den Geschlechtern zum Stichtag."
+
+-> Code:
+if (!require("ggplot2")) install.packages("ggplot2")
+if (!require("dplyr")) install.packages("dplyr")
+if (!require("scales")) install.packages("scales")
+
+library(ggplot2)
+library(dplyr)
+library(scales)
+
+# Daten einlesen
+# Wir nutzen check.names = FALSE, damit Spaltennamen wie "1_variable_code" 
+# nicht automatisch in "X1_variable_code" umgewandelt werden.
+data <- read.csv("./src/resources/data/study/13473/dataset.csv", 
+                 sep = ";", 
+                 encoding = "UTF-8", 
+                 stringsAsFactors = FALSE,
+                 na.strings = c("NA", "nan", ""),
+                 check.names = FALSE)
+
+# Debugging: Spaltennamen prüfen, falls der Fehler weiterhin besteht
+# print(colnames(data))
+
+# Fehlerbehebung: Sicherstellen, dass die Spaltennamen korrekt angesprochen werden.
+# Da Spalten mit Zahlen beginnen, nutzen wir Backticks.
+# Wir filtern nach dem Merkmal "KREISE" (was in diesem Datensatz oft die Stadt Hof repräsentiert)
+# und stellen sicher, dass wir nur die relevanten Geschlechts-Kategorien behalten.
+
+data_plot <- data %>%
+  filter(`1_variable_code` == "KREISE") %>%
+  # Wir filtern auf die relevanten Labels, um Rauschen zu vermeiden
+  filter(`2_variable_attribute_label` %in% c("männlich", "weiblich", "Insgesamt")) %>%
+  # Duplikate entfernen, falls vorhanden
+  distinct(`2_variable_attribute_label`, value, .keep_all = TRUE) %>%
+  # Faktor-Level für die Sortierung festlegen
+  mutate(`2_variable_attribute_label` = factor(`2_variable_attribute_label`, 
+                                                 levels = c("männlich", "weiblich", "Insgesamt")))
+
+# Verzeichnis erstellen
+dir.create("./src/resources/output/13473", recursive = TRUE, showWarnings = FALSE)
+
+# Plot erstellen
+png("./src/resources/output/13473/0_bevoelkerung_nach_geschlecht.png", 
+    width = 1200, 
+    height = 800, 
+    res = 120)
+
+ggplot(data_plot, aes(x = `2_variable_attribute_label`, y = value, fill = `2_variable_attribute_label`)) +
+  geom_bar(stat = "identity", width = 0.7, color = "black", linewidth = 0.3) +
+  geom_text(aes(label = format(value, big.mark = ".", decimal.mark = ",")), 
+            vjust = -0.5, 
+            size = 4.5, 
+            fontface = "bold") +
+  scale_fill_manual(values = c("männlich" = "#4A90E2", 
+                                "weiblich" = "#E94B3C", 
+                                "Insgesamt" = "#50C878")) +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ","),
+                     expand = expansion(mult = c(0, 0.15))) +
+  labs(title = "Bevölkerungsverteilung der Stadt Hof nach Geschlecht",
+       subtitle = "Datenbasis: Fortschreibung des Bevölkerungsstandes",
+       x = "Geschlecht",
+       y = "Anzahl der Personen",
+       caption = "Quelle: Statistisches Bundesamt / Regionaldatenbank") +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
+        plot.subtitle = element_text(hjust = 0.5, size = 12, margin = margin(b = 15)),
+        axis.title = element_text(face = "bold", size = 13),
+        axis.text = element_text(size = 12),
+        legend.position = "none",
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank(),
+        plot.caption = element_text(hjust = 1, size = 10, color = "gray40"))
+
+dev.off()
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie hoch ist der Anteil von Männern und Frauen an der Gesamtbevölkerung?' visualization="Tortendiagramm unter Verwendung von '2_variable_attribute_label' (gefiltert auf 'männlich' und 'weiblich') und 'value'." rationale="Obwohl Balkendiagramme für Mengenvergleiche besser sind, hilft ein Tortendiagramm hier spezifisch dabei, die prozentuale Verteilung der Geschlechter (männlich vs. weiblich) im Verhältnis zum Ganzen zu visualisieren. Durch Filtern der Spalte '2_variable_attribute_label' auf 'männlich' und 'weiblich' und Nutzung der Spalte 'value' wird die im Text erwähnte leichte Mehrheit der Frauen (50,6%) visuell deutlich."
+
+-> Code:
+if (!require("ggplot2")) install.packages("ggplot2")
+if (!require("dplyr")) install.packages("dplyr")
+if (!require("scales")) install.packages("scales")
+
+library(ggplot2)
+library(dplyr)
+library(scales)
+
+# Daten einlesen
+df <- read.csv('./src/resources/data/study/13473/dataset.csv', sep = ';', encoding = 'UTF-8', stringsAsFactors = FALSE)
+
+# Spaltennamen identifizieren
+# Wir suchen nach den Spaltennamen, die "variable_attribute_label" und "value" enthalten.
+# Da make.names() oder das Einlesen oft Präfixe wie "X" hinzufügen, suchen wir flexibel.
+target_col_name <- grep("variable_attribute_label", colnames(df), value = TRUE)
+value_col_name <- grep("value", colnames(df), value = TRUE)
+
+# Falls grep mehrere oder keine Ergebnisse liefert, setzen wir Defaults basierend auf der Fehlermeldung
+if(length(target_col_name) == 0) target_col_name <- "X2_variable_attribute_label"
+if(length(value_col_name) == 0) value_col_name <- "value"
+
+# WICHTIG: Wir nehmen nur das erste Element, falls grep einen Vektor zurückgibt
+target_col <- target_col_name[1]
+value_col <- value_col_name[1]
+
+# Daten filtern und aggregieren
+# Wir nutzen .data[[var]] für tidy evaluation innerhalb von dplyr
+df_filtered <- df %>%
+  filter(.data[[target_col]] %in% c('männlich', 'weiblich')) %>%
+  group_by(.data[[target_col]]) %>%
+  summarise(total = sum(as.numeric(gsub(",", ".", .data[[value_col]])), na.rm = TRUE)) %>%
+  ungroup()
+
+# Prozente berechnen
+df_filtered <- df_filtered %>%
+  mutate(percentage = total / sum(total) * 100,
+         label = paste0(.data[[target_col]], "\n", 
+                       format(total, big.mark = ".", decimal.mark = ","), 
+                       " (", round(percentage, 1), "%)"))
+
+# Farben definieren
+colors <- c("männlich" = "#4A90E2", "weiblich" = "#E94B8A")
+
+# Verzeichnis erstellen
+dir.create('./src/resources/output/13473', showWarnings = FALSE, recursive = TRUE)
+
+# Plot erstellen
+png('./src/resources/output/13473/1_geschlechterverteilung_tortendiagramm.png', 
+    width = 2400, height = 2000, res = 300)
+
+ggplot(df_filtered, aes(x = "", y = total, fill = .data[[target_col]])) +
+  geom_bar(stat = "identity", width = 1, color = "white", size = 1.5) +
+  coord_polar("y", start = 0) +
+  geom_text(aes(label = label), 
+            position = position_stack(vjust = 0.5),
+            size = 4, fontface = "bold", color = "white") +
+  scale_fill_manual(values = colors) +
+  labs(title = "Geschlechterverteilung in der Stadt Hof",
+       subtitle = "Anteil von Männern und Frauen an der Gesamtbevölkerung",
+       fill = "Geschlecht") +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5, size = 16, face = "bold", margin = margin(b = 5)),
+        plot.subtitle = element_text(hjust = 0.5, size = 11, margin = margin(b = 15)),
+        legend.position = "bottom",
+        plot.margin = margin(20, 20, 20, 20))
+
+dev.off()
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Welche regionalen Ebenen sind im Datensatz enthalten und sind die Werte konsistent?' visualization="Tabelle mit den Spalten '1_variable_label', '1_variable_attribute_code', '2_variable_attribute_label' und 'value'." rationale="Da der Datensatz laut Beschreibung redundant über 'Kreise' und 'Gemeinden' strukturiert ist, hilft eine Tabelle mit den Spalten '1_variable_label', '1_variable_attribute_code' und 'value' dem Nutzer zu verstehen, wie die Daten organisiert sind. Es bestätigt, dass für die Stadt Hof (9464/9464000) auf beiden Hierarchieebenen die identischen Bevölkerungszahlen vorliegen, was für die korrekte Datenaggregation wichtig ist."
+
+-> Code:
+if (!require(dplyr)) install.packages("dplyr")
+if (!require(gridExtra)) install.packages("gridExtra")
+if (!require(grid)) install.packages("grid")
+
+library(dplyr)
+library(gridExtra)
+library(grid)
+
+# Encoding-Probleme vermeiden: Wir erzwingen UTF-8 beim Einlesen und verzichten auf 
+# manuelle Ersetzungen von Sonderzeichen im Code-String, da dies oft zu Fehlern führt,
+# wenn das Skript selbst in unterschiedlichen Encodings gespeichert wird.
+
+# Daten einlesen
+# Wir nutzen check.names=FALSE, um die Spaltennamen exakt so zu erhalten, wie sie in der CSV stehen.
+data <- read.csv("./src/resources/data/study/13473/dataset.csv", 
+                 sep = ";", 
+                 encoding = "UTF-8", 
+                 stringsAsFactors = FALSE,
+                 na.strings = c("NA", "nan", ""),
+                 check.names = FALSE)
+
+# Bereinigung der Spaltennamen von BOM oder Präfixen
+colnames(data) <- gsub("^ï..", "", colnames(data))
+colnames(data) <- gsub("^X\\.", "", colnames(data))
+
+# Zielspalten definieren
+target_cols <- c("1_variable_label", "1_variable_attribute_code", "2_variable_attribute_label", "value")
+
+# Sicherstellen, dass die Spalten existieren
+available_cols <- intersect(target_cols, colnames(data))
+tabelle <- data %>% select(all_of(available_cols))
+
+# Funktion zur Bereinigung von Texten, um Rendering-Fehler in gridExtra zu vermeiden.
+# Wir nutzen iconv, um sicherzustellen, dass der Text valides ASCII/UTF-8 ist.
+clean_text_safe <- function(x) {
+  if(is.character(x)) {
+    # Konvertiere zu ASCII und ersetze nicht darstellbare Zeichen durch Platzhalter
+    # Dies verhindert den "invalid string" Fehler bei gsub
+    x <- iconv(x, from = "UTF-8", to = "ASCII//TRANSLIT", sub = "?")
+  }
+  return(x)
+}
+
+tabelle <- tabelle %>% mutate(across(everything(), clean_text_safe))
+
+# Spaltennamen für die Anzeige setzen (ASCII-kompatibel)
+colnames(tabelle) <- c("Regionale Ebene", 
+                       "Code", 
+                       "Geschlecht", 
+                       "Bevoelkerung")[1:ncol(tabelle)]
+
+# PNG Erstellung
+png("./src/resources/output/13473/2_regionale_ebenen_konsistenz.png", 
+    width = 1000, 
+    height = 600, 
+    res = 120)
+
+grid.newpage()
+
+# Titel (ASCII-kompatibel)
+title_text <- "Regionale Ebenen und Konsistenz der Bevoelkerungsdaten\nStadt Hof, 31.12.2024"
+title_grob <- textGrob(title_text,
+                       gp = gpar(fontsize = 12, fontface = "bold"),
+                       y = 0.92)
+
+# Tabelle formatieren
+# Falls die Tabelle zu lang ist, nehmen wir nur die ersten 25 Zeilen zur Übersicht
+tabelle_display <- head(tabelle, 25)
+
+table_grob <- tableGrob(tabelle_display, 
+                        rows = NULL,
+                        theme = ttheme_default(
+                          base_size = 9,
+                          core = list(fg_params = list(hjust = 0, x = 0.05)),
+                          colhead = list(fg_params = list(fontface = "bold", col="white"),
+                                        bg_params = list(fill = "#4472C4"))
+                        ))
+
+# Anordnung
+grid.arrange(title_grob, table_grob, ncol = 1, heights = c(1, 5))
+
+dev.off()
+
+-> SEVQ:
+
+

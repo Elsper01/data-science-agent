@@ -1,0 +1,365 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32830\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-24 12:16:35
+Total Duration: 863.64 seconds
+Total Token Usage: 74911 tokens
+Total Costs: $0.2560
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0101 seconds
+
+Method: analyse_dataset
+  Duration: 0.0087 seconds
+
+Method: analyse_metadata
+  Duration: 0.0138 seconds
+
+Method: llm_generate_summary
+  Duration: 264.6528 seconds
+
+Method: llm_generate_goals
+  Duration: 4.0807 seconds
+
+Method: llm_generate_r_code
+  Duration: 36.6521 seconds
+
+Method: test_generated_code
+  Duration: 5.9530 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 552.2674 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7061 tokens
+  Costs total: $0.0065
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 2100 tokens
+  Costs total: $0.0023
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 484 tokens
+  Costs total: $0.0013
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 711 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 439 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6129 tokens
+  Costs total: $0.0429
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2478 tokens
+  Costs total: $0.0099
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2980 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6971 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4764 tokens
+  Costs total: $0.0269
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5667 tokens
+  Costs total: $0.0396
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2296 tokens
+  Costs total: $0.0080
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2716 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4772 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4877 tokens
+  Costs total: $0.0314
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5005 tokens
+  Costs total: $0.0323
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2334 tokens
+  Costs total: $0.0077
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2553 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5653 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4921 tokens
+  Costs total: $0.0298
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie entwickeln sich die Besuche und Seitenaufrufe im Verlauf des Monats September 2024?' visualization="Liniendiagramm mit 'Datum' auf der x-Achse und 'Besuche' sowie 'Seitenaufrufe' auf der y-Achse." rationale="Ein Liniendiagramm ist ideal, um zeitliche Trends darzustellen. Durch den Vergleich von 'Besuche' und 'Seitenaufrufe' über das 'Datum' hinweg kann der Nutzer sofort das typische Wochenend-Muster (niedrigere Aktivität) erkennen und sehen, ob Spitzenwerte bei den Besuchen auch zu proportional mehr Seitenaufrufen führen. Die Summenzeile (Datum 'NaN') muss hierbei gefiltert werden."
+
+-> Code:
+if (!require(ggplot2)) install.packages("ggplot2")
+if (!require(dplyr)) install.packages("dplyr")
+if (!require(tidyr)) install.packages("tidyr")
+if (!require(lubridate)) install.packages("lubridate")
+if (!require(scales)) install.packages("scales")
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(scales)
+
+data <- read.csv('./src/resources/data/study/32830/dataset.csv', 
+                 sep = ',', 
+                 encoding = 'UTF-8',
+                 stringsAsFactors = FALSE)
+
+data_clean <- data %>%
+  filter(!is.na(Datum) & Datum != "" & Datum != "nan") %>%
+  mutate(Datum = dmy(Datum))
+
+data_clean <- data_clean %>%
+  filter(!is.na(Datum)) %>%
+  arrange(Datum)
+
+data_long <- data_clean %>%
+  select(Datum, Besuche, Seitenaufrufe) %>%
+  pivot_longer(cols = c(Besuche, Seitenaufrufe),
+               names_to = "Metrik",
+               values_to = "Wert")
+
+data_long <- data_long %>%
+  mutate(Metrik = case_when(
+    Metrik == "Besuche" ~ "Besuche",
+    Metrik == "Seitenaufrufe" ~ "Seitenaufrufe",
+    TRUE ~ Metrik
+  ))
+
+dir.create('./src/resources/output/32830', recursive = TRUE, showWarnings = FALSE)
+
+png('./src/resources/output/32830/0_besuche_seitenaufrufe_zeitverlauf.png', 
+    width = 1200, height = 700, res = 120)
+
+ggplot(data_long, aes(x = Datum, y = Wert, color = Metrik, group = Metrik)) +
+  geom_line(size = 1.2) +
+  geom_point(size = 2.5, alpha = 0.7) +
+  scale_color_manual(values = c("Besuche" = "#2E86AB", "Seitenaufrufe" = "#A23B72")) +
+  scale_x_date(date_breaks = "3 days", date_labels = "%d.%m.") +
+  scale_y_continuous(labels = comma_format(big.mark = ".", decimal.mark = ",")) +
+  labs(title = "Entwicklung der Besuche und Seitenaufrufe im September 2024",
+       subtitle = "Website kreis-kleve.de - Tägliche Werte",
+       x = "Datum",
+       y = "Anzahl",
+       color = "Metrik") +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold", size = 14, hjust = 0),
+        plot.subtitle = element_text(size = 11, hjust = 0, color = "gray40"),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "top",
+        legend.title = element_text(face = "bold"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_line(color = "gray90"),
+        panel.grid.major.y = element_line(color = "gray90"))
+
+dev.off()
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Besteht ein Zusammenhang zwischen der Besuchstiefe und der Absprungrate?' visualization="Streudiagramm (Scatter Plot) mit 'Seiten_pro_Besuch' auf der x-Achse und 'Bounce_Rate' auf der y-Achse." rationale="Ein Streudiagramm (Scatter Plot) verdeutlicht die Korrelation zwischen der 'Bounce_Rate' und 'Seiten_pro_Besuch'. Dies hilft dem Analysten zu verstehen, ob Besuche, die tiefer in die Website eindringen (mehr Seiten pro Besuch), wie erwartet eine niedrigere Bounce Rate aufweisen. Dies ist ein wichtiger Indikator für die Qualität des Traffics und die Relevanz der Inhalte."
+
+-> Code:
+if (!require("ggplot2")) install.packages("ggplot2")
+if (!require("dplyr")) install.packages("dplyr")
+if (!require("readr")) install.packages("readr")
+
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+df <- read_csv('./src/resources/data/study/32830/dataset.csv', locale = locale(encoding = "utf-8"))
+
+df <- df %>%
+  mutate(
+    Bounce_Rate_numeric = as.numeric(gsub("%", "", Bounce_Rate)) / 100,
+    Seiten_pro_Besuch_numeric = as.numeric(Seiten_pro_Besuch)
+  )
+
+df_clean <- df %>%
+  filter(!is.na(Seiten_pro_Besuch_numeric) & !is.na(Bounce_Rate_numeric)) %>%
+  filter(!is.na(Datum))
+
+correlation <- cor(df_clean$Seiten_pro_Besuch_numeric, df_clean$Bounce_Rate_numeric, use = "complete.obs")
+
+dir.create("./src/resources/output/32830", recursive = TRUE, showWarnings = FALSE)
+
+png("./src/resources/output/32830/1_scatter_besuchstiefe_absprungrate.png", width = 1200, height = 800, res = 120)
+
+ggplot(df_clean, aes(x = Seiten_pro_Besuch_numeric, y = Bounce_Rate_numeric)) +
+  geom_point(color = "#2E86AB", size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, color = "#A23B72", linetype = "dashed", linewidth = 1) +
+  labs(
+    title = "Zusammenhang zwischen Besuchstiefe und Absprungrate",
+    subtitle = paste0("Korrelation: r = ", round(correlation, 3)),
+    x = "Seiten pro Besuch",
+    y = "Absprungrate (Bounce Rate)"
+  ) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0.5),
+    plot.subtitle = element_text(size = 12, hjust = 0.5, color = "gray30"),
+    axis.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank(),
+    panel.border = element_rect(color = "gray70", fill = NA, linewidth = 0.5)
+  )
+
+dev.off()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie hoch ist das tägliche Aufkommen an Besuchern im Vergleich zur Gesamtzahl der Besuche?' visualization="Gruppiertes Balkendiagramm mit 'Datum' auf der x-Achse und 'Besucher' sowie 'Besuche' als Balkenpaare." rationale="Ein gruppiertes Balkendiagramm ermöglicht den direkten Vergleich zwischen 'Besucher' (Unique Visitors) und 'Besuche' für jedes 'Datum'. Da die 'Besuchshäufigkeit' laut Zusammenfassung oft bei 1.00 liegt, zeigt diese Visualisierung optisch, wie nah diese Werte beieinander liegen und identifiziert Tage, an denen Nutzer eventuell mehrfach zurückgekehrt sind."
+
+-> Code:
+if (!require("ggplot2")) install.packages("ggplot2")
+if (!require("dplyr")) install.packages("dplyr")
+if (!require("tidyr")) install.packages("tidyr")
+if (!require("lubridate")) install.packages("lubridate")
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(lubridate)
+
+data <- read.csv('./src/resources/data/study/32830/dataset.csv', 
+                 sep = ',', 
+                 encoding = 'UTF-8',
+                 stringsAsFactors = FALSE)
+
+data_clean <- data %>%
+  filter(!is.na(Datum) & Datum != "" & Datum != "nan") %>%
+  filter(row_number() != 1)
+
+data_clean$Datum_parsed <- dmy(data_clean$Datum)
+
+data_clean$Besuche <- as.numeric(data_clean$Besuche)
+data_clean$Besucher <- as.numeric(data_clean$Besucher)
+
+data_clean <- data_clean %>%
+  filter(!is.na(Besuche) & !is.na(Besucher) & !is.na(Datum_parsed)) %>%
+  arrange(Datum_parsed)
+
+data_long <- data_clean %>%
+  select(Datum_parsed, Besuche, Besucher) %>%
+  pivot_longer(cols = c(Besuche, Besucher), 
+               names_to = "Metrik", 
+               values_to = "Anzahl")
+
+data_long$Metrik <- factor(data_long$Metrik, 
+                           levels = c("Besucher", "Besuche"),
+                           labels = c("Besucher", "Besuche"))
+
+dir.create('./src/resources/output/32830', showWarnings = FALSE, recursive = TRUE)
+
+png('./src/resources/output/32830/2_besucher_vs_besuche.png', 
+    width = 1400, 
+    height = 800, 
+    res = 100)
+
+ggplot(data_long, aes(x = Datum_parsed, y = Anzahl, fill = Metrik)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
+  scale_fill_manual(values = c("Besucher" = "#2E86AB", "Besuche" = "#A23B72")) +
+  labs(title = "Tägliches Aufkommen: Besucher vs. Besuche im September 2024",
+       subtitle = "Vergleich der Unique Visitors (Besucher) mit der Gesamtzahl der Besuche",
+       x = "Datum",
+       y = "Anzahl",
+       fill = "Metrik") +
+  theme_minimal(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.title = element_text(face = "bold", size = 14),
+        plot.subtitle = element_text(size = 11),
+        legend.position = "top",
+        panel.grid.minor = element_blank()) +
+  scale_x_date(date_breaks = "2 days", date_labels = "%d.%m.%Y")
+
+dev.off()
+
+
+-> SEVQ:
+
+

@@ -1,0 +1,16 @@
+variable,type,n,na_count,na_share,special_count,special_share
+Datum,character,31,1,0.03225806451612903,0,0
+Besuche,numeric,31,0,0,0,0
+Besucher,numeric,31,0,0,0,0
+Anteil_Besuche_mit_Cookies,character,31,0,0,0,0
+Anteil_Besucher_mit_Cookies,character,31,0,0,0,0
+Besuchsh__ufigkeit,character,31,0,0,7,0.22580645161290322
+Seitenaufrufe,numeric,31,0,0,0,0
+Seiten_pro_Besuch,numeric,31,0,0,0,0
+Zeit_im_Besuch,hms,31,0,0,0,0
+Bounce_Rate,character,31,0,0,0,0
+Bounce_Zeit,hms,31,0,0,0,0
+Conversions__Last_Ad_,numeric,31,0,0,0,0
+Conversion_Wert__Last_Ad_,numeric,31,0,0,0,0
+Conversion_Rate__Last_Ad_,character,31,0,0,0,0
+Unnamed__14,logical,31,31,1,0,0

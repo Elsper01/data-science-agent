@@ -1,0 +1,328 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\103779\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-24 12:16:24
+Total Duration: 853.26 seconds
+Total Token Usage: 71836 tokens
+Total Costs: $0.2665
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0084 seconds
+
+Method: analyse_dataset
+  Duration: 0.0058 seconds
+
+Method: analyse_metadata
+  Duration: 0.0199 seconds
+
+Method: llm_generate_summary
+  Duration: 171.5560 seconds
+
+Method: llm_generate_goals
+  Duration: 5.1350 seconds
+
+Method: llm_generate_r_code
+  Duration: 31.0222 seconds
+
+Method: test_generated_code
+  Duration: 58.7123 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 586.7972 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7656 tokens
+  Costs total: $0.0058
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1893 tokens
+  Costs total: $0.0021
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 655 tokens
+  Costs total: $0.0017
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 657 tokens
+  Costs total: $0.0017
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 945 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6094 tokens
+  Costs total: $0.0464
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2155 tokens
+  Costs total: $0.0078
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2579 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4167 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4292 tokens
+  Costs total: $0.0246
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 4849 tokens
+  Costs total: $0.0321
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2217 tokens
+  Costs total: $0.0078
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2739 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4094 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4655 tokens
+  Costs total: $0.0288
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7493 tokens
+  Costs total: $0.0587
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2282 tokens
+  Costs total: $0.0076
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2878 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4897 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4639 tokens
+  Costs total: $0.0264
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verteilen sich die Kulturdenkmale auf die verschiedenen Gemeinden im Kreis Segeberg?' visualization="Ein horizontales Balkendiagramm mit 'Gemeinde' auf der y-Achse und der Anzahl der 'Objektnummer' auf der x-Achse." rationale="Ein Balkendiagramm der Spalte 'Gemeinde' ermöglicht es dem Nutzer, sofort zu erkennen, welche Orte (wie z.B. 'Bad Segeberg, Stadt') die höchste Dichte an geschützten Objekten aufweisen. Dies ist entscheidend für die raumplanerische Einordnung und zeigt die geografischen Schwerpunkte der Denkmalliste."
+
+-> Code:
+install.packages("ggplot2", repos = "http://cran.r-project.org")
+install.packages("dplyr", repos = "http://cran.r-project.org")
+
+library(ggplot2)
+library(dplyr)
+
+data <- read.csv('./src/resources/data/study/103779/dataset.csv', 
+                 sep = ',', 
+                 encoding = 'UTF-8',
+                 stringsAsFactors = FALSE)
+
+gemeinde_counts <- data %>%
+  filter(!is.na(Gemeinde) & Gemeinde != "") %>%
+  group_by(Gemeinde) %>%
+  summarise(Anzahl = n()) %>%
+  arrange(desc(Anzahl))
+
+gemeinde_counts <- gemeinde_counts %>%
+  mutate(Gemeinde = factor(Gemeinde, levels = rev(Gemeinde)))
+
+png('./src/resources/output/103779/0_gemeinde_verteilung.png', 
+    width = 1200, 
+    height = 1400, 
+    res = 120)
+
+ggplot(gemeinde_counts, aes(x = Anzahl, y = Gemeinde)) +
+  geom_bar(stat = "identity", fill = "#2E86AB", alpha = 0.8) +
+  labs(title = "Verteilung der Kulturdenkmale auf Gemeinden im Kreis Segeberg",
+       x = "Anzahl der Kulturdenkmale",
+       y = "Gemeinde") +
+  theme_minimal(base_size = 11) +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+        axis.text.y = element_text(size = 9),
+        axis.text.x = element_text(size = 10),
+        axis.title = element_text(size = 11, face = "bold"),
+        panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_blank()) +
+  geom_text(aes(label = Anzahl), hjust = -0.2, size = 3)
+
+dev.off()
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Welche Arten von Kulturdenkmalen dominieren das Stadtbild im Kreis Segeberg?' visualization="Ein Balkendiagramm mit 'Kulturdenkmaltyp' auf der x-Achse und der Anzahl der 'Objektnummer' auf der y-Achse." rationale="Durch die Visualisierung der Spalte 'Kulturdenkmaltyp' wird deutlich, ob es sich primär um 'Bauliche Anlagen', 'Sachgesamtheiten' oder 'Gründenkmale' handelt. Dies hilft dem Nutzer, die strukturelle Zusammensetzung des Denkmalbestands schnell zu erfassen. Ein Balkendiagramm ist hier präziser als ein Kreisdiagramm, um die Unterschiede zwischen den Kategorien (insgesamt 6 Typen) darzustellen."
+
+-> Code:
+install.packages("ggplot2", repos = "http://cran.r-project.org")
+install.packages("dplyr", repos = "http://cran.r-project.org")
+
+library(ggplot2)
+library(dplyr)
+
+data <- read.csv('./src/resources/data/study/103779/dataset.csv', 
+                 sep = ',', 
+                 encoding = 'UTF-8', 
+                 stringsAsFactors = FALSE)
+
+data_clean <- data %>%
+  filter(!is.na(Kulturdenkmaltyp) & Kulturdenkmaltyp != "")
+
+typ_counts <- data_clean %>%
+  group_by(Kulturdenkmaltyp) %>%
+  summarise(Anzahl = n()) %>%
+  arrange(desc(Anzahl))
+
+png('./src/resources/output/103779/1_kulturdenkmaltyp_verteilung.png', 
+    width = 1200, 
+    height = 800, 
+    res = 120)
+
+ggplot(typ_counts, aes(x = reorder(Kulturdenkmaltyp, -Anzahl), y = Anzahl)) +
+  geom_bar(stat = "identity", fill = "#2E86AB", color = "black", width = 0.7) +
+  geom_text(aes(label = Anzahl), vjust = -0.5, size = 5, fontface = "bold") +
+  labs(title = "Verteilung der Kulturdenkmaltypen im Kreis Segeberg",
+       subtitle = "Anzahl der registrierten Kulturdenkmale nach Typ (Stand Frühjahr 2021)",
+       x = "Kulturdenkmaltyp",
+       y = "Anzahl der Objekte") +
+  theme_minimal(base_size = 14) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title = element_text(size = 14, face = "bold"),
+        plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+        plot.subtitle = element_text(size = 12, hjust = 0.5),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank())
+
+dev.off()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Auf welchen rechtlichen Kriterien basiert der Schutzstatus der Denkmale am häufigsten?' visualization="Ein Balkendiagramm, das die Häufigkeit der verschiedenen Kategorien in der Spalte 'Begr_ndung' darstellt." rationale="Die Spalte 'Begr_ndung' gibt Aufschluss darüber, warum ein Objekt geschützt ist (z.B. 'Geschichtlich, Städtebaulich'). Eine Visualisierung dieser Kriterien zeigt die fachliche Herleitung des Denkmalwerts auf. Da ca. 24 % der Werte fehlen, hilft diese Darstellung auch dabei, die Vollständigkeit der rechtlichen Dokumentation im Datensatz zu bewerten."
+
+-> Code:
+
+install.packages("ggplot2", repos = "http://cran.r-project.org")
+install.packages("dplyr", repos = "http://cran.r-project.org")
+install.packages("tidyr", repos = "http://cran.r-project.org")
+install.packages("stringr", repos = "http://cran.r-project.org")
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(stringr)
+
+df <- read.csv('./src/resources/data/study/103779/dataset.csv', sep = ',', encoding = 'UTF-8', stringsAsFactors = FALSE)
+
+df$Begr_ndung <- trimws(df$Begr_ndung)
+df$Begr_ndung[df$Begr_ndung == "" | df$Begr_ndung == "nan"] <- NA
+
+begr_clean <- df %>%
+  filter(!is.na(Begr_ndung)) %>%
+  pull(Begr_ndung)
+
+begr_split <- unlist(strsplit(begr_clean, ",\\s*"))
+
+begr_split <- trimws(begr_split)
+
+begr_freq <- as.data.frame(table(begr_split))
+colnames(begr_freq) <- c("Kriterium", "Häufigkeit")
+
+begr_freq <- begr_freq %>%
+  arrange(desc(Häufigkeit))
+
+png('./src/resources/output/103779/2_rechtliche_kriterien_schutzstatus.png', width = 1200, height = 800, res = 120)
+
+ggplot(begr_freq, aes(x = reorder(Kriterium, Häufigkeit), y = Häufigkeit)) +
+  geom_bar(stat = "identity", fill = "#2E86AB", color = "black", width = 0.7) +
+  coord_flip() +
+  labs(
+    title = "Häufigkeit der rechtlichen Kriterien für den Denkmalschutzstatus",
+    subtitle = paste0("Basis: ", length(begr_clean), " Denkmale mit dokumentierter Begründung (ca. ", 
+                      round(length(begr_clean)/nrow(df)*100, 1), "% des Datensatzes)"),
+    x = "Rechtliches Kriterium",
+    y = "Anzahl der Nennungen"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14, hjust = 0),
+    plot.subtitle = element_text(size = 10, hjust = 0, color = "gray30"),
+    axis.text.y = element_text(size = 11),
+    axis.text.x = element_text(size = 11),
+    axis.title = element_text(size = 12, face = "bold"),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank()
+  ) +
+  geom_text(aes(label = Häufigkeit), hjust = -0.2, size = 3.5)
+
+dev.off()
+
+
+-> SEVQ:
+
+

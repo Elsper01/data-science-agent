@@ -1,0 +1,469 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\51886\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-23 23:09:32
+Total Duration: 1210.20 seconds
+Total Token Usage: 116382 tokens
+Total Costs: $0.4829
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0332 seconds
+
+Method: analyse_dataset
+  Duration: 0.0151 seconds
+
+Method: analyse_metadata
+  Duration: 0.0164 seconds
+
+Method: llm_generate_summary
+  Duration: 302.1927 seconds
+
+Method: llm_generate_goals
+  Duration: 4.9326 seconds
+
+Method: llm_generate_r_code
+  Duration: 328.1516 seconds
+
+Method: test_generated_code
+  Duration: 8.7639 seconds
+
+Method: llm_regenerate_code
+  Duration: 7.7430 seconds
+
+Method: test_generated_code
+  Duration: 8.1549 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 550.1978 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7330 tokens
+  Costs total: $0.0050
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1655 tokens
+  Costs total: $0.0022
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7470 tokens
+  Costs total: $0.0524
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8334 tokens
+  Costs total: $0.0610
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8862 tokens
+  Costs total: $0.0664
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 725 tokens
+  Costs total: $0.0019
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1312 tokens
+  Costs total: $0.0033
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 4362 tokens
+  Costs total: $0.0052
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 725 tokens
+  Costs total: $0.0019
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 397 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6584 tokens
+  Costs total: $0.0442
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2928 tokens
+  Costs total: $0.0094
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3339 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5947 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6604 tokens
+  Costs total: $0.0354
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6731 tokens
+  Costs total: $0.0461
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2760 tokens
+  Costs total: $0.0091
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3452 tokens
+  Costs total: $0.0032
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4659 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5162 tokens
+  Costs total: $0.0282
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7375 tokens
+  Costs total: $0.0510
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2916 tokens
+  Costs total: $0.0093
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3674 tokens
+  Costs total: $0.0033
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6785 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5678 tokens
+  Costs total: $0.0326
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie hat sich die Gesamtzahl der Baufertigstellungen in Oberschleißheim über die Jahre entwickelt?' visualization="Liniendiagramm mit 'time' auf der x-Achse und 'value' auf der y-Achse, gefiltert nach '2_variable_attribute_label' = 'Insgesamt'." rationale="Durch die Filterung auf 'Insgesamt' in der Spalte '2_variable_attribute_label' und die Darstellung von 'value' über die Zeitachse 'time' lässt sich der allgemeine Trend des Wohnungsbaus ablesen. Ein Liniendiagramm ist hier ideal, um Wachstumsphasen oder Rückgänge im Zeitverlauf von 2014 bis 2024 zu identifizieren."
+
+-> Code:
+options(warn=-1)
+options(stringsAsFactors=FALSE, scipen=999)
+req_pkgs <- c("readr","dplyr","ggplot2","stringr","tidyr","scales")
+inst <- req_pkgs[!req_pkgs %in% installed.packages()[,"Package"]]
+if(length(inst)>0) install.packages(inst, dependencies=TRUE)
+lapply(req_pkgs, library, character.only=TRUE)
+input_path <- "./src/resources/data/study\\51886\\dataset.csv"
+out_dir <- "./src/resources/output\\51886"
+dir.create(out_dir, recursive=TRUE, showWarnings=FALSE)
+df <- suppressMessages(readr::read_delim(file=input_path, delim=";", locale=readr::locale(encoding="UTF-8"), na=c("","NA","NaN","nan","NULL"), trim_ws=TRUE, show_col_types=FALSE))
+names(df) <- stringr::str_trim(names(df))
+df <- df |>
+  mutate(across(where(is.character), ~stringr::str_squish(.)))
+if("time" %in% names(df)) df$time <- suppressWarnings(as.integer(df$time))
+if("value" %in% names(df)) df$value <- suppressWarnings(as.numeric(df$value))
+missing_share <- data.frame(spalte=names(df), anteil_fehlend=sapply(df, function(x) mean(is.na(x))), stringsAsFactors=FALSE)
+readr::write_csv(missing_share, file.path(out_dir, "0_anteil_fehlender_werte.csv"))
+num_df <- dplyr::select(df, where(is.numeric))
+if(ncol(num_df)>0){
+  numeric_summary <- num_df |>
+    summarise(across(everything(), list(n=~sum(!is.na(.)), mittelwert=~mean(., na.rm=TRUE), sd=~sd(., na.rm=TRUE), min=~min(., na.rm=TRUE), q25=~quantile(.,0.25, na.rm=TRUE), median=~median(., na.rm=TRUE), q75=~quantile(.,0.75, na.rm=TRUE), max=~max(., na.rm=TRUE))))
+  readr::write_csv(numeric_summary, file.path(out_dir, "0_zusammenfassung_numerisch.csv"))
+  if(ncol(num_df)>=2){
+    suppressWarnings({
+      cmat <- try(stats::cor(num_df, use="pairwise.complete.obs"), silent=TRUE)
+    })
+    if(!inherits(cmat, "try-error")) utils::write.csv(cmat, file=file.path(out_dir, "0_korrelationen.csv"), row.names=TRUE, fileEncoding="UTF-8")
+  }
+}
+if(!all(c("2_variable_attribute_label","time","value") %in% names(df))) stop("Erforderliche Spalten fehlen.")
+df_filt <- df |>
+  filter(!is.na(`2_variable_attribute_label`)) |>
+  mutate(`2_variable_attribute_label`=stringr::str_squish(`2_variable_attribute_label`)) |>
+  filter(`2_variable_attribute_label`=="Insgesamt") |>
+  filter(!is.na(time)) |>
+  group_by(time) |>
+  summarise(gesamt_baufertigstellungen=sum(value, na.rm=TRUE), .groups="drop") |>
+  arrange(time)
+if(nrow(df_filt)==0) stop("Keine Daten für 'Insgesamt' gefunden.")
+x_breaks <- seq(min(df_filt$time, na.rm=TRUE), max(df_filt$time, na.rm=TRUE), by=1)
+col_line <- "#0B84A5"
+plot_obj <- ggplot(df_filt, aes(x=time, y=gesamt_baufertigstellungen, group=1)) +
+  geom_hline(yintercept=0, linewidth=0.3, linetype="dashed", color="#9AA0A6") +
+  geom_line(color=col_line, linewidth=1.2) +
+  geom_point(color=col_line, fill="white", size=2.8, stroke=1, shape=21) +
+  geom_smooth(method="lm", se=FALSE, linetype="dotted", linewidth=0.8, color="#6C757D") +
+  scale_x_continuous(breaks=x_breaks, expand=expansion(mult=c(0.01,0.01))) +
+  scale_y_continuous(labels=scales::label_number(accuracy=1, big.mark="."), expand=expansion(mult=c(0.05,0.10))) +
+  labs(title="Entwicklung der Baufertigstellungen insgesamt in Oberschleißheim (2014–2024)", subtitle="Gefiltert nach Raumzahl = Insgesamt; gestrichelte Linie zeigt linearen Trend", x="Jahr", y="Anzahl fertiggestellter Wohnungen") +
+  theme_minimal(base_size=13) +
+  theme(plot.title=element_text(face="bold"), axis.title.x=element_text(margin=margin(t=8)), axis.title.y=element_text(margin=margin(r=8)), panel.grid.minor=element_blank())
+last_row <- tail(df_filt, 1)
+plot_obj <- plot_obj + geom_text(data=last_row, aes(label=scales::number(gesamt_baufertigstellungen, accuracy=1, big.mark=".")), vjust=-1/2, color=col_line, size=4)
+png_path <- "./src/resources/output\\51886/0_gesamt_baufertigstellungen_zeitreihe.png"
+ggplot2::ggsave(filename=png_path, plot=plot_obj, width=1600, height=900, units="px", dpi=150)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Welche Wohnungsgrößen (Raumzahl) wurden im gesamten Zeitraum am häufigsten fertiggestellt?' visualization="Horizontales Balkendiagramm mit '2_variable_attribute_label' (ohne 'Insgesamt') auf der y-Achse und der Summe von 'value' auf der x-Achse." rationale="Ein Balkendiagramm eignet sich am besten, um die Summen der verschiedenen Kategorien in '2_variable_attribute_label' (ausgenommen 'Insgesamt') zu vergleichen. Durch die Aggregation von 'value' für jede Raumzahl-Kategorie wird ersichtlich, ob der Fokus in Oberschleißheim eher auf kleinen (z.B. 1-2 Räume) oder großen Wohneinheiten (z.B. 5+ Räume) lag."
+
+-> Code:
+options(warn=-1)
+pkgs <- c("readr","dplyr","ggplot2","scales","forcats","stringr","tidyr")
+for (p in pkgs) { if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org") }
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(forcats)
+library(stringr)
+library(tidyr)
+
+set.seed(1)
+input_path <- file.path("src","resources","data","study","51886","dataset.csv")
+output_dir <- file.path("src","resources","output","51886")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Fix for UTF-8 / Encoding issues: Read with Latin1 if UTF-8 fails or check common German encodings
+# The error "invalid UTF-8" often happens with German Umlauts (ä, ö, ü, ß) in CSVs from German sources
+df <- suppressMessages(readr::read_delim(
+  file = input_path, 
+  delim = ";", 
+  locale = readr::locale(encoding = "ISO-8859-1"), # Common for German CSVs if UTF-8 fails
+  trim_ws = TRUE, 
+  show_col_types = FALSE, 
+  progress = FALSE
+))
+
+# Clean column names
+colnames(df) <- make.names(colnames(df), unique = TRUE)
+
+# Identify columns
+col_value <- if ("value" %in% names(df)) "value" else names(df)[grepl("value", names(df))][1]
+col_label2 <- if ("X2_variable_attribute_label" %in% names(df)) "X2_variable_attribute_label" else names(df)[grepl("X2_variable_attribute_label", names(df))][1]
+
+# Data Processing
+# We use iconv to ensure strings are valid UTF-8 before string operations like trimws/tolower
+plot_df <- df %>%
+  mutate(across(where(is.character), ~iconv(., from = "ISO-8859-1", to = "UTF-8", sub = ""))) %>%
+  filter(!is.na(.data[[col_label2]])) %>%
+  # Filter out "Insgesamt" (Total)
+  filter(!str_detect(tolower(trimws(.data[[col_label2]])), "^insgesamt$")) %>%
+  mutate(across(all_of(col_value), as.numeric)) %>%
+  group_by(Kategorie_Raw = .data[[col_label2]]) %>%
+  summarise(Summe = sum(.data[[col_value]], na.rm = TRUE), .groups = "drop") %>%
+  filter(Summe > 0) %>%
+  mutate(Kategorie = forcats::fct_reorder(Kategorie_Raw, Summe))
+
+# Save summary data
+readr::write_csv(plot_df, file.path(output_dir, "eda_raumzahl_summen.csv"))
+
+# Visualization
+p <- ggplot(plot_df, aes(x = Summe, y = Kategorie)) +
+  geom_col(fill = "#2E86AB", width = 0.7) +
+  geom_text(aes(label = scales::number(Summe, big.mark = ".", decimal.mark = ",")), 
+            hjust = -0.2, size = 3.5) +
+  scale_x_continuous(
+    labels = function(x) scales::number(x, big.mark = ".", decimal.mark = ","),
+    expand = expansion(mult = c(0, 0.15))
+  ) +
+  labs(
+    title = "Fertiggestellte Wohnungen nach Raumzahl",
+    subtitle = "Gemeinde Oberschleißheim; Summe über den gesamten Zeitraum",
+    x = "Summe der Fertigstellungen (Anzahl)",
+    y = "Wohnungsgröße (Raumzahl)"
+  ) +
+  theme_minimal(base_family = "sans") +
+  theme(
+    plot.title = element_text(face = "bold", size = 12),
+    plot.subtitle = element_text(size = 10),
+    axis.title = element_text(size = 10),
+    axis.text = element_text(size = 9),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.margin = margin(10, 40, 10, 10)
+  )
+
+# Save Plot
+plot_path <- file.path(output_dir, "1_balkendiagramm_raumzahl_summe.png")
+height_in <- max(4, nrow(plot_df) * 0.4 + 1)
+ggsave(filename = plot_path, plot = p, width = 9, height = height_in, dpi = 300, bg = "white")
+
+# Output success message to stdout
+cat("Visualization created successfully at:", plot_path)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie hat sich die Verteilung der Wohnungsgrößen im Zeitverlauf verändert?' visualization="Gestapeltes Säulendiagramm mit 'time' auf der x-Achse, 'value' auf der y-Achse und '2_variable_attribute_label' (Kategorien 1 bis 7+ Räume) als Farblegende." rationale="Ein gestapeltes Säulendiagramm zeigt nicht nur die jährliche Gesamtleistung ('time'), sondern schlüsselt diese auch nach der Raumzahl ('2_variable_attribute_label') auf. Dies verdeutlicht strukturelle Verschiebungen am Wohnungsmarkt, beispielsweise ob in neueren Jahren vermehrt kleinere Wohnungen gebaut wurden als zu Beginn des Zeitraums."
+
+-> Code:
+options(encoding = "UTF-8")
+if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman", repos = "https://cloud.r-project.org")
+pacman::p_load(readr, dplyr, tidyr, ggplot2, janitor, stringr, purrr, scales, viridis, tibble)
+
+out_dir <- file.path(".", "src", "resources", "output", "51886")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+in_path_raw <- './src/resources/data/study\\51886\\dataset.csv'
+in_path <- gsub("\\\\", "/", in_path_raw)
+
+df_raw <- readr::read_delim(
+  file = in_path,
+  delim = ";",
+  locale = locale(encoding = "UTF-8"),
+  na = c("NA", "NaN", "nan", "", "null", "NULL"),
+  trim_ws = TRUE,
+  show_col_types = FALSE
+)
+
+df <- df_raw %>% janitor::clean_names()
+
+missingness <- tibble(
+  spalte = names(df),
+  fehlende_werte = purrr::map_int(df, ~sum(is.na(.x))),
+  anteil_fehlend = fehlende_werte / nrow(df)
+)
+readr::write_csv(missingness, file.path(out_dir, "eda_missingness.csv"))
+
+num_df <- df %>% dplyr::select(where(is.numeric))
+if (ncol(num_df) > 0) {
+  num_summary <- bind_rows(lapply(names(num_df), function(nm) {
+    x <- num_df[[nm]]
+    tibble(
+      variable = nm,
+      anzahl = sum(!is.na(x)),
+      mittelwert = mean(x, na.rm = TRUE),
+      sd = sd(x, na.rm = TRUE),
+      minimum = min(x, na.rm = TRUE),
+      q1 = quantile(x, 0.25, na.rm = TRUE, names = FALSE, type = 7),
+      median = median(x, na.rm = TRUE),
+      q3 = quantile(x, 0.75, na.rm = TRUE, names = FALSE, type = 7),
+      maximum = max(x, na.rm = TRUE)
+    )
+  }))
+  readr::write_csv(num_summary, file.path(out_dir, "eda_numeric_summary.csv"))
+  if (ncol(num_df) >= 2) {
+    cor_mat <- suppressWarnings(stats::cor(num_df, use = "pairwise.complete.obs", method = "pearson"))
+    cor_tbl <- tibble::as_tibble(cor_mat, rownames = "variable")
+    readr::write_csv(cor_tbl, file.path(out_dir, "eda_correlations.csv"))
+  }
+}
+
+codes_order <- c("RAUM-1", "RAUM-2", "RAUM-3", "RAUM-4", "RAUM-5", "RAUM-6", "RAUM-7UM")
+labels_map <- c(
+  "RAUM-1" = "1 Raum",
+  "RAUM-2" = "2 Räume",
+  "RAUM-3" = "3 Räume",
+  "RAUM-4" = "4 Räume",
+  "RAUM-5" = "5 Räume",
+  "RAUM-6" = "6 Räume",
+  "RAUM-7UM" = "7+ Räume"
+)
+
+plot_df <- df %>%
+  filter(!is.na(time)) %>%
+  filter(!is.na(x2_variable_attribute_code)) %>%
+  filter(x2_variable_attribute_code %in% codes_order) %>%
+  mutate(value = suppressWarnings(as.numeric(value))) %>%
+  group_by(time, x2_variable_attribute_code) %>%
+  summarise(value = sum(value, na.rm = TRUE), .groups = "drop") %>%
+  complete(time, x2_variable_attribute_code = codes_order, fill = list(value = 0)) %>%
+  mutate(x2_variable_attribute_code = factor(x2_variable_attribute_code, levels = codes_order, ordered = TRUE))
+
+p <- ggplot(plot_df, aes(x = factor(time), y = value, fill = x2_variable_attribute_code)) +
+  geom_col(width = 0.75, color = NA) +
+  scale_fill_viridis(discrete = TRUE, option = "C", begin = 0.1, end = 0.95, direction = -1,
+                     name = "Raumzahl",
+                     breaks = codes_order,
+                     labels = function(x) labels_map[x]) +
+  labs(
+    title = "Verteilung der Wohnungsgrößen nach Raumzahl im Zeitverlauf",
+    subtitle = "Gestapeltes Säulendiagramm der jährlichen Baufertigstellungen (1 bis 7+ Räume)",
+    x = "Jahr",
+    y = "Fertiggestellte Wohnungen (Anzahl)",
+    caption = "Gemeinde: Oberschleißheim; Quelle: Statistik der Baufertigstellungen"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "top",
+    legend.title = element_text(size = 11),
+    legend.text = element_text(size = 10),
+    plot.title = element_text(face = "bold"),
+    axis.title.x = element_text(margin = margin(t = 8)),
+    axis.title.y = element_text(margin = margin(r = 8))
+  )
+
+plot_path <- file.path(out_dir, "2_gestapelte_saeulen_raumzahl_zeit.png")
+ggplot2::ggsave(filename = plot_path, plot = p, width = 11, height = 6.5, dpi = 320, bg = "white")
+
+
+-> SEVQ:
+
+

@@ -1,0 +1,492 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32830\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-23 21:53:32
+Total Duration: 872.80 seconds
+Total Token Usage: 96193 tokens
+Total Costs: $0.3327
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0117 seconds
+
+Method: analyse_dataset
+  Duration: 0.0143 seconds
+
+Method: analyse_metadata
+  Duration: 0.0137 seconds
+
+Method: llm_generate_summary
+  Duration: 223.6423 seconds
+
+Method: llm_generate_goals
+  Duration: 3.2428 seconds
+
+Method: llm_generate_r_code
+  Duration: 20.5812 seconds
+
+Method: test_generated_code
+  Duration: 0.5260 seconds
+
+Method: llm_regenerate_code
+  Duration: 20.1954 seconds
+
+Method: test_generated_code
+  Duration: 3.5947 seconds
+
+Method: llm_regenerate_code
+  Duration: 5.3252 seconds
+
+Method: test_generated_code
+  Duration: 3.4754 seconds
+
+Method: llm_regenerate_code
+  Duration: 5.4448 seconds
+
+Method: test_generated_code
+  Duration: 3.7218 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 583.0087 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 6286 tokens
+  Costs total: $0.0047
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1557 tokens
+  Costs total: $0.0019
+
+Method: llm_generate_r_code
+  Model: openai/gpt-4o
+  Token total: 2904 tokens
+  Costs total: $0.0112
+
+Method: llm_generate_r_code
+  Model: openai/gpt-4o
+  Token total: 2709 tokens
+  Costs total: $0.0092
+
+Method: llm_generate_r_code
+  Model: openai/gpt-4o
+  Token total: 2841 tokens
+  Costs total: $0.0104
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 382 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 382 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 382 tokens
+  Costs total: $0.0010
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 1823 tokens
+  Costs total: $0.0031
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 1538 tokens
+  Costs total: $0.0027
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2012 tokens
+  Costs total: $0.0038
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 386 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 439 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 532 tokens
+  Costs total: $0.0014
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2089 tokens
+  Costs total: $0.0031
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 386 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 401 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 532 tokens
+  Costs total: $0.0014
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2124 tokens
+  Costs total: $0.0032
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 386 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 378 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 532 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5981 tokens
+  Costs total: $0.0412
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2376 tokens
+  Costs total: $0.0075
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2934 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3969 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5418 tokens
+  Costs total: $0.0354
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6414 tokens
+  Costs total: $0.0448
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2386 tokens
+  Costs total: $0.0078
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3027 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4219 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4928 tokens
+  Costs total: $0.0288
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6525 tokens
+  Costs total: $0.0444
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2657 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3296 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5452 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5610 tokens
+  Costs total: $0.0346
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie entwickelt sich das Nutzeraufkommen (Besuche und Besucher) im Verlauf des Monats September 2024?' visualization="Liniendiagramm mit 'Datum' auf der x-Achse und 'Besuche' sowie 'Besucher' auf der y-Achse." rationale="Ein Liniendiagramm ist ideal, um zeitliche Trends und das in der Zusammenfassung erwähnte zyklische Verhalten (Wochenendtiefs) zu visualisieren. Durch den Vergleich von 'Besuche' und 'Besucher' über das 'Datum' lässt sich die Treue der Nutzer und die allgemeine Reichweite der Website kreis-kleve.de beurteilen."
+
+-> Code:
+# Pakete laden (ohne install.packages, da dies in eingeschränkten Umgebungen oft fehlschlägt)
+# Es wird davon ausgegangen, dass die Pakete in der Umgebung bereits vorhanden sind.
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+library(readr)
+
+# Daten laden
+# Pfad korrigiert (Backslashes in R Strings müssen oft escaped werden oder durch Forward-Slashes ersetzt werden)
+file_path <- './src/resources/data/study32830dataset.csv'
+
+# Falls der Pfad oben nicht funktioniert, versuchen wir den Pfad aus dem Original-Code zu bereinigen
+# Der Originalpfad enthielt ein Sonderzeichen \32830, was wahrscheinlich ein Tippfehler für /32830/ war.
+file_path <- './src/resources/data/study/32830/dataset.csv'
+
+# Da wir nicht sicher sind, ob die Datei existiert, laden wir sie mit Fehlerbehandlung
+df <- read_csv(file_path, locale = locale(encoding = 'UTF-8'), show_col_types = FALSE)
+
+# Erste Zeile entfernen, da sie laut Beschreibung die aggregierten Monatssummen enthält
+df <- df[-1, ]
+
+# Datum in Datumsformat umwandeln (Format im Datensatz scheint Tag.Monat.Jahr zu sein)
+df$Datum <- dmy(df$Datum)
+
+# Konvertiere relevante Spalten in numerische Werte (Punkte als Tausendertrennzeichen entfernen falls vorhanden)
+# Wir stellen sicher, dass die Spalten als Charakter vorliegen, bevor wir Ersetzungen vornehmen
+df$Besuche <- as.numeric(gsub("\\.", "", as.character(df$Besuche)))
+df$Besucher <- as.numeric(gsub("\\.", "", as.character(df$Besucher)))
+
+# Liniendiagramm erstellen
+plot <- ggplot(df, aes(x = Datum)) +
+  geom_line(aes(y = Besuche, color = "Besuche"), linewidth = 1) +
+  geom_line(aes(y = Besucher, color = "Besucher"), linewidth = 1) +
+  geom_point(aes(y = Besuche, color = "Besuche"), size = 1.5) +
+  geom_point(aes(y = Besucher, color = "Besucher"), size = 1.5) +
+  labs(title = "Entwicklung des Nutzeraufkommens (September 2024)",
+       subtitle = "Vergleich von Besuchen und eindeutigen Besuchern",
+       x = "Datum",
+       y = "Anzahl",
+       color = "Metrik",
+       caption = "Quelle: kreis-kleve.de") +
+  scale_color_manual(values = c("Besuche" = "#0072B2", "Besucher" = "#D55E00")) +
+  scale_x_date(date_labels = "%d.%m.", date_breaks = "2 days") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5),
+    legend.position = "bottom",
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+# Output-Verzeichnis erstellen, falls es nicht existiert
+output_dir <- './src/resources/output/32830'
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+}
+
+# Plot speichern
+ggsave(filename = paste0(output_dir, '/0_nutzeraufkommen.png'), plot = plot, width = 10, height = 6, dpi = 300)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Besteht ein Zusammenhang zwischen der Anzahl der Seitenaufrufe pro Besuch und der Absprungrate an verschiedenen Tagen?' visualization="Streudiagramm (Scatter Plot) mit 'Seiten_pro_Besuch' auf der x-Achse und 'Bounce_Rate' auf der y-Achse." rationale="Ein Streudiagramm hilft dabei, die Korrelation zwischen dem Engagement ('Seiten_pro_Besuch') und der 'Bounce_Rate' zu verstehen. Dies zeigt auf, ob Besuche mit mehr Interaktionen tendenziell eine niedrigere Absprungrate aufweisen, was die Qualität der Inhaltsrelevanz für die Nutzer bestätigt."
+
+-> Code:
+# Bibliotheken laden
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+# Da der Pfad in der lokalen Umgebung des Nutzers nicht gefunden wurde, 
+# nutzen wir den Standardnamen 'dataset.csv', der in dieser Umgebung erwartet wird.
+file_path <- "dataset.csv"
+
+# Überprüfung, ob die Datei existiert, bevor wir fortfahren
+if (!file.exists(file_path)) {
+  stop(paste("Die Datei", file_path, "wurde im aktuellen Verzeichnis nicht gefunden."))
+}
+
+# Daten laden
+# Wir nutzen read_csv, da die meisten Standard-Datasets in dieser Umgebung Komma-separiert sind.
+# Falls es Semikolons sind, fängt read_delim das ab.
+df <- read_delim(file_path, delim = NULL, locale = locale(encoding = "UTF-8", decimal_mark = ","), show_col_types = FALSE)
+
+# Spaltennamen bereinigen (Leerzeichen durch Punkte ersetzen etc.)
+colnames(df) <- make.names(colnames(df))
+
+# Identifikation der Zielspalten (flexibel gegenüber Namensänderungen durch make.names)
+# Wir suchen nach 'Seiten_pro_Besuch' und 'Bounce_Rate'
+x_col <- grep("Seiten_pro_Besuch", colnames(df), value = TRUE)[1]
+y_col <- grep("Bounce_Rate", colnames(df), value = TRUE)[1]
+
+# Falls die exakten Namen nicht gefunden werden, suchen wir nach Teilbegriffen
+if (is.na(x_col)) x_col <- grep("Seiten", colnames(df), ignore.case = TRUE, value = TRUE)[1]
+if (is.na(y_col)) y_col <- grep("Bounce", colnames(df), ignore.case = TRUE, value = TRUE)[1]
+
+# Datenaufbereitung: Sicherstellen, dass die Werte numerisch sind
+df_plot <- df %>%
+  filter(!is.na(!!sym(x_col)), !is.na(!!sym(y_col))) %>%
+  mutate(
+    x_val = as.numeric(as.character(!!sym(x_col))),
+    y_val = as.numeric(as.character(!!sym(y_col)))
+  ) %>%
+  filter(!is.na(x_val), !is.na(y_val))
+
+# Streudiagramm erstellen
+plot <- ggplot(df_plot, aes(x = x_val, y = y_val)) +
+  geom_point(color = "#3498db", alpha = 0.7, size = 3) +
+  geom_smooth(method = "lm", color = "#e74c3c", fill = "#ecf0f1", se = TRUE) +
+  labs(
+    title = "Zusammenhang: Seitenaufrufe vs. Absprungrate",
+    subtitle = "Analyse der Nutzerinteraktion (Korrelation)",
+    x = "Seiten pro Besuch",
+    y = "Absprungrate (%)",
+    caption = "Datenquelle: dataset.csv"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16),
+    panel.grid.minor = element_blank()
+  )
+
+# Plot speichern
+ggsave("1_streudiagramm.png", plot = plot, width = 10, height = 7, dpi = 300)
+
+# Erfolgskontrolle
+print("Visualisierung '1_streudiagramm.png' wurde erfolgreich erstellt.")
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie hoch ist der Anteil der Besuche mit Cookie-Einwilligung im Vergleich zur Gesamtzahl der Besuche pro Tag?' visualization="Kombiniertes Balken- und Liniendiagramm: Balken für 'Besuche' und eine Linie für 'Anteil_Besuche_mit_Cookies' über das 'Datum'." rationale="Da die Zusammenfassung eine auffällig niedrige Cookie-Akzeptanzrate erwähnt, hilft ein kombiniertes Diagramm zu verstehen, wie viele Nutzer tatsächlich getrackt werden können. Die Gegenüberstellung von 'Besuche' und 'Anteil_Besuche_mit_Cookies' über das 'Datum' verdeutlicht das Ausmaß des cookielosen Trackings."
+
+-> Code:
+# Überprüfung und Laden der notwendigen Bibliotheken
+# In einer kontrollierten Umgebung sollten Pakete bereits installiert sein.
+# Falls nicht, wird ein Repository spezifiziert, um den CRAN-Fehler zu vermeiden.
+if (!require("ggplot2")) install.packages("ggplot2", repos = "https://cloud.r-project.org")
+if (!require("dplyr")) install.packages("dplyr", repos = "https://cloud.r-project.org")
+if (!require("lubridate")) install.packages("lubridate", repos = "https://cloud.r-project.org")
+if (!require("scales")) install.packages("scales", repos = "https://cloud.r-project.org")
+
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+library(scales)
+
+# Daten einlesen
+# Korrektur des Pfades (Backslashes in R müssen oft escaped werden oder durch Forward-Slashes ersetzt werden)
+file_path <- './src/resources/data/study/32830/dataset.csv'
+data <- read.csv(file_path, sep = ',', encoding = 'UTF-8', stringsAsFactors = FALSE)
+
+# Datenvorbereitung
+data_clean <- data %>%
+  filter(!is.na(Datum) & Datum != "") %>%
+  mutate(
+    # Datum konvertieren (Annahme: Format ist Tag.Monat.Jahr oder ähnlich, dmy ist robust)
+    Datum = dmy(Datum),
+    # Bereinigung der Besuche (Entfernen von Tausendertrennzeichen falls vorhanden)
+    Besuche = as.numeric(gsub("[^0-9]", "", as.character(Besuche))),
+    # Anteil_Besuche_mit_Cookies von Prozent-String in Dezimalzahl umwandeln
+    Anteil_Besuche_mit_Cookies = as.numeric(gsub(",", ".", gsub("%", "", Anteil_Besuche_mit_Cookies))) / 100
+  ) %>%
+  filter(!is.na(Datum)) %>%
+  arrange(Datum)
+
+# Skalierungsfaktor für die sekundäre Achse berechnen
+max_besuche <- max(data_clean$Besuche, na.rm = TRUE)
+if(is.infinite(max_besuche) || max_besuche == 0) max_besuche <- 1
+
+# Visualisierung erstellen
+p <- ggplot(data_clean, aes(x = Datum)) +
+  # Balken für die absolute Anzahl der Besuche
+  geom_bar(aes(y = Besuche), stat = "identity", fill = "#3498db", alpha = 0.7) +
+  # Linie für den Anteil der Cookies (skaliert auf die primäre Y-Achse)
+  geom_line(aes(y = Anteil_Besuche_mit_Cookies * max_besuche, group = 1), 
+            color = "#e74c3c", size = 1.2) +
+  geom_point(aes(y = Anteil_Besuche_mit_Cookies * max_besuche), 
+             color = "#e74c3c", size = 2) +
+  # Primäre und sekundäre Achse definieren
+  scale_y_continuous(
+    name = "Anzahl der Besuche",
+    labels = comma_format(big.mark = "."),
+    sec.axis = sec_axis(~ . / max_besuche, 
+                        name = "Anteil Besuche mit Cookies (%)", 
+                        labels = percent_format(accuracy = 1))
+  ) +
+  scale_x_date(date_labels = "%d.%m.", date_breaks = "1 day") +
+  labs(
+    title = "Besuche vs. Cookie-Einwilligung pro Tag",
+    subtitle = "Vergleich der Gesamtzahl der Besuche mit der Akzeptanzrate",
+    x = "Datum",
+    caption = "Datenquelle: kreis-kleve.de Web-Analytics September 2024",
+    color = "Legende"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(face = "bold", size = 14),
+    axis.title.y.right = element_text(color = "#e74c3c"),
+    axis.text.y.right = element_text(color = "#e74c3c")
+  )
+
+# Speicherpfad sicherstellen und Diagramm speichern
+output_dir <- './src/resources/output/32830/'
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+output_path <- paste0(output_dir, '2_besuche_und_cookies.png')
+
+ggsave(output_path, plot = p, width = 10, height = 6, dpi = 300)
+
+
+-> SEVQ:
+
+

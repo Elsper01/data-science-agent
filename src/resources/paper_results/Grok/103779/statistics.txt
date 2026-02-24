@@ -1,0 +1,446 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\103779\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-23 23:30:32
+Total Duration: 870.40 seconds
+Total Token Usage: 102266 tokens
+Total Costs: $0.3041
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 2
+  - Exactly One Visualization: 1 / 3 = (33.33%)
+  - One or More Visualization: 1 / 3 =  (33.33%)
+VER for generation attempt #1:
+  - No Visualization: 2
+  - Exactly One Visualization: 1 / 3 = (33.33%)
+  - One or More Visualization: 1 / 3 =  (33.33%)
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0097 seconds
+
+Method: analyse_dataset
+  Duration: 0.0080 seconds
+
+Method: analyse_metadata
+  Duration: 0.0239 seconds
+
+Method: llm_generate_summary
+  Duration: 225.4089 seconds
+
+Method: llm_generate_goals
+  Duration: 3.8715 seconds
+
+Method: llm_generate_r_code
+  Duration: 46.3850 seconds
+
+Method: test_generated_code
+  Duration: 17.3862 seconds
+
+Method: llm_regenerate_code
+  Duration: 11.7376 seconds
+
+Method: test_generated_code
+  Duration: 8.7422 seconds
+
+Method: llm_regenerate_code
+  Duration: 9.1176 seconds
+
+Method: test_generated_code
+  Duration: 6.0609 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 541.6503 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 8168 tokens
+  Costs total: $0.0068
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1954 tokens
+  Costs total: $0.0021
+
+Method: llm_generate_r_code
+  Model: x-ai/grok-4.1-fast
+  Token total: 5015 tokens
+  Costs total: $0.0015
+
+Method: llm_generate_r_code
+  Model: x-ai/grok-4.1-fast
+  Token total: 5059 tokens
+  Costs total: $0.0015
+
+Method: llm_generate_r_code
+  Model: x-ai/grok-4.1-fast
+  Token total: 5520 tokens
+  Costs total: $0.0017
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 720 tokens
+  Costs total: $0.0019
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 616 tokens
+  Costs total: $0.0016
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 640 tokens
+  Costs total: $0.0017
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 1965 tokens
+  Costs total: $0.0028
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2455 tokens
+  Costs total: $0.0037
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 437 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 449 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 727 tokens
+  Costs total: $0.0019
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 1600 tokens
+  Costs total: $0.0024
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 1960 tokens
+  Costs total: $0.0028
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 354 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 380 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 727 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6072 tokens
+  Costs total: $0.0453
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2142 tokens
+  Costs total: $0.0081
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2704 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4040 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4492 tokens
+  Costs total: $0.0257
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6766 tokens
+  Costs total: $0.0503
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2228 tokens
+  Costs total: $0.0071
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2833 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5108 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 4586 tokens
+  Costs total: $0.0259
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6964 tokens
+  Costs total: $0.0511
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2461 tokens
+  Costs total: $0.0074
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3070 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4743 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5311 tokens
+  Costs total: $0.0318
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verteilen sich die Kulturdenkmale auf die verschiedenen Gemeinden im Kreis Segeberg?' visualization="Ein horizontales Balkendiagramm, das die Häufigkeit der Einträge pro 'Gemeinde' darstellt." rationale="Ein Balkendiagramm der Spalte 'Gemeinde' ermöglicht es dem Nutzer, sofort zu erkennen, welche Orte (wie z.B. 'Bad Segeberg, Stadt') die höchste Dichte an Denkmalen aufweisen. Dies hilft bei der geografischen Einordnung des Datensatzes und zeigt regionale Schwerpunkte der Denkmalpflege auf."
+
+-> Code:
+# Um Versionskonflikte mit 'rlang' und 'tidyverse' zu vermeiden, 
+# laden wir nur die spezifisch benötigten Pakete einzeln.
+# Falls Pakete fehlen oder veraltet sind, wird hier versucht, sie zu laden.
+
+if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
+if (!requireNamespace("dplyr", quietly = TRUE)) install.packages("dplyr")
+
+library(ggplot2)
+library(dplyr)
+
+# Verzeichnis erstellen
+output_dir <- "./src/resources/output/103779"
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+}
+
+# Daten laden
+file_path <- "./src/resources/data/study/103779/dataset.csv"
+if (file.exists(file_path)) {
+  df <- read.csv(file_path, sep = ",", fileEncoding = "UTF-8", stringsAsFactors = FALSE)
+  
+  # Daten aufbereiten: Zählung pro Gemeinde
+  gemeinde_count <- df %>%
+    filter(!is.na(Gemeinde) & Gemeinde != "") %>%
+    group_by(Gemeinde) %>%
+    summarise(Anzahl = n(), .groups = 'drop') %>%
+    arrange(desc(Anzahl))
+
+  # Visualisierung erstellen
+  p <- ggplot(gemeinde_count, aes(y = reorder(Gemeinde, Anzahl), x = Anzahl)) +
+    geom_col(fill = "#1f77b4", alpha = 0.8) +
+    geom_text(aes(label = Anzahl), hjust = -0.2, size = 3) +
+    labs(
+      title = "Verteilung der Kulturdenkmale im Kreis Segeberg",
+      subtitle = "Anzahl der Einträge pro Gemeinde",
+      x = "Anzahl der Kulturdenkmale",
+      y = "Gemeinde"
+    ) +
+    theme_minimal(base_size = 11) +
+    theme(
+      plot.title = element_text(face = "bold", size = 14),
+      axis.text.y = element_text(size = 8),
+      panel.grid.major.y = element_blank(),
+      plot.background = element_rect(fill = "white", color = NA)
+    )
+
+  # Speichern des Diagramms
+  ggsave(file.path(output_dir, "0_gemeinde_verteilung.png"), 
+         plot = p, width = 10, height = 12, dpi = 300)
+  
+} else {
+  stop("Datensatz nicht gefunden.")
+}
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Welche Arten von Kulturdenkmalen sind im Kreis am häufigsten vertreten?' visualization="Ein Balkendiagramm, das die Anzahl der Objekte für jeden 'Kulturdenkmaltyp' zeigt." rationale="Durch die Visualisierung der Spalte 'Kulturdenkmaltyp' wird deutlich, ob der Datensatz primär aus 'Baulichen Anlagen', 'Sachgesamtheiten' oder 'Gründenkmalen' besteht. Ein Balkendiagramm ist hier die beste Wahl, um die Dominanz der baulichen Anlagen (ca. 76 %) im Vergleich zu den selteneren Kategorien quantitativ darzustellen."
+
+-> Code:
+# Pakete laden
+if (!require(ggplot2)) install.packages("ggplot2", repos = "https://cran.rstudio.com/")
+library(ggplot2)
+if (!require(dplyr)) install.packages("dplyr", repos = "https://cran.rstudio.com/")
+library(dplyr)
+
+# Verzeichnisse und Daten laden
+output_dir <- "./src/resources/output/103779"
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+data_path <- "./src/resources/data/study/103779/dataset.csv"
+
+# Sicherstellen, dass die Datei existiert, bevor sie gelesen wird
+if (file.exists(data_path)) {
+  # Fehlerbehebung: read.csv in älteren R-Versionen unterstützt 'fileEncoding' (großes E) statt 'file.encoding'
+  # Oder wir nutzen die Standard-Systemkodierung, falls UTF-8 Probleme bereitet.
+  df <- read.csv(data_path, sep = ",", stringsAsFactors = FALSE, na.strings = c("", "NA", "nan"))
+
+  # Daten für die Visualisierung vorbereiten
+  # Wir filtern NAs und zählen die Häufigkeit pro Typ
+  count_data <- df %>%
+    filter(!is.na(Kulturdenkmaltyp)) %>%
+    group_by(Kulturdenkmaltyp) %>%
+    summarise(Anzahl = n(), .groups = "drop") %>%
+    arrange(desc(Anzahl))
+
+  # Erstellung des Balkendiagramms
+  p <- ggplot(count_data, aes(x = reorder(Kulturdenkmaltyp, Anzahl), y = Anzahl)) +
+    geom_bar(stat = "identity", fill = "#1f77b4", alpha = 0.8) +
+    coord_flip() + # Horizontale Balken für bessere Lesbarkeit der Typen
+    labs(
+      title = "Häufigste Arten von Kulturdenkmalen",
+      subtitle = "Kreis Segeberg, Stand Frühjahr 2021",
+      x = "Kulturdenkmaltyp",
+      y = "Anzahl der Objekte"
+    ) +
+    theme_minimal(base_size = 12) +
+    theme(
+      plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+      plot.subtitle = element_text(hjust = 0.5, size = 12),
+      panel.grid.minor = element_blank(),
+      axis.text.y = element_text(size = 11),
+      axis.title = element_text(size = 12)
+    )
+
+  # Speichern der Visualisierung
+  ggsave(filename = "1_kulturdenkmaltyp_anzahl.png", plot = p, path = output_dir, width = 10, height = 6, dpi = 300, bg = "white")
+} else {
+  warning(paste("Datei nicht gefunden:", data_path))
+}
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question="Wie hoch ist der Anteil der Denkmale, die noch als 'Alteintragung' markiert sind und aktualisiert werden müssen?" visualization="Ein Balkendiagramm (oder gestapeltes Balkendiagramm), das die Anzahl der 'Alteintragung (Aktualisierung vorgesehen)' gegenüber anderen individuellen Texten in der Spalte 'Beschreibung' kontrastiert." rationale="Die Spalte 'Beschreibung' enthält bei ca. 50 % der Daten den Wert 'Alteintragung (Aktualisierung vorgesehen)'. Eine Visualisierung dieses Status (Alteintragung vs. spezifische Beschreibung) gibt dem Nutzer eine wichtige Information über die Datenqualität und die Aktualität des Informationsstandes der Denkmalliste."
+
+-> Code:
+# Da es Probleme mit Paket-Abhängigkeiten (rlang, vroom) und Schreibrechten (LOCK-Files) gab,
+# nutzen wir eine robustere Methode zum Laden der Daten und vermeiden Neuinstallationen,
+# falls die Pakete bereits vorhanden sind. Wir nutzen base R für das Einlesen, falls readr scheitert.
+
+# Funktion zum sicheren Laden von Paketen
+load_pkg <- function(pkg) {
+  if (!require(pkg, character.only = TRUE)) {
+    # Falls Installation fehlschlägt (z.B. wegen Lock-Files), wird das Skript nicht hart abgebrochen
+    try(install.packages(pkg, repos = 'https://cran.rstudio.com/'), silent = TRUE)
+    library(pkg, character.only = TRUE)
+  }
+}
+
+load_pkg('dplyr')
+load_pkg('ggplot2')
+load_pkg('scales')
+
+# Daten einlesen mit Base R als Fallback für readr/vroom Probleme
+file_path <- './src/resources/data/study/103779/dataset.csv'
+df <- tryCatch({
+  if (require('readr')) {
+    readr::read_csv(file_path, locale = readr::locale(encoding = 'UTF-8'))
+  } else {
+    read.csv(file_path, fileEncoding = 'UTF-8', stringsAsFactors = FALSE)
+  }
+}, error = function(e) {
+  read.csv(file_path, stringsAsFactors = FALSE)
+})
+
+# Verzeichnis erstellen
+dir.create('./src/resources/output/103779', recursive = TRUE, showWarnings = FALSE)
+
+# Daten transformieren
+# Wir gruppieren in "Alteintragung" und "Spezifische Beschreibung"
+beschreibung_counts <- df %>%
+  mutate(
+    Kategorie = ifelse(Beschreibung == 'Alteintragung (Aktualisierung vorgesehen)', 
+                       'Alteintragung\n(Aktualisierung vorgesehen)', 
+                       'Spezifische Beschreibung\n(Aktuell/Individuell)')
+  ) %>%
+  group_by(Kategorie) %>%
+  summarise(Anzahl = n(), .groups = 'drop') %>%
+  mutate(Anteil = Anzahl / sum(Anzahl))
+
+# Visualisierung erstellen
+p <- ggplot(beschreibung_counts, aes(x = Kategorie, y = Anzahl, fill = Kategorie)) +
+  geom_col(alpha = 0.85, width = 0.6, color = "white", size = 0.5) +
+  geom_text(aes(label = paste0(Anzahl, "\n(", percent(Anteil, accuracy = 0.1), ")")), 
+            vjust = -0.2, size = 4.5, fontface = "bold") +
+  scale_fill_manual(values = c(
+    'Alteintragung\n(Aktualisierung vorgesehen)' = '#E74C3C', 
+    'Spezifische Beschreibung\n(Aktuell/Individuell)' = '#2ECC71'
+  )) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15)), labels = comma) +
+  labs(
+    title = 'Datenqualität: Anteil der Alteintragungen',
+    subtitle = 'Vergleich von pauschalen Alteintragungen zu spezifischen Denkmalbeschreibungen',
+    x = NULL,
+    y = 'Anzahl der Denkmale',
+    caption = 'Datenquelle: Denkmalliste'
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = 'bold', size = 16),
+    plot.subtitle = element_text(size = 12, color = "gray30"),
+    axis.text.x = element_text(face = "bold"),
+    legend.position = 'none',
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+# Speichern des Diagramms
+ggsave('./src/resources/output/103779/2_anteil_alteintragungen_beschreibung.png', 
+       plot = p, width = 10, height = 7, dpi = 300, bg = 'white')
+
+
+-> SEVQ:
+
+

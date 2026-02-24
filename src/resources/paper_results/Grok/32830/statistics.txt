@@ -1,0 +1,448 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32830\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-23 23:31:00
+Total Duration: 899.88 seconds
+Total Token Usage: 104791 tokens
+Total Costs: $0.3016
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0080 seconds
+
+Method: analyse_dataset
+  Duration: 0.0103 seconds
+
+Method: analyse_metadata
+  Duration: 0.0145 seconds
+
+Method: llm_generate_summary
+  Duration: 208.5586 seconds
+
+Method: llm_generate_goals
+  Duration: 3.9186 seconds
+
+Method: llm_generate_r_code
+  Duration: 54.7482 seconds
+
+Method: test_generated_code
+  Duration: 44.2426 seconds
+
+Method: llm_regenerate_code
+  Duration: 22.4988 seconds
+
+Method: test_generated_code
+  Duration: 6.4996 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 559.3800 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 6858 tokens
+  Costs total: $0.0064
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 2368 tokens
+  Costs total: $0.0024
+
+Method: llm_generate_r_code
+  Model: x-ai/grok-4.1-fast
+  Token total: 4573 tokens
+  Costs total: $0.0014
+
+Method: llm_generate_r_code
+  Model: x-ai/grok-4.1-fast
+  Token total: 5072 tokens
+  Costs total: $0.0016
+
+Method: llm_generate_r_code
+  Model: x-ai/grok-4.1-fast
+  Token total: 6084 tokens
+  Costs total: $0.0021
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 935 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1001 tokens
+  Costs total: $0.0026
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1061 tokens
+  Costs total: $0.0027
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2412 tokens
+  Costs total: $0.0032
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 2509 tokens
+  Costs total: $0.0033
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3709 tokens
+  Costs total: $0.0051
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 478 tokens
+  Costs total: $0.0013
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 367 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 420 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6446 tokens
+  Costs total: $0.0463
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2339 tokens
+  Costs total: $0.0075
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2990 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4210 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5914 tokens
+  Costs total: $0.0329
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 4725 tokens
+  Costs total: $0.0288
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2429 tokens
+  Costs total: $0.0081
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2552 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4542 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 7206 tokens
+  Costs total: $0.0377
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7428 tokens
+  Costs total: $0.0524
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2790 tokens
+  Costs total: $0.0088
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3158 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4763 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5452 tokens
+  Costs total: $0.0302
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie entwickeln sich die Zugriffszahlen im Verlauf des Monats September 2024?' visualization="Liniendiagramm mit 'Datum' auf der x-Achse und 'Besuche' sowie 'Besucher' auf der y-Achse." rationale="Ein Liniendiagramm ist ideal, um zeitliche Trends darzustellen. Durch die Verwendung von 'Datum' auf der x-Achse und 'Besuche' sowie 'Besucher' auf der y-Achse kann der Nutzer sofort das typische Wellenmuster (Werktage vs. Wochenenden) erkennen, das in der Zusammenfassung beschrieben wurde. Die Summenzeile (Datum=nan) muss hierbei gefiltert werden."
+
+-> Code:
+# Da die Installation von Paketen in der Umgebung zu Berechtigungsproblemen führt (rlang.dll),
+# setzen wir voraus, dass die Standardbibliotheken bereits vorhanden sind oder 
+# nutzen die bereits geladenen Versionen. Wir entfernen den install.packages Aufruf.
+
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+
+# Verzeichnis erstellen
+output_dir <- "./src/resources/output/32830"
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+}
+
+# Daten laden
+file_path <- "./src/resources/data/study/32830/dataset.csv"
+df <- read.csv(file_path, sep = ",", fileEncoding = "UTF-8", stringsAsFactors = FALSE, na.strings = c("", "NA", "nan"))
+
+# Datenbereinigung: Summenzeile (Datum=nan) und NAs entfernen
+df_clean <- df %>%
+  filter(!is.na(Datum) & Datum != "nan") %>%
+  mutate(
+    Datum = as.Date(Datum, format = "%d.%m.%Y"),
+    Besuche = as.numeric(gsub("\\.", "", Besuche)), # Falls Tausendertrennpunkte vorhanden sind
+    Besucher = as.numeric(gsub("\\.", "", Besucher))
+  ) %>%
+  arrange(Datum)
+
+# Konsolenausgabe zur Überprüfung
+cat("Zusammenfassung der bereinigten Daten:\n")
+print(summary(df_clean[, c("Besuche", "Besucher")]))
+
+# Visualisierung erstellen
+p <- ggplot(df_clean, aes(x = Datum)) +
+  geom_line(aes(y = Besuche, color = "Besuche"), linewidth = 1.2) +
+  geom_point(aes(y = Besuche, color = "Besuche"), size = 2) +
+  geom_line(aes(y = Besucher, color = "Besucher"), linewidth = 1.2) +
+  geom_point(aes(y = Besucher, color = "Besucher"), size = 2) +
+  scale_x_date(date_labels = "%d.%m.", date_breaks = "2 days") +
+  labs(
+    title = "Entwicklung der Zugriffszahlen im September 2024",
+    subtitle = "Vergleich von Besuchen und Besuchern (Wochenend-Zyklen erkennbar)",
+    x = "Datum",
+    y = "Anzahl",
+    color = "Metrik"
+  ) +
+  scale_color_manual(values = c("Besuche" = "#1f77b4", "Besucher" = "#ff7f0e")) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5, size = 12),
+    legend.position = "top",
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(angle = 45, vjust = 0.5)
+  )
+
+# Speichern des Diagramms
+ggsave(file.path(output_dir, "0_Zugriffsentwicklung.png"), 
+       plot = p, width = 12, height = 6, dpi = 300, bg = "white")
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Besteht ein Zusammenhang zwischen der Anzahl der Seiten pro Besuch und der Absprungrate?' visualization="Streudiagramm (Scatter Plot) mit 'Seiten_pro_Besuch' auf der x-Achse und 'Bounce_Rate' auf der y-Achse." rationale="Ein Streudiagramm (Scatter Plot) verdeutlicht die Korrelation zwischen der Engagement-Tiefe ('Seiten_pro_Besuch') und der 'Bounce_Rate'. Laut Zusammenfassung korrelieren höhere Seitenaufrufe oft mit niedrigeren Absprungraten. Diese Visualisierung hilft zu verstehen, ob Besucher, die tiefer in die Website einsteigen, seltener sofort abspringen."
+
+-> Code:
+# Das Problem im vorherigen Lauf war ein Versionskonflikt von 'rlang' und gesperrte Dateien (Permission denied).
+# In einer automatisierten Umgebung versuchen wir, die Bibliotheken zu laden, ohne sie neu zu installieren, 
+# da die Installation von Binärdateien oft an Dateisperren scheitert.
+# Wir setzen zudem voraus, dass die Basis-Pakete vorhanden sind oder nutzen Standard-R Funktionen, falls möglich.
+
+library(ggplot2)
+library(dplyr)
+
+# Daten einlesen
+file_path <- './src/resources/data/study/32830/dataset.csv'
+df <- read.csv(file_path, sep = ',', fileEncoding = 'UTF-8', stringsAsFactors = FALSE)
+
+# Vorverarbeitung:
+# Die erste Zeile (Index 1) scheint laut vorherigem Code Metadaten oder Summen zu enthalten, daher entfernen.
+df_clean <- df[-1, ]
+
+# Konvertierung der Spalten in numerische Werte
+# Bounce_Rate enthält oft ein '%' Zeichen
+df_clean$Bounce_Rate_num <- as.numeric(gsub('%', '', df_clean$Bounce_Rate))
+df_clean$Seiten_pro_Besuch <- as.numeric(df_clean$Seiten_pro_Besuch)
+
+# Entfernen von NAs für die Korrelationsberechnung und Visualisierung
+df_plot <- df_clean %>%
+  filter(!is.na(Seiten_pro_Besuch), !is.na(Bounce_Rate_num))
+
+# Korrelation berechnen
+cor_val <- cor(df_plot$Seiten_pro_Besuch, df_plot$Bounce_Rate_num, use = 'complete.obs')
+
+# Ausgabeverzeichnis erstellen
+output_dir <- './src/resources/output/32830'
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+}
+
+# Visualisierung erstellen
+p <- ggplot(df_plot, aes(x = Seiten_pro_Besuch, y = Bounce_Rate_num)) +
+  geom_point(size = 3, alpha = 0.6, color = '#2c3e50') +
+  geom_smooth(method = 'lm', se = TRUE, color = '#e74c3c', fill = '#ecf0f1') +
+  annotate('text', 
+           x = Inf, y = Inf, 
+           label = paste('Korrelation:', round(cor_val, 3)), 
+           hjust = 1.1, vjust = 1.5, 
+           size = 5, fontface = 'bold', color = '#c0392b') +
+  labs(title = 'Zusammenhang: Seiten pro Besuch vs. Absprungrate',
+       subtitle = 'Analyse der Engagement-Tiefe (Daten: kreis-kleve.de)',
+       x = 'Seiten pro Besuch',
+       y = 'Absprungrate (Bounce Rate in %)',
+       caption = 'Datenquelle: dataset.csv') +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_text(hjust = 0.5, face = 'bold'),
+        plot.subtitle = element_text(hjust = 0.5),
+        panel.grid.minor = element_blank())
+
+# Speichern des Diagramms
+ggsave(filename = paste0(output_dir, '/1_scatter_seiten_bounce.png'), 
+       plot = p, 
+       width = 10, 
+       height = 7, 
+       dpi = 300, 
+       bg = 'white')
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie hoch ist das tägliche Engagement gemessen an den Seitenaufrufen im Vergleich zur Verweildauer?' visualization="Kombiniertes Balkendiagramm ('Seitenaufrufe') und Liniendiagramm ('Zeit_im_Besuch') über die Zeitachse 'Datum'." rationale="Ein kombiniertes Balken- und Liniendiagramm ermöglicht den Vergleich von Volumen ('Seitenaufrufe') und Qualität ('Zeit_im_Besuch') über den Zeitverlauf ('Datum'). Dies zeigt dem Nutzer, an welchen Tagen nicht nur viele Seiten aufgerufen wurden, sondern die Nutzer auch besonders viel Zeit auf der Website verbracht haben, was auf die Relevanz der Inhalte an diesen Tagen schließen lässt."
+
+-> Code:
+# Die Fehlermeldung deutet auf einen Konflikt mit dem Paket 'rlang' hin, das bereits geladen ist.
+# In vielen Umgebungen ist es besser, auf die explizite Installation zu verzichten, 
+# wenn die Pakete bereits vorhanden sind, oder die Bibliotheken direkt zu laden.
+# Wir versuchen, die Bibliotheken zu laden, ohne eine Neuinstallation zu erzwingen, 
+# da dies oft zu 'Permission Denied' Fehlern führt, wenn Dateien gesperrt sind.
+
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+library(scales)
+
+# Daten laden
+df <- read.csv('./src/resources/data/study/32830/dataset.csv', sep = ',', fileEncoding = 'UTF-8', stringsAsFactors = FALSE, na.strings = c('', 'NA', 'nan'))
+
+# Vorverarbeitung
+# Die erste Zeile enthält oft Summen/Gesamtwerte bei etracker-Exports, daher entfernen wir sie
+df_daily <- df[-1, ] %>% filter(!is.na(Datum))
+
+# Datum konvertieren (Format im Datensatz ist meist DD.MM.YYYY)
+df_daily$Datum <- dmy(df_daily$Datum)
+df_daily <- df_daily %>% arrange(Datum)
+
+# Numerische Konvertierung der Seitenaufrufe
+df_daily$Seitenaufrufe <- as.numeric(gsub('\\.', '', as.character(df_daily$Seitenaufrufe)))
+
+# Funktion zur Umwandlung von HH:MM:SS in Sekunden
+hms_to_seconds <- function(time_str) {
+  if (is.na(time_str) || time_str == '' || !grepl(':', time_str)) return(NA)
+  parts <- as.numeric(unlist(strsplit(time_str, ':')))
+  if (length(parts) == 3) {
+    return(parts[1] * 3600 + parts[2] * 60 + parts[3])
+  } else if (length(parts) == 2) {
+    return(parts[1] * 60 + parts[2])
+  } else {
+    return(NA)
+  }
+}
+
+df_daily$Zeit_im_Besuch_sec <- sapply(df_daily$Zeit_im_Besuch, hms_to_seconds)
+
+# Skalierungsfaktor für die sekundäre Achse berechnen
+max_seiten <- max(df_daily$Seitenaufrufe, na.rm = TRUE)
+max_zeit <- max(df_daily$Zeit_im_Besuch_sec, na.rm = TRUE)
+
+# Falls max_zeit 0 ist, um Division durch Null zu vermeiden
+if(max_zeit == 0 || is.na(max_zeit)) { scale_factor <- 1 } else { scale_factor <- max_seiten / max_zeit }
+
+df_daily$Zeit_scaled <- df_daily$Zeit_im_Besuch_sec * scale_factor
+
+# Visualisierung erstellen
+p <- ggplot(df_daily, aes(x = Datum)) +
+  # Balken für Seitenaufrufe
+  geom_col(aes(y = Seitenaufrufe, fill = 'Seitenaufrufe'), alpha = 0.7) +
+  # Linie für Zeit im Besuch
+  geom_line(aes(y = Zeit_scaled, color = 'Zeit im Besuch (Sek.)'), size = 1.2) +
+  geom_point(aes(y = Zeit_scaled, color = 'Zeit im Besuch (Sek.)'), size = 2.5) +
+  # Achsen-Konfiguration
+  scale_x_date(date_labels = '%d.%m.', date_breaks = '2 days') +
+  scale_y_continuous(
+    name = 'Seitenaufrufe',
+    sec.axis = sec_axis(~ . / scale_factor, name = 'Verweildauer (Sekunden)')
+  ) +
+  # Farben und Legende
+  scale_fill_manual(name = '', values = c('Seitenaufrufe' = '#2E86AB')) +
+  scale_color_manual(name = '', values = c('Zeit im Besuch (Sek.)' = '#A23B72')) +
+  labs(
+    title = 'Tägliches Engagement: Seitenaufrufe vs. Verweildauer',
+    subtitle = 'Vergleich von Quantität (Aufrufe) und Qualität (Zeit) im Zeitverlauf',
+    x = 'Datum',
+    caption = 'Datenquelle: etracker Export'
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = 'bottom',
+    plot.title = element_text(face = 'bold', size = 14),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    axis.title.y.right = element_text(color = '#A23B72'),
+    axis.text.y.right = element_text(color = '#A23B72'),
+    axis.title.y.left = element_text(color = '#2E86AB'),
+    axis.text.y.left = element_text(color = '#2E86AB')
+  )
+
+# Verzeichnis erstellen und Speichern
+dir.create('./src/resources/output/32830', recursive = TRUE, showWarnings = FALSE)
+ggsave('./src/resources/output/32830/2_taegliches_engagement.png', plot = p, width = 12, height = 7, dpi = 300, bg = 'white')
+
+
+-> SEVQ:
+
+

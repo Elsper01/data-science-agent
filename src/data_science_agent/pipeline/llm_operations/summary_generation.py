@@ -56,7 +56,7 @@ prompt: Prompt = Prompt(
                 The response format should be scientific. Speak understandably for laypeople, but still informative and behave as an expert.
                 Even an expert should benefit from the provided data and information.
                 Be certain about all statements and always refer to the dataset or other information provided by the prompt.
-        
+
                 The following data shall assist in the analysis:
                 - Columns: '{column_names}'
                 - Descriptions: '{descriptions}'

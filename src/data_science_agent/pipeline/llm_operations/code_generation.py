@@ -67,7 +67,7 @@ prompt: Prompt = Prompt(
                 Vorgaben für den Code:
                 - Der Code soll direkt ausführbar sein, ohne syntaktische Fehler.
                 - Alle Visualisierungen sollen optisch ansprechend, gut beschriftet (in Deutsch), lesbar und in PNG-Dateien gespeichert werden unter:
-                  `{output_path}{goal_index}_<plot_name>.png`
+                  `{output_path}/{goal_index}_<plot_name>.png`
                 - Wähle Diagrammtypen entsprechend der Hinweise im Visualisierungsziel.
                 - Führe auch kurze statistische Analysen durch, falls diese benötigt werden um das Visualisierungsziel zu erreichen. Beispiele für kurze, sinnvolle Analysen:
                   - Anteil fehlender Werte je Spalte,
@@ -142,10 +142,10 @@ prompt: Prompt = Prompt(
         "generate_code_python_lib_instruction": \
             "Use only the following libraries: pandas, numpy, matplotlib.pyplot, seaborn, geopandas, basemap and plotly.",
         "generate_code_r_lib_instruction": \
-            "Install and load all required packages at the beginning of the script (add install.packages/libraries).",
+            "Install and load all required package at the beginning of the script (add install.packages/libraries).",
         "generate_code_description_user_prompt": \
             """
-                You receive a summary of the dataset, an explanation of all columns, and the visualization goal to be implemented.
+                You receive a summary of the dataset, an explanation of all column, and the visualization goal to be implemented.
                 Your task is to generate code based on this information that performs an exploratory data analysis (EDA) and creates ONE appropriate visualization for the visualization goal.
                 The visualization goal must always be implemented.
 
@@ -166,17 +166,17 @@ prompt: Prompt = Prompt(
                 - Encoding: `'{dataset_encoding}'`
 
                 Specifications for the code:
-                - The code should be directly executable without syntax errors.
+                - The code should be directly executable without syntax error.
                 - All visualizations should be visually appealing, well labeled (in German), readable and saved as PNG files under:
-                  `{output_path}{goal_index}_<plot_name>.png`
-                - Choose chart types according to the hints in the visualization goal.
+                  `{output_path}/{goal_index}_<plot_name>.png`
+                - Choose chart types according to the hint in the visualization goal.
                 - Also perform short statistical analyses if needed to achieve the visualization goal. Examples of short, meaningful analyses:
-                  - Proportion of missing values per column,
-                  - Correlations of numerical variables,
-                  - Overview tables of central measures (mean, standard deviation, etc.).
-                - Use colors, labels and titles meaningfully:
+                  - Proportion of missing value per column,
+                  - Correlations of numerical variable,
+                  - Overview tables of central measure (mean, standard deviation, etc.).
+                - Use colors, label and titles meaningfully:
                   - Titles should describe what is shown (in German),
-                  - Legends and axis labels should not cut off any information,
+                  - Legends and axis label should not cut off any information,
                   - Label axes with units or appropriate scales.
                 - It should be considered and taken into account in all calculations and plots that missing values as well as string and boolean values are present in the dataset. Handle them accordingly.
                 - The returned code should be UTF-8 encoded.
@@ -196,17 +196,17 @@ prompt: Prompt = Prompt(
                 - Encoding: `'{dataset_encoding}'`
 
                 Specifications for the code:
-                - The code should be directly executable without syntax errors.
+                - The code should be directly executable without syntax error.
                 - All visualizations should be visually appealing, well labeled (in German), readable and saved as PNG files under:
                   `{output_path}/{goal_index}_<plot_name>.png`
-                - Choose chart types according to the hints in the visualization goal.
+                - Choose chart types according to the hint in the visualization goal.
                 - Also perform short statistical analyses if needed to achieve the visualization goal. Examples of short, meaningful analyses:
-                  - Proportion of missing values per column,
-                  - Correlations of numerical variables,
-                  - Overview tables of central measures (mean, standard deviation, etc.).
-                - Use colors, labels and titles meaningfully:
+                  - Proportion of missing value per column,
+                  - Correlations of numerical variable,
+                  - Overview tables of central measure (mean, standard deviation, etc.).
+                - Use colors, label and titles meaningfully:
                   - Titles should describe what is shown (in German),
-                  - Legends and axis labels should not cut off any information,
+                  - Legends and axis label should not cut off any information,
                   - Label axes with units or appropriate scales.
                 - It should be considered and taken into account in all calculations and plots that missing values as well as string and boolean values are present in the dataset. Handle them accordingly.
                 - The returned code should be UTF-8 encoded.

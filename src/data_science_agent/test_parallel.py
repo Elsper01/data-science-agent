@@ -40,7 +40,7 @@ def process_dataset(dataset: str) -> tuple[str, bool, str]:
             "dataset_path": os.path.join(dataset_path, "dataset.csv"),
             "metadata_path": os.path.join(dataset_path, "metadata.rdf"),
             "regeneration_attempts": 0,
-            "programming_language": enums.ProgrammingLanguage.R,
+            "programming_language": enums.ProgrammingLanguage.PYTHON,
             "is_refactoring": False,
             "output_path": output_dir,
             "durations": [],
@@ -62,7 +62,7 @@ def process_dataset(dataset: str) -> tuple[str, bool, str]:
 
 def main():
     datasets = os.listdir(STUDY_DIR)
-    selected_datasets = random.sample(datasets, k=10)
+    selected_datasets = datasets#random.sample(datasets, k=10)
 
     start = time()
     counter_success = 0

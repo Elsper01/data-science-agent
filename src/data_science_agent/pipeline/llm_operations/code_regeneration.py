@@ -26,7 +26,7 @@ prompt = Prompt(
                 '{test_stdout}'
                 stderr:
                 '{test_stderr}'
-                
+
                 Bitte generiere den Code erneut und behebe die oben genannten Fehler.
                 Das ist der vorherige Code:
                 '{code}'
@@ -37,7 +37,7 @@ prompt = Prompt(
     en={
         "system_prompt":
             """
-                You are an experienced data analyst, expert at improving, refactoring, and fixing bugs in existing code.
+                You are an experienced data analyst, expert at improving, refactoring and fixing errors in existing code.
                 You receive as input a visualization goal to be implemented with the code, the code itself, and the error messages that occurred during code execution.
             """,
         "user_prompt":

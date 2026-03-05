@@ -1,0 +1,511 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\13473\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:24:33
+Total Duration: 1101.39 seconds
+Total Token Usage: 119110 tokens
+Total Costs: $0.5118
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 2
+  - Exactly One Visualization: 1 / 3 = (33.33%)
+  - One or More Visualization: 1 / 3 =  (33.33%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0112 seconds
+
+Method: analyse_dataset
+  Duration: 0.0089 seconds
+
+Method: analyse_metadata
+  Duration: 0.0139 seconds
+
+Method: llm_generate_summary
+  Duration: 190.0666 seconds
+
+Method: llm_generate_goals
+  Duration: 3.4496 seconds
+
+Method: llm_generate_r_code
+  Duration: 359.8330 seconds
+
+Method: test_generated_code
+  Duration: 10.1440 seconds
+
+Method: llm_regenerate_code
+  Duration: 15.7937 seconds
+
+Method: test_generated_code
+  Duration: 9.3335 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 512.7394 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 4708 tokens
+  Costs total: $0.0039
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1714 tokens
+  Costs total: $0.0021
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8210 tokens
+  Costs total: $0.0642
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8274 tokens
+  Costs total: $0.0647
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7177 tokens
+  Costs total: $0.0535
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1008 tokens
+  Costs total: $0.0026
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1290 tokens
+  Costs total: $0.0033
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 837 tokens
+  Costs total: $0.0022
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3915 tokens
+  Costs total: $0.0051
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 4830 tokens
+  Costs total: $0.0062
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 459 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 930 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 837 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6618 tokens
+  Costs total: $0.0450
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2683 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3147 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5471 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5389 tokens
+  Costs total: $0.0313
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 8110 tokens
+  Costs total: $0.0578
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2975 tokens
+  Costs total: $0.0107
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3392 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4701 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6049 tokens
+  Costs total: $0.0373
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7031 tokens
+  Costs total: $0.0472
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2979 tokens
+  Costs total: $0.0109
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3668 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6145 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6563 tokens
+  Costs total: $0.0349
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verteilt sich die Bevölkerung der Stadt Hof nach Geschlecht?' visualization="Balkendiagramm mit '2_variable_attribute_label' auf der X-Achse und 'value' auf der Y-Achse." rationale="Ein Balkendiagramm ist die effektivste Methode, um die absoluten Zahlen der männlichen und weiblichen Bevölkerung sowie den Gesamtwert zu vergleichen. Durch die Verwendung von '2_variable_attribute_label' auf der X-Achse und 'value' auf der Y-Achse erhält der Nutzer einen sofortigen Überblick über die demografische Struktur und das Geschlechterverhältnis zum Stichtag."
+
+-> Code:
+# Setze Encoding-Optionen am Anfang
+options(encoding = "UTF-8")
+
+# Benötigte Pakete
+pkgs <- c("readr", "dplyr", "ggplot2", "forcats", "scales", "tidyr", "stringr", "purrr")
+invisible(lapply(pkgs, function(p) {
+  if (!require(p, character.only = TRUE, quietly = TRUE)) {
+    install.packages(p, repos = "https://cloud.r-project.org")
+    library(p, character.only = TRUE)
+  }
+}))
+
+# Pfadsuche
+path_candidates <- c(
+  "./src/resources/data/study/13473/dataset.csv",
+  "./src/resources/data/study\\13473\\dataset.csv",
+  file.path(".", "src", "resources", "data", "study", "13473", "dataset.csv")
+)
+path <- NULL
+for (p in path_candidates) { if (file.exists(p)) { path <- p; break } }
+if (is.null(path)) stop("Datendatei nicht gefunden.")
+
+# Daten einlesen mit explizitem Encoding und Fehlerbehandlung für UTF-8
+# Wir nutzen 'check_cp1252' falls UTF-8 fehlschlägt, aber hier erzwingen wir UTF-8
+df <- readr::read_delim(
+  path, 
+  delim = ";", 
+  locale = readr::locale(encoding = "UTF-8"), 
+  na = c("", "NA", "NaN", "nan", "NAN", "NULL", "null"), 
+  trim_ws = TRUE, 
+  show_col_types = FALSE
+)
+
+# Fehlerbehebung: 'trimws' wirft Fehler bei ungültigen UTF-8 Zeichen in 'statistics_label'
+# Wir bereinigen die Spaltennamen und Inhalte von potenziell korrupten Zeichen
+df <- df %>%
+  mutate(across(where(is.character), ~ iconv(., from = "UTF-8", to = "UTF-8", sub = "")))
+
+# Sicherstellen, dass value numerisch ist
+df <- df %>% mutate(value = as.numeric(value))
+
+# Filterung für die Visualisierung: Bevölkerung nach Geschlecht
+# Wir suchen nach dem Label "Geschlecht" in '2_variable_label'
+viz_df <- df %>% 
+  filter(str_detect(`2_variable_label`, "Geschlecht")) %>%
+  group_by(`2_variable_attribute_label`) %>%
+  summarise(value = sum(value, na.rm = TRUE), .groups = "drop") %>%
+  filter(!is.na(`2_variable_attribute_label`) & value > 0)
+
+# Sortierung definieren
+ord <- c("männlich", "weiblich", "Insgesamt")
+viz_df <- viz_df %>%
+  mutate(`2_variable_attribute_label` = factor(
+    `2_variable_attribute_label`, 
+    levels = c(ord[ord %in% `2_variable_attribute_label`], 
+               setdiff(`2_variable_attribute_label`, ord))
+  ))
+
+# Farben definieren
+pal <- c("männlich" = "#1f77b4", "weiblich" = "#e15759", "Insgesamt" = "#7f7f7f")
+
+# Plot erstellen
+p <- ggplot(viz_df, aes(x = `2_variable_attribute_label`, y = value, fill = `2_variable_attribute_label`)) +
+  geom_col(width = 0.6, color = "white", size = 0.5) +
+  geom_text(aes(label = format(value, big.mark = ".", decimal.mark = ",")), 
+            vjust = -0.5, size = 4.5, fontface = "bold") +
+  scale_fill_manual(values = pal, guide = "none") +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ","), 
+                     expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title = "Bevölkerung der Stadt Hof nach Geschlecht",
+    subtitle = "Stand: 31.12.2024",
+    x = "Geschlecht",
+    y = "Anzahl Personen",
+    caption = "Quelle: Stadt Hof"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16),
+    panel.grid.major.x = element_blank(),
+    axis.text.x = element_text(face = "bold")
+  )
+
+# Output Verzeichnis erstellen
+out_dir <- "./src/resources/output/13473"
+if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
+
+# Speichern
+plot_file <- file.path(out_dir, "0_bevoelkerung_geschlecht.png")
+ggsave(filename = plot_file, plot = p, width = 10, height = 7, dpi = 300, bg = "white")
+
+print(paste("Visualisierung erfolgreich gespeichert unter:", plot_file))
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie hoch ist die Gesamtbevölkerung der Stadt Hof zum Stichtag 31.12.2024?' visualization="KPI-Metrik (Indikator) des Feldes 'value', gefiltert nach '2_variable_attribute_label' == 'Insgesamt'." rationale="Ein KPI-Indikator (Messwertanzeige) eignet sich hervorragend, um die wichtigste Kennzahl des Datensatzes – die Gesamteinwohnerzahl – hervorzuheben. Hierzu wird der 'value' gefiltert nach dem '2_variable_attribute_label' mit dem Wert 'Insgesamt' verwendet. Dies beantwortet die grundlegendste Frage eines Nutzers beim Betrachten von Bevölkerungsdaten."
+
+-> Code:
+options(warn=-1)
+req_pkgs <- c('readr','dplyr','tidyr','stringr','ggplot2','scales','janitor','lubridate')
+new_pkgs <- req_pkgs[!(req_pkgs %in% installed.packages()[,'Package'])]
+if(length(new_pkgs)>0) install.packages(new_pkgs, repos = 'https://cloud.r-project.org')
+lapply(req_pkgs, library, character.only = TRUE)
+
+input_file <- file.path('.', 'src', 'resources', 'data', 'study', '13473', 'dataset.csv')
+output_dir <- file.path('.', 'src', 'resources', 'output', '13473')
+if(!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+# Robustes Einlesen
+na_vals <- c('', 'NA', 'NaN', 'nan')
+df_raw <- suppressMessages(readr::read_delim(input_file, delim = ';', locale = locale(encoding = 'UTF-8'), na = na_vals, trim_ws = TRUE))
+df <- janitor::clean_names(df_raw)
+df <- df |> mutate(across(where(is.character), ~stringr::str_squish(.)))
+
+# EDA Missing Values
+missing_df <- tibble(variable = names(df), missing_rate = sapply(df, function(x) mean(is.na(x))))
+write.csv(missing_df, file.path(output_dir, 'eda_missing_values.csv'), row.names = FALSE, fileEncoding = 'UTF-8')
+
+# EDA Numerische Zusammenfassung (Fehlerbehebung: Vermeidung von leeren Listen in across)
+num_cols <- names(df)[sapply(df, is.numeric)]
+if(length(num_cols) > 0){
+  # Wir berechnen die Statistiken einzeln, um den Fehler in across() zu vermeiden
+  numeric_summary <- df |> 
+    summarise(across(all_of(num_cols), list(
+      n = ~sum(!is.na(.)), 
+      mean = ~mean(., na.rm = TRUE), 
+      sd = ~sd(., na.rm = TRUE), 
+      min = ~min(., na.rm = TRUE), 
+      median = ~median(., na.rm = TRUE), 
+      max = ~max(., na.rm = TRUE)
+    ))) |> 
+    pivot_longer(everything(), names_to = "temp", values_to = "value") |>
+    separate(temp, into = c("variable", "stat"), sep = "_(?!.*_)") # Trennung am letzten Unterstrich
+  
+  write.csv(numeric_summary, file.path(output_dir, 'eda_numeric_summary.csv'), row.names = FALSE, fileEncoding = 'UTF-8')
+}
+
+# KPI Logik gemäß Zielsetzung
+# Ziel: 'value' gefiltert nach 'x2_variable_attribute_label' == 'Insgesamt'
+target_col <- "x2_variable_attribute_label"
+if(!(target_col %in% names(df))) {
+  # Fallback falls janitor anders benannt hat
+  target_col <- names(df)[grep("variable_attribute_label", names(df))][1]
+}
+
+# Filterung
+kpi_data <- df |> 
+  filter(tolower(!!sym(target_col)) == "insgesamt") |>
+  arrange(desc(time))
+
+if(nrow(kpi_data) > 0) {
+  kpi_value <- kpi_data$value[1]
+  kpi_date_raw <- kpi_data$time[1]
+} else {
+  # Fallback falls "Insgesamt" nicht gefunden wird
+  kpi_value <- max(df$value, na.rm = TRUE)
+  kpi_date_raw <- max(df$time, na.rm = TRUE)
+}
+
+# Datum formatieren (Hof Datensatz nutzt oft YYYY-MM-DD oder nur YYYY)
+kpi_date_parsed <- suppressWarnings(lubridate::as_date(kpi_date_raw))
+if(is.na(kpi_date_parsed)) {
+  date_label <- as.character(kpi_date_raw)
+} else {
+  date_label <- format(kpi_date_parsed, '%d.%m.%Y')
+}
+
+# Visualisierung
+value_formatted <- scales::number(kpi_value, big.mark = '.', decimal.mark = ',', accuracy = 1)
+
+p <- ggplot() + 
+  xlim(0, 10) + ylim(0, 10) + 
+  theme_void() + 
+  annotate('text', x = 5, y = 8.5, label = paste0('Gesamtbevölkerung der Stadt Hof'), size = 7, fontface = 'bold', color = '#2E86AB') + 
+  annotate('text', x = 5, y = 7.5, label = paste0('Stichtag: ', date_label), size = 5, color = 'grey40') +
+  annotate('segment', x = 2, xend = 8, y = 6.5, yend = 6.5, linewidth = 1, color = '#2E86AB') + 
+  annotate('text', x = 5, y = 4.5, label = value_formatted, size = 25, fontface = 'bold', color = '#0B5345') + 
+  annotate('text', x = 5, y = 2.5, label = 'Einwohner insgesamt', size = 6, color = 'grey30') + 
+  labs(caption = 'Quelle: Amtliche Fortschreibung des Bevölkerungsstandes (Statistik-Code 12411)') + 
+  theme(
+    plot.caption = element_text(color = 'grey40', size = 10, hjust = 0.5, margin = margin(t = 20)),
+    plot.background = element_rect(fill = '#F8F9F9', color = NA)
+  )
+
+# Speichern
+out_png <- file.path(output_dir, '1_kpi_gesamtbevoelkerung.png')
+ggplot2::ggsave(filename = out_png, plot = p, width = 10, height = 6, dpi = 200, bg = 'white')
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Gibt es Unterschiede in den gemeldeten Bevölkerungszahlen zwischen der Kreis- und Gemeindeebene?' visualization="Gruppiertes Balkendiagramm mit '1_variable_code' auf der X-Achse, 'value' auf der Y-Achse und '2_variable_attribute_label' als Farblegende." rationale="Da die Zusammenfassung eine redundante Struktur zwischen 'KREISE' und 'GEMEIN' erwähnt, ist ein gruppiertes Balkendiagramm sinnvoll. Es zeigt '1_variable_code' (Klassifikation) gegen 'value', aufgeschlüsselt nach '2_variable_attribute_label'. Dies bestätigt dem Nutzer visuell, dass die Daten für die kreisfreie Stadt Hof auf beiden administrativen Ebenen identisch sind, wie in der Beschreibung angegeben."
+
+-> Code:
+options(stringsAsFactors=FALSE)
+req_pkgs <- c("tidyverse","ggplot2","readr","dplyr","stringr","lubridate","scales")
+new_pkgs <- req_pkgs[!(req_pkgs %in% installed.packages()[, "Package"])]
+if(length(new_pkgs)) install.packages(new_pkgs, dependencies=TRUE)
+invisible(lapply(req_pkgs, library, character.only=TRUE))
+
+out_dir <- file.path(".", "src", "resources", "output", "13473")
+if(!dir.exists(out_dir)) dir.create(out_dir, recursive=TRUE)
+
+fp <- "./src/resources/data/study\\13473\\dataset.csv"
+df <- suppressMessages(read_delim(
+  file = fp,
+  delim = ";",
+  locale = locale(encoding = "UTF-8"),
+  na = c("", "NA", "NaN", "nan", "NAN", "null", "NULL", "<NA>"),
+  trim_ws = TRUE,
+  show_col_types = FALSE
+))
+
+if("time" %in% names(df)) df$time <- suppressWarnings(as.Date(df$time))
+if("value" %in% names(df)) df$value <- suppressWarnings(as.numeric(df$value))
+
+eda_nrow <- nrow(df)
+eda_ncol <- ncol(df)
+eda_types <- vapply(df, function(x) paste(class(x), collapse=","), character(1))
+eda_missing <- vapply(df, function(x) sum(is.na(x)), numeric(1))
+numeric_df <- dplyr::select(df, where(is.numeric))
+eda_cor <- tryCatch({
+  if(ncol(numeric_df) > 1) stats::cor(numeric_df, use = "pairwise.complete.obs") else matrix(NA_real_, nrow=0, ncol=0)
+}, error=function(e) matrix(NA_real_, nrow=0, ncol=0))
+
+stats_by_level <- df %>%
+  filter(!is.na(value)) %>%
+  group_by(`1_variable_code`) %>%
+  summarise(
+    n = dplyr::n(),
+    sum = sum(value, na.rm=TRUE),
+    mean = mean(value, na.rm=TRUE),
+    sd = sd(value, na.rm=TRUE),
+    min = min(value, na.rm=TRUE),
+    q1 = quantile(value, 0.25, na.rm=TRUE, names=FALSE),
+    median = median(value, na.rm=TRUE),
+    q3 = quantile(value, 0.75, na.rm=TRUE, names=FALSE),
+    max = max(value, na.rm=TRUE),
+    .groups = "drop"
+  )
+
+dup_check <- df %>%
+  group_by(`1_variable_code`, `2_variable_attribute_label`) %>%
+  tally(name = "anzahl") %>%
+  filter(anzahl > 1)
+
+plot_df <- df %>%
+  filter(!is.na(`1_variable_code`), !is.na(value)) %>%
+  mutate(
+    `2_variable_attribute_label` = ifelse(is.na(`2_variable_attribute_label`), "Unbekannt", as.character(`2_variable_attribute_label`)),
+    `1_variable_code` = as.character(`1_variable_code`)
+  ) %>%
+  group_by(`1_variable_code`, `2_variable_attribute_label`) %>%
+  summarise(value = sum(value, na.rm=TRUE), .groups = "drop")
+
+if(all(c("KREISE","GEMEIN") %in% unique(plot_df$`1_variable_code`))) {
+  plot_df$`1_variable_code` <- factor(plot_df$`1_variable_code`, levels = c("KREISE","GEMEIN"))
+}
+lev_attr <- c("männlich","weiblich","Insgesamt","Unbekannt")
+plot_df$`2_variable_attribute_label` <- factor(plot_df$`2_variable_attribute_label`, levels = intersect(lev_attr, unique(plot_df$`2_variable_attribute_label`)))
+
+p <- ggplot(plot_df, aes(x = `1_variable_code`, y = value, fill = `2_variable_attribute_label`)) +
+  geom_col(position = position_dodge(width = 0.8), width = 0.7, color = "grey20", linewidth = 0.3) +
+  geom_text(aes(label = scales::number(value, big.mark = ".", decimal.mark = ",")),
+            position = position_dodge(width = 0.8), vjust = -0.25, size = 3.5, color = "#333333") +
+  scale_fill_brewer(palette = "Set2", na.translate = FALSE, name = "Kategorie") +
+  scale_y_continuous(labels = scales::label_number(big.mark = ".", decimal_mark = ","), expand = expansion(mult = c(0, 0.08))) +
+  labs(
+    title = "Bevölkerung nach Verwaltungsebene und Kategorie – Hof (Stichtag 31.12.2024)",
+    x = "Verwaltungsebene",
+    y = "Bevölkerung (Anzahl)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "top",
+    legend.title = element_text(size = 11),
+    legend.text = element_text(size = 10),
+    axis.title.x = element_text(margin = margin(t = 8)),
+    axis.title.y = element_text(margin = margin(r = 8)),
+    axis.text = element_text(color = "#1a1a1a"),
+    plot.title = element_text(face = "bold", size = 14)
+  )
+
+out_path <- file.path(out_dir, "2_bevoelkerung_kreis_vs_gemeinde.png")
+ggsave(filename = out_path, plot = p, width = 9, height = 6, dpi = 300)
+
+
+-> SEVQ:
+
+

@@ -1,0 +1,434 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\104336\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 15:49:01
+Total Duration: 1041.81 seconds
+Total Token Usage: 88944 tokens
+Total Costs: $0.4261
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0146 seconds
+
+Method: analyse_dataset
+  Duration: 0.0064 seconds
+
+Method: analyse_metadata
+  Duration: 0.0422 seconds
+
+Method: llm_generate_summary
+  Duration: 158.0014 seconds
+
+Method: llm_generate_goals
+  Duration: 5.9062 seconds
+
+Method: llm_generate_python_code
+  Duration: 301.1640 seconds
+
+Method: test_generated_code
+  Duration: 13.4688 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 563.2078 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2914 tokens
+  Costs total: $0.0028
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1285 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6285 tokens
+  Costs total: $0.0508
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4963 tokens
+  Costs total: $0.0374
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7015 tokens
+  Costs total: $0.0579
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7004 tokens
+  Costs total: $0.0537
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2245 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2512 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5839 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4223 tokens
+  Costs total: $0.0247
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7476 tokens
+  Costs total: $0.0558
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2486 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3249 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4843 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4737 tokens
+  Costs total: $0.0278
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6355 tokens
+  Costs total: $0.0472
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2180 tokens
+  Costs total: $0.0077
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2906 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5312 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4310 tokens
+  Costs total: $0.0259
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How is the funding distributed across different institutions and projects?' visualization="Horizontal bar chart comparing 'F_rderung_in_2014' (excluding the 'Gesamt:' row) against 'Gesamt_in_Euro'." rationale="A bar chart allows for a direct comparison of the total funding received by each institution. By excluding the 'Gesamt:' row, we can see which specific projects, such as the 'Deutsche Nachschule Tingleff' or 'Deutsches Gymnasium für Nordschleswig', received the most support in 2014."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+sns.set_theme(style="whitegrid")
+
+df = pd.read_csv(r'./src/resources/data/study\104336\dataset.csv', sep=',', encoding='utf-8')
+
+for c in ['Bund_in_Euro', 'Land_in_Euro', 'Gesamt_in_Euro']:
+    if c in df.columns:
+        df[c] = df[c].replace(['-', '–', '—', ''], np.nan)
+        df[c] = pd.to_numeric(df[c], errors='coerce')
+
+_ = df.isna().mean()
+_ = df.select_dtypes(include=[np.number]).describe()
+_ = df[['Bund_in_Euro','Land_in_Euro','Gesamt_in_Euro']].corr(min_periods=1)
+
+if 'Bund_in_Euro' in df.columns and 'Land_in_Euro' in df.columns:
+    df['Summe_Bund_Land'] = df['Bund_in_Euro'].fillna(0) + df['Land_in_Euro'].fillna(0)
+    df['Abweichung_Gesamt_minus_Summe'] = df['Gesamt_in_Euro'] - df['Summe_Bund_Land']
+
+mask = ~df['F_rderung_in_2014'].astype(str).str.strip().str.contains('gesamt', case=False, na=False)
+df_plot = df.loc[mask].copy()
+
+if 'F_rderung_in_2014' in df_plot.columns:
+    s = df_plot['F_rderung_in_2014'].astype(str)
+    s = s.str.replace(r'^\s*\d+\.\s*', '', regex=True)
+    s = s.str.replace(r'\s*\(.*?\)\*?', '', regex=True)
+    s = s.str.replace(r'\*+$', '', regex=True)
+    s = s.str.replace('DeutscherKindergarten', 'Deutscher Kindergarten', regex=False)
+    df_plot['Einrichtung'] = s.str.strip()
+else:
+    df_plot['Einrichtung'] = df_plot.index.astype(str)
+
+if 'Gesamt_in_Euro' not in df_plot.columns:
+    df_plot['Gesamt_in_Euro'] = np.nan
+
+df_plot = df_plot[['Einrichtung', 'Gesamt_in_Euro']].dropna(subset=['Gesamt_in_Euro'])
+
+df_plot = df_plot.sort_values('Gesamt_in_Euro', ascending=False)
+
+fig_h = 3.5 + 0.7 * max(1, len(df_plot))
+fig, ax = plt.subplots(figsize=(10, fig_h))
+palette = sns.color_palette("Blues_r", n_colors=max(3, len(df_plot)))
+sns.barplot(data=df_plot, y='Einrichtung', x='Gesamt_in_Euro', order=df_plot['Einrichtung'], palette=palette, errorbar=None, ax=ax)
+
+def euro_fmt(x, pos):
+    try:
+        return (f"{int(x):,}".replace(",", ".") + " €") if np.isfinite(x) else ""
+    except Exception:
+        return ""
+
+ax.xaxis.set_major_formatter(FuncFormatter(euro_fmt))
+ax.set_title('Verteilung der Fördermittel 2014 nach Einrichtungen/Projekten (ohne Gesamtzeile)')
+ax.set_xlabel('Gesamtförderung in Euro (€)')
+ax.set_ylabel('Einrichtung/Projekt')
+
+max_x = float(df_plot['Gesamt_in_Euro'].max()) if len(df_plot) else 0
+offset = max_x * 0.01
+for p in ax.patches:
+    w = p.get_width()
+    y = p.get_y() + p.get_height() / 2
+    label = f"{int(round(w)):,}".replace(",", ".") + " €"
+    ax.text(w + offset, y, label, va='center', ha='left', fontsize=10)
+
+ax.margins(x=0.05)
+plt.tight_layout()
+plt.savefig(r'./src/resources/output\104336/0_foerderung_verteilung_2014.png', dpi=300, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the funding split between the Federal Government (Bund) and the State (Land) for each project?' visualization="Stacked bar chart with 'F_rderung_in_2014' on the Y-axis and 'Bund_in_Euro' and 'Land_in_Euro' as the stacked segments on the X-axis." rationale="The summary indicates a polarization in funding sources. A stacked bar chart using 'Bund_in_Euro' and 'Land_in_Euro' for each 'F_rderung_in_2014' entry will visually confirm if the Federal Government focuses on secondary institutions while the State focuses on local schools and kindergartens. Note: '-' values must be treated as 0."
+
+-> Code:
+import os
+import re
+import textwrap
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+sns.set_theme(style="whitegrid", context="talk")
+
+input_path = os.path.normpath('./src/resources/data/study\\104336\\dataset.csv')
+output_dir = os.path.normpath('./src/resources/output\\104336')
+os.makedirs(output_dir, exist_ok=True)
+
+df_raw = pd.read_csv(input_path, sep=',', encoding='utf-8')
+
+def is_missing_series(s):
+    s_str = s.astype(str).str.strip()
+    return s.isna() | s_str.isin(['', '-', 'nan', 'NaN', 'None'])
+
+missing_prop = {col: is_missing_series(df_raw[col]).mean() for col in df_raw.columns}
+
+df = df_raw.copy()
+for c in ['Bund_in_Euro', 'Land_in_Euro', 'Gesamt_in_Euro']:
+    if c in df.columns:
+        df[c] = df[c].astype(str).str.strip().replace('-', 0)
+        df[c] = df[c].str.replace('.', '', regex=False).str.replace(',', '', regex=False)
+        df[c] = pd.to_numeric(df[c], errors='coerce').fillna(0).astype(int)
+
+if 'F_rderung_in_2014' in df.columns:
+    df['is_total_row'] = df['F_rderung_in_2014'].astype(str).str.strip().str.lower().eq('gesamt:')
+else:
+    df['is_total_row'] = False
+
+calc_df = df.copy()
+calc_df['Summe_aus_Teilen'] = calc_df.get('Bund_in_Euro', 0) + calc_df.get('Land_in_Euro', 0)
+calc_df['Abweichung_zu_Gesamt'] = calc_df.get('Gesamt_in_Euro', 0) - calc_df['Summe_aus_Teilen']
+
+plot_df = df.loc[~df['is_total_row']].copy()
+plot_df['Projekt'] = plot_df['F_rderung_in_2014'].astype(str).str.replace(r'^\d+\.\s*', '', regex=True)
+plot_df['Projekt_wrapped'] = plot_df['Projekt'].apply(lambda x: '\n'.join(textwrap.wrap(x, width=24)))
+
+bund_total = int(plot_df['Bund_in_Euro'].sum()) if 'Bund_in_Euro' in plot_df else 0
+land_total = int(plot_df['Land_in_Euro'].sum()) if 'Land_in_Euro' in plot_df else 0
+
+anomaly_rows = calc_df.loc[calc_df['Abweichung_zu_Gesamt'] != 0]
+contains_anomaly = not anomaly_rows.empty
+
+plt.figure(figsize=(14, 8))
+colors = sns.color_palette('Set2', 2)
+x = np.arange(len(plot_df))
+width = 0.6
+bund_vals = plot_df['Bund_in_Euro'].values if 'Bund_in_Euro' in plot_df else np.zeros(len(plot_df))
+land_vals = plot_df['Land_in_Euro'].values if 'Land_in_Euro' in plot_df else np.zeros(len(plot_df))
+
+b1 = plt.bar(x, bund_vals, width=width, color=colors[0], label='Bund')
+b2 = plt.bar(x, land_vals, bottom=bund_vals, width=width, color=colors[1], label='Land')
+
+def fmt_euro(value, pos=None):
+    try:
+        return f"{int(value):,}".replace(',', '.') + ' €'
+    except Exception:
+        return str(value)
+
+plt.gca().yaxis.set_major_formatter(FuncFormatter(fmt_euro))
+plt.xticks(x, plot_df['Projekt_wrapped'], rotation=0, ha='center')
+plt.ylabel('Förderung in Euro')
+plt.xlabel('Projekt')
+
+title = 'Fördermittel 2014: Aufteilung nach Bund und Land je Projekt (Nordschleswig)'
+subtitle = f"Summen: Bund {fmt_euro(bund_total)}, Land {fmt_euro(land_total)}"
+plt.title(title + '\n' + subtitle, fontsize=18)
+plt.legend(title='Finanzierungsquelle', frameon=True)
+
+heights = bund_vals + land_vals
+ymax = max(heights) if len(heights) else 1
+plt.ylim(0, ymax * 1.15 if ymax > 0 else 1)
+
+for xi, total in zip(x, heights):
+    plt.text(xi, total + ymax * 0.02, fmt_euro(total), ha='center', va='bottom', fontsize=11)
+
+note_parts = ["Hinweise: '-' als 0 interpretiert, Summenzeile 'Gesamt:' nicht dargestellt."]
+if contains_anomaly:
+    note_parts.append('Datenanomalie erkannt: Mindestens eine Zeile mit abweichender Gesamtsumme.')
+plt.figtext(0.01, 0.01, ' '.join(note_parts), ha='left', va='bottom', fontsize=10)
+
+sns.despine()
+plt.tight_layout(rect=[0, 0.03, 1, 0.98])
+
+output_path = os.path.normpath(os.path.join(output_dir, '1_foerderung_bund_land_projekt.png'))
+plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.close()
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Is there a discrepancy between the individual funding sources and the reported total?' visualization="Grouped bar chart for each 'F_rderung_in_2014' showing two bars: one for the sum of ('Bund_in_Euro' + 'Land_in_Euro') and one for the reported 'Gesamt_in_Euro'." rationale="The data summary highlights a significant anomaly in the 'Gesamt:' row (Index 5). By plotting 'Bund_in_Euro' + 'Land_in_Euro' against the reported 'Gesamt_in_Euro', users can visually identify the data integrity issue where the reported total (460) fails to match the sum of its parts (460,000)."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+dataset_path = './src/resources/data/study/104336/dataset.csv'
+output_path = './src/resources/output/104336/2_gruppierte_balken_summe_vs_gesamt.png'
+
+sns.set_theme(style='whitegrid', context='talk', font='DejaVu Sans')
+
+df = pd.read_csv(dataset_path, sep=',', encoding='utf-8')
+
+df_eda = df.replace(['-', '–', '—', '', ' '], np.nan)
+missing_ratio = df_eda.isna().mean()
+
+num_cols = ['Bund_in_Euro', 'Land_in_Euro', 'Gesamt_in_Euro']
+df[num_cols] = df[num_cols].replace(['-', '–', '—', '', ' '], np.nan)
+for c in num_cols:
+    df[c] = pd.to_numeric(df[c], errors='coerce')
+
+df['Bund_in_Euro'] = df['Bund_in_Euro'].fillna(0)
+df['Land_in_Euro'] = df['Land_in_Euro'].fillna(0)
+
+numeric_stats = df[num_cols].describe()
+correlations = df[num_cols].corr()
+
+df['Summe_Bund_Land'] = df['Bund_in_Euro'] + df['Land_in_Euro']
+df['Einrichtung'] = df['F_rderung_in_2014'].astype(str).str.replace(r'^\s*\d+\.\s*', '', regex=True).str.replace(':', '').str.strip()
+
+plot_df = df[['Einrichtung', 'Summe_Bund_Land', 'Gesamt_in_Euro']].copy()
+plot_df['Abweichung'] = plot_df['Gesamt_in_Euro'] - plot_df['Summe_Bund_Land']
+plot_df['Mismatch'] = plot_df['Abweichung'].abs() > 1
+
+x = np.arange(len(plot_df))
+width = 0.4
+colors = sns.color_palette('colorblind', 2)
+
+fig, ax = plt.subplots(figsize=(14, 8))
+bar1 = ax.bar(x - width/2, plot_df['Summe_Bund_Land'].values, width=width, label='Summe Bund + Land', color=colors[0], edgecolor='black')
+bar2 = ax.bar(x + width/2, plot_df['Gesamt_in_Euro'].values, width=width, label='Gemeldeter Gesamtbetrag', color=colors[1], edgecolor='black')
+
+ax.set_title('Abgleich der Finanzierungsquellen mit gemeldetem Gesamtbetrag (2014)')
+ax.set_xlabel('Einrichtung')
+ax.set_ylabel('Betrag in Euro')
+ax.set_xticks(x)
+ax.set_xticklabels(plot_df['Einrichtung'].tolist(), rotation=25, ha='right')
+ax.legend(loc='upper left')
+
+for bars in [bar1, bar2]:
+    for b in bars:
+        h = b.get_height()
+        ax.text(b.get_x() + b.get_width()/2, h, f"{int(round(h)):,}".replace(',', '.'), ha='center', va='bottom', fontsize=10, rotation=0)
+
+for i, is_mismatch in enumerate(plot_df['Mismatch'].tolist()):
+    if is_mismatch:
+        y_top = max(plot_df['Summe_Bund_Land'].iloc[i], plot_df['Gesamt_in_Euro'].iloc[i])
+        diff = int(plot_df['Abweichung'].iloc[i])
+        sign = '+' if diff > 0 else ''
+        ax.annotate(f'Abweichung: {sign}{diff:,} €'.replace(',', '.'), xy=(x[i], y_top), xytext=(x[i], y_top*1.08 if y_top > 0 else 1000), ha='center', arrowprops=dict(arrowstyle='->', color='red', lw=1.5), color='red', fontsize=11)
+
+fig.tight_layout()
+plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+

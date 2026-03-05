@@ -1,0 +1,538 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\15653\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:40:45
+Total Duration: 967.85 seconds
+Total Token Usage: 118869 tokens
+Total Costs: $0.4869
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 2
+  - Exactly One Visualization: 1 / 3 = (33.33%)
+  - One or More Visualization: 1 / 3 =  (33.33%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0177 seconds
+
+Method: analyse_dataset
+  Duration: 0.0072 seconds
+
+Method: analyse_metadata
+  Duration: 0.0055 seconds
+
+Method: llm_generate_summary
+  Duration: 181.3080 seconds
+
+Method: llm_generate_goals
+  Duration: 4.0131 seconds
+
+Method: llm_generate_r_code
+  Duration: 282.7142 seconds
+
+Method: test_generated_code
+  Duration: 3.4676 seconds
+
+Method: llm_regenerate_code
+  Duration: 18.7630 seconds
+
+Method: test_generated_code
+  Duration: 3.9551 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 473.5979 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7406 tokens
+  Costs total: $0.0056
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1719 tokens
+  Costs total: $0.0023
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 9091 tokens
+  Costs total: $0.0690
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8630 tokens
+  Costs total: $0.0642
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7751 tokens
+  Costs total: $0.0557
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1827 tokens
+  Costs total: $0.0046
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 359 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 565 tokens
+  Costs total: $0.0015
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 4751 tokens
+  Costs total: $0.0055
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3573 tokens
+  Costs total: $0.0060
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 823 tokens
+  Costs total: $0.0021
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 361 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 565 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6484 tokens
+  Costs total: $0.0433
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2773 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3468 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4279 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5486 tokens
+  Costs total: $0.0319
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6912 tokens
+  Costs total: $0.0453
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3233 tokens
+  Costs total: $0.0106
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3957 tokens
+  Costs total: $0.0035
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4792 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5900 tokens
+  Costs total: $0.0319
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5877 tokens
+  Costs total: $0.0365
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2822 tokens
+  Costs total: $0.0088
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3283 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4798 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 7384 tokens
+  Costs total: $0.0362
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie haben sich die Gästeankünfte und Übernachtungen im Zeitverlauf von 2014 bis 2024 entwickelt?' visualization="Liniendiagramm mit 'time' auf der x-Achse, 'value' auf der y-Achse und einer Farbtrennung nach 'value_variable_label'." rationale="Ein Liniendiagramm ist ideal, um Trends über einen Zeitraum von 11 Jahren darzustellen. Durch die Verwendung von 'time' auf der x-Achse und 'value' auf der y-Achse, gefiltert nach den Kategorien in 'value_variable_label', kann der Nutzer sofort erkennen, wie sich der Tourismus in Rettenberg entwickelt hat und welche Auswirkungen Ereignisse wie die Pandemie auf die Zahlen hatten."
+
+-> Code:
+options(warn=-1)
+packages <- c("tidyverse", "readr", "dplyr", "ggplot2", "scales", "stringr", "janitor")
+to_install <- packages[!packages %in% installed.packages()[, "Package"]]
+if (length(to_install) > 0) install.packages(to_install, dependencies = TRUE)
+invisible(lapply(packages, require, character.only = TRUE))
+
+out_dir <- "./src/resources/output/15653"
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+data_path <- "./src/resources/data/study/15653/dataset.csv"
+
+# Behebung des Fehlers "ungültige multibyte Zeichenkette":
+# Wir versuchen Latin1 (ISO-8859-1), da deutsche Datensätze oft Umlaute enthalten, 
+# die bei falscher UTF-8 Interpretation zu diesem Fehler führen.
+df_raw <- suppressWarnings(readr::read_delim(
+  file = data_path, 
+  delim = ";", 
+  locale = readr::locale(encoding = "ISO-8859-1"), 
+  na = c("", "NA", "NaN", "null", "NULL"), 
+  trim_ws = TRUE,
+  show_col_types = FALSE
+))
+
+df <- janitor::clean_names(df_raw)
+
+# Datentypen sicherstellen
+if ("time" %in% names(df)) df$time <- suppressWarnings(as.integer(df$time))
+if ("value" %in% names(df)) df$value <- suppressWarnings(as.numeric(df$value))
+
+# Filter auf den gewünschten Zeitraum
+df <- df %>% filter(!is.na(time), time >= 2014, time <= 2024)
+
+# Identifikation der Metrik-Spalte
+# Wir nutzen iconv, um sicherzustellen, dass Vergleiche nicht an Encoding-Resten scheitern
+label_col <- if ("value_variable_label" %in% names(df)) "value_variable_label" else "value_variable_code"
+
+if (label_col %in% names(df)) {
+  df <- df %>% mutate(metric = case_when(
+    str_detect(tolower(!!sym(label_col)), "ank") ~ "Gästeankünfte",
+    str_detect(tolower(!!sym(label_col)), "übernacht|uebernacht") ~ "Gästeübernachtungen",
+    TRUE ~ !!sym(label_col)
+  ))
+} else {
+  df$metric <- "Wert"
+}
+
+# Identifikation der Herkunfts-Spalte für Aggregation (Gesamtzahlen bevorzugt)
+origin_col <- intersect(names(df), c("x2_variable_attribute_label", "2_variable_attribute_label"))[1]
+
+if (!is.na(origin_col)) {
+  # Wenn "Gesamt" vorhanden ist, filtern wir darauf, sonst aggregieren wir alles
+  has_total <- any(str_detect(tolower(df[[origin_col]]), "gesamt"), na.rm = TRUE)
+  if (has_total) {
+    df_plot <- df %>% filter(str_detect(tolower(!!sym(origin_col)), "gesamt"))
+  } else {
+    df_plot <- df
+  }
+} else {
+  df_plot <- df
+}
+
+# Aggregation nach Jahr und Metrik
+df_plot <- df_plot %>%
+  group_by(time, metric) %>%
+  summarise(value = sum(value, na.rm = TRUE), .groups = "drop")
+
+# Visualisierung
+p <- ggplot(df_plot, aes(x = time, y = value, color = metric, group = metric)) +
+  # Markierung der Pandemie-Jahre als Kontext
+  annotate("rect", xmin = 2019.5, xmax = 2021.5, ymin = -Inf, ymax = Inf, fill = "grey40", alpha = 0.1) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 3) +
+  scale_color_manual(values = c("Gästeankünfte" = "#0072B2", "Gästeübernachtungen" = "#D55E00")) +
+  scale_x_continuous(breaks = seq(2014, 2024, by = 1)) +
+  scale_y_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  labs(
+    title = "Entwicklung der Gästezahlen in Rettenberg (2014–2024)",
+    subtitle = "Vergleich von Ankünften und Übernachtungen (grauer Bereich: Pandemie-Einfluss)",
+    x = "Jahr",
+    y = "Anzahl",
+    color = "Kennzahl"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "top",
+    plot.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+
+# Speichern
+ggsave(filename = file.path(out_dir, "0_liniendiagramm_zeitreihe_gaeste.png"), 
+       plot = p, width = 10, height = 6, dpi = 300)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie groß ist der Anteil von Inlands- gegenüber Auslandsgästen bei den Übernachtungen?' visualization="Gestapeltes Balkendiagramm mit 'time' auf der x-Achse, 'value' auf der y-Achse und '2_variable_attribute_label' (Inland/Ausland) als Farblegende, gefiltert auf 'value_variable_label' = 'Gästeübernachtungen in Beherbergungsbetrieben'." rationale="Da die Zusammenfassung eine Dominanz des Inlandstourismus erwähnt, hilft ein gestapeltes Balkendiagramm dabei, das Verhältnis der Herkunft ('2_variable_attribute_label') innerhalb der Gesamtzahl der Übernachtungen ('value_variable_label' = 'Gästeübernachtungen in Beherbergungsbetrieben') zu visualisieren. Dies verdeutlicht die Marktstruktur für die Gemeinde Rettenberg."
+
+-> Code:
+pkgs <- c("tidyverse", "scales")
+for (p in pkgs) { if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org", quiet = TRUE) }
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(scales))
+
+options(stringsAsFactors = FALSE)
+
+in_path <- file.path(".", "src", "resources", "data", "study", "15653", "dataset.csv")
+out_dir <- file.path(".", "src", "resources", "output", "15653")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Fehlerbehebung: Encoding auf 'latin1' oder 'guess' setzen, falls UTF-8 fehlschlägt. 
+# Da der Fehler "invalid UTF-8" bei trimws/sub auftrat, lesen wir robuster ein.
+df <- readr::read_delim(
+  in_path, 
+  delim = ";", 
+  locale = readr::locale(encoding = "ISO-8859-1"), # Oft Ursache für UTF-8 Fehler in DE-Datensätzen
+  trim_ws = TRUE, 
+  na = c("", "NA", "NaN", "NULL"), 
+  show_col_types = FALSE
+)
+
+# Sicherstellen, dass alle Spaltennamen und Inhalte valide UTF-8 sind für die Weiterverarbeitung
+df <- df %>% mutate(across(where(is.character), ~iconv(., from = "ISO-8859-1", to = "UTF-8")))
+
+df <- df %>% mutate(value = suppressWarnings(as.numeric(value)))
+
+# EDA Missing Values
+missing_tbl <- tibble(
+  spalte = names(df),
+  fehlend = sapply(df, function(x) sum(is.na(x))),
+  anteil_fehlend = sapply(df, function(x) mean(is.na(x)))
+)
+
+# Sicherere Verarbeitung von Strings zur Vermeidung von Regex-Fehlern
+blank_counts <- sapply(df, function(x) {
+  if (is.character(x)) {
+    # Vermeidung von trimws Fehlern durch explizite Behandlung
+    x_clean <- gsub("^\\s+|\\s+$", "", x) 
+    sum(x_clean == "" | tolower(x_clean) %in% c("na", "null"), na.rm = TRUE)
+  } else {
+    NA_integer_
+  }
+})
+missing_tbl$leer_strings_oder_na_woertlich <- blank_counts
+readr::write_csv(missing_tbl, file.path(out_dir, "eda_missing_15653.csv"))
+
+# Korrelationen
+num_df <- dplyr::select(df, where(is.numeric))
+if (ncol(num_df) >= 2) {
+  cor_mat <- stats::cor(num_df, use = "pairwise.complete.obs", method = "pearson")
+  utils::write.csv(round(cor_mat, 4), file.path(out_dir, "eda_korrelationen_numerisch_15653.csv"), row.names = TRUE, fileEncoding = "UTF-8")
+}
+
+# Zusammenfassung
+summary_tbl <- df %>% 
+  group_by(value_variable_label, `2_variable_attribute_label`) %>% 
+  summarise(
+    anzahl = n(), 
+    summe = sum(value, na.rm = TRUE), 
+    mittelwert = mean(value, na.rm = TRUE), 
+    sd = sd(value, na.rm = TRUE), 
+    minimum = suppressWarnings(min(value, na.rm = TRUE)), 
+    median = median(value, na.rm = TRUE), 
+    maximum = suppressWarnings(max(value, na.rm = TRUE)), 
+    .groups = "drop"
+  )
+readr::write_csv(summary_tbl, file.path(out_dir, "eda_zusammenfassung_wert_nach_metrik_herkunft_15653.csv"))
+
+# Visualisierung: Anteil Inlands- vs. Auslandsgäste
+plot_df <- df %>% 
+  filter(value_variable_label == "Gästeübernachtungen in Beherbergungsbetrieben") %>% 
+  filter(`2_variable_attribute_label` %in% c("Inland", "Ausland")) %>% 
+  mutate(time = suppressWarnings(as.integer(time))) %>% 
+  filter(!is.na(time)) %>%
+  group_by(time, `2_variable_attribute_label`) %>% 
+  summarise(value = sum(value, na.rm = TRUE), .groups = "drop") %>% 
+  group_by(time) %>% 
+  mutate(
+    gesamt = sum(value, na.rm = TRUE), 
+    anteil = ifelse(gesamt > 0, value/gesamt, NA_real_),
+    `2_variable_attribute_label` = factor(`2_variable_attribute_label`, levels = c("Inland", "Ausland"))
+  ) %>% 
+  ungroup()
+
+p <- ggplot(plot_df, aes(x = factor(time), y = value, fill = `2_variable_attribute_label`)) + 
+  geom_col(color = "white", width = 0.75) + 
+  geom_text(
+    data = plot_df %>% filter(!is.na(anteil) & anteil >= 0.05), 
+    aes(label = scales::percent(anteil, accuracy = 1, decimal.mark = ",")), 
+    position = position_stack(vjust = 0.5), 
+    color = "white", 
+    size = 3.5, 
+    fontface = "bold"
+  ) + 
+  scale_fill_manual(values = c("Inland" = "#1b9e77", "Ausland" = "#d95f02"), name = "Herkunft der Gäste") + 
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) + 
+  labs(
+    title = "Gästeübernachtungen in Rettenberg nach Herkunft", 
+    subtitle = "Gestapelte Jahresbalken: Inland vs. Ausland; Prozentangaben zeigen den Anteil am Gesamtvolumen", 
+    x = "Jahr", 
+    y = "Anzahl Übernachtungen", 
+    caption = "Quelle: Monatserhebung im Tourismus (Gemeinde Rettenberg); eigene Berechnung"
+  ) + 
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(face = "bold", size = 14), 
+    plot.subtitle = element_text(size = 11), 
+    axis.title = element_text(size = 11), 
+    axis.text = element_text(size = 9), 
+    legend.position = "top"
+  )
+
+ggsave(filename = file.path(out_dir, "1_uebernachtungen_inland_ausland_gestapelt.png"), plot = p, width = 10, height = 6, dpi = 320)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie ist das Verhältnis zwischen Ankünften und Übernachtungen pro Jahr?' visualization="Gruppiertes Balkendiagramm mit 'time' auf der x-Achse, 'value' auf der y-Achse und 'value_variable_label' als Gruppierungsvariable." rationale="Ein gruppiertes Balkendiagramm ermöglicht den direkten Vergleich der beiden Metriken aus 'value_variable_label' für jedes Jahr ('time'). Dies zeigt die durchschnittliche Aufenthaltsdauer indirekt an: Wenn die Balken für Übernachtungen deutlich höher sind als für Ankünfte, deutet dies auf längere Aufenthalte hin. Die hohe Standardabweichung im Feld 'value' wird hier durch den direkten visuellen Vergleich der beiden Kategorien erklärt."
+
+-> Code:
+options(warn=-1)
+pkgs <- c("tidyverse","janitor","scales","readr")
+new_pkgs <- pkgs[!(pkgs %in% installed.packages()[, "Package"])]
+if (length(new_pkgs) > 0) install.packages(new_pkgs, dependencies = TRUE)
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(janitor)
+  library(scales)
+  library(readr)
+})
+set.seed(1)
+data_path <- "./src/resources/data/study\\15653\\dataset.csv"
+output_dir <- "./src/resources/output/15653"
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+df <- readr::read_delim(
+  file = data_path,
+  delim = ";",
+  locale = locale(encoding = "UTF-8"),
+  na = c("", "NA", "NaN", "null", "Null", "NULL"),
+  trim_ws = TRUE,
+  progress = FALSE
+)
+df <- janitor::clean_names(df)
+if (!is.numeric(df$value)) {
+  df$value <- suppressWarnings(readr::parse_number(as.character(df$value), locale = readr::locale(decimal_mark = ",", grouping_mark = ".")))
+}
+if (!is.numeric(df$time)) {
+  df$time <- suppressWarnings(as.integer(readr::parse_number(as.character(df$time))))
+}
+na_anteile <- sapply(df, function(x) mean(is.na(x)))
+numeric_cols <- names(df)[sapply(df, is.numeric)]
+cor_mat <- NULL
+if (length(numeric_cols) >= 2) {
+  cor_mat <- suppressWarnings(stats::cor(dplyr::select(df, all_of(numeric_cols)), use = "pairwise.complete.obs"))
+}
+kennwerte_value <- tibble(
+  n = sum(!is.na(df$value)),
+  mittelwert = mean(df$value, na.rm = TRUE),
+  sd = stats::sd(df$value, na.rm = TRUE),
+  median = stats::median(df$value, na.rm = TRUE),
+  minimum = min(df$value, na.rm = TRUE),
+  maximum = max(df$value, na.rm = TRUE)
+)
+valid_metrics <- c("Gästeankünfte in Beherbergungsbetrieben","Gästeübernachtungen in Beherbergungsbetrieben")
+df_metric <- df %>%
+  filter(!is.na(value), !is.na(time)) %>%
+  filter(value_variable_label %in% valid_metrics)
+attr_col <- "x2_variable_attribute_label"
+has_total <- attr_col %in% names(df_metric) && any(grepl("gesamt", df_metric[[attr_col]], ignore.case = TRUE), na.rm = TRUE)
+if (has_total) {
+  df_plot <- df_metric %>%
+    filter(grepl("gesamt", .data[[attr_col]], ignore.case = TRUE)) %>%
+    group_by(time, value_variable_label) %>%
+    summarise(value = sum(value, na.rm = TRUE), .groups = "drop")
+} else {
+  df_plot <- df_metric %>%
+    group_by(time, value_variable_label) %>%
+    summarise(value = sum(value, na.rm = TRUE), .groups = "drop")
+}
+df_plot <- df_plot %>%
+  mutate(metric = dplyr::recode(
+    value_variable_label,
+    "Gästeankünfte in Beherbergungsbetrieben" = "Ankünfte",
+    "Gästeübernachtungen in Beherbergungsbetrieben" = "Übernachtungen"
+  )) %>%
+  mutate(time = as.integer(time)) %>%
+  arrange(time, metric)
+farben <- c("Ankünfte" = "#1f77b4", "Übernachtungen" = "#ff7f0e")
+p <- ggplot(df_plot, aes(x = factor(time), y = value, fill = metric)) +
+  geom_col(position = position_dodge(width = 0.75), width = 0.7, color = NA) +
+  scale_fill_manual(values = farben, name = "Metrik") +
+  scale_y_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ","), expand = expansion(mult = c(0, 0.05))) +
+  labs(
+    title = "Verhältnis zwischen Ankünften und Übernachtungen pro Jahr",
+    subtitle = "Gemeinde Rettenberg, 2014–2024; Summen über Herkunft",
+    x = "Jahr",
+    y = "Anzahl",
+    caption = "Quelle: Monatserhebung im Tourismus"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    legend.position = "top",
+    legend.title = element_text(size = 11),
+    legend.text = element_text(size = 10),
+    axis.title.x = element_text(margin = margin(t = 8)),
+    axis.title.y = element_text(margin = margin(r = 8)),
+    panel.grid.minor = element_blank(),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+plot_name <- "gruppenbalken_ankuenfte_uebernachtungen"
+output_file <- file.path(output_dir, paste0("2_", plot_name, ".png"))
+ggplot2::ggsave(filename = output_file, plot = p, width = 10, height = 6, dpi = 320, device = "png")
+
+
+-> SEVQ:
+
+

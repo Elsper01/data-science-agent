@@ -1,0 +1,535 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\139606\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 11:09:11
+Total Duration: 981.67 seconds
+Total Token Usage: 110544 tokens
+Total Costs: $0.4927
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0120 seconds
+
+Method: analyse_dataset
+  Duration: 0.0121 seconds
+
+Method: analyse_metadata
+  Duration: 0.0120 seconds
+
+Method: llm_generate_summary
+  Duration: 165.2624 seconds
+
+Method: llm_generate_goals
+  Duration: 4.5724 seconds
+
+Method: llm_generate_python_code
+  Duration: 296.6843 seconds
+
+Method: test_generated_code
+  Duration: 11.0848 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 504.0320 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7866 tokens
+  Costs total: $0.0067
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2074 tokens
+  Costs total: $0.0025
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7879 tokens
+  Costs total: $0.0550
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8858 tokens
+  Costs total: $0.0649
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8770 tokens
+  Costs total: $0.0641
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 465 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8272 tokens
+  Costs total: $0.0620
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2656 tokens
+  Costs total: $0.0085
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3360 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4729 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5517 tokens
+  Costs total: $0.0337
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6329 tokens
+  Costs total: $0.0394
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3116 tokens
+  Costs total: $0.0103
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3811 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4847 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5923 tokens
+  Costs total: $0.0338
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7356 tokens
+  Costs total: $0.0488
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3151 tokens
+  Costs total: $0.0099
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3959 tokens
+  Costs total: $0.0035
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4819 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 6171 tokens
+  Costs total: $0.0361
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Welche Radionuklide konnten in der Probe nachgewiesen werden und welche liegen unter der Nachweisgrenze?' visualization="Ein gestapeltes Balkendiagramm mit 'Pruefmerkmal' auf der x-Achse und der Kategorisierung von 'Ergebnis' (nachweisbar vs. n.n.) auf der y-Achse." rationale="Da der Datensatz zu 92,5% aus nicht nachweisbaren Werten besteht, ist es für den Nutzer entscheidend, auf einen Blick zu sehen, welche spezifischen 'Pruefmerkmal'-Einträge einen numerischen Wert in der Spalte 'Ergebnis' aufweisen (wie Cs-137) und welche als 'n.n.' klassifiziert sind. Ein Balkendiagramm eignet sich hier, um die Häufigkeit der Statusmeldungen pro Radionuklid zu verdeutlichen."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+pd.options.mode.chained_assignment = None
+
+input_path = os.path.normpath('./src/resources/data/study/139606/dataset.csv')
+output_dir = os.path.normpath('./src/resources/output/139606')
+os.makedirs(output_dir, exist_ok=True)
+
+df = pd.read_csv(input_path, sep=',', encoding='utf-8', dtype=str, engine='python')
+
+for c in df.columns:
+    if df[c].dtype == object:
+        df[c] = df[c].apply(lambda x: np.nan if pd.isna(x) else str(x))
+        df[c] = df[c].str.strip()
+        df[c].replace(r'^$', np.nan, regex=True, inplace=True)
+
+missing_ratio = df.isna().mean()
+
+col_pruef = 'Pruefmerkmal' if 'Pruefmerkmal' in df.columns else None
+col_res = 'Ergebnis' if 'Ergebnis' in df.columns else None
+col_unit = 'Einheit' if 'Einheit' in df.columns else None
+
+if col_pruef is None or col_res is None:
+    raise ValueError('Erforderliche Spalten fehlen: Pruefmerkmal oder Ergebnis.')
+
+def parse_numeric(x):
+    if pd.isna(x):
+        return np.nan
+    s = str(x).strip().lower()
+    tokens_nn = {'n.n.', 'n.n', 'nn', 'nicht nachweisbar', 'nichtnachweisbar', '<ldl', '<ndl', '< nachweisgrenze', '<nachweisgrenze'}
+    if s in tokens_nn:
+        return np.nan
+    v = str(x).strip().replace(' ', '').replace(',', '.')
+    try:
+        return float(v)
+    except Exception:
+        return np.nan
+
+df['Ergebnis_num'] = df[col_res].apply(parse_numeric)
+
+status = np.where((~df['Ergebnis_num'].isna()) & (df['Ergebnis_num'] > 0), 'nachweisbar', 'n.n.')
+df['Status'] = pd.Categorical(status, categories=['nachweisbar', 'n.n.'], ordered=True)
+
+summary_num = df[['Ergebnis_num']].describe()
+
+counts = df.groupby([col_pruef, 'Status'], dropna=False).size().reset_index(name='Anzahl')
+pivot = counts.pivot(index=col_pruef, columns='Status', values='Anzahl').fillna(0)
+for col in ['nachweisbar', 'n.n.']:
+    if col not in pivot.columns:
+        pivot[col] = 0
+pivot = pivot[['nachweisbar', 'n.n.']]
+
+pivot = pivot.sort_values(by=['nachweisbar', 'n.n.'], ascending=[False, True])
+
+sns.set_theme(style='whitegrid', context='talk')
+
+n_cats = pivot.shape[0]
+fig_w = max(12, min(0.5 * n_cats + 4, 40))
+fig_h = 8
+fig, ax = plt.subplots(figsize=(fig_w, fig_h))
+
+x = np.arange(len(pivot.index))
+colors = {'nachweisbar': '#2ca02c', 'n.n.': '#9e9e9e'}
+bar1 = ax.bar(x, pivot['nachweisbar'].values, color=colors['nachweisbar'], label='nachweisbar')
+bar2 = ax.bar(x, pivot['n.n.'].values, bottom=pivot['nachweisbar'].values, color=colors['n.n.'], label='nicht nachweisbar (n.n.)')
+
+ax.set_title('Nachweisbarkeit der Radionuklide in Probe 202000065')
+ax.set_xlabel('Prüfmerkmal (Radionuklid)')
+ax.set_ylabel('Anzahl je Radionuklid')
+ax.set_xticks(x)
+ax.set_xticklabels(pivot.index, rotation=75, ha='right')
+ax.legend(frameon=False, ncol=2)
+ax.set_ylim(0, max(1.0, (pivot.sum(axis=1).max() if not pivot.empty else 1)))
+ax.grid(axis='y', linestyle='--', alpha=0.3)
+
+plt.tight_layout()
+output_path = os.path.join(output_dir, '0_radionuklide_nachweis_stacked.png')
+plt.savefig(output_path, dpi=200, bbox_inches='tight')
+plt.close(fig)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie hoch ist die gemessene Aktivität von Cäsium-137 im Vergleich zu den anderen untersuchten Radionukliden?' visualization="Ein Balkendiagramm, das 'Pruefmerkmal' auf der x-Achse und den numerischen Wert aus 'Ergebnis' auf der y-Achse darstellt (unter Ausschluss des Merkmals 'Messzeit')." rationale="Cäsium-137 ist der einzige signifikante radiologische Befund in diesem Datensatz. Durch die Visualisierung des Feldes 'Ergebnis' für alle 'Pruefmerkmal'-Einträge, die nicht 'Messzeit' sind, wird die Relevanz dieses spezifischen Wertes (0,133 Bq/kg(FM)) im Verhältnis zur restlichen Probe (überwiegend 'n.n.') deutlich."
+
+-> Code:
+import os
+import sys
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+try:
+    input_path = os.path.normpath('./src/resources/data/study\\139606/dataset.csv')
+    output_dir = os.path.normpath('./src/resources/output\\139606')
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+    def parse_numeric(x):
+        if pd.isna(x):
+            return np.nan
+        if isinstance(x, (int, float, np.integer, np.floating)):
+            return float(x)
+        s = str(x).strip()
+        sl = s.lower()
+        if sl in {'n.n.', 'n.n', 'nn', 'n/n', '', 'k.a.', 'na', 'nan'}:
+            return np.nan
+        s = s.replace(' ', '')
+        if ',' in s:
+            s = s.replace('.', '')
+        s = s.replace(',', '.')
+        try:
+            return float(s)
+        except Exception:
+            return np.nan
+    df['Ergebnis_num'] = df['Ergebnis'].apply(parse_numeric)
+    missing_share = df.isna().mean()
+    numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    desc_stats = df[numeric_cols].describe().T if len(numeric_cols) > 0 else pd.DataFrame()
+    corr_matrix = df[numeric_cols].corr(numeric_only=True) if len(numeric_cols) > 1 else pd.DataFrame()
+    df_plot = df.copy()
+    df_plot = df_plot[~df_plot['Pruefmerkmal'].astype(str).str.strip().str.lower().eq('messzeit')]
+    df_plot['Ergebnis_plot'] = df_plot['Ergebnis_num']
+    df_plot['is_nd'] = df_plot['Ergebnis_plot'].isna()
+    df_plot['Ergebnis_plot'] = df_plot['Ergebnis_plot'].fillna(0.0)
+    df_plot['is_cs137'] = df_plot['Pruefmerkmal'].astype(str).str.contains('Cs-137', case=False, na=False)
+    df_plot = df_plot[['Pruefmerkmal', 'Ergebnis_plot', 'is_cs137', 'is_nd', 'Einheit', 'Ergebnis', 'Ergebnis_num']].copy()
+    df_plot = df_plot.sort_values(by=['Ergebnis_plot', 'Pruefmerkmal'], ascending=[True, True])
+    sns.set_theme(style='whitegrid', context='talk')
+    n = len(df_plot)
+    fig_width = min(max(12, n * 0.35), 60)
+    fig_height = 8
+    plt.close('all')
+    fig, ax = plt.subplots(figsize=(fig_width, fig_height))
+    x = np.arange(n)
+    heights = df_plot['Ergebnis_plot'].to_numpy()
+    colors = []
+    for cs, nd in zip(df_plot['is_cs137'].to_numpy(), df_plot['is_nd'].to_numpy()):
+        if cs:
+            colors.append('#d62728')
+        else:
+            if nd:
+                colors.append('#d9d9d9')
+            else:
+                colors.append('#9ecae1')
+    ax.bar(x, heights, color=colors, edgecolor='#333333', linewidth=0.6)
+    ax.set_xticks(x)
+    ax.set_xticklabels(df_plot['Pruefmerkmal'].astype(str).tolist(), rotation=90, ha='center', fontsize=9)
+    y_label_unit = ''
+    try:
+        unit_candidates = df_plot['Einheit'].dropna().astype(str).unique().tolist()
+        if len(unit_candidates) > 0:
+            y_label_unit = unit_candidates[0]
+    except Exception:
+        y_label_unit = ''
+    ax.set_ylabel('Aktivität (' + (y_label_unit if y_label_unit else 'Bq/kg (FM)') + ')', fontsize=12)
+    ax.set_xlabel('Prüfmerkmal', fontsize=12)
+    ax.set_title('Aktivitäten der Radionuklide in der Probe (ohne Messzeit)\nHervorgehoben: Cäsium-137 (Cs-137)', fontsize=14, pad=12)
+    ax.grid(axis='y', linestyle='--', linewidth=0.6, alpha=0.6)
+    ax.margins(x=0.01)
+    ax.tick_params(axis='y', labelsize=10)
+    try:
+        idx_cs = np.where(df_plot['is_cs137'].to_numpy())[0]
+        if len(idx_cs) > 0:
+            i = int(idx_cs[0])
+            y = heights[i]
+            label_val = df_plot.iloc[i]['Ergebnis_num']
+            if pd.isna(label_val):
+                ann = 'n.n.'
+            else:
+                ann = f"{label_val:.3g}"
+            ax.annotate('Cs-137: ' + ann + ' ' + (y_label_unit if y_label_unit else 'Bq/kg'), xy=(i, y), xytext=(0, 10), textcoords='offset points', ha='center', va='bottom', fontsize=10, color='#d62728', fontweight='bold', rotation=0)
+    except Exception:
+        pass
+    try:
+        from matplotlib.lines import Line2D
+        legend_elements = [
+            Line2D([0], [0], color='#d62728', lw=6, label='Cs-137'),
+            Line2D([0], [0], color='#9ecae1', lw=6, label='Andere Nachweise'),
+            Line2D([0], [0], color='#d9d9d9', lw=6, label='Nicht nachweisbar')
+        ]
+        ax.legend(handles=legend_elements, loc='upper right', frameon=True, framealpha=0.9)
+    except Exception:
+        pass
+    plt.tight_layout()
+    output_path = os.path.normpath(os.path.join(output_dir, '1_aktivitaeten_radionuklide_balkendiagramm.png'))
+    fig.savefig(output_path, dpi=300)
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie verhält sich die Messzeit im Vergleich zur Anzahl der untersuchten Prüfmerkmale?' visualization="Ein Kreisdiagramm oder eine Häufigkeitsverteilung basierend auf der Spalte 'Einheit', um den Anteil der Messzeit-Dokumentation gegenüber den radiologischen Messwerten ('Bq/kg(FM)') darzustellen." rationale="Die Qualität der radiologischen Untersuchung wird durch die lange Messzeit (156.000 s) untermauert. Ein Nutzer möchte verstehen, dass für jedes 'Pruefmerkmal' (insgesamt 40) dieser hohe Aufwand betrieben wurde. Die Visualisierung der 'Einheit' (Sekunden vs. Bq/kg(FM)) hilft dabei, die unterschiedlichen Datentypen innerhalb der Spalte 'Ergebnis' zu differenzieren."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+sns.set_theme(style="whitegrid")
+
+in_path = os.path.join('.', 'src', 'resources', 'data', 'study', '139606', 'dataset.csv')
+df = pd.read_csv(in_path, sep=',', encoding='utf-8')
+
+for col in ['Probenahme_Beginn_Datum', 'Probenahme_Ende_Datum']:
+    if col in df.columns:
+        try:
+            df[col] = pd.to_datetime(df[col], dayfirst=True, errors='coerce')
+        except Exception:
+            pass
+for col in ['Probenahme_Beginn_Zeit', 'Probenahme_Ende_Zeit']:
+    if col in df.columns:
+        try:
+            df[col] = pd.to_datetime(df[col], format='%H:%M', errors='coerce').dt.time
+        except Exception:
+            pass
+
+missing_per_col = df.isna().sum()
+unique_pruef = df['Pruefmerkmal'].nunique() if 'Pruefmerkmal' in df.columns else np.nan
+
+def _parse_numeric(v):
+    if pd.isna(v):
+        return np.nan
+    s = str(v).strip()
+    if s == '':
+        return np.nan
+    sl = s.lower()
+    if sl in {'n.n.', 'n.n', 'nn', 'na', 'nan', 'n/a', '-'}:
+        return np.nan
+    s = s.replace(' ', '')
+    if ',' in s:
+        s2 = s.replace('.', '').replace(',', '.')
+        try:
+            return float(s2)
+        except Exception:
+            pass
+    if 'e' in s.lower():
+        try:
+            return float(s)
+        except Exception:
+            pass
+    if '.' in s:
+        parts = s.split('.')
+        if len(parts) > 1 and all(len(p) == 3 for p in parts[1:] if p.isdigit()) and parts[0].isdigit():
+            s2 = ''.join(parts)
+            try:
+                return float(s2)
+            except Exception:
+                pass
+    try:
+        return float(s)
+    except Exception:
+        return np.nan
+
+if 'Ergebnis' in df.columns:
+    df['Ergebnis_num'] = df['Ergebnis'].apply(_parse_numeric)
+else:
+    df['Ergebnis_num'] = np.nan
+
+if 'Einheit' in df.columns:
+    u = df['Einheit'].astype(str).str.strip().str.lower()
+else:
+    u = pd.Series([np.nan] * len(df))
+
+def _map_unit(x):
+    if pd.isna(x):
+        return 'Andere'
+    s = str(x).strip().lower()
+    if ('bq/kg' in s) or ('bq' in s and 'kg' in s):
+        return 'Radiologische Messwerte (Bq/kg(FM))'
+    if s in {'s', 'sec', 'sek', 'sek.', 'sekunde', 'sekunden', 'second', 'seconds', 's.'} or ('sek' in s) or s.endswith(' s'):
+        return 'Messzeit (Sekunden)'
+    return 'Andere'
+
+unit_group = u.apply(_map_unit)
+df['Einheit_Gruppe'] = unit_group
+
+counts = df['Einheit_Gruppe'].value_counts().reindex(['Radiologische Messwerte (Bq/kg(FM))', 'Messzeit (Sekunden)', 'Andere']).fillna(0).astype(int)
+
+total_items = int(counts.sum())
+labels = [f"{cat}" for cat in counts.index]
+sizes = counts.values.tolist()
+colors = ['#1f77b4', '#ff7f0e', '#9e9e9e']
+
+def _autopct_factory(total):
+    def inner(pct):
+        n = int(round(pct/100.0 * total))
+        return f"{pct:.1f}%\n(n={n})"
+    return inner
+
+out_dir = os.path.join('.', 'src', 'resources', 'output', '139606')
+os.makedirs(out_dir, exist_ok=True)
+fig, ax = plt.subplots(figsize=(8, 6), dpi=150)
+if total_items == 0 or np.all(np.array(sizes) == 0):
+    ax.text(0.5, 0.5, 'Keine gültigen Einheiten im Datensatz gefunden', ha='center', va='center', fontsize=12)
+    ax.axis('off')
+else:
+    wedges, texts, autotexts = ax.pie(sizes, labels=labels, autopct=_autopct_factory(total_items), startangle=90, counterclock=False, colors=colors, textprops={'fontsize': 10})
+    ax.axis('equal')
+
+title_parts = []
+if 'Hauptprobenummer' in df.columns and df['Hauptprobenummer'].notna().any():
+    try:
+        hp = str(int(pd.to_numeric(df['Hauptprobenummer'], errors='coerce').dropna().iloc[0]))
+        title_parts.append(f"Probe {hp}")
+    except Exception:
+        pass
+if unique_pruef == unique_pruef:
+    title_parts.append(f"n={int(unique_pruef)} Prüfmerkmale")
+
+title_suffix = ' • '.join(title_parts) if title_parts else ''
+base_title = 'Verteilung der Einheiten: Messzeit vs. radiologische Messwerte'
+final_title = f"{base_title} ({title_suffix})" if title_suffix else base_title
+ax.set_title(final_title, fontsize=13, pad=14)
+
+mt_mask = df['Einheit_Gruppe'] == 'Messzeit (Sekunden)'
+mt_values = df.loc[mt_mask, 'Ergebnis_num'].dropna()
+caption = ''
+if len(mt_values) > 0:
+    if len(mt_values.unique()) == 1:
+        mv = mt_values.iloc[0]
+        caption = f"Dokumentierte Messzeit: {int(mv) if float(mv).is_integer() else round(float(mv), 2)} s"
+    else:
+        caption = f"Dokumentierte Messzeit (Median): {round(float(mt_values.median()), 2)} s"
+else:
+    caption = 'Keine explizite Messzeit in den Daten gefunden'
+fig.text(0.5, 0.02, caption, ha='center', va='bottom', fontsize=10, color='#555555')
+
+output_path = os.path.join(out_dir, '2_verteilung_einheit.png')
+plt.tight_layout(rect=[0, 0.04, 1, 1])
+fig.savefig(output_path, bbox_inches='tight')
+plt.close(fig)
+
+
+-> SEVQ:
+
+

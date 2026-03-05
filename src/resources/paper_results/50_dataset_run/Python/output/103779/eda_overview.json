@@ -1,0 +1,28 @@
+{
+  "anzahl_zeilen": 371,
+  "anzahl_spalten": 10,
+  "spalten": [
+    "Objektnummer",
+    "Kulturdenkmaltyp",
+    "Kreis",
+    "Gemeinde",
+    "Adresse_Lage",
+    "Bezeichnung",
+    "Beschreibung",
+    "Begr_ndung",
+    "Schutzumfang",
+    "FotoURL"
+  ],
+  "dtypen": {
+    "Objektnummer": "int64",
+    "Kulturdenkmaltyp": "object",
+    "Kreis": "object",
+    "Gemeinde": "object",
+    "Adresse_Lage": "object",
+    "Bezeichnung": "object",
+    "Beschreibung": "object",
+    "Begr_ndung": "object",
+    "Schutzumfang": "object",
+    "FotoURL": "object"
+  }
+}

@@ -1,0 +1,448 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\139606\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:40:30
+Total Duration: 1060.07 seconds
+Total Token Usage: 112338 tokens
+Total Costs: $0.4898
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0111 seconds
+
+Method: analyse_dataset
+  Duration: 0.0117 seconds
+
+Method: analyse_metadata
+  Duration: 0.0100 seconds
+
+Method: llm_generate_summary
+  Duration: 179.6964 seconds
+
+Method: llm_generate_goals
+  Duration: 4.2435 seconds
+
+Method: llm_generate_r_code
+  Duration: 391.8664 seconds
+
+Method: test_generated_code
+  Duration: 3.7728 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 480.4613 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7828 tokens
+  Costs total: $0.0066
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1972 tokens
+  Costs total: $0.0023
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8971 tokens
+  Costs total: $0.0664
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8130 tokens
+  Costs total: $0.0582
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 9385 tokens
+  Costs total: $0.0705
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 943 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 470 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 401 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6360 tokens
+  Costs total: $0.0396
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3123 tokens
+  Costs total: $0.0104
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3850 tokens
+  Costs total: $0.0033
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6070 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6201 tokens
+  Costs total: $0.0379
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6306 tokens
+  Costs total: $0.0411
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2849 tokens
+  Costs total: $0.0093
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3457 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5232 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5413 tokens
+  Costs total: $0.0303
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 8022 tokens
+  Costs total: $0.0565
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3048 tokens
+  Costs total: $0.0098
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3676 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4924 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5707 tokens
+  Costs total: $0.0318
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Welche Radionuklide wurden in der Probe nachgewiesen und wie hoch ist deren Aktivität im Vergleich zu den nicht nachweisbaren Werten?' visualization="Balkendiagramm mit 'Pruefmerkmal' auf der x-Achse und 'Ergebnis' auf der y-Achse." rationale="Durch die Visualisierung der Spalten 'Pruefmerkmal' und 'Ergebnis' kann der Nutzer sofort erkennen, welche Isotope (wie Cs-137) einen konkreten Messwert aufweisen und welche als 'n.n.' (nicht nachweisbar) eingestuft wurden. Ein Balkendiagramm eignet sich hier am besten, um die Verteilung der 40 Prüfmerkmale und die Dominanz der Nullbefunde darzustellen."
+
+-> Code:
+options(warn=-1)
+req_pkgs <- c("tidyverse","scales")
+to_install <- req_pkgs[!sapply(req_pkgs, requireNamespace, quietly=TRUE)]
+if (length(to_install) > 0) install.packages(to_install, repos = "https://cloud.r-project.org")
+lapply(req_pkgs, library, character.only = TRUE)
+options(warn=0)
+
+in_path <- file.path("src","resources","data","study","139606","dataset.csv")
+out_dir <- file.path("src","resources","output","139606")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+suppressMessages({
+  df_raw <- readr::read_csv(
+    file = in_path,
+    locale = readr::locale(encoding = "UTF-8"),
+    col_types = readr::cols(.default = readr::col_character()),
+    progress = FALSE
+  )
+})
+
+parse_ergebnis_to_numeric <- function(x){
+  y <- trimws(as.character(x))
+  nd_flag <- grepl("^(?i)\\s*n\\.?\\s*n\\.?\\s*$", y, perl=TRUE) | grepl("nicht\\s*nachweisbar", tolower(y))
+  y_clean <- gsub("\\s+", "", y)
+  y_clean <- gsub(",", ".", y_clean, fixed = FALSE)
+  suppressWarnings({
+    y_num <- as.numeric(y_clean)
+  })
+  y_num[nd_flag | y == "" | is.na(y)] <- NA_real_
+  y_num
+}
+
+unit_text <- {
+  u <- df_raw %>% filter(!is.na(Einheit) & Einheit != "") %>% count(Einheit, sort = TRUE)
+  if (nrow(u) > 0) u$Einheit[1] else "Bq/kg(FM)"
+}
+
+df <- df_raw %>%
+  mutate(
+    Ergebnis_num = parse_ergebnis_to_numeric(Ergebnis),
+    is_nd = is.na(Ergebnis_num),
+    Ergebnis_plot = ifelse(is_nd, 0, Ergebnis_num),
+    Status = ifelse(is_nd, "Nicht nachweisbar", "Nachweis")
+  )
+
+missing_tbl <- tibble(
+  Spalte = names(df_raw),
+  Fehlende = sapply(df_raw, function(x) sum(is.na(x) | trimws(as.character(x)) == "")),
+  Anteil_Fehlende = round(Fehlende / nrow(df_raw), 6)
+)
+
+write_csv(missing_tbl, file.path(out_dir, "eda_missingness.csv"))
+
+det_counts <- df %>% count(Status) %>% pivot_wider(names_from = Status, values_from = n, values_fill = 0)
+write_csv(det_counts, file.path(out_dir, "eda_nachweis_counts.csv"))
+
+if (sum(!is.na(df$Ergebnis_num)) > 0) {
+  erg_summary <- df %>% filter(!is.na(Ergebnis_num)) %>% summarise(
+    n_nachweis = n(),
+    minimum = min(Ergebnis_num, na.rm = TRUE),
+    q1 = quantile(Ergebnis_num, 0.25, na.rm = TRUE),
+    median = median(Ergebnis_num, na.rm = TRUE),
+    mean = mean(Ergebnis_num, na.rm = TRUE),
+    sd = sd(Ergebnis_num, na.rm = TRUE),
+    q3 = quantile(Ergebnis_num, 0.75, na.rm = TRUE),
+    maximum = max(Ergebnis_num, na.rm = TRUE)
+  )
+} else {
+  erg_summary <- tibble(n_nachweis = 0L, minimum = NA_real_, q1 = NA_real_, median = NA_real_, mean = NA_real_, sd = NA_real_, q3 = NA_real_, maximum = NA_real_)
+}
+write_csv(erg_summary, file.path(out_dir, "eda_erg_summary.csv"))
+
+plot_df <- df %>% mutate(Pruefmerkmal = forcats::fct_reorder(Pruefmerkmal, Ergebnis_plot, .desc = TRUE))
+
+title_txt <- "Aktivität der Radionuklide in der Probe und nicht nachweisbare Werte"
+subtitle_txt <- paste0(
+  "IMIS-Routinemessprogramm, Schweinefiletköpfe (26.02.2020) | Prüfkriterien: ",
+  nrow(plot_df), 
+  " | Nachgewiesen: ", sum(plot_df$Status == "Nachweis"),
+  " | Nicht nachweisbar: ", sum(plot_df$Status == "Nicht nachweisbar")
+)
+
+y_lab <- paste0("Aktivität [", unit_text, "]")
+
+p <- ggplot(plot_df, aes(x = Pruefmerkmal, y = Ergebnis_plot, fill = Status)) +
+  geom_col(width = 0.7, color = NA) +
+  coord_flip() +
+  scale_fill_manual(values = c("Nicht nachweisbar" = "#B0B0B0", "Nachweis" = "#1F77B4")) +
+  labs(title = title_txt, subtitle = subtitle_txt, x = "Prüfmerkmal", y = y_lab, fill = "Messstatus", caption = "Nicht nachweisbare Werte (n.n.) werden als 0 dargestellt.") +
+  scale_y_continuous(labels = scales::label_number(accuracy = 0.001, big.mark = ".", decimal.mark = ","), expand = expansion(mult = c(0.02, 0.06))) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "top",
+    panel.grid.major.y = element_blank(),
+    axis.text.y = element_text(size = 8),
+    plot.title = element_text(face = "bold"),
+    plot.caption = element_text(color = "#555555")
+  ) +
+  geom_text(
+    data = subset(plot_df, Ergebnis_plot > 0),
+    aes(label = scales::number(Ergebnis_plot, accuracy = 0.001, big.mark = ".", decimal.mark = ",")),
+    hjust = -0.1, size = 3, color = "#1F77B4"
+  )
+
+outfile <- file.path(out_dir, "0_radionuklide_aktivitaet.png")
+ggsave(filename = outfile, plot = p, width = 12, height = 9, dpi = 300)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie verteilt sich die Anzahl der Messungen auf die verschiedenen Einheiten innerhalb der Probe?' visualization="Balkendiagramm (Häufigkeitsverteilung) der Spalte 'Einheit'." rationale="Da der Datensatz sowohl radiochemische Messwerte als auch technische Parameter wie die Messzeit enthält, hilft eine Analyse der Spalte 'Einheit', die Struktur der Untersuchung zu verstehen. Es zeigt auf, wie viele der 40 Einträge in 'Bq/kg(FM)' (Aktivität) und wie viele in 's' (Sekunden, für die Messzeit) vorliegen, was die Vollständigkeit der technischen Dokumentation unterstreicht."
+
+-> Code:
+options(encoding = "UTF-8")
+packages <- c("readr","dplyr","ggplot2","stringr","forcats","scales","tibble","tidyr")
+for (p in packages) { if (!requireNamespace(p, quietly = TRUE)) install.packages(p, dependencies = TRUE) }
+invisible(lapply(packages, library, character.only = TRUE))
+
+data_path <- "./src/resources/data/study\\139606\\dataset.csv"
+if (!file.exists(data_path)) data_path <- "./src/resources/data/study/139606/dataset.csv"
+
+out_dir <- file.path(".", "src", "resources", "output", "139606")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+ df <- readr::read_csv(
+  file = data_path,
+  locale = locale(encoding = "UTF-8"),
+  col_types = cols(.default = col_character())
+)
+
+df <- df %>% mutate(across(everything(), ~str_squish(.x)))
+
+missingness <- df %>% summarise(across(everything(), ~sum(is.na(.x) | .x == ""))) %>% pivot_longer(everything(), names_to = "Spalte", values_to = "Anzahl_fehlend") %>% mutate(Anzahl_gesamteintraege = nrow(df), Anteil_fehlend = ifelse(Anzahl_gesamteintraege > 0, Anzahl_fehlend/Anzahl_gesamteintraege, NA_real_))
+readr::write_csv(missingness, file.path(out_dir, "eda_missingness.csv"))
+
+df <- df %>% mutate(
+  Ergebnis_num = if_else(str_to_lower(Ergebnis) %in% c("n.n.","n.n","nn","nicht nachweisbar"), NA_real_, suppressWarnings(as.numeric(str_replace_all(Ergebnis, ",", ".")))),
+  Hauptprobenummer_num = suppressWarnings(as.numeric(str_replace_all(Hauptprobenummer, ",", ".")))
+)
+
+num_df <- df %>% select(ends_with("_num"))
+if (ncol(num_df) > 0) {
+  num_summary <- num_df %>% pivot_longer(everything(), names_to = "Variable", values_to = "value") %>% group_by(Variable) %>% summarise(n = n(), n_na = sum(is.na(value)), n_non_na = sum(!is.na(value)), n_unique = n_distinct(value, na.rm = TRUE), mean = mean(value, na.rm = TRUE), sd = sd(value, na.rm = TRUE), min = suppressWarnings(min(value, na.rm = TRUE)), q1 = suppressWarnings(quantile(value, 0.25, na.rm = TRUE)), median = median(value, na.rm = TRUE), q3 = suppressWarnings(quantile(value, 0.75, na.rm = TRUE)), max = suppressWarnings(max(value, na.rm = TRUE)), .groups = "drop")
+  readr::write_csv(num_summary, file.path(out_dir, "eda_numeric_summary.csv"))
+  num_df_nzv <- num_df %>% select(where(function(x) n_distinct(x, na.rm = TRUE) > 1))
+  if (ncol(num_df_nzv) >= 2) {
+    corm <- suppressWarnings(cor(num_df_nzv, use = "pairwise.complete.obs"))
+    cor_tbl <- as_tibble(corm, rownames = "Variable")
+    readr::write_csv(cor_tbl, file.path(out_dir, "eda_correlations.csv"))
+  }
+}
+
+cat_cols <- df %>% select(where(~!is.numeric(.)))
+if (ncol(cat_cols) > 0) {
+  cat_levels <- tibble(Variable = names(cat_cols), Anzahl_Ausprägungen = sapply(cat_cols, function(x) n_distinct(x, na.rm = TRUE)))
+  readr::write_csv(cat_levels, file.path(out_dir, "eda_categorical_levels.csv"))
+}
+
+plot_df <- df %>% mutate(Einheit = if_else(is.na(Einheit) | Einheit == "", NA_character_, Einheit), Einheit_f = forcats::fct_explicit_na(forcats::fct_infreq(Einheit), "Fehlend")) %>% count(Einheit_f, name = "Anzahl") %>% arrange(desc(Anzahl))
+
+p <- ggplot(plot_df, aes(x = Einheit_f, y = Anzahl)) + geom_col(width = 0.7, fill = "#2C7FB8") + geom_text(aes(label = Anzahl), vjust = -0.3, size = 3.8) + labs(title = paste0("Häufigkeitsverteilung der Einheiten in der Probe (n=", nrow(df), ")"), subtitle = "Anzahl der Messungen pro Einheit", x = "Einheit", y = "Anzahl Messungen") + theme_minimal(base_size = 12) + theme(plot.title = element_text(face = "bold"), axis.text.x = element_text(angle = 15, hjust = 1), legend.position = "none") + expand_limits(y = max(plot_df$Anzahl, na.rm = TRUE) * 1.15)
+
+ggsave(filename = file.path(out_dir, "1_einheiten_haeufigkeit.png"), plot = p, width = 8, height = 5, dpi = 300)
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Welche spezifischen Prüfmerkmale wurden im Rahmen des IMIS Routinemessprogramms für die Schweinefiletköpfe untersucht?' visualization="Tabelle mit den Spalten 'Pruefmerkmal', 'Ergebnis' und 'Einheit', gefiltert nach der 'Hauptprobenummer' 202000065." rationale="Da es sich um eine Wide-to-Long-Transformation handelt, ist es für den Nutzer wichtig zu sehen, welche Isotope genau Teil des Spektrums waren. Die Verknüpfung von 'Bezeichnung' (Schweinefiletköpfe) mit der Liste der 'Pruefmerkmal'-Einträge gibt einen schnellen Überblick über den Umfang der staatlichen Strahlenschutzvorsorge für dieses spezifische Lebensmittel."
+
+-> Code:
+options(encoding = "UTF-8")
+req_pkgs <- c("dplyr","readr","tidyr","stringr","ggplot2","gridExtra","scales")
+inst_pkgs <- rownames(installed.packages())
+for(p in req_pkgs){if(!(p %in% inst_pkgs)) install.packages(p, repos = "https://cloud.r-project.org")}
+library(dplyr)
+library(readr)
+library(tidyr)
+library(stringr)
+library(ggplot2)
+library(gridExtra)
+library(scales)
+input_path <- file.path(".","src","resources","data","study","139606","dataset.csv")
+output_dir <- file.path(".","src","resources","output","139606")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+df <- readr::read_csv(
+  file = input_path,
+  locale = readr::locale(encoding = "UTF-8"),
+  col_types = readr::cols(.default = readr::col_character()),
+  na = c("", "NA", "NaN")
+)
+if(!("Hauptprobenummer" %in% names(df))) stop("Spalte 'Hauptprobenummer' fehlt im Datensatz.")
+if(!("Pruefmerkmal" %in% names(df))) stop("Spalte 'Pruefmerkmal' fehlt im Datensatz.")
+if(!("Ergebnis" %in% names(df))) stop("Spalte 'Ergebnis' fehlt im Datensatz.")
+if(!("Einheit" %in% names(df))) stop("Spalte 'Einheit' fehlt im Datensatz.")
+df <- df %>% mutate(
+  Hauptprobenummer = suppressWarnings(as.numeric(Hauptprobenummer)),
+  Ergebnis_num = suppressWarnings(readr::parse_number(Ergebnis, locale = readr::locale(decimal_mark = ",", grouping_mark = ".")))
+)
+eda_missing_share <- sapply(names(df), function(nm){x <- df[[nm]]; mean(is.na(x) | (is.character(x) & trimws(x) == ""))})
+eda_numeric_stats <- df %>% summarise(
+  anzahl_zeilen = n(),
+  anzahl_numeric = sum(!is.na(Ergebnis_num)),
+  anteil_numeric = mean(!is.na(Ergebnis_num)),
+  minimum = suppressWarnings(min(Ergebnis_num, na.rm = TRUE)),
+  q1 = suppressWarnings(quantile(Ergebnis_num, 0.25, na.rm = TRUE, type = 7)),
+  median = suppressWarnings(median(Ergebnis_num, na.rm = TRUE)),
+  mean = suppressWarnings(mean(Ergebnis_num, na.rm = TRUE)),
+  q3 = suppressWarnings(quantile(Ergebnis_num, 0.75, na.rm = TRUE, type = 7)),
+  maximum = suppressWarnings(max(Ergebnis_num, na.rm = TRUE)),
+  sd = suppressWarnings(sd(Ergebnis_num, na.rm = TRUE))
+)
+ziel_hpn <- 202000065
+viz_tab <- df %>%
+  filter(Hauptprobenummer == ziel_hpn) %>%
+  select(Pruefmerkmal, Ergebnis, Einheit) %>%
+  mutate(
+    Pruefmerkmal = as.character(Pruefmerkmal),
+    Ergebnis = as.character(Ergebnis),
+    Einheit = as.character(Einheit)
+  ) %>%
+  arrange(Pruefmerkmal)
+if(nrow(viz_tab) == 0) stop("Für die angegebene Hauptprobenummer wurden keine Daten gefunden.")
+colnames(viz_tab) <- c("Pruefmerkmal","Ergebnis","Einheit")
+base_size <- 11
+theme_tbl <- gridExtra::ttheme_minimal(
+  base_size = base_size,
+  core = list(fg_params = list(fontface = "plain", col = "#1a1a1a"), bg_params = list(fill = c("#FFFFFF","#F7F9FB"))),
+  colhead = list(fg_params = list(fontface = "bold", col = "#1a1a1a"), bg_params = list(fill = "#E6EEF8"))
+)
+TG <- gridExtra::tableGrob(viz_tab, rows = NULL, theme = theme_tbl)
+row_fill <- rep(c("#FFFFFF","#F7F9FB"), length.out = nrow(viz_tab))
+for(i in seq_len(nrow(viz_tab))){
+  for(j in seq_len(ncol(viz_tab))){
+    idx <- which(TG$layout$name == paste0("core-",i,"-",j))
+    if(length(idx) == 1){
+      TG$grobs[[idx]]$gp$fill <- row_fill[i]
+    }
+  }
+}
+Titel <- grid::textGrob(
+  "Prüfmerkmale, Ergebnisse und Einheiten – Schweinefiletköpfe (Hauptprobenummer 202000065)",
+  gp = grid::gpar(fontsize = 15, fontface = "bold", col = "#1a1a1a"),
+  x = 0, y = 0.5, just = c("left","center")
+)
+Untertitel <- grid::textGrob(
+  "IMIS Routinemessprogramm – Gammaspektrometrie",
+  gp = grid::gpar(fontsize = 11, fontface = "plain", col = "#3a3a3a"),
+  x = 0, y = 0.5, just = c("left","center")
+)
+header <- gridExtra::arrangeGrob(Titel, Untertitel, heights = c(0.6, 0.4))
+G <- gridExtra::arrangeGrob(header, TG, heights = c(0.18, 0.82))
+nr <- nrow(viz_tab)
+height_in <- max(6, 2 + 0.25 * nr)
+width_in <- 10
+outfile <- file.path(output_dir, "2_pruefmerkmale_tabelle.png")
+ggplot2::ggsave(filename = outfile, plot = G, width = width_in, height = height_in, units = "in", dpi = 300, device = "png", limitsize = FALSE)
+
+-> SEVQ:
+
+

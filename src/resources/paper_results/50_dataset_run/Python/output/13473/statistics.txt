@@ -1,0 +1,575 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\13473\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 10:54:42
+Total Duration: 1170.07 seconds
+Total Token Usage: 111424 tokens
+Total Costs: $0.4576
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0221 seconds
+
+Method: analyse_dataset
+  Duration: 0.0191 seconds
+
+Method: analyse_metadata
+  Duration: 0.0223 seconds
+
+Method: llm_generate_summary
+  Duration: 220.6958 seconds
+
+Method: llm_generate_goals
+  Duration: 4.0711 seconds
+
+Method: llm_generate_python_code
+  Duration: 397.2974 seconds
+
+Method: test_generated_code
+  Duration: 10.4867 seconds
+
+Method: llm_regenerate_code
+  Duration: 29.1261 seconds
+
+Method: test_generated_code
+  Duration: 10.5152 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 497.8105 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4687 tokens
+  Costs total: $0.0038
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1561 tokens
+  Costs total: $0.0019
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6633 tokens
+  Costs total: $0.0485
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7086 tokens
+  Costs total: $0.0530
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6240 tokens
+  Costs total: $0.0443
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 324 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 324 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 324 tokens
+  Costs total: $0.0009
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3108 tokens
+  Costs total: $0.0049
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3666 tokens
+  Costs total: $0.0056
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3099 tokens
+  Costs total: $0.0049
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 338 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6310 tokens
+  Costs total: $0.0417
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2732 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3075 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4524 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5591 tokens
+  Costs total: $0.0332
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7061 tokens
+  Costs total: $0.0478
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2988 tokens
+  Costs total: $0.0100
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3594 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5093 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5661 tokens
+  Costs total: $0.0324
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7415 tokens
+  Costs total: $0.0526
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2803 tokens
+  Costs total: $0.0093
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3157 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 7575 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5790 tokens
+  Costs total: $0.0356
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verteilt sich die Bevölkerung der Stadt Hof nach Geschlecht?' visualization="Balkendiagramm mit '2_variable_attribute_label' auf der x-Achse (gefiltert auf 'männlich' und 'weiblich') und 'value' auf der y-Achse." rationale="Ein Balkendiagramm ist die effektivste Methode, um die absoluten Zahlen zwischen den Kategorien 'männlich' und 'weiblich' zu vergleichen. Durch die Verwendung von '2_variable_attribute_label' als Kategorie und 'value' als Messwert wird sofort ersichtlich, welche Gruppe in der Stadt Hof überwiegt."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+from matplotlib.ticker import FuncFormatter, MaxNLocator
+
+try:
+    input_path = './src/resources/data/study/13473/dataset.csv'
+    output_dir = './src/resources/output/13473'
+    plot_name = '0_bevoelkerung_nach_geschlecht_hof.png'
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Behebung des UnicodeDecodeError: 'iso-8859-1' oder 'latin1' sind bei deutschen Datensätzen (Umlaute wie ö, ä, ü) 
+    # oft die richtige Wahl, wenn 'utf-8' fehlschlägt.
+    try:
+        df = pd.read_csv(input_path, sep=';', encoding='utf-8')
+    except UnicodeDecodeError:
+        df = pd.read_csv(input_path, sep=';', encoding='iso-8859-1')
+
+    if 'time' in df.columns:
+        df['time'] = pd.to_datetime(df['time'], errors='coerce')
+    if 'value' in df.columns:
+        df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+    df_filtered = df.copy()
+    
+    # Filterung auf Stadt Hof (Krfr.St)
+    # Wir suchen in der Spalte '1_variable_attribute_label' nach 'Hof'
+    if '1_variable_attribute_label' in df_filtered.columns:
+        df_filtered = df_filtered[df_filtered['1_variable_attribute_label'].astype(str).str.contains('Hof', na=False)]
+
+    # Filterung auf Geschlecht
+    if '2_variable_label' in df_filtered.columns:
+        df_filtered = df_filtered[df_filtered['2_variable_label'].astype(str).str.strip().str.lower() == 'geschlecht']
+
+    # Kategorien sicherstellen
+    categories = ['männlich', 'weiblich']
+    if '2_variable_attribute_label' in df_filtered.columns:
+        plot_df = df_filtered[df_filtered['2_variable_attribute_label'].astype(str).str.strip().isin(categories)].copy()
+    else:
+        raise ValueError('Spalte 2_variable_attribute_label fehlt.')
+
+    if plot_df.empty:
+        raise ValueError('Keine Daten für die Kategorien "männlich" und "weiblich" in Hof gefunden.')
+
+    # Aggregation (falls mehrere Zeitpunkte vorhanden sind, nehmen wir den aktuellsten)
+    if 'time' in plot_df.columns and plot_df['time'].notna().any():
+        latest_time = plot_df['time'].max()
+        plot_df = plot_df[plot_df['time'] == latest_time]
+    
+    plot_df = plot_df.groupby('2_variable_attribute_label', as_index=False)['value'].sum()
+    plot_df = plot_df.set_index('2_variable_attribute_label').reindex(categories).reset_index()
+
+    # Visualisierung
+    sns.set_theme(style='whitegrid', context='talk')
+    plt.rcParams['axes.unicode_minus'] = False
+
+    fig, ax = plt.subplots(figsize=(10, 7), dpi=150)
+    palette = {'männlich': '#377eb8', 'weiblich': '#e41a1c'}
+    
+    sns.barplot(data=plot_df, x='2_variable_attribute_label', y='value', ax=ax, palette=palette, edgecolor='black')
+
+    def german_thousands(x, pos):
+        return f"{int(x):,}".replace(',', '.')
+
+    ax.yaxis.set_major_formatter(FuncFormatter(german_thousands))
+    ax.yaxis.set_major_locator(MaxNLocator(integer=True))
+
+    # Labels hinzufügen
+    total = plot_df['value'].sum()
+    for i, row in plot_df.iterrows():
+        val = row['value']
+        if pd.notna(val):
+            pct = (val / total * 100) if total > 0 else 0
+            label = f"{int(val):,}".replace(',', '.') + f"\n({pct:.1f}%)"
+            ax.text(i, val + (plot_df['value'].max() * 0.02), label, ha='center', va='bottom', fontsize=12, fontweight='bold')
+
+    # Titel und Achsen
+    date_label = ""
+    if 'time' in df_filtered.columns and df_filtered['time'].notna().any():
+        date_label = f" (Stand: {df_filtered['time'].max().strftime('%d.%m.%Y')})"
+
+    ax.set_title(f'Bevölkerungsverteilung in Hof nach Geschlecht{date_label}', fontsize=16, pad=20)
+    ax.set_xlabel('Geschlecht', fontsize=14)
+    ax.set_ylabel('Anzahl Personen', fontsize=14)
+    ax.set_ylim(0, plot_df['value'].max() * 1.2)
+
+    sns.despine()
+    plt.tight_layout()
+
+    output_path = os.path.join(output_dir, plot_name)
+    fig.savefig(output_path, dpi=300)
+    plt.close(fig)
+
+except Exception as e:
+    print(f"Fehler aufgetreten: {e}")
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie hoch ist die Gesamtbevölkerung der Stadt Hof zum Stichtag?' visualization="KPI-Metrik (Indikator) des Feldes 'value', gefiltert nach '2_variable_attribute_label' = 'insgesamt'." rationale="Ein KPI-Widget oder eine einfache Kennzahl ist ideal, um den wichtigsten Datenpunkt des Datensatzes – die Gesamtbevölkerung – hervorzuheben. Hierfür wird der 'value' genutzt, wobei '2_variable_attribute_label' auf 'insgesamt' gefiltert wird, um die Summe zum Zeitpunkt 'time' (31.12.2024) anzuzeigen."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set theme
+sns.set_theme(style="whitegrid", font_scale=1.1)
+
+# File path handling
+input_path = './src/resources/data/study/13473/dataset.csv'
+
+# The error 'utf-8' codec can't decode byte 0xf6 (ö) suggests the file is likely encoded in 'latin-1' or 'iso-8859-1'
+# common for German datasets (Umlaute like ö, ä, ü).
+encodings_to_try = ['utf-8', 'latin-1', 'iso-8859-1', 'cp1252']
+df = None
+
+for enc in encodings_to_try:
+    try:
+        df = pd.read_csv(input_path, sep=';', encoding=enc)
+        print(f"Successfully loaded with encoding: {enc}")
+        break
+    except Exception:
+        continue
+
+if df is None:
+    raise SystemExit("Could not read the CSV file with any of the attempted encodings.")
+
+# Data Cleaning
+for col in df.columns:
+    if df[col].dtype == object:
+        df[col] = df[col].astype(str).str.strip()
+
+# Parsing time and value
+if 'time' in df.columns:
+    df['time_parsed'] = pd.to_datetime(df['time'], errors='coerce')
+else:
+    df['time_parsed'] = pd.NaT
+
+if 'value' in df.columns:
+    # Handle German decimal comma if present, then convert to numeric
+    if df['value'].dtype == object:
+        df['value_num'] = pd.to_numeric(df['value'].str.replace('.', '').str.replace(',', '.'), errors='coerce')
+    else:
+        df['value_num'] = pd.to_numeric(df['value'], errors='coerce')
+else:
+    df['value_num'] = np.nan
+
+# Column mapping based on the dataset structure
+label_col = '2_variable_attribute_label'
+place_label_col = '1_variable_attribute_label'
+
+if label_col not in df.columns or place_label_col not in df.columns:
+    # Fallback to find columns if names differ slightly
+    label_col = [c for c in df.columns if 'variable_attribute_label' in c][-1]
+    place_label_col = [c for c in df.columns if 'variable_attribute_label' in c][0]
+
+# Filtering for "Hof (Krfr.St)" and "insgesamt"
+# We use case-insensitive matching and strip whitespace
+df['label2_norm'] = df[label_col].fillna('').str.lower()
+df['place_norm'] = df[place_label_col].fillna('').str.lower()
+
+target_place = 'hof (krfr.st)'
+target_label = 'insgesamt'
+
+# Get the latest available date
+latest_date = df['time_parsed'].max()
+
+# Filter the dataframe
+mask = (df['place_norm'] == target_place) & \
+       (df['label2_norm'] == target_label) & \
+       (df['time_parsed'] == latest_date)
+
+kpi_df = df[mask]
+
+if kpi_df.empty:
+    # Fallback: if specific place name fails, try just "hof"
+    mask_fallback = (df['place_norm'].str.contains('hof')) & \
+                    (df['label2_norm'] == target_label) & \
+                    (df['time_parsed'] == latest_date)
+    kpi_df = df[mask_fallback]
+
+if kpi_df.empty:
+    raise SystemExit('KPI konnte nicht ermittelt werden (keine Daten für Filterkriterien gefunden).')
+
+kpi_value = kpi_df['value_num'].iloc[0]
+kpi_time = kpi_df['time_parsed'].iloc[0]
+
+# Formatting
+def fmt_de_int(x):
+    try:
+        return f"{int(round(float(x))):,}".replace(',', '.')
+    except:
+        return str(x)
+
+value_str = fmt_de_int(kpi_value)
+date_str = kpi_time.strftime('%d.%m.%Y') if pd.notna(kpi_time) else ''
+
+# Visualization
+plt.rcParams['font.family'] = 'DejaVu Sans'
+fig, ax = plt.subplots(figsize=(8, 4.5), dpi=150)
+fig.patch.set_facecolor('white')
+ax.axis('off')
+
+# Title
+ax.text(0.5, 0.80, 'Gesamtbevölkerung der Stadt Hof', ha='center', va='center', 
+        fontsize=18, fontweight='bold', color='#1f3b4d', transform=ax.transAxes)
+
+# Main KPI Value
+ax.text(0.5, 0.48, value_str, ha='center', va='center', 
+        fontsize=60, fontweight='bold', color='#0b6efd', transform=ax.transAxes)
+
+# Subtext
+subtext = 'Personen'
+if date_str:
+    subtext += f' • Stand: {date_str}'
+ax.text(0.5, 0.25, subtext, ha='center', va='center', 
+        fontsize=14, color='#3d5466', transform=ax.transAxes)
+
+# Footer
+ax.text(0.5, 0.08, 'Quelle: Amtliche Fortschreibung des Bevölkerungsstandes', 
+        ha='center', va='center', fontsize=9, color='#6b7c8a', transform=ax.transAxes)
+
+# Save output
+out_dir = os.path.join('.', 'src', 'resources', 'output', '13473')
+os.makedirs(out_dir, exist_ok=True)
+out_path = os.path.join(out_dir, '1_kpi_gesamtbevoelkerung.png')
+plt.savefig(out_path, bbox_inches='tight', facecolor=fig.get_facecolor())
+plt.close(fig)
+
+print(f"Visualization saved to {out_path}")
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Gibt es Unterschiede in den gemeldeten Bevölkerungszahlen zwischen der Kreis- und Gemeindeebene?' visualization="Gruppiertes Balkendiagramm mit '1_variable_label' auf der x-Achse und 'value' auf der y-Achse, gefiltert auf einen spezifischen Wert von '2_variable_attribute_label'." rationale="Da der Datensatz laut Beschreibung redundant auf zwei Ebenen ('KREISE' und 'GEMEIN') strukturiert ist, hilft ein gruppiertes Balkendiagramm dabei, die Konsistenz der Daten zu prüfen. Durch den Vergleich von '1_variable_label' und 'value' (bei gleichem Geschlechtsfilter) kann der Nutzer verifizieren, dass die Werte für die Stadt Hof auf beiden Verwaltungsebenen identisch sind."
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+try:
+    input_path = os.path.join('.', 'src', 'resources', 'data', 'study', '13473', 'dataset.csv')
+    output_dir = os.path.join('.', 'src', 'resources', 'output', '13473')
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Behebung des UnicodeDecodeError: Versuche 'latin-1' (ISO-8859-1), da 'utf-8' fehlschlug
+    try:
+        df = pd.read_csv(input_path, sep=';', encoding='utf-8')
+    except UnicodeDecodeError:
+        df = pd.read_csv(input_path, sep=';', encoding='latin-1')
+
+    # Datenbereinigung
+    if 'value' in df.columns:
+        df['value'] = pd.to_numeric(df['value'], errors='coerce')
+    
+    # Fehlende Labels in 2_variable_attribute_label füllen
+    if '2_variable_attribute_label' in df.columns:
+        df['2_variable_attribute_label'] = df['2_variable_attribute_label'].fillna('Insgesamt')
+    
+    # Zeitfilterung (Neuester Stand)
+    df_time_filtered = df.copy()
+    if 'time' in df.columns:
+        latest_time = df['time'].max()
+        df_time_filtered = df[df['time'] == latest_time].copy()
+
+    # Filterung auf Hof (Krfr.St)
+    df_city = df_time_filtered.copy()
+    if '1_variable_attribute_label' in df_time_filtered.columns:
+        df_city = df_time_filtered[df_time_filtered['1_variable_attribute_label'].str.contains('Hof', na=False)].copy()
+        if df_city.empty:
+            df_city = df_time_filtered.copy()
+
+    # Auswahl des Attributs für den Vergleich (z.B. 'Insgesamt')
+    preferred_attributes = ['Insgesamt', 'männlich', 'weiblich']
+    available_attributes = df_city['2_variable_attribute_label'].unique().tolist() if '2_variable_attribute_label' in df_city.columns else []
+    
+    target_attr = None
+    for a in preferred_attributes:
+        if a in available_attributes:
+            target_attr = a
+            break
+    if target_attr is None and len(available_attributes) > 0:
+        target_attr = available_attributes[0]
+
+    if target_attr is None:
+        raise ValueError('Keine gültigen Werte in 2_variable_attribute_label gefunden.')
+
+    # Daten für Plot vorbereiten
+    df_plot = df_city[df_city['2_variable_attribute_label'] == target_attr].copy()
+    df_plot = df_plot.dropna(subset=['value'])
+
+    if df_plot.empty:
+        raise ValueError('Keine Daten für die gewählte Filterung verfügbar.')
+
+    # Gruppierung nach Ebene (KREISE vs GEMEIN)
+    group_cols = ['1_variable_label']
+    agg = df_plot.groupby(group_cols, as_index=False)['value'].sum()
+
+    # Visualisierung
+    sns.set_theme(style='whitegrid', context='talk')
+    fig, ax = plt.subplots(figsize=(10, 6), dpi=150)
+    
+    palette = sns.color_palette('viridis', n_colors=len(agg))
+    sns.barplot(data=agg, x='1_variable_label', y='value', ax=ax, palette=palette, hue='1_variable_label', legend=False)
+
+    # Formatter für Tausendertrennzeichen
+    def thousands_formatter(x, pos):
+        return f"{int(x):,}".replace(',', ' ')
+
+    ax.yaxis.set_major_formatter(FuncFormatter(thousands_formatter))
+    ax.set_xlabel('Verwaltungsebene (1_variable_label)')
+    
+    unit = df['value_unit'].iloc[0] if 'value_unit' in df.columns else 'Anzahl'
+    ax.set_ylabel(f'Bevölkerung ({unit})')
+    
+    title_time = df_plot['time'].iloc[0] if 'time' in df_plot.columns else ''
+    ax.set_title(f'Vergleich Kreis- vs. Gemeindeebene: Hof ({target_attr})\nStand: {title_time}', pad=20)
+
+    # Werte über den Balken anzeigen
+    for p in ax.patches:
+        h = p.get_height()
+        if np.isfinite(h):
+            ax.annotate(f"{int(h):,}".replace(',', ' '), 
+                        (p.get_x() + p.get_width() / 2., h), 
+                        ha='center', va='bottom', fontsize=12, xytext=(0, 5), 
+                        textcoords='offset points')
+
+    plt.tight_layout()
+    output_file = os.path.join(output_dir, '2_vergleich_kreis_gemeinde_balken.png')
+    fig.savefig(output_file, dpi=300)
+    plt.close(fig)
+
+except Exception as e:
+    print(f"Fehler aufgetreten: {str(e)}")
+    sys.exit(1)
+
+
+-> SEVQ:
+
+

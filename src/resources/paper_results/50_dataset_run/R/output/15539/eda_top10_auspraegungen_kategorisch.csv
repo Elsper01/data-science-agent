@@ -1,0 +1,21 @@
+variable,level,n,prop
+statistics_label,Monatserhebung im Tourismus,66,1
+time_code,JAHR,66,1
+time_label,Berichtsjahr,66,1
+1_variable_code,GEMEIN,66,1
+1_variable_label,Gemeinden (einschl. gemeindefreie Gebiete),66,1
+1_variable_attribute_code,09472116,66,1
+1_variable_attribute_label,"Bad Berneck i.Fichtelgebirge, St",66,1
+2_variable_code,HERKG1,66,1
+2_variable_label,Herkunft der Gäste,66,1
+2_variable_attribute_code,AUSLAND,22,0.3333333333333333
+2_variable_attribute_code,INLAND,22,0.3333333333333333
+2_variable_attribute_code,NA,22,0.3333333333333333
+2_variable_attribute_label,Ausland,22,0.3333333333333333
+2_variable_attribute_label,Inland,22,0.3333333333333333
+2_variable_attribute_label,Insgesamt,22,0.3333333333333333
+value_unit,Anzahl,66,1
+value_variable_code,GANK03,33,0.5
+value_variable_code,GUEB03,33,0.5
+value_variable_label,Gästeankünfte in Beherbergungsbetrieben,33,0.5
+value_variable_label,Gästeübernachtungen in Beherbergungsbetrieben,33,0.5

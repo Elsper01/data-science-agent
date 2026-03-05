@@ -1,0 +1,13 @@
+,dtype,n_unique,n_missing
+FID,object,167,0
+id,object,1,0
+kenn,int64,1,0
+name,object,1,0
+geom,object,1,0
+start_measure,datetime64[ns],167,0
+end_measure,datetime64[ns],167,0
+value,float64,41,0
+unit,object,1,0
+validated,int64,1,0
+nuclide,object,1,0
+duration,object,1,0

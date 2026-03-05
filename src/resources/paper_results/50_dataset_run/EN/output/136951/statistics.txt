@@ -1,0 +1,541 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\136951\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 15:48:41
+Total Duration: 1020.06 seconds
+Total Token Usage: 103267 tokens
+Total Costs: $0.4245
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0117 seconds
+
+Method: analyse_dataset
+  Duration: 0.0128 seconds
+
+Method: analyse_metadata
+  Duration: 0.0214 seconds
+
+Method: llm_generate_summary
+  Duration: 162.2105 seconds
+
+Method: llm_generate_goals
+  Duration: 3.7683 seconds
+
+Method: llm_generate_python_code
+  Duration: 330.6708 seconds
+
+Method: test_generated_code
+  Duration: 9.9540 seconds
+
+Method: llm_regenerate_code
+  Duration: 28.1860 seconds
+
+Method: test_generated_code
+  Duration: 8.2275 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 477.0003 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4600 tokens
+  Costs total: $0.0048
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1652 tokens
+  Costs total: $0.0019
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5220 tokens
+  Costs total: $0.0392
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6357 tokens
+  Costs total: $0.0506
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6373 tokens
+  Costs total: $0.0508
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 941 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 941 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 953 tokens
+  Costs total: $0.0024
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3110 tokens
+  Costs total: $0.0038
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 5102 tokens
+  Costs total: $0.0073
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4170 tokens
+  Costs total: $0.0057
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6224 tokens
+  Costs total: $0.0473
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2140 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2703 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4425 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4057 tokens
+  Costs total: $0.0249
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6098 tokens
+  Costs total: $0.0388
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2890 tokens
+  Costs total: $0.0098
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3659 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4892 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5095 tokens
+  Costs total: $0.0278
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6428 tokens
+  Costs total: $0.0452
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2537 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3212 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4012 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4720 tokens
+  Costs total: $0.0274
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What are the specific parameters (Pruefmerkmal) measured for this sample and their corresponding results?' visualization="A bar chart or table showing 'Pruefmerkmal' on the x-axis and 'Ergebnis' as the value/label." rationale="This goal helps the user understand the structure of the dataset by showing that for a single sample (Hauptprobenummer), multiple types of data are recorded: the actual radiological activity and the technical measurement duration. Using a table or bar chart to compare 'Pruefmerkmal' and 'Ergebnis' clarifies what was actually tested."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+
+# The error was a UnicodeDecodeError with 'utf-8'. 
+# Common encodings for German/European datasets are 'latin1' (ISO-8859-1) or 'cp1252'.
+data_path = r'./src/resources/data/study/136951/dataset.csv'
+
+try:
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+except UnicodeDecodeError:
+    try:
+        df = pd.read_csv(data_path, sep=',', encoding='latin1')
+    except Exception:
+        df = pd.read_csv(data_path, sep=',', encoding='cp1252')
+
+# Clean string columns
+for c in df.select_dtypes(include=['object']).columns:
+    df[c] = df[c].astype(str).str.strip()
+
+# Prepare data for visualization
+# We want to show Pruefmerkmal and Ergebnis (with Einheit if available)
+viz_cols = ['Pruefmerkmal', 'Ergebnis', 'Einheit']
+existing_cols = [c for c in viz_cols if c in df.columns]
+viz_df = df[existing_cols].copy()
+
+# Combine Ergebnis and Einheit for better display
+if 'Ergebnis' in viz_df.columns:
+    if 'Einheit' in viz_df.columns:
+        viz_df['Ergebnis_Display'] = viz_df.apply(
+            lambda row: f"{row['Ergebnis']} {row['Einheit']}" if pd.notna(row['Einheit']) and str(row['Einheit']).lower() != 'nan' else str(row['Ergebnis']),
+            axis=1
+        )
+    else:
+        viz_df['Ergebnis_Display'] = viz_df['Ergebnis'].astype(str)
+else:
+    viz_df['Ergebnis_Display'] = "N/A"
+
+if 'Pruefmerkmal' not in viz_df.columns:
+    viz_df['Pruefmerkmal'] = 'Unbekannt'
+
+# Create a table visualization
+fig, ax = plt.subplots(figsize=(10, 2 + 0.6 * len(viz_df)), dpi=150)
+ax.axis('off')
+
+col_labels = ['Prüfmerkmal', 'Ergebnis']
+cell_text = viz_df[['Pruefmerkmal', 'Ergebnis_Display']].values.tolist()
+
+table = ax.table(
+    cellText=cell_text, 
+    colLabels=col_labels, 
+    loc='center', 
+    cellLoc='left',
+    colWidths=[0.5, 0.4]
+)
+
+table.auto_set_font_size(False)
+table.set_fontsize(11)
+table.scale(1.2, 1.8)
+
+# Style the header
+for (row, col), cell in table.get_celld().items():
+    if row == 0:
+        cell.set_text_props(weight='bold', color='white')
+        cell.set_facecolor('#40466e')
+
+plt.title('Gemessene Prüfmerkmale und Ergebnisse\n(Hauptprobenummer 201700572)', pad=20, fontsize=14, fontweight='bold')
+
+# Save the output
+out_dir = r'./src/resources/output/136951'
+os.makedirs(out_dir, exist_ok=True)
+out_path = os.path.join(out_dir, '0_pruefmerkmal_ergebnisse.png')
+plt.savefig(out_path, bbox_inches='tight')
+plt.close(fig)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What was the measured activity of Radon-222 in the drinking water sample?' visualization="A summary table or indicator card displaying 'Pruefmerkmal', 'Ergebnis', and 'Einheit' filtered for the isotope record." rationale="The primary purpose of this dataset is radiological monitoring. By looking at 'Pruefmerkmal' (specifically Radon-222) and its 'Ergebnis' and 'Einheit', the user can immediately see if the water meets safety standards (in this case, being below the detection limit of 0.82 Bq/l)."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib.patches import FancyBboxPatch
+
+# Set theme
+sns.set_theme(style="white")
+
+input_path = os.path.join('.', 'src', 'resources', 'data', 'study', '136951', 'dataset.csv')
+output_dir = os.path.join('.', 'src', 'resources', 'output', '136951')
+os.makedirs(output_dir, exist_ok=True)
+
+# The error was a UnicodeDecodeError. Common encodings for German datasets are 'utf-8', 'latin1' (ISO-8859-1), or 'cp1252'.
+# We try 'latin1' as it is robust for European characters like 'ü' (0xfc).
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+except UnicodeDecodeError:
+    df = pd.read_csv(input_path, sep=',', encoding='latin1')
+
+# Data Cleaning
+df['Ergebnis_str'] = df['Ergebnis'].astype(str)
+df['Ergebnis_clean'] = df['Ergebnis_str'].str.replace('<', '', regex=False).str.replace('>', '', regex=False).str.replace(',', '.', regex=False).str.strip()
+df['Ergebnis_numeric'] = pd.to_numeric(df['Ergebnis_clean'], errors='coerce')
+df['is_censored'] = df['Ergebnis_str'].str.contains('<', na=False)
+
+# EDA outputs
+missing_ratio = df.isna().mean().to_frame('missing_ratio')
+missing_ratio.to_csv(os.path.join(output_dir, 'eda_missing_ratio.csv'), encoding='utf-8')
+
+num_cols = list(df.select_dtypes(include=[np.number]).columns)
+if len(num_cols) > 0:
+    desc = df[num_cols].describe().T
+    desc.to_csv(os.path.join(output_dir, 'eda_numeric_summary.csv'), encoding='utf-8')
+
+# Filter for Radon-222
+iso_mask = df['Pruefmerkmal'].astype(str).str.contains('Radon-222', case=False, na=False)
+iso_df = df[iso_mask].copy()
+
+# Visualization
+if iso_df.empty:
+    fig, ax = plt.subplots(figsize=(8, 4.5), dpi=200)
+    ax.axis('off')
+    ax.text(0.5, 0.5, 'Keine Isotop-Messung (Radon-222) gefunden', ha='center', va='center', fontsize=16, color='#333333')
+    fig.savefig(os.path.join(output_dir, '1_radon222_indicator.png'), bbox_inches='tight')
+    plt.close(fig)
+else:
+    # Extract metadata for the card
+    pruefmerkmal = str(iso_df['Pruefmerkmal'].iloc[0])
+    result_str = str(iso_df['Ergebnis'].iloc[0])
+    einheit = str(iso_df['Einheit'].iloc[0]) if 'Einheit' in iso_df.columns else ''
+    methode = str(iso_df['Methode'].iloc[0]) if 'Methode' in iso_df.columns else ''
+    
+    ort_vals = df['Entnahmestelle'].dropna().astype(str).unique().tolist() if 'Entnahmestelle' in df.columns else []
+    ort = ort_vals[0] if len(ort_vals) > 0 else 'Trinkwasserprobe'
+    
+    datum_vals = df['Probenahme_Beginn_Datum'].dropna().astype(str).unique().tolist() if 'Probenahme_Beginn_Datum' in df.columns else []
+    datum = datum_vals[0] if len(datum_vals) > 0 else ''
+    
+    is_censored = '<' in result_str
+    result_display = (result_str + (' ' + einheit if einheit else '')).strip()
+
+    # Create Indicator Card
+    fig, ax = plt.subplots(figsize=(9, 5), dpi=200)
+    ax.set_facecolor('#f6f7fb')
+    fig.patch.set_facecolor('#f6f7fb')
+    ax.axis('off')
+
+    # Card background
+    card_width, card_height = 0.92, 0.68
+    card_x, card_y = 0.04, 0.18
+    card = FancyBboxPatch((card_x, card_y), card_width, card_height, 
+                          boxstyle="round,pad=0.02,rounding_size=0.02", 
+                          linewidth=0.0, facecolor='white')
+    ax.add_patch(card)
+
+    # Titles
+    ax.text(0.5, 0.92, 'Aktivität von Radon-222 im Trinkwasser', ha='center', va='center', 
+            fontsize=16, fontweight='bold', color='#1f2937', transform=ax.transAxes)
+    
+    subtitle = f"{ort} {('| ' + datum) if datum else ''}"
+    ax.text(0.5, 0.87, subtitle, ha='center', va='center', fontsize=11, color='#4b5563', transform=ax.transAxes)
+
+    # Content
+    ax.text(card_x + 0.04, card_y + card_height - 0.12, 'Prüfmerkmal', ha='left', va='center', 
+            fontsize=11, color='#6b7280', transform=ax.transAxes)
+    ax.text(card_x + 0.04, card_y + card_height - 0.24, pruefmerkmal, ha='left', va='center', 
+            fontsize=14, fontweight='bold', color='#111827', transform=ax.transAxes)
+
+    ax.text(card_x + 0.04, card_y + 0.30, 'Ergebnis', ha='left', va='center', 
+            fontsize=11, color='#6b7280', transform=ax.transAxes)
+    ax.text(card_x + 0.04, card_y + 0.18, result_display, ha='left', va='center', 
+            fontsize=28, fontweight='bold', color='#0b7a75', transform=ax.transAxes)
+
+    hinweis_text = 'Unter der Nachweisgrenze' if is_censored else 'Messwert'
+    ax.text(card_x + 0.04, card_y + 0.08, hinweis_text, ha='left', va='center', 
+            fontsize=10, color='#6b7280', transform=ax.transAxes)
+
+    # Metadata right side
+    if methode:
+        ax.text(card_x + card_width - 0.04, card_y + card_height - 0.12, f'Methode: {methode}', 
+                ha='right', va='center', fontsize=10, color='#374151', transform=ax.transAxes)
+
+    # Footer
+    footer = 'Datenquelle: Stadt Hamburg, WW Großensee; Lizenz: dl-de/by-2-0'
+    ax.text(0.5, 0.04, footer, ha='center', va='center', fontsize=8.5, color='#6b7280', transform=ax.transAxes)
+
+    fig.savefig(os.path.join(output_dir, '1_radon222_indicator.png'), bbox_inches='tight')
+    plt.close(fig)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What was the technical measurement duration (Messzeit) for the Radon-LSC analysis?' visualization="A table showing 'Entnahmestelle', 'Pruefmerkmal', 'Ergebnis', and 'Einheit' to highlight the technical metadata of the measurement." rationale="In radiological analysis, the measurement time is a critical metadata component for quality assurance. By identifying the 'Ergebnis' where 'Pruefmerkmal' is 'Messzeit', the user can verify the precision and protocol (6000 seconds) used at 'Entnahmestelle' (WW Großensee)."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+# The error 'utf-8' codec can't decode byte 0xfc suggests the file is likely encoded in 'latin-1' or 'cp1252'
+# (0xfc is 'ü' in latin-1, common in German datasets).
+file_path = r'./src/resources/data/study/136951/dataset.csv'
+
+try:
+    df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+except UnicodeDecodeError:
+    try:
+        df = pd.read_csv(file_path, sep=',', encoding='latin-1')
+    except Exception:
+        df = pd.read_csv(file_path, sep=',', encoding='cp1252')
+
+# Clean string columns
+for col in df.select_dtypes(include=['object']).columns:
+    df[col] = df[col].astype(str).str.strip()
+
+# Helper to convert results to numeric if needed (though we use strings for the table)
+def _to_num(v):
+    if pd.isna(v) or v == 'nan':
+        return np.nan
+    if isinstance(v, str):
+        s = v.replace(' ', '').replace('<', '').replace('>', '').replace('≤', '').replace('≥', '').replace(',', '.')
+        try:
+            return float(s)
+        except:
+            return np.nan
+    return float(v)
+
+# Filter for 'Messzeit'
+mask_messzeit = df['Pruefmerkmal'].str.contains('Messzeit', case=False, na=False)
+view_cols = ['Entnahmestelle', 'Pruefmerkmal', 'Ergebnis', 'Einheit']
+
+if mask_messzeit.any():
+    tbl_df = df.loc[mask_messzeit, view_cols].copy()
+else:
+    # Fallback if no Messzeit found, show first few rows or empty
+    tbl_df = df[view_cols].head(5).copy()
+
+# Formatting for display
+if 'Ergebnis' in tbl_df.columns:
+    # Ensure numeric-looking strings use comma for German context if desired, 
+    # but here we keep it clean for the table.
+    tbl_df['Ergebnis'] = tbl_df['Ergebnis'].astype(str)
+
+# Metadata for titles
+method_txt = str(df['Methode'].iloc[0]) if 'Methode' in df.columns and not df['Methode'].empty else "Radon-LSC-Analyse"
+entnahmestelle_txt = str(tbl_df['Entnahmestelle'].iloc[0]) if not tbl_df.empty else ""
+date_txt = str(df['Probenahme_Beginn_Datum'].iloc[0]) if 'Probenahme_Beginn_Datum' in df.columns and not df['Probenahme_Beginn_Datum'].empty else ""
+
+# Visualization
+sns.set_theme(style='white')
+rows = tbl_df.shape[0]
+fig_h = 2.0 + 0.6 * max(1, rows)
+fig, ax = plt.subplots(figsize=(10, fig_h))
+ax.axis('off')
+
+col_labels = ['Entnahmestelle', 'Prüfmerkmal', 'Ergebnis', 'Einheit']
+cell_text = tbl_df.values.tolist()
+col_widths = [0.35, 0.25, 0.20, 0.20]
+
+table = ax.table(
+    cellText=cell_text, 
+    colLabels=col_labels, 
+    cellLoc='center', 
+    loc='center', 
+    colWidths=col_widths
+)
+
+table.auto_set_font_size(False)
+table.set_fontsize(11)
+
+# Style the table
+for (row, col), cell in table.get_celld().items():
+    cell.set_edgecolor('#dddddd')
+    if row == 0:
+        cell.set_text_props(color='white', weight='bold')
+        cell.set_facecolor('#2f5597')
+    else:
+        if row % 2 == 1:
+            cell.set_facecolor('#f9f9f9')
+        if col == 2: # Highlight the 'Ergebnis' column
+            cell.set_text_props(weight='bold')
+
+# Titles
+main_title = 'Technische Messzeit der Radon-LSC-Analyse'
+subtitle = f"{entnahmestelle_txt} | {date_txt}" if entnahmestelle_txt and date_txt else entnahmestelle_txt
+
+ax.set_title(main_title, fontsize=16, pad=25, weight='bold', loc='center')
+if subtitle:
+    ax.text(0.5, 0.92, subtitle, transform=ax.transAxes, fontsize=12, ha='center', color='#555555')
+
+# Footer
+overall_missing_pct = (df.isna().sum().sum() / df.size) * 100 if df.size > 0 else 0
+foot_left = f'Datensätze: {len(df)} | Fehlwerte: {overall_missing_pct:.1f}%'
+ax.text(0.0, 0.05, foot_left, transform=ax.transAxes, fontsize=9, ha='left', color='#777777')
+ax.text(1.0, 0.05, 'Hinweis: Die Messzeit ist ein kritisches Qualitätsmerkmal.', transform=ax.transAxes, fontsize=9, ha='right', color='#777777')
+
+plt.tight_layout()
+
+# Save output
+out_dir = r'./src/resources/output/136951'
+if not os.path.exists(out_dir):
+    os.makedirs(out_dir)
+out_path = os.path.join(out_dir, '2_messzeit_tabelle.png')
+plt.savefig(out_path, dpi=200, bbox_inches='tight')
+plt.close(fig)
+
+
+-> SEVQ:
+
+

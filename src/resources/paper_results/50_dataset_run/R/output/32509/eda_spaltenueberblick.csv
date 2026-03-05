@@ -1,0 +1,8 @@
+spalte,datentyp,fehlende_werte,fehlende_werte_prozent,anzahl_auspraegungen
+Name,character,1,7.14,13
+Kommune_Stadt,character,0,0,14
+Stra_e_Hausnummer,character,0,0,14
+Postleitzahl_Ort,character,0,0,13
+Telefon,character,0,0,14
+Telefax,character,2,14.29,12
+E_Mail,character,1,7.14,13

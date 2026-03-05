@@ -1,0 +1,547 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\52874\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 16:26:43
+Total Duration: 1145.75 seconds
+Total Token Usage: 109058 tokens
+Total Costs: $0.4397
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0191 seconds
+
+Method: analyse_dataset
+  Duration: 0.0073 seconds
+
+Method: analyse_metadata
+  Duration: 0.0079 seconds
+
+Method: llm_generate_summary
+  Duration: 184.0909 seconds
+
+Method: llm_generate_goals
+  Duration: 5.0597 seconds
+
+Method: llm_generate_python_code
+  Duration: 291.8954 seconds
+
+Method: test_generated_code
+  Duration: 3.3475 seconds
+
+Method: llm_regenerate_code
+  Duration: 26.8845 seconds
+
+Method: test_generated_code
+  Duration: 119.0417 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 515.3959 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 9196 tokens
+  Costs total: $0.0065
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1375 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7470 tokens
+  Costs total: $0.0541
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7528 tokens
+  Costs total: $0.0547
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6878 tokens
+  Costs total: $0.0480
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 955 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 788 tokens
+  Costs total: $0.0020
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 267 tokens
+  Costs total: $0.0007
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3841 tokens
+  Costs total: $0.0050
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3163 tokens
+  Costs total: $0.0044
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3188 tokens
+  Costs total: $0.0052
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6109 tokens
+  Costs total: $0.0437
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2362 tokens
+  Costs total: $0.0087
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2688 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4307 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4425 tokens
+  Costs total: $0.0261
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5713 tokens
+  Costs total: $0.0405
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2294 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2948 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5487 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4277 tokens
+  Costs total: $0.0255
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6927 tokens
+  Costs total: $0.0502
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2622 tokens
+  Costs total: $0.0098
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3229 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5593 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4672 tokens
+  Costs total: $0.0272
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How have student enrollment and teaching staff levels changed over time in Stadtlauringen?' visualization="Line chart with 'time' on the x-axis, 'value' on the y-axis, and 'value_variable_label' as the color/series." rationale="By plotting 'value' against 'time' and filtering by 'value_variable_label' (specifically for 'Schüler' and 'Voll- und teilzeitbeschäftigte Lehrkräfte'), we can observe the longitudinal trends in the school population and staffing levels. This helps identify if the teacher-to-student ratio is improving or declining over the 11-year period."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+# Set plotting style
+sns.set_theme(context='talk', style='whitegrid')
+
+# File path
+file_path = r'./src/resources/data/study/52874/dataset.csv'
+
+# The error 'UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe4' 
+# suggests the file is likely encoded in 'latin-1' or 'iso-8859-1' (common for German data).
+try:
+    df = pd.read_csv(file_path, sep=';', encoding='utf-8')
+except UnicodeDecodeError:
+    df = pd.read_csv(file_path, sep=';', encoding='latin-1')
+
+# Clean string columns
+for c in df.columns:
+    if df[c].dtype == object:
+        df[c] = df[c].astype(str).str.strip()
+
+# Convert value to numeric
+df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+# Extract year from 'time' (e.g., "2010/11" -> 2010)
+df['year_numeric'] = pd.to_numeric(df['time'].str.extract(r'(\d{4})', expand=False), errors='coerce')
+
+# Filter for the specific location and variables requested
+# Based on the previous code's logic for Stadtlauringen and specific school types
+focus_labels = ['Schüler', 'Voll- und teilzeitbeschäftigte Lehrkräfte']
+df_filtered = df[df['value_variable_label'].isin(focus_labels)].copy()
+
+# Apply location filter if column exists
+if '1_variable_attribute_label' in df_filtered.columns:
+    df_filtered = df_filtered[df_filtered['1_variable_attribute_label'].str.contains('Stadtlauringen', na=False)]
+
+# Apply school type filter if column exists (Grund- sowie Mittel-/Hauptschulen)
+if '2_variable_attribute_label' in df_filtered.columns:
+    df_filtered = df_filtered[df_filtered['2_variable_attribute_label'].str.contains('Grund- sowie Mittel', na=False)]
+
+# Drop rows with missing values in key columns
+df_filtered = df_filtered.dropna(subset=['value', 'year_numeric'])
+
+# Group to ensure unique points per year/label
+df_plot = df_filtered.groupby(['time', 'year_numeric', 'value_variable_label'], as_index=False)['value'].sum()
+df_plot = df_plot.sort_values('year_numeric')
+
+# Visualization
+plt.figure(figsize=(12, 7))
+colors = {'Schüler': '#1f77b4', 'Voll- und teilzeitbeschäftigte Lehrkräfte': '#d62728'}
+
+# Create the line plot
+lineplot = sns.lineplot(
+    data=df_plot, 
+    x='time', 
+    y='value', 
+    hue='value_variable_label', 
+    palette=colors, 
+    marker='o', 
+    linewidth=2.5
+)
+
+# Formatting
+plt.title('Entwicklung von Schülerzahlen und Lehrkräften in Stadtlauringen', pad=20)
+plt.xlabel('Schuljahr')
+plt.ylabel('Anzahl')
+plt.xticks(rotation=45)
+plt.legend(title='Kennzahl', bbox_to_anchor=(1.05, 1), loc='upper left')
+
+# Add data labels for the last point
+for label in focus_labels:
+    subset = df_plot[df_plot['value_variable_label'] == label]
+    if not subset.empty:
+        last_row = subset.iloc[-1]
+        plt.text(
+            last_row['time'], 
+            last_row['value'], 
+            f" {int(last_row['value'])}", 
+            color=colors.get(label, 'black'), 
+            va='bottom', 
+            fontweight='bold'
+        )
+
+# Calculate and display average ratio if possible
+pivot = df_plot.pivot(index='time', columns='value_variable_label', values='value')
+if all(col in pivot.columns for col in focus_labels):
+    ratio = pivot['Schüler'] / pivot['Voll- und teilzeitbeschäftigte Lehrkräfte']
+    avg_ratio = ratio.mean()
+    plt.text(0.02, 0.95, f'Ø Schüler pro Lehrkraft: {avg_ratio:.1f}', 
+             transform=plt.gca().transAxes, fontsize=12, 
+             bbox=dict(facecolor='white', alpha=0.8, edgecolor='gray'))
+
+plt.tight_layout()
+
+# Save output
+output_dir = r'./src/resources/output/52874'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+plt.savefig(os.path.join(output_dir, '0_schueler_lehrkraefte_trend.png'), dpi=300, bbox_inches='tight')
+plt.show()
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the distribution of different school metrics (KPIs) across the dataset?' visualization="Grouped bar chart showing 'value_variable_label' on the x-axis and the average 'value' on the y-axis." rationale="Using a bar chart to compare the average or total 'value' for each 'value_variable_label' (Schools, Classes, Students, Teachers, Weekly Hours) provides an immediate sense of scale. It highlights the massive difference between the number of schools (min=2) and the volume of weekly teaching hours (max=374), which explains the high standard deviation mentioned in the summary."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib import ticker
+
+# Set visual style
+sns.set_theme(style="whitegrid", context="notebook")
+
+# File paths
+data_path = os.path.normpath('./src/resources/data/study/52874/dataset.csv')
+output_dir = os.path.normpath('./src/resources/output/52874')
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, '1_kpi_durchschnitt.png')
+
+# Fix: Handle encoding error. 'latin-1' or 'iso-8859-1' is common for German datasets with umlauts
+try:
+    df = pd.read_csv(data_path, sep=';', encoding='utf-8', dtype=str)
+except UnicodeDecodeError:
+    df = pd.read_csv(data_path, sep=';', encoding='latin-1', dtype=str)
+
+# Clean strings and convert values
+for c in df.columns:
+    if df[c].dtype == object:
+        df[c] = df[c].str.strip()
+
+# Convert 'value' to numeric, handling potential decimal comma if necessary
+if df['value'].str.contains(',').any():
+    df['value'] = df['value'].str.replace('.', '', regex=False).str.replace(',', '.', regex=False)
+df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+# Prepare data for plotting
+# Group by KPI label and calculate mean
+plot_df = df.dropna(subset=['value_variable_label', 'value']).groupby('value_variable_label', as_index=False)['value'].mean()
+
+# Shorten labels for better readability on x-axis
+label_map = {
+    'Voll- und teilzeitbeschäftigte Lehrkräfte': 'Lehrkräfte',
+    'Unterrichtswochenstunden': 'Wochenstunden',
+    'Schüler': 'Schüler',
+    'Klassen': 'Klassen',
+    'Schulen': 'Schulen'
+}
+plot_df['KPI_short'] = plot_df['value_variable_label'].map(label_map).fillna(plot_df['value_variable_label'])
+plot_df = plot_df.sort_values('value', ascending=False).reset_index(drop=True)
+
+# Extract metadata for title
+try:
+    loc_vals = df['1_variable_attribute_label'].dropna().unique().tolist()
+    location = loc_vals[0] if len(loc_vals) > 0 else ''
+except Exception:
+    location = ''
+
+try:
+    n_years = df['time'].nunique()
+except Exception:
+    n_years = None
+
+# Create Plot
+fig, ax = plt.subplots(figsize=(10, 6), dpi=150)
+palette = sns.color_palette('viridis', n_colors=len(plot_df))
+sns.barplot(data=plot_df, x='KPI_short', y='value', palette=palette, ax=ax, hue='KPI_short', legend=False)
+
+# Title and Labels
+title_str = 'Durchschnittliche Schul-KPIs'
+if location:
+    title_str += f' in {location}'
+if n_years:
+    title_str += f' (über {n_years} Zeiträume)'
+
+ax.set_title(title_str, fontsize=14, pad=15, fontweight='bold')
+ax.set_xlabel('Metrik (KPI)', fontsize=12)
+ax.set_ylabel('Durchschnittlicher Wert', fontsize=12)
+
+# Formatting
+ax.set_axisbelow(True)
+ax.yaxis.grid(True, linestyle='--', alpha=0.7)
+ax.set_ylim(0, plot_df['value'].max() * 1.15)
+
+# Format Y-axis with German thousands separator
+ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: f"{x:,.0f}".replace(",", ".")))
+
+# Add value labels on top of bars
+for i, v in enumerate(plot_df['value']):
+    # Format number: 1.234,5
+    label = f"{v:,.1f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    ax.text(i, v + (plot_df['value'].max() * 0.01), label, ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+plt.tight_layout()
+plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Is there a correlation between the number of students and the total weekly teaching hours?' visualization="Dual-axis line chart with 'time' on the x-axis, and two lines representing 'value' where 'value_variable_label' is 'Schüler' and 'Unterrichtswochenstunden' respectively." rationale="By comparing the 'value' for 'Schüler' (Students) and 'Unterrichtswochenstunden' (Weekly teaching hours) over the 'time' periods, we can see if an increase in students leads to a proportional increase in teaching hours. The summary notes a peak in teaching hours in 2024, and this visualization would clarify if that peak corresponds to a student surge or a change in curriculum intensity."
+
+-> Code:
+import os
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+# Set visual style
+sns.set_theme(style="whitegrid")
+plt.rcParams.update({
+    "axes.titlesize": 14,
+    "axes.labelsize": 12,
+    "legend.fontsize": 10,
+    "xtick.labelsize": 10,
+    "ytick.labelsize": 10
+})
+
+try:
+    data_path = './src/resources/data/study/52874/dataset.csv'
+    
+    # Fix: Use 'latin-1' or 'iso-8859-1' encoding to handle non-UTF-8 characters (like German umlauts)
+    df = pd.read_csv(data_path, sep=';', encoding='latin-1', dtype=str)
+    
+    # Clean data
+    for c in df.columns:
+        if df[c].dtype == object:
+            df[c] = df[c].replace({"": np.nan})
+            
+    # Convert value to numeric
+    df['value'] = pd.to_numeric(df.get('value', pd.Series(index=df.index)), errors='coerce')
+    
+    # Extract year from time column (e.g., "2023/24" -> 2023)
+    df['time_year'] = df.get('time', pd.Series(index=df.index)).astype(str).str.extract(r'(\d{4})', expand=False)
+    df['time_year'] = pd.to_numeric(df['time_year'], errors='coerce')
+    
+    # Filter for the relevant variables
+    # Note: Using exact labels from the dataset
+    target_labels = ['Schüler', 'Unterrichtswochenstunden']
+    df_kpis = df[df['value_variable_label'].isin(target_labels)].copy()
+    df_kpis = df_kpis.dropna(subset=['time_year', 'value', 'value_variable_label'])
+    
+    # Pivot data for plotting
+    pivot = df_kpis.groupby(['time_year', 'value_variable_label'], as_index=False)['value'].sum()
+    pivot = pivot.pivot(index='time_year', columns='value_variable_label', values='value').sort_index()
+    
+    # Ensure both columns exist
+    if 'Schüler' not in pivot.columns: pivot['Schüler'] = np.nan
+    if 'Unterrichtswochenstunden' not in pivot.columns: pivot['Unterrichtswochenstunden'] = np.nan
+    
+    pivot = pivot.dropna(subset=['Schüler', 'Unterrichtswochenstunden'], how='any')
+    
+    if not pivot.empty:
+        years = pivot.index.values
+        students = pivot['Schüler'].values
+        hours = pivot['Unterrichtswochenstunden'].values
+        
+        # Calculate correlation
+        if len(pivot) >= 2:
+            r = float(pd.Series(students).corr(pd.Series(hours)))
+        else:
+            r = np.nan
+
+        # Plotting
+        fig, ax1 = plt.subplots(figsize=(10, 6), dpi=150)
+        
+        color_students = '#1f77b4' # Blue
+        color_hours = '#d62728'    # Red
+        
+        # Primary axis: Students
+        l1, = ax1.plot(years, students, color=color_students, marker='o', linewidth=2.5, label='Schüler')
+        ax1.set_xlabel('Jahr (Beginn Schuljahr)')
+        ax1.set_ylabel('Anzahl Schüler', color=color_students, fontweight='bold')
+        ax1.tick_params(axis='y', labelcolor=color_students)
+        ax1.yaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"{int(x):,}".replace(',', '.')))
+        
+        # Secondary axis: Teaching Hours
+        ax2 = ax1.twinx()
+        l2, = ax2.plot(years, hours, color=color_hours, marker='s', linewidth=2.5, linestyle='--', label='Unterrichtswochenstunden')
+        ax2.set_ylabel('Unterrichtswochenstunden', color=color_hours, fontweight='bold')
+        ax2.tick_params(axis='y', labelcolor=color_hours)
+        ax2.yaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"{int(x):,}".replace(',', '.')))
+        
+        # Formatting
+        ax1.set_xticks(years)
+        ax1.set_xticklabels([str(int(y)) for y in years])
+        
+        plt.title('Korrelation: Schüler vs. Unterrichtswochenstunden', pad=20)
+        
+        # Legend
+        handles = [l1, l2]
+        labels = [h.get_label() for h in handles]
+        ax1.legend(handles, labels, loc='upper left', frameon=True)
+        
+        # Add correlation note
+        if not np.isnan(r):
+            note = f"Pearson Korrelation (r): {r:.3f}"
+            fig.text(0.5, 0.01, note, ha='center', fontsize=10, bbox=dict(facecolor='white', alpha=0.5))
+
+        output_path = './src/resources/output/52874/2_schueler_vs_unterrichtswochenstunden.png'
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        plt.tight_layout()
+        plt.savefig(output_path, dpi=300)
+        plt.close(fig)
+    else:
+        print("No overlapping data found for the requested variables.")
+
+except Exception as e:
+    import sys
+    sys.stdout.write(f"Error: {str(e)}")
+
+
+-> SEVQ:
+
+

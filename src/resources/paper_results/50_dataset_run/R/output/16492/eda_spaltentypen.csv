@@ -1,0 +1,15 @@
+spalte,typ
+FID,character
+id,character
+kenn,character
+name,character
+geom,character
+start_measure,POSIXct
+end_measure,POSIXct
+value,numeric
+unit,character
+validated,numeric
+nuclide,character
+duration,character
+start_dt,POSIXct
+end_dt,POSIXct

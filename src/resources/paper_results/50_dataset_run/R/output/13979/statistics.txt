@@ -1,0 +1,588 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\13979\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:39:06
+Total Duration: 959.45 seconds
+Total Token Usage: 123968 tokens
+Total Costs: $0.4877
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0331 seconds
+
+Method: analyse_dataset
+  Duration: 0.0119 seconds
+
+Method: analyse_metadata
+  Duration: 0.0102 seconds
+
+Method: llm_generate_summary
+  Duration: 214.9197 seconds
+
+Method: llm_generate_goals
+  Duration: 3.8427 seconds
+
+Method: llm_generate_r_code
+  Duration: 257.0037 seconds
+
+Method: test_generated_code
+  Duration: 3.2378 seconds
+
+Method: llm_regenerate_code
+  Duration: 37.8871 seconds
+
+Method: test_generated_code
+  Duration: 3.1489 seconds
+
+Method: llm_regenerate_code
+  Duration: 7.2136 seconds
+
+Method: test_generated_code
+  Duration: 3.4543 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 428.6888 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7305 tokens
+  Costs total: $0.0052
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1748 tokens
+  Costs total: $0.0022
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7455 tokens
+  Costs total: $0.0525
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8384 tokens
+  Costs total: $0.0619
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8378 tokens
+  Costs total: $0.0617
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 431 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 454 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 873 tokens
+  Costs total: $0.0022
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3046 tokens
+  Costs total: $0.0047
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3225 tokens
+  Costs total: $0.0047
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 4659 tokens
+  Costs total: $0.0072
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 395 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 693 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 416 tokens
+  Costs total: $0.0011
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3099 tokens
+  Costs total: $0.0043
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 395 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 400 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 416 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6778 tokens
+  Costs total: $0.0462
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2781 tokens
+  Costs total: $0.0090
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3418 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5558 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5287 tokens
+  Costs total: $0.0287
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6094 tokens
+  Costs total: $0.0407
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2615 tokens
+  Costs total: $0.0085
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3321 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5120 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5363 tokens
+  Costs total: $0.0319
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6581 tokens
+  Costs total: $0.0396
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3310 tokens
+  Costs total: $0.0103
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 4268 tokens
+  Costs total: $0.0038
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4986 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6716 tokens
+  Costs total: $0.0414
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie hat sich die Gesamtzahl der fertiggestellten Wohnungen in Sünching über die Jahre entwickelt?' visualization="Liniendiagramm mit 'time' auf der x-Achse und 'value' auf der y-Achse, gefiltert nach '2_variable_attribute_label' == 'Insgesamt'." rationale="Durch die Filterung auf den Wert 'Insgesamt' in der Spalte '2_variable_attribute_label' und die Darstellung über die Spalte 'time' lässt sich der allgemeine Trend im Wohnungsbau erkennen. Ein Liniendiagramm ist hierfür ideal, um Wachstum oder Rückgänge in der Bautätigkeit über den Zeitraum von 2014 bis 2024 zu visualisieren."
+
+-> Code:
+# Setze Encoding-Optionen am Anfang
+options(encoding = "UTF-8")
+
+# Benötigte Pakete
+pkgs <- c("readr", "dplyr", "ggplot2", "scales", "stringr", "tidyr")
+new_pkgs <- pkgs[!(pkgs %in% installed.packages()[, "Package"])]
+if (length(new_pkgs)) install.packages(new_pkgs, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+
+# Pfade definieren
+fix_path <- function(p) gsub("\\\\", .Platform$file.sep, p)
+input_path <- fix_path("./src/resources/data/study/13979/dataset.csv")
+output_dir <- fix_path("./src/resources/output/13979")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Daten einlesen mit expliziter Behandlung von Encoding-Problemen
+# Wir nutzen 'latin1' oder 'UTF-8' und stellen sicher, dass ungültige Zeichen nicht zum Abbruch führen
+df <- tryCatch({
+  readr::read_delim(file = input_path, delim = ";", 
+                    locale = locale(encoding = "UTF-8"), 
+                    na = c("", "NA", "NaN"), 
+                    trim_ws = TRUE, 
+                    show_col_types = FALSE)
+}, error = function(e) {
+  readr::read_delim(file = input_path, delim = ";", 
+                    locale = locale(encoding = "ISO-8859-1"), 
+                    na = c("", "NA", "NaN"), 
+                    trim_ws = TRUE, 
+                    show_col_types = FALSE)
+})
+
+# Bereinigung der Spaltennamen (entfernt potenzielle Multibyte-Probleme in Headern)
+names(df) <- iconv(names(df), to = "UTF-8", sub = "")
+
+# Datentypen konvertieren
+df <- df %>% 
+  mutate(
+    time = suppressWarnings(as.integer(time)), 
+    value = suppressWarnings(as.numeric(value))
+  )
+
+# Filterung gemäß Visualisierungsziel
+# Wir nutzen iconv auf die Filter-Spalten, um "invalid multibyte string" Fehler bei nchar() zu vermeiden
+df_clean <- df %>%
+  mutate(
+    attr_label_2 = iconv(`2_variable_attribute_label`, to = "UTF-8", sub = ""),
+    attr_label_1 = iconv(`1_variable_attribute_label`, to = "UTF-8", sub = "")
+  ) %>%
+  filter(!is.na(attr_label_2)) %>%
+  mutate(attr_label_2 = stringr::str_trim(attr_label_2)) %>%
+  # Filter auf "Insgesamt" (Case-insensitive und robust gegen Encoding-Reste)
+  filter(grepl("insgesamt", attr_label_2, ignore.case = TRUE)) %>%
+  filter(!is.na(time) & !is.na(value))
+
+# Aggregation für den Plot
+plot_df <- df_clean %>% 
+  group_by(time) %>% 
+  summarise(gesamt = sum(value, na.rm = TRUE), .groups = "drop") %>% 
+  arrange(time)
+
+# Falls keine Daten übrig bleiben, Skript beenden oder Dummy-Plot
+if(nrow(plot_df) > 0) {
+  
+  xmin <- min(plot_df$time, na.rm = TRUE)
+  xmax <- max(plot_df$time, na.rm = TRUE)
+  breaks_x <- sort(unique(plot_df$time))
+
+  p <- ggplot(plot_df, aes(x = time, y = gesamt, group = 1)) +
+    geom_line(color = "#1f77b4", linewidth = 1.2) +
+    geom_point(color = "#1f77b4", size = 2.5) +
+    scale_x_continuous(breaks = breaks_x) +
+    scale_y_continuous(
+      labels = scales::label_number(big.mark = ".", decimal.mark = ","),
+      expand = expansion(mult = c(0.1, 0.1))
+    ) +
+    labs(
+      title = "Entwicklung der fertiggestellten Wohnungen in Sünching",
+      subtitle = "Filter: 'Insgesamt' (2_variable_attribute_label)",
+      x = "Jahr",
+      y = "Anzahl fertiggestellter Wohnungen"
+    ) +
+    theme_minimal(base_size = 12) +
+    theme(
+      plot.title = element_text(face = "bold"),
+      axis.title.x = element_text(margin = margin(t = 10)),
+      axis.title.y = element_text(margin = margin(r = 10)),
+      panel.grid.minor = element_blank()
+    )
+
+  # Speichern
+  outfile <- file.path(output_dir, "0_trend_wohnungen_insgesamt.png")
+  ggsave(filename = outfile, plot = p, width = 10, height = 6, dpi = 300)
+  
+  cat("Visualisierung erfolgreich erstellt:", outfile, "\n")
+} else {
+  cat("Keine Daten für die Visualisierung gefunden.\n")
+}
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Welche Wohnungsgrößen (nach Raumzahl) wurden im gesamten Zeitraum am häufigsten fertiggestellt?' visualization="Balkendiagramm mit '2_variable_attribute_label' auf der x-Achse (ohne 'Insgesamt') und der Summe von 'value' auf der y-Achse." rationale="Ein Balkendiagramm ermöglicht den direkten Vergleich der verschiedenen Kategorien in '2_variable_attribute_label' (ausgenommen 'Insgesamt'). Durch die Aggregation der 'value'-Werte über alle Jahre hinweg wird ersichtlich, ob in Sünching eher kleine (z.B. 1-2 Räume) oder große Wohnungen (z.B. 5+ Räume) gebaut wurden."
+
+-> Code:
+# Benötigte Pakete laden
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(forcats)
+library(ggplot2)
+library(scales)
+
+# Pfade definieren
+input_path <- file.path(".", "src", "resources", "data", "study", "13979", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "13979")
+
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Daten einlesen mit expliziter Behandlung von Encoding-Problemen
+# Der Fehler "ungültige multibyte Zeichenkette" deutet oft auf ISO-8859-1 (Latin1) hin, 
+# wenn UTF-8 erwartet wird, oder umgekehrt.
+df <- tryCatch({
+  # Erster Versuch mit Latin1, da dies bei deutschen CSVs oft der Fall ist
+  read_delim(input_path, delim = ";", locale = locale(encoding = "ISO-8859-1"), 
+             show_col_types = FALSE, trim_ws = TRUE)
+}, error = function(e) {
+  # Zweiter Versuch mit UTF-8
+  read_delim(input_path, delim = ";", locale = locale(encoding = "UTF-8"), 
+             show_col_types = FALSE, trim_ws = TRUE)
+})
+
+# Spaltennamen bereinigen
+# Wir nutzen eine robuste Methode, um die Spalte '2_variable_attribute_label' zu finden
+target_col_pattern <- "2_variable_attribute_label"
+actual_col_name <- names(df)[grep(target_col_pattern, names(df))][1]
+
+if (is.na(actual_col_name)) {
+  # Fallback: Suche nach dem Teilstring, falls die Nummerierung anders ist
+  actual_col_name <- names(df)[grep("variable_attribute_label", names(df))][1]
+}
+
+# Datenaufbereitung
+# 1. Sicherstellen, dass 'value' numerisch ist
+# 2. Filtern von "Insgesamt" (Sonderzeichen-resistent)
+# 3. Aggregation
+plot_data <- df %>%
+  mutate(value = as.numeric(as.character(value))) %>%
+  filter(!is.na(value)) %>%
+  # Wir filtern "Insgesamt" indem wir nach dem Wortstamm suchen, um Encoding-Probleme bei Umlauten zu umgehen
+  filter(!str_detect(tolower(!!sym(actual_col_name)), "insgesamt")) %>%
+  group_by(category = !!sym(actual_col_name)) %>%
+  summarise(total_value = sum(value, na.rm = TRUE), .groups = "drop") %>%
+  # Sortieren der Kategorien nach Wert
+  mutate(category = fct_reorder(category, total_value, .desc = TRUE))
+
+# Visualisierung
+p <- ggplot(plot_data, aes(x = category, y = total_value)) +
+  geom_col(fill = "#377EB8", width = 0.7) +
+  geom_text(aes(label = comma(total_value, big.mark = ".", decimal.mark = ",")), 
+            vjust = -0.5, size = 3.5, fontface = "bold") +
+  scale_y_continuous(labels = comma_format(big.mark = ".", decimal.mark = ","),
+                     expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title = "Häufigste Wohnungsgrößen nach Raumzahl",
+    subtitle = "Summe der Baufertigstellungen im gesamten Zeitraum (ohne 'Insgesamt')",
+    x = "Wohnungsgröße (Raumzahl)",
+    y = "Anzahl fertiggestellter Wohnungen",
+    caption = "Quelle: Datensatz 13979"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major.x = element_blank(),
+    plot.title = element_text(face = "bold"),
+    plot.margin = margin(10, 10, 10, 10)
+  )
+
+# Speichern des Diagramms
+plot_path <- file.path(output_dir, "1_baufertigstellungen_nach_raumzahl_summe.png")
+ggsave(filename = plot_path, plot = p, width = 10, height = 6, dpi = 300, bg = "white")
+
+cat("Visualisierung erfolgreich erstellt: ", plot_path)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie hat sich die Verteilung der Wohnungsgrößen im Zeitverlauf verändert?' visualization="Gestapeltes Flächendiagramm mit 'time' auf der x-Achse, 'value' auf der y-Achse und '2_variable_attribute_label' als Farblegende (ohne 'Insgesamt')." rationale="Ein gestapeltes Flächendiagramm oder gestapeltes Balkendiagramm zeigt nicht nur die Gesamtentwicklung, sondern auch die Zusammensetzung der Fertigstellungen. Durch die Kombination von 'time', 'value' und der farblichen Aufteilung nach '2_variable_attribute_label' lässt sich analysieren, ob sich der Fokus des Wohnungsbaus über die Dekade hinweg von einer Raumzahl zu einer anderen verschoben hat."
+
+-> Code:
+options(warn=-1)
+req_pkgs <- c("tidyverse","readr","dplyr","tidyr","ggplot2","forcats","stringr","scales","viridis","tibble")
+for (p in req_pkgs) { if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org") }
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(stringr)
+library(scales)
+library(viridis)
+library(tibble)
+options(warn=0)
+
+data_path <- "./src/resources/data/study/13979/dataset.csv"
+out_dir <- "./src/resources/output/13979"
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Behebung des UTF-8 Fehlers: Wir lesen die Datei roh ein oder erzwingen das Encoding.
+# Da trimws() auf ungültige Zeichen stieß, nutzen wir stringi oder stellen sicher, dass readr sauber liest.
+df <- readr::read_delim(
+  file = data_path,
+  delim = ";",
+  locale = readr::locale(encoding = "UTF-8"),
+  trim_ws = FALSE, # Wir trimmen später manuell und vorsichtiger
+  show_col_types = FALSE
+)
+
+# Hilfsfunktion zum sicheren Trimmen (vermeidet UTF-8 Fehler bei binären/unbekannten Zeichen)
+safe_trim <- function(x) {
+  if (!is.character(x)) return(x)
+  # Entferne nur Standard-Whitespace und ignoriere Fehler bei ungültigen Sequenzen
+  iconv(x, "UTF-8", "UTF-8", sub = "") |> stringr::str_trim()
+}
+
+# EDA Missingness mit Fehlerbehandlung für Encoding
+missing_summary <- tibble(column = names(df)) |>
+  rowwise() |>
+  mutate(
+    type = paste(class(df[[column]]), collapse = ","),
+    total_n = nrow(df),
+    # Sicherer Check auf Missingness
+    missing_n = sum(is.na(df[[column]]) | (is.character(df[[column]]) & safe_trim(df[[column]]) == "")),
+    missing_pct = missing_n / total_n,
+    distinct_n = dplyr::n_distinct(df[[column]], na.rm = TRUE)
+  ) |>
+  ungroup()
+readr::write_csv(missing_summary, file.path(out_dir, "2_eda_missingness.csv"))
+
+# Numerische Zusammenfassung
+value_summary_overall <- df |>
+  summarise(
+    n = sum(!is.na(.data$value)),
+    fehlend = sum(is.na(.data$value)),
+    mittelwert = mean(.data$value, na.rm = TRUE),
+    sd = sd(.data$value, na.rm = TRUE),
+    min = suppressWarnings(min(.data$value, na.rm = TRUE)),
+    q25 = suppressWarnings(quantile(.data$value, 0.25, na.rm = TRUE, names = FALSE)),
+    median = median(.data$value, na.rm = TRUE),
+    q75 = suppressWarnings(quantile(.data$value, 0.75, na.rm = TRUE, names = FALSE)),
+    max = suppressWarnings(max(.data$value, na.rm = TRUE))
+  )
+readr::write_csv(value_summary_overall, file.path(out_dir, "2_eda_value_summary_overall.csv"))
+
+# Zusammenfassung nach Label
+value_summary_by_label <- df |>
+  mutate(label = safe_trim(`2_variable_attribute_label`)) |>
+  group_by(label) |>
+  summarise(
+    n = sum(!is.na(.data$value)),
+    mittelwert = mean(.data$value, na.rm = TRUE),
+    sd = sd(.data$value, na.rm = TRUE),
+    min = suppressWarnings(min(.data$value, na.rm = TRUE)),
+    median = median(.data$value, na.rm = TRUE),
+    max = suppressWarnings(max(.data$value, na.rm = TRUE))
+  ) |>
+  ungroup()
+readr::write_csv(value_summary_by_label, file.path(out_dir, "2_eda_value_summary_by_label.csv"))
+
+# Korrelationen
+num_df <- df |> select(where(is.numeric))
+if (ncol(num_df) > 1) {
+  corr_mat <- suppressWarnings(stats::cor(as.data.frame(num_df), use = "pairwise.complete.obs", method = "pearson"))
+  corr_df <- as.data.frame(corr_mat) |> tibble::rownames_to_column("variable")
+  readr::write_csv(corr_df, file.path(out_dir, "2_eda_numeric_correlation.csv"))
+}
+
+# Visualisierungsvorbereitung
+plot_df <- df |>
+  mutate(label = safe_trim(`2_variable_attribute_label`)) |>
+  filter(!is.na(label), !str_detect(label, "(?i)Insgesamt")) |>
+  transmute(
+    time = suppressWarnings(as.integer(.data$time)),
+    label = as.character(label),
+    value = suppressWarnings(as.numeric(.data$value))
+  ) |>
+  filter(!is.na(time), !is.na(value)) |>
+  group_by(time, label) |>
+  summarise(value = sum(value, na.rm = TRUE), .groups = "drop")
+
+if (nrow(plot_df) > 0) {
+  # Zeitachse vervollständigen
+  time_seq <- seq(min(plot_df$time, na.rm = TRUE), max(plot_df$time, na.rm = TRUE), by = 1)
+  plot_df <- plot_df |>
+    complete(label, time = time_seq, fill = list(value = 0))
+  
+  # Sortierung der Legende (z.B. nach Anzahl der Räume)
+  label_levels <- plot_df |>
+    distinct(label) |>
+    mutate(
+      # Extrahiere erste Zahl für Sortierung (z.B. "1 Raum", "2 Räume")
+      label_num = as.numeric(str_extract(label, "\\d+")),
+      label_num = if_else(is.na(label_num), 999, label_num)
+    ) |>
+    arrange(label_num, label) |>
+    pull(label)
+    
+  plot_df <- plot_df |>
+    mutate(label = factor(label, levels = label_levels))
+
+  p <- ggplot(plot_df, aes(x = time, y = value, fill = label)) +
+    geom_area(alpha = 0.8, color = "white", linewidth = 0.2) +
+    scale_fill_viridis(discrete = TRUE, option = "viridis", direction = 1, name = "Wohnungsgröße") +
+    scale_x_continuous(breaks = time_seq) +
+    scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
+    labs(
+      title = "Veränderung der Wohnungsgrößen im Zeitverlauf",
+      subtitle = "Baufertigstellungen nach Anzahl der Räume",
+      x = "Jahr",
+      y = "Anzahl der Fertigstellungen",
+      caption = "Quelle: Statistik der Baufertigstellungen"
+    ) +
+    theme_minimal(base_size = 12) +
+    theme(
+      legend.position = "bottom",
+      panel.grid.minor = element_blank(),
+      plot.title = element_text(face = "bold")
+    )
+    
+  ggsave(filename = file.path(out_dir, "2_gestapelte_flaeche_wohnungsgroessen.png"), plot = p, width = 10, height = 6, dpi = 300)
+} else {
+  print("Keine Daten für die Visualisierung verfügbar.")
+}
+
+
+-> SEVQ:
+
+

@@ -1,0 +1,533 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\16265\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:41:14
+Total Duration: 997.44 seconds
+Total Token Usage: 124180 tokens
+Total Costs: $0.4948
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0102 seconds
+
+Method: analyse_dataset
+  Duration: 0.0057 seconds
+
+Method: analyse_metadata
+  Duration: 0.0079 seconds
+
+Method: llm_generate_summary
+  Duration: 163.4384 seconds
+
+Method: llm_generate_goals
+  Duration: 3.3098 seconds
+
+Method: llm_generate_r_code
+  Duration: 305.6251 seconds
+
+Method: test_generated_code
+  Duration: 4.2165 seconds
+
+Method: llm_regenerate_code
+  Duration: 16.8446 seconds
+
+Method: test_generated_code
+  Duration: 4.0763 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 499.9088 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 9054 tokens
+  Costs total: $0.0072
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1825 tokens
+  Costs total: $0.0019
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7844 tokens
+  Costs total: $0.0562
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7813 tokens
+  Costs total: $0.0561
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8826 tokens
+  Costs total: $0.0662
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 520 tokens
+  Costs total: $0.0014
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 811 tokens
+  Costs total: $0.0021
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 490 tokens
+  Costs total: $0.0013
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3304 tokens
+  Costs total: $0.0051
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 4732 tokens
+  Costs total: $0.0074
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 439 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 439 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 490 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5517 tokens
+  Costs total: $0.0342
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2846 tokens
+  Costs total: $0.0091
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3217 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4729 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6025 tokens
+  Costs total: $0.0390
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7285 tokens
+  Costs total: $0.0474
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3364 tokens
+  Costs total: $0.0105
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 4201 tokens
+  Costs total: $0.0036
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6900 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6103 tokens
+  Costs total: $0.0324
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 8014 tokens
+  Costs total: $0.0526
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3439 tokens
+  Costs total: $0.0104
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3830 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5018 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 7105 tokens
+  Costs total: $0.0357
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie hat sich die Gamma-Ortsdosisleistung im Zeitverlauf des Beobachtungsjahres verändert?' visualization="Liniendiagramm mit 'start_measure' auf der x-Achse und 'value' auf der y-Achse." rationale="Ein Liniendiagramm ist die beste Wahl, um zeitliche Trends darzustellen. Durch die Verwendung von 'start_measure' auf der x-Achse und 'value' auf der y-Achse kann der Nutzer saisonale Schwankungen oder kurzzeitige Spitzen in der natürlichen Hintergrundstrahlung über das Jahr hinweg leicht identifizieren."
+
+-> Code:
+options(stringsAsFactors = FALSE)
+pkgs <- c("readr", "dplyr", "ggplot2", "lubridate", "scales", "janitor", "tidyr", "tibble")
+need <- pkgs[!pkgs %in% rownames(installed.packages())]
+if (length(need) > 0) install.packages(need, dependencies = TRUE)
+invisible(lapply(pkgs, library, character.only = TRUE))
+
+# Pfade definieren
+input_path <- './src/resources/data/study/16265/dataset.csv'
+output_dir <- './src/resources/output/16265'
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Daten einlesen
+df <- readr::read_csv(file = input_path, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE)
+df <- janitor::clean_names(df)
+
+# Datentransformation und Validierung der Zeitstempel
+# Der Fehler "from muss eine endliche Zahl sein" deutet auf ungültige oder fehlende Datumsangaben hin.
+df <- df %>%
+  mutate(
+    start_dt = lubridate::as_datetime(start_measure),
+    value = as.numeric(value)
+  ) %>%
+  filter(!is.na(start_dt)) %>% # Entferne Zeilen ohne gültiges Datum
+  arrange(start_dt) %>%
+  distinct(start_dt, .keep_all = TRUE)
+
+# EDA: Fehlende Werte
+missing_tbl <- data.frame(
+  spalte = names(df),
+  fehlend_anzahl = vapply(df, function(x) sum(is.na(x)), numeric(1))
+)
+missing_tbl$fehlend_anteil <- missing_tbl$fehlend_anzahl / max(1, nrow(df))
+readr::write_csv(missing_tbl, file.path(output_dir, "eda_missing_values.csv"))
+
+# EDA: Zusammenfassung
+if (nrow(df) > 0) {
+  summary_value <- df %>%
+    summarise(
+      anzahl = sum(!is.na(value)),
+      fehlend = sum(is.na(value)),
+      mittelwert = mean(value, na.rm = TRUE),
+      sd = sd(value, na.rm = TRUE),
+      min = min(value, na.rm = TRUE),
+      q1 = quantile(value, 0.25, na.rm = TRUE, names = FALSE),
+      median = median(value, na.rm = TRUE),
+      q3 = quantile(value, 0.75, na.rm = TRUE, names = FALSE),
+      max = max(value, na.rm = TRUE),
+      iqr = IQR(value, na.rm = TRUE)
+    )
+  readr::write_csv(summary_value, file.path(output_dir, "eda_summary_value.csv"))
+}
+
+# Plotting Logik
+if (nrow(df) > 0) {
+  date_min <- min(df$start_dt, na.rm = TRUE)
+  date_max <- max(df$start_dt, na.rm = TRUE)
+  
+  # Dynamische Achsenbeschriftung basierend auf Zeitspanne
+  # Falls die Zeitspanne zu kurz ist, wird "1 month" Fehler werfen oder unschön aussehen
+  diff_days <- as.numeric(difftime(date_max, date_min, units = "days"))
+  date_breaks_val <- if(diff_days > 60) "1 month" else "1 week"
+  
+  y_min <- min(df$value, na.rm = TRUE)
+  y_max <- max(df$value, na.rm = TRUE)
+  
+  plot_title <- "Zeitverlauf der Gamma-Ortsdosisleistung"
+  plot_subtitle <- paste0(format(date_min, "%d.%m.%Y"), " bis ", format(date_max, "%d.%m.%Y"))
+  
+  p <- ggplot(df, aes(x = start_dt, y = value)) +
+    geom_line(color = "#2C7BB6", linewidth = 0.7, na.rm = TRUE) +
+    scale_x_datetime(
+      date_breaks = date_breaks_val, 
+      date_labels = "%b %Y", 
+      expand = expansion(mult = c(0.02, 0.02))
+    ) +
+    scale_y_continuous(
+      labels = scales::label_number(accuracy = 0.001, decimal.mark = ","),
+      limits = if(is.finite(y_min) && is.finite(y_max)) c(y_min * 0.95, y_max * 1.05) else NULL
+    ) +
+    labs(
+      title = plot_title,
+      subtitle = plot_subtitle,
+      x = "Beginn der Messung",
+      y = "Ortsdosisleistung (µSv/h)",
+      caption = "Quelle: BfS ODL-Messnetz; validierte Mittelwerte"
+    ) +
+    theme_minimal(base_size = 12) +
+    theme(
+      plot.title = element_text(face = "bold"),
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      panel.grid.minor = element_blank()
+    )
+  
+  outfile <- file.path(output_dir, "0_odl_zeitverlauf.png")
+  ggplot2::ggsave(filename = outfile, plot = p, width = 12, height = 6.5, dpi = 150)
+} else {
+  # Erstelle eine leere Datei oder Log, falls keine Daten vorhanden sind
+  writeLines("Keine validen Daten für die Visualisierung vorhanden.", file.path(output_dir, "error_log.txt"))
+}
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie verteilen sich die gemessenen Strahlungswerte über den gesamten Zeitraum?' visualization="Histogramm der Spalte 'value'." rationale="Ein Histogramm der Spalte 'value' zeigt die Häufigkeitsverteilung der Messwerte. Da die Werte laut Zusammenfassung in einem engen Bereich zwischen 0,093 und 0,126 µSv/h liegen, hilft diese Visualisierung zu verstehen, welcher Wert am häufigsten vorkommt und wie stabil die natürliche Radioaktivität an der Station Dorfprozelten ist."
+
+-> Code:
+options(warn=1)
+pkgs <- c("readr","dplyr","ggplot2","tidyr","lubridate","janitor","scales","stringr","tibble")
+inst <- rownames(installed.packages())
+need <- setdiff(pkgs, inst)
+if (length(need) > 0) install.packages(need, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+
+output_dir <- file.path("./src/resources/output", "16265")
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+data_path <- file.path("./src/resources/data/study", "16265", "dataset.csv")
+if (!file.exists(data_path)) stop("Datensatz nicht gefunden.")
+
+df <- readr::read_csv(data_path, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE, progress = FALSE)
+df <- janitor::clean_names(df)
+
+# Datumsformate bereinigen
+if ("start_measure" %in% names(df)) df$start_measure <- suppressWarnings(lubridate::ymd_hms(df$start_measure, quiet = TRUE))
+if ("end_measure" %in% names(df)) df$end_measure <- suppressWarnings(lubridate::ymd_hms(df$end_measure, quiet = TRUE))
+
+# Validierung konvertieren
+if ("validated" %in% names(df)) {
+  if (!is.logical(df$validated)) {
+    suppressWarnings(df$validated <- as.numeric(df$validated))
+    if (all(df$validated %in% c(0,1), na.rm = TRUE)) df$validated <- df$validated == 1
+  }
+}
+
+# Missing Values Export
+miss_df <- tibble::tibble(
+  spalte = names(df),
+  fehlend_anzahl = vapply(df, function(x) sum(is.na(x)), numeric(1)),
+  fehlend_anteil = vapply(df, function(x) mean(is.na(x)), numeric(1))
+)
+readr::write_csv(miss_df, file.path(output_dir, "eda_missing_values.csv"))
+
+# Numerische Zusammenfassung (Fehlerbehebung: .by gruppiert bereits, variable = variable in summarise war redundant/falsch)
+num_data <- dplyr::select(df, where(is.numeric))
+if (ncol(num_data) > 0) {
+  stats_num <- num_data |>
+    tidyr::pivot_longer(everything(), names_to = "variable", values_to = "x") |>
+    dplyr::group_by(variable) |>
+    dplyr::summarise(
+      n = dplyr::n(),
+      n_missing = sum(is.na(x)),
+      n_unique = dplyr::n_distinct(x, na.rm = TRUE),
+      mean = mean(x, na.rm = TRUE),
+      sd = stats::sd(x, na.rm = TRUE),
+      min = suppressWarnings(min(x, na.rm = TRUE)),
+      q25 = suppressWarnings(stats::quantile(x, 0.25, na.rm = TRUE, names = FALSE)),
+      median = stats::median(x, na.rm = TRUE),
+      q75 = suppressWarnings(stats::quantile(x, 0.75, na.rm = TRUE, names = FALSE)),
+      max = suppressWarnings(max(x, na.rm = TRUE)),
+      .groups = "drop"
+    )
+  readr::write_csv(stats_num, file.path(output_dir, "eda_summary_numeric.csv"))
+}
+
+# Korrelationen
+num_for_cor <- dplyr::select(df, where(is.numeric))
+if (ncol(num_for_cor) >= 2) {
+  num_for_cor <- dplyr::select(num_for_cor, where(~ dplyr::n_distinct(., na.rm = TRUE) > 1))
+}
+if (ncol(num_for_cor) >= 2) {
+  cor_mat <- suppressWarnings(stats::cor(num_for_cor, use = "pairwise.complete.obs", method = "pearson"))
+  cor_tbl <- tibble::as_tibble(cor_mat, rownames = "variable")
+  readr::write_csv(cor_tbl, file.path(output_dir, "eda_correlation_numeric.csv"))
+}
+
+# Visualisierung: Histogramm der Spalte 'value'
+if (!("value" %in% names(df))) stop("Spalte 'value' fehlt im Datensatz.")
+
+val <- df$value
+mean_value <- mean(val, na.rm = TRUE)
+median_value <- median(val, na.rm = TRUE)
+
+# Freedman-Diaconis Regel für Binwidth
+bw <- suppressWarnings(2 * IQR(val, na.rm = TRUE) / (sum(!is.na(val))^(1/3)))
+if (!is.finite(bw) || is.na(bw) || bw <= 0) {
+  rng <- diff(range(val, na.rm = TRUE))
+  bw <- if(rng > 0) rng / 30 else 0.001
+}
+
+# Zeitraum für Untertitel
+start_txt <- ""
+if ("start_measure" %in% names(df)) {
+  dt_min <- suppressWarnings(min(df$start_measure, na.rm = TRUE))
+  if (!is.na(dt_min)) start_txt <- format(dt_min, "%d.%m.%Y")
+}
+end_txt <- ""
+if ("end_measure" %in% names(df)) {
+  dt_max <- suppressWarnings(max(df$end_measure, na.rm = TRUE))
+  if (!is.na(dt_max)) end_txt <- format(dt_max, "%d.%m.%Y")
+}
+
+subtitle_txt <- paste0(
+  if (nchar(start_txt) > 0 && nchar(end_txt) > 0) paste0("Zeitraum: ", start_txt, " bis ", end_txt, " | ") else "",
+  "Mittelwert: ", format(round(mean_value, 3), decimal.mark = ",", nsmall = 3), " µSv/h | ",
+  "Median: ", format(round(median_value, 3), decimal.mark = ",", nsmall = 3), " µSv/h"
+)
+
+p <- ggplot2::ggplot(df, ggplot2::aes(x = value)) +
+  ggplot2::geom_histogram(binwidth = bw, boundary = 0, color = "white", fill = "#3182bd") +
+  ggplot2::geom_vline(ggplot2::aes(xintercept = mean_value, color = "Mittelwert"), linewidth = 0.8) +
+  ggplot2::geom_vline(ggplot2::aes(xintercept = median_value, color = "Median"), linetype = "dashed", linewidth = 0.8) +
+  ggplot2::scale_color_manual(name = "Statistik", values = c("Mittelwert" = "#e34a33", "Median" = "#31a354")) +
+  ggplot2::scale_x_continuous(
+    name = "Gamma-Ortsdosisleistung (µSv/h)",
+    labels = scales::label_number(accuracy = 0.001, decimal.mark = ",")
+  ) +
+  ggplot2::scale_y_continuous(
+    name = "Häufigkeit (Anzahl Messungen)",
+    expand = ggplot2::expansion(mult = c(0, 0.05))
+  ) +
+  ggplot2::labs(
+    title = "Verteilung der Gamma-Ortsdosisleistung – Dorfprozelten",
+    subtitle = subtitle_txt
+  ) +
+  ggplot2::theme_minimal(base_size = 13) +
+  ggplot2::theme(
+    plot.title = ggplot2::element_text(face = "bold"),
+    panel.grid.minor = ggplot2::element_blank(),
+    legend.position = "bottom"
+  )
+
+plot_path <- file.path(output_dir, "1_histogramm_value.png")
+ggplot2::ggsave(filename = plot_path, plot = p, width = 10, height = 6, dpi = 150)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wo befindet sich die Messstation geografisch?' visualization="Karte unter Verwendung des Feldes 'geom' mit 'name' als Beschriftung." rationale="Obwohl der Datensatz nur eine Station enthält, ist die geografische Verortung für Nutzer eines Open-Data Portals essenziell. Eine Karte, die das Feld 'geom' nutzt und den 'name' (Dorfprozelten) sowie den durchschnittlichen 'value' als Tooltip anzeigt, bietet einen sofortigen räumlichen Kontext."
+
+-> Code:
+packages <- c("readr","dplyr","tidyr","stringr","lubridate","ggplot2","sf","rnaturalearth","rnaturalearthdata","ggspatial","ggrepel","scales","tibble","grid")
+inst <- packages[!packages %in% rownames(installed.packages())]
+if (length(inst) > 0) install.packages(inst, dependencies = TRUE)
+invisible(lapply(packages, library, character.only = TRUE))
+san_path <- function(p) normalizePath(gsub("\\\\", "/", p), mustWork = FALSE)
+path_data <- san_path('./src/resources/data/study\\16265\\dataset.csv')
+out_dir <- san_path('./src/resources/output\\16265')
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+df <- readr::read_csv(path_data, locale = locale(encoding = "UTF-8"), show_col_types = FALSE, progress = FALSE, na = c("", "NA", "NaN", "null"))
+df <- df %>% mutate(
+  start_measure = suppressWarnings(lubridate::ymd_hms(start_measure, tz = "UTC")),
+  end_measure   = suppressWarnings(lubridate::ymd_hms(end_measure, tz = "UTC")),
+  validated     = suppressWarnings(as.logical(as.integer(validated))),
+  value         = suppressWarnings(as.numeric(value)),
+  kenn          = suppressWarnings(as.numeric(kenn))
+)
+geom_sfc <- tryCatch(sf::st_as_sfc(df$geom, crs = 4326), error = function(e) sf::st_as_sfc(stringr::str_trim(df$geom), crs = 4326))
+station_sf <- sf::st_sf(df %>% select(FID, id, kenn, name, start_measure, end_measure, value, unit, validated, nuclide, duration), geometry = geom_sfc)
+station_point <- station_sf %>% dplyr::distinct(id, name, geometry, .keep_all = TRUE) %>% dplyr::slice(1)
+eda_missing <- sapply(sf::st_drop_geometry(station_sf), function(x) sum(is.na(x))) %>% tibble::enframe(name = "spalte", value = "anzahl_na") %>% dplyr::mutate(anteil_na = anzahl_na / nrow(station_sf))
+readr::write_csv(eda_missing, file.path(out_dir, "2_eda_missingwerte.csv"))
+num_df <- station_sf %>% sf::st_drop_geometry() %>% dplyr::select(where(is.numeric))
+numeric_summary <- if (ncol(num_df) > 0) {
+  num_df %>% summarise(dplyr::across(everything(), list(n = ~sum(!is.na(.)), mean = ~mean(., na.rm = TRUE), sd = ~sd(., na.rm = TRUE), min = ~min(., na.rm = TRUE), q25 = ~quantile(., 0.25, na.rm = TRUE), median = ~median(., na.rm = TRUE), q75 = ~quantile(., 0.75, na.rm = TRUE), max = ~max(., na.rm = TRUE)))) %>% tidyr::pivot_longer(cols = everything(), names_to = c("variable", ".value"), names_sep = "_")
+} else {
+  tibble::tibble(hinweis = "Keine numerischen Spalten gefunden")
+}
+readr::write_csv(numeric_summary, file.path(out_dir, "2_eda_numerik_zusammenfassung.csv"))
+cor_tbl <- if (ncol(num_df) >= 2) {
+  cm <- suppressWarnings(cor(num_df, use = "pairwise.complete.obs"))
+  as.data.frame(cm) %>% tibble::rownames_to_column("variable")
+} else {
+  tibble::tibble(hinweis = "Zu wenige numerische Variablen für Korrelationsanalyse")
+}
+readr::write_csv(cor_tbl, file.path(out_dir, "2_eda_korrelationen.csv"))
+avg_value <- mean(station_sf$value, na.rm = TRUE)
+unit_val <- station_sf$unit[which(!is.na(station_sf$unit))[1]]
+unit_val <- ifelse(is.na(unit_val) || length(unit_val) == 0, "µSv/h", unit_val)
+date_min <- suppressWarnings(min(station_sf$start_measure, na.rm = TRUE))
+date_max <- suppressWarnings(max(station_sf$end_measure, na.rm = TRUE))
+coords <- sf::st_coordinates(station_point$geometry)
+lon <- as.numeric(coords[1])
+lat <- as.numeric(coords[2])
+avg_str <- scales::number(avg_value, accuracy = 0.001, big.mark = ".", decimal.mark = ",")
+label_text <- paste0(station_point$name[1], " • Ø ", avg_str, " ", unit_val)
+world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf")
+de <- dplyr::filter(world, admin == "Germany")
+bbox_de <- sf::st_bbox(de)
+xpad <- 1.5
+ypad <- 1.0
+xlim <- c(as.numeric(bbox_de["xmin"]) - xpad, as.numeric(bbox_de["xmax"]) + xpad)
+ylim <- c(as.numeric(bbox_de["ymin"]) - ypad, as.numeric(bbox_de["ymax"]) + ypad)
+lab_sub <- if (is.finite(date_min) && is.finite(date_max)) {
+  paste0("Durchschnittliche Gamma-Ortsdosisleistung (24h): Ø ", avg_str, " ", unit_val, " (", format(as.Date(date_min), "%d.%m.%Y"), " – ", format(as.Date(date_max), "%d.%m.%Y"), ")")
+} else {
+  paste0("Durchschnittliche Gamma-Ortsdosisleistung (24h): Ø ", avg_str, " ", unit_val)
+}
+p <- ggplot() +
+  geom_sf(data = de, fill = "#f5f5f5", color = "#9e9e9e", linewidth = 0.4) +
+  ggspatial::annotation_scale(location = "bl", width_hint = 0.2, text_cex = 0.7) +
+  ggspatial::annotation_north_arrow(location = "bl", which_north = "true", style = ggspatial::north_arrow_fancy_orienteering, pad_x = grid::unit(0.25, "in"), pad_y = grid::unit(0.75, "in"), height = grid::unit(0.8, "cm"), width = grid::unit(0.8, "cm")) +
+  geom_sf(data = station_point, color = "#0068b4", fill = "#1c7ed6", size = 3, alpha = 0.9, shape = 21, linewidth = 0.8) +
+  ggrepel::geom_label_repel(data = data.frame(lon = lon, lat = lat, label = label_text), aes(x = lon, y = lat, label = label), family = "sans", size = 3.8, label.size = 0.2, label.r = grid::unit(0.15, "lines"), min.segment.length = 0, segment.size = 0.3, seed = 1234, box.padding = 0.35, point.padding = 0.3) +
+  coord_sf(xlim = xlim, ylim = ylim, expand = FALSE) +
+  labs(title = "Geografische Lage der ODL-Messstation Dorfprozelten", subtitle = lab_sub, x = "Längengrad (°E)", y = "Breitengrad (°N)", caption = "Quelle: BfS (ODL-Messnetz) • Basiskarte: Natural Earth") +
+  theme_minimal(base_size = 11) +
+  theme(plot.title = element_text(face = "bold", size = 14), plot.subtitle = element_text(size = 11), panel.grid.major = element_line(color = "#e0e0e0", linewidth = 0.4), panel.grid.minor = element_blank(), axis.title = element_text(size = 10))
+plot_path <- file.path(out_dir, "2_karte_messstation.png")
+ggplot2::ggsave(filename = plot_path, plot = p, width = 1200, height = 900, dpi = 320, units = "px")
+
+-> SEVQ:
+
+

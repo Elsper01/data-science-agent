@@ -1,0 +1,532 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32830\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 16:24:00
+Total Duration: 1061.82 seconds
+Total Token Usage: 96669 tokens
+Total Costs: $0.4139
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0084 seconds
+
+Method: analyse_dataset
+  Duration: 0.0080 seconds
+
+Method: analyse_metadata
+  Duration: 0.0052 seconds
+
+Method: llm_generate_summary
+  Duration: 202.2891 seconds
+
+Method: llm_generate_goals
+  Duration: 3.3535 seconds
+
+Method: llm_generate_python_code
+  Duration: 339.4054 seconds
+
+Method: test_generated_code
+  Duration: 4.2863 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 512.4623 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 6276 tokens
+  Costs total: $0.0049
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1597 tokens
+  Costs total: $0.0018
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6978 tokens
+  Costs total: $0.0505
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7314 tokens
+  Costs total: $0.0539
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6876 tokens
+  Costs total: $0.0496
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5802 tokens
+  Costs total: $0.0381
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2616 tokens
+  Costs total: $0.0091
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3314 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 7688 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4911 tokens
+  Costs total: $0.0281
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6581 tokens
+  Costs total: $0.0459
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2701 tokens
+  Costs total: $0.0099
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2997 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4909 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4851 tokens
+  Costs total: $0.0275
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6062 tokens
+  Costs total: $0.0410
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2552 tokens
+  Costs total: $0.0087
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2945 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3984 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4959 tokens
+  Costs total: $0.0295
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How does the daily traffic volume fluctuate throughout September 2024?' visualization="Line chart showing 'Besuche' and 'Besucher' on the Y-axis and 'Datum' on the X-axis." rationale="By plotting 'Besuche' (Visits) and 'Besucher' (Unique Visitors) against 'Datum' (Date), we can visualize the cyclical patterns mentioned in the summary. This helps identify peak usage days (weekdays) versus low-traffic periods (weekends), which is essential for understanding public service demand. Note: The monthly total row should be filtered out for this time-series analysis."
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib.dates import AutoDateLocator, DateFormatter
+
+try:
+    input_path = './src/resources/data/study\\32830\\dataset.csv'
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+try:
+    output_dir = './src/resources/output\\32830'
+    os.makedirs(output_dir, exist_ok=True)
+
+    df = df.replace('-', np.nan)
+    df = df.rename(columns={c: c.strip() for c in df.columns})
+    drop_cols = [c for c in df.columns if c.lower().startswith('unnamed')]
+    if drop_cols:
+        df = df.drop(columns=drop_cols)
+
+    missing_share = df.isna().mean().to_frame('fehlender_anteil').reset_index().rename(columns={'index': 'spalte'})
+    missing_share.to_csv(os.path.join(output_dir, '0_missing_anteile.csv'), index=False, encoding='utf-8')
+
+    df_daily = df[df['Datum'].notna()].copy()
+    df_daily['Datum_parsed'] = pd.to_datetime(df_daily['Datum'], format='%d.%m.%Y', errors='coerce')
+    df_daily = df_daily[df_daily['Datum_parsed'].notna()].copy()
+    for col in ['Besuche', 'Besucher', 'Seitenaufrufe', 'Seiten_pro_Besuch', 'Conversions__Last_Ad_', 'Conversion_Wert__Last_Ad_']:
+        if col in df_daily.columns:
+            df_daily[col] = pd.to_numeric(df_daily[col], errors='coerce')
+
+    numeric_cols = [c for c in df_daily.columns if pd.api.types.is_numeric_dtype(df_daily[c])]
+    if numeric_cols:
+        corr = df_daily[numeric_cols].corr()
+        corr.to_csv(os.path.join(output_dir, '0_korrelation_nummerisch.csv'), encoding='utf-8')
+
+    stats = df_daily[['Besuche', 'Besucher']].agg(['count', 'mean', 'std', 'min', 'median', 'max']).T.reset_index()
+    stats.columns = ['kennzahl', 'anzahl', 'mittelwert', 'stdabw', 'minimum', 'median', 'maximum']
+    stats.to_csv(os.path.join(output_dir, '0_kennzahlen_besuche_besucher.csv'), index=False, encoding='utf-8')
+
+    df_daily = df_daily.sort_values('Datum_parsed')
+    df_daily['Wochentag_idx'] = df_daily['Datum_parsed'].dt.dayofweek
+    wochentag_map = {0: 'Mo', 1: 'Di', 2: 'Mi', 3: 'Do', 4: 'Fr', 5: 'Sa', 6: 'So'}
+    df_daily['Wochentag'] = df_daily['Wochentag_idx'].map(wochentag_map)
+    weekday_means = df_daily.groupby('Wochentag_idx')[['Besuche', 'Besucher']].mean().reset_index()
+    weekday_means['Wochentag'] = weekday_means['Wochentag_idx'].map(wochentag_map)
+    weekday_means = weekday_means[['Wochentag', 'Besuche', 'Besucher']]
+    weekday_means.columns = ['Wochentag', 'Mittelwert_Besuche', 'Mittelwert_Besucher']
+    weekday_means.to_csv(os.path.join(output_dir, '0_wochentag_mittelwerte.csv'), index=False, encoding='utf-8')
+
+    r = np.nan
+    if {'Besuche', 'Besucher'}.issubset(df_daily.columns):
+        r = df_daily[['Besuche', 'Besucher']].corr().iloc[0, 1]
+
+    sns.set_theme(style='whitegrid', context='talk')
+    fig, ax = plt.subplots(figsize=(12, 6))
+
+    ax.plot(df_daily['Datum_parsed'], df_daily['Besuche'], color='#1f77b4', linewidth=2.5, marker='o', markersize=4, label='Besuche')
+    ax.plot(df_daily['Datum_parsed'], df_daily['Besucher'], color='#ff7f0e', linewidth=2.5, marker='o', markersize=4, label='Besucher')
+
+    for d in df_daily['Datum_parsed']:
+        if d.weekday() >= 5:
+            ax.axvspan(d - pd.Timedelta(hours=12), d + pd.Timedelta(hours=12), color='grey', alpha=0.08, lw=0)
+
+    locator = AutoDateLocator()
+    ax.xaxis.set_major_locator(locator)
+    ax.xaxis.set_major_formatter(DateFormatter('%d.%m.%Y'))
+    plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
+
+    ax.set_title('Tägliche Entwicklung von Besuchen und Besuchern im September 2024 – kreis-kleve.de')
+    ax.set_xlabel('Datum')
+    ax.set_ylabel('Anzahl')
+
+    legend = ax.legend(title='Metrik', frameon=True)
+    legend._legend_box.align = 'left'
+
+    note_text = 'Monatssumme (Zeile 0) ausgeschlossen. Wochenenden schattiert.'
+    if pd.notna(r):
+        note_text += f' Korrelation Besuche↔Besucher: {r:.2f}'
+    ax.text(0.01, -0.25, note_text, transform=ax.transAxes, fontsize=10, va='top', ha='left')
+
+    plt.tight_layout()
+    plot_path = os.path.join(output_dir, '0_taegliche_traffic_besuche_besucher.png')
+    plt.savefig(plot_path, dpi=200, bbox_inches='tight')
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the relationship between the number of pages viewed per visit and the bounce rate?' visualization="Dual-axis chart or Scatter plot comparing 'Seiten_pro_Besuch' and 'Bounce_Rate' over 'Datum'." rationale="Comparing 'Seiten_pro_Besuch' (Pages per Visit) with 'Bounce_Rate' helps evaluate user engagement. A high 'Bounce_Rate' combined with a low 'Seiten_pro_Besuch' suggests users are finding specific information quickly or leaving immediately, which is a key insight for informational portals like kreis-kleve.de."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.set_theme(style="whitegrid")
+
+input_path = os.path.normpath('./src/resources/data/study\\32830\\dataset.csv')
+output_dir = os.path.normpath('./src/resources/output\\32830')
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, '1_seiten_pro_besuch_vs_absprungrate.png')
+
+df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+
+unnamed_cols = [c for c in df.columns if c.lower().startswith('unnamed')]
+df = df.drop(columns=unnamed_cols, errors='ignore')
+
+if 'Datum' in df.columns:
+    df['Datum'] = pd.to_datetime(df['Datum'], dayfirst=True, errors='coerce')
+else:
+    df['Datum'] = pd.NaT
+
+for c in ['Seiten_pro_Besuch', 'Bounce_Rate']:
+    if c not in df.columns:
+        df[c] = np.nan
+
+spb = pd.to_numeric(df['Seiten_pro_Besuch'].astype(str).str.replace(',', '.', regex=False), errors='coerce')
+br = pd.to_numeric(df['Bounce_Rate'].astype(str).str.replace('%', '', regex=False).str.replace(',', '.', regex=False), errors='coerce')
+
+df['Seiten_pro_Besuch'] = spb
+df['Bounce_Rate_num'] = br
+
+mask_valid_date = df['Datum'].notna()
+df_daily = df.loc[mask_valid_date].copy()
+df_daily = df_daily.sort_values('Datum')
+
+eda_cols = ['Seiten_pro_Besuch', 'Bounce_Rate_num']
+missing_props = df_daily[eda_cols].isna().mean().to_dict()
+valid = df_daily.dropna(subset=eda_cols)
+
+mean_spb = valid['Seiten_pro_Besuch'].mean()
+mean_br = valid['Bounce_Rate_num'].mean()
+std_spb = valid['Seiten_pro_Besuch'].std()
+std_br = valid['Bounce_Rate_num'].std()
+
+if len(valid) >= 2:
+    corr = valid['Seiten_pro_Besuch'].corr(valid['Bounce_Rate_num'])
+else:
+    corr = np.nan
+
+fig, ax1 = plt.subplots(figsize=(12, 7))
+color_spb = sns.color_palette('deep')[0]
+color_br = sns.color_palette('deep')[3]
+
+ax1.plot(valid['Datum'], valid['Seiten_pro_Besuch'], color=color_spb, marker='o', linewidth=2, label='Seiten pro Besuch')
+ax1.set_xlabel('Datum')
+ax1.set_ylabel('Seiten pro Besuch', color=color_spb)
+ax1.tick_params(axis='y', labelcolor=color_spb)
+
+ax2 = ax1.twinx()
+ax2.plot(valid['Datum'], valid['Bounce_Rate_num'], color=color_br, marker='s', linewidth=2, label='Absprungrate (%)')
+ax2.set_ylabel('Absprungrate (%)', color=color_br)
+ax2.tick_params(axis='y', labelcolor=color_br)
+
+if len(valid) > 0:
+    dates = valid['Datum'].values
+    if len(dates) > 12:
+        idx = np.arange(0, len(dates), max(1, len(dates)//12))
+        ax1.set_xticks(valid['Datum'].iloc[idx])
+        ax1.set_xticklabels(valid['Datum'].iloc[idx].dt.strftime('%d.%m.'), rotation=45, ha='right')
+    else:
+        ax1.set_xticklabels(valid['Datum'].dt.strftime('%d.%m.'), rotation=45, ha='right')
+
+handles1, labels1 = ax1.get_legend_handles_labels()
+handles2, labels2 = ax2.get_legend_handles_labels()
+ax1.legend(handles1 + handles2, labels1 + labels2, loc='upper left', frameon=True)
+
+corr_txt = 'k. A.' if pd.isna(corr) else f"{corr:.2f}".replace('.', ',')
+mean_spb_txt = 'k. A.' if pd.isna(mean_spb) else f"{mean_spb:.2f}".replace('.', ',')
+mean_br_txt = 'k. A.' if pd.isna(mean_br) else f"{mean_br:.2f}".replace('.', ',')
+std_spb_txt = 'k. A.' if pd.isna(std_spb) else f"{std_spb:.2f}".replace('.', ',')
+std_br_txt = 'k. A.' if pd.isna(std_br) else f"{std_br:.2f}".replace('.', ',')
+miss_spb_txt = f"{int(round(missing_props.get('Seiten_pro_Besuch', 0)*100))}%"
+miss_br_txt = f"{int(round(missing_props.get('Bounce_Rate_num', 0)*100))}%"
+
+n_txt = f"{len(valid)}"
+
+title = 'Seiten pro Besuch und Absprungrate über die Zeit (kreis-kleve.de, September 2024)'
+ax1.set_title(title, pad=16, loc='left')
+
+info_text = (
+    f"Mittelwert Seiten/Besuch: {mean_spb_txt} (SD {std_spb_txt})\n"
+    f"Mittelwert Absprungrate: {mean_br_txt}% (SD {std_br_txt})\n"
+    f"Korrelation (Pearson r): {corr_txt} | n={n_txt}\n"
+    f"Fehlende Werte ignoriert – Seiten/Besuch: {miss_spb_txt}, Absprungrate: {miss_br_txt}"
+)
+
+ax1.text(0.01, -0.28, info_text, transform=ax1.transAxes, fontsize=10, va='top', ha='left')
+
+ax1.grid(True, which='major', axis='both', linestyle='--', alpha=0.3)
+fig.tight_layout()
+plt.savefig(output_path, dpi=200, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='How consistent is the cookie acceptance rate across the month?' visualization="Area chart or Bar chart of 'Anteil_Besuche_mit_Cookies' over 'Datum'." rationale="The summary highlights an extremely low 'Anteil_Besuche_mit_Cookies' (Cookie Rate). Visualizing this field over 'Datum' allows us to see if this low rate is a consistent technical baseline or if there are specific days where tracking behavior changed, providing insight into the privacy-conscious nature of the users or the site's technical setup."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib.ticker import PercentFormatter
+import matplotlib.dates as mdates
+
+sns.set_theme(style="whitegrid", context="talk")
+
+path = r'./src/resources/data/study\32830\dataset.csv'
+df = pd.read_csv(path, sep=',', encoding='utf-8')
+
+if 'Unnamed__14' in df.columns:
+    if df['Unnamed__14'].isna().all() or df['Unnamed__14'].eq('').all():
+        df = df.drop(columns=['Unnamed__14'])
+
+for c in df.columns:
+    if isinstance(c, str):
+        try:
+            df[c] = df[c].apply(lambda x: x.strip() if isinstance(x, str) else x)
+        except Exception:
+            pass
+
+def to_percent_fraction(x):
+    if pd.isna(x):
+        return np.nan
+    if isinstance(x, (int, float)):
+        return float(x) if float(x) <= 1 else float(x) / 100.0
+    s = str(x).strip()
+    if s in ['', '-', 'nan', 'None']:
+        return np.nan
+    s = s.replace('%', '').replace(',', '.')
+    try:
+        v = float(s)
+    except Exception:
+        return np.nan
+    return v / 100.0 if v > 1 else v
+
+def to_numeric_coerce(x):
+    if pd.isna(x):
+        return np.nan
+    if isinstance(x, (int, float)):
+        return float(x)
+    s = str(x).strip()
+    if s in ['', '-', 'nan', 'None']:
+        return np.nan
+    s = s.replace(',', '.')
+    try:
+        return float(s)
+    except Exception:
+        return np.nan
+
+def to_seconds(x):
+    if pd.isna(x):
+        return np.nan
+    s = str(x).strip()
+    if s in ['', '-', 'nan', 'None']:
+        return np.nan
+    try:
+        return pd.to_timedelta(s).total_seconds()
+    except Exception:
+        return np.nan
+
+if 'Datum' in df.columns:
+    df['Datum_dt'] = pd.to_datetime(df['Datum'], format='%d.%m.%Y', errors='coerce')
+else:
+    df['Datum_dt'] = pd.NaT
+
+percent_like_cols = []
+for col in df.columns:
+    if any(k in col for k in ['Anteil', 'Rate']):
+        percent_like_cols.append(col)
+
+for col in percent_like_cols:
+    df[col + '_frac'] = df[col].apply(to_percent_fraction)
+
+numeric_candidates = ['Besuche', 'Besucher', 'Seitenaufrufe', 'Seiten_pro_Besuch', 'Conversions__Last_Ad_', 'Conversion_Wert__Last_Ad_', 'Besuchsh__ufigkeit']
+for col in numeric_candidates:
+    if col in df.columns:
+        df[col + '_num'] = df[col].apply(to_numeric_coerce)
+
+for col in ['Zeit_im_Besuch', 'Bounce_Zeit']:
+    if col in df.columns:
+        df[col + '_sek'] = df[col].apply(to_seconds)
+
+missing_ratio = df.isna().mean()
+num_df_cols = [c for c in df.columns if c.endswith('_num') or c.endswith('_frac') or c.endswith('_sek')]
+df_numeric = df[num_df_cols].copy()
+describe_stats = df_numeric.describe().T
+corr_matrix = df_numeric.corr()
+
+daily = df[df['Datum_dt'].notna()].copy()
+daily = daily.sort_values('Datum_dt')
+if 'Anteil_Besuche_mit_Cookies_frac' in daily.columns:
+    daily['CookieRate'] = daily['Anteil_Besuche_mit_Cookies_frac']
+else:
+    daily['CookieRate'] = np.nan
+
+daily['CookieRate_ma3'] = daily['CookieRate'].rolling(window=3, min_periods=1, center=True).mean()
+mean_rate = np.nanmean(daily['CookieRate'])
+
+fig, ax = plt.subplots(figsize=(14, 7))
+color_area = '#1f77b4'
+color_ma = '#ff7f0e'
+ax.fill_between(daily['Datum_dt'], daily['CookieRate'], step=None, alpha=0.35, color=color_area, label='Tageswert')
+ax.plot(daily['Datum_dt'], daily['CookieRate'], color=color_area, linewidth=1.8)
+ax.plot(daily['Datum_dt'], daily['CookieRate_ma3'], color=color_ma, linewidth=2.2, label='3-Tage-Mittel')
+if not np.isnan(mean_rate):
+    ax.axhline(mean_rate, color='gray', linestyle='--', linewidth=1.4, label='Monatsmittel')
+
+ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=2))
+ymax = daily['CookieRate'].max() if daily['CookieRate'].notna().any() else 0.01
+ymax = 0.01 if (np.isnan(ymax) or ymax == 0) else ymax * 1.25
+ax.set_ylim(0, ymax)
+ax.xaxis.set_major_locator(mdates.AutoDateLocator())
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%d.%m.'))
+plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
+ax.set_title('Cookie-Akzeptanzrate im September 2024 (täglich)\nWie konsistent ist der Anteil der Besuche mit Cookies?', pad=16)
+ax.set_xlabel('Datum')
+ax.set_ylabel('Anteil der Besuche mit Cookies')
+ax.legend(frameon=True, loc='upper left')
+plt.tight_layout()
+
+out_dir = r'./src/resources/output\32830'
+os.makedirs(out_dir, exist_ok=True)
+out_path = os.path.join(out_dir, '2_cookie_akzeptanzrate.png')
+plt.savefig(out_path, dpi=200)
+plt.close()
+
+-> SEVQ:
+
+

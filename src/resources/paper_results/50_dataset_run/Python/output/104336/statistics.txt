@@ -1,0 +1,505 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\104336\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 10:52:59
+Total Duration: 1068.55 seconds
+Total Token Usage: 100505 tokens
+Total Costs: $0.4739
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0178 seconds
+
+Method: analyse_dataset
+  Duration: 0.0138 seconds
+
+Method: analyse_metadata
+  Duration: 0.0384 seconds
+
+Method: llm_generate_summary
+  Duration: 191.2745 seconds
+
+Method: llm_generate_goals
+  Duration: 4.2847 seconds
+
+Method: llm_generate_python_code
+  Duration: 368.4320 seconds
+
+Method: test_generated_code
+  Duration: 11.9586 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 492.5318 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3326 tokens
+  Costs total: $0.0033
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1522 tokens
+  Costs total: $0.0020
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7153 tokens
+  Costs total: $0.0573
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5905 tokens
+  Costs total: $0.0447
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7505 tokens
+  Costs total: $0.0608
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8020 tokens
+  Costs total: $0.0602
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2644 tokens
+  Costs total: $0.0092
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3097 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4294 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5827 tokens
+  Costs total: $0.0373
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6448 tokens
+  Costs total: $0.0424
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2814 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3274 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5324 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5709 tokens
+  Costs total: $0.0337
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7688 tokens
+  Costs total: $0.0526
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3140 tokens
+  Costs total: $0.0102
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3902 tokens
+  Costs total: $0.0033
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5901 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 6039 tokens
+  Costs total: $0.0352
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie hoch ist die Gesamtförderung pro Institution im Vergleich?' visualization="Balkendiagramm mit 'F_rderung_in_2014' auf der x-Achse und 'Gesamt_in_Euro' auf der y-Achse." rationale="Ein Balkendiagramm ist die effektivste Methode, um die absoluten Förderbeträge zwischen den verschiedenen Projekten zu vergleichen. Durch die Verwendung von 'F_rderung_in_2014' auf der einen Achse und 'Gesamt_in_Euro' auf der anderen sieht der Nutzer sofort, welche Institutionen die meisten Mittel erhalten haben. Die Summenzeile sollte hierbei gefiltert werden, um die Einzelprojekte klar darzustellen."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+try:
+    sns.set_theme(style="whitegrid", context="talk")
+    data_path_raw = r'./src/resources/data/study\104336\dataset.csv'
+    data_path = data_path_raw.replace('\\', '/')
+    output_dir_raw = r'./src/resources/output\104336'
+    output_dir = output_dir_raw.replace('\\', '/')
+    plot_path = f"{output_dir}/0_gesamtfoerderung_pro_institution.png"
+    eda_missing_path = f"{output_dir}/eda_missing_values.csv"
+    eda_numeric_summary_path = f"{output_dir}/eda_numeric_summary.csv"
+    eda_corr_path = f"{output_dir}/eda_numeric_correlation.csv"
+
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+    df.columns = [c.strip() for c in df.columns]
+    if 'F_rderung_in_2014' in df.columns:
+        df['F_rderung_in_2014'] = df['F_rderung_in_2014'].astype(str).str.strip()
+    for col in ['Bund_in_Euro', 'Land_in_Euro', 'Gesamt_in_Euro']:
+        if col in df.columns:
+            df[col] = (
+                df[col]
+                .astype(str)
+                .str.strip()
+                .replace({'-': np.nan, '': np.nan})
+            )
+            df[col] = pd.to_numeric(df[col], errors='coerce')
+    if {'Bund_in_Euro', 'Land_in_Euro', 'Gesamt_in_Euro'}.issubset(df.columns):
+        calc_total = df['Bund_in_Euro'].fillna(0) + df['Land_in_Euro'].fillna(0)
+        df['Gesamt_in_Euro'] = df['Gesamt_in_Euro'].fillna(calc_total)
+
+    mv = df.isna().sum().to_frame('missing_count')
+    mv['missing_pct'] = (mv['missing_count'] / len(df) * 100).round(2)
+    mv.to_csv(eda_missing_path, encoding='utf-8')
+
+    num_cols = [c for c in ['Bund_in_Euro', 'Land_in_Euro', 'Gesamt_in_Euro'] if c in df.columns]
+    if len(num_cols) > 0:
+        desc = df[num_cols].describe().T
+        desc.to_csv(eda_numeric_summary_path, encoding='utf-8')
+        corr = df[num_cols].corr(method='pearson', min_periods=1)
+        corr.to_csv(eda_corr_path, encoding='utf-8')
+
+    if 'F_rderung_in_2014' not in df.columns or 'Gesamt_in_Euro' not in df.columns:
+        raise ValueError('Erforderliche Spalten fehlen im Datensatz.')
+
+    mask_valid = df['F_rderung_in_2014'].notna() & df['F_rderung_in_2014'].astype(str).str.strip().ne('')
+    mask_sum = ~df['F_rderung_in_2014'].astype(str).str.strip().str.lower().eq('gesamt:')
+    df_plot = df.loc[mask_valid & mask_sum].copy()
+    df_plot = df_plot[df_plot['Gesamt_in_Euro'].notna()]
+
+    if df_plot.empty:
+        raise ValueError('Keine gültigen Daten für die Visualisierung nach Bereinigung.')
+
+    order = df_plot.sort_values('Gesamt_in_Euro', ascending=False)['F_rderung_in_2014']
+
+    plt.figure(figsize=(12, 7))
+    ax = sns.barplot(data=df_plot, x='F_rderung_in_2014', y='Gesamt_in_Euro', order=order, palette='Blues_d')
+    ax.set_title('Gesamtförderung pro Institution (2014)')
+    ax.set_xlabel('Förderung in 2014 – Institution/Projekt')
+    ax.set_ylabel('Förderung gesamt (Euro)')
+    plt.xticks(rotation=25, ha='right')
+
+    for p in ax.patches:
+        h = p.get_height()
+        if pd.notna(h) and h > 0:
+            txt = (f"{int(round(h)):,}").replace(',', '.') + ' €'
+            ax.annotate(txt, (p.get_x() + p.get_width() / 2., h), ha='center', va='bottom', xytext=(0, 5), textcoords='offset points', fontsize=11)
+
+    ylim = ax.get_ylim()
+    ax.set_ylim(0, max(ylim[1], df_plot['Gesamt_in_Euro'].max() * 1.15))
+    plt.tight_layout()
+    plt.savefig(plot_path, dpi=300)
+    plt.close()
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie verteilt sich die Finanzierung zwischen Bund und Land bei den einzelnen Projekten?' visualization="Gestapeltes Balkendiagramm mit 'F_rderung_in_2014' als Kategorien und den Werten aus 'Bund_in_Euro' sowie 'Land_in_Euro'." rationale="Ein gestapeltes Balkendiagramm verdeutlicht die Finanzierungsstruktur. Da die Spalten 'Bund_in_Euro' und 'Land_in_Euro' die jeweiligen Anteile enthalten, lässt sich so visualisieren, dass Großprojekte primär vom Bund und kleinere Projekte primär vom Land finanziert werden. Dies hilft dem Nutzer, die Zuständigkeiten der Fördermittelgeber (Bund vs. Land) für die verschiedenen Institutionen in 'F_rderung_in_2014' zu verstehen."
+
+-> Code:
+import os
+from pathlib import Path
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+sns.set_theme(style="whitegrid", context="talk")
+
+out_dir = Path('./src/resources/output/104336')
+out_dir.mkdir(parents=True, exist_ok=True)
+
+candidates = [
+    Path('./src/resources/data/study/104336/dataset.csv'),
+    Path(r'./src/resources/data/study\104336\dataset.csv'),
+    Path(r'./src/resources/data/study\104336/dataset.csv'),
+    Path(r'./src/resources/data/study/104336\dataset.csv')
+]
+
+data_path = None
+for p in candidates:
+    if p.exists():
+        data_path = p
+        break
+if data_path is None:
+    raise FileNotFoundError('Datendatei nicht gefunden.')
+
+df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+
+df.columns = [c.strip() for c in df.columns]
+expected_cols = ['F_rderung_in_2014', 'Bund_in_Euro', 'Land_in_Euro', 'Gesamt_in_Euro']
+rename_map = {}
+for c in df.columns:
+    if c.lower().replace(' ', '') == 'förderung_in_2014' or c.lower().replace(' ', '') == 'f_rderung_in_2014':
+        rename_map[c] = 'F_rderung_in_2014'
+    if c.lower().replace(' ', '') == 'bundineuro' or c.lower().replace(' ', '') == 'bund_in_euro':
+        rename_map[c] = 'Bund_in_Euro'
+    if c.lower().replace(' ', '') == 'landineuro' or c.lower().replace(' ', '') == 'land_in_euro':
+        rename_map[c] = 'Land_in_Euro'
+    if c.lower().replace(' ', '') == 'gesamtineuro' or c.lower().replace(' ', '') == 'gesamt_in_euro':
+        rename_map[c] = 'Gesamt_in_Euro'
+if rename_map:
+    df = df.rename(columns=rename_map)
+
+if 'F_rderung_in_2014' in df.columns:
+    df['F_rderung_in_2014'] = df['F_rderung_in_2014'].astype(str).str.strip()
+
+num_cols = [c for c in ['Bund_in_Euro','Land_in_Euro','Gesamt_in_Euro'] if c in df.columns]
+for col in num_cols:
+    df[col] = df[col].astype(str).str.replace('.', '', regex=False).str.replace(',', '', regex=False).str.replace('-', '', regex=False).str.strip()
+    df[col] = pd.to_numeric(df[col], errors='coerce')
+
+if set(['Bund_in_Euro','Land_in_Euro']).issubset(df.columns):
+    df['Gesamt_berechnet'] = df[['Bund_in_Euro','Land_in_Euro']].sum(axis=1, skipna=True, min_count=1)
+    if 'Gesamt_in_Euro' in df.columns:
+        df['Abweichung_Gesamt'] = df['Gesamt_in_Euro'] - df['Gesamt_berechnet']
+
+if 'F_rderung_in_2014' not in df.columns or not set(['Bund_in_Euro','Land_in_Euro']).issubset(df.columns):
+    raise ValueError('Erforderliche Spalten fehlen.')
+
+mask_total = df['F_rderung_in_2014'].str.contains('Gesamt', case=False, na=False)
+df_plot = df.loc[~mask_total].copy()
+
+for col in ['Bund_in_Euro','Land_in_Euro']:
+    df_plot[col] = df_plot[col].fillna(0)
+
+df_plot['Summe'] = df_plot[['Bund_in_Euro','Land_in_Euro']].sum(axis=1)
+df_plot = df_plot.sort_values('Summe', ascending=False)
+
+df_plot['Projekt'] = df_plot['F_rderung_in_2014'].astype(str).str.replace(r'^\s*\d+\.\s*', '', regex=True)
+
+fig, ax = plt.subplots(figsize=(12, 6))
+colors = sns.color_palette('deep')
+ax.bar(df_plot['Projekt'], df_plot['Bund_in_Euro'], label='Bund', color=colors[0])
+ax.bar(df_plot['Projekt'], df_plot['Land_in_Euro'], bottom=df_plot['Bund_in_Euro'], label='Land', color=colors[2])
+ax.set_title('Finanzierungsverteilung 2014: Bund vs. Land nach Projekt')
+ax.set_xlabel('Projekte')
+ax.set_ylabel('Förderung in Euro')
+ax.legend(title='Fördermittelgeber')
+ax.set_axisbelow(True)
+ax.grid(True, axis='y', linestyle='--', alpha=0.4)
+ax.tick_params(axis='x', rotation=25, labelsize=10)
+
+formatter = FuncFormatter(lambda x, pos: f"{int(x):,}".replace(',', '.'))
+ax.yaxis.set_major_formatter(formatter)
+
+plt.tight_layout()
+fig.savefig(out_dir / '1_gestapeltes_balkendiagramm_bund_land.png', dpi=300, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Welchen Anteil haben die einzelnen Institutionen am gesamten Fördervolumen?' visualization="Treemap mit 'F_rderung_in_2014' als Label und 'Gesamt_in_Euro' als Flächengröße." rationale="Obwohl Balkendiagramme für Vergleiche besser sind, eignet sich ein Treemap oder ein Kreisdiagramm hier, um die Dominanz der beiden Großprojekte (Gymnasium und Nachschule) im Verhältnis zum Gesamtbudget aufzuzeigen. Durch die Nutzung von 'F_rderung_in_2014' zur Segmentierung und 'Gesamt_in_Euro' zur Bestimmung der Größe wird die Budgetverteilung innerhalb der deutschen Volksgruppe in Nordschleswig auf einen Blick deutlich."
+
+-> Code:
+import os
+import sys
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(style="white", context="talk")
+plt.rcParams["figure.dpi"] = 120
+
+input_path = os.path.normpath('./src/resources/data/study/104336/dataset.csv')
+output_dir = os.path.normpath('./src/resources/output/104336')
+os.makedirs(output_dir, exist_ok=True)
+plot_path = os.path.join(output_dir, '2_treemap_foerdervolumen.png')
+
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+if 'F_rderung_in_2014' not in df.columns:
+    print('Fehler: Spalte F_rderung_in_2014 fehlt im Datensatz.')
+    sys.exit(1)
+
+for c in df.columns:
+    if df[c].dtype == object:
+        df[c] = df[c].astype(str).str.strip()
+
+df = df.replace('-', np.nan)
+num_cols = [c for c in df.columns if c.endswith('_in_Euro')]
+for c in num_cols:
+    df[c] = pd.to_numeric(df[c], errors='coerce')
+
+mask_total = df['F_rderung_in_2014'].str.contains('Gesamt', case=False, na=False)
+df_inst = df.loc[~mask_total].copy()
+if 'Bund_in_Euro' in df_inst.columns and 'Land_in_Euro' in df_inst.columns:
+    df_inst['Gesamt_in_Euro'] = df_inst['Gesamt_in_Euro'].fillna(df_inst[['Bund_in_Euro', 'Land_in_Euro']].sum(axis=1, min_count=1))
+
+df_inst = df_inst[pd.to_numeric(df_inst['Gesamt_in_Euro'], errors='coerce').notna()]
+df_inst = df_inst[df_inst['Gesamt_in_Euro'] > 0]
+
+ausgabe_missing = df.isna().mean().rename('anteil_missing').to_frame()
+ausgabe_missing.to_csv(os.path.join(output_dir, 'eda_anteil_missing_je_spalte.csv'), encoding='utf-8')
+
+num_keep = [c for c in ['Bund_in_Euro', 'Land_in_Euro', 'Gesamt_in_Euro'] if c in df_inst.columns]
+if len(num_keep) > 0:
+    beschreibung = df_inst[num_keep].describe().T
+    beschreibung.to_csv(os.path.join(output_dir, 'eda_kennzahlen_numerisch.csv'), encoding='utf-8')
+    corr = df_inst[num_keep].corr()
+    corr.to_csv(os.path.join(output_dir, 'eda_korrelationen.csv'), encoding='utf-8')
+
+if df_inst.empty or df_inst['Gesamt_in_Euro'].sum(skipna=True) <= 0:
+    print('Fehler: Keine gültigen Förderbeträge für Visualisierung vorhanden.')
+    sys.exit(1)
+
+labels = df_inst['F_rderung_in_2014'].fillna('Unbekannt').astype(str).tolist()
+values = df_inst['Gesamt_in_Euro'].astype(float).tolist()
+order = np.argsort(values)[::-1]
+labels = [labels[i] for i in order]
+values = [values[i] for i in order]
+
+total = float(np.nansum(values))
+shares = [v / total for v in values]
+
+palette = sns.color_palette('viridis', n_colors=len(values))
+colors = [palette[i] for i in range(len(values))]
+
+fig, ax = plt.subplots(figsize=(12, 7))
+ax.set_axis_off()
+
+x0, y0, W, H = 0.0, 0.0, 1.0, 1.0
+horizontal = True
+s = np.array(values, dtype=float)
+if not np.isfinite(s).all() or total <= 0:
+    print('Fehler: Ungültige Werte für Treemap-Berechnung.')
+    sys.exit(1)
+
+rects = []
+if horizontal:
+    pos = x0
+    for v in s:
+        w = W * v / total
+        rects.append((pos, y0, w, H))
+        pos += w
+else:
+    pos = y0
+    for v in s:
+        h = H * v / total
+        rects.append((x0, pos, W, h))
+        pos += h
+
+from matplotlib.patches import Rectangle
+
+def format_euro(x):
+    try:
+        xi = int(round(float(x)))
+        return (f"{xi:,}").replace(',', '.') + ' €'
+    except Exception:
+        return str(x)
+
+def ideal_text_color(rgb):
+    r, g, b = rgb
+    luma = 0.2126 * r + 0.7152 * g + 0.0722 * b
+    return 'black' if luma > 0.6 else 'white'
+
+for (x, y, w, h), lab, val, col, share in zip(rects, labels, values, colors, shares):
+    r = Rectangle((x, y), w, h, facecolor=col, edgecolor='white', linewidth=1.5)
+    ax.add_patch(r)
+    tx = x + w / 2.0
+    ty = y + h / 2.0
+    txt_color = ideal_text_color(col)
+    short_lab = lab
+    if len(short_lab) > 42:
+        short_lab = short_lab[:39] + '…'
+    text = f"{short_lab}\n{format_euro(val)}\n{share*100:.1f}%"
+    fs = 12
+    if w < 0.12 or h < 0.12:
+        fs = 10
+    if w < 0.08 or h < 0.08:
+        fs = 9
+    if w < 0.06 or h < 0.06:
+        fs = 8
+    ax.text(tx, ty, text, ha='center', va='center', color=txt_color, fontsize=fs, wrap=True)
+
+ax.set_xlim(0, 1)
+ax.set_ylim(0, 1)
+plt.title('Anteile am gesamten Fördervolumen 2014 – deutsche Volksgruppe in Nordschleswig', loc='left', fontsize=16, pad=12)
+
+plt.tight_layout()
+plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+

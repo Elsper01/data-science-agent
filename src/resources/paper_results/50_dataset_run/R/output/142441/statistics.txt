@@ -1,0 +1,571 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\142441\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:42:55
+Total Duration: 1183.63 seconds
+Total Token Usage: 131600 tokens
+Total Costs: $0.5302
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 2
+  - Exactly One Visualization: 1 / 3 = (33.33%)
+  - One or More Visualization: 1 / 3 =  (33.33%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0173 seconds
+
+Method: analyse_dataset
+  Duration: 0.0059 seconds
+
+Method: analyse_metadata
+  Duration: 0.0055 seconds
+
+Method: llm_generate_summary
+  Duration: 185.5145 seconds
+
+Method: llm_generate_goals
+  Duration: 5.7135 seconds
+
+Method: llm_generate_r_code
+  Duration: 319.7794 seconds
+
+Method: test_generated_code
+  Duration: 3.0662 seconds
+
+Method: llm_regenerate_code
+  Duration: 27.0999 seconds
+
+Method: test_generated_code
+  Duration: 3.5350 seconds
+
+Method: llm_regenerate_code
+  Duration: 6.1774 seconds
+
+Method: test_generated_code
+  Duration: 3.2875 seconds
+
+Method: llm_regenerate_code
+  Duration: 6.7308 seconds
+
+Method: test_generated_code
+  Duration: 3.5135 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 619.1814 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7909 tokens
+  Costs total: $0.0069
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 2007 tokens
+  Costs total: $0.0023
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 9881 tokens
+  Costs total: $0.0750
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7236 tokens
+  Costs total: $0.0487
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7791 tokens
+  Costs total: $0.0545
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 333 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 858 tokens
+  Costs total: $0.0022
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 485 tokens
+  Costs total: $0.0013
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3409 tokens
+  Costs total: $0.0054
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3730 tokens
+  Costs total: $0.0055
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3246 tokens
+  Costs total: $0.0049
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 429 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 448 tokens
+  Costs total: $0.0012
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3052 tokens
+  Costs total: $0.0045
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 429 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 475 tokens
+  Costs total: $0.0012
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3007 tokens
+  Costs total: $0.0046
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 429 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 429 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7092 tokens
+  Costs total: $0.0475
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2982 tokens
+  Costs total: $0.0094
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3346 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5405 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5990 tokens
+  Costs total: $0.0358
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7255 tokens
+  Costs total: $0.0495
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2868 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3615 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4724 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6830 tokens
+  Costs total: $0.0381
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7962 tokens
+  Costs total: $0.0595
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2685 tokens
+  Costs total: $0.0083
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3397 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5395 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5547 tokens
+  Costs total: $0.0331
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Welche Radionuklide konnten in der Probe nachgewiesen werden und wie hoch ist deren Aktivität?' visualization="Balkendiagramm mit 'Pruefmerkmal' auf der x-Achse und den numerischen Werten aus 'Ergebnis' auf der y-Achse (gefiltert auf Werte ungleich 'n.n.')." rationale="Da der Großteil der Messwerte (31 von 34) als 'n.n.' (nicht nachweisbar) markiert ist, ist es für den Nutzer entscheidend, sofort zu sehen, welche Isotope tatsächlich messbare Werte geliefert haben. Ein Balkendiagramm der numerischen Werte aus der Spalte 'Ergebnis' für die entsprechenden Einträge in 'Pruefmerkmal' verdeutlicht die Dominanz des natürlichen Kalium-40 gegenüber künstlichen Nukliden wie Cäsium-137."
+
+-> Code:
+options(repos = c(CRAN = 'https://cloud.r-project.org'))
+pkgs <- c('tidyverse', 'scales')
+for (p in pkgs) {
+  if (!requireNamespace(p, quietly = TRUE)) install.packages(p)
+}
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(scales)
+})
+
+output_dir <- file.path('.', 'src', 'resources', 'output', '142441')
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+input_path <- file.path('.', 'src', 'resources', 'data', 'study', '142441', 'dataset.csv')
+df <- suppressMessages(readr::read_csv(file = input_path, locale = readr::locale(encoding = 'UTF-8'), show_col_types = FALSE))
+
+# Korrektur der Konvertierungsfunktion: Doppelte Backslashes für Regex in R
+conv_de_number <- function(x) {
+  x2 <- trimws(as.character(x))
+  # Bekannte Nicht-Nachweis-Strings entfernen
+  x2[x2 %in% c('n.n.', 'n.n', 'n. n.', 'n.v.', 'N.N.', 'N.N', '<LD', '< LD', '<LQ', '< LQ', '-', '')] <- NA_character_
+  # Sonderzeichen und Leerzeichen entfernen
+  x2 <- gsub('\u00A0', '', x2, perl = TRUE)
+  x2 <- gsub('\u2007|\u202F', '', x2, perl = TRUE)
+  x2 <- gsub('\u00B7', '', x2, perl = TRUE)
+  # FEHLERBEHEBUNG: '\\s' statt '\s'
+  x2 <- gsub('\\s+', '', x2)
+  # Komma zu Punkt für numerische Konvertierung
+  x2 <- gsub(',', '.', x2, fixed = TRUE)
+  suppressWarnings(as.numeric(x2))
+}
+
+df <- df %>% mutate(Ergebnis_num = conv_de_number(Ergebnis))
+
+# Filtern auf nachgewiesene Werte
+plot_df <- df %>% 
+  filter(!is.na(Ergebnis_num)) %>% 
+  select(Pruefmerkmal, Ergebnis_num, Einheit, Hauptprobenummer, Probenahme_Beginn_Datum, Herkunftsstaat)
+
+if (nrow(plot_df) > 0) {
+  # Einheit bestimmen
+  unit_out <- plot_df %>% filter(!is.na(Einheit)) %>% distinct(Einheit) %>% slice_head(n = 1) %>% pull(Einheit)
+  if (length(unit_out) == 0 || is.na(unit_out)) unit_out <- 'Bq/kg (FM)'
+  
+  # Sortierung für das Diagramm
+  plot_df <- plot_df %>% mutate(Pruefmerkmal = forcats::fct_reorder(Pruefmerkmal, Ergebnis_num))
+  
+  # Metadaten für Titel/Untertitel
+  h_nr <- if("Hauptprobenummer" %in% names(df)) unique(df$Hauptprobenummer)[1] else "Unbekannt"
+  p_dat <- if("Probenahme_Beginn_Datum" %in% names(df)) unique(df$Probenahme_Beginn_Datum)[1] else ""
+  h_staat <- if("Herkunftsstaat" %in% names(df)) unique(df$Herkunftsstaat)[1] else ""
+  
+  title_text <- paste0('Nachgewiesene Radionuklide und ihre Aktivität (IMIS ', h_nr, ')')
+  subtitle_text <- paste0('Gammaspektrometrie; Probenahme: ', p_dat, '; Herkunft: ', h_staat)
+  caption_text <- 'Hinweis: n.n. (nicht nachweisbare) Werte wurden ausgeschlossen. y-Achse in log10-Skala.'
+  
+  p <- ggplot(plot_df, aes(x = Pruefmerkmal, y = Ergebnis_num)) +
+    geom_col(width = 0.6, fill = '#2C7FB8') +
+    # Log-Skala ist sinnvoll, da K-40 oft um Größenordnungen höher liegt als Cs-137
+    scale_y_log10(labels = label_number(accuracy = 0.001, decimal_mark = ',')) +
+    coord_flip(clip = 'off') +
+    geom_text(aes(label = paste0(number(Ergebnis_num, accuracy = 0.001, decimal_mark = ','), ' ', unit_out)),
+              hjust = -0.1, size = 3.5) +
+    labs(title = title_text,
+         subtitle = subtitle_text,
+         x = 'Radionuklid',
+         y = paste0('Aktivität [', unit_out, '] (log10-Skala)'),
+         caption = caption_text) +
+    theme_minimal(base_size = 12) +
+    theme(
+      plot.title = element_text(face = 'bold', size = 13),
+      plot.subtitle = element_text(size = 10),
+      axis.title.x = element_text(margin = margin(t = 8)),
+      axis.title.y = element_text(margin = margin(r = 8)),
+      panel.grid.minor = element_blank(),
+      plot.margin = margin(t = 10, r = 50, b = 10, l = 10)
+    ) +
+    expand_limits(y = max(plot_df$Ergebnis_num, na.rm = TRUE) * 5) # Platz für Textlabels
+  
+  ggsave(filename = file.path(output_dir, '0_nachgewiesene_radionuklide.png'), 
+         plot = p, width = 10, height = 6, dpi = 320)
+} else {
+  # Falls keine Daten vorhanden sind, leere Datei erzeugen oder Nachricht
+  cat("Keine nachgewiesenen Radionuklide gefunden.")
+}
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie hoch ist der Anteil der nicht nachweisbaren Radionuklide im Vergleich zu den nachgewiesenen Stoffen?' visualization="Balkendiagramm (Häufigkeitsverteilung), das die Anzahl der Zeilen gruppiert nach dem Status von 'Ergebnis' (n.n. vs. numerischer Wert) zeigt." rationale="Diese Visualisierung gibt einen schnellen Überblick über die radiologische Reinheit der Probe. Durch die Gruppierung der Spalte 'Ergebnis' in die Kategorien 'Nachweisbar' (numerische Werte) und 'Nicht nachweisbar' ('n.n.') kann der Nutzer auf einen Blick erfassen, dass die überwiegende Mehrheit der untersuchten 'Pruefmerkmal'-Einträge unter der Nachweisgrenze liegt. Dies bestätigt die Aussage der Zusammenfassung über die geringe Belastung."
+
+-> Code:
+options(warn=-1)
+pkgs <- c("readr", "dplyr", "ggplot2", "stringr", "janitor", "scales", "tibble", "forcats")
+new_pkgs <- pkgs[!pkgs %in% rownames(installed.packages())]
+if(length(new_pkgs) > 0) install.packages(new_pkgs, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+
+# Pfade definieren
+input_path <- file.path(".", "src", "resources", "data", "study", "142441", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "142441")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+plot_file <- file.path(output_dir, "1_nachweisstatus_balken.png")
+
+# Daten laden
+df_raw <- readr::read_csv(input_path, locale = locale(encoding = "UTF-8"), col_types = cols(.default = col_character()))
+df <- df_raw %>% janitor::clean_names()
+
+# Datenaufbereitung
+df <- df %>% mutate(
+  ergebnis_raw = ergebnis,
+  ergebnis_trim = stringr::str_squish(stringr::str_trim(ergebnis_raw)),
+  # Identifikation von "nicht nachweisbar" (n.n.)
+  is_nn = ifelse(!is.na(ergebnis_trim) & stringr::str_detect(stringr::str_to_lower(ergebnis_trim), "^(n\\.?n\\.?|nicht\\s*nachweisbar)$"), TRUE, FALSE),
+  # Numerische Konvertierung (Komma zu Punkt)
+  ergebnis_num = suppressWarnings(as.numeric(stringr::str_replace_all(ifelse(is_nn, NA_character_, ergebnis_trim), ",", "."))),
+  # Status-Kategorisierung
+  status = dplyr::case_when(
+    is_nn ~ "Nicht nachweisbar",
+    !is.na(ergebnis_num) ~ "Nachweisbar",
+    TRUE ~ "Unklar"
+  ),
+  status = forcats::fct_relevel(status, c("Nicht nachweisbar", "Nachweisbar", "Unklar"))
+)
+
+# Fehlerbehebung: coalesce() Typ-Konflikt vermeiden durch explizite Konvertierung zu character
+n_total <- nrow(df)
+missing_by_col <- tibble(
+  variable = names(df),
+  missing_n = vapply(df, function(x) {
+    # Sicherstellen, dass x als character behandelt wird, bevor coalesce mit "" erfolgt
+    x_char <- as.character(x)
+    sum(is.na(x_char) | stringr::str_squish(dplyr::coalesce(x_char, "")) == "")
+  }, numeric(1)),
+  missing_pct = missing_n / n_total
+)
+
+# Aggregation für Visualisierung
+counts_status <- df %>% 
+  count(status, name = "anzahl") %>% 
+  mutate(anteil = anzahl / sum(anzahl))
+
+# Kennwerte für nachweisbare Ergebnisse
+kennwerte_num <- df %>% 
+  filter(status == "Nachweisbar") %>% 
+  summarize(
+    n = sum(!is.na(ergebnis_num)),
+    mittelwert = mean(ergebnis_num, na.rm = TRUE),
+    sd = sd(ergebnis_num, na.rm = TRUE),
+    median = median(ergebnis_num, na.rm = TRUE),
+    minimum = suppressWarnings(min(ergebnis_num, na.rm = TRUE)),
+    maximum = suppressWarnings(max(ergebnis_num, na.rm = TRUE))
+  )
+
+# CSV Exports
+readr::write_csv(missing_by_col, file.path(output_dir, "eda_missing_by_column.csv"))
+readr::write_csv(counts_status %>% mutate(anteil_label = scales::percent(anteil, accuracy = 0.1, decimal.mark = ",")), file.path(output_dir, "eda_counts_nachweisstatus.csv"))
+readr::write_csv(kennwerte_num, file.path(output_dir, "eda_kennwerte_ergebnis_num.csv"))
+
+# Visualisierung
+plt <- ggplot(counts_status, aes(x = status, y = anzahl, fill = status)) +
+  geom_col(width = 0.6) +
+  geom_text(aes(label = paste0(anzahl, " (", scales::percent(anteil, accuracy = 0.1, decimal.mark = ","), ")")), 
+            vjust = -0.4, size = 4.2) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.12)), breaks = scales::pretty_breaks()) +
+  scale_fill_manual(values = c("Nicht nachweisbar" = "#2b8cbe", "Nachweisbar" = "#e6550d", "Unklar" = "#9e9e9e")) +
+  labs(title = "Nachweisstatus der Radionuklide",
+       subtitle = paste0("Anteil nicht nachweisbarer vs. nachweisbarer Messungen (n = ", sum(counts_status$anzahl), ")"),
+       x = "Status des Ergebnisses",
+       y = "Anzahl der Prüfmerkmale") +
+  guides(fill = "none") +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    axis.title.x = element_text(margin = margin(t = 8)),
+    axis.title.y = element_text(margin = margin(r = 8))
+  )
+
+# Speichern des Plots
+ggsave(filename = plot_file, plot = plt, width = 9, height = 6, dpi = 300)
+
+# Erfolgskontrolle
+print(paste("Visualisierung erfolgreich erstellt unter:", plot_file))
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Welche spezifischen Isotope wurden im Rahmen der Gammaspektrometrie untersucht?' visualization="Tabelle mit den Spalten 'Pruefmerkmal', 'Ergebnis', 'Einheit' und 'Methode'." rationale="Da es sich um ein detailliertes Analyseprotokoll handelt, möchte ein Fachnutzer wissen, welche 34 'Pruefmerkmal'-Einträge genau geprüft wurden. Eine tabellarische Auflistung der Spalte 'Pruefmerkmal' zusammen mit der Spalte 'Methode' und 'Einheit' bestätigt den Umfang der Untersuchung und die Konsistenz des Datensatzes (alle wurden mittels Gammaspektrometrie analysiert)."
+
+-> Code:
+options(warn=-1)
+packages <- c("readr", "dplyr", "stringr", "tidyr", "janitor", "gridExtra", "grid", "gtable")
+to_install <- packages[!packages %in% rownames(installed.packages())]
+if(length(to_install) > 0) install.packages(to_install, repos = "https://cloud.r-project.org")
+
+library(readr)
+library(dplyr)
+library(stringr)
+library(tidyr)
+library(janitor)
+library(gridExtra)
+library(grid)
+library(gtable)
+
+# Setze Encoding-Optionen
+options(stringsAsFactors = FALSE, scipen = 999, encoding = "UTF-8")
+
+input_path <- file.path(".", "src", "resources", "data", "study", "142441", "dataset.csv")
+out_dir <- file.path(".", "src", "resources", "output", "142441")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Daten einlesen
+df <- readr::read_csv(input_path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE)
+
+# Bereinigung der Texte (Umlaute ersetzen für grid-Kompatibilität)
+clean_text <- function(x) {
+  if(is.character(x)) {
+    x <- iconv(x, from = "UTF-8", to = "UTF-8", sub = "")
+    x <- str_replace_all(x, "ä", "ae")
+    x <- str_replace_all(x, "ö", "oe")
+    x <- str_replace_all(x, "ü", "ue")
+    x <- str_replace_all(x, "Ä", "Ae")
+    x <- str_replace_all(x, "Ö", "Oe")
+    x <- str_replace_all(x, "Ü", "Ue")
+    x <- str_replace_all(x, "ß", "ss")
+  }
+  return(x)
+}
+
+# Daten für die Tabelle vorbereiten
+vis_tbl <- df %>% 
+  select(Pruefmerkmal, Ergebnis, Einheit, Methode) %>%
+  mutate(across(everything(), ~ clean_text(as.character(.)))) %>%
+  mutate(across(everything(), ~ replace_na(., "")))
+
+# Tabellen-Styling
+row_height_px <- 45
+img_width <- 1800
+# Dynamische Höhe basierend auf Zeilenanzahl
+img_height <- (nrow(vis_tbl) + 5) * row_height_px
+
+th <- ttheme_minimal(
+  core = list(
+    fg_params = list(hjust = 0, x = 0.02, fontsize = 11),
+    bg_params = list(fill = c(rep(c("#FFFFFF", "#F9F9F9"), length.out = nrow(vis_tbl))), col = "#DDDDDD")
+  ),
+  colhead = list(
+    fg_params = list(hjust = 0, x = 0.02, fontsize = 12, fontface = "bold", col = "white"),
+    bg_params = list(fill = "#2C3E50", col = "#2C3E50")
+  )
+)
+
+# Erstellung der Tabelle
+g_tbl <- tableGrob(vis_tbl, rows = NULL, theme = th)
+
+# Titel und Untertitel
+title_text <- "Untersuchte Isotope (Gammaspektrometrie)"
+subtitle_text <- "Tabellarische Uebersicht der Pruefmerkmale, Ergebnisse und Methoden"
+
+plot_title <- textGrob(title_text, x = unit(0.02, "npc"), hjust = 0, gp = gpar(fontsize = 16, fontface = "bold"))
+plot_sub <- textGrob(subtitle_text, x = unit(0.02, "npc"), hjust = 0, gp = gpar(fontsize = 11, col = "#555555"))
+
+# Korrektur der combine_titles Funktion: 
+# gtable_col erwartet 'width' (Singular) statt 'widths'
+combine_titles <- function(g1, g2) {
+  g <- gtable::gtable_col("title_block", 
+                          grobs = list(g1, g2), 
+                          width = unit(1, "null"), 
+                          heights = unit.c(unit(1.5, "line"), unit(1, "line")))
+  return(g)
+}
+
+# Zusammenfügen der finalen Grafik
+# Wir nutzen arrangeGrob und fügen den Titel-Block hinzu
+title_block <- combine_titles(plot_title, plot_sub)
+
+g_final <- arrangeGrob(
+  g_tbl, 
+  top = title_block,
+  padding = unit(2, "line")
+)
+
+# Speichern
+outfile <- file.path(out_dir, "2_isotopentabelle.png")
+png(filename = outfile, width = img_width, height = img_height, res = 150)
+grid.newpage()
+grid.draw(g_final)
+dev.off()
+
+cat(paste0("Datei erfolgreich gespeichert unter: ", outfile))
+
+
+-> SEVQ:
+
+

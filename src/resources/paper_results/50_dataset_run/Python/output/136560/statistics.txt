@@ -1,0 +1,485 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\136560\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 10:53:06
+Total Duration: 1072.04 seconds
+Total Token Usage: 103514 tokens
+Total Costs: $0.4759
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0093 seconds
+
+Method: analyse_dataset
+  Duration: 0.0170 seconds
+
+Method: analyse_metadata
+  Duration: 0.0238 seconds
+
+Method: llm_generate_summary
+  Duration: 200.3007 seconds
+
+Method: llm_generate_goals
+  Duration: 3.6282 seconds
+
+Method: llm_generate_python_code
+  Duration: 351.9828 seconds
+
+Method: test_generated_code
+  Duration: 10.3077 seconds
+
+Method: llm_regenerate_code
+  Duration: 9.0262 seconds
+
+Method: test_generated_code
+  Duration: 11.1433 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 485.6045 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4415 tokens
+  Costs total: $0.0040
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1786 tokens
+  Costs total: $0.0021
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7885 tokens
+  Costs total: $0.0625
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5977 tokens
+  Costs total: $0.0436
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7264 tokens
+  Costs total: $0.0562
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 355 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3121 tokens
+  Costs total: $0.0048
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 369 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7861 tokens
+  Costs total: $0.0571
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2772 tokens
+  Costs total: $0.0090
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3349 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5001 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 6087 tokens
+  Costs total: $0.0403
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5591 tokens
+  Costs total: $0.0369
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2488 tokens
+  Costs total: $0.0096
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3186 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4421 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5272 tokens
+  Costs total: $0.0323
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7189 tokens
+  Costs total: $0.0492
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2938 tokens
+  Costs total: $0.0096
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3327 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5347 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 6183 tokens
+  Costs total: $0.0400
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie hoch sind die gemessenen Aktivitäten für die verschiedenen Prüfmerkmale im Vergleich?' visualization="Balkendiagramm mit 'Pruefmerkmal' auf der x-Achse und 'Ergebnis' auf der y-Achse (gefiltert auf Einheiten in Bq/l)." rationale="Da der Datensatz verschiedene radiologische Parameter untersucht, ist ein Balkendiagramm ideal, um die numerischen Werte aus 'Ergebnis' für die verschiedenen Einträge in 'Pruefmerkmal' (wie Radon-222 oder Gesamt-Alpha) gegenüberzustellen. Dies zeigt sofort, welche Stoffe nachweisbar waren und welche unter der Nachweisgrenze ('n.n.') lagen."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Konfiguration
+pd.set_option('display.max_columns', None)
+
+data_path = r'./src/resources/data/study/136560/dataset.csv'
+output_dir = r'./src/resources/output/136560'
+os.makedirs(os.path.normpath(output_dir), exist_ok=True)
+
+# Daten laden
+df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+
+# Datenvorbereitung
+# Fehlerbehebung: datetime_is_numeric=True wurde in neueren Pandas-Versionen entfernt, da es nun Standard ist
+_ = df.describe(include='all')
+
+# Filtern auf Einheit Bq/l
+sub = df[df['Einheit'].astype(str).str.strip().str.lower().eq('bq/l')].copy()
+
+if not sub.empty:
+    # Ergebnis bereinigen und konvertieren
+    sub['Ergebnis_clean'] = sub['Ergebnis'].astype(str).str.strip()
+    # 'n.n.' oder ähnliche Nicht-Nachweise identifizieren
+    sub['is_nd'] = sub['Ergebnis_clean'].str.lower().str.contains('n')
+    # Numerische Werte extrahieren
+    sub['Ergebnis_num'] = pd.to_numeric(sub['Ergebnis_clean'].str.replace(',', '.', regex=False), errors='coerce')
+    
+    # Aggregation pro Prüfmerkmal
+    plot_df = sub.groupby('Pruefmerkmal', as_index=False).apply(lambda g: pd.Series({
+        'Aktivitaet_Bq_l': g['Ergebnis_num'].mean() if g['Ergebnis_num'].notna().any() else 0.0,
+        'ist_nicht_nachweisbar': bool(g['is_nd'].any() and g['Ergebnis_num'].isna().all()),
+        'anzahl_numeric': int(g['Ergebnis_num'].notna().sum())
+    })).reset_index(drop=True)
+else:
+    plot_df = pd.DataFrame(columns=['Pruefmerkmal', 'Aktivitaet_Bq_l', 'ist_nicht_nachweisbar', 'anzahl_numeric'])
+
+# Visualisierung
+sns.set_theme(style='whitegrid', context='talk')
+fig, ax = plt.subplots(figsize=(10, 6), dpi=150)
+
+if plot_df.empty:
+    ax.axis('off')
+    ax.text(0.5, 0.5, 'Keine Messwerte in Bq/l vorhanden.', ha='center', va='center', fontsize=14)
+else:
+    detect_color = '#2B8CBE'
+    nd_color = '#9E9E9E'
+    
+    # Farben basierend auf Nachweisbarkeit
+    colors = [nd_color if row['ist_nicht_nachweisbar'] else detect_color for _, row in plot_df.iterrows()]
+    
+    bars = ax.bar(plot_df['Pruefmerkmal'], plot_df['Aktivitaet_Bq_l'], color=colors, edgecolor='#333333', linewidth=0.8)
+    
+    ymax = float(plot_df['Aktivitaet_Bq_l'].max())
+    # Padding für Labels
+    padding = 0.05 * (ymax if ymax > 0 else 1)
+    
+    for bar, (_, row) in zip(bars, plot_df.iterrows()):
+        y = float(row['Aktivitaet_Bq_l'])
+        if row['ist_nicht_nachweisbar']:
+            bar.set_hatch('//')
+            ax.text(bar.get_x() + bar.get_width() / 2, y + padding, 'n.n.', ha='center', va='bottom', fontsize=10, fontweight='bold')
+        else:
+            label = f"{y:.3f}".replace('.', ',')
+            ax.text(bar.get_x() + bar.get_width() / 2, y + padding, label, ha='center', va='bottom', fontsize=10)
+
+    ax.set_ylabel('Aktivitätskonzentration (Bq/l)', fontsize=12)
+    ax.set_xlabel('Prüfmerkmal', fontsize=12)
+    ax.set_title('Gemessene Aktivitäten nach Prüfmerkmal (Einheit: Bq/l)', fontsize=14, pad=20)
+    
+    # Dynamisches Y-Limit
+    ax.set_ylim(0, (ymax * 1.3) if ymax > 0 else 1)
+    
+    # X-Achsen Beschriftung rotieren
+    plt.xticks(rotation=15, ha='right')
+    
+    # Fußnote
+    ax.text(0.5, -0.25, "Hinweis: 'n.n.' markiert Werte unter der Nachweisgrenze (als 0 dargestellt).", 
+            transform=ax.transAxes, ha='center', va='top', fontsize=9, color='#555555', style='italic')
+
+out_path = os.path.normpath(os.path.join(output_dir, '0_aktivitaeten_vergleich.png'))
+plt.tight_layout()
+plt.savefig(out_path, dpi=200, bbox_inches='tight')
+plt.close()
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Welche Messmethoden wurden für die Untersuchung der Trinkwasserprobe angewandt?' visualization="Kreisdiagramm basierend auf der Häufigkeit der Werte in der Spalte 'Methode'." rationale="Ein Kreisdiagramm oder ein einfaches Balkendiagramm der Spalte 'Methode' verdeutlicht die methodische Zusammensetzung der Untersuchung. Der Nutzer erkennt auf einen Blick, dass sowohl 'Radon-LSC' als auch Verfahren zur Bestimmung der 'Gesamt-Alpha'-Aktivität genutzt wurden, was die Gründlichkeit der Strahlenschutzvorsorge unterstreicht."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+sns.set_theme(style='white', context='talk')
+plt.rcParams['font.family'] = 'DejaVu Sans'
+
+input_path = os.path.join('.', 'src', 'resources', 'data', 'study', '136560', 'dataset.csv')
+output_dir = os.path.join('.', 'src', 'resources', 'output', '136560')
+os.makedirs(output_dir, exist_ok=True)
+
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+except Exception as e:
+    print(e)
+    raise
+
+for c in df.columns:
+    if df[c].dtype == object:
+        df[c] = df[c].astype(str).str.strip()
+
+missing_token_patterns = ['n.n.', 'n.n', 'nn', 'NaN', 'nan', '']
+df_mv = df.replace(missing_token_patterns, np.nan)
+missing_ratio = df_mv.isna().mean()
+
+if 'Ergebnis' in df.columns:
+    ergebnis_clean = (
+        df['Ergebnis']
+        .astype(str)
+        .str.strip()
+        .replace({'n.n.': np.nan, 'n.n': np.nan, 'nn': np.nan, '': np.nan})
+        .str.replace(',', '.', regex=False)
+    )
+    df['Ergebnis_num'] = pd.to_numeric(ergebnis_clean, errors='coerce')
+else:
+    df['Ergebnis_num'] = np.nan
+
+numeric_cols = ['Ergebnis_num']
+num_df = df[numeric_cols].select_dtypes(include=[np.number])
+desc_stats = num_df.describe().T
+
+if {'Methode', 'Einheit'}.issubset(df.columns):
+    grouped_stats = df.groupby(['Methode', 'Einheit'], dropna=False)['Ergebnis_num'].agg(['count', 'mean', 'std', 'min', 'max'])
+else:
+    grouped_stats = pd.DataFrame()
+
+plot_counts = pd.Series(dtype=int)
+if 'Methode' in df.columns:
+    method_series = df['Methode'].dropna()
+    method_series = method_series[method_series.str.len() > 0]
+    if not method_series.empty:
+        plot_counts = method_series.value_counts().sort_values(ascending=False)
+
+fig, ax = plt.subplots(figsize=(8, 8), dpi=150)
+if plot_counts.empty:
+    ax.axis('off')
+    ax.text(0.5, 0.5, 'Keine Daten zur Spalte "Methode" verfügbar', ha='center', va='center', fontsize=16)
+else:
+    colors = sns.color_palette('deep', n_colors=len(plot_counts))
+    def make_autopct(values):
+        def autopct(pct):
+            total = np.sum(values)
+            val = int(round(pct * total / 100.0))
+            return f'{pct:.1f}% ({val})'
+        return autopct
+    wedges, texts, autotexts = ax.pie(
+        plot_counts.values,
+        labels=plot_counts.index,
+        autopct=make_autopct(plot_counts.values),
+        startangle=90,
+        colors=colors,
+        pctdistance=0.75,
+        labeldistance=1.05,
+        wedgeprops={'linewidth': 1, 'edgecolor': 'white'}
+    )
+    ax.axis('equal')
+    for t in texts:
+        t.set_fontsize(12)
+    for t in autotexts:
+        t.set_fontsize(11)
+    ax.set_title('Messmethoden der Trinkwasseruntersuchung – Häufigkeitsverteilung', pad=20)
+
+save_path = os.path.join(output_dir, '1_methoden_kreisdiagramm.png')
+plt.tight_layout()
+plt.savefig(save_path, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie verhält sich die Messzeit im Verhältnis zu den erzielten Ergebnissen?' visualization="Tabelle oder Balkendiagramm, das 'Pruefmerkmal' und 'Ergebnis' zeigt, wobei die 'Einheit' zur Unterscheidung zwischen Zeit (s) und Aktivität (Bq/l) dient." rationale="Durch die Kombination von 'Pruefmerkmal' (gefiltert auf Messzeit) und 'Ergebnis' (in der Einheit 's') kann die Dauer der Analyse visualisiert werden. Dies gibt Aufschluss über den technischen Aufwand der Untersuchung an der 'Entnahmestelle' Ellerauer Straße und hilft Experten, die Qualität und Präzision der Messung einzuschätzen."
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+try:
+    sns.set_theme(style="whitegrid", font_scale=1.0)
+    input_path = os.path.normpath('./src/resources/data/study\\136560\\dataset.csv')
+    output_dir = os.path.normpath('./src/resources/output\\136560')
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+    for c in df.columns:
+        if df[c].dtype == object:
+            df[c] = df[c].astype(str).str.strip()
+    df['Einheit'] = df['Einheit'].astype(str).str.strip()
+    df['Ergebnis_str'] = df['Ergebnis'].astype(str).str.strip()
+    df['Ergebnis_num'] = pd.to_numeric(df['Ergebnis_str'].str.replace(',', '.', regex=False), errors='coerce')
+    missing_by_col = df.isna().sum()
+    nunique_by_col = df.nunique(dropna=False)
+    numeric_stats_by_unit = df.groupby('Einheit', dropna=False)['Ergebnis_num'].agg(['count','mean','std','min','max'])
+    corr_matrix = df.select_dtypes(include=[np.number]).corr(numeric_only=True)
+    df['Einheit_norm'] = df['Einheit'].str.lower()
+    time_df = df[df['Einheit_norm'] == 's'].copy()
+    act_df = df[df['Einheit_norm'] == 'bq/l'].copy()
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5), gridspec_kw={'width_ratios': [1, 1]})
+    if not time_df.empty:
+        sns.barplot(data=time_df, x='Pruefmerkmal', y='Ergebnis_num', hue='Methode', ci=None, estimator=np.mean, palette='Blues_d', ax=axes[0])
+        axes[0].set_title('Messzeiten der Analysen (s)')
+        axes[0].set_xlabel('Prüfmerkmal')
+        axes[0].set_ylabel('Messzeit (s)')
+        axes[0].tick_params(axis='x', rotation=15)
+        for p in axes[0].patches:
+            h = p.get_height()
+            if np.isfinite(h):
+                axes[0].annotate(f"{int(round(h))} s", (p.get_x() + p.get_width()/2., h), ha='center', va='bottom', fontsize=9, xytext=(0, 3), textcoords='offset points')
+        axes[0].legend(title='Methode', loc='upper right', frameon=True)
+    else:
+        axes[0].axis('off')
+    if not act_df.empty:
+        sns.barplot(data=act_df, x='Pruefmerkmal', y='Ergebnis_num', hue='Methode', ci=None, estimator=np.mean, palette='Greens_d', ax=axes[1])
+        axes[1].set_title('Aktivitätskonzentrationen (Bq/l)')
+        axes[1].set_xlabel('Prüfmerkmal')
+        axes[1].set_ylabel('Aktivität (Bq/l)')
+        axes[1].tick_params(axis='x', rotation=15)
+        plotted_labels = set([t.get_text() for t in axes[1].get_xticklabels()])
+        for p in axes[1].patches:
+            h = p.get_height()
+            if np.isfinite(h) and h > 0:
+                label = str(np.round(h, 2)).replace('.', ',') + ' Bq/l'
+                axes[1].annotate(label, (p.get_x() + p.get_width()/2., h), ha='center', va='bottom', fontsize=9, xytext=(0, 3), textcoords='offset points')
+        undetected = act_df[act_df['Ergebnis_num'].isna()]
+        if not undetected.empty:
+            xticks = [tick.get_text() for tick in axes[1].get_xticklabels()]
+            for _, row in undetected.iterrows():
+                label = row['Pruefmerkmal']
+                if label in xticks:
+                    idx = xticks.index(label)
+                    xlocs = axes[1].get_xticks()
+                    if idx < len(xlocs):
+                        x = xlocs[idx]
+                        ymin, ymax = axes[1].get_ylim()
+                        y = max(ymin, 0)
+                        axes[1].annotate('n.n. (unter Nachweisgrenze)', (x, y), ha='center', va='bottom', fontsize=9, color='gray', xytext=(0, 5), textcoords='offset points')
+        if len(axes[1].get_legend().texts) == 0 if axes[1].get_legend() else True:
+            axes[1].legend(title='Methode', loc='upper right', frameon=True)
+    else:
+        axes[1].axis('off')
+    fig.suptitle('Messzeit im Verhältnis zu den Ergebnissen – Trinkwasserprobe Ellerauer Straße (23.05.2017)')
+    plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+    output_path = os.path.normpath(os.path.join(output_dir, '2_eda_balkendiagramm_pruefmerkmal_ergebnis_einheit.png'))
+    fig.savefig(output_path, dpi=200, bbox_inches='tight')
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+
+-> SEVQ:
+
+

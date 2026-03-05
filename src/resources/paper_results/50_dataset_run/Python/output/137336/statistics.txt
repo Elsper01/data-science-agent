@@ -1,0 +1,464 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\137336\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 11:08:36
+Total Duration: 950.93 seconds
+Total Token Usage: 105055 tokens
+Total Costs: $0.4774
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0128 seconds
+
+Method: analyse_dataset
+  Duration: 0.0111 seconds
+
+Method: analyse_metadata
+  Duration: 0.0089 seconds
+
+Method: llm_generate_summary
+  Duration: 177.5900 seconds
+
+Method: llm_generate_goals
+  Duration: 6.1742 seconds
+
+Method: llm_generate_python_code
+  Duration: 246.3037 seconds
+
+Method: test_generated_code
+  Duration: 10.8130 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 510.0175 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7765 tokens
+  Costs total: $0.0064
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2039 tokens
+  Costs total: $0.0022
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8768 tokens
+  Costs total: $0.0636
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7431 tokens
+  Costs total: $0.0498
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7742 tokens
+  Costs total: $0.0533
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7008 tokens
+  Costs total: $0.0493
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2602 tokens
+  Costs total: $0.0079
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3116 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4026 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5675 tokens
+  Costs total: $0.0347
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8198 tokens
+  Costs total: $0.0618
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2609 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3290 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4377 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5563 tokens
+  Costs total: $0.0348
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6810 tokens
+  Costs total: $0.0448
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2947 tokens
+  Costs total: $0.0092
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3776 tokens
+  Costs total: $0.0033
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4338 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5953 tokens
+  Costs total: $0.0353
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question="Welche Analysemethoden wurden am häufigsten eingesetzt, um die Probe 'Feinstes Wiesenstreu' zu untersuchen?" visualization="Ein Balkendiagramm, das die Häufigkeit der verschiedenen Werte in der Spalte 'Methode' darstellt." rationale="Da der Datensatz 104 verschiedene Prüfmerkmale für eine einzige Probe enthält, hilft ein Balkendiagramm der Spalte 'Methode' dem Nutzer zu verstehen, welche technologischen Schwerpunkte (z.B. Gammaspektrometrie vs. HRGC-MS) bei der Untersuchung gesetzt wurden. Dies gibt Aufschluss über die Tiefe der radiologischen im Vergleich zur chemischen Analyse."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
+
+try:
+    sns.set_theme(style="whitegrid", context="talk")
+    output_dir = os.path.join('.', 'src', 'resources', 'output', '137336')
+    os.makedirs(output_dir, exist_ok=True)
+    data_path = os.path.join('.', 'src', 'resources', 'data', 'study', '137336', 'dataset.csv')
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8', low_memory=False)
+    df_clean = df.copy()
+    df_clean = df_clean.replace(to_replace=r'^\s*$', value=np.nan, regex=True)
+    df_clean = df_clean.replace(to_replace=r'^\s*n\.?n\.?\s*$', value=np.nan, regex=True)
+    if 'Ergebnis' in df_clean.columns:
+        ergebnis_series = df_clean['Ergebnis'].astype(str).str.replace(',', '.', regex=False)
+        ergebnis_series = ergebnis_series.str.replace('<', '', regex=False).str.replace('>', '', regex=False)
+        ergebnis_series = ergebnis_series.str.replace('≤', '', regex=False).str.replace('≥', '', regex=False)
+        ergebnis_series = ergebnis_series.str.strip()
+        ergebnis_series = ergebnis_series.replace({'': np.nan, 'nan': np.nan, 'NaN': np.nan, 'None': np.nan})
+        df_clean['Ergebnis_num'] = pd.to_numeric(ergebnis_series, errors='coerce')
+    fehlend = df_clean.isna().mean().sort_values(ascending=False).to_frame('Anteil_fehlend')
+    fehlend.to_csv(os.path.join(output_dir, 'eda_anteil_fehlend_pro_spalte.csv'), encoding='utf-8')
+    einzigartige = df_clean.nunique(dropna=True).sort_values(ascending=False).to_frame('Anzahl_eindeutige_Werte')
+    einzigartige.to_csv(os.path.join(output_dir, 'eda_eindeutige_werte_pro_spalte.csv'), encoding='utf-8')
+    num_cols = df_clean.select_dtypes(include=[np.number]).columns.tolist()
+    if len(num_cols) > 0:
+        beschreibung = df_clean[num_cols].describe().T
+        beschreibung.to_csv(os.path.join(output_dir, 'eda_kennzahlen_numerisch.csv'), encoding='utf-8')
+        if len(num_cols) > 1:
+            corr = df_clean[num_cols].corr()
+            corr.to_csv(os.path.join(output_dir, 'eda_korrelation_numerisch.csv'), encoding='utf-8')
+        else:
+            pd.DataFrame().to_csv(os.path.join(output_dir, 'eda_korrelation_numerisch.csv'), encoding='utf-8')
+    else:
+        pd.DataFrame().to_csv(os.path.join(output_dir, 'eda_kennzahlen_numerisch.csv'), encoding='utf-8')
+        pd.DataFrame().to_csv(os.path.join(output_dir, 'eda_korrelation_numerisch.csv'), encoding='utf-8')
+    if 'Methode' not in df_clean.columns:
+        raise ValueError('Spalte "Methode" nicht im Datensatz gefunden.')
+    methoden = df_clean['Methode'].copy()
+    methoden = methoden.where(~methoden.isna(), None)
+    methoden = methoden.dropna().astype(str).str.strip()
+    methoden = methoden.replace({'': np.nan}).dropna()
+    counts = methoden.value_counts(dropna=False)
+    df_plot = counts.reset_index()
+    df_plot.columns = ['Methode', 'Anzahl']
+    df_plot = df_plot.sort_values('Anzahl', ascending=False)
+    fig_height = min(max(6, 0.4 * len(df_plot)), 20)
+    plt.figure(figsize=(12, fig_height))
+    ax = sns.barplot(data=df_plot, y='Methode', x='Anzahl', palette='viridis')
+    ax.set_title("Häufigkeit der eingesetzten Analysemethoden – Probe 'Feinstes Wiesenstreu' (IMIS 22.11.2016)")
+    ax.set_xlabel('Anzahl der Untersuchungen (Prüfmerkmale)')
+    ax.set_ylabel('Analysemethode')
+    for i, v in enumerate(df_plot['Anzahl']):
+        ax.text(v + max(df_plot['Anzahl']) * 0.01, i, str(v), va='center')
+    plt.tight_layout()
+    plot_path = os.path.join(output_dir, '0_methoden_haeufigkeit.png')
+    plt.savefig(plot_path, dpi=300)
+    plt.close()
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question="Welche Radioisotope oder Stoffe weisen die höchsten messbaren Konzentrationen in der Einheit 'Bq/kg(TM)' auf?" visualization="Ein horizontales Balkendiagramm mit 'Pruefmerkmal' auf der Y-Achse und dem numerischen 'Ergebnis' auf der X-Achse, gefiltert nach der 'Einheit' 'Bq/kg(TM)'." rationale="Da viele Werte in der Spalte 'Ergebnis' als 'n.n.' (nicht nachweisbar) markiert sind, ist es für einen Nutzer entscheidend zu sehen, welche 'Pruefmerkmal'-Einträge tatsächlich signifikante Messwerte liefern. Durch Filtern auf die häufigste 'Einheit' (Bq/kg(TM)) und Visualisierung der numerischen 'Ergebnis'-Werte können natürliche Isotope wie Kalium-40 schnell identifiziert werden."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(style='whitegrid', context='talk')
+
+path = './src/resources/data/study/137336/dataset.csv'
+df = pd.read_csv(path, sep=',', encoding='utf-8', dtype=str, keep_default_na=True)
+
+for c in df.columns:
+    if df[c].dtype == object:
+        df[c] = df[c].astype(str).str.replace('\u00a0', ' ', regex=False).str.strip()
+
+missing_share = df.replace({'': np.nan}).isna().mean()
+unit_counts = df['Einheit'].fillna('Unbekannt').value_counts(dropna=False)
+
+def to_numeric_value(x):
+    if x is None or (isinstance(x, float) and np.isnan(x)):
+        return np.nan
+    s = str(x).strip().lower()
+    if s in {'', 'nan', 'na', 'n.a.', 'n/a', 'none'}:
+        return np.nan
+    s = s.replace(' ', '')
+    s = s.replace(',', '.')
+    if s in {'n.n.', 'n.n', 'nn'}:
+        return np.nan
+    if s.startswith('<') or s.startswith('>') or s.startswith('≤') or s.startswith('≥'):
+        return np.nan
+    try:
+        return float(s)
+    except Exception:
+        return np.nan
+
+if 'Ergebnis' in df.columns:
+    df['Ergebnis_num'] = df['Ergebnis'].apply(to_numeric_value)
+else:
+    df['Ergebnis_num'] = np.nan
+
+if 'Einheit' in df.columns:
+    df['Einheit_clean'] = df['Einheit'].astype(str).str.lower().str.replace(' ', '', regex=False)
+else:
+    df['Einheit_clean'] = ''
+
+mask_bqkg_tm = df['Einheit_clean'] == 'bq/kg(tm)'
+df_bq = df.loc[mask_bqkg_tm].copy()
+
+plot_df = df_bq.dropna(subset=['Ergebnis_num'])
+
+if 'Pruefmerkmal' not in plot_df.columns:
+    plot_df['Pruefmerkmal'] = ''
+
+plot_df = plot_df.sort_values('Ergebnis_num', ascending=False)
+
+max_bars = 25
+if len(plot_df) > max_bars:
+    plot_df = plot_df.head(max_bars)
+
+fig_height = max(4, 0.4 * max(1, len(plot_df)))
+fig, ax = plt.subplots(figsize=(12, fig_height))
+
+if len(plot_df) == 0:
+    ax.axis('off')
+    ax.text(0.5, 0.5, 'Keine messbaren Werte in Bq/kg(TM) gefunden', ha='center', va='center')
+    title = 'Messbare Konzentrationen in Bq/kg(TM) – Probe Feinstes Wiesenstreu (22.11.2016)'
+    fig.suptitle(title)
+else:
+    sns.barplot(data=plot_df, x='Ergebnis_num', y='Pruefmerkmal', palette='viridis', ax=ax, orient='h')
+    ax.set_title('Höchste messbare Konzentrationen in Bq/kg(TM) – Feinstes Wiesenstreu (22.11.2016)')
+    ax.set_xlabel('Ergebnis [Bq/kg(TM)]')
+    ax.set_ylabel('Prüfmerkmal')
+    for p in ax.patches:
+        w = p.get_width()
+        y = p.get_y() + p.get_height() / 2
+        if np.isfinite(w):
+            ax.annotate(f"{w:,.2f}".replace(',', 'X').replace('.', ',').replace('X', '.'), (w, y), xytext=(6, 0), textcoords='offset points', va='center', ha='left', fontsize=10, color='#333333')
+    ax.margins(x=0.05)
+
+plt.tight_layout()
+output_path = './src/resources/output/137336/1_bqkg_tm_balkendiagramm.png'
+fig.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie verteilen sich die 104 Prüfmerkmale auf die verschiedenen Maßeinheiten?' visualization="Ein Balkendiagramm (Count Plot), das die Anzahl der 'Pruefmerkmal'-Einträge pro 'Einheit' gruppiert." rationale="Der Datensatz ist sehr heterogen. Eine Visualisierung der Spalte 'Einheit' zeigt dem Nutzer sofort, welche Stoffklassen dominieren: Bq/kg deutet auf Radioaktivität hin, während ng/kg oder µg/kg auf Spurenanalytik von Dioxinen oder PCBs hinweisen. Dies hilft bei der schnellen Einordnung des Untersuchungsumfangs der 'Hauptprobenummer' 201600429."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+import re
+
+try:
+    data_path = os.path.normpath('./src/resources/data/study\\137336/dataset.csv')
+    out_dir = os.path.normpath('./src/resources/output\\137336')
+    os.makedirs(out_dir, exist_ok=True)
+    plot_path = os.path.join(out_dir, '2_einheiten_countplot.png')
+    eda_cols_path = os.path.join(out_dir, 'eda_spaltenuebersicht.csv')
+    eda_num_summary_path = os.path.join(out_dir, 'eda_numeric_summary.csv')
+    eda_corr_path = os.path.join(out_dir, 'eda_korrelationen.csv')
+
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+    df.columns = [str(c).strip() for c in df.columns]
+
+    def clean_unit(x):
+        if pd.isna(x):
+            return 'fehlend'
+        s = str(x).strip()
+        s = re.sub(r'\s*/\s*', '/', s)
+        s = s.replace('ug/', 'µg/').replace('μg/', 'µg/').replace('U g/', 'µg/')
+        s = s.replace('g/100g', 'g/100 g')
+        s = s.replace(' Bq', ' Bq').replace('Bq /', 'Bq/')
+        s = s.replace(' %', '%')
+        return s
+
+    if 'Einheit' in df.columns:
+        df['Einheit_clean'] = df['Einheit'].apply(clean_unit)
+    else:
+        df['Einheit_clean'] = 'fehlend'
+
+    def parse_numeric(v):
+        if pd.isna(v):
+            return np.nan
+        s = str(v).strip().lower()
+        if s in {'n.n.', 'n.n', 'nn', 'na', 'nan', ''}:
+            return np.nan
+        s = s.replace(',', '.')
+        s = s.replace('<', '').replace('>', '').replace('≤', '').replace('≥', '')
+        m = re.findall(r'[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?', s)
+        if len(m) == 0:
+            return np.nan
+        try:
+            return float(m[0])
+        except Exception:
+            return np.nan
+
+    if 'Ergebnis' in df.columns:
+        df['Ergebnis_num'] = df['Ergebnis'].apply(parse_numeric)
+
+    col_summary = pd.DataFrame({
+        'dtype': df.dtypes.astype(str),
+        'anzahl_auspraegungen': df.nunique(dropna=True),
+        'fehlend_anzahl': df.isna().sum(),
+        'fehlend_anteil': (df.isna().mean().round(4))
+    })
+    col_summary.index.name = 'spalte'
+    col_summary.reset_index().to_csv(eda_cols_path, index=False, encoding='utf-8')
+
+    df_num = df.select_dtypes(include=[np.number]).copy()
+    nunique_num = df_num.nunique(dropna=True)
+    keep_numeric = nunique_num[nunique_num > 1].index.tolist()
+    df_num_var = df_num[keep_numeric] if len(keep_numeric) > 0 else pd.DataFrame()
+
+    if df_num_var.shape[1] > 0:
+        desc = df_num_var.describe(percentiles=[0.05, 0.25, 0.5, 0.75, 0.95]).T
+        desc.to_csv(eda_num_summary_path, encoding='utf-8')
+    else:
+        pd.DataFrame().to_csv(eda_num_summary_path, encoding='utf-8')
+
+    if df_num_var.shape[1] >= 2:
+        corr = df_num_var.corr(numeric_only=True, method='pearson')
+        corr.to_csv(eda_corr_path, encoding='utf-8')
+    else:
+        pd.DataFrame().to_csv(eda_corr_path, encoding='utf-8')
+
+    base = df.copy()
+    if 'Pruefmerkmal' in base.columns:
+        base = base[base['Pruefmerkmal'].notna()]
+
+    unit_counts = base['Einheit_clean'].value_counts(dropna=False)
+    units_order = unit_counts.index.tolist()
+    n_units = len(units_order)
+    max_count = int(unit_counts.max()) if n_units > 0 else 0
+
+    sns.set_theme(style='whitegrid', context='talk')
+    plt.rcParams['font.family'] = 'DejaVu Sans'
+    width = 12
+    height = max(6, 0.5 * n_units + 1)
+    fig, ax = plt.subplots(figsize=(width, height))
+    sns.countplot(data=base, y='Einheit_clean', order=units_order, color='#4C72B0', ax=ax)
+    ax.set_xlabel('Anzahl der Prüfmerkmale')
+    ax.set_ylabel('Maßeinheit')
+    n_features = int(base['Pruefmerkmal'].nunique(dropna=True)) if 'Pruefmerkmal' in base.columns else int(base.shape[0])
+    ax.set_title(f'Verteilung der Prüfmerkmale nach Maßeinheit (n={n_features})')
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    for p in ax.patches:
+        w = p.get_width()
+        y = p.get_y() + p.get_height() / 2
+        if np.isfinite(w):
+            ax.text(w + max(0.02 * max_count, 0.1), y, f'{int(w)}', va='center', ha='left', fontsize=11)
+    fig.tight_layout()
+    fig.savefig(plot_path, dpi=200, bbox_inches='tight')
+    plt.close(fig)
+except Exception as e:
+    import sys
+    print(str(e))
+    sys.exit(1)
+
+
+-> SEVQ:
+
+

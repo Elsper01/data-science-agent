@@ -1,0 +1,482 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\103779\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 15:49:37
+Total Duration: 1076.90 seconds
+Total Token Usage: 95026 tokens
+Total Costs: $0.3974
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 2
+  - Exactly One Visualization: 1 / 3 = (33.33%)
+  - One or More Visualization: 1 / 3 =  (33.33%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0155 seconds
+
+Method: analyse_dataset
+  Duration: 0.0138 seconds
+
+Method: analyse_metadata
+  Duration: 0.0363 seconds
+
+Method: llm_generate_summary
+  Duration: 236.6896 seconds
+
+Method: llm_generate_goals
+  Duration: 3.4166 seconds
+
+Method: llm_generate_python_code
+  Duration: 333.8321 seconds
+
+Method: test_generated_code
+  Duration: 10.5199 seconds
+
+Method: llm_regenerate_code
+  Duration: 12.6457 seconds
+
+Method: test_generated_code
+  Duration: 9.6911 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 470.0358 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7516 tokens
+  Costs total: $0.0056
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1614 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7808 tokens
+  Costs total: $0.0553
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7178 tokens
+  Costs total: $0.0489
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6457 tokens
+  Costs total: $0.0416
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 933 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 987 tokens
+  Costs total: $0.0025
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3300 tokens
+  Costs total: $0.0045
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2932 tokens
+  Costs total: $0.0037
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 272 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5720 tokens
+  Costs total: $0.0402
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2297 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2552 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4323 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4228 tokens
+  Costs total: $0.0247
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4918 tokens
+  Costs total: $0.0343
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2034 tokens
+  Costs total: $0.0075
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2306 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3720 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3874 tokens
+  Costs total: $0.0225
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6390 tokens
+  Costs total: $0.0481
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2108 tokens
+  Costs total: $0.0075
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2727 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3925 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4151 tokens
+  Costs total: $0.0243
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Which municipalities in the Segeberg district have the highest concentration of cultural monuments?' visualization="A horizontal bar chart showing the count of 'Objektnummer' grouped by 'Gemeinde', sorted in descending order." rationale="This visualization helps users identify geographical hotspots for heritage sites. By counting 'Objektnummer' across different 'Gemeinde' values, researchers can see which towns (like Bad Segeberg) are most significant in terms of protected history."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+# Set pandas options
+pd.set_option('future.no_silent_downcasting', True)
+
+# Load dataset
+paths = [
+    './src/resources/data/study/103779/dataset.csv',
+    './src/resources/data/study\\103779\\dataset.csv',
+    r'./src/resources/data/study\103779\dataset.csv'
+]
+df = None
+for p in paths:
+    try:
+        df = pd.read_csv(p, sep=',', encoding='utf-8')
+        break
+    except FileNotFoundError:
+        continue
+
+if df is None:
+    print('Datei nicht gefunden. Bitte Pfad prüfen.')
+    raise SystemExit(1)
+
+# Data Cleaning and Preparation
+# Ensure Gemeinde is string and handle missing values
+df['Gemeinde'] = df['Gemeinde'].astype(str).str.strip()
+df['Gemeinde'] = df['Gemeinde'].replace(['nan', 'None', ''], 'Unbekannt')
+
+# Ensure Objektnummer is treated as a unique identifier
+# We count unique Objektnummern per Gemeinde
+agg = (
+    df.groupby('Gemeinde')['Objektnummer']
+    .nunique()
+    .sort_values(ascending=False)
+    .reset_index(name='Anzahl')
+)
+
+# Filter out 'Unbekannt' if it's not relevant or keep it if it represents data
+# For this visualization, we focus on the top municipalities
+total_unique = int(df['Objektnummer'].nunique())
+num_gemeinden = int(agg['Gemeinde'].nunique())
+
+# Visualization Setup
+sns.set_theme(style='whitegrid', context='talk')
+
+# Dynamic height based on number of municipalities
+n = len(agg)
+fig_height = min(max(n * 0.3, 8), 40)
+fig, ax = plt.subplots(figsize=(12, fig_height), dpi=100)
+
+# Create horizontal bar chart
+palette_color = sns.color_palette('viridis', n_colors=1)[0]
+bars = ax.barh(agg['Gemeinde'], agg['Anzahl'], color=palette_color, edgecolor='white', linewidth=0.5)
+
+# Formatting
+ax.invert_yaxis()  # Highest values at the top
+ax.set_xlabel('Anzahl der Kulturdenkmäler (Eindeutige Objektnummern)')
+ax.set_ylabel('Gemeinde')
+ax.set_title('Konzentration der Kulturdenkmäler nach Gemeinde im Kreis Segeberg', pad=20)
+
+# Fix for the grid error: use 'visible' instead of 'b'
+ax.grid(axis='x', linestyle='--', alpha=0.6, visible=True)
+ax.grid(axis='y', visible=False)
+
+# Add value labels to the end of bars
+max_val = agg['Anzahl'].max()
+for i, v in enumerate(agg['Anzahl']):
+    ax.text(v + (max_val * 0.01), i, str(int(v)), va='center', fontsize=9, color='#333333')
+
+# Add summary caption
+top_gemeinde = agg.iloc[0]['Gemeinde'] if not agg.empty else "N/A"
+top_wert = agg.iloc[0]['Anzahl'] if not agg.empty else 0
+caption = f'Top-Gemeinde: {top_gemeinde} ({top_wert} Denkmäler). Insgesamt {total_unique} Denkmäler in {num_gemeinden} Gemeinden.'
+fig.text(0.5, 0.01, caption, ha='center', va='bottom', fontsize=10, color='#555555', style='italic')
+
+plt.tight_layout(rect=[0, 0.03, 1, 0.98])
+
+# Save the plot
+save_paths = [
+    './src/resources/output/103779/0_gemeinde_kulturdenkmal_konzentration.png',
+    './src/resources/output\\103779\\0_gemeinde_kulturdenkmal_konzentration.png',
+    r'./src/resources/output\103779\0_gemeinde_kulturdenkmal_konzentration.png'
+]
+
+saved = False
+for sp in save_paths:
+    try:
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(sp), exist_ok=True)
+        fig.savefig(sp, bbox_inches='tight')
+        saved = True
+        print(f"Successfully saved to {sp}")
+        break
+    except Exception:
+        continue
+
+plt.close(fig)
+
+if not saved:
+    print('Fehler beim Speichern der Grafik.')
+    raise SystemExit(1)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the distribution of different types of cultural monuments in the district?' visualization="A bar chart showing the frequency of each category in the 'Kulturdenkmaltyp' column." rationale="Understanding the composition of the dataset is crucial. By analyzing 'Kulturdenkmaltyp', users can see the prevalence of 'Bauliche Anlage' (buildings) versus 'Sachgesamtheiten' (ensembles) or 'Gründenkmale' (gardens), providing insight into the nature of the region's heritage."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+# Set theme for better aesthetics
+sns.set_theme(style="whitegrid", context="talk")
+
+# Load dataset
+file_path = r"./src/resources/data/study/103779/dataset.csv"
+df = pd.read_csv(file_path, sep=",", encoding="utf-8")
+
+# Data Preparation
+col = "Kulturdenkmaltyp"
+if col in df.columns:
+    s = df[col].copy().astype(str)
+    s = s.str.strip().str.replace(r"\s+", " ", regex=True)
+    # Handle missing values explicitly
+    s = s.replace(['nan', 'None', ''], 'Unbekannt')
+else:
+    s = pd.Series(["Keine Daten"], name=col)
+
+# Calculate counts and percentages
+counts = s.value_counts(dropna=False)
+counts_df = counts.rename_axis(col).reset_index(name="Anzahl").sort_values("Anzahl", ascending=False)
+counts_df["Anteil"] = counts_df["Anzahl"] / counts_df["Anzahl"].sum()
+
+# Dynamic figure height based on number of categories
+fig_height = max(5, 0.5 * len(counts_df) + 2)
+fig, ax = plt.subplots(figsize=(12, fig_height))
+
+# Create barplot
+# Fix: Assign y to hue and set legend=False to avoid the palette warning
+sns.barplot(
+    data=counts_df, 
+    y=col, 
+    x="Anzahl", 
+    hue=col,
+    palette="viridis", 
+    legend=False,
+    ax=ax
+)
+
+# Formatting
+xmax = counts_df["Anzahl"].max() if not counts_df.empty else 1
+ax.set_xlim(0, xmax * 1.2) # Extra space for labels
+ax.set_xlabel("Anzahl der Einträge")
+ax.set_ylabel("Kulturdenkmaltyp")
+ax.set_title(f"Verteilung der Kulturdenkmaltypen (n={int(counts_df['Anzahl'].sum())})", pad=20)
+
+# Fix: Use visible=False instead of b=False for grid
+ax.grid(axis="x", linestyle="--", alpha=0.6)
+ax.grid(axis="y", visible=False)
+sns.despine(ax=ax, left=True, bottom=False)
+
+# Add data labels
+for i, (val, pct) in enumerate(zip(counts_df["Anzahl"], counts_df["Anteil"])):
+    ax.text(val + (xmax * 0.01), i, f"{int(val)} ({pct:.1%})", va="center", ha="left", fontsize=11)
+
+# Footer info
+unknown_share = counts_df.loc[counts_df[col] == "Unbekannt", "Anteil"].sum()
+plt.figtext(0.05, 0.01, f"Hinweis: 'Unbekannt' umfasst fehlende oder leere Angaben ({unknown_share:.1%}).", 
+            ha="left", fontsize=10, color="dimgray", style='italic')
+
+plt.tight_layout(rect=[0, 0.03, 1, 1])
+
+# Save output
+output_dir = r"./src/resources/output/103779"
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, "1_kulturdenkmaltyp_verteilung.png")
+plt.savefig(output_path, dpi=300, bbox_inches="tight")
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the status of the administrative update for monument descriptions?' visualization="A pie chart or stacked bar chart comparing the count of records where 'Beschreibung' is 'Alteintragung (Aktualisierung vorgesehen)' versus all other unique descriptions." rationale="The summary indicates that many records are 'Alteintragung' (old entries). By visualizing the 'Beschreibung' column (specifically identifying the placeholder 'Alteintragung (Aktualisierung vorgesehen)'), users can understand the progress of the State Office for Monument Preservation in modernizing the records according to the 2015 Act."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+output_dir = os.path.normpath('./src/resources/output/103779')
+os.makedirs(output_dir, exist_ok=True)
+
+file_path = os.path.normpath('./src/resources/data/study/103779/dataset.csv')
+df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+
+eda_results = {}
+eda_results['shape'] = df.shape
+missing_ratio = df.isna().mean().sort_values(ascending=False)
+eda_results['missing_ratio'] = missing_ratio
+numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+if len(numeric_cols) > 0:
+    eda_results['numeric_describe'] = df[numeric_cols].describe().T
+else:
+    eda_results['numeric_describe'] = pd.DataFrame()
+cat_cols = df.select_dtypes(include=['object', 'bool']).columns.tolist()
+cat_summary = {}
+for c in cat_cols:
+    vc = df[c].astype('object').fillna('Fehlend').value_counts(dropna=False).head(10)
+    cat_summary[c] = vc
+eda_results['cat_summary_top10'] = cat_summary
+
+col_desc = 'Beschreibung'
+if col_desc not in df.columns:
+    raise SystemExit('Spalte "Beschreibung" nicht gefunden.')
+
+desc_raw = df[col_desc]
+desc_clean = desc_raw.where(~desc_raw.isna(), other=np.nan)
+desc_clean = desc_clean.apply(lambda x: x.strip() if isinstance(x, str) else x)
+desc_clean_lower = desc_clean.str.lower()
+needle = 'alteintragung (aktualisierung vorgesehen)'
+mask_old = desc_clean_lower == needle
+count_old = int(mask_old.sum())
+count_other = int((~mask_old).sum())
+counts = pd.Series({'Alteintragung (Aktualisierung vorgesehen)': count_old, 'Andere Beschreibungen': count_other})
+
+total_n = int(len(df))
+missing_n = int(df[col_desc].isna().sum())
+
+sns.set_theme(style='white')
+fig, ax = plt.subplots(figsize=(9, 7), dpi=150)
+colors = ['#F28E2B', '#4E79A7']
+values = counts.values
+labels = counts.index.tolist()
+
+def autopct_format(pct):
+    absolute = int(round(pct/100.0 * values.sum()))
+    return f'{pct:.1f}%\n(n={absolute})'
+
+wedges, texts, autotexts = ax.pie(values, labels=None, colors=colors, startangle=90, counterclock=False, autopct=autopct_format, pctdistance=0.78, textprops={'color': 'black', 'fontsize': 11})
+centre_circle = plt.Circle((0, 0), 0.58, fc='white')
+fig.gca().add_artist(centre_circle)
+ax.axis('equal')
+legend_labels = [f'{l}: {v} Einträge' for l, v in zip(labels, values)]
+ax.legend(wedges, legend_labels, title='Status', loc='center left', bbox_to_anchor=(1, 0.5), frameon=False)
+ax.set_title('Status der Aktualisierung der Denkmalsbeschreibungen\nKreis Segeberg (N=' + str(total_n) + ')', fontsize=16, pad=14)
+fig.text(0.5, 0.03, 'Anteil der Einträge mit "Alteintragung (Aktualisierung vorgesehen)" gegenüber anderen Beschreibungen.\nFehlende Werte in "Beschreibung" sind in "Andere Beschreibungen" enthalten (n=' + str(missing_n) + ').', ha='center', fontsize=10)
+
+save_path = os.path.normpath(os.path.join(output_dir, '2_status_aktualisierung_beschreibung.png'))
+plt.savefig(save_path, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+

@@ -1,0 +1,540 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\136951\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:24:33
+Total Duration: 1097.27 seconds
+Total Token Usage: 116242 tokens
+Total Costs: $0.5131
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0065 seconds
+
+Method: analyse_dataset
+  Duration: 0.0078 seconds
+
+Method: analyse_metadata
+  Duration: 0.0129 seconds
+
+Method: llm_generate_summary
+  Duration: 176.8637 seconds
+
+Method: llm_generate_goals
+  Duration: 6.1548 seconds
+
+Method: llm_generate_r_code
+  Duration: 376.1760 seconds
+
+Method: test_generated_code
+  Duration: 6.8605 seconds
+
+Method: llm_regenerate_code
+  Duration: 36.1964 seconds
+
+Method: test_generated_code
+  Duration: 8.1535 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 486.8377 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 4742 tokens
+  Costs total: $0.0049
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1834 tokens
+  Costs total: $0.0022
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8150 tokens
+  Costs total: $0.0663
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7747 tokens
+  Costs total: $0.0625
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7133 tokens
+  Costs total: $0.0559
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 434 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 462 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 953 tokens
+  Costs total: $0.0024
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3444 tokens
+  Costs total: $0.0050
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3573 tokens
+  Costs total: $0.0056
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3861 tokens
+  Costs total: $0.0053
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 378 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 435 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 442 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6266 tokens
+  Costs total: $0.0408
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2782 tokens
+  Costs total: $0.0087
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3267 tokens
+  Costs total: $0.0032
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4474 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5599 tokens
+  Costs total: $0.0322
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7769 tokens
+  Costs total: $0.0554
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2972 tokens
+  Costs total: $0.0093
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3307 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5079 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5900 tokens
+  Costs total: $0.0347
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7253 tokens
+  Costs total: $0.0500
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2991 tokens
+  Costs total: $0.0103
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3282 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5439 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6274 tokens
+  Costs total: $0.0420
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Welche verschiedenen Prüfmerkmale wurden bei der Untersuchung der Probe erhoben und wie lauten die zugehörigen Ergebnisse?' visualization="Balkendiagramm mit 'Pruefmerkmal' auf der x-Achse und 'Ergebnis' auf der y-Achse, farblich differenziert nach 'Einheit'." rationale="Da der Datensatz sowohl technische Parameter (Messzeit) als auch das eigentliche Analyseergebnis (Aktivitätskonzentration) in einer flachen Struktur mischt, hilft ein Balkendiagramm dabei, die Spalte 'Pruefmerkmal' der Spalte 'Ergebnis' gegenüberzustellen. Dies gibt dem Nutzer sofortigen Aufschluss darüber, was gemessen wurde und wie hoch der Wert (unter Berücksichtigung der 'Einheit') war."
+
+-> Code:
+options(encoding = "UTF-8")
+pkgs <- c("readr", "dplyr", "ggplot2", "stringr", "forcats", "scales")
+for (p in pkgs) { if (!requireNamespace(p, quietly = TRUE)) install.packages(p) }
+invisible(lapply(pkgs, library, character.only = TRUE))
+
+data_path <- "./src/resources/data/study/136951/dataset.csv"
+out_dir <- "./src/resources/output/136951"
+dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+
+# Fehlerbehebung: UTF-8 Validierung und robustes Einlesen
+# Wir nutzen iconv, um sicherzustellen, dass keine ungültigen UTF-8 Zeichen den trimws-Fehler verursachen
+suppressMessages({
+  raw_data <- read_file(data_path)
+  valid_data <- iconv(raw_data, from = "UTF-8", to = "UTF-8", sub = "")
+  df <- read_csv(
+    valid_data,
+    locale = locale(encoding = "UTF-8"),
+    na = c("", "NA", "N/A", "<NA>"),
+    show_col_types = FALSE,
+    progress = FALSE
+  )
+})
+
+required_cols <- c("Pruefmerkmal", "Ergebnis", "Einheit")
+missing_cols <- setdiff(required_cols, names(df))
+if (length(missing_cols) > 0) stop(paste("Fehlende erforderliche Spalten:", paste(missing_cols, collapse = ", ")))
+
+# Bereinigung der Daten für die Analyse
+df <- df %>%
+  mutate(across(where(is.character), ~ iconv(., from = "UTF-8", to = "UTF-8", sub = "")))
+
+# Missing Values Analyse (Sicherer Umgang mit trimws)
+missing_tbl <- data.frame(variable = names(df), stringsAsFactors = FALSE)
+missing_tbl$missing_n <- sapply(df, function(x) {
+  if(is.character(x)) {
+    sum(is.na(x) | nchar(gsub("^\\s+|\\s+$", "", x)) == 0)
+  } else {
+    sum(is.na(x))
+  }
+})
+missing_tbl$total_n <- nrow(df)
+missing_tbl$missing_pct <- ifelse(missing_tbl$total_n > 0, missing_tbl$missing_n / missing_tbl$total_n, NA_real_)
+write_csv(missing_tbl, file.path(out_dir, "eda_missing_values.csv"))
+
+# Datenaufbereitung für Visualisierung
+df_clean <- df %>%
+  mutate(
+    Ergebnis_raw = as.character(Ergebnis),
+    # Extrahiere numerischen Wert (behandelt Komma als Dezimaltrenner und entfernt < Zeichen)
+    Ergebnis_num = str_replace_all(Ergebnis_raw, "[^0-9,.-]", ""),
+    Ergebnis_num = str_replace(Ergebnis_num, ",", "."),
+    Ergebnis_num = suppressWarnings(as.numeric(Ergebnis_num))
+  ) %>%
+  filter(!is.na(Ergebnis_num), !is.na(Pruefmerkmal))
+
+if (nrow(df_clean) == 0) stop("Keine numerisch auswertbaren Ergebnisse gefunden.")
+
+# Zusammenfassung exportieren
+summary_num <- df_clean %>% 
+  group_by(Einheit) %>%
+  summarise(n = n(), mean = mean(Ergebnis_num), median = median(Ergebnis_num), .groups = "drop")
+write_csv(summary_num, file.path(out_dir, "eda_summary_ergebnis.csv"))
+
+# Visualisierung
+# Wir sortieren die Prüfmerkmale nach ihrem Auftreten
+df_clean <- df_clean %>%
+  mutate(Pruefmerkmal = fct_inorder(as.character(Pruefmerkmal)))
+
+p <- ggplot(df_clean, aes(x = Pruefmerkmal, y = Ergebnis_num, fill = Einheit)) +
+  geom_col(color = "white", width = 0.7) +
+  geom_text(aes(label = paste(Ergebnis_raw, Einheit)), 
+            vjust = -0.5, size = 3.5, fontface = "bold") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(
+    title = "Untersuchungsergebnisse der Trinkwasserprobe",
+    subtitle = "Gegenüberstellung der Prüfmerkmale und Messwerte",
+    x = "Prüfmerkmal",
+    y = "Ergebnis (numerisch)",
+    fill = "Einheit",
+    caption = "Datenquelle: dataset.csv"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major.x = element_blank(),
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold")
+  )
+
+# Speichern des Diagramms
+out_file <- file.path(out_dir, "balkendiagramm_pruefmerkmal_ergebnis.png")
+ggsave(out_file, plot = p, width = 10, height = 7, dpi = 150, bg = "white")
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='An welchem Standort und zu welchem Zeitpunkt wurde die Trinkwasserprobe entnommen?' visualization="Tabelle oder Summary-Card mit den Feldern 'Entnahmestelle', 'Probenahme_Zeitraum' und 'Umweltbereich'." rationale="Für einen Nutzer eines Open-Data Portals ist die räumliche und zeitliche Einordnung (Metadaten) essenziell. Eine Infokarte oder eine einfache Tabelle, die 'Entnahmestelle', 'Probenahme_Zeitraum' und 'Umweltbereich' zusammenfasst, bestätigt die Relevanz des Datensatzes für spezifische regionale Suchen (hier: Wasserwerk Großensee)."
+
+-> Code:
+options(encoding = 'UTF-8')
+pkgs <- c('readr','dplyr','tidyr','stringr','lubridate','ggplot2','gridExtra','scales','grid')
+new_pkgs <- setdiff(pkgs, rownames(installed.packages()))
+if (length(new_pkgs) > 0) install.packages(new_pkgs, dependencies = TRUE, quiet = TRUE)
+invisible(lapply(pkgs, library, character.only = TRUE))
+set.seed(123)
+
+# Pfade definieren
+infile <- file.path('.', 'src','resources','data','study','136951','dataset.csv')
+outdir <- file.path('.', 'src','resources','output','136951')
+if (!dir.exists(outdir)) dir.create(outdir, recursive = TRUE)
+
+# Daten einlesen
+suppressWarnings({
+  df <- readr::read_csv(
+    infile,
+    locale = readr::locale(encoding = 'UTF-8'),
+    col_types = readr::cols(.default = readr::col_character())
+  )
+})
+
+# Bereinigung
+df <- df %>% mutate(across(everything(), ~ifelse(is.character(.x), stringr::str_squish(.x), .x)))
+
+# Hilfsfunktion für numerische Werte (Fehlerbehebung: Doppelte Backslashes für Regex)
+numeric_parse <- function(x) {
+  x2 <- stringr::str_replace_all(x, ',', '.')
+  x2 <- stringr::str_replace_all(x2, '[^0-9\\.-]', '')
+  suppressWarnings(as.numeric(x2))
+}
+
+# Ergebnis-Spalte verarbeiten (Fehlerbehebung: Doppelte Backslashes für \s)
+df <- df %>% mutate(
+  Ergebnis_num = numeric_parse(Ergebnis),
+  Ergebnis_is_bdl = stringr::str_detect(Ergebnis, '^\\s*<')
+)
+
+# Hilfsfunktion für Metadaten-Extraktion
+first_non_empty <- function(x) {
+  y <- x[!is.na(x) & x != '']
+  if (length(y) == 0) NA_character_ else y[1]
+}
+
+# Metadaten extrahieren
+entnahmestelle_vals <- df %>% filter(!is.na(Entnahmestelle) & Entnahmestelle != '') %>% distinct(Entnahmestelle) %>% pull(Entnahmestelle)
+entnahmestelle <- if (length(entnahmestelle_vals) == 0) 'k. A.' else paste(unique(entnahmestelle_vals), collapse = ', ')
+
+umwelt_vals <- df %>% filter(!is.na(Umweltbereich) & Umweltbereich != '') %>% distinct(Umweltbereich) %>% pull(Umweltbereich)
+umweltbereich <- if (length(umwelt_vals) == 0) 'k. A.' else paste(unique(umwelt_vals), collapse = ', ')
+
+start_date <- first_non_empty(df$Probenahme_Beginn_Datum)
+start_time <- first_non_empty(df$Probenahme_Beginn_Zeit)
+end_date <- first_non_empty(df$Probenahme_Ende_Datum)
+end_time <- first_non_empty(df$Probenahme_Ende_Zeit)
+
+start_str <- if (!is.na(start_date)) start_date else ''
+if (!is.na(start_time) && start_time != '') start_str <- paste(start_str, start_time)
+end_str <- if (!is.na(end_date)) end_date else ''
+if (!is.na(end_time) && end_time != '') end_str <- paste(end_str, end_time)
+
+probenahme_zeitraum <- if (start_str != '' && end_str != '') {
+  if (start_str == end_str) start_str else paste(start_str, '–', end_str)
+} else if (start_str != '') {
+  start_str
+} else if (end_str != '') {
+  end_str
+} else {
+  'k. A.'
+}
+
+# Tabelle für die Visualisierung erstellen
+card_df <- tibble::tibble(
+  Feld = c('Entnahmestelle', 'Probenahme-Zeitraum', 'Umweltbereich'),
+  Wert = c(entnahmestelle, probenahme_zeitraum, umweltbereich)
+)
+
+# Styling der Tabelle
+theme_tbl <- gridExtra::ttheme_minimal(
+  core = list(
+    fg_params = list(hjust = 0, x = 0.05, col = '#1a1a1a', cex = 1.1),
+    bg_params = list(fill = c('#f9f9f9', '#ffffff'), col = '#eeeeee')
+  ),
+  colhead = list(
+    fg_params = list(fontface = 2, hjust = 0, x = 0.05, col = '#ffffff', cex = 1.2),
+    bg_params = list(fill = '#2c3e50', col = NA)
+  )
+)
+
+# Grobs erstellen
+tbl <- gridExtra::tableGrob(card_df, rows = NULL, theme = theme_tbl, cols = c("Kategorie", "Information"))
+
+title_grob <- grid::textGrob('Metadaten der Trinkwasserprobe', gp = grid::gpar(fontsize = 18, fontface = 'bold', col = '#2c3e50'))
+subtitle_grob <- grid::textGrob('Zusammenfassung von Standort, Zeitraum und Umweltbereich', gp = grid::gpar(fontsize = 12, col = '#7f8c8d'))
+
+# Layout zusammenfügen
+layout <- gridExtra::arrangeGrob(
+  tbl, 
+  top = gridExtra::arrangeGrob(title_grob, subtitle_grob, ncol = 1, heights = unit(c(1.5, 1), "cm")),
+  padding = unit(2, "line")
+)
+
+# Speichern
+outfile <- file.path(outdir, '1_metadaten_uebersicht.png')
+png(filename = outfile, width = 1200, height = 600, res = 120, bg = 'white')
+grid::grid.newpage()
+grid::grid.draw(layout)
+dev.off()
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Welche Analysemethode wurde für die Bestimmung der Radioaktivität verwendet und wie ist das Verhältnis von Messzeit zu Ergebnis?' visualization="Gestapeltes Balkendiagramm oder gruppierte Liste, die 'Methode' mit 'Pruefmerkmal', 'Ergebnis' und 'Einheit' verknüpft." rationale="Die Spalte 'Methode' (Radon-LSC) ist entscheidend für die wissenschaftliche Einordnung. Durch die Visualisierung von 'Methode' in Kombination mit 'Pruefmerkmal' und 'Ergebnis' wird verdeutlicht, dass für die Bestimmung der Radon-222 Aktivitätskonzentration eine spezifische technische Messzeit aufgewendet wurde. Dies hilft dem Nutzer zu verstehen, dass das 'Ergebnis' <0,82 Bq/l auf einer soliden messtechnischen Basis (6000s) beruht."
+
+-> Code:
+options(warn=-1)
+pkgs <- c("readr", "dplyr", "tidyr", "stringr", "forcats", "ggplot2", "janitor", "scales")
+lapply(pkgs, function(p) {
+  if (!require(p, character.only = TRUE, quietly = TRUE)) {
+    install.packages(p, repos = "https://cloud.r-project.org")
+    library(p, character.only = TRUE)
+  }
+})
+
+set.seed(1)
+input_path <- file.path(".", "src", "resources", "data", "study", "136951", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "136951")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+plot_file <- file.path(output_dir, "2_methode_pruefmerkmal_ergebnis.png")
+
+# Robustes Einlesen: UTF-8 erzwingen und ungültige Zeichen bereinigen
+df_raw <- readr::read_csv(input_path, 
+                          locale = locale(encoding = "UTF-8"), 
+                          show_col_types = FALSE, 
+                          progress = FALSE, 
+                          col_types = cols(.default = col_character()))
+
+# Fehlerbehebung: "invalid UTF-8" in trimws/sub verhindern
+# Wir bereinigen alle Spalten von potenziell korrupten Zeichenfolgen
+df_raw <- df_raw %>%
+  mutate(across(everything(), ~iconv(., from = "UTF-8", to = "UTF-8", sub = "")))
+
+df <- janitor::clean_names(df_raw)
+
+# EDA & Transformation
+df_eda <- df %>% 
+  mutate(
+    ergebnis_raw = ergebnis,
+    # Komma zu Punkt für numerische Konvertierung
+    ergebnis_std = stringr::str_replace_all(ergebnis, ",", "."),
+    censored = stringr::str_detect(ergebnis_std, "^\\s*<"),
+    # Extrahiere nur Zahlen (inkl. Dezimalpunkt)
+    value_numeric = as.numeric(stringr::str_extract(ergebnis_std, "[-+]?[0-9]*\\.?[0-9]+")),
+    ergebnis_label = ifelse(!is.na(einheit) & !is.na(ergebnis_raw), 
+                            paste0(ergebnis_raw, " ", einheit), 
+                            ergebnis_raw)
+  )
+
+# Methode extrahieren
+method_str <- df_eda %>% 
+  filter(!is.na(methode), methode != "") %>% 
+  distinct(methode) %>% 
+  pull(methode) %>% 
+  paste(collapse = ", ")
+
+# Spezifische Werte für das Verhältnis suchen
+time_val <- df_eda %>% 
+  filter(stringr::str_detect(stringr::str_to_lower(pruefmerkmal), "zeit"), 
+         stringr::str_to_lower(einheit) == "s") %>% 
+  pull(value_numeric) %>% .[1]
+
+act_val <- df_eda %>% 
+  filter(stringr::str_detect(stringr::str_to_lower(pruefmerkmal), "radon"), 
+         stringr::str_to_lower(einheit) %in% c("bq/l", "bq\u002fl")) %>% 
+  pull(value_numeric) %>% .[1]
+
+ratio_txt <- if (!is.na(time_val) && !is.na(act_val) && act_val > 0) {
+  paste0("Verhältnis Messzeit/Ergebnis: ", round(time_val/act_val, 1), " s pro Bq/l")
+} else {
+  "Verhältnis Messzeit/Ergebnis: n.a."
+}
+
+# Daten für Plot vorbereiten
+df_plot <- df_eda %>% 
+  filter(!is.na(pruefmerkmal), !is.na(value_numeric)) %>%
+  mutate(pruefmerkmal = fct_reorder(pruefmerkmal, value_numeric))
+
+# Visualisierung
+p <- ggplot(df_plot, aes(x = pruefmerkmal, y = value_numeric, fill = pruefmerkmal)) +
+  geom_col(width = 0.7, show.legend = FALSE) +
+  geom_text(aes(label = ergebnis_label), hjust = -0.1, size = 4, fontface = "bold") +
+  facet_wrap(~einheit, scales = "free_x") +
+  coord_flip() +
+  scale_fill_brewer(palette = "Set2") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.3))) +
+  labs(
+    title = "Analysemethode und Messergebnisse",
+    subtitle = paste0("Methode: ", method_str, " | Probe: Trinkwasser WW Großensee"),
+    x = "Prüfmerkmal",
+    y = "Numerischer Wert",
+    caption = paste0(ratio_txt, "\nDatenbasis: 28.11.2017")
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    strip.text = element_text(face = "bold", size = 11),
+    panel.grid.major.y = element_blank(),
+    plot.margin = margin(20, 40, 20, 20)
+  )
+
+ggsave(plot_file, p, width = 10, height = 6, dpi = 150)
+
+
+-> SEVQ:
+
+

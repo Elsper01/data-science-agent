@@ -1,0 +1,325 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\136560\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:23:01
+Total Duration: 1010.81 seconds
+Total Token Usage: 103345 tokens
+Total Costs: $0.4821
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0044 seconds
+
+Method: analyse_dataset
+  Duration: 0.0079 seconds
+
+Method: analyse_metadata
+  Duration: 0.0123 seconds
+
+Method: llm_generate_summary
+  Duration: 167.9593 seconds
+
+Method: llm_generate_goals
+  Duration: 5.2159 seconds
+
+Method: llm_generate_r_code
+  Duration: 338.6378 seconds
+
+Method: test_generated_code
+  Duration: 8.8777 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 490.0932 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 4492 tokens
+  Costs total: $0.0042
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1750 tokens
+  Costs total: $0.0020
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7786 tokens
+  Costs total: $0.0609
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7253 tokens
+  Costs total: $0.0555
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7902 tokens
+  Costs total: $0.0623
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 374 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 378 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 377 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7234 tokens
+  Costs total: $0.0502
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2957 tokens
+  Costs total: $0.0093
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3372 tokens
+  Costs total: $0.0032
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5394 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6347 tokens
+  Costs total: $0.0419
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6507 tokens
+  Costs total: $0.0451
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2756 tokens
+  Costs total: $0.0091
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3366 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5461 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5741 tokens
+  Costs total: $0.0366
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6719 tokens
+  Costs total: $0.0444
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2962 tokens
+  Costs total: $0.0097
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3586 tokens
+  Costs total: $0.0032
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4892 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5739 tokens
+  Costs total: $0.0334
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Welche radiologischen Parameter wurden untersucht und wie hoch sind die jeweiligen Messwerte?' visualization="Balkendiagramm mit 'Pruefmerkmal' auf der x-Achse und 'Ergebnis' (gefiltert auf numerische Werte) auf der y-Achse." rationale="Da der Datensatz verschiedene Arten von Ergebnissen (Aktivitätskonzentrationen und Messzeiten) enthält, hilft ein Balkendiagramm dabei, die numerischen Werte der Spalte 'Ergebnis' den jeweiligen Kategorien in 'Pruefmerkmal' zuzuordnen. Dies gibt dem Nutzer einen sofortigen Überblick über die gemessene Radioaktivität (z.B. Radon-222) im Vergleich zur aufgewendeten Messzeit."
+
+-> Code:
+if (!requireNamespace("tidyverse", quietly = TRUE)) install.packages("tidyverse", repos = "https://cloud.r-project.org")
+if (!requireNamespace("janitor", quietly = TRUE)) install.packages("janitor", repos = "https://cloud.r-project.org")
+if (!requireNamespace("scales", quietly = TRUE)) install.packages("scales", repos = "https://cloud.r-project.org")
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(janitor))
+suppressPackageStartupMessages(library(scales))
+
+output_dir <- file.path("./src/resources/output", "136560")
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+locale_de <- readr::locale(encoding = "UTF-8", decimal_mark = ",", grouping_mark = ".")
+df <- readr::read_csv(file = "./src/resources/data/study\\136560\\dataset.csv", locale = locale_de, show_col_types = FALSE, na = c("", "NA", "NaN"))
+df <- janitor::clean_names(df)
+df <- dplyr::rename(df, Hauptprobenummer = hauptprobenummer, Bezeichnung = bezeichnung, Probe_Entnahmeart = probe_entnahmeart, Probenahme_Beginn_Datum = probenahme_beginn_datum, Probenahme_Beginn_Zeit = probenahme_beginn_zeit, Probenahme_Ende_Datum = probenahme_ende_datum, Probenahme_Ende_Zeit = probenahme_ende_zeit, Umweltbereich = umweltbereich, Messprogrammgruppe = messprogrammgruppe, Entnahmestelle = entnahmestelle, Herkunftsstaat = herkunftsstaat, Methode = methode, Pruefmerkmal = pruefmerkmal, Ergebnis = ergebnis, Einheit = einheit)
+
+df <- df %>% mutate(Ergebnis_num = readr::parse_number(as.character(Ergebnis), locale = locale_de))
+
+fehlanteil <- tibble(Spalte = names(df), Anteil_fehlender_Werte = purrr::map_dbl(df, ~ mean(is.na(.x))))
+readr::write_csv(fehlanteil, file.path(output_dir, "eda_anteil_fehlender_werte.csv"))
+
+zusammenfassung_num <- df %>% filter(!is.na(Ergebnis_num)) %>% group_by(Pruefmerkmal, Einheit) %>% summarise(Anzahl = dplyr::n(), Minimum = min(Ergebnis_num, na.rm = TRUE), Mittelwert = mean(Ergebnis_num, na.rm = TRUE), Median = median(Ergebnis_num, na.rm = TRUE), Maximum = max(Ergebnis_num, na.rm = TRUE), .groups = "drop")
+readr::write_csv(zusammenfassung_num, file.path(output_dir, "eda_zusammenfassung_numerische_ergebnisse_nach_pruefmerkmal.csv"))
+
+num_df <- df %>% select(where(is.numeric))
+if (ncol(num_df) >= 2) {
+  cor_mat <- suppressWarnings(stats::cor(num_df, use = "pairwise.complete.obs"))
+  cor_df <- as.data.frame(cor_mat) %>% tibble::rownames_to_column("Variable")
+} else {
+  cor_df <- tibble(Hinweis = "Zu wenige numerische Spalten für Korrelation")
+}
+readr::write_csv(cor_df, file.path(output_dir, "eda_korrelationsmatrix.csv"))
+
+plot_data <- df %>% filter(!is.na(Ergebnis_num)) %>% mutate(Pruefmerkmal = as.factor(Pruefmerkmal), Methode = as.factor(Methode), Einheit = as.factor(Einheit))
+
+if (nrow(plot_data) == 0) {
+  p <- ggplot() + theme_void() + labs(title = "Keine numerischen Messwerte vorhanden")
+} else {
+  p <- ggplot(plot_data, aes(x = Pruefmerkmal, y = Ergebnis_num, fill = Methode)) +
+    geom_col(position = position_dodge(width = 0.7), width = 0.6, color = "#2b2b2b") +
+    geom_text(aes(label = ifelse(Einheit == "Bq/l", format(Ergebnis_num, big.mark = ".", decimal.mark = ",", nsmall = 2), format(Ergebnis_num, big.mark = ".", decimal.mark = ","))), position = position_dodge(width = 0.7), vjust = -0.2, size = 3.2, color = "#1f1f1f") +
+    facet_wrap(~Einheit, scales = "free_y") +
+    scale_y_continuous(labels = function(x) format(x, big.mark = ".", decimal.mark = ",", scientific = FALSE), expand = expansion(mult = c(0, 0.12))) +
+    scale_x_discrete(drop = FALSE) +
+    labs(title = "Radiologische Parameter und gemessene Werte (numerisch)", subtitle = "Trinkwasser-Einzelprobe, Hamburg (23.05.2017)", x = "Prüfmerkmal", y = "Messwert (Originaleinheiten)", fill = "Methode") +
+    theme_minimal(base_size = 12) +
+    theme(legend.position = "bottom", panel.grid.major.x = element_blank(), panel.grid.minor = element_blank(), axis.text.x = element_text(angle = 15, hjust = 1), strip.background = element_rect(fill = "#f0f0f0", color = NA), strip.text = element_text(face = "bold")) +
+    coord_cartesian(clip = "off")
+}
+
+plot_file <- file.path(output_dir, "0_balkendiagramm_pruefmerkmal_ergebnis.png")
+ggplot2::ggsave(filename = plot_file, plot = p, width = 10, height = 6, dpi = 300)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie unterscheiden sich die Messzeiten für die verschiedenen angewandten Methoden?' visualization="Balkendiagramm mit 'Methode' auf der x-Achse und 'Ergebnis' auf der y-Achse, gefiltert auf das 'Pruefmerkmal' 'Messzeit'." rationale="Der Datensatz enthält Informationen über die Dauer der Analyse in der Spalte 'Ergebnis' (Einheit 's'). Ein Vergleich der 'Methode' (z.B. Radon-LSC vs. Gesamt-Alpha) in Bezug auf das 'Pruefmerkmal' 'Messzeit' zeigt dem Nutzer den technischen Aufwand der Untersuchung. Dies ist wichtig, um die Sensitivität der Ergebnisse (insbesondere bei 'nicht nachweisbaren' Werten) einzuordnen."
+
+-> Code:
+packages <- c("tidyverse","janitor","scales")
+missing_pkgs <- packages[!packages %in% installed.packages()[,"Package"]]
+if (length(missing_pkgs) > 0) install.packages(missing_pkgs, dependencies = TRUE)
+invisible(lapply(packages, function(p) suppressPackageStartupMessages(library(p, character.only = TRUE))))
+input_path <- file.path(".","src","resources","data","study","136560","dataset.csv")
+output_dir <- file.path(".","src","resources","output","136560")
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+df <- readr::read_csv(file = input_path, locale = readr::locale(encoding = "UTF-8"), col_types = readr::cols(.default = readr::col_character()), show_col_types = FALSE)
+df <- df %>% mutate(across(where(is.character), ~ stringr::str_squish(.x)))
+df <- df %>% mutate(Ergebnis_num = readr::parse_number(Ergebnis, locale = readr::locale(decimal_mark = ",")))
+anz_na <- sapply(df, function(x) if (is.character(x)) sum(is.na(x) | x == "") else sum(is.na(x)))
+missing_summary <- tibble::tibble(Spalte = names(anz_na), Anzahl_NA = as.integer(anz_na), Anteil_NA = Anzahl_NA / nrow(df))
+unique_counts <- tibble::tibble(Spalte = names(df), Anzahl_Ausprägungen = purrr::map_int(df, ~ dplyr::n_distinct(.x, na.rm = TRUE)))
+safe_summary <- function(x) {x <- x[!is.na(x)]; if (length(x) == 0) tibble::tibble(Anzahl = 0, Minimum = NA_real_, Mittelwert = NA_real_, Median = NA_real_, Maximum = NA_real_, SD = NA_real_) else tibble::tibble(Anzahl = length(x), Minimum = min(x), Mittelwert = mean(x), Median = stats::median(x), Maximum = max(x), SD = stats::sd(x))}
+numeric_summary <- safe_summary(df$Ergebnis_num)
+df_messzeit <- df %>% filter(stringr::str_to_lower(Pruefmerkmal) == "messzeit")
+numeric_summary_messzeit <- safe_summary(df_messzeit$Ergebnis_num)
+readr::write_csv(missing_summary, file.path(output_dir, "eda_missing_values.csv"))
+readr::write_csv(unique_counts, file.path(output_dir, "eda_unique_counts.csv"))
+readr::write_csv(numeric_summary, file.path(output_dir, "eda_ergebnis_numeric_summary.csv"))
+readr::write_csv(numeric_summary_messzeit, file.path(output_dir, "eda_messzeit_numeric_summary.csv"))
+plot_df <- df %>% filter(stringr::str_to_lower(Pruefmerkmal) == "messzeit", stringr::str_to_lower(Einheit) == "s") %>% mutate(Messzeit_s = Ergebnis_num) %>% filter(!is.na(Messzeit_s))
+plot_df <- plot_df %>% mutate(Methode = factor(Methode, levels = plot_df %>% arrange(desc(Messzeit_s)) %>% dplyr::pull(Methode)))
+plt <- ggplot(plot_df, aes(x = Methode, y = Messzeit_s, fill = Methode)) + geom_col(width = 0.6, show.legend = FALSE) + geom_text(aes(label = scales::number(Messzeit_s, accuracy = 1, big.mark = ".", decimal.mark = ",")), vjust = -0.3, size = 4) + scale_y_continuous(labels = function(x) scales::number(x, big.mark = ".", decimal.mark = ","), expand = expansion(mult = c(0, 0.12))) + scale_fill_manual(values = c("#1f78b4", "#33a02c", "#6a3d9a", "#b15928")) + labs(title = "Messzeiten nach Methode (Trinkwasserprobe vom 23.05.2017, Hamburg)", subtitle = "Vergleich der Analysedauer in Sekunden", x = "Methode", y = "Messzeit (Sekunden)") + theme_minimal(base_size = 12) + theme(plot.title = element_text(face = "bold"), axis.title.x = element_text(margin = margin(t = 8)), axis.title.y = element_text(margin = margin(r = 8)))
+ggplot2::ggsave(filename = file.path(output_dir, "1_messzeit_nach_methode.png"), plot = plt, width = 9, height = 6, dpi = 300, units = "in")
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='An welchem Ort und zu welchem Zeitpunkt wurde die Trinkwasserprobe entnommen?' visualization="Tabelle mit den Spalten 'Entnahmestelle', 'Probenahme_Zeitraum' und 'Umweltbereich'." rationale="Für einen Nutzer eines Open-Data Portals ist der Kontext der Probenahme entscheidend. Eine einfache Tabelle oder Infokarte, die die Spalten 'Entnahmestelle', 'Probenahme_Zeitraum' und 'Umweltbereich' zusammenfasst, bestätigt die Relevanz der Daten für spezifische geografische oder zeitliche Anfragen (Hamburg, Mai 2017)."
+
+-> Code:
+packages <- c("readr","dplyr","tidyr","stringr","lubridate","gridExtra","grid")
+missing_pkgs <- packages[!(packages %in% installed.packages()[,"Package"])]
+if(length(missing_pkgs) > 0) install.packages(missing_pkgs, repos = "https://cloud.r-project.org")
+suppressPackageStartupMessages({
+  library(readr)
+  library(dplyr)
+  library(tidyr)
+  library(stringr)
+  library(lubridate)
+  library(gridExtra)
+  library(grid)
+})
+options(stringsAsFactors = FALSE)
+input_path <- file.path("src","resources","data","study","136560","dataset.csv")
+output_dir <- file.path("src","resources","output","136560")
+if(!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+df <- readr::read_csv(input_path, locale = locale(encoding = "UTF-8"), col_types = cols(.default = col_character()), show_col_types = FALSE)
+df_na <- df %>% mutate(across(everything(), ~na_if(., "")))
+missing_share <- sapply(df_na, function(x) mean(is.na(x)))
+missing_df <- tibble(Spalte = names(missing_share), Anteil_NA = as.numeric(missing_share))
+readr::write_csv(missing_df, file.path(output_dir, "eda_anteil_fehlender_werte.csv"))
+overview <- df %>% group_by(Methode, Pruefmerkmal, Einheit) %>% summarise(Anzahl = n(), .groups = "drop")
+readr::write_csv(overview, file.path(output_dir, "eda_uebersicht_messungen.csv"))
+df_num <- df %>% mutate(Ergebnis_num = readr::parse_number(Ergebnis, locale = locale(decimal_mark = ","))) %>% filter(!is.na(Ergebnis_num))
+if(nrow(df_num) > 0){
+  num_summary <- df_num %>% group_by(Methode, Pruefmerkmal, Einheit) %>% summarise(Anzahl = n(), Mittelwert = mean(Ergebnis_num), Standardabweichung = sd(Ergebnis_num), Minimum = min(Ergebnis_num), Maximum = max(Ergebnis_num), .groups = "drop")
+  readr::write_csv(num_summary, file.path(output_dir, "eda_kennwerte_numerische_ergebnisse.csv"))
+} else {
+  readr::write_csv(tibble(), file.path(output_dir, "eda_kennwerte_numerische_ergebnisse.csv"))
+}
+df_times <- df %>% mutate(start_dt = as.POSIXct(paste(Probenahme_Beginn_Datum, Probenahme_Beginn_Zeit), format = "%d.%m.%Y %H:%M", tz = "UTC"), end_dt = as.POSIXct(paste(Probenahme_Ende_Datum, Probenahme_Ende_Zeit), format = "%d.%m.%Y %H:%M", tz = "UTC"))
+min_safe <- function(x){x <- x[!is.na(x)]; if(length(x) == 0) return(as.POSIXct(NA)); return(min(x))}
+max_safe <- function(x){x <- x[!is.na(x)]; if(length(x) == 0) return(as.POSIXct(NA)); return(max(x))}
+table_df <- df_times %>% select(Entnahmestelle, Umweltbereich, start_dt, end_dt) %>% group_by(Entnahmestelle, Umweltbereich) %>% summarise(Probenahme_Beginn = min_safe(start_dt), Probenahme_Ende = max_safe(end_dt), .groups = "drop") %>% mutate(Probenahme_Beginn = ifelse(!is.na(Probenahme_Beginn), format(Probenahme_Beginn, "%d.%m.%Y %H:%M"), NA_character_), Probenahme_Ende = ifelse(!is.na(Probenahme_Ende), format(Probenahme_Ende, "%d.%m.%Y %H:%M"), NA_character_), Probenahme_Zeitraum = ifelse(!is.na(Probenahme_Beginn) & !is.na(Probenahme_Ende), paste0(Probenahme_Beginn, " – ", Probenahme_Ende), coalesce(Probenahme_Beginn, Probenahme_Ende))) %>% select(Entnahmestelle, Probenahme_Zeitraum, Umweltbereich) %>% distinct()
+theme_tbl <- gridExtra::ttheme_minimal(base_size = 14, core = list(fg_params = list(hjust = 0, x = 0.02)), colhead = list(fg_params = list(fontface = 2, hjust = 0, x = 0.02)))
+tg <- gridExtra::tableGrob(table_df, rows = NULL, theme = theme_tbl)
+title_g <- grid::textGrob("Ort und Zeitraum der Trinkwasser-Probenahme", gp = gpar(fontsize = 18, fontface = "bold"))
+caption_g <- grid::textGrob("Tabelle: Entnahmestelle, Probenahme-Zeitraum und Umweltbereich", x = 0, hjust = 0, gp = gpar(fontsize = 11, col = "#444444"))
+plot_g <- gridExtra::arrangeGrob(tg, top = title_g, bottom = caption_g, padding = unit(1, "line"))
+outfile <- file.path(output_dir, "2_probenahme_tabelle.png")
+png(filename = outfile, width = 1800, height = 700, res = 150)
+grid::grid.draw(plot_g)
+dev.off()
+
+-> SEVQ:
+
+

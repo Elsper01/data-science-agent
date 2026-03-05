@@ -1,0 +1,408 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\135982\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:27:05
+Total Duration: 1252.13 seconds
+Total Token Usage: 123760 tokens
+Total Costs: $0.5224
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0063 seconds
+
+Method: analyse_dataset
+  Duration: 0.0077 seconds
+
+Method: analyse_metadata
+  Duration: 0.0166 seconds
+
+Method: llm_generate_summary
+  Duration: 226.4819 seconds
+
+Method: llm_generate_goals
+  Duration: 3.8072 seconds
+
+Method: llm_generate_r_code
+  Duration: 379.8687 seconds
+
+Method: test_generated_code
+  Duration: 9.4678 seconds
+
+Method: llm_regenerate_code
+  Duration: 8.3730 seconds
+
+Method: test_generated_code
+  Duration: 9.9306 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 614.1684 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7537 tokens
+  Costs total: $0.0063
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 2148 tokens
+  Costs total: $0.0024
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7904 tokens
+  Costs total: $0.0550
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7959 tokens
+  Costs total: $0.0557
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 9750 tokens
+  Costs total: $0.0737
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 788 tokens
+  Costs total: $0.0020
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 621 tokens
+  Costs total: $0.0016
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3937 tokens
+  Costs total: $0.0061
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 788 tokens
+  Costs total: $0.0020
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 597 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6991 tokens
+  Costs total: $0.0482
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2780 tokens
+  Costs total: $0.0088
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3034 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4693 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 7372 tokens
+  Costs total: $0.0427
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7616 tokens
+  Costs total: $0.0542
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2891 tokens
+  Costs total: $0.0097
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3180 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 7485 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 7678 tokens
+  Costs total: $0.0390
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7755 tokens
+  Costs total: $0.0534
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3040 tokens
+  Costs total: $0.0094
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3757 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6878 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5965 tokens
+  Costs total: $0.0334
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Welche Radionuklide konnten im Reinwasser tatsächlich nachgewiesen werden und wie hoch ist deren Aktivitätskonzentration?' visualization="Balkendiagramm mit 'Pruefmerkmal' auf der x-Achse und 'Ergebnis' (nur numerische Aktivitätswerte) auf der y-Achse." rationale="Da der Großteil der Messungen unter der Nachweisgrenze liegt, ist es für den Nutzer entscheidend, die wenigen positiven Befunde schnell zu identifizieren. Ein Balkendiagramm der Spalte 'Ergebnis' gefiltert nach numerischen Werten (ungleich 'n.n.' und ungleich der Messzeit) im Vergleich zum 'Pruefmerkmal' zeigt sofort die Belastung durch K-40 und Th-228 in der Einheit Bq/l."
+
+-> Code:
+options(stringsAsFactors = FALSE)
+pkgs <- c("tidyverse","scales","janitor")
+inst <- pkgs[!pkgs %in% rownames(installed.packages())]
+if(length(inst) > 0) install.packages(inst, dependencies = TRUE)
+library(tidyverse)
+library(scales)
+library(janitor)
+output_dir <- file.path(".", "src", "resources", "output", "135982")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+plot_path <- file.path(output_dir, "0_radionuklide_nachgewiesen.png")
+path_data <- "./src/resources/data/study\\135982\\dataset.csv"
+df_raw <- readr::read_csv(file = path_data, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE, progress = FALSE, col_types = readr::cols(.default = readr::col_character()))
+df <- df_raw %>% janitor::clean_names()
+df <- df %>% mutate(ergebnis_trim = stringr::str_trim(ergebnis))
+is_numeric <- stringr::str_detect(df$ergebnis_trim, regex("^[+-]?[0-9]+([\\.,][0-9]+)?([eE][+-]?[0-9]+)?$"))
+num_str <- df$ergebnis_trim
+num_str[is_numeric] <- stringr::str_replace_all(num_str[is_numeric], ",", ".")
+df$ergebnis_num <- suppressWarnings(as.numeric(ifelse(is_numeric, num_str, NA)))
+eda_missing <- tibble(spalte = names(df), fehlend = sapply(df, function(x) sum(is.na(x))), anteil_fehlend = sapply(df, function(x) mean(is.na(x))))
+anzahl_zeilen <- nrow(df)
+anzahl_pruefmerkmale <- dplyr::n_distinct(df$pruefmerkmal)
+is_nnn <- stringr::str_detect(df$ergebnis_trim, regex("^\\s*n\\.?\\s*n\\.?\\s*$", ignore_case = TRUE))
+anteil_nnn <- if (nrow(df) > 0) mean(is_nnn, na.rm = TRUE) else NA_real_
+eda_overview <- tibble(anzahl_zeilen = anzahl_zeilen, anzahl_pruefmerkmale = anzahl_pruefmerkmale, anteil_nicht_nachgewiesen = anteil_nnn)
+readr::write_csv(eda_missing, file.path(output_dir, "eda_fehlende_werte.csv"))
+readr::write_csv(eda_overview, file.path(output_dir, "eda_uebersicht.csv"))
+df_detected <- df %>% filter(!is.na(ergebnis_num), ergebnis_num > 0, !stringr::str_detect(pruefmerkmal, regex("messzeit", ignore_case = TRUE)), is.na(einheit) | einheit == "Bq/l") %>% mutate(pruefmerkmal = factor(pruefmerkmal) |> forcats::fct_reorder(ergebnis_num, .desc = TRUE))
+readr::write_csv(df_detected %>% select(pruefmerkmal, ergebnis_num, einheit), file.path(output_dir, "eda_nachgewiesene_radionuklide.csv"))
+if(nrow(df_detected) == 0){
+  p <- ggplot() + annotate("text", x = 1, y = 1, label = "Keine Radionuklide oberhalb der Nachweisgrenze nachgewiesen", size = 5) + xlim(0,2) + ylim(0,2) + theme_void()
+  ggsave(plot_path, p, width = 9, height = 6, dpi = 300)
+} else {
+  p <- ggplot(df_detected, aes(x = pruefmerkmal, y = ergebnis_num)) + geom_col(width = 0.7, fill = "#1f78b4") + geom_text(aes(label = scales::label_number(accuracy = 0.0001, decimal.mark = ",")(ergebnis_num)), vjust = -0.3, size = 3.8) + scale_y_continuous(labels = scales::label_number(accuracy = 0.0001, decimal.mark = ","), expand = expansion(mult = c(0.02, 0.12))) + labs(title = "Nachgewiesene Radionuklide im Reinwasser (WW Curslack Nord, 24.11.2015)", subtitle = "Nur Werte oberhalb der Nachweisgrenze (Einheit: Bq/l)", x = "Prüfmerkmal (Radionuklid)", y = "Aktivitätskonzentration [Bq/l]") + theme_minimal(base_size = 12) + theme(axis.text.x = element_text(angle = 25, hjust = 1), panel.grid.minor = element_blank())
+  ggsave(plot_path, p, width = 9, height = 6, dpi = 300)
+}
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie verteilt sich das Verhältnis von nachweisbaren zu nicht nachweisbaren Messwerten über alle untersuchten Prüfmerkmale?' visualization="Stapeldiagramm oder Kreisdiagramm basierend auf der Häufigkeit von 'n.n.' vs. numerischen Werten in der Spalte 'Ergebnis'." rationale="Diese Visualisierung gibt einen schnellen Überblick über die Reinheit des Wassers. Durch die Kategorisierung der Spalte 'Ergebnis' in 'Nachweisbar' (numerisch) und 'Nicht nachweisbar' ('n.n.') über alle Einträge der Spalte 'Pruefmerkmal' hinweg, wird die im Text erwähnte hohe Reinheit (ca. 88% n.n.) visuell bestätigt."
+
+-> Code:
+options(warn=-1)
+packages <- c("readr","dplyr","ggplot2","tidyr","stringr","scales","forcats")
+new_pkgs <- packages[!(packages %in% installed.packages()[,"Package"])]
+if(length(new_pkgs)) install.packages(new_pkgs, dependencies=TRUE, repos="https://cloud.r-project.org", quiet=TRUE)
+suppressPackageStartupMessages({
+  library(readr)
+  library(dplyr)
+  library(ggplot2)
+  library(tidyr)
+  library(stringr)
+  library(scales)
+  library(forcats)
+})
+set.seed(123)
+in_file <- file.path(".", "src", "resources", "data", "study", "135982", "dataset.csv")
+out_dir <- file.path(".", "src", "resources", "output", "135982")
+dir.create(out_dir, recursive=TRUE, showWarnings=FALSE)
+df <- suppressMessages(readr::read_csv(in_file, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE))
+df <- df %>% mutate(across(everything(), ~ifelse(is.character(.x), str_squish(.x), .x)))
+n_rows <- nrow(df)
+missing_counts <- sapply(df, function(x) sum(is.na(x) | (is.character(x) & trimws(x)=="")))
+missing_props <- missing_counts/max(1, n_rows)
+if(!("Ergebnis" %in% names(df))) stop("Spalte 'Ergebnis' fehlt im Datensatz.")
+ergebnis_raw <- as.character(df$Ergebnis)
+ergebnis_trim <- str_trim(ergebnis_raw)
+ergebnis_lower <- str_to_lower(ergebnis_trim)
+nd_regex <- "^(n\\.?\\s*n\\.?)$|^<\\s*(lod|ldl|nachweisgrenze)\\b"
+non_detect_flag <- ifelse(is.na(ergebnis_trim), NA, ifelse(str_detect(ergebnis_lower, nd_regex), TRUE, FALSE))
+ergebnis_num <- suppressWarnings(as.numeric(str_replace_all(ergebnis_trim, ",", ".")))
+detect_numeric_flag <- ifelse(!is.na(ergebnis_num) & is.finite(ergebnis_num), TRUE, FALSE)
+kategorie <- ifelse(is.na(ergebnis_trim), "Fehlend", ifelse(non_detect_flag, "Nicht nachweisbar", ifelse(detect_numeric_flag, "Nachweisbar", "Fehlend")))
+df_cat <- tibble(Kategorie = factor(kategorie, levels=c("Nicht nachweisbar","Nachweisbar","Fehlend")))
+summary_counts <- df_cat %>% count(Kategorie, name="Anzahl") %>% complete(Kategorie, fill=list(Anzahl=0)) %>% mutate(Gesamt=sum(Anzahl), Anteil=ifelse(Gesamt>0, Anzahl/Gesamt, NA_real_)) %>% arrange(Kategorie)
+num_values <- ergebnis_num[!is.na(ergebnis_num) & !non_detect_flag]
+eda_numeric <- tibble(n=length(num_values), min=ifelse(length(num_values)>0, min(num_values), NA_real_), q1=ifelse(length(num_values)>0, quantile(num_values, 0.25, names=FALSE), NA_real_), median=ifelse(length(num_values)>0, median(num_values), NA_real_), mean=ifelse(length(num_values)>0, mean(num_values), NA_real_), sd=ifelse(length(num_values)>1, sd(num_values), NA_real_), q3=ifelse(length(num_values)>0, quantile(num_values, 0.75, names=FALSE), NA_real_), max=ifelse(length(num_values)>0, max(num_values), NA_real_))
+p <- ggplot(summary_counts, aes(x="Alle Prüfmerkmale", y=Anzahl, fill=Kategorie)) +
+  geom_col(width=0.55, color="white", linewidth=0.3) +
+  geom_text(aes(label=ifelse(Anzahl>0, paste0(Anzahl, " (", percent(Anteil, accuracy=0.1, decimal.mark=","), ")"), NA_character_)), position=position_stack(vjust=0.5), color="white", size=4, fontface="bold", na.rm=TRUE) +
+  scale_fill_manual(values=c("Nicht nachweisbar"="#7A8E9B","Nachweisbar"="#2E7D32","Fehlend"="#F9A825")) +
+  labs(title="Verhältnis nachweisbarer zu nicht nachweisbaren Messwerten", subtitle=paste0("WW Curslack Nord, Probenahme 24.11.2015; n = ", n_rows), x=NULL, y="Anzahl der Messwerte", fill="Messwert-Kategorie") +
+  theme_minimal(base_size = 12) +
+  theme(legend.position="right", plot.title=element_text(face="bold"), axis.text.x=element_text(face="bold"), panel.grid.major.x=element_blank(), panel.grid.minor=element_blank())
+out_file <- file.path(out_dir, "1_verhaeltnis_nachweisbar.png")
+ggsave(filename=out_file, plot=p, width=8, height=5, dpi=300, units="in", bg="white")
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Welche Analysemethoden wurden für die verschiedenen Prüfmerkmale angewandt?' visualization="Balkendiagramm (Häufigkeitsverteilung) der Spalte 'Methode' in Bezug auf die Anzahl der 'Pruefmerkmal'-Einträge." rationale="Um die wissenschaftliche Methodik zu verstehen, ist es wichtig zu sehen, welche Verfahren ('Methode') für die Identifizierung der Radionuklide ('Pruefmerkmal') genutzt wurden. Ein Balkendiagramm zeigt die Dominanz der Gammaspektrometrie gegenüber der LSC-Methode und hilft dem Nutzer, die technische Tiefe der Überwachung im Wasserwerk Curslack Nord einzuschätzen."
+
+-> Code:
+options(stringsAsFactors = FALSE)
+set.seed(42)
+
+# Benötigte Pakete laden
+pkgs <- c('tidyverse', 'scales', 'janitor')
+for (p in pkgs) { 
+  if (!requireNamespace(p, quietly = TRUE)) install.packages(p) 
+}
+suppressPackageStartupMessages(lapply(pkgs, library, character.only = TRUE))
+
+# Pfade definieren
+out_dir <- file.path('.', 'src', 'resources', 'output', '135982')
+if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
+data_path <- file.path('.', 'src', 'resources', 'data', 'study', '135982', 'dataset.csv')
+
+# Daten einlesen
+df <- readr::read_csv(data_path, 
+                      locale = locale(encoding = 'UTF-8'), 
+                      col_types = cols(.default = col_character()), 
+                      na = c('', 'NA', 'NaN', 'N/A', 'NULL'))
+
+# Datenbereinigung
+df <- df %>% 
+  mutate(across(everything(), ~ifelse(is.na(.x), NA_character_, stringr::str_squish(.x))))
+
+# EDA: Shape
+shape_df <- tibble(anzahl_zeilen = nrow(df), anzahl_spalten = ncol(df))
+readr::write_csv(shape_df, file.path(out_dir, '2_eda_shape.csv'))
+
+# EDA: Missing Values
+missing_summary <- df %>% 
+  summarise(across(everything(), ~sum(is.na(.)))) %>% 
+  pivot_longer(cols = everything(), names_to = 'Spalte', values_to = 'Anzahl_NA') %>% 
+  mutate(Anteil_NA = ifelse(nrow(df) > 0, Anzahl_NA / nrow(df), NA_real_)) %>% 
+  arrange(desc(Anzahl_NA))
+readr::write_csv(missing_summary, file.path(out_dir, '2_eda_missing_values.csv'))
+
+# EDA: Unique Counts
+unique_counts <- df %>% 
+  summarise(across(everything(), ~n_distinct(.x, na.rm = TRUE))) %>% 
+  pivot_longer(cols = everything(), names_to = 'Spalte', values_to = 'Anzahl_eindeutiger_Werte') %>% 
+  arrange(desc(Anzahl_eindeutiger_Werte))
+readr::write_csv(unique_counts, file.path(out_dir, '2_eda_unique_counts.csv'))
+
+# Numerische Aufbereitung der Spalte 'Ergebnis'
+# Fehlerbehebung: Doppelte Backslashes für Regex '\\.' statt '\.'
+df_num <- df %>% 
+  mutate(Ergebnis_num = ifelse(is.na(Ergebnis) | 
+                                 stringr::str_detect(stringr::str_to_lower(stringr::str_trim(Ergebnis)), '^n\\.?(n|d)\\.?$'), 
+                               NA_character_, 
+                               stringr::str_replace_all(Ergebnis, ',', '.'))) %>% 
+  mutate(Ergebnis_num = suppressWarnings(as.numeric(Ergebnis_num)))
+
+# Numerische Statistik
+if (sum(!is.na(df_num$Ergebnis_num)) > 0) {
+  num_stats <- tibble(
+    Anzahl = nrow(df_num),
+    Nicht_NA = sum(!is.na(df_num$Ergebnis_num)),
+    Anteil_NA = mean(is.na(df_num$Ergebnis_num)),
+    Minimum = suppressWarnings(min(df_num$Ergebnis_num, na.rm = TRUE)),
+    Q1 = suppressWarnings(as.numeric(stats::quantile(df_num$Ergebnis_num, 0.25, na.rm = TRUE))),
+    Median = suppressWarnings(median(df_num$Ergebnis_num, na.rm = TRUE)),
+    Mittelwert = suppressWarnings(mean(df_num$Ergebnis_num, na.rm = TRUE)),
+    Q3 = suppressWarnings(as.numeric(stats::quantile(df_num$Ergebnis_num, 0.75, na.rm = TRUE))),
+    Maximum = suppressWarnings(max(df_num$Ergebnis_num, na.rm = TRUE)),
+    SD = suppressWarnings(stats::sd(df_num$Ergebnis_num, na.rm = TRUE))
+  )
+} else {
+  num_stats <- tibble(Anzahl = nrow(df_num), Nicht_NA = 0, Anteil_NA = 1, Minimum = NA_real_, Q1 = NA_real_, Median = NA_real_, Mittelwert = NA_real_, Q3 = NA_real_, Maximum = NA_real_, SD = NA_real_)
+}
+readr::write_csv(num_stats, file.path(out_dir, '2_eda_numeric_summary.csv'))
+
+# Visualisierung: Häufigkeitsverteilung der Analysemethoden
+method_counts <- df %>% 
+  mutate(Methode = ifelse(is.na(Methode) | stringr::str_trim(Methode) == '', 'Unbekannt', Methode)) %>% 
+  group_by(Methode) %>% 
+  summarise(Anzahl = dplyr::n(), .groups = 'drop') %>% 
+  arrange(desc(Anzahl))
+
+p <- ggplot(method_counts, aes(x = forcats::fct_reorder(Methode, Anzahl), y = Anzahl)) +
+  geom_col(fill = '#1f78b4', width = 0.7) +
+  coord_flip() +
+  geom_text(aes(label = scales::number(Anzahl, accuracy = 1, big.mark = '.', decimal.mark = ',')), 
+            hjust = -0.1, size = 3.8) +
+  labs(title = 'Häufigkeitsverteilung der Analysemethoden', 
+       subtitle = 'Anzahl der Prüfmerkmale je Methode (Reinwasser, WW Curslack Nord, 24.11.2015)', 
+       x = 'Analysemethode', 
+       y = 'Anzahl der Prüfmerkmale') +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15)), breaks = scales::pretty_breaks()) +
+  theme_minimal(base_size = 12) +
+  theme(panel.grid.major.y = element_blank(), 
+        panel.grid.minor = element_blank(), 
+        axis.title.x = element_text(margin = margin(t = 8)), 
+        axis.title.y = element_text(margin = margin(r = 8)))
+
+ggplot2::ggsave(filename = file.path(out_dir, '2_methode_balkendiagramm.png'), 
+                plot = p, width = 9, height = 6, dpi = 300)
+
+
+-> SEVQ:
+
+

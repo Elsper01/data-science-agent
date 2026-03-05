@@ -1,0 +1,11 @@
+spalte,dtype
+Objektnummer,int64
+Kulturdenkmaltyp,object
+Kreis,object
+Gemeinde,object
+Adresse_Lage,object
+Bezeichnung,object
+Beschreibung,object
+Begr_ndung,object
+Schutzumfang,object
+FotoURL,object

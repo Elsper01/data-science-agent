@@ -1,0 +1,412 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\137336\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:29:07
+Total Duration: 1016.27 seconds
+Total Token Usage: 119633 tokens
+Total Costs: $0.5300
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0051 seconds
+
+Method: analyse_dataset
+  Duration: 0.0065 seconds
+
+Method: analyse_metadata
+  Duration: 0.0060 seconds
+
+Method: llm_generate_summary
+  Duration: 179.7000 seconds
+
+Method: llm_generate_goals
+  Duration: 3.9674 seconds
+
+Method: llm_generate_r_code
+  Duration: 353.1790 seconds
+
+Method: test_generated_code
+  Duration: 8.6257 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 470.7765 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 8330 tokens
+  Costs total: $0.0076
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 2089 tokens
+  Costs total: $0.0021
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 11006 tokens
+  Costs total: $0.0857
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8645 tokens
+  Costs total: $0.0621
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 9569 tokens
+  Costs total: $0.0711
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 426 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6667 tokens
+  Costs total: $0.0420
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3077 tokens
+  Costs total: $0.0093
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3521 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5001 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5781 tokens
+  Costs total: $0.0309
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 8502 tokens
+  Costs total: $0.0591
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3266 tokens
+  Costs total: $0.0101
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 4054 tokens
+  Costs total: $0.0033
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 7007 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6204 tokens
+  Costs total: $0.0348
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 8052 tokens
+  Costs total: $0.0565
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3044 tokens
+  Costs total: $0.0095
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3795 tokens
+  Costs total: $0.0033
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5192 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5789 tokens
+  Costs total: $0.0314
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Welche Analysemethoden wurden am häufigsten eingesetzt, um die Probe zu untersuchen?' visualization="Balkendiagramm der Spalte 'Methode' (Häufigkeitsverteilung)." rationale="Da der Datensatz 104 verschiedene Prüfmerkmale für eine einzelne Probe enthält, hilft ein Balkendiagramm der Spalte 'Methode' dem Nutzer zu verstehen, welche wissenschaftlichen Schwerpunkte (z.B. Gammaspektrometrie vs. HRGC-MS) bei der Untersuchung gesetzt wurden. Dies gibt Aufschluss über die Tiefe der radiologischen und chemischen Analyse."
+
+-> Code:
+if (!requireNamespace("readr", quietly = TRUE)) install.packages("readr")
+if (!requireNamespace("dplyr", quietly = TRUE)) install.packages("dplyr")
+if (!requireNamespace("tidyr", quietly = TRUE)) install.packages("tidyr")
+if (!requireNamespace("stringr", quietly = TRUE)) install.packages("stringr")
+if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
+if (!requireNamespace("scales", quietly = TRUE)) install.packages("scales")
+if (!requireNamespace("forcats", quietly = TRUE)) install.packages("forcats")
+suppressPackageStartupMessages({
+  library(readr)
+  library(dplyr)
+  library(tidyr)
+  library(stringr)
+  library(ggplot2)
+  library(scales)
+  library(forcats)
+})
+input_path <- file.path(".", "src", "resources", "data", "study", "137336", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "137336")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+df <- readr::read_csv(input_path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE, progress = FALSE)
+df <- df %>% mutate(across(where(is.character), ~ stringr::str_squish(.)))
+missing_counts <- sapply(df, function(x) { if (is.character(x)) sum(is.na(x) | trimws(x) == "") else sum(is.na(x)) })
+missing_df <- data.frame(spalte = names(missing_counts), fehlend = as.integer(missing_counts), anteil = as.numeric(missing_counts) / nrow(df), stringsAsFactors = FALSE)
+unique_counts <- sapply(df, function(x) length(unique(x[!is.na(x)])))
+unique_df <- data.frame(spalte = names(unique_counts), anz_unique = as.integer(unique_counts), stringsAsFactors = FALSE)
+erg_raw <- if ("Ergebnis" %in% names(df)) df$Ergebnis else NA_character_
+erg_norm <- ifelse(is.na(erg_raw), NA_character_, stringr::str_to_lower(stringr::str_squish(as.character(erg_raw))))
+erg_norm <- stringr::str_replace_all(erg_norm, ",", ".")
+is_lt <- stringr::str_detect(erg_norm, "^<\\s*\\d+(?:\\.\\d+)?$")
+lt_vals <- suppressWarnings(as.numeric(stringr::str_replace(erg_norm, "^<\\s*(\\d+(?:\\.\\d+)?)$", "\\1"))) / 2
+is_nnd <- stringr::str_detect(erg_norm, "^n\\.?\\s*n\\.?$|^n\\.?n\\.?$|^nn$")
+num_vals <- suppressWarnings(as.numeric(erg_norm))
+erg_num <- ifelse(is_lt, lt_vals, ifelse(is_nnd, 0, num_vals))
+df$Ergebnis_num <- erg_num
+if (sum(!is.na(df$Ergebnis_num)) > 0) {
+  erg_summary <- df %>% summarise(anzahl = sum(!is.na(Ergebnis_num)), na = sum(is.na(Ergebnis_num)), minimum = suppressWarnings(min(Ergebnis_num, na.rm = TRUE)), median = suppressWarnings(median(Ergebnis_num, na.rm = TRUE)), mean = suppressWarnings(mean(Ergebnis_num, na.rm = TRUE)), sd = suppressWarnings(sd(Ergebnis_num, na.rm = TRUE)), maximum = suppressWarnings(max(Ergebnis_num, na.rm = TRUE)))
+} else {
+  erg_summary <- tibble(anzahl = 0L, na = nrow(df), minimum = NA_real_, median = NA_real_, mean = NA_real_, sd = NA_real_, maximum = NA_real_)
+}
+num_cols <- df %>% select(where(is.numeric)) %>% select(where(~ sum(!is.na(.x)) > 1))
+if (ncol(num_cols) >= 2) {
+  corr_mat <- suppressWarnings(cor(num_cols, use = "pairwise.complete.obs", method = "pearson"))
+} else {
+  corr_mat <- NA
+}
+bezeichnung <- if ("Bezeichnung" %in% names(df)) unique(na.omit(df$Bezeichnung))[1] else NA_character_
+datum <- if ("Probenahme_Beginn_Datum" %in% names(df)) unique(na.omit(df$Probenahme_Beginn_Datum))[1] else NA_character_
+subtitle_txt <- paste0(ifelse(!is.na(bezeichnung), paste0("Probe: ", bezeichnung), ""), ifelse(!is.na(datum), paste0(ifelse(!is.na(bezeichnung), " • ", ""), "Probenahme: ", datum), ""))
+if (!"Methode" %in% names(df)) stop("Spalte 'Methode' nicht gefunden.")
+freq <- df %>% mutate(Methode = stringr::str_squish(as.character(Methode)), Methode = ifelse(Methode == "", NA_character_, Methode)) %>% filter(!is.na(Methode)) %>% count(Methode, name = "Anzahl", sort = TRUE)
+if (nrow(freq) == 0) stop("Keine gültigen Werte in 'Methode' vorhanden.")
+p <- ggplot(freq, aes(x = Anzahl, y = forcats::fct_reorder(Methode, Anzahl))) + geom_col(aes(fill = Anzahl), width = 0.7) + geom_text(aes(label = Anzahl), hjust = -0.1, size = 3.5, color = "#333333") + scale_x_continuous(expand = expansion(mult = c(0, 0.1)), breaks = scales::pretty_breaks(n = 6)) + scale_fill_gradient(low = "#9ecae1", high = "#08519c") + labs(title = "Häufigkeit eingesetzter Analysemethoden", subtitle = subtitle_txt, x = "Anzahl der Prüfmerkmale", y = "Analysemethode") + theme_minimal(base_size = 12) + theme(panel.grid.major.y = element_blank(), panel.grid.minor = element_blank(), axis.text.y = element_text(size = 10), axis.title.x = element_text(margin = margin(t = 10)), plot.title = element_text(face = "bold", size = 14), plot.subtitle = element_text(size = 10, color = "#555555"), plot.margin = margin(15, 20, 15, 15)) + coord_flip(clip = "off")
+plot_name <- "methoden_haeufigkeit"
+output_path <- file.path(output_dir, paste0("0_", plot_name, ".png"))
+ggsave(filename = output_path, plot = p, width = 10, height = 7, dpi = 300, device = "png")
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie verteilen sich die verschiedenen Maßeinheiten über die Prüfmerkmale?' visualization="Balkendiagramm der Spalte 'Einheit'." rationale="Die Spalte 'Einheit' gibt einen direkten Hinweis auf die Art der Schadstoffe (z.B. Bq/kg für Radioaktivität, ng/kg für Dioxine). Ein Balkendiagramm zeigt dem Nutzer sofort, ob der Fokus eher auf Spurenelementen (ng) oder auf der Aktivität (Bq) liegt, was für die Einschätzung der Datensatzrelevanz entscheidend ist."
+
+-> Code:
+options(encoding = "UTF-8", scipen = 999)
+req_pkgs <- c("tidyverse", "readr", "ggplot2", "dplyr", "tidyr", "stringr", "viridis", "scales")
+inst <- req_pkgs[!(req_pkgs %in% installed.packages()[, "Package"])]
+if (length(inst) > 0) install.packages(inst, quiet = TRUE)
+suppressPackageStartupMessages(invisible(lapply(req_pkgs, library, character.only = TRUE)))
+
+possible_data_paths <- c("./src/resources/data/study\\137336\\dataset.csv", "./src/resources/data/study/137336/dataset.csv")
+data_path <- NA_character_
+for (p in possible_data_paths) { if (file.exists(p)) { data_path <- p; break } }
+if (is.na(data_path)) stop("Datendatei nicht gefunden.")
+
+out_png <- "./src/resources/output\\137336/1_einheiten_balkendiagramm.png"
+out_dir <- dirname(out_png)
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+na_vals <- c("", "NA", "NaN", "n.a.")
+df <- suppressMessages(readr::read_csv(file = data_path, locale = readr::locale(encoding = "UTF-8"), na = na_vals, show_col_types = FALSE))
+
+colnames(df) <- make.names(colnames(df), unique = TRUE)
+
+parse_ergebnis_to_numeric <- function(x) {
+  if (is.null(x)) return(NULL)
+  x_chr <- as.character(x)
+  x_chr_trim <- stringr::str_trim(x_chr)
+  y <- rep(NA_real_, length(x_chr_trim))
+  is_missing <- is.na(x_chr_trim) | tolower(x_chr_trim) %in% c("n.n.", "n.n", "nn", "na", "n/a", "-") | x_chr_trim == ""
+  is_lt <- stringr::str_detect(x_chr_trim, "^\\s*<\\s*[0-9]+([\\.,][0-9]+)?\\s*$")
+  if (any(is_lt, na.rm = TRUE)) {
+    num <- x_chr_trim[is_lt]
+    num <- gsub("^\\s*<\\s*", "", num)
+    num <- gsub("\\s*$", "", num)
+    num <- gsub(",", ".", num, fixed = TRUE)
+    suppressWarnings(num <- as.numeric(num))
+    y[is_lt] <- num/2
+  }
+  is_num <- !(is_missing | is_lt)
+  if (any(is_num, na.rm = TRUE)) {
+    num2 <- gsub(",", ".", x_chr_trim[is_num], fixed = TRUE)
+    suppressWarnings(y[is_num] <- as.numeric(num2))
+  }
+  y
+}
+
+if ("Ergebnis" %in% names(df)) df$Ergebnis_num <- parse_ergebnis_to_numeric(df$Ergebnis) else df$Ergebnis_num <- NA_real_
+
+missing_by_col <- df %>% summarise(across(everything(), ~ sum(is.na(.)))) %>% pivot_longer(everything(), names_to = "Spalte", values_to = "Anzahl_fehlend") %>% mutate(Gesamt = nrow(df), Anteil_fehlend = ifelse(Gesamt > 0, Anzahl_fehlend/Gesamt, NA_real_))
+readr::write_csv(missing_by_col, file.path(out_dir, "eda_missing_by_column.csv"))
+
+numeric_cols <- df %>% select(where(is.numeric))
+if (!"Ergebnis_num" %in% names(numeric_cols)) numeric_cols <- bind_cols(numeric_cols, tibble(Ergebnis_num = df$Ergebnis_num))
+numeric_cols <- numeric_cols %>% select(where(is.numeric)) %>% select(-matches("^Hauptprobenummer$|^Hauptprobenummer\\.\n?$"))
+if (ncol(numeric_cols) >= 2) {
+  cm <- suppressWarnings(cor(numeric_cols, use = "pairwise.complete.obs", method = "spearman"))
+  suppressWarnings(write.csv(cm, file = file.path(out_dir, "eda_korrelationsmatrix.csv"), row.names = TRUE, fileEncoding = "UTF-8"))
+}
+
+if ("Ergebnis_num" %in% names(df)) {
+  erg <- df$Ergebnis_num
+  numeric_summary <- tibble(
+    n = sum(!is.na(erg)),
+    fehlend = sum(is.na(erg)),
+    mittelwert = ifelse(sum(!is.na(erg)) > 0, mean(erg, na.rm = TRUE), NA_real_),
+    sd = ifelse(sum(!is.na(erg)) > 1, sd(erg, na.rm = TRUE), NA_real_),
+    minimum = ifelse(sum(!is.na(erg)) > 0, min(erg, na.rm = TRUE), NA_real_),
+    median = ifelse(sum(!is.na(erg)) > 0, median(erg, na.rm = TRUE), NA_real_),
+    maximum = ifelse(sum(!is.na(erg)) > 0, max(erg, na.rm = TRUE), NA_real_)
+  )
+  readr::write_csv(numeric_summary, file.path(out_dir, "eda_ergebnis_numeric_summary.csv"))
+}
+
+df$Einheit_clean <- df$Einheit
+if (!"Einheit_clean" %in% names(df)) df$Einheit_clean <- NA_character_
+df$Einheit_clean <- ifelse(is.na(df$Einheit_clean) | stringr::str_trim(df$Einheit_clean) == "", "Fehlend", stringr::str_trim(df$Einheit_clean))
+
+unit_counts <- df %>% count(Einheit_clean, name = "Anzahl") %>% arrange(desc(Anzahl)) %>% mutate(Anteil = ifelse(sum(Anzahl) > 0, Anzahl/sum(Anzahl), NA_real_))
+readr::write_csv(unit_counts, file.path(out_dir, "eda_einheit_counts.csv"))
+
+n_units <- nrow(unit_counts)
+plot_h <- max(600, 120 + 55 * n_units)
+
+p <- ggplot(unit_counts, aes(x = reorder(Einheit_clean, Anzahl), y = Anzahl, fill = Einheit_clean)) +
+  geom_col(width = 0.7, color = NA) +
+  coord_flip() +
+  scale_fill_viridis_d(option = "C", end = 0.9, guide = "none") +
+  geom_text(aes(label = paste0(Anzahl, " (", scales::percent(Anteil, accuracy = 0.1, decimal.mark = ","), ")")), hjust = -0.05, size = 3.8) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(title = "Verteilung der Maßeinheiten über Prüfmerkmale", subtitle = "Balkendiagramm der Spalte 'Einheit' (fehlende Werte als 'Fehlend')", x = "Maßeinheit", y = "Anzahl der Prüfmerkmale") +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"), axis.title.y = element_text(margin = margin(r = 10)), axis.title.x = element_text(margin = margin(t = 10)))
+
+ggplot2::ggsave(filename = out_png, plot = p, width = 1200, height = plot_h, units = "px", dpi = 320)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Welche spezifischen Prüfmerkmale wurden innerhalb der am häufigsten verwendeten Methode (Gammaspektrometrie) untersucht?' visualization="Tabelle oder gruppiertes Balkendiagramm mit den Spalten 'Methode' und 'Pruefmerkmal'." rationale="Die Spalte 'Pruefmerkmal' enthält 104 eindeutige Werte. Durch eine Gruppierung nach 'Methode' und 'Pruefmerkmal' kann der Nutzer sehen, welche Isotope oder chemischen Verbindungen konkret gemessen wurden. Da viele Werte in der Spalte 'Ergebnis' als 'n.n.' (nicht nachweisbar) markiert sind, hilft diese Übersicht zu verstehen, wonach überhaupt gesucht wurde."
+
+-> Code:
+options(stringsAsFactors=FALSE)
+pkgs <- c("tidyverse","janitor","scales")
+for (p in pkgs) { if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org", quiet = TRUE) }
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(janitor))
+suppressPackageStartupMessages(library(scales))
+input_path <- "./src/resources/data/study\\137336/dataset.csv"
+read_attempt <- tryCatch(
+  readr::read_csv(input_path, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE, progress = FALSE),
+  error = function(e) {
+    alt <- gsub("\\\\", "/", input_path)
+    readr::read_csv(alt, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE, progress = FALSE)
+  }
+)
+df <- read_attempt
+output_dir <- file.path("./src/resources/output","137336")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+missing_counts <- sapply(df, function(x) sum(is.na(x) | (is.character(x) & trimws(x) == "")))
+missing_share <- as.numeric(missing_counts) / nrow(df)
+eda_missing <- tibble::tibble(Spalte = names(missing_counts), Fehlend = as.integer(missing_counts), Anteil = missing_share)
+readr::write_csv(eda_missing, file.path(output_dir, "eda_missing_by_spalte.csv"))
+method_counts <- df %>% group_by(Methode) %>% summarise(Anzahl = n(), .groups = "drop") %>% arrange(desc(Anzahl))
+readr::write_csv(method_counts, file.path(output_dir, "eda_methoden_anzahl.csv"))
+unique_pruefmerkmal_per_method <- df %>% group_by(Methode) %>% summarise(Anzahl_pruefmerkmal = n_distinct(Pruefmerkmal), .groups = "drop") %>% arrange(desc(Anzahl_pruefmerkmal))
+readr::write_csv(unique_pruefmerkmal_per_method, file.path(output_dir, "eda_pruefmerkmal_pro_methode.csv"))
+df2 <- df %>% mutate(Ergebnis_chr = as.character(Ergebnis)) %>% mutate(
+  is_nn = stringr::str_detect(stringr::str_to_lower(Ergebnis_chr), "^\\s*n\\.?n\\.?\\s*$"),
+  is_lt = stringr::str_detect(Ergebnis_chr, "^\\s*<"),
+  Ergebnis_clean = stringr::str_replace_all(Ergebnis_chr, ",", "."),
+  dl_num = ifelse(is_lt, readr::parse_number(Ergebnis_clean), NA_real_),
+  val_num_raw = suppressWarnings(as.numeric(Ergebnis_clean)),
+  ergebnis_num = dplyr::case_when(
+    is_lt ~ dl_num/2,
+    is_nn ~ NA_real_,
+    TRUE ~ val_num_raw
+  )
+)
+eda_summary_by_method <- df2 %>% group_by(Methode) %>% summarise(
+  Anzahl = n(),
+  Nicht_na = sum(!is.na(ergebnis_num)),
+  Anteil_na = ifelse(Anzahl > 0, 1 - Nicht_na/Anzahl, NA_real_),
+  Minimum = ifelse(Nicht_na > 0, min(ergebnis_num, na.rm = TRUE), NA_real_),
+  p25 = ifelse(Nicht_na > 0, as.numeric(stats::quantile(ergebnis_num, 0.25, na.rm = TRUE)), NA_real_),
+  Median = ifelse(Nicht_na > 0, stats::median(ergebnis_num, na.rm = TRUE), NA_real_),
+  Mittelwert = ifelse(Nicht_na > 0, mean(ergebnis_num, na.rm = TRUE), NA_real_),
+  p75 = ifelse(Nicht_na > 0, as.numeric(stats::quantile(ergebnis_num, 0.75, na.rm = TRUE)), NA_real_),
+  Maximum = ifelse(Nicht_na > 0, max(ergebnis_num, na.rm = TRUE), NA_real_),
+  .groups = "drop"
+)
+readr::write_csv(eda_summary_by_method, file.path(output_dir, "eda_zusammenfassung_ergebnis_pro_methode.csv"))
+if (nrow(method_counts) == 0) stop("Keine Methoden im Datensatz gefunden.")
+top_method <- method_counts %>% slice(1) %>% dplyr::pull(Methode)
+plot_data <- df %>% filter(Methode == top_method) %>% count(Pruefmerkmal, name = "Anzahl") %>% arrange(desc(Anzahl), Pruefmerkmal) %>% mutate(Pruefmerkmal = forcats::fct_reorder(Pruefmerkmal, Anzahl))
+if (nrow(plot_data) == 0) stop("Für die am häufigsten verwendete Methode liegen keine Prüfmerkmale vor.")
+plt <- ggplot(plot_data, aes(x = Pruefmerkmal, y = Anzahl)) + geom_col(fill = "#2E86AB") + coord_flip() + geom_text(aes(label = Anzahl), hjust = -0.1, size = 3) + scale_y_continuous(expand = expansion(mult = c(0, 0.15)), breaks = pretty_breaks()) + labs(title = paste0("Untersuchte Prüfmerkmale innerhalb der häufigsten Methode: ", top_method), subtitle = paste0("Anzahl je Prüfmerkmal (Distinct): ", nrow(plot_data)), x = "Prüfmerkmal", y = "Anzahl Messungen", caption = "Quelle: IMIS-Routinemessprogramm, Laboranalyse der Probe 'Feinstes Wiesenstreu' (2016)") + theme_minimal(base_size = 11) + theme(plot.title = element_text(face = "bold"), axis.text.y = element_text(size = 8))
+plot_path <- file.path(output_dir, "2_pruefmerkmale_haeufigste_methode.png")
+height_in <- max(6, nrow(plot_data) * 0.28)
+ggplot2::ggsave(filename = plot_path, plot = plt, width = 12, height = height_in, dpi = 300, units = "in", limitsize = FALSE)
+
+
+-> SEVQ:
+
+

@@ -1,0 +1,528 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32509\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:52:24
+Total Duration: 1070.95 seconds
+Total Token Usage: 115607 tokens
+Total Costs: $0.5090
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0041 seconds
+
+Method: analyse_dataset
+  Duration: 0.0032 seconds
+
+Method: analyse_metadata
+  Duration: 0.0047 seconds
+
+Method: llm_generate_summary
+  Duration: 157.5766 seconds
+
+Method: llm_generate_goals
+  Duration: 3.9334 seconds
+
+Method: llm_generate_r_code
+  Duration: 303.9808 seconds
+
+Method: test_generated_code
+  Duration: 7.6085 seconds
+
+Method: llm_regenerate_code
+  Duration: 11.7136 seconds
+
+Method: test_generated_code
+  Duration: 8.6483 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 577.4718 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 3365 tokens
+  Costs total: $0.0031
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1468 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7843 tokens
+  Costs total: $0.0613
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 6756 tokens
+  Costs total: $0.0505
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8053 tokens
+  Costs total: $0.0634
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 790 tokens
+  Costs total: $0.0020
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 4816 tokens
+  Costs total: $0.0069
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 711 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7391 tokens
+  Costs total: $0.0523
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2750 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3434 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5240 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 7665 tokens
+  Costs total: $0.0387
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 8401 tokens
+  Costs total: $0.0611
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2921 tokens
+  Costs total: $0.0092
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3300 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5787 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5721 tokens
+  Costs total: $0.0335
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7005 tokens
+  Costs total: $0.0441
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3296 tokens
+  Costs total: $0.0104
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 4101 tokens
+  Costs total: $0.0037
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6196 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 7365 tokens
+  Costs total: $0.0412
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Welche Kommunen und Städte sind im Datensatz vertreten und wer sind die jeweiligen Ansprechpersonen?' visualization="Balkendiagramm mit 'Kommune_Stadt' auf der y-Achse und 'Name' als Beschriftung." rationale="Ein Balkendiagramm (oder eine Tabelle), das die 'Kommune_Stadt' gegen den 'Name' der Gleichstellungsbeauftragten darstellt, bietet einen schnellen Überblick über die Zuständigkeiten. Dies hilft Nutzern zu erkennen, ob ihre spezifische Gemeinde abgedeckt ist und wer die Kontaktperson ist, insbesondere um Lücken wie bei Kranenburg sofort zu identifizieren."
+
+-> Code:
+options(encoding = "UTF-8")
+suppressWarnings(suppressMessages({
+  pkgs <- c("readr","dplyr","ggplot2","stringr","forcats","tidyr","janitor","scales")
+  to_install <- pkgs[!vapply(pkgs, requireNamespace, logical(1), quietly = TRUE)]
+  if (length(to_install) > 0) install.packages(to_install, repos = "https://cloud.r-project.org", quiet = TRUE)
+  invisible(lapply(pkgs, function(p) suppressPackageStartupMessages(library(p, character.only = TRUE))))
+}))
+
+in_path <- "./src/resources/data/study\\32509/dataset.csv"
+out_dir <- "./src/resources/output\\32509"
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+locale_obj <- readr::locale(encoding = "UTF-8")
+df <- readr::read_csv(
+  file = in_path,
+  locale = locale_obj,
+  na = c("", "NA", "N/A", "-", "–"),
+  col_types = cols(.default = col_character())
+)
+
+df <- df %>% mutate(across(everything(), ~ifelse(is.character(.x), stringr::str_squish(.x), .x)))
+
+eda_ueberblick <- tibble(
+  anzahl_zeilen = nrow(df),
+  anzahl_spalten = ncol(df),
+  anzahl_eindeutige_kommunen = dplyr::n_distinct(df$Kommune_Stadt, na.rm = TRUE),
+  anteil_fehlende_name = mean(is.na(df$Name)),
+  anteil_fehlende_e_mail = mean(is.na(df$E_Mail))
+)
+readr::write_csv(eda_ueberblick, file.path(out_dir, "eda_ueberblick.csv"))
+
+eda_missing <- df %>%
+  summarise(across(everything(), ~mean(is.na(.)))) %>%
+  pivot_longer(cols = everything(), names_to = "spalte", values_to = "anteil_fehlend") %>%
+  arrange(desc(anteil_fehlend))
+readr::write_csv(eda_missing, file.path(out_dir, "eda_anteil_fehlend.csv"))
+
+email_typen <- df %>%
+  mutate(e_mail_lower = stringr::str_to_lower(E_Mail)) %>%
+  transmute(
+    Kommune_Stadt,
+    E_Mail,
+    typ = dplyr::case_when(
+      is.na(e_mail_lower) ~ "Unbekannt",
+      stringr::str_detect(e_mail_lower, "^info@") ~ "Funktional",
+      stringr::str_detect(e_mail_lower, "gleichstellung|gleichstellungsbeauftragte|gleichstell|frauen") ~ "Funktional",
+      TRUE ~ "Persönlich"
+    )
+  )
+readr::write_csv(email_typen %>% count(typ, name = "anzahl"), file.path(out_dir, "eda_email_typ_zaehlung.csv"))
+
+plot_df <- df %>%
+  distinct(Kommune_Stadt, .keep_all = TRUE) %>%
+  mutate(
+    status = if_else(is.na(Name), "Keine Angabe", "Ansprechperson vorhanden"),
+    label_name = if_else(is.na(Name), "Keine Angabe", Name)
+  )
+
+levs <- sort(unique(plot_df$Kommune_Stadt))
+plot_df <- plot_df %>% mutate(Kommune_Stadt = factor(Kommune_Stadt, levels = rev(levs)))
+
+p <- ggplot(plot_df, aes(y = Kommune_Stadt, x = 1, fill = status)) +
+  geom_col(width = 0.6) +
+  geom_text(aes(label = label_name), x = 0.5, hjust = 0.5, size = 4, color = "white") +
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0)) +
+  scale_fill_manual(values = c("Ansprechperson vorhanden" = "#2E7D32", "Keine Angabe" = "#D32F2F")) +
+  labs(
+    title = "Kommunen und Ansprechpersonen für Gleichstellungsfragen (Kreis Kleve, 2021)",
+    subtitle = "Balkendiagramm mit Gemeinden/Städten und zugehörigen Namen; fehlende Angaben sind hervorgehoben",
+    x = NULL,
+    y = NULL,
+    fill = "Kontaktstatus",
+    caption = "Quelle: 'Gleichstellungsbeauftragte in den Kommunen 2021'"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold"),
+    axis.text.y = element_text(size = 11)
+  )
+
+ggsave(filename = file.path(out_dir, "0_kommunen_ansprechpersonen.png"), plot = p, width = 12, height = 7, dpi = 300)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie verteilt sich die Erreichbarkeit der Gleichstellungsbeauftragten über die verschiedenen Postleitzahlbereiche?' visualization="Balkendiagramm, das die Häufigkeit der Einträge pro 'Postleitzahl_Ort' zeigt." rationale="Durch die Visualisierung von 'Postleitzahl_Ort' in Verbindung mit 'Kommune_Stadt' lässt sich die geografische Abdeckung im Kreis Kleve visualisieren. Da die Zusammenfassung auf Unterschiede zwischen den 47xxx und 46xxx Bereichen hinweist, hilft diese Darstellung, die regionale Verteilung der Verwaltungsstandorte zu verstehen."
+
+-> Code:
+options(stringsAsFactors = FALSE)
+pkgs <- c("readr","dplyr","tidyr","stringr","ggplot2","forcats","scales","tibble","purrr","janitor")
+inst <- pkgs[!pkgs %in% rownames(installed.packages())]
+if (length(inst) > 0) install.packages(inst, dependencies = TRUE)
+suppressPackageStartupMessages({
+  library(readr)
+  library(dplyr)
+  library(tidyr)
+  library(stringr)
+  library(ggplot2)
+  library(forcats)
+  library(scales)
+  library(tibble)
+  library(purrr)
+  library(janitor)
+})
+input_path <- "./src/resources/data/study\\32509/dataset.csv"
+output_dir <- "./src/resources/output\\32509/"
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+if (!file.exists(input_path)) stop("Eingabedatei nicht gefunden: ", input_path)
+df <- readr::read_csv(input_path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE, progress = FALSE)
+df <- df %>% mutate(across(where(is.character), ~{x <- trimws(.); x[x %in% c("", "-", "NA", "na", "n/a", "N/A")] <- NA_character_; x}))
+n_rows <- nrow(df)
+n_cols <- ncol(df)
+col_types <- vapply(df, function(x) class(x)[1], character(1))
+missing_counts <- vapply(df, function(x) sum(is.na(x)), numeric(1))
+unique_counts <- vapply(df, function(x) dplyr::n_distinct(x, na.rm = TRUE), numeric(1))
+eda_overview <- tibble(
+  spalte = names(df),
+  datentyp = unname(col_types),
+  fehlende_werte = unname(missing_counts),
+  fehlende_werte_prozent = round(100 * fehlende_werte / max(n_rows, 1), 2),
+  anzahl_auspraegungen = unname(unique_counts)
+)
+readr::write_csv(eda_overview, file.path(output_dir, "eda_spaltenueberblick.csv"))
+plz_tab <- df %>%
+  mutate(PLZ = str_extract(`Postleitzahl_Ort`, "^[0-9]{5}")) %>%
+  mutate(PLZ_Bereich = case_when(
+    is.na(PLZ) ~ "Unbekannt",
+    str_starts(PLZ, "46") ~ "46xxx",
+    str_starts(PLZ, "47") ~ "47xxx",
+    TRUE ~ "Sonstige"
+  )) %>%
+  count(PLZ_Bereich, name = "Anzahl") %>%
+  arrange(desc(Anzahl))
+readr::write_csv(plz_tab, file.path(output_dir, "eda_plzbereich_verteilung.csv"))
+plz_counts <- df %>%
+  mutate(
+    PLZ = str_extract(`Postleitzahl_Ort`, "^[0-9]{5}"),
+    Ort = str_trim(str_replace(`Postleitzahl_Ort`, "^[0-9]{5}\\s*", "")),
+    PLZ_Bereich = case_when(
+      is.na(PLZ) ~ "Unbekannt",
+      str_starts(PLZ, "46") ~ "46xxx",
+      str_starts(PLZ, "47") ~ "47xxx",
+      TRUE ~ "Sonstige"
+    )
+  ) %>%
+  group_by(`Postleitzahl_Ort`, PLZ, Ort, PLZ_Bereich) %>%
+  summarise(Anzahl = n(), .groups = "drop") %>%
+  mutate(plz_num = suppressWarnings(as.numeric(PLZ))) %>%
+  arrange(factor(PLZ_Bereich, levels = c("46xxx","47xxx","Sonstige","Unbekannt")), plz_num, Ort) %>%
+  mutate(`Postleitzahl_Ort` = factor(`Postleitzahl_Ort`, levels = unique(`Postleitzahl_Ort`)))
+p <- ggplot(plz_counts, aes(x = `Postleitzahl_Ort`, y = Anzahl, fill = PLZ_Bereich)) +
+  geom_col(width = 0.65) +
+  geom_text(aes(label = Anzahl), hjust = -0.1, size = 3) +
+  coord_flip(clip = "off") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.1)), breaks = pretty_breaks()) +
+  scale_fill_manual(values = c("46xxx" = "#1b9e77", "47xxx" = "#7570b3", "Sonstige" = "#e6ab02", "Unbekannt" = "#9e9e9e"), drop = FALSE) +
+  labs(
+    title = "Häufigkeit der Einträge nach Postleitzahl und Ort",
+    subtitle = paste0("Kreis Kleve, 2021 • n = ", n_rows),
+    x = "Postleitzahl und Ort",
+    y = "Anzahl Einträge",
+    fill = "PLZ-Bereich"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    legend.position = "top",
+    axis.text.y = element_text(size = 10),
+    plot.margin = margin(10, 30, 10, 10)
+  )
+plot_path <- file.path(output_dir, "1_haeufigkeit_postleitzahl_ort.png")
+height_px <- max(4, 0.4 * nrow(plz_counts) + 2)
+ggsave(plot_path, p, width = 9, height = height_px, dpi = 300)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie ist das Verhältnis von personengebundenen zu funktionalen E-Mail-Adressen in den Kommunen?' visualization="Tabelle oder Wortwolke basierend auf 'E_Mail' und 'Kommune_Stadt', um Muster in den Adressformaten zu erkennen." rationale="Die Analyse der Spalte 'E_Mail' im Vergleich zur Spalte 'Kommune_Stadt' erlaubt Rückschlüsse auf die Erreichbarkeitsstruktur. Nutzer können sehen, ob eine Kommune eine allgemeine Adresse (z.B. gleichstellung@...) oder eine personenspezifische Adresse verwendet, was für die Beständigkeit der Kontaktinformationen relevant ist."
+
+-> Code:
+options(stringsAsFactors = FALSE)
+req_pkgs <- c("readr", "dplyr", "stringr", "tidyr", "gridExtra", "grid")
+new_pkgs <- req_pkgs[!(req_pkgs %in% rownames(installed.packages()))]
+if(length(new_pkgs) > 0) install.packages(new_pkgs, dependencies = TRUE)
+lapply(req_pkgs, library, character.only = TRUE)
+
+# Verzeichnisse erstellen
+out_dir <- file.path(".", "src", "resources", "output", "32509")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Datenpfad finden
+candidate_paths <- c(
+  file.path(".", "src", "resources", "data", "study", "32509", "dataset.csv"),
+  "./src/resources/data/study/32509/dataset.csv"
+)
+existing <- candidate_paths[file.exists(candidate_paths)]
+if(length(existing) == 0) stop("Datendatei nicht gefunden.")
+path <- existing[1]
+
+# Daten laden
+df <- suppressMessages(readr::read_csv(path, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE))
+
+# Bereinigung
+df <- df %>% mutate(across(where(is.character), ~ .x %>% stringr::str_trim() %>% na_if("") ))
+df <- df %>% mutate(across(where(is.character), ~ ifelse(.x %in% c("-", "–", "—", "n/a", "NA", "na"), NA_character_, .x)))
+
+if(!"E_Mail" %in% colnames(df)) stop("Spalte 'E_Mail' fehlt im Datensatz.")
+if(!"Kommune_Stadt" %in% colnames(df)) stop("Spalte 'Kommune_Stadt' fehlt im Datensatz.")
+
+# Schlüsselwörter für funktionale Adressen
+role_keywords <- c("gleichstellung", "frauen", "familie", "chancengleichheit", "divers", "gleichbehandlung", "stelle", "buero", "büro", "amt")
+
+# E-Mail Analyse
+df_cls <- df %>% 
+  mutate(
+    E_Mail_norm = tolower(E_Mail),
+    # Extrahiere Local Part (Teil vor dem @)
+    local_part = ifelse(!is.na(E_Mail_norm) & str_detect(E_Mail_norm, "@"), 
+                        str_replace(E_Mail_norm, "@.*$", ""), 
+                        NA_character_)
+  )
+
+# Funktion zur Klassifizierung
+classify_email <- function(lp, name) {
+  if (is.na(lp)) return("Fehlend")
+  
+  # 1. Check auf funktionale Keywords
+  if (any(str_detect(lp, role_keywords))) return("Funktional")
+  
+  # 2. Check auf Namensbestandteile (einfacherer Ansatz ohne komplexe Regex-Escapes)
+  if (!is.na(name)) {
+    name_parts <- str_split(tolower(name), "[\\s\\-]+")[[1]]
+    name_parts <- name_parts[nchar(name_parts) > 2] # Nur signifikante Namensbestandteile
+    if (length(name_parts) > 0) {
+      # Prüfe ob einer der Namensbestandteile im Local Part vorkommt
+      for (part in name_parts) {
+        if (str_detect(lp, fixed(part))) return("Personengebunden")
+      }
+    }
+  }
+  
+  # 3. Check auf typische Namensmuster (Punkt oder Bindestrich zwischen zwei Wörtern)
+  if (str_detect(lp, "^[a-zäöüß]{2,}[._-][a-zäöüß]{2,}")) return("Personengebunden")
+  
+  # Standardfall
+  return("Funktional") # Wenn kein Name erkannt wird, oft Funktionspostfach
+}
+
+df_cls$Email_Typ <- mapply(classify_email, df_cls$local_part, df_cls$Name)
+
+# Aggregation
+sum_by_kommune <- df_cls %>% 
+  group_by(Kommune_Stadt) %>% 
+  summarise(
+    Gesamt = n(),
+    Funktional = sum(Email_Typ == "Funktional"),
+    Personengebunden = sum(Email_Typ == "Personengebunden"),
+    Fehlend = sum(Email_Typ == "Fehlend"),
+    .groups = "drop"
+  ) %>% 
+  mutate(Anteil_Funktional = Funktional / (Funktional + Personengebunden)) %>%
+  arrange(desc(Anteil_Funktional), Kommune_Stadt)
+
+# Gesamtsumme
+sum_total <- sum_by_kommune %>% 
+  summarise(
+    Kommune_Stadt = "GESAMT", 
+    Gesamt = sum(Gesamt), 
+    Funktional = sum(Funktional), 
+    Personengebunden = sum(Personengebunden), 
+    Fehlend = sum(Fehlend)
+  ) %>% 
+  mutate(Anteil_Funktional = Funktional / (Funktional + Personengebunden))
+
+# Formatierung für Tabelle
+sum_display <- bind_rows(sum_by_kommune, sum_total) %>% 
+  mutate(`Anteil Funktional (%)` = ifelse(is.nan(Anteil_Funktional), "0.0 %", sprintf("%.1f %%", 100 * Anteil_Funktional))) %>% 
+  select(`Kommune/Stadt` = Kommune_Stadt, `Gesamt`, `Funktional`, `Personengebunden`, `Fehlend`, `Anteil Funktional (%)`)
+
+# Visualisierung als Tabelle
+plot_title <- textGrob("Verhältnis von personengebundenen zu funktionalen E-Mail-Adressen (2021)", 
+                       gp = gpar(fontface = 2, cex = 1.2))
+plot_sub <- textGrob("Klassifikation basierend auf E-Mail-Struktur und Namensabgleich", 
+                     gp = gpar(cex = 0.8, col = "#555555"))
+
+# Da die Tabelle lang sein kann, begrenzen wir die Anzeige auf die Top/Bottom oder nutzen eine kompakte Darstellung
+# Hier: Anzeige der gesamten Tabelle (bei vielen Kommunen ggf. Filterung nötig, aber hier für alle)
+my_theme <- ttheme_minimal(
+  core = list(fg_params = list(cex = 0.7), bg_params = list(fill = c(rep(c("white", "#f9f9f9"), length.out=nrow(sum_display)-1), "#eeeeee"))),
+  colhead = list(fg_params = list(cex = 0.8, fontface = "bold"))
+)
+
+core_table <- tableGrob(sum_display, rows = NULL, theme = my_theme)
+
+# Layout zusammenfügen
+tbl_layout <- arrangeGrob(plot_title, plot_sub, core_table, 
+                          heights = c(0.05, 0.03, 0.92), ncol = 1)
+
+# Speichern
+outfile <- file.path(out_dir, "2_verhaeltnis_email_typen_kommunen.png")
+# Dynamische Höhe basierend auf Zeilenanzahl
+png_height <- max(800, nrow(sum_display) * 25 + 200)
+png(filename = outfile, width = 1200, height = png_height, res = 120)
+grid.draw(tbl_layout)
+dev.off()
+
+
+-> SEVQ:
+
+

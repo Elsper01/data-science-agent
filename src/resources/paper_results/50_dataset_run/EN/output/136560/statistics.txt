@@ -1,0 +1,414 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\136560\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 15:48:47
+Total Duration: 1027.59 seconds
+Total Token Usage: 86728 tokens
+Total Costs: $0.3910
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0079 seconds
+
+Method: analyse_dataset
+  Duration: 0.0150 seconds
+
+Method: analyse_metadata
+  Duration: 0.0226 seconds
+
+Method: llm_generate_summary
+  Duration: 200.1817 seconds
+
+Method: llm_generate_goals
+  Duration: 3.3489 seconds
+
+Method: llm_generate_python_code
+  Duration: 297.2938 seconds
+
+Method: test_generated_code
+  Duration: 10.8509 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 515.8670 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4753 tokens
+  Costs total: $0.0047
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1587 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6664 tokens
+  Costs total: $0.0520
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5811 tokens
+  Costs total: $0.0433
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5951 tokens
+  Costs total: $0.0448
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 328 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6935 tokens
+  Costs total: $0.0503
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2546 tokens
+  Costs total: $0.0091
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2857 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5423 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4701 tokens
+  Costs total: $0.0269
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5647 tokens
+  Costs total: $0.0395
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2361 tokens
+  Costs total: $0.0090
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2585 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6305 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4332 tokens
+  Costs total: $0.0248
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5427 tokens
+  Costs total: $0.0400
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1985 tokens
+  Costs total: $0.0076
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2223 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3950 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3853 tokens
+  Costs total: $0.0231
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What are the activity concentrations for the different radiological parameters measured in this sample?' visualization="Bar chart of 'Ergebnis' (filtered for activity concentrations) categorized by 'Pruefmerkmal'." rationale="This goal allows users to quickly see the measured levels of Radon-222 and Total Alpha Activity. By filtering 'Pruefmerkmal' for the radionuclides and plotting their 'Ergebnis' (where numerical), users can assess the radiological safety of the drinking water sample."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+pd.options.mode.chained_assignment = None
+
+input_path = r'./src/resources/data/study\136560\dataset.csv'
+output_dir = r'./src/resources/output\136560'
+os.makedirs(output_dir, exist_ok=True)
+
+df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+
+for c in df.select_dtypes(include=['object']).columns:
+    df[c] = df[c].astype(str).str.strip()
+
+ergebnis_clean = df['Ergebnis'].astype(str).str.replace('\u202f', '', regex=True).str.replace('.', '.', regex=False).str.replace(',', '.', regex=False).str.strip()
+df['Ergebnis_num'] = pd.to_numeric(ergebnis_clean, errors='coerce')
+
+missing_overall = df.replace({'': np.nan, ' ': np.nan}).isna().mean()
+missing_ergebnis_incl_nn = df['Ergebnis'].isin(['n.n.', 'n.n', 'nn', 'NN']).mean()
+desc_ergebnis = df['Ergebnis_num'].describe()
+
+activity_mask = df['Einheit'].astype(str).str.contains('Bq/l', na=False)
+not_time_mask = ~df['Pruefmerkmal'].astype(str).str.fullmatch('Messzeit', na=False)
+activity_df_raw = df[activity_mask & not_time_mask].copy()
+
+activity_df = activity_df_raw.dropna(subset=['Ergebnis_num']).copy()
+activity_df['Pruefmerkmal_kurz'] = activity_df['Pruefmerkmal'].replace({'Radon-222 Rn-222': 'Radon-222', 'Gesamt-Alpha-Aktivität': 'Gesamt-Alpha-Aktivität'})
+
+probe_id = str(df['Hauptprobenummer'].iloc[0]) if 'Hauptprobenummer' in df.columns and len(df) > 0 else ''
+probe_datum = str(df['Probenahme_Beginn_Datum'].iloc[0]) if 'Probenahme_Beginn_Datum' in df.columns and len(df) > 0 else ''
+
+sns.set_theme(style='whitegrid')
+
+fig, ax = plt.subplots(figsize=(8, 5))
+
+if activity_df.empty:
+    ax.axis('off')
+    ax.text(0.5, 0.6, 'Keine numerischen Aktivitätskonzentrationen verfügbar', ha='center', va='center', fontsize=12)
+else:
+    order = ['Radon-222', 'Gesamt-Alpha-Aktivität']
+    activity_df['Pruefmerkmal_kurz'] = pd.Categorical(activity_df['Pruefmerkmal_kurz'], categories=order, ordered=True)
+    activity_df = activity_df.sort_values('Pruefmerkmal_kurz')
+    x = np.arange(len(activity_df))
+    y = activity_df['Ergebnis_num'].values
+    colors = sns.color_palette('viridis', n_colors=len(activity_df))
+    bars = ax.bar(x, y, color=colors, edgecolor='black', linewidth=0.6)
+    ax.set_xticks(x)
+    ax.set_xticklabels(activity_df['Pruefmerkmal_kurz'].astype(str).tolist())
+    ax.set_ylabel('Aktivitätskonzentration (Bq/l)')
+    ylim_top = max(y) * 1.3 if len(y) else 1
+    ax.set_ylim(0, ylim_top)
+    for i, v in enumerate(y):
+        label = f"{v:.2f}".replace('.', ',')
+        ax.text(x[i], v + (ylim_top * 0.02), label, ha='center', va='bottom', fontsize=10)
+    ax.yaxis.grid(True, linestyle='--', alpha=0.4)
+    for spine in ['top', 'right']:
+        ax.spines[spine].set_visible(False)
+
+title_main = 'Aktivitätskonzentrationen im Trinkwasser'
+subtitle_parts = []
+if probe_id:
+    subtitle_parts.append(f'Probe {probe_id}')
+if probe_datum:
+    subtitle_parts.append(probe_datum)
+subtitle = ' | '.join(subtitle_parts)
+ax.set_title(f"{title_main}\n{subtitle}" if subtitle else title_main, loc='left')
+
+alpha_present_entry = df[activity_mask & df['Pruefmerkmal'].astype(str).str.contains('Gesamt-Alpha-Aktivität', na=False)]
+alpha_non_detect = False
+if not alpha_present_entry.empty:
+    alpha_non_detect = alpha_present_entry['Ergebnis_num'].isna().all()
+if alpha_non_detect:
+    alpha_time = df[(df['Methode'].astype(str).str.contains('Gesamt-Alpha', na=False)) & (df['Pruefmerkmal'].astype(str).str.fullmatch('Messzeit', na=False))]['Ergebnis_num']
+    alpha_time_val = int(alpha_time.iloc[0]) if not alpha_time.empty and not np.isnan(alpha_time.iloc[0]) else None
+    time_text = ''
+    if alpha_time_val is not None:
+        time_text = f"; Messzeit {format(alpha_time_val, ',').replace(',', '\u202f')} s"
+    fig.text(0.01, 0.01, f"Hinweis: Gesamt-Alpha-Aktivität nicht nachweisbar (unter Nachweisgrenze){time_text}.", ha='left', va='bottom', fontsize=9, color='dimgray')
+
+plt.tight_layout()
+plt.savefig(os.path.join(output_dir, '0_aktivitaetskonzentrationen_balken.png'), dpi=300, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='How does the measurement duration vary between the different analytical methods used?' visualization="Bar chart showing 'Ergebnis' (filtered for 'Pruefmerkmal' = 'Messzeit') on the Y-axis and 'Methode' on the X-axis." rationale="The statistical reliability of radiological data depends on the measurement time. By comparing 'Ergebnis' (where 'Pruefmerkmal' is 'Messzeit') against the 'Methode' (e.g., Radon-LSC vs. other methods), we can understand the effort spent on detecting low-level radiation for each specific test."
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+try:
+    sns.set_theme(context='notebook', style='whitegrid', font_scale=1.1)
+    plt.rcParams['figure.dpi'] = 120
+    plt.rcParams['savefig.dpi'] = 200
+    plt.rcParams['font.family'] = 'DejaVu Sans'
+
+    input_path = os.path.join('.', 'src', 'resources', 'data', 'study', '136560', 'dataset.csv')
+    output_dir = os.path.join('.', 'src', 'resources', 'output', '136560')
+    os.makedirs(output_dir, exist_ok=True)
+
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+
+    obj_cols = df.select_dtypes(include=['object']).columns.tolist()
+    for c in obj_cols:
+        df[c] = df[c].astype(str).str.strip()
+    df = df.replace({'n.n.': np.nan, 'N.N.': np.nan, '': np.nan})
+
+    def to_num_series(s):
+        return pd.to_numeric(s.astype(str).str.replace(',', '.', regex=False), errors='coerce')
+
+    df['Ergebnis_num'] = to_num_series(df['Ergebnis']) if 'Ergebnis' in df.columns else np.nan
+
+    mv = df.isna().mean().rename('missing_rate')
+    mv.to_csv(os.path.join(output_dir, 'eda_missing_values.csv'), encoding='utf-8')
+
+    desc_by_feature = df.groupby('Pruefmerkmal', dropna=False)['Ergebnis_num'].agg(['count', 'mean', 'std', 'min', 'max']).reset_index()
+    desc_by_feature.to_csv(os.path.join(output_dir, 'eda_ergebnis_by_pruefmerkmal.csv'), index=False, encoding='utf-8')
+
+    numeric_candidates = {}
+    for col in df.columns:
+        if df[col].dtype.kind in 'biufc':
+            numeric_candidates[col] = df[col]
+        else:
+            ser = to_num_series(df[col])
+            if ser.notna().sum() > 0:
+                numeric_candidates[col] = ser
+    df_num = pd.DataFrame(numeric_candidates)
+    cols_with_var = [c for c in df_num.columns if pd.Series(df_num[c].dropna().unique()).size > 1]
+    corr = df_num[cols_with_var].corr(numeric_only=True) if len(cols_with_var) >= 2 else pd.DataFrame()
+    corr.to_csv(os.path.join(output_dir, 'eda_numeric_correlation.csv'), encoding='utf-8')
+
+    plot_df = df[df['Pruefmerkmal'] == 'Messzeit'].copy()
+    plot_df['Messzeit_s'] = to_num_series(plot_df['Ergebnis'])
+    agg = plot_df.groupby('Methode', dropna=False).agg(Messzeit_s_mean=('Messzeit_s', 'mean'), n=('Messzeit_s', 'count')).reset_index()
+    agg = agg.dropna(subset=['Methode', 'Messzeit_s_mean'])
+    agg = agg.sort_values('Messzeit_s_mean', ascending=False)
+
+    fig_w = max(6, 1.2 * max(1, len(agg)))
+    fig_h = 5
+    plt.figure(figsize=(fig_w, fig_h))
+    palette = sns.color_palette('viridis', n_colors=max(3, len(agg)))
+    ax = sns.barplot(data=agg, x='Methode', y='Messzeit_s_mean', palette=palette)
+    ax.set_title('Messzeiten der radiologischen Analysen nach Methode (Sekunden)')
+    ax.set_xlabel('Analytische Methode')
+    ax.set_ylabel('Messzeit (s)')
+    for p in ax.patches:
+        h = p.get_height()
+        if not np.isnan(h):
+            ax.annotate(f"{int(round(h, 0))} s", (p.get_x() + p.get_width() / 2., h), ha='center', va='bottom', xytext=(0, 4), textcoords='offset points', fontsize=10)
+    plt.xticks(rotation=20, ha='right')
+    plt.tight_layout()
+    out_path = os.path.join(output_dir, '1_messzeit_nach_methode.png')
+    plt.savefig(out_path, bbox_inches='tight')
+    plt.close()
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the distribution of measurement units across the different analytical tests performed?' visualization="Table or grouped bar chart showing the count of records for each 'Einheit' grouped by 'Pruefmerkmal'." rationale="Since the dataset contains both activity concentrations (Bq/l) and durations (s) in the same 'Ergebnis' column, visualizing the 'Einheit' alongside 'Pruefmerkmal' helps the user understand the structure of the longitudinal data and which rows represent physical quantities versus metadata about the measurement process."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
+
+sns.set_theme(style="whitegrid", context="talk")
+
+data_path = os.path.normpath('./src/resources/data/study\\136560\\dataset.csv')
+output_dir = os.path.normpath('./src/resources/output\\136560')
+os.makedirs(output_dir, exist_ok=True)
+
+df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+
+for c in df.select_dtypes(include=['object']).columns:
+    df[c] = df[c].astype(str).str.strip()
+
+df['Einheit'] = df['Einheit'].replace({'': np.nan}).fillna('Unbekannt')
+
+df['Ergebnis_num'] = pd.to_numeric(df['Ergebnis'].astype(str).str.replace(',', '.', regex=False), errors='coerce')
+
+missing_pct = df.isna().mean().mul(100)
+num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+num_desc = df[num_cols].describe().T if len(num_cols) > 0 else pd.DataFrame()
+num_corr = df[num_cols].corr() if len(num_cols) > 1 else pd.DataFrame()
+
+counts = df.groupby(['Pruefmerkmal', 'Einheit'], dropna=False).size().reset_index(name='Anzahl')
+pruef_order = df['Pruefmerkmal'].astype(str).dropna().unique().tolist()
+counts['Pruefmerkmal'] = pd.Categorical(counts['Pruefmerkmal'], categories=pruef_order, ordered=True)
+counts = counts.sort_values(['Pruefmerkmal', 'Einheit'])
+
+plt.figure(figsize=(12, 7))
+palette = sns.color_palette('colorblind', n_colors=counts['Einheit'].nunique())
+ax = sns.barplot(data=counts, x='Pruefmerkmal', y='Anzahl', hue='Einheit', palette=palette, dodge=True, edgecolor='black')
+ax.set_title('Verteilung der Messeinheiten nach Prüfmerkmal\nTrinkwasserprobe Hamburg, 23.05.2017 (ID 201700234)')
+ax.set_xlabel('Prüfmerkmal')
+ax.set_ylabel('Anzahl der Datensätze')
+ax.set_ylim(0, max(1, counts['Anzahl'].max()) * 1.25)
+for p in ax.patches:
+    height = p.get_height()
+    if np.isfinite(height) and height > 0:
+        ax.annotate(f"{int(height)}", (p.get_x() + p.get_width() / 2, height), ha='center', va='bottom', fontsize=11, xytext=(0, 3), textcoords='offset points')
+ax.legend(title='Einheit', frameon=True)
+plt.xticks(rotation=20, ha='right')
+plt.tight_layout()
+outfile = os.path.join(output_dir, '2_verteilung_einheiten_nach_pruefmerkmal.png')
+plt.savefig(outfile, dpi=300, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+

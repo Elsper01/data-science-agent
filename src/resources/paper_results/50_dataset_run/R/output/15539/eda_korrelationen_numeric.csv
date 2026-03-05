@@ -1,0 +1,10 @@
+var1,var2,korrelation
+statistics_code,statistics_code,NA
+time,statistics_code,NA
+value,statistics_code,NA
+statistics_code,time,NA
+time,time,1
+value,time,0.1330913359085456
+statistics_code,value,NA
+time,value,0.1330913359085456
+value,value,1

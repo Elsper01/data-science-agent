@@ -1,0 +1,3 @@
+variable,n,fehlend,anteil_fehlend,min,q25,median,mean,q75,max,sd
+value,167,0,0,0.098,0.106,0.119,0.11668862275449102,0.122,0.155,0.010645947354731757
+validated,167,0,0,1,1,1,1,1,1,0

@@ -1,0 +1,407 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32509\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 16:22:09
+Total Duration: 1020.10 seconds
+Total Token Usage: 86760 tokens
+Total Costs: $0.4050
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0051 seconds
+
+Method: analyse_dataset
+  Duration: 0.0031 seconds
+
+Method: analyse_metadata
+  Duration: 0.0057 seconds
+
+Method: llm_generate_summary
+  Duration: 171.3092 seconds
+
+Method: llm_generate_goals
+  Duration: 3.3140 seconds
+
+Method: llm_generate_python_code
+  Duration: 295.9669 seconds
+
+Method: test_generated_code
+  Duration: 6.3656 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 543.1309 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3350 tokens
+  Costs total: $0.0033
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1448 tokens
+  Costs total: $0.0016
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6991 tokens
+  Costs total: $0.0539
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6490 tokens
+  Costs total: $0.0490
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6225 tokens
+  Costs total: $0.0463
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5329 tokens
+  Costs total: $0.0376
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2135 tokens
+  Costs total: $0.0078
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2761 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4674 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4297 tokens
+  Costs total: $0.0282
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6062 tokens
+  Costs total: $0.0444
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2211 tokens
+  Costs total: $0.0081
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2481 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4520 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4160 tokens
+  Costs total: $0.0242
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7166 tokens
+  Costs total: $0.0548
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2265 tokens
+  Costs total: $0.0081
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2594 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6667 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4073 tokens
+  Costs total: $0.0222
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Which municipalities (Kommune_Stadt) have a designated Equality Officer (Name) and which have missing data?' visualization='Table or Bar chart showing Kommune_Stadt on the Y-axis and Name on the X-axis.' rationale="This visualization helps users quickly identify the coverage of equality officers across the district. By plotting 'Kommune_Stadt' against 'Name', users can see the specific person assigned to each municipality and identify gaps, such as the placeholder in Kranenburg, which indicates a potential vacancy."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+file_path = r'./src/resources/data/study\32509\dataset.csv'
+output_path = r'./src/resources/output\32509/0_gleichstellungsbeauftragte_abdeckung.png'
+
+df = pd.read_csv(file_path, sep=',', encoding='utf-8', na_values=['-', '–', '—', '', 'na', 'n/a', 'NA', 'NaN', 'None'])
+
+for col in df.columns:
+    if df[col].dtype == object:
+        df[col] = df[col].astype(object)
+        df[col] = df[col].map(lambda x: x.strip() if isinstance(x, str) else x)
+        df[col] = df[col].replace({'-': np.nan, '–': np.nan, '—': np.nan})
+
+missing_proportion = df.isna().mean()
+
+if 'Name' not in df.columns or 'Kommune_Stadt' not in df.columns:
+    raise ValueError('Erforderliche Spalten fehlen: "Name" und/oder "Kommune_Stadt".')
+
+plot_df = df[['Kommune_Stadt', 'Name']].copy()
+plot_df['Kommune_Stadt'] = plot_df['Kommune_Stadt'].fillna('Unbekannt')
+plot_df['Name_vorhanden'] = plot_df['Name'].notna()
+plot_df['status_num'] = plot_df['Name_vorhanden'].astype(int)
+plot_df['Name_label'] = plot_df['Name'].fillna('Fehlt')
+
+plot_df_sorted = plot_df.sort_values(['status_num', 'Kommune_Stadt'], ascending=[True, True]).reset_index(drop=True)
+order = list(plot_df_sorted['Kommune_Stadt'])
+
+sns.set_theme(style='whitegrid')
+fig_height = max(6, 0.55 * len(plot_df_sorted) + 2)
+fig, ax = plt.subplots(figsize=(10, fig_height))
+
+palette = {False: '#d62728', True: '#2ca02c'}
+sns.barplot(data=plot_df_sorted, x='status_num', y='Kommune_Stadt', hue='Name_vorhanden', order=order, dodge=False, palette=palette, edgecolor='#1a1a1a', ax=ax)
+
+bars = ax.patches
+for bar, (_, row) in zip(bars, plot_df_sorted.iterrows()):
+    y = bar.get_y() + bar.get_height() / 2
+    if row['status_num'] > 0:
+        x_text = min(1.0, bar.get_width()) - 0.02
+        ha = 'right'
+    else:
+        x_text = 0.02
+        ha = 'left'
+    ax.text(x_text, y, str(row['Name_label']), va='center', ha=ha, fontsize=9, color='#1a1a1a')
+
+ax.set_xlim(0, 1.08)
+ax.set_xticks([0, 1])
+ax.set_xticklabels(['Fehlt', 'Vorhanden'])
+ax.set_xlabel('Status der Benennung des/der Gleichstellungsbeauftragten')
+ax.set_ylabel('Kommune/Stadt')
+ax.set_title('Gleichstellungsbeauftragte in den Kommunen des Kreises Kleve (2021)\nBenennung je Kommune und fehlende Angaben')
+
+handles, labels = ax.get_legend_handles_labels()
+new_labels = ['Vorhanden' if l == 'True' else 'Fehlt' for l in labels]
+ax.legend(handles, new_labels, title='Name vorhanden?', loc='lower right', frameon=True)
+
+plt.tight_layout()
+plt.savefig(output_path, dpi=200, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the geographic distribution of Equality Offices by Postal Code and City (Postleitzahl_Ort)?' visualization='Bar chart showing the count of records per Postleitzahl_Ort.' rationale="Using the 'Postleitzahl_Ort' field allows users to see how these offices are clustered. For example, it highlights that '47533 Kleve' is a central hub hosting two separate offices (city and district levels), which is important for understanding the administrative structure of the region."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+try:
+    sns.set_theme(style="whitegrid", context="talk")
+    plt.rcParams["axes.unicode_minus"] = False
+    data_path = os.path.join(".", "src", "resources", "data", "study", "32509", "dataset.csv")
+    df = pd.read_csv(data_path, sep=",", encoding="utf-8")
+    if not isinstance(df, pd.DataFrame) or df.shape[0] == 0:
+        raise ValueError("Die geladene Datei enthält keine gültigen Daten.")
+    df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+    df = df.replace({r"^\s*-\s*$": np.nan, r"^\s*$": np.nan}, regex=True)
+    missing_ratio = df.isna().mean()
+    df["Postleitzahl_Ort_clean"] = df["Postleitzahl_Ort"].fillna("Unbekannt")
+    counts = df.groupby("Postleitzahl_Ort_clean", dropna=False).size().reset_index(name="Anzahl")
+    counts["PLZ_num"] = pd.to_numeric(counts["Postleitzahl_Ort_clean"].str.extract(r"(\d{5})")[0], errors="coerce")
+    counts["Ort"] = counts["Postleitzahl_Ort_clean"].str.replace(r"^\d{5}\s*", "", regex=True)
+    counts_sorted = counts.sort_values(["PLZ_num", "Ort"], ascending=[True, True]).reset_index(drop=True)
+    fig, ax = plt.subplots(figsize=(12, 7))
+    palette = sns.color_palette("Blues", n_colors=max(3, len(counts_sorted)))
+    sns.barplot(data=counts_sorted, x="Postleitzahl_Ort_clean", y="Anzahl", palette=palette, ax=ax)
+    ax.set_title("Geografische Verteilung der Gleichstellungsstellen nach Postleitzahl und Ort (2021)", pad=16)
+    ax.set_xlabel("Postleitzahl und Ort")
+    ax.set_ylabel("Anzahl der Einträge")
+    ax.set_ylim(0, max(3, counts_sorted["Anzahl"].max() + 1))
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha="right")
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    for p in ax.patches:
+        height = p.get_height()
+        ax.annotate(f"{int(height)}", (p.get_x() + p.get_width() / 2, height), ha="center", va="bottom", fontsize=11)
+    n_total = int(len(df))
+    fax_missing = missing_ratio.get("Telefax", np.nan)
+    fax_text = f"{fax_missing * 100:.1f}%" if pd.notna(fax_missing) else "k. A."
+    multiple_entries = counts_sorted.loc[counts_sorted["Anzahl"] > 1, "Postleitzahl_Ort_clean"].tolist()
+    multi_text = f" | Mehrfacheinträge: {', '.join(multiple_entries)}" if len(multiple_entries) > 0 else ""
+    caption = f"Datenbasis: Verzeichnis 'Gleichstellungsbeauftragte in den Kommunen 2021' (Kreis Kleve). N={n_total} | Fehlende Telefax: {fax_text}{multi_text}"
+    fig.text(0.01, -0.02, caption, ha="left", va="top", fontsize=11)
+    plt.tight_layout()
+    plt.subplots_adjust(bottom=0.25)
+    output_dir = os.path.join(".", "src", "resources", "output", "32509")
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, "1_balkendiagramm_verteilung_postleitzahl_ort.png")
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Which municipalities (Kommune_Stadt) lack specific contact methods like Telefax or E_Mail?' visualization='Table showing Kommune_Stadt, Telefax, and E_Mail to highlight missing values/placeholders.' rationale="By examining 'Kommune_Stadt' alongside 'Telefax' and 'E_Mail', users can assess the accessibility and data completeness of each office. Identifying placeholders ('-') in these fields helps users understand which municipalities might be harder to reach or have outdated contact information."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.rcParams['font.family'] = 'DejaVu Sans'
+sns.set_theme(style='white')
+
+file_path = r'./src/resources/data/study\32509\dataset.csv'
+output_path = r'./src/resources/output\32509/2_kontakt_tabelle.png'
+
+df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+
+cols = ['Kommune_Stadt', 'Telefax', 'E_Mail']
+df = df.copy()
+
+for c in cols:
+    if c not in df.columns:
+        raise ValueError(f'Spalte fehlt: {c}')
+
+def is_missing_val(x):
+    if pd.isna(x):
+        return True
+    if isinstance(x, str):
+        s = x.strip().lower()
+        return s in {'-', '', 'na', 'n/a', 'k.a.', 'keine', 'none', 'null'}
+    return False
+
+sel = df[cols].copy()
+sel['Telefax_missing'] = sel['Telefax'].apply(is_missing_val)
+sel['E_Mail_missing'] = sel['E_Mail'].apply(is_missing_val)
+sel['MissingEither'] = sel['Telefax_missing'] | sel['E_Mail_missing']
+sel = sel.sort_values(['MissingEither', 'Kommune_Stadt'], ascending=[False, True]).reset_index(drop=True)
+
+n = len(sel)
+missing_fax_count = int(sel['Telefax_missing'].sum())
+missing_mail_count = int(sel['E_Mail_missing'].sum())
+missing_fax_prop = (missing_fax_count / n) if n > 0 else 0
+missing_mail_prop = (missing_mail_count / n) if n > 0 else 0
+
+vis_df = sel[cols].copy()
+vis_df = vis_df.replace({np.nan: ''})
+
+nrows, ncols = vis_df.shape
+cell_text = vis_df.astype(str).values.tolist()
+cell_colours = []
+for i in range(nrows):
+    row_colors = []
+    for j, c in enumerate(cols):
+        v = vis_df.iloc[i, j]
+        miss = is_missing_val(v)
+        if miss:
+            row_colors.append('#ffe5e5')
+        else:
+            row_colors.append('#ffffff')
+    cell_colours.append(row_colors)
+
+fig_height = max(6, 0.42 * nrows + 2)
+fig = plt.figure(figsize=(16, fig_height))
+ax = plt.gca()
+ax.axis('off')
+
+col_labels = ['Kommune/Stadt', 'Telefax', 'E-Mail']
+
+table = plt.table(cellText=cell_text, colLabels=col_labels, cellColours=cell_colours, cellLoc='left', colLoc='left', loc='upper center', bbox=[0.02, 0.2, 0.96, 0.72])
+
+table.auto_set_font_size(False)
+table.set_fontsize(10)
+
+header_color = '#40466e'
+for j in range(ncols):
+    cell = table.get_celld().get((-1, j))
+    if cell is not None:
+        cell.set_facecolor(header_color)
+        cell.set_text_props(color='white', weight='bold')
+
+col_widths = [0.36, 0.24, 0.40]
+for (r, c), cell in table.get_celld().items():
+    if c < ncols:
+        cell.set_width(col_widths[c])
+
+plt.title('Kontaktwege der Gleichstellungsstellen im Kreis Kleve (2021)\nFehlende Telefax/E-Mail rot markiert (Platzhalter "-" oder fehlend)', loc='left', fontsize=16, pad=20)
+
+foot_left = f'Anzahl Datensätze: {n}\nAnteil fehlend Telefax: {missing_fax_prop:.1%} ({missing_fax_count} von {n}) | Anteil fehlend E-Mail: {missing_mail_prop:.1%} ({missing_mail_count} von {n})'
+plt.figtext(0.02, 0.06, foot_left, ha='left', va='center', fontsize=11)
+plt.figtext(0.02, 0.02, 'Sortiert: Einträge mit fehlendem Telefax oder E-Mail zuerst', ha='left', va='center', fontsize=10, color='#555555')
+
+plt.savefig(output_path, dpi=200, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+

@@ -1,0 +1,2 @@
+anzahl_zeilen,zeitraum_start,zeitraum_ende,anzahl_stationen,station_name,station_id,einheit,validated_eindeutig
+167,2026-01-22T10:00:00Z,2026-01-29T08:00:00Z,1,Lauf an der Pegnitz,DEZ1715,µSv/h,1

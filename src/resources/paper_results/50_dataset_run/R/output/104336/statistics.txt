@@ -1,0 +1,439 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\104336\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:22:48
+Total Duration: 995.03 seconds
+Total Token Usage: 101824 tokens
+Total Costs: $0.4562
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0073 seconds
+
+Method: analyse_dataset
+  Duration: 0.0031 seconds
+
+Method: analyse_metadata
+  Duration: 0.0183 seconds
+
+Method: llm_generate_summary
+  Duration: 137.8345 seconds
+
+Method: llm_generate_goals
+  Duration: 6.1482 seconds
+
+Method: llm_generate_r_code
+  Duration: 296.6040 seconds
+
+Method: test_generated_code
+  Duration: 12.2326 seconds
+
+Method: llm_regenerate_code
+  Duration: 7.4172 seconds
+
+Method: test_generated_code
+  Duration: 9.3844 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 525.3836 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 3220 tokens
+  Costs total: $0.0031
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1447 tokens
+  Costs total: $0.0020
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 5765 tokens
+  Costs total: $0.0439
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 5748 tokens
+  Costs total: $0.0439
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 6897 tokens
+  Costs total: $0.0553
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 378 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 711 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 714 tokens
+  Costs total: $0.0018
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 3403 tokens
+  Costs total: $0.0047
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 378 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 714 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7882 tokens
+  Costs total: $0.0579
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2818 tokens
+  Costs total: $0.0102
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3152 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5104 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5660 tokens
+  Costs total: $0.0340
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6958 tokens
+  Costs total: $0.0498
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2722 tokens
+  Costs total: $0.0090
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 2943 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4867 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5692 tokens
+  Costs total: $0.0362
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6590 tokens
+  Costs total: $0.0439
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2803 tokens
+  Costs total: $0.0088
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3491 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5960 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5499 tokens
+  Costs total: $0.0314
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verteilen sich die Fördermittel des Bundes und des Landes auf die verschiedenen Institutionen?' visualization="Gruppiertes Balkendiagramm mit 'F_rderung_in_2014' auf der x-Achse und 'Bund_in_Euro' sowie 'Land_in_Euro' auf der y-Achse." rationale="Ein gruppiertes Balkendiagramm ermöglicht den direkten Vergleich der Finanzierungsquellen (Bund vs. Land) für jedes Projekt. Da der Datensatz zeigt, dass bestimmte Institutionen nur von einer Quelle gefördert werden, macht diese Visualisierung die Zuständigkeiten zwischen 'Bund_in_Euro' und 'Land_in_Euro' pro 'F_rderung_in_2014' sofort ersichtlich. (Hinweis: Die Summenzeile sollte gefiltert werden)."
+
+-> Code:
+options(encoding = "UTF-8")
+pkgs <- c("readr","dplyr","tidyr","stringr","ggplot2","scales","forcats")
+new_pkgs <- pkgs[!(pkgs %in% installed.packages()[, "Package"])]
+if(length(new_pkgs)) install.packages(new_pkgs, dependencies = TRUE)
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(ggplot2)
+library(scales)
+library(forcats)
+
+input_path <- file.path(".", "src", "resources", "data", "study", "104336", "dataset.csv")
+df_raw <- readr::read_csv(input_path, locale = readr::locale(encoding = "UTF-8"), col_types = cols(.default = col_character()))
+
+names(df_raw) <- names(df_raw)
+df <- df_raw %>%
+  rename(institution = `F_rderung_in_2014`, bund = `Bund_in_Euro`, land = `Land_in_Euro`, gesamt = `Gesamt_in_Euro`) %>%
+  mutate(across(c(institution, bund, land, gesamt), ~ifelse(. %in% c("-", "", "NA", "NaN"), NA, .))) %>%
+  mutate(
+    institution = str_trim(institution),
+    bund = parse_number(bund, locale = locale(grouping_mark = ".", decimal_mark = ",")),
+    land = parse_number(land, locale = locale(grouping_mark = ".", decimal_mark = ",")),
+    gesamt = parse_number(gesamt, locale = locale(grouping_mark = ".", decimal_mark = ","))
+  )
+
+df_clean <- df %>% filter(!str_to_lower(str_trim(institution)) %in% str_to_lower(c("Gesamt:")))
+
+a_na <- df_clean %>% summarise(across(everything(), ~mean(is.na(.)), .names = "na_share_{.col}"))
+a_num_summary <- df_clean %>% summarise(
+  anzahl = n(),
+  bund_summe = sum(bund, na.rm = TRUE), bund_mittel = mean(bund, na.rm = TRUE), bund_sd = sd(bund, na.rm = TRUE),
+  land_summe = sum(land, na.rm = TRUE), land_mittel = mean(land, na.rm = TRUE), land_sd = sd(land, na.rm = TRUE),
+  gesamt_berechnet_summe = sum(replace_na(bund,0) + replace_na(land,0), na.rm = TRUE)
+)
+
+a_cor <- suppressWarnings(cor(df_clean$bund, df_clean$land, use = "pairwise.complete.obs", method = "pearson"))
+
+plot_df <- df_clean %>%
+  mutate(bund = replace_na(bund, 0), land = replace_na(land, 0)) %>%
+  mutate(total = bund + land) %>%
+  mutate(institution = fct_reorder(institution, total, .desc = TRUE)) %>%
+  select(institution, bund, land) %>%
+  pivot_longer(cols = c(bund, land), names_to = "quelle", values_to = "betrag") %>%
+  mutate(quelle = recode(quelle, bund = "Bund", land = "Land"))
+
+output_dir <- file.path(".", "src", "resources", "output", "104336")
+if(!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+plot_path <- file.path(output_dir, "0_foerdermittel_bund_land_pro_institution.png")
+
+p <- ggplot(plot_df, aes(x = institution, y = betrag, fill = quelle)) +
+  geom_col(position = position_dodge(width = 0.8), width = 0.7, color = NA) +
+  geom_text(aes(label = ifelse(betrag > 0, paste0(format(betrag, big.mark = ".", decimal.mark = ","), " €"), "")),
+            position = position_dodge(width = 0.8), vjust = -0.25, size = 3.3, family = "sans") +
+  scale_fill_manual(values = c("Bund" = "#2E86AB", "Land" = "#F18F01"), name = "Finanzierungsquelle") +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ","), expand = expansion(mult = c(0, 0.08))) +
+  labs(title = "Verteilung der Fördermittel nach Institution und Finanzierungsquelle (2013)",
+       subtitle = "Gruppiertes Balkendiagramm: Bund vs. Land je Institution; Summenzeile ausgeschlossen",
+       x = "Institution",
+       y = "Fördermittel in Euro",
+       caption = "Quelle: Minderheitenbericht 2021, Staatskanzlei Schleswig-Holstein; Datenjahr 2013") +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    axis.text.x = element_text(angle = 20, hjust = 1),
+    legend.position = "top",
+    panel.grid.minor = element_blank()
+  )
+
+ggsave(plot_path, plot = p, width = 10, height = 6, dpi = 300)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Welche Institutionen erhalten die höchste Gesamtförderung?' visualization="Horizontales Balkendiagramm mit 'F_rderung_in_2014' auf der y-Achse und 'Gesamt_in_Euro' auf der x-Achse, absteigend sortiert." rationale="Ein horizontales Balkendiagramm ist ideal, um die Projekte nach ihrer Förderhöhe zu ordnen. Durch die Verwendung von 'Gesamt_in_Euro' und 'F_rderung_in_2014' (ohne die fehlerhafte Summenzeile) sieht der Nutzer sofort, dass Bildungseinrichtungen wie das Gymnasium oder die Nachschule deutlich höhere Investitionssummen erhalten als Kindergärten."
+
+-> Code:
+options(encoding = "UTF-8")
+req_pkgs <- c("tidyverse", "janitor", "scales", "readr", "stringr", "forcats", "ragg")
+new_pkgs <- req_pkgs[!req_pkgs %in% installed.packages()[, "Package"]]
+if(length(new_pkgs) > 0) install.packages(new_pkgs, repos = "https://cloud.r-project.org", quiet = TRUE)
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(janitor)
+  library(scales)
+  library(readr)
+  library(stringr)
+  library(forcats)
+})
+
+# Pfad zur Datei
+file_path <- "./src/resources/data/study/104336/dataset.csv"
+if(!file.exists(file_path)) stop(paste("Datendatei nicht gefunden:", file_path))
+
+# Daten einlesen
+raw <- readr::read_csv(
+  file = file_path,
+  col_types = cols(.default = col_character()),
+  locale = locale(encoding = "UTF-8"),
+  na = c("-", "", "NA", "na", "NaN")
+)
+
+# Spaltennamen bereinigen
+df <- raw %>% janitor::clean_names()
+
+# Dynamische Identifikation der Spalten für Institutionen und Beträge
+# Da Spaltennamen variieren können (z.B. f_rderung_in_2014 vs foerderung_in_2014), 
+# suchen wir nach Mustern.
+inst_col <- names(df)[str_detect(names(df), "f[oe_]+rderung_in_2014")][1]
+val_col <- names(df)[str_detect(names(df), "gesamt_in_euro")][1]
+
+if(is.na(inst_col) || is.na(val_col)) {
+  # Fallback: Falls Regex fehlschlägt, nimm die ersten plausiblen Spalten
+  # In diesem Datensatz ist oft Spalte 1 die Institution und Spalte 4 der Gesamtwert
+  inst_col <- names(df)[1]
+  val_col <- names(df)[4]
+}
+
+# Datenaufbereitung
+df_clean <- df %>%
+  mutate(
+    # Numerische Konvertierung
+    wert_numerisch = readr::parse_number(
+      as.character(get(val_col)), 
+      locale = locale(decimal_mark = ",", grouping_mark = ".")
+    ),
+    # Bereinigung der Institutionsnamen
+    institution = str_squish(as.character(get(inst_col)))
+  ) %>%
+  # Filter: Keine NAs, keine Summenzeilen (Gesamt), nur positive Werte
+  filter(!is.na(wert_numerisch), !is.na(institution)) %>%
+  filter(!str_detect(str_to_lower(institution), "^gesamt")) %>%
+  filter(wert_numerisch > 0) %>%
+  # Sortierung für das Diagramm
+  mutate(institution = fct_reorder(institution, wert_numerisch))
+
+# Visualisierung
+plot_obj <- ggplot(df_clean, aes(x = wert_numerisch, y = institution)) +
+  geom_col(fill = "#2C7FB8", width = 0.7) +
+  geom_text(
+    aes(label = scales::label_number(big.mark = ".", decimal.mark = ",", suffix = " €")(wert_numerisch)),
+    hjust = -0.1, 
+    size = 3.5, 
+    color = "black"
+  ) +
+  scale_x_continuous(
+    labels = scales::label_number(big.mark = ".", decimal.mark = ",", suffix = " €"),
+    expand = expansion(mult = c(0, 0.2))
+  ) +
+  labs(
+    title = "Höchste Gesamtförderung nach Institution (2014)",
+    subtitle = "Investitionsförderung in Euro; Summenzeilen ausgeschlossen",
+    x = "Gesamtbetrag in Euro",
+    y = "Institution",
+    caption = "Quelle: Minderheitenbericht 2021, Staatskanzlei Schleswig-Holstein"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(face = "bold"),
+    axis.text.y = element_text(size = 9)
+  )
+
+# Speichern
+output_dir <- "./src/resources/output/104336"
+if(!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+out_path <- file.path(output_dir, "1_top_foerderung_institutionen.png")
+ggplot2::ggsave(
+  filename = out_path, 
+  plot = plot_obj, 
+  width = 11, 
+  height = 7, 
+  dpi = 300, 
+  device = ragg::agg_png
+)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie hoch ist der Anteil der Bundesmittel im Vergleich zu den Landesmitteln über alle Projekte hinweg?' visualization="Gestapeltes Balkendiagramm (Stacked Bar Chart) mit 'F_rderung_in_2014' als Kategorien und den Anteilen von 'Bund_in_Euro' und 'Land_in_Euro'." rationale="Obwohl der Datensatz klein ist, hilft ein gestapeltes Balkendiagramm (oder ein Vergleich der aggregierten Werte), das Verhältnis der Gesamtförderlast zu verstehen. Da die Spalten 'Bund_in_Euro' und 'Land_in_Euro' unterschiedliche Größenordnungen aufweisen, verdeutlicht diese Darstellung, dass der Bund die Großprojekte trägt, während das Land die Breite der kleineren Institutionen unterstützt."
+
+-> Code:
+packages <- c("readr","dplyr","tidyr","ggplot2","stringr","forcats","scales","janitor","tibble")
+installed <- rownames(installed.packages())
+to_install <- setdiff(packages, installed)
+if (length(to_install) > 0) install.packages(to_install, dependencies = TRUE)
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(stringr)
+library(forcats)
+library(scales)
+library(janitor)
+library(tibble)
+options(stringsAsFactors = FALSE)
+input_path <- './src/resources/data/study\\104336\\dataset.csv'
+input_path <- gsub('\\\\', '/', input_path)
+df_raw <- readr::read_csv(file = input_path, locale = locale(encoding = "UTF-8"), na = c("", "NA", "NaN", "-", "–"))
+df <- df_raw %>% janitor::clean_names() %>% mutate(across(where(is.character), ~stringr::str_squish(.)))
+if (!all(c("bund_in_euro","land_in_euro","gesamt_in_euro") %in% names(df))) stop("Erforderliche Spalten fehlen im Datensatz.")
+df <- df %>% mutate(across(all_of(c("bund_in_euro","land_in_euro","gesamt_in_euro")), ~readr::parse_number(as.character(.), locale = locale(decimal_mark = ",", grouping_mark = "."))))
+df <- df %>% mutate(f_rderung_in_2014 = ifelse(is.null(f_rderung_in_2014), NA_character_, as.character(f_rderung_in_2014)))
+df <- df %>% mutate(is_summary = if_else(!is.na(f_rderung_in_2014) & str_detect(str_to_lower(f_rderung_in_2014), '^gesamt'), TRUE, FALSE))
+na_anteile <- sapply(df, function(x) mean(is.na(x))) %>% enframe(name = "variable", value = "anteil_na")
+numeric_cols <- names(df %>% select(where(is.numeric)))
+stat_numeric <- df %>% filter(!is_summary) %>% summarise(across(all_of(numeric_cols), list(n = ~sum(!is.na(.)), mean = ~mean(., na.rm = TRUE), sd = ~sd(., na.rm = TRUE), min = ~min(., na.rm = TRUE), median = ~median(., na.rm = TRUE), max = ~max(., na.rm = TRUE), sum = ~sum(., na.rm = TRUE)), .names = '{.col}__{.fn}'))
+cor_mat <- tryCatch({
+  m <- df %>% filter(!is_summary) %>% select(any_of(c("bund_in_euro","land_in_euro","gesamt_in_euro")))
+  if (ncol(m) > 1) stats::cor(m, use = "pairwise.complete.obs") else NA
+}, error = function(e) NA)
+agg_totals <- df %>% filter(!is_summary) %>% summarise(Bund = sum(bund_in_euro, na.rm = TRUE), Land = sum(land_in_euro, na.rm = TRUE)) %>% pivot_longer(cols = everything(), names_to = "Finanzierungsquelle", values_to = "Betrag") %>% mutate(Anteil = ifelse(sum(Betrag, na.rm = TRUE) == 0, NA_real_, Betrag/sum(Betrag, na.rm = TRUE)), kategorie = "Gesamt (ohne fehlerhafte Summenzeile)") %>% mutate(Finanzierungsquelle = factor(Finanzierungsquelle, levels = c("Bund","Land")))
+p <- ggplot(agg_totals, aes(x = kategorie, y = Anteil, fill = Finanzierungsquelle)) + geom_col(width = 0.6, color = "white") + scale_y_continuous(labels = scales::percent_format(accuracy = 1), limits = c(0,1), expand = expansion(mult = c(0,0.02))) + scale_fill_manual(values = c("Bund" = "#1f78b4", "Land" = "#33a02c")) + labs(title = "Anteil der Bundes- und Landesmittel über alle Projekte (2013)", subtitle = "Aggregation über Projekte; fehlerhafte Summenzeile ausgeschlossen", x = NULL, y = "Anteil an der Gesamtförderung", fill = "Finanzierungsquelle") + geom_text(aes(label = scales::percent(Anteil, accuracy = 1)), position = position_stack(vjust = 0.5), color = "white", size = 4) + theme_minimal(base_size = 12) + theme(legend.position = "top", plot.title = element_text(face = "bold"), axis.text.x = element_text(size = 11))
+output_dir_raw <- './src/resources/output\\104336'
+output_dir <- gsub('\\\\', '/', output_dir_raw)
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+plot_path <- file.path(output_dir, '2_Anteil_Bund_vs_Land.png')
+ggsave(filename = plot_path, plot = p, width = 8, height = 5, dpi = 300)
+
+-> SEVQ:
+
+

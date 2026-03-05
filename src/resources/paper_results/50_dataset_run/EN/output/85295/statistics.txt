@@ -1,0 +1,410 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\85295\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 16:23:44
+Total Duration: 959.97 seconds
+Total Token Usage: 88831 tokens
+Total Costs: $0.4024
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0058 seconds
+
+Method: analyse_dataset
+  Duration: 0.0061 seconds
+
+Method: analyse_metadata
+  Duration: 0.0073 seconds
+
+Method: llm_generate_summary
+  Duration: 165.1320 seconds
+
+Method: llm_generate_goals
+  Duration: 3.4071 seconds
+
+Method: llm_generate_python_code
+  Duration: 305.3951 seconds
+
+Method: test_generated_code
+  Duration: 5.0558 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 480.9610 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7207 tokens
+  Costs total: $0.0056
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1614 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6839 tokens
+  Costs total: $0.0469
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7598 tokens
+  Costs total: $0.0547
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6979 tokens
+  Costs total: $0.0481
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4225 tokens
+  Costs total: $0.0285
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1853 tokens
+  Costs total: $0.0067
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2101 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5028 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3722 tokens
+  Costs total: $0.0220
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6844 tokens
+  Costs total: $0.0527
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2153 tokens
+  Costs total: $0.0080
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2803 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3507 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3959 tokens
+  Costs total: $0.0215
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7622 tokens
+  Costs total: $0.0587
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2397 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2678 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4557 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4389 tokens
+  Costs total: $0.0251
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What are the most common types of cultural monuments in the Stormarn district?' visualization="A horizontal bar chart showing the count of records for each 'Kulturdenkmaltyp'." rationale="Understanding the distribution of 'Kulturdenkmaltyp' helps users quickly identify the nature of the heritage protected in this region. Since 'Bauliche Anlagen' (structural installations) dominate the dataset, a bar chart provides a clear comparison of the different categories."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(style="whitegrid", context="talk")
+
+file_path = r'./src/resources/data/study\85295\dataset.csv'
+output_path = r'./src/resources/output\85295' + '/0_kulturdenkmaltyp_counts.png'
+
+df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+
+missing_rate = df.isna().mean()
+num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+desc_num = df[num_cols].describe().T if len(num_cols) > 0 else pd.DataFrame()
+corr_num = df[num_cols].corr(numeric_only=True) if len(num_cols) > 1 else pd.DataFrame()
+
+type_col = 'Kulturdenkmaltyp'
+if type_col in df.columns:
+    typ = df[type_col].astype(str).str.strip()
+    typ = typ.replace({'': 'Unbekannt', 'nan': 'Unbekannt', 'NaN': 'Unbekannt', 'None': 'Unbekannt'})
+else:
+    typ = pd.Series(['Unbekannt'] * len(df))
+
+df['Kulturdenkmaltyp_clean'] = typ
+
+counts = df['Kulturdenkmaltyp_clean'].value_counts(dropna=False)
+counts_sorted = counts.sort_values(ascending=True)
+
+total = int(counts_sorted.sum())
+
+n_types = len(counts_sorted)
+fig_height = max(4, 0.45 * n_types + 1)
+fig, ax = plt.subplots(figsize=(12, fig_height))
+colors = sns.color_palette('viridis', n_colors=n_types)
+
+bars = ax.barh(counts_sorted.index.tolist(), counts_sorted.values.tolist(), color=colors, edgecolor='black', linewidth=0.5)
+
+max_val = counts_sorted.values.max() if n_types > 0 else 0
+offset = max(1, max_val * 0.01)
+for bar, val in zip(bars, counts_sorted.values):
+    ax.text(bar.get_width() + offset, bar.get_y() + bar.get_height() / 2, f"{int(val)} ({val/total:.1%})", va='center', ha='left', fontsize=11)
+
+ax.set_title('Häufigkeit der Kulturdenkmaltypen im Kreis Stormarn', loc='left', fontsize=18, pad=12)
+ax.set_xlabel('Anzahl der Einträge [Stück]')
+ax.set_ylabel('Kulturdenkmaltyp')
+ax.grid(axis='x', linestyle='--', alpha=0.4)
+ax.set_axisbelow(True)
+for spine in ['top', 'right', 'left']:
+    ax.spines[spine].set_visible(False)
+
+plt.tight_layout()
+plt.savefig(output_path, dpi=200, bbox_inches='tight', facecolor='white')
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Which municipalities in Stormarn have the highest concentration of registered monuments?' visualization="A bar chart showing the top 10 'Gemeinde' by the number of monument entries." rationale="By grouping the data by 'Gemeinde', users can see which towns or cities, such as Bad Oldesloe, are heritage hotspots. This is essential for regional planning and tourism insights."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+try:
+    output_dir = os.path.join('.', 'src', 'resources', 'output', '85295')
+    os.makedirs(output_dir, exist_ok=True)
+    dataset_path = os.path.join('.', 'src', 'resources', 'data', 'study', '85295', 'dataset.csv')
+    df = pd.read_csv(dataset_path, sep=',', encoding='utf-8', na_values=['', 'nan', 'NaN', 'NULL'])
+    obj_cols = df.select_dtypes(include=['object']).columns
+    if len(obj_cols) > 0:
+        df[obj_cols] = df[obj_cols].apply(lambda c: c.str.strip())
+    missing_pct = (df.isna().mean() * 100).round(2).sort_values(ascending=False)
+    missing_df = missing_pct.reset_index()
+    missing_df.columns = ['Spalte', 'Fehlend_%']
+    missing_df.to_csv(os.path.join(output_dir, 'eda_missing_values_85295.csv'), index=False, encoding='utf-8')
+    num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    if len(num_cols) > 0:
+        numeric_summary = df[num_cols].describe(percentiles=[0.25, 0.5, 0.75]).T
+        numeric_summary.to_csv(os.path.join(output_dir, 'eda_numeric_summary_85295.csv'), encoding='utf-8')
+        corr = df[num_cols].corr(method='pearson')
+        corr.to_csv(os.path.join(output_dir, 'eda_numeric_correlation_85295.csv'), encoding='utf-8')
+    df_vis = df.copy()
+    if 'Kreis' in df_vis.columns:
+        df_vis = df_vis[df_vis['Kreis'].astype(str).str.contains('Stormarn', case=False, na=False)]
+    if 'Gemeinde' not in df_vis.columns:
+        raise ValueError('Die Spalte "Gemeinde" ist im Datensatz nicht vorhanden.')
+    df_vis = df_vis[df_vis['Gemeinde'].notna()]
+    df_vis['Gemeinde'] = df_vis['Gemeinde'].astype(str).str.strip()
+    top_counts = df_vis.groupby('Gemeinde', dropna=False).size().reset_index(name='Anzahl')
+    top_counts = top_counts.sort_values('Anzahl', ascending=False).head(10)
+    top_counts_sorted = top_counts.sort_values('Anzahl', ascending=True)
+    top_counts.to_csv(os.path.join(output_dir, 'top10_gemeinden_denkmale_85295.csv'), index=False, encoding='utf-8')
+    sns.set_theme(style='whitegrid', context='talk')
+    fig, ax = plt.subplots(figsize=(12, 8))
+    palette = sns.color_palette('viridis', n_colors=len(top_counts_sorted))
+    ax.barh(top_counts_sorted['Gemeinde'], top_counts_sorted['Anzahl'], color=palette)
+    ax.set_title('Top 10 Gemeinden im Kreis Stormarn nach Anzahl eingetragener Kulturdenkmäler')
+    ax.set_xlabel('Anzahl Denkmale [Stück]')
+    ax.set_ylabel('Gemeinde')
+    max_val = int(top_counts_sorted['Anzahl'].max()) if len(top_counts_sorted) > 0 else 0
+    if max_val > 0:
+        ax.set_xlim(0, max_val * 1.15)
+    for i, v in enumerate(top_counts_sorted['Anzahl']):
+        ax.text(v + (max_val * 0.01 if max_val > 0 else 0.1), i, str(int(v)), va='center', ha='left', fontsize=11)
+    plt.tight_layout()
+    plot_path = os.path.join(output_dir, '1_top10_gemeinden_denkmale.png')
+    fig.savefig(plot_path, dpi=300, bbox_inches='tight')
+    plt.close(fig)
+except Exception as e:
+    import sys
+    print(str(e))
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the status of data updates and documentation completeness?' visualization="A stacked bar chart or grouped bar chart showing the count of 'Kulturdenkmaltyp' subdivided by whether the 'Beschreibung' contains 'Alteintragung' or a unique description." rationale="The summary highlights that many entries are 'Alteintragung' (legacy) and some lack photos. Visualizing the presence of 'FotoURL' against the 'Kulturdenkmaltyp' or simply showing the ratio of updated vs. legacy descriptions in the 'Beschreibung' field helps researchers understand the data's current reliability and completeness."
+
+-> Code:
+import os
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(style="whitegrid")
+
+input_path = './src/resources/data/study\\85295\\dataset.csv'
+output_path = './src/resources/output\\85295/2_beschreibungsstatus_nach_kulturdenkmaltyp.png'
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+
+for col in df.select_dtypes(include='object').columns:
+    df[col] = df[col].str.strip()
+
+if 'FotoURL' in df.columns:
+    df['FotoURL'] = df['FotoURL'].replace({"nan": np.nan, "NaN": np.nan, "None": np.nan, "": np.nan})
+else:
+    df['FotoURL'] = np.nan
+
+if 'Beschreibung' not in df.columns:
+    df['Beschreibung'] = np.nan
+
+if 'Kulturdenkmaltyp' not in df.columns:
+    df['Kulturdenkmaltyp'] = 'Unbekannt'
+
+missing_ratio = df.isna().mean().sort_values(ascending=False)
+
+if 'Objektnummer' in df.columns:
+    df['Objektnummer_num'] = pd.to_numeric(df['Objektnummer'], errors='coerce')
+    obj_stats = df['Objektnummer_num'].describe(percentiles=[0.5])
+
+def beschreibungsstatus(x):
+    if pd.isna(x) or str(x).strip() == '':
+        return 'Keine Beschreibung'
+    s = str(x).lower()
+    if 'alteintragung' in s:
+        return 'Alteintragung'
+    return 'Individuelle Beschreibung'
+
+df['Beschreibungsstatus'] = df['Beschreibung'].apply(beschreibungsstatus)
+
+df['Kulturdenkmaltyp'] = df['Kulturdenkmaltyp'].fillna('Unbekannt')
+
+status_order = ['Alteintragung', 'Individuelle Beschreibung', 'Keine Beschreibung']
+ct = pd.crosstab(df['Kulturdenkmaltyp'], df['Beschreibungsstatus'])
+for s in status_order:
+    if s not in ct.columns:
+        ct[s] = 0
+ct = ct[status_order]
+ct['Gesamt'] = ct.sum(axis=1)
+ct = ct.sort_values('Gesamt', ascending=False)
+plot_df = ct.drop(columns=['Gesamt'])
+
+n_types = plot_df.shape[0]
+x = np.arange(n_types)
+
+total_entries = len(df)
+share_alte = (df['Beschreibungsstatus'] == 'Alteintragung').mean() * 100 if total_entries > 0 else 0
+share_photos = df['FotoURL'].notna().mean() * 100 if total_entries > 0 else 0
+
+colors = {
+    'Alteintragung': '#8da0cb',
+    'Individuelle Beschreibung': '#66c2a5',
+    'Keine Beschreibung': '#fc8d62'
+}
+
+fig, ax = plt.subplots(figsize=(12, 7))
+bottoms = np.zeros(n_types)
+for s in status_order:
+    heights = plot_df[s].values
+    ax.bar(x, heights, bottom=bottoms, label=s, color=colors.get(s, None), width=0.75, edgecolor='white', linewidth=0.6)
+    bottoms += heights
+
+totals = plot_df.sum(axis=1).values
+for i, total in enumerate(totals):
+    ax.text(x[i], total + max(totals) * 0.01 if max(totals) > 0 else 0.1, str(int(total)), ha='center', va='bottom', fontsize=9, color='#333333')
+
+ax.set_xticks(x)
+ax.set_xticklabels(plot_df.index.tolist(), rotation=20, ha='right')
+ax.set_ylabel('Anzahl der Einträge')
+ax.set_xlabel('Kulturdenkmaltyp')
+ax.set_title('Beschreibungsstatus nach Kulturdenkmaltyp im Kreis Stormarn')
+subtitle = f'Gesamt: {total_entries} Denkmäler | Anteil Alteintragungen: {share_alte:.1f}% | Foto vorhanden: {share_photos:.1f}%'
+fig.text(0.5, 0.94, subtitle, ha='center', va='center', fontsize=10, color='#444444')
+
+ax.legend(title='Beschreibungsstatus', frameon=False, ncol=1, loc='upper right')
+ax.yaxis.grid(True, linestyle='--', alpha=0.4)
+ax.set_axisbelow(True)
+plt.tight_layout(rect=[0, 0, 1, 0.93])
+
+plt.savefig(output_path, dpi=300)
+plt.close(fig)
+
+
+-> SEVQ:
+
+

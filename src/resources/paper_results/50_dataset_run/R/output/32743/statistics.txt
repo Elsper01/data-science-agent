@@ -1,0 +1,477 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32743\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:56:32
+Total Duration: 1042.33 seconds
+Total Token Usage: 119476 tokens
+Total Costs: $0.4745
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0092 seconds
+
+Method: analyse_dataset
+  Duration: 0.0071 seconds
+
+Method: analyse_metadata
+  Duration: 0.0062 seconds
+
+Method: llm_generate_summary
+  Duration: 249.7625 seconds
+
+Method: llm_generate_goals
+  Duration: 4.7410 seconds
+
+Method: llm_generate_r_code
+  Duration: 282.8714 seconds
+
+Method: test_generated_code
+  Duration: 8.1439 seconds
+
+Method: llm_regenerate_code
+  Duration: 10.1575 seconds
+
+Method: test_generated_code
+  Duration: 8.4511 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 478.1770 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 6005 tokens
+  Costs total: $0.0055
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 2139 tokens
+  Costs total: $0.0023
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8129 tokens
+  Costs total: $0.0606
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8328 tokens
+  Costs total: $0.0624
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8169 tokens
+  Costs total: $0.0608
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 340 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 315 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1831 tokens
+  Costs total: $0.0046
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview
+  Token total: 4948 tokens
+  Costs total: $0.0063
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 340 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 315 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1488 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5782 tokens
+  Costs total: $0.0353
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2852 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3519 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5418 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 8724 tokens
+  Costs total: $0.0436
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 5945 tokens
+  Costs total: $0.0330
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3326 tokens
+  Costs total: $0.0103
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 4083 tokens
+  Costs total: $0.0034
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 7175 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6239 tokens
+  Costs total: $0.0353
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6631 tokens
+  Costs total: $0.0425
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3126 tokens
+  Costs total: $0.0105
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3445 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5164 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5700 tokens
+  Costs total: $0.0312
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie haben sich die Besuche und Besucher im Verlauf des Dezembers 2021 verändert?' visualization="Liniendiagramm mit 'Datum' auf der x-Achse und 'Besuche' sowie 'Besucher' auf der y-Achse." rationale="Ein Liniendiagramm ist ideal, um zeitliche Trends darzustellen. Durch die Verwendung der Felder 'Datum', 'Besuche' und 'Besucher' kann der Nutzer die Saisonalität (z. B. den Rückgang an den Weihnachtsfeiertagen und Silvester) direkt erkennen und verstehen, wie stark die Website an verschiedenen Tagen frequentiert wurde. Die Summenzeile muss hierbei gefiltert werden."
+
+-> Code:
+packages <- c("readr","dplyr","tidyr","ggplot2","lubridate","scales","stringr","purrr")
+inst <- packages[!(packages %in% rownames(installed.packages()))]
+if (length(inst) > 0) install.packages(inst, quiet = TRUE, dependencies = TRUE)
+suppressPackageStartupMessages(library(readr))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(tidyr))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(lubridate))
+suppressPackageStartupMessages(library(scales))
+suppressPackageStartupMessages(library(stringr))
+suppressPackageStartupMessages(library(purrr))
+input_path_raw <- "./src/resources/data/study\\32743\\dataset.csv"
+output_dir_raw <- "./src/resources/output\\32743"
+input_path <- gsub("\\\\", "/", input_path_raw)
+output_dir <- gsub("\\\\", "/", output_dir_raw)
+dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+df_raw <- readr::read_csv(file = input_path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE, progress = FALSE)
+df1 <- df_raw %>% select(-any_of(c("Unnamed__11")))
+df2 <- df1 %>% mutate(Datum = suppressWarnings(lubridate::dmy(Datum)))
+perc_cols <- intersect(c("Anteil_Besuche_mit_Cookies","Anteil_Besucher_mit_Cookies","Bounce_Rate"), names(df2))
+if (length(perc_cols) > 0) {
+  for (cc in perc_cols) {
+    df2[[cc]] <- readr::parse_number(df2[[cc]])/100
+  }
+}
+time_cols <- intersect(c("Zeit_im_Besuch","Bounce_Zeit"), names(df2))
+if ("Zeit_im_Besuch" %in% time_cols) {
+  df2$Zeit_im_Besuch_secs <- suppressWarnings(as.numeric(lubridate::period_to_seconds(lubridate::hms(df2$Zeit_im_Besuch))))
+}
+if ("Bounce_Zeit" %in% time_cols) {
+  df2$Bounce_Zeit_secs <- suppressWarnings(as.numeric(lubridate::period_to_seconds(lubridate::hms(df2$Bounce_Zeit))))
+}
+num_fix_cols <- intersect(c("Besuche","Besucher","Seitenaufrufe","Seiten_pro_Besuch","Besuchsh_ufigkeit"), names(df2))
+if (length(num_fix_cols) > 0) {
+  for (cc in num_fix_cols) {
+    if (!is.numeric(df2[[cc]])) {
+      df2[[cc]] <- readr::parse_number(as.character(df2[[cc]]))
+    }
+  }
+}
+df_days <- df2 %>% filter(!is.na(Datum))
+missingness <- tibble(Spalte = names(df2)) %>% mutate(Fehlend_Anteil = map_dbl(Spalte, function(nm) { x <- df2[[nm]]; mean(is.na(x) | (is.character(x) & trimws(x) == "")) }))
+numeric_df <- df_days %>% select(where(is.numeric))
+stats_tbl <- NULL
+if (ncol(numeric_df) > 0) {
+  stats_tbl <- bind_rows(lapply(names(numeric_df), function(nm) {
+    x <- numeric_df[[nm]]
+    tibble(Variable = nm, N = sum(!is.na(x)), Mittelwert = mean(x, na.rm = TRUE), SD = sd(x, na.rm = TRUE), Minimum = suppressWarnings(min(x, na.rm = TRUE)), Median = median(x, na.rm = TRUE), Maximum = suppressWarnings(max(x, na.rm = TRUE)))
+  }))
+}
+corr_mat <- NULL
+if (ncol(numeric_df) >= 2) {
+  corr_mat <- suppressWarnings(cor(numeric_df, use = "pairwise.complete.obs"))
+}
+plot_df <- df_days %>% select(Datum, Besuche, Besucher) %>% arrange(Datum) %>% pivot_longer(cols = c(Besuche, Besucher), names_to = "Metrik", values_to = "Wert")
+col_vals <- c("Besuche" = "#1f77b4", "Besucher" = "#d62728")
+p <- ggplot(plot_df, aes(x = Datum, y = Wert, color = Metrik)) + geom_line(linewidth = 1) + geom_point(size = 1.5) + scale_color_manual(values = col_vals) + scale_x_date(date_breaks = "5 days", date_labels = "%d.%m.%Y", expand = expansion(mult = c(0.01,0.01))) + scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) + labs(title = "Besuche und Besucher im Monatsverlauf – Dezember 2021", subtitle = "Domain: kreis-kleve.de | Summenzeile ausgeschlossen", x = "Datum", y = "Anzahl", color = "Metrik") + theme_minimal(base_size = 12) + theme(legend.position = "top", legend.title = element_text(size = 10), legend.text = element_text(size = 9), axis.text.x = element_text(angle = 45, hjust = 1))
+outfile <- file.path(output_dir, "0_besuche_besucher_dez2021.png")
+ggsave(filename = outfile, plot = p, width = 10, height = 6, dpi = 200)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Besteht ein Zusammenhang zwischen der Anzahl der Seiten pro Besuch und der Bounce Rate an den verschiedenen Tagen?' visualization="Streudiagramm (Scatter Plot) mit 'Seiten_pro_Besuch' auf der x-Achse und 'Bounce_Rate' auf der y-Achse." rationale="Ein Streudiagramm (Scatter Plot) hilft dabei, Korrelationen zwischen zwei Metriken zu identifizieren. Durch die Gegenüberstellung von 'Seiten_pro_Besuch' und 'Bounce_Rate' lässt sich analysieren, ob eine geringere Besuchstiefe zwangsläufig mit einer höheren Absprungrate einhergeht. Dies gibt Aufschluss über die Qualität der Nutzerführung und die Relevanz der Einstiegsseiten."
+
+-> Code:
+if (!requireNamespace("readr", quietly = TRUE)) install.packages("readr")
+if (!requireNamespace("dplyr", quietly = TRUE)) install.packages("dplyr")
+if (!requireNamespace("tidyr", quietly = TRUE)) install.packages("tidyr")
+if (!requireNamespace("stringr", quietly = TRUE)) install.packages("stringr")
+if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
+if (!requireNamespace("lubridate", quietly = TRUE)) install.packages("lubridate")
+if (!requireNamespace("scales", quietly = TRUE)) install.packages("scales")
+if (!requireNamespace("janitor", quietly = TRUE)) install.packages("janitor")
+suppressPackageStartupMessages(library(readr))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(tidyr))
+suppressPackageStartupMessages(library(stringr))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(lubridate))
+suppressPackageStartupMessages(library(scales))
+suppressPackageStartupMessages(library(janitor))
+options(encoding = "UTF-8")
+output_dir <- file.path(".", "src", "resources", "output", "32743")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+data_path <- file.path(".", "src", "resources", "data", "study", "32743", "dataset.csv")
+df_raw <- suppressMessages(readr::read_csv(data_path, locale = locale(encoding = "UTF-8"), na = c("", "NA", "NaN", "nan", "N/A")))
+df <- df_raw %>% janitor::clean_names()
+df <- df %>% select(where(~!(is.atomic(.) && all(is.na(.)))))
+df <- df %>% filter(!is.na(datum))
+parse_percent_to_prop <- function(x) {
+  if (is.numeric(x)) return(x)
+  x <- as.character(x)
+  x <- str_replace_all(x, "\n", " ")
+  x <- str_trim(x)
+  out <- suppressWarnings(as.numeric(str_replace(x, "%", "")))
+  out <- out/100
+  out
+}
+df <- df %>% mutate(
+  datum = suppressWarnings(lubridate::dmy(datum)),
+  anteil_besuche_mit_cookies = parse_percent_to_prop(anteil_besuche_mit_cookies),
+  anteil_besucher_mit_cookies = parse_percent_to_prop(anteil_besucher_mit_cookies),
+  bounce_rate = parse_percent_to_prop(bounce_rate)
+)
+if ("zeit_im_besuch" %in% names(df)) {
+  df <- df %>% mutate(zeit_im_besuch_sec = as.numeric(lubridate::hms(zeit_im_besuch)))
+}
+if ("bounce_zeit" %in% names(df)) {
+  df <- df %>% mutate(bounce_zeit_sec = as.numeric(lubridate::hms(bounce_zeit)))
+}
+miss_tbl <- tibble(
+  variable = names(df),
+  missing = sapply(df, function(x) sum(is.na(x))),
+  n = nrow(df)
+) %>% mutate(missing_share = missing/n)
+readr::write_csv(miss_tbl, file.path(output_dir, "eda_anteil_fehlender_werte.csv"))
+sum_stats <- df %>% summarise(
+  n = n(),
+  seiten_pro_besuch_mittelwert = mean(seiten_pro_besuch, na.rm = TRUE),
+  seiten_pro_besuch_sd = sd(seiten_pro_besuch, na.rm = TRUE),
+  seiten_pro_besuch_min = min(seiten_pro_besuch, na.rm = TRUE),
+  seiten_pro_besuch_median = median(seiten_pro_besuch, na.rm = TRUE),
+  seiten_pro_besuch_max = max(seiten_pro_besuch, na.rm = TRUE),
+  bounce_rate_mittelwert_prop = mean(bounce_rate, na.rm = TRUE),
+  bounce_rate_sd_prop = sd(bounce_rate, na.rm = TRUE),
+  bounce_rate_min_prop = min(bounce_rate, na.rm = TRUE),
+  bounce_rate_median_prop = median(bounce_rate, na.rm = TRUE),
+  bounce_rate_max_prop = max(bounce_rate, na.rm = TRUE)
+)
+readr::write_csv(sum_stats, file.path(output_dir, "eda_zentrale_kennwerte.csv"))
+df_scatter <- df %>% select(datum, seiten_pro_besuch, bounce_rate) %>% filter(!is.na(seiten_pro_besuch), !is.na(bounce_rate))
+r_val <- suppressWarnings(suppressMessages(cor(df_scatter$seiten_pro_besuch, df_scatter$bounce_rate, use = "complete.obs", method = "pearson")))
+ct <- try(stats::cor.test(df_scatter$seiten_pro_besuch, df_scatter$bounce_rate, alternative = "two.sided", method = "pearson"), silent = TRUE)
+p_val <- if (inherits(ct, "htest")) ct$p.value else NA_real_
+ci_low <- if (inherits(ct, "htest")) ct$conf.int[1] else NA_real_
+ci_high <- if (inherits(ct, "htest")) ct$conf.int[2] else NA_real_
+readr::write_csv(tibble(pearson_r = r_val, p_wert = p_val, konf_int_unten = ci_low, konf_int_oben = ci_high), file.path(output_dir, "eda_korrelation_seiten_pro_besuch_bounce_rate.csv"))
+x_min <- min(df_scatter$seiten_pro_besuch, na.rm = TRUE)
+x_max <- max(df_scatter$seiten_pro_besuch, na.rm = TRUE)
+y_min <- min(df_scatter$bounce_rate, na.rm = TRUE)
+y_max <- max(df_scatter$bounce_rate, na.rm = TRUE)
+x_pos <- x_min + 0.02 * (x_max - x_min)
+y_pos <- y_max - 0.05 * (y_max - y_min)
+plot_title <- "Zusammenhang zwischen Seiten pro Besuch und Absprungrate (Dezember 2021, kreis-kleve.de)"
+plot_subtitle <- sprintf("Jeder Punkt entspricht einem Tag. Pearson r = %.2f, p = %s", r_val, ifelse(is.na(p_val), "NA", format.pval(p_val, digits = 3, eps = 1e-4)))
+p <- ggplot(df_scatter, aes(x = seiten_pro_besuch, y = bounce_rate)) +
+  geom_point(color = "#2C7FB8", alpha = 0.75, size = 3) +
+  geom_smooth(method = "lm", se = TRUE, color = "#D95F02", linewidth = 1) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  scale_x_continuous(breaks = scales::pretty_breaks(6)) +
+  labs(title = plot_title, subtitle = plot_subtitle, x = "Seiten pro Besuch", y = "Absprungrate (%)") +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"), plot.subtitle = element_text(color = "#444444"))
+ggsave(filename = file.path(output_dir, "1_scatter_seiten_pro_besuch_vs_bounce_rate.png"), plot = p, width = 9, height = 6, dpi = 300, bg = "white")
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie hoch ist das Engagement der Nutzer im Hinblick auf die Verweildauer im Vergleich zum Volumen der Seitenaufrufe?' visualization="Kombiniertes Diagramm mit 'Datum' auf der x-Achse, 'Seitenaufrufe' als Balken und 'Zeit_im_Besuch' als Linie." rationale="Ein kombiniertes Balken- und Liniendiagramm ermöglicht den Vergleich von Volumen ('Seitenaufrufe') und Qualität ('Zeit_im_Besuch'). So kann geprüft werden, ob Tage mit besonders vielen Aufrufen auch eine längere Verweildauer aufweisen oder ob es sich um kurze, oberflächliche Zugriffe handelt. Dies hilft bei der Bewertung der Inhaltsrelevanz über den Monat hinweg."
+
+-> Code:
+options(stringsAsFactors = FALSE)
+packages <- c("tidyverse", "readr", "lubridate", "scales", "janitor")
+for (p in packages) { 
+  if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org") 
+}
+lapply(packages, library, character.only = TRUE)
+
+input_path <- file.path("./src/resources/data", "study", "32743", "dataset.csv")
+output_dir <- file.path("./src/resources/output", "32743")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Daten einlesen
+raw <- readr::read_csv(input_path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE)
+raw <- janitor::clean_names(raw)
+
+# Fehlerbehebung: na_if("nan") schlägt fehl, wenn Spalten numerisch sind.
+# Wir wenden na_if nur auf Character-Spalten an oder nutzen eine sicherere Methode.
+raw <- raw %>%
+  mutate(across(where(is.character), ~na_if(., "nan"))) %>%
+  select(-any_of(c("unnamed_11")))
+
+# Datenaufbereitung
+eda <- raw %>%
+  mutate(
+    datum = suppressWarnings(lubridate::dmy(datum)),
+    # Sicherstellen, dass numerische Spalten korrekt geparst werden
+    across(c(besuche, besucher, besuchsh_ufigkeit, seitenaufrufe, seiten_pro_besuch), 
+           ~as.numeric(gsub("[^0-9,.-]", "", as.character(.)))),
+    # Prozentwerte umwandeln
+    across(c(anteil_besuche_mit_cookies, anteil_besucher_mit_cookies, bounce_rate),
+           ~suppressWarnings(as.numeric(str_replace(str_replace(., "%", ""), ",", ".")) / 100)),
+    # Zeitumwandlung: hms() erwartet Format HH:MM:SS
+    zeit_im_besuch_sec = suppressWarnings(as.numeric(lubridate::period_to_seconds(lubridate::hms(zeit_im_besuch)))),
+    zeit_im_besuch_min = zeit_im_besuch_sec / 60
+  )
+
+# Filtern und Sortieren
+df <- eda %>% 
+  filter(!is.na(datum)) %>% 
+  arrange(datum)
+
+# EDA Statistiken exportieren
+na_share <- tibble(variable = names(df), fehlend_anteil = sapply(df, function(x) mean(is.na(x))))
+readr::write_csv(na_share, file.path(output_dir, "eda_anteil_fehlender_werte.csv"))
+
+num_df <- df %>% select(where(is.numeric))
+summ <- num_df %>% 
+  summarise(across(everything(), list(
+    anzahl = ~sum(!is.na(.)), 
+    mittelwert = ~mean(., na.rm = TRUE), 
+    sd = ~sd(., na.rm = TRUE), 
+    median = ~median(., na.rm = TRUE), 
+    min = ~min(., na.rm = TRUE), 
+    max = ~max(., na.rm = TRUE)
+  ))) %>% 
+  pivot_longer(everything(), names_to = c("variable", "kennwert"), names_sep = "_", values_to = "wert") %>% 
+  pivot_wider(names_from = kennwert, values_from = wert)
+readr::write_csv(summ, file.path(output_dir, "eda_kennzahlen_numeric.csv"))
+
+# Skalierungsfaktor für die sekundäre y-Achse berechnen
+scale_factor <- tryCatch({
+  mx_y <- max(df$seitenaufrufe, na.rm = TRUE)
+  mx_m <- max(df$zeit_im_besuch_min, na.rm = TRUE)
+  if (!is.finite(mx_y) || !is.finite(mx_m) || mx_m <= 0 || mx_y <= 0) 1 else mx_y / mx_m
+}, error = function(e) 1)
+
+# Visualisierung
+plt <- ggplot(df, aes(x = datum)) +
+  geom_col(aes(y = seitenaufrufe, fill = "Seitenaufrufe"), width = 0.7) +
+  geom_line(aes(y = zeit_im_besuch_min * scale_factor, color = "Verweildauer (Min)"), linewidth = 1.2) +
+  geom_point(aes(y = zeit_im_besuch_min * scale_factor, color = "Verweildauer (Min)"), size = 2) +
+  scale_x_date(date_breaks = "2 days", date_labels = "%d.%m.") +
+  scale_y_continuous(
+    name = "Seitenaufrufe (Anzahl)",
+    labels = label_number(big.mark = ".", decimal.mark = ","),
+    sec.axis = sec_axis(~ . / scale_factor, name = "Verweildauer pro Besuch (Minuten)", 
+                        labels = label_number(accuracy = 0.1, decimal.mark = ","))
+  ) +
+  scale_fill_manual(name = "", values = c("Seitenaufrufe" = "#1f77b4")) +
+  scale_color_manual(name = "", values = c("Verweildauer (Min)" = "#d62728")) +
+  labs(
+    title = "Nutzer-Engagement: Seitenaufrufe vs. Verweildauer",
+    subtitle = "Vergleich von Volumen (Balken) und Aufenthaltsqualität (Linie) im Zeitverlauf",
+    x = "Datum",
+    caption = "Quelle: etracker Datensatz"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom",
+    panel.grid.minor = element_blank()
+  )
+
+# Speichern
+out_file <- file.path(output_dir, "2_engagement_seitenaufrufe_vs_verweildauer.png")
+ggplot2::ggsave(filename = out_file, plot = plt, width = 12, height = 6.5, dpi = 150)
+
+
+-> SEVQ:
+
+

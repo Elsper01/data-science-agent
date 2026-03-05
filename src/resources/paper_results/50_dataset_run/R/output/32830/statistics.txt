@@ -1,0 +1,429 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32830\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:58:42
+Total Duration: 1089.63 seconds
+Total Token Usage: 109905 tokens
+Total Costs: $0.4853
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0090 seconds
+
+Method: analyse_dataset
+  Duration: 0.0079 seconds
+
+Method: analyse_metadata
+  Duration: 0.0054 seconds
+
+Method: llm_generate_summary
+  Duration: 254.2607 seconds
+
+Method: llm_generate_goals
+  Duration: 3.9476 seconds
+
+Method: llm_generate_r_code
+  Duration: 313.1883 seconds
+
+Method: test_generated_code
+  Duration: 10.1553 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 508.0574 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 6349 tokens
+  Costs total: $0.0049
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1608 tokens
+  Costs total: $0.0018
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8373 tokens
+  Costs total: $0.0626
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 9299 tokens
+  Costs total: $0.0718
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8386 tokens
+  Costs total: $0.0628
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1092 tokens
+  Costs total: $0.0028
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 727 tokens
+  Costs total: $0.0019
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1044 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6135 tokens
+  Costs total: $0.0367
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3128 tokens
+  Costs total: $0.0098
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3668 tokens
+  Costs total: $0.0033
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4832 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6012 tokens
+  Costs total: $0.0337
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 8156 tokens
+  Costs total: $0.0557
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3274 tokens
+  Costs total: $0.0102
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 4044 tokens
+  Costs total: $0.0033
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4852 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6215 tokens
+  Costs total: $0.0351
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 6328 tokens
+  Costs total: $0.0405
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2946 tokens
+  Costs total: $0.0096
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3248 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4732 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5457 tokens
+  Costs total: $0.0292
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie haben sich die täglichen Besuche und Besucher im Laufe des Septembers entwickelt?' visualization="Liniendiagramm mit 'Datum' auf der x-Achse und 'Besuche' sowie 'Besucher' auf der y-Achse (unter Ausschluss der Summenzeile)." rationale="Ein Liniendiagramm der Felder 'Datum', 'Besuche' und 'Besucher' ermöglicht es, Trends und Wochentagsmuster im Traffic zu erkennen. Durch den Ausschluss des Summenwerts (82.009 Besuche) wird die tägliche Varianz sichtbar, was hilft, besonders starke oder schwache Tage für das Informationsportal zu identifizieren."
+
+-> Code:
+options(warn=-1)
+pkgs <- c("tidyverse","lubridate","janitor","scales")
+new_pkgs <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
+if(length(new_pkgs)) install.packages(new_pkgs, dependencies = TRUE)
+invisible(lapply(pkgs, library, character.only = TRUE))
+
+in_path <- './src/resources/data/study\\32830\\dataset.csv'
+in_path <- gsub('\\\\','/', in_path)
+
+raw <- readr::read_csv(in_path, locale = readr::locale(encoding = "UTF-8"), na = c("", "NA", "NaN", "nan", "-"))
+df <- raw %>% janitor::clean_names()
+
+parse_percent_num <- function(x){
+  if(is.numeric(x)) return(x/100)
+  x <- gsub("%","", as.character(x))
+  suppressWarnings(as.numeric(x))/100
+}
+
+parse_hms_to_seconds <- function(x){
+  if(is.numeric(x)) return(x)
+  y <- suppressWarnings(lubridate::period_to_seconds(lubridate::hms(x)))
+  as.numeric(y)
+}
+
+char_cols <- names(df)[vapply(df, is.character, logical(1))]
+if(length(char_cols)>0){
+  df <- df %>% mutate(across(all_of(char_cols), ~ stringr::str_squish(.)))
+}
+
+num_cols_known <- c("besuche","besucher","seitenaufrufe","seiten_pro_besuch","besuchsh__ufigkeit","conversions__last_ad_","conversion_wert__last_ad_")
+perc_cols_known <- c("anteil_besuche_mit_cookies","anteil_besucher_mit_cookies","bounce_rate","conversion_rate__last_ad_")
+time_cols_known <- c("zeit_im_besuch","bounce_zeit")
+
+cols_exist_num <- intersect(names(df), num_cols_known)
+cols_exist_perc <- intersect(names(df), perc_cols_known)
+cols_exist_time <- intersect(names(df), time_cols_known)
+
+if(length(cols_exist_num)>0){
+  df <- df %>% mutate(across(all_of(cols_exist_num), ~ readr::parse_number(as.character(.))))
+}
+if(length(cols_exist_perc)>0){
+  df <- df %>% mutate(across(all_of(cols_exist_perc), ~ parse_percent_num(.)))
+}
+if(length(cols_exist_time)>0){
+  df <- df %>% mutate(across(all_of(cols_exist_time), ~ parse_hms_to_seconds(.)))
+}
+
+if("datum" %in% names(df)){
+  df <- df %>% mutate(datum_parsed = suppressWarnings(lubridate::dmy(datum)))
+}
+
+out_dir <- file.path(".", "src", "resources", "output", "32830")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+missing_tbl <- tibble(variable = names(df), fehlend_prozent = vapply(df, function(x) mean(is.na(x))*100, numeric(1)))
+readr::write_csv(missing_tbl, file.path(out_dir, "eda_missing_values.csv"))
+
+num_df <- df %>% dplyr::select(where(is.numeric))
+if(ncol(num_df)>0){
+  summary_tbl <- purrr::map_dfr(names(num_df), function(nm){
+    x <- num_df[[nm]]
+    tibble(variable = nm,
+           n = sum(!is.na(x)),
+           mean = mean(x, na.rm = TRUE),
+           sd = stats::sd(x, na.rm = TRUE),
+           median = stats::median(x, na.rm = TRUE),
+           min = suppressWarnings(min(x, na.rm = TRUE)),
+           max = suppressWarnings(max(x, na.rm = TRUE)))
+  })
+  readr::write_csv(summary_tbl, file.path(out_dir, "eda_numeric_summary.csv"))
+  if(ncol(num_df) >= 2){
+    cor_mat <- suppressWarnings(stats::cor(num_df, use = "pairwise.complete.obs", method = "pearson"))
+    cor_tbl <- cor_mat %>% as.data.frame() %>% tibble::rownames_to_column(var = "variable")
+    readr::write_csv(cor_tbl, file.path(out_dir, "eda_correlation_pearson.csv"))
+  } else {
+    one_var <- tibble(Hinweis = "Zu wenige numerische Variablen für Korrelationsmatrix")
+    readr::write_csv(one_var, file.path(out_dir, "eda_correlation_pearson.csv"))
+  }
+} else {
+  readr::write_csv(tibble(Hinweis = "Keine numerischen Spalten gefunden"), file.path(out_dir, "eda_numeric_summary.csv"))
+  readr::write_csv(tibble(Hinweis = "Keine numerischen Spalten gefunden"), file.path(out_dir, "eda_correlation_pearson.csv"))
+}
+
+plot_df <- df %>% filter(!is.na(datum_parsed)) %>% arrange(datum_parsed) %>% select(datum_parsed, besuche, besucher) %>% tidyr::pivot_longer(cols = c(besuche, besucher), names_to = "metrik", values_to = "wert") %>% filter(!is.na(wert))
+
+p <- ggplot(plot_df, aes(x = datum_parsed, y = wert, color = metrik)) +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 1.8) +
+  scale_x_date(breaks = scales::date_breaks("5 days"), labels = scales::label_date(format = "%d.%m.")) +
+  scale_y_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  scale_color_manual(values = c(besuche = "#1f77b4", besucher = "#ff7f0e"), labels = c(besuche = "Besuche", besucher = "Besucher"), name = NULL) +
+  labs(title = "Tägliche Entwicklung von Besuchen und Besuchern im September 2024",
+       subtitle = "Website: kreis-kleve.de — Summenzeile ausgeschlossen",
+       x = "Datum",
+       y = "Anzahl",
+       caption = "Quelle: etracker, Web-Analytics September 2024") +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "top",
+        plot.title = element_text(face = "bold", size = 14),
+        axis.title = element_text(size = 12),
+        axis.text = element_text(size = 10),
+        legend.text = element_text(size = 11))
+
+plot_path <- file.path(out_dir, "0_besuche_besucher_linie.png")
+ggplot2::ggsave(filename = plot_path, plot = p, width = 10, height = 6, units = "in", dpi = 320)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Besteht ein Zusammenhang zwischen der Bounce Rate und der Anzahl der Seiten pro Besuch?' visualization="Streudiagramm (Scatter Plot) mit 'Bounce_Rate' auf der x-Achse und 'Seiten_pro_Besuch' auf der y-Achse." rationale="Ein Streudiagramm (Scatter Plot) mit 'Bounce_Rate' und 'Seiten_pro_Besuch' zeigt die Korrelation zwischen der Absprungrate und der Interaktionstiefe. Dies hilft zu verstehen, ob Nutzer, die länger bleiben, auch signifikant mehr Unterseiten aufrufen, oder ob die hohe Bounce Rate die durchschnittliche Interaktion dominiert."
+
+-> Code:
+options(encoding = "UTF-8")
+pkgs <- c("readr","dplyr","tidyr","stringr","lubridate","ggplot2","scales")
+for (p in pkgs) { if (!requireNamespace(p, quietly = TRUE)) install.packages(p, dependencies = TRUE) }
+invisible(lapply(pkgs, library, character.only = TRUE))
+input_path <- "./src/resources/data/study\\32830\\dataset.csv"
+out_dir <- "./src/resources/output\\32830"
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+df_raw <- readr::read_csv(file = input_path, locale = readr::locale(encoding = "UTF-8"), na = c("", "NA", "NaN", "nan", "-"))
+per_cols <- intersect(c("Anteil_Besuche_mit_Cookies","Anteil_Besucher_mit_Cookies","Bounce_Rate","Conversion_Rate__Last_Ad_"), names(df_raw))
+time_cols <- intersect(c("Zeit_im_Besuch","Bounce_Zeit"), names(df_raw))
+numeric_like_cols <- intersect(c("Seiten_pro_Besuch","Besuchsh__ufigkeit"), names(df_raw))
+time_to_seconds <- function(x) { x <- as.character(x); x[is.na(x)] <- NA_character_; m <- stringr::str_match(x, "^(\\d{1,2}):(\\d{1,2}):(\\d{1,2})$"); out <- suppressWarnings(as.numeric(m[,2])*3600 + as.numeric(m[,3])*60 + as.numeric(m[,4])); out[is.na(m[,1])] <- NA_real_; out }
+df <- df_raw |>
+  mutate(across(all_of(per_cols), ~ suppressWarnings(as.numeric(stringr::str_replace_all(., "%", ""))))) |>
+  mutate(across(all_of(numeric_like_cols), ~ suppressWarnings(as.numeric(.)))) |>
+  mutate(across(all_of(time_cols), ~ time_to_seconds(.))) |>
+  mutate(Datum = suppressWarnings(lubridate::dmy(Datum))) |>
+  select(-any_of(c("Unnamed__14")))
+daily_df <- df |> filter(!is.na(Datum))
+missing_summary <- tibble(Spalte = names(daily_df), fehlend = sapply(daily_df, function(x) sum(is.na(x))), anteil_fehlend = sapply(daily_df, function(x) mean(is.na(x))))
+readr::write_csv(missing_summary, file = file.path(out_dir, "eda_missing_values.csv"))
+num_df <- dplyr::select(daily_df, where(is.numeric))
+if (ncol(num_df) > 0) {
+  numeric_summary <- tibble(Variable = names(num_df)) |>
+    mutate(Anzahl = sapply(num_df, function(x) sum(!is.na(x))),
+           Mittelwert = sapply(num_df, function(x) mean(x, na.rm = TRUE)),
+           Standardabweichung = sapply(num_df, function(x) sd(x, na.rm = TRUE)),
+           Minimum = sapply(num_df, function(x) min(x, na.rm = TRUE)),
+           Q1 = sapply(num_df, function(x) as.numeric(stats::quantile(x, 0.25, na.rm = TRUE))),
+           Median = sapply(num_df, function(x) median(x, na.rm = TRUE)),
+           Q3 = sapply(num_df, function(x) as.numeric(stats::quantile(x, 0.75, na.rm = TRUE))),
+           Maximum = sapply(num_df, function(x) max(x, na.rm = TRUE)))
+  readr::write_csv(numeric_summary, file = file.path(out_dir, "eda_numeric_summary.csv"))
+}
+if (ncol(num_df) > 1) {
+  corr_mat <- suppressWarnings(stats::cor(num_df, use = "pairwise.complete.obs", method = "pearson"))
+  utils::write.csv(corr_mat, file = file.path(out_dir, "eda_correlation_matrix.csv"), row.names = TRUE, fileEncoding = "UTF-8")
+}
+df_plot <- daily_df |> filter(is.finite(Bounce_Rate), is.finite(Seiten_pro_Besuch))
+r_val <- NA_real_
+p_val <- NA_real_
+n_val <- nrow(df_plot |> filter(!is.na(Bounce_Rate), !is.na(Seiten_pro_Besuch)))
+if (n_val >= 2) {
+  ct <- suppressWarnings(stats::cor.test(df_plot$Bounce_Rate, df_plot$Seiten_pro_Besuch, method = "pearson", use = "complete.obs"))
+  r_val <- unname(ct$estimate)
+  p_val <- unname(ct$p.value)
+  corr_row <- tibble(Variable_X = "Bounce_Rate", Variable_Y = "Seiten_pro_Besuch", n = n_val, r = r_val, p_wert = p_val, conf_low = ct$conf.int[1], conf_high = ct$conf.int[2])
+  readr::write_csv(corr_row, file = file.path(out_dir, "eda_corr_bounce_vs_seiten_pro_besuch.csv"))
+}
+ann_text <- if (is.finite(r_val) && is.finite(p_val)) paste0("r = ", format(round(r_val, 2), decimal.mark = ","), ", p = ", format(p_val, digits = 3, decimal.mark = ","), ", n = ", n_val) else paste0("n = ", n_val)
+max_x <- ifelse(all(is.na(df_plot$Bounce_Rate)), 1, max(df_plot$Bounce_Rate, na.rm = TRUE))
+max_y <- ifelse(all(is.na(df_plot$Seiten_pro_Besuch)), 1, max(df_plot$Seiten_pro_Besuch, na.rm = TRUE))
+p <- ggplot(df_plot, aes(x = Bounce_Rate, y = Seiten_pro_Besuch)) +
+  geom_point(color = "#1f77b4", size = 3, alpha = 0.8) +
+  geom_smooth(method = "lm", se = TRUE, color = "#d62728", fill = "#f2b0b0", linewidth = 0.8) +
+  annotate("label", x = max_x * 0.98, y = max_y * 0.98, label = ann_text, hjust = 1, vjust = 1, size = 4, alpha = 0.9) +
+  scale_x_continuous(labels = scales::label_number(accuracy = 1, decimal_mark = ",", suffix = " %")) +
+  scale_y_continuous(labels = scales::label_number(accuracy = 0.1, decimal_mark = ",")) +
+  labs(title = "Zusammenhang zwischen Bounce Rate und Seiten pro Besuch (September 2024)", subtitle = "Website: kreis-kleve.de, Datenquelle: etracker", x = "Bounce Rate (%)", y = "Seiten pro Besuch") +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(face = "bold"), panel.grid.minor = element_blank())
+output_png <- "./src/resources/output\\32830/1_scatter_bounce_vs_seiten_pro_besuch.png"
+ggplot2::ggsave(filename = output_png, plot = p, width = 9, height = 6, dpi = 300)
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='An welchen Tagen gab es technische Auffälligkeiten bei der Cookie-Akzeptanz?' visualization="Balkendiagramm mit 'Datum' auf der x-Achse und 'Anteil_Besuche_mit_Cookies' auf der y-Achse." rationale="Ein Balkendiagramm des Feldes 'Anteil_Besuche_mit_Cookies' über das 'Datum' visualisiert die im Datensatz erwähnten Ausfälle (0%-Werte). Dies ist entscheidend für die Datenqualität, da es zeigt, an welchen Tagen das Tracking aufgrund von Consent-Banner-Problemen oder technischen Anpassungen möglicherweise unvollständig war."
+
+-> Code:
+options(warn=-1)
+pkgs <- c("readr","dplyr","ggplot2","stringr","tidyr","janitor","lubridate","hms","scales")
+inst <- pkgs[!pkgs %in% rownames(installed.packages())]
+if(length(inst)>0) install.packages(inst, dependencies=TRUE)
+lapply(pkgs, library, character.only=TRUE)
+in_file <- file.path("./src/resources/data","study","32830","dataset.csv")
+df_raw <- readr::read_csv(in_file, locale=readr::locale(encoding="UTF-8"), col_types=cols(.default=col_character()), show_col_types=FALSE)
+df <- df_raw |> janitor::clean_names()
+df <- df |> mutate(across(where(is.character), ~stringr::str_trim(.)))
+df <- df |> mutate(across(where(is.character), ~na_if(., "nan")))
+df <- df |> mutate(across(where(is.character), ~stringr::str_replace_all(., "[\u2012\u2013\u2014]", "-")))
+df <- df |> mutate(across(where(is.character), ~ifelse(. %in% c("-",""), NA, .)))
+percent_cols <- names(df)[sapply(df, function(x) any(grepl("%", x, fixed=TRUE), na.rm=TRUE))]
+if(length(percent_cols)>0){
+  df <- df |> mutate(across(all_of(percent_cols), ~readr::parse_number(.)/100))
+}
+time_cols <- names(df)[sapply(df, function(x){vx <- x[!is.na(x)]; length(vx)>0 && all(grepl("^\\d{2}:\\d{2}:\\d{2}$", vx))})]
+if(length(time_cols)>0){
+  df <- df |> mutate(across(all_of(time_cols), ~as.numeric(hms::as_hms(.))))
+}
+exclude_cols <- c(percent_cols, time_cols, "datum")
+cand_num <- setdiff(names(df), exclude_cols)
+if(length(cand_num)>0){
+  df <- df |> mutate(across(all_of(cand_num), ~suppressWarnings(readr::parse_number(.))))
+}
+df <- df |> mutate(datum = suppressWarnings(lubridate::dmy(datum)))
+missing_summary <- df |> summarise(across(everything(), ~sum(is.na(.)))) |> tidyr::pivot_longer(everything(), names_to="variable", values_to="n_missing") |> mutate(pct_missing = n_missing/nrow(df))
+num_cols <- names(df)[sapply(df, is.numeric)]
+if(length(num_cols)>0){
+  summary_stats <- df |> summarise(across(all_of(num_cols), list(n=~sum(!is.na(.)), mean=~mean(., na.rm=TRUE), sd=~sd(., na.rm=TRUE), min=~min(., na.rm=TRUE), p50=~median(., na.rm=TRUE), max=~max(., na.rm=TRUE)), .names="{.col}__{.fn}"))
+}
+if(length(num_cols)>=2){
+  cor_mat <- stats::cor(dplyr::select(df, all_of(num_cols)), use="pairwise.complete.obs", method="pearson")
+}
+df_plot <- df |> filter(!is.na(datum)) |> arrange(datum)
+if(!("anteil_besuche_mit_cookies" %in% names(df_plot))){
+  stop("Spalte 'Anteil_Besuche_mit_Cookies' wurde nicht gefunden oder konnte nicht geparst werden.")
+}
+df_plot <- df_plot |> mutate(cookie_pp = anteil_besuche_mit_cookies*100, auffaellig = ifelse(is.na(cookie_pp), "Fehlender Wert", ifelse(cookie_pp==0, "0% Cookie-Anteil", "> 0% Cookie-Anteil")))
+max_y <- suppressWarnings(max(df_plot$cookie_pp, na.rm=TRUE))
+max_y <- ifelse(is.finite(max_y), max_y, 1)
+col_vals <- c("0% Cookie-Anteil" = "#d73027", "> 0% Cookie-Anteil" = "#2b8cbe", "Fehlender Wert" = "#bdbdbd")
+p <- ggplot(df_plot, aes(x=datum, y=cookie_pp, fill=auffaellig)) +
+  geom_col(width=0.8, color="white", linewidth=0.2, na.rm=TRUE) +
+  scale_fill_manual(values=col_vals, drop=FALSE, name=NULL) +
+  scale_y_continuous(labels=function(x) paste0(x, " %"), limits=c(0, max_y*1.15), expand=expansion(mult=c(0,0.02))) +
+  scale_x_date(date_breaks="5 days", date_labels="%d.%m.%Y", expand=expansion(mult=c(0.01,0.01))) +
+  labs(title="Cookie-Akzeptanz je Tag (September 2024)", subtitle="Auffälligkeiten hervorgehoben: 0% Cookie-Anteil", x="Datum", y="Anteil der Besuche mit Cookies (%)", caption="Quelle: etracker • kreis-kleve.de • September 2024") +
+  theme_minimal(base_size=12) +
+  theme(legend.position="top", axis.text.x=element_text(angle=45, hjust=1), panel.grid.minor=element_blank())
+out_dir <- file.path("./src/resources/output","32830")
+dir.create(out_dir, recursive=TRUE, showWarnings=FALSE)
+out_file <- file.path(out_dir, "2_cookie_akzeptanz_balkendiagramm.png")
+ggplot2::ggsave(filename=out_file, plot=p, width=12, height=6, dpi=200)
+
+-> SEVQ:
+
+

@@ -1,0 +1,5 @@
+Methode,Pruefmerkmal,Einheit,Anzahl
+Gesamt-Alpha,Gesamt-Alpha-Aktivität,Bq/l,1
+Gesamt-Alpha,Messzeit,s,1
+Radon-LSC,Messzeit,s,1
+Radon-LSC,Radon-222 Rn-222,Bq/l,1

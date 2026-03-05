@@ -1,0 +1,17 @@
+variable,stat,wert
+value,n,167
+value,mittelwert,0.11668862275449102
+value,sd,0.010645947354731757
+value,min,0.098
+value,q25,0.106
+value,median,0.119
+value,q75,0.122
+value,max,0.155
+validated,n,167
+validated,mittelwert,1
+validated,sd,0
+validated,min,1
+validated,q25,1
+validated,median,1
+validated,q75,1
+validated,max,1

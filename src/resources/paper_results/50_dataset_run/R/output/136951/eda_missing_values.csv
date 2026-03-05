@@ -1,0 +1,16 @@
+variable,missing_n,total_n,missing_pct
+Hauptprobenummer,0,2,0
+Bezeichnung,0,2,0
+Probe_Entnahmeart,0,2,0
+Probenahme_Beginn_Datum,0,2,0
+Probenahme_Beginn_Zeit,0,2,0
+Probenahme_Ende_Datum,0,2,0
+Probenahme_Ende_Zeit,0,2,0
+Umweltbereich,0,2,0
+Messprogrammgruppe,0,2,0
+Entnahmestelle,0,2,0
+Herkunftsstaat,0,2,0
+Methode,0,2,0
+Pruefmerkmal,0,2,0
+Ergebnis,0,2,0
+Einheit,0,2,0

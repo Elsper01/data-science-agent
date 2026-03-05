@@ -1,0 +1,11 @@
+Spalte,Typ
+Objektnummer,numeric
+Kulturdenkmaltyp,character
+Kreis,character
+Gemeinde,character
+Adresse_Lage,character
+Bezeichnung,character
+Beschreibung,character
+Begr_ndung,character
+Schutzumfang,character
+FotoURL,character

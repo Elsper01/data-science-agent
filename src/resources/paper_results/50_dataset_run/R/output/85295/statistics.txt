@@ -1,0 +1,362 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\85295\dataset.csv
+Programming Language: r
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-02-27 11:58:55
+Total Duration: 956.32 seconds
+Total Token Usage: 114397 tokens
+Total Costs: $0.4972
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0060 seconds
+
+Method: analyse_dataset
+  Duration: 0.0044 seconds
+
+Method: analyse_metadata
+  Duration: 0.0076 seconds
+
+Method: llm_generate_summary
+  Duration: 176.2695 seconds
+
+Method: llm_generate_goals
+  Duration: 3.6794 seconds
+
+Method: llm_generate_r_code
+  Duration: 248.7152 seconds
+
+Method: test_generated_code
+  Duration: 10.7079 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 516.9312 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview
+  Token total: 7429 tokens
+  Costs total: $0.0060
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview
+  Token total: 1984 tokens
+  Costs total: $0.0021
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 7756 tokens
+  Costs total: $0.0535
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 9274 tokens
+  Costs total: $0.0687
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5
+  Token total: 8490 tokens
+  Costs total: $0.0608
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 399 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 457 tokens
+  Costs total: $0.0012
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 393 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7490 tokens
+  Costs total: $0.0523
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2897 tokens
+  Costs total: $0.0093
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3561 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6041 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5484 tokens
+  Costs total: $0.0304
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 7683 tokens
+  Costs total: $0.0506
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3270 tokens
+  Costs total: $0.0099
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3940 tokens
+  Costs total: $0.0034
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5249 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 6859 tokens
+  Costs total: $0.0349
+
+Method: _get_SEVQ
+  Model: openai/gpt-5
+  Token total: 8180 tokens
+  Costs total: $0.0575
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3070 tokens
+  Costs total: $0.0096
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview
+  Token total: 3486 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5115 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-sonnet-4.5
+  Token total: 5890 tokens
+  Costs total: $0.0334
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verteilen sich die verschiedenen Kulturdenkmaltypen im Kreis Stormarn?' visualization="Ein horizontales Balkendiagramm, das die Anzahl der Einträge pro 'Kulturdenkmaltyp' darstellt." rationale="Ein Balkendiagramm ist die effektivste Methode, um die Häufigkeit der verschiedenen Kategorien in der Spalte 'Kulturdenkmaltyp' zu vergleichen. Da 'Bauliche Anlage' laut Zusammenfassung 83% der Daten ausmacht, hilft diese Visualisierung dem Nutzer, die Dominanz dieses Typs gegenüber Gründenkmalen oder Sachgesamtheiten sofort visuell zu erfassen."
+
+-> Code:
+options(encoding = "UTF-8")
+packages <- c("tidyverse", "janitor", "scales", "forcats", "stringr")
+to_install <- packages[!(packages %in% rownames(installed.packages()))]
+if (length(to_install) > 0) install.packages(to_install, repos = "https://cloud.r-project.org")
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(janitor)
+  library(scales)
+  library(forcats)
+  library(stringr)
+})
+normalize_path <- function(p) {
+  p <- gsub("\\\\", "/", p)
+  normalizePath(p, winslash = "/", mustWork = FALSE)
+}
+input_path_raw <- './src/resources/data/study\\85295\\dataset.csv'
+output_dir_raw <- './src/resources/output\\85295'
+input_path <- normalize_path(input_path_raw)
+output_dir <- normalize_path(output_dir_raw)
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+df_raw <- suppressMessages(readr::read_csv(input_path, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE))
+df <- df_raw %>% janitor::clean_names()
+char_cols <- df %>% dplyr::select(where(is.character)) %>% names()
+if (length(char_cols) > 0) {
+  df <- df %>% mutate(across(all_of(char_cols), ~ .x %>% stringr::str_squish() %>% na_if("") %>% {
+    z <- .
+    if (is.character(z)) {
+      zl <- stringr::str_to_lower(z)
+      z[zl %in% c("na", "nan", "n/a", "null", "none", "fehlend")] <- NA_character_
+    }
+    z
+  }))
+}
+eda_n <- nrow(df)
+eda_p <- ncol(df)
+missing_summary <- tibble(variable = names(df), missing_n = sapply(df, function(x) sum(is.na(x))), missing_anteil = missing_n / max(1, eda_n))
+numeric_df <- df %>% dplyr::select(where(is.numeric))
+numeric_summary <- NULL
+if (ncol(numeric_df) > 0) {
+  numeric_summary <- tibble(
+    variable = names(numeric_df),
+    mean = sapply(numeric_df, function(x) mean(x, na.rm = TRUE)),
+    sd = sapply(numeric_df, function(x) sd(x, na.rm = TRUE)),
+    min = sapply(numeric_df, function(x) suppressWarnings(min(x, na.rm = TRUE))),
+    median = sapply(numeric_df, function(x) median(x, na.rm = TRUE)),
+    max = sapply(numeric_df, function(x) suppressWarnings(max(x, na.rm = TRUE)))
+  )
+}
+corr_matrix <- NULL
+if (ncol(numeric_df) >= 2) {
+  good_vars <- names(numeric_df)[sapply(numeric_df, function(x) stats::var(x, na.rm = TRUE) > 0)]
+  if (length(good_vars) >= 2) corr_matrix <- suppressWarnings(stats::cor(dplyr::select(numeric_df, all_of(good_vars)), use = "pairwise.complete.obs", method = "pearson"))
+}
+var_name <- if ("kulturdenkmaltyp" %in% names(df)) "kulturdenkmaltyp" else names(df)[which(tolower(names(df)) == "kulturdenkmaltyp")[1]]
+plot_data <- df %>% mutate(
+  {{var_name}} := dplyr::coalesce(!!sym(var_name), NA_character_),
+  {{var_name}} := forcats::fct_explicit_na(!!sym(var_name), na_level = "Fehlend/Unbekannt")
+) %>% count(!!sym(var_name), name = "n", sort = TRUE) %>% mutate(
+  anteil = n / sum(n),
+  label = paste0(scales::number(n, big.mark = ".", decimal.mark = ","), " | ", scales::percent(anteil, accuracy = 0.1, decimal.mark = ","))
+)
+max_n <- if (nrow(plot_data) > 0) max(plot_data$n, na.rm = TRUE) else 0
+p <- ggplot(plot_data, aes(x = n, y = forcats::fct_reorder(!!sym(var_name), n))) +
+  geom_col(fill = "#2C7FB8", width = 0.7) +
+  geom_text(aes(label = label), hjust = -0.05, size = 3.5, family = "") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.15)), labels = function(x) scales::number(x, big.mark = ".", decimal.mark = ",")) +
+  labs(
+    title = "Verteilung der Kulturdenkmaltypen im Kreis Stormarn",
+    x = "Anzahl der Einträge",
+    y = "Kulturdenkmaltyp"
+  ) +
+  coord_cartesian(clip = "off") +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    axis.title.x = element_text(margin = margin(t = 8)),
+    axis.title.y = element_text(margin = margin(r = 8)),
+    plot.margin = margin(10, 25, 10, 10)
+  )
+plot_file <- file.path(output_dir, "0_kulturdenkmaltypen_balkendiagramm_horizontal.png")
+ggplot2::ggsave(filename = plot_file, plot = p, width = 10, height = 7, dpi = 320, bg = "white")
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='In welchen Gemeinden befinden sich die meisten denkmalgeschützten Objekte?' visualization="Ein Balkendiagramm, das die Anzahl der 'Objektnummer' gruppiert nach 'Gemeinde' (sortiert nach Häufigkeit) zeigt." rationale="Durch die Aggregation der 'Objektnummer' (als Zählwert) über die Spalte 'Gemeinde' lässt sich die geografische Konzentration der Denkmale ermitteln. Ein Balkendiagramm der Top-Gemeinden zeigt dem Nutzer auf einen Blick, dass Bad Oldesloe ein Schwerpunkt ist, und ermöglicht den Vergleich mit den anderen 38 Gemeinden im Datensatz."
+
+-> Code:
+options(encoding = "UTF-8")
+req <- c("readr","dplyr","ggplot2","janitor","forcats","stringr","scales","tidyr","tibble")
+new <- req[!(req %in% rownames(installed.packages()))]
+if(length(new) > 0) install.packages(new, repos = "https://cloud.r-project.org")
+invisible(lapply(req, library, character.only = TRUE))
+input_path <- "./src/resources/data/study\\85295/dataset.csv"
+output_dir <- "./src/resources/output\\85295"
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+df <- readr::read_csv(file = input_path, locale = readr::locale(encoding = "UTF-8"), na = c("", "NA", "NaN", "nan", "N/A", "NULL", "null"), show_col_types = FALSE)
+df <- janitor::clean_names(df)
+df <- df |> dplyr::mutate(dplyr::across(dplyr::where(is.character), ~stringr::str_squish(.)))
+eda_overview <- tibble::tibble(anzahl_zeilen = nrow(df), anzahl_spalten = ncol(df))
+readr::write_csv(eda_overview, file.path(output_dir, "eda_uebersicht.csv"))
+eda_missing <- df |> dplyr::summarise(dplyr::across(dplyr::everything(), ~sum(is.na(.)))) |> tidyr::pivot_longer(dplyr::everything(), names_to = "variable", values_to = "na_anzahl") |> dplyr::mutate(na_anteil = na_anzahl / nrow(df)) |> dplyr::arrange(dplyr::desc(na_anteil))
+readr::write_csv(eda_missing, file.path(output_dir, "eda_fehlende_werte_je_spalte.csv"))
+eda_unique <- df |> dplyr::summarise(dplyr::across(dplyr::everything(), ~dplyr::n_distinct(., na.rm = TRUE))) |> tidyr::pivot_longer(dplyr::everything(), names_to = "variable", values_to = "n_distinct") |> dplyr::arrange(dplyr::desc(n_distinct))
+readr::write_csv(eda_unique, file.path(output_dir, "eda_auspraegungen_je_spalte.csv"))
+num_df <- dplyr::select(df, dplyr::where(is.numeric))
+if(ncol(num_df) > 0){
+  num_sum <- num_df |> dplyr::summarise(dplyr::across(dplyr::everything(), list(anzahl = ~sum(!is.na(.)), fehlend = ~sum(is.na(.)), mittelwert = ~mean(., na.rm = TRUE), sd = ~sd(., na.rm = TRUE), min = ~min(., na.rm = TRUE), median = ~median(., na.rm = TRUE), max = ~max(., na.rm = TRUE)))) |> tidyr::pivot_longer(dplyr::everything(), names_to = c("variable","statistik"), names_pattern = "^(.*)_(anzahl|fehlend|mittelwert|sd|min|median|max)$", values_to = "wert") |> dplyr::arrange(variable)
+  readr::write_csv(num_sum, file.path(output_dir, "eda_numerik_zusammenfassung.csv"))
+}
+if("kulturdenkmaltyp" %in% names(df)){
+  kfreq <- df |> dplyr::mutate(kulturdenkmaltyp = dplyr::if_else(is.na(kulturdenkmaltyp) | kulturdenkmaltyp == "", "Unbekannt", kulturdenkmaltyp)) |> dplyr::count(kulturdenkmaltyp, name = "anzahl", sort = TRUE) |> dplyr::mutate(anteil = anzahl/sum(anzahl))
+  readr::write_csv(kfreq, file.path(output_dir, "eda_kulturdenkmaltyp_haeufigkeiten.csv"))
+}
+if("gemeinde" %in% names(df)){
+  gfreq <- df |> dplyr::mutate(gemeinde = dplyr::if_else(is.na(gemeinde) | gemeinde == "", "Unbekannt", stringr::str_squish(gemeinde))) |> dplyr::count(gemeinde, name = "anzahl", sort = TRUE) |> dplyr::mutate(anteil = anzahl/sum(anzahl))
+  readr::write_csv(gfreq, file.path(output_dir, "eda_gemeinde_haeufigkeiten.csv"))
+}
+plot_df <- df |> dplyr::mutate(gemeinde = dplyr::if_else(is.na(gemeinde) | gemeinde == "", "Unbekannt", stringr::str_squish(gemeinde))) |> dplyr::group_by(gemeinde) |> dplyr::summarise(anzahl = dplyr::n_distinct(objektnummer, na.rm = TRUE), .groups = "drop") |> dplyr::arrange(dplyr::desc(anzahl)) |> dplyr::mutate(gemeinde = forcats::fct_reorder(gemeinde, anzahl))
+readr::write_csv(plot_df, file.path(output_dir, "eda_gemeinde_anzahl_objekte.csv"))
+max_x <- ifelse(nrow(plot_df) > 0, max(plot_df$anzahl, na.rm = TRUE), 0)
+p <- ggplot2::ggplot(plot_df, ggplot2::aes(x = anzahl, y = gemeinde)) + ggplot2::geom_col(fill = "#2C7FB8", width = 0.75) + ggplot2::geom_text(ggplot2::aes(label = scales::number(anzahl, accuracy = 1, big.mark = ".")), hjust = -0.05, size = 3.2, color = "#333333") + ggplot2::scale_x_continuous(limits = c(0, max_x * 1.1), expand = c(0, 0), breaks = scales::breaks_pretty(n = 8)) + ggplot2::labs(title = "Wo befinden sich die meisten denkmalgeschützten Objekte?", subtitle = "Anzahl eindeutiger Objektnummern je Gemeinde, Kreis Stormarn (Stand: April 2021)", x = "Anzahl der Denkmale", y = "Gemeinde", caption = "Quelle: Offizielle Denkmalliste Kreis Stormarn") + ggplot2::theme_minimal(base_size = 11) + ggplot2::theme(panel.grid.major.y = ggplot2::element_blank(), panel.grid.minor = ggplot2::element_blank(), plot.title = ggplot2::element_text(face = "bold"), axis.title.y = ggplot2::element_text(margin = ggplot2::margin(r = 10)), axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 10)), plot.margin = ggplot2::margin(10, 30, 10, 10)) + ggplot2::coord_cartesian(clip = "off")
+outfile <- "./src/resources/output\\85295/1_balkendiagramm_gemeinden_nach_anzahl.png"
+ggplot2::ggsave(filename = outfile, plot = p, width = 10, height = 8, dpi = 320, bg = "white")
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Welche fachlichen Begründungen werden am häufigsten für den Denkmalschutz herangezogen?' visualization="Ein Balkendiagramm, das die Häufigkeit der verschiedenen Einträge in der Spalte 'Begr_ndung' visualisiert." rationale="Die Spalte 'Begr_ndung' enthält die rechtliche Herleitung des Denkmalwerts. Da 38% der Werte fehlen und viele Einträge Kombinationen wie 'Geschichtlich, Künstlerisch, Städtebaulich' nutzen, hilft eine Häufigkeitsanalyse dieser Kategorien dem Nutzer zu verstehen, welche Werte (z.B. geschichtliche Bedeutung) im Kreis Stormarn primär geschützt werden."
+
+-> Code:
+options(warn=-1)
+packages <- c("readr","dplyr","tidyr","stringr","ggplot2","forcats","purrr","scales")
+to_install <- packages[!packages %in% rownames(installed.packages())]
+if (length(to_install) > 0) install.packages(to_install, repos = "https://cloud.r-project.org")
+invisible(lapply(packages, library, character.only = TRUE))
+set.seed(123)
+input_path <- file.path(".", "src", "resources", "data", "study", "85295", "dataset.csv")
+out_dir <- file.path(".", "src", "resources", "output", "85295")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+df <- readr::read_csv(input_path, locale = locale(encoding = "UTF-8"), na = c("", "NA", "NaN", "nan", "N/A", "NULL", "null", "None"), show_col_types = FALSE)
+missing_df <- df %>% summarise(across(everything(), ~sum(is.na(.)))) %>% pivot_longer(cols = everything(), names_to = "spalte", values_to = "anzahl_na") %>% mutate(gesamt = nrow(df), anteil_na = anzahl_na/gesamt) %>% arrange(desc(anteil_na))
+write_csv(missing_df, file.path(out_dir, "eda_missing_pro_spalte.csv"))
+num_df <- df %>% select(where(is.numeric))
+num_summary <- if (ncol(num_df) > 0) {
+  map_dfr(names(num_df), function(nm){
+    v <- num_df[[nm]]
+    tibble(variable = nm, n = sum(!is.na(v)), fehlend = sum(is.na(v)), mittelwert = mean(v, na.rm = TRUE), sd = sd(v, na.rm = TRUE), min = suppressWarnings(min(v, na.rm = TRUE)), q25 = suppressWarnings(as.numeric(quantile(v, 0.25, na.rm = TRUE, type = 7))), median = suppressWarnings(median(v, na.rm = TRUE)), q75 = suppressWarnings(as.numeric(quantile(v, 0.75, na.rm = TRUE, type = 7))), max = suppressWarnings(max(v, na.rm = TRUE)))
+  })
+} else {
+  tibble()
+}
+if (nrow(num_summary) > 0) write_csv(num_summary, file.path(out_dir, "eda_numeric_summary.csv"))
+if ("Kulturdenkmaltyp" %in% names(df)) write_csv(df %>% count(Kulturdenkmaltyp, sort = TRUE), file.path(out_dir, "eda_kulturdenkmaltyp_counts.csv"))
+if ("Gemeinde" %in% names(df)) write_csv(df %>% count(Gemeinde, sort = TRUE), file.path(out_dir, "eda_gemeinde_counts.csv"))
+if ("Kreis" %in% names(df)) write_csv(df %>% count(Kreis, sort = TRUE), file.path(out_dir, "eda_kreis_counts.csv"))
+begruendung_col <- "Begr_ndung"
+if (!begruendung_col %in% names(df)) stop("Spalte 'Begr_ndung' nicht gefunden.")
+df_begr <- df %>% mutate(Begr_val = str_trim(as.character(.data[[begruendung_col]])))
+total_obj <- df_begr %>% summarise(n = n_distinct(Objektnummer)) %>% pull(n)
+valid_begr <- df_begr %>% filter(!is.na(Begr_val) & Begr_val != "")
+valid_obj <- valid_begr %>% summarise(n = n_distinct(Objektnummer)) %>% pull(n)
+missing_begr_n <- total_obj - valid_obj
+missing_begr_pct <- ifelse(total_obj > 0, missing_begr_n/total_obj, NA_real_)
+begruendung_counts <- valid_begr %>% mutate(Begr_val = str_replace_all(Begr_val, "\\s*(;|/|\\|)\\s*", ",")) %>% separate_rows(Begr_val, sep = ",") %>% mutate(kategorie = str_trim(Begr_val)) %>% filter(!is.na(kategorie) & kategorie != "") %>% distinct(Objektnummer, kategorie) %>% count(kategorie, sort = TRUE, name = "haeufigkeit") %>% mutate(anteil_an_alle_objekte = ifelse(total_obj > 0, haeufigkeit/total_obj, NA_real_), anteil_an_validen_objekten = ifelse(valid_obj > 0, haeufigkeit/valid_obj, NA_real_))
+write_csv(begruendung_counts, file.path(out_dir, "begruendung_haeufigkeit_tabelle.csv"))
+if (nrow(begruendung_counts) == 0) stop("Keine auswertbaren Einträge in 'Begr_ndung'.")
+max_y <- max(begruendung_counts$haeufigkeit, na.rm = TRUE)
+p <- ggplot(begruendung_counts, aes(x = forcats::fct_reorder(kategorie, haeufigkeit), y = haeufigkeit)) + geom_col(fill = "#2E86AB", width = 0.7) + geom_text(aes(label = paste0(haeufigkeit, " (", scales::percent(anteil_an_alle_objekte, accuracy = 0.1, decimal.mark = ","), ")")), hjust = -0.05, size = 3.6) + coord_flip() + scale_y_continuous(expand = expansion(mult = c(0, 0.12))) + labs(title = "Häufigkeit der fachlichen Begründungen für den Denkmalschutz", subtitle = paste0("Grundlage: ", total_obj, " Objekte; fehlend: ", missing_begr_n, " (", scales::percent(missing_begr_pct, accuracy = 0.1, decimal.mark = ","), ")"), x = "Begründungskategorie", y = "Anzahl Objekte (Mehrfachnennungen möglich)") + theme_minimal(base_size = 12) + theme(plot.title = element_text(face = "bold"), axis.title.x = element_text(margin = margin(t = 8)), axis.title.y = element_text(margin = margin(r = 8)), axis.text = element_text(color = "#222222"))
+ggsave(filename = file.path(out_dir, "2_begruendung_haeufigkeit.png"), plot = p, width = 10, height = 7, dpi = 300, bg = "white")
+
+-> SEVQ:
+
+

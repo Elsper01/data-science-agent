@@ -1,0 +1,547 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\108398\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-03 10:57:24
+Total Duration: 1331.16 seconds
+Total Token Usage: 163632 tokens
+Total Costs: $0.5254
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0794 seconds
+
+Method: analyse_dataset
+  Duration: 0.0887 seconds
+
+Method: analyse_metadata
+  Duration: 0.0259 seconds
+
+Method: llm_generate_summary
+  Duration: 526.9176 seconds
+
+Method: llm_generate_goals
+  Duration: 4.4769 seconds
+
+Method: llm_generate_python_code
+  Duration: 329.9421 seconds
+
+Method: test_generated_code
+  Duration: 7.9781 seconds
+
+Method: llm_regenerate_code
+  Duration: 26.0518 seconds
+
+Method: test_generated_code
+  Duration: 9.2729 seconds
+
+Method: llm_regenerate_code
+  Duration: 8.2191 seconds
+
+Method: test_generated_code
+  Duration: 10.5350 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 407.5723 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 30261 tokens
+  Costs total: $0.0178
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1959 tokens
+  Costs total: $0.0024
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 14589 tokens
+  Costs total: $0.0577
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 15615 tokens
+  Costs total: $0.0681
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 16462 tokens
+  Costs total: $0.0770
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 843 tokens
+  Costs total: $0.0022
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 398 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 843 tokens
+  Costs total: $0.0022
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3021 tokens
+  Costs total: $0.0038
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3255 tokens
+  Costs total: $0.0053
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3582 tokens
+  Costs total: $0.0050
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 331 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 368 tokens
+  Costs total: $0.0010
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3443 tokens
+  Costs total: $0.0055
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 416 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 368 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6282 tokens
+  Costs total: $0.0436
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2449 tokens
+  Costs total: $0.0077
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2721 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4008 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5372 tokens
+  Costs total: $0.0336
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6570 tokens
+  Costs total: $0.0424
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3040 tokens
+  Costs total: $0.0101
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3426 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4990 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 6302 tokens
+  Costs total: $0.0401
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5593 tokens
+  Costs total: $0.0346
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2794 tokens
+  Costs total: $0.0093
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3456 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4372 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5887 tokens
+  Costs total: $0.0376
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verläuft die Gamma-Ortsdosisleistung (ODL) im Zeitverlauf an den verschiedenen Standorten?' visualization="Liniendiagramm mit 'Datum_Uhrzeit' auf der x-Achse und den Werten von 'KBR_1011_IMK', 'KKB_1031_IMK' sowie 'KKK_1001_IMK' auf der y-Achse." rationale="Ein Liniendiagramm ist die beste Wahl, um zeitliche Trends und Schwankungen in den radiologischen Messwerten darzustellen. Durch die Verwendung von 'Datum_Uhrzeit' auf der x-Achse und beispielhaften ODL-Spalten wie 'KBR_1011_IMK', 'KKB_1031_IMK' und 'KKK_1001_IMK' auf der y-Achse kann der Nutzer sofort erkennen, ob die Strahlungswerte stabil im Bereich der natürlichen Hintergrundstrahlung liegen oder ob es Ausreißer gibt."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Pfade definieren
+input_path = './src/resources/data/study/108398/dataset.csv'
+output_plot_path = './src/resources/output/108398/0_odl_verlauf.png'
+os.makedirs(os.path.dirname(output_plot_path), exist_ok=True)
+
+pd.options.mode.chained_assignment = None
+
+# Fehlerbehebung: UnicodeDecodeError durch Verwendung von 'latin-1' (ISO-8859-1) beheben, 
+# da 'utf-8' bei Byte 0xfc (ü) scheitert.
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8', dtype=str, low_memory=False)
+except UnicodeDecodeError:
+    df = pd.read_csv(input_path, sep=',', encoding='latin-1', dtype=str, low_memory=False)
+
+# Spaltennamen bereinigen
+df.columns = [c.strip() for c in df.columns]
+
+# Zeitspalte konvertieren
+if 'Datum_Uhrzeit' not in df.columns:
+    # Falls die Spalte anders heißt (z.B. durch Encoding-Probleme), suchen wir nach Ähnlichkeiten
+    potential_date_cols = [c for c in df.columns if 'Datum' in c]
+    if potential_date_cols:
+        df.rename(columns={potential_date_cols[0]: 'Datum_Uhrzeit'}, inplace=True)
+    else:
+        raise SystemExit("Spalte 'Datum_Uhrzeit' nicht gefunden.")
+
+df['Datum_Uhrzeit'] = pd.to_datetime(df['Datum_Uhrzeit'], dayfirst=True, errors='coerce')
+df = df.dropna(subset=['Datum_Uhrzeit']).sort_values('Datum_Uhrzeit')
+
+# Zielspalten für die Visualisierung
+selected_cols = ['KBR_1011_IMK', 'KKB_1031_IMK', 'KKK_1001_IMK']
+existing_cols = [c for c in selected_cols if c in df.columns]
+
+if not existing_cols:
+    raise SystemExit("Keine der Zielspalten für die Visualisierung gefunden.")
+
+# Numerische Konvertierung der Messwerte
+for c in existing_cols:
+    s = df[c].astype(str).str.replace(',', '.', regex=False)
+    df[c] = pd.to_numeric(s, errors='coerce')
+
+# Plotting
+sns.set_theme(style='whitegrid', context='talk')
+plt.figure(figsize=(14, 8))
+
+colors = ['#1f77b4', '#ff7f0e', '#2ca02c']
+for i, col in enumerate(existing_cols):
+    # Wir plotten nur Zeilen, die für die jeweilige Spalte Daten haben
+    valid_data = df.dropna(subset=[col])
+    if not valid_data.empty:
+        plt.plot(valid_data['Datum_Uhrzeit'], valid_data[col], 
+                 label=col.replace('_IMK', ''), 
+                 linewidth=2, alpha=0.8, color=colors[i % len(colors)])
+
+plt.title('Zeitverlauf der Gamma-Ortsdosisleistung (ODL)', pad=20)
+plt.xlabel('Datum und Uhrzeit')
+plt.ylabel('Gamma-Ortsdosisleistung (µSv/h)')
+plt.legend(title='Messstandorte', loc='upper right', frameon=True)
+
+# X-Achsen-Formatierung verbessern
+if not df.empty:
+    plt.xticks(rotation=15)
+
+plt.tight_layout()
+plt.savefig(output_plot_path, dpi=200, bbox_inches='tight')
+plt.close()
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Gibt es einen Zusammenhang zwischen Niederschlagsereignissen und kurzzeitigen Erhöhungen der Ortsdosisleistung?' visualization="Kombiniertes Balken- und Liniendiagramm: 'Datum_Uhrzeit' auf der x-Achse, 'KKB_NIED_MET' als Balken und 'KKB_1031_IMK' als Linie." rationale="Wissenschaftlich ist bekannt, dass Regen Radionuklide auswäscht, was zu ODL-Spitzen führt. Ein kombiniertes Diagramm (Dual-Axis), das 'KKB_NIED_MET' (Niederschlag) und eine ODL-Sonde wie 'KKB_1031_IMK' über 'Datum_Uhrzeit' darstellt, erlaubt es dem Nutzer, diese Korrelation visuell zu prüfen. Dies ist entscheidend, um natürliche Schwankungen von technischen Störungen zu unterscheiden."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+from matplotlib import dates as mdates
+
+# Pfade definieren
+input_path = r'./src/resources/data/study/108398/dataset.csv'
+output_dir = r'./src/resources/output/108398'
+plot_filename = '1_kkb_regen_odl.png'
+
+# Sicherstellen, dass das Verzeichnis existiert
+os.makedirs(output_dir, exist_ok=True)
+
+# Fehlerbehebung: 'utf-8' Fehler deutet auf 'latin-1' (ISO-8859-1) oder 'cp1252' hin.
+# Wir versuchen latin-1, da dies im deutschen Kontext (Umlaute wie in 'März') häufig ist.
+try:
+    df_raw = pd.read_csv(
+        input_path,
+        sep=',',
+        encoding='latin-1',
+        decimal='.',
+        na_values=['nan', 'NaN', '', ' '],
+        low_memory=False
+    )
+except Exception as e:
+    # Fallback auf cp1252 falls latin-1 fehlschlägt
+    try:
+        df_raw = pd.read_csv(input_path, sep=',', encoding='cp1252', low_memory=False)
+    except Exception as e2:
+        print(f"Fehler beim Laden der Datei: {e2}")
+        raise SystemExit(1)
+
+# Bereinigung
+cols_to_drop = [c for c in df_raw.columns if c.lower().startswith('unnamed') or df_raw[c].isna().all()]
+if len(cols_to_drop) > 0:
+    df_raw = df_raw.drop(columns=cols_to_drop)
+
+if 'Datum_Uhrzeit' not in df_raw.columns:
+    print('Fehlende Spalte: Datum_Uhrzeit')
+    raise SystemExit(1)
+
+# Zeitstempel konvertieren
+df_raw['Datum_Uhrzeit_dt'] = pd.to_datetime(df_raw['Datum_Uhrzeit'], errors='coerce', dayfirst=True)
+df = df_raw[df_raw['Datum_Uhrzeit_dt'].notna()].copy()
+
+if df.empty:
+    print('Keine gültigen Zeitstempel nach dem Filtern vorhanden.')
+    raise SystemExit(1)
+
+df = df.sort_values('Datum_Uhrzeit_dt')
+df = df.set_index('Datum_Uhrzeit_dt')
+
+# Numerische Konvertierung für die Zielspalten
+rain_col = 'KKB_NIED_MET'
+odl_col = 'KKB_1031_IMK'
+
+for col in [rain_col, odl_col]:
+    if col in df.columns:
+        if df[col].dtype == object:
+            df[col] = df[col].astype(str).str.replace(',', '.')
+            df[col] = pd.to_numeric(df[col], errors='coerce')
+
+if rain_col not in df.columns or odl_col not in df.columns:
+    print(f'Erforderliche Spalten fehlen: {rain_col} und/oder {odl_col}')
+    raise SystemExit(1)
+
+# Korrelation berechnen
+pairs = df[[rain_col, odl_col]].dropna()
+r_spearman = pairs.corr(method='spearman').iloc[0, 1] if len(pairs) > 5 else np.nan
+
+# Visualisierung
+sns.set_theme(style='whitegrid')
+fig, ax1 = plt.subplots(figsize=(14, 7), dpi=150)
+
+x = df.index
+rain = df[rain_col].fillna(0)
+odl = df[odl_col]
+
+# Zeitachsen-Formatierung
+locator = mdates.AutoDateLocator(minticks=8, maxticks=14)
+formatter = mdates.ConciseDateFormatter(locator)
+ax1.xaxis.set_major_locator(locator)
+ax1.xaxis.set_major_formatter(formatter)
+
+# Primäre Achse: Niederschlag (Balken)
+bar_color = '#4C78A8'
+# Dynamische Breite basierend auf der Zeitdifferenz
+width = (x[1] - x[0]).total_seconds() / 86400 * 0.8 if len(x) > 1 else 0.01
+ax1.bar(x, rain, width=width, color=bar_color, alpha=0.6, label='Niederschlag (mm/h)')
+ax1.set_ylabel('Niederschlag (mm/h)', color=bar_color, fontweight='bold')
+ax1.tick_params(axis='y', labelcolor=bar_color)
+ax1.set_ylim(bottom=0, top=rain.max() * 1.5 if rain.max() > 0 else 1)
+
+# Sekundäre Achse: ODL (Linie)
+ax2 = ax1.twinx()
+line_color = '#E15759'
+ax2.plot(x, odl, color=line_color, linewidth=1.5, label='ODL (µSv/h)')
+ax2.set_ylabel('Gamma-Ortsdosisleistung (µSv/h)', color=line_color, fontweight='bold')
+ax2.tick_params(axis='y', labelcolor=line_color)
+
+# Legende zusammenführen
+lines, labels = ax1.get_legend_handles_labels()
+lines2, labels2 = ax2.get_legend_handles_labels()
+ax2.legend(lines + lines2, labels + labels2, loc='upper left', frameon=True)
+
+corr_txt = f' | Spearman-Rangkorrelation: {r_spearman:.2f}' if not np.isnan(r_spearman) else ''
+plt.title(f'Zusammenhang Niederschlag vs. Ortsdosisleistung (KKB)\nStandort: KKB_1031_IMK{corr_txt}', fontsize=14)
+
+fig.tight_layout()
+output_path = os.path.join(output_dir, plot_filename)
+fig.savefig(output_path, bbox_inches='tight')
+plt.close(fig)
+
+print(f"Grafik erfolgreich gespeichert unter: {output_path}")
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie verteilen sich die Windrichtungen an den Standorten während des Messzeitraums?' visualization="Histogramm oder Polardiagramm der Windrichtung unter Verwendung der Spalte 'KBR/KKB/KKK_WRK_TIS'." rationale="Für die Beurteilung potenzieller Ausbreitungspfade ist die Windrichtung essenziell. Ein Windrosen-Diagramm oder ein Histogramm der Spalte 'KBR/KKB/KKK_WRK_TIS' zeigt die vorherrschenden Windrichtungen. Dies hilft dem Nutzer zu verstehen, in welche Richtung eventuelle Emissionen getragen würden und welche Messsonden in der Hauptwindrichtung liegen."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Pfade definieren
+in_path = r'./src/resources/data/study\108398\dataset.csv'
+out_dir = r'./src/resources/output\108398'
+os.makedirs(out_dir, exist_ok=True)
+out_path = os.path.join(out_dir, '2_windrichtungen_windrose.png')
+
+# Fehlerbehebung: UnicodeDecodeError durch Testen verschiedener Encodings beheben
+# 'utf-8' schlug fehl mit 0xfc (ü), was oft auf 'latin-1' oder 'cp1252' hindeutet.
+try:
+    df = pd.read_csv(in_path, sep=',', encoding='utf-8', dtype=str, low_memory=False)
+except UnicodeDecodeError:
+    try:
+        df = pd.read_csv(in_path, sep=',', encoding='latin-1', dtype=str, low_memory=False)
+    except Exception:
+        df = pd.read_csv(in_path, sep=',', encoding='cp1252', dtype=str, low_memory=False)
+
+# Datenbereinigung
+df = df.apply(lambda x: x.str.strip() if hasattr(x, 'str') else x)
+df = df.replace({'nan': np.nan, 'NaN': np.nan, 'NA': np.nan, 'N/A': np.nan, 'NULL': np.nan, 'Null': np.nan, 'null': np.nan, 'None': np.nan, '': np.nan})
+
+# Relevante Spalten für Windrichtung
+dir_cols = [c for c in ['KBR_WRK_TIS', 'KKB_WRK_TIS', 'KKK_WRK_TIS'] if c in df.columns]
+
+# Numerische Konvertierung der Windrichtungen
+numeric_dirs = {}
+for c in dir_cols:
+    s = df[c].astype(str)
+    s = s.str.replace(',', '.', regex=False)
+    s = s.str.replace(r'[^0-9eE\.\-]+', '', regex=True)
+    s = pd.to_numeric(s, errors='coerce')
+    # Windrichtungen liegen normalerweise zwischen 0 und 360 Grad
+    s = s.dropna()
+    s = s[(s >= 0) & (s <= 360)]
+    if not s.empty:
+        numeric_dirs[c] = s
+
+# Visualisierung als Windrose (Polardiagramm)
+if numeric_dirs:
+    sns.set_theme(style='whitegrid', context='talk')
+    fig, ax = plt.subplots(subplot_kw={'projection': 'polar'}, figsize=(10, 8), dpi=150)
+    
+    # Norden oben, Uhrzeigersinn
+    ax.set_theta_zero_location('N')
+    ax.set_theta_direction(-1)
+
+    n_bins = 16
+    bin_edges = np.linspace(0, 360, n_bins + 1)
+    # Zentren der Balken in Radiant
+    rad_centers = np.deg2rad((bin_edges[:-1] + bin_edges[1:]) / 2)
+    bar_width = np.deg2rad(360 / n_bins)
+
+    palette = sns.color_palette('husl', len(numeric_dirs))
+    labels_map = {
+        'KBR_WRK_TIS': 'Brokdorf (KBR)',
+        'KKB_WRK_TIS': 'Brunsbüttel (KKB)',
+        'KKK_WRK_TIS': 'Krümmel (KKK)'
+    }
+
+    max_freq = 0
+    for i, (col, vals) in enumerate(numeric_dirs.items()):
+        counts, _ = np.histogram(vals, bins=bin_edges)
+        # Relative Häufigkeit in Prozent
+        freqs = (counts / len(vals)) * 100
+        max_freq = max(max_freq, freqs.max())
+        
+        ax.bar(rad_centers, freqs, width=bar_width, bottom=0, 
+               color=palette[i], alpha=0.5, edgecolor=palette[i], 
+               label=labels_map.get(col, col))
+
+    # Achsenbeschriftung
+    ax.set_rticks(np.linspace(0, max_freq * 1.1, 5).round(1))
+    ax.set_rlabel_position(135)
+    
+    # Himmelsrichtungen als Ticks
+    ax.set_xticks(np.deg2rad(np.arange(0, 360, 45)))
+    ax.set_xticklabels(['N', 'NO', 'O', 'SO', 'S', 'SW', 'W', 'NW'])
+
+    plt.title('Verteilung der Windrichtungen (Windrose)\nStandorte KBR, KKB, KKK', pad=30)
+    plt.legend(loc='lower center', bbox_to_anchor=(0.5, -0.2), ncol=3, frameon=True)
+    
+    plt.tight_layout()
+    plt.savefig(out_path, bbox_inches='tight')
+    plt.close()
+else:
+    print("Keine validen Windrichtungsdaten für die Visualisierung gefunden.")
+
+
+-> SEVQ:
+
+

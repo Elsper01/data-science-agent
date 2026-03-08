@@ -1,0 +1,334 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32509\dataset.csv
+Programming Language: r
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-06 10:25:43
+Total Duration: 1019.03 seconds
+Total Token Usage: 87807 tokens
+Total Costs: $0.4140
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0054 seconds
+
+Method: analyse_dataset
+  Duration: 0.0043 seconds
+
+Method: analyse_metadata
+  Duration: 0.0054 seconds
+
+Method: llm_generate_summary
+  Duration: 152.0050 seconds
+
+Method: llm_generate_goals
+  Duration: 3.6927 seconds
+
+Method: llm_generate_r_code
+  Duration: 390.7933 seconds
+
+Method: test_generated_code
+  Duration: 9.8870 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 462.6381 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3691 tokens
+  Costs total: $0.0039
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1361 tokens
+  Costs total: $0.0016
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7883 tokens
+  Costs total: $0.0630
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6066 tokens
+  Costs total: $0.0449
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7429 tokens
+  Costs total: $0.0583
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 321 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 731 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7068 tokens
+  Costs total: $0.0527
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2390 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2661 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4093 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4273 tokens
+  Costs total: $0.0241
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4541 tokens
+  Costs total: $0.0288
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2293 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2821 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5564 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4109 tokens
+  Costs total: $0.0235
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6286 tokens
+  Costs total: $0.0456
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2446 tokens
+  Costs total: $0.0097
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2963 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4288 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4277 tokens
+  Costs total: $0.0251
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Which municipalities have a designated Equality Officer and where are they located?' visualization="Table showing 'Kommune_Stadt', 'Name', and 'Postleitzahl_Ort'." rationale="This goal provides a quick overview of the dataset's coverage. By listing 'Kommune_Stadt' alongside 'Name' and 'Postleitzahl_Ort', users can immediately identify which administrative areas are represented and where their offices are physically situated. It also highlights the vacancy in Kranenburg where the 'Name' field is a placeholder."
+
+-> Code:
+pkgs <- c("readr","dplyr","tidyr","stringr","gridExtra","ggplot2","tibble")
+inst <- pkgs[!pkgs %in% rownames(installed.packages())]
+if (length(inst) > 0) install.packages(inst, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+library(grid)
+options(warn = -1)
+input_path <- "./src/resources/data/study\\32509\\dataset.csv"
+output_dir <- "./src/resources/output\\32509"
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+df_raw <- readr::read_csv(input_path, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE)
+df <- df_raw %>% mutate(across(where(is.character), ~trimws(.))) %>% mutate(across(where(is.character), ~na_if(., ""))) %>% mutate(across(where(is.character), ~ifelse(. == "-", NA_character_, .)))
+missing_prop <- sapply(df, function(x) mean(is.na(x)))
+missing_tbl <- tibble::tibble(Spalte = names(missing_prop), Anteil_Fehlend = as.numeric(missing_prop))
+verwaltungstyp <- dplyr::case_when(stringr::str_detect(df$Kommune_Stadt, "^Stadt") ~ "Stadt", stringr::str_detect(df$Kommune_Stadt, "^Gemeinde") ~ "Gemeinde", stringr::str_detect(df$Kommune_Stadt, "Kreis") ~ "Kreis", stringr::str_detect(df$Kommune_Stadt, "Wallfahrtsstadt") ~ "Wallfahrtsstadt", TRUE ~ "Sonstige")
+verwaltung_counts <- tibble::tibble(Verwaltungstyp = verwaltungstyp) %>% count(Verwaltungstyp, name = "Anzahl")
+plz_num <- suppressWarnings(as.integer(stringr::str_extract(df$Postleitzahl_Ort, "^[0-9]{5}")))
+plz_summary <- tibble::tibble(PLZ_min = suppressWarnings(min(plz_num, na.rm = TRUE)), PLZ_max = suppressWarnings(max(plz_num, na.rm = TRUE)), PLZ_mittel = suppressWarnings(mean(plz_num, na.rm = TRUE)))
+tab_df <- df %>% transmute(`Kommune/Stadt` = Kommune_Stadt, Name = Name, `Postleitzahl, Ort` = Postleitzahl_Ort) %>% arrange(`Kommune/Stadt`) %>% mutate(across(everything(), ~ifelse(is.na(.), "–", .)))
+n_rows <- nrow(tab_df)
+alt_rows <- rep(c("#FFFFFF", "#F3F4F6"), length.out = n_rows)
+fill_cells <- rep(alt_rows, each = ncol(tab_df))
+tbl_theme <- gridExtra::ttheme_minimal(base_size = 12, core = list(bg_params = list(fill = fill_cells, col = NA), fg_params = list(fontface = rep("plain", n_rows * ncol(tab_df)), col = rep("#222222", n_rows * ncol(tab_df)))), colhead = list(bg_params = list(fill = "#1F2937", col = NA), fg_params = list(fontface = "bold", col = "#FFFFFF")))
+tbl <- gridExtra::tableGrob(tab_df, rows = NULL, theme = tbl_theme)
+title_g <- grid::textGrob("Gleichstellungsbeauftragte im Kreis Kleve (2021)", x = 0, hjust = 0, gp = grid::gpar(fontsize = 16, fontface = "bold", col = "#111111"))
+subtitle_g <- grid::textGrob(paste0("Überblick (n=", n_rows, "): Kommune/Stadt, Name und Postleitzahl/Ort"), x = 0, hjust = 0, gp = grid::gpar(fontsize = 12, col = "#374151"))
+caption_g <- grid::textGrob("Quelle: Verzeichnis der Gleichstellungsbeauftragten, 2021. Hinweis: '–' kennzeichnet fehlende Angaben (z. B. Vakanz in Kranenburg).", x = 0, hjust = 0, gp = grid::gpar(fontsize = 10, col = "#4B5563"))
+plot_grob <- gridExtra::arrangeGrob(title_g, subtitle_g, tbl, caption_g, ncol = 1, heights = c(0.6, 0.4, 8, 0.5))
+height_in <- 2 + 0.35 * n_rows
+png_path <- file.path(output_dir, "0_tabelle_gleichstellungsbeauftragte.png")
+ggplot2::ggsave(filename = png_path, plot = plot_grob, width = 11, height = height_in, dpi = 300, device = "png", limitsize = FALSE)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the distribution of Equality Offices across different postal code areas?' visualization="Bar chart with 'Postleitzahl_Ort' on the x-axis and the count of records on the y-axis." rationale="Using 'Postleitzahl_Ort' to count occurrences helps visualize the geographic concentration of administrative services. This reveals that '47533 Kleve' hosts two offices (the city and the district levels), while other postal codes represent single municipal offices, providing insight into the administrative structure of Kreis Kleve."
+
+-> Code:
+if (!requireNamespace("readr", quietly = TRUE)) install.packages("readr", repos = "https://cloud.r-project.org", dependencies = TRUE)
+if (!requireNamespace("dplyr", quietly = TRUE)) install.packages("dplyr", repos = "https://cloud.r-project.org", dependencies = TRUE)
+if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2", repos = "https://cloud.r-project.org", dependencies = TRUE)
+if (!requireNamespace("stringr", quietly = TRUE)) install.packages("stringr", repos = "https://cloud.r-project.org", dependencies = TRUE)
+if (!requireNamespace("tidyr", quietly = TRUE)) install.packages("tidyr", repos = "https://cloud.r-project.org", dependencies = TRUE)
+if (!requireNamespace("forcats", quietly = TRUE)) install.packages("forcats", repos = "https://cloud.r-project.org", dependencies = TRUE)
+if (!requireNamespace("scales", quietly = TRUE)) install.packages("scales", repos = "https://cloud.r-project.org", dependencies = TRUE)
+
+suppressPackageStartupMessages(library(readr))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(stringr))
+suppressPackageStartupMessages(library(tidyr))
+suppressPackageStartupMessages(library(forcats))
+suppressPackageStartupMessages(library(scales))
+
+input_path <- file.path(".", "src", "resources", "data", "study", "32509", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "32509")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+raw_df <- readr::read_csv(input_path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE, na = c("", "NA"))
+
+ df <- raw_df %>% mutate(across(where(is.character), ~str_squish(.))) %>% mutate(across(where(is.character), ~na_if(., "-")))
+
+missing_summary <- df %>% summarise(across(everything(), ~mean(is.na(.)))) %>% pivot_longer(cols = everything(), names_to = "Spalte", values_to = "Anteil_NA")
+
+num_df <- df %>% select(where(is.numeric))
+if (ncol(num_df) >= 2) {
+  cor_mat <- suppressWarnings(cor(num_df, use = "pairwise.complete.obs"))
+} else {
+  cor_mat <- matrix(nrow = 0, ncol = 0)
+}
+
+plz_counts <- df %>% filter(!is.na(Postleitzahl_Ort)) %>% count(Postleitzahl_Ort, name = "Anzahl") %>% arrange(desc(Anzahl), Postleitzahl_Ort) %>% mutate(Postleitzahl_Ort = fct_reorder(Postleitzahl_Ort, Anzahl))
+
+plot_obj <- ggplot(plz_counts, aes(x = Postleitzahl_Ort, y = Anzahl)) + geom_col(fill = "#2C7FB8", width = 0.7) + geom_text(aes(label = Anzahl), vjust = -0.2, size = 4) + scale_y_continuous(expand = expansion(mult = c(0, 0.1)), breaks = pretty_breaks()) + scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 16)) + labs(title = "Verteilung der Gleichstellungsstellen nach Postleitzahl-Ort (Kreis Kleve, 2021)", subtitle = "Anzahl der Einträge je Postleitzahl und Ort", x = "Postleitzahl und Ort", y = "Anzahl", caption = "Datenquelle: Gleichstellungsbeauftragte in den Kommunen 2021, Kreis Kleve") + theme_minimal(base_size = 14) + theme(panel.grid.minor = element_blank(), axis.text.x = element_text(angle = 30, hjust = 1), plot.title = element_text(face = "bold"))
+
+outfile <- file.path(output_dir, "1_verteilung_nach_postleitzahl_ort.png")
+ggsave(filename = outfile, plot = plot_obj, width = 2000, height = 1200, units = "px", dpi = 320)
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the availability of digital vs. traditional communication methods (Email vs. Fax) across the municipalities?' visualization="Table or dual-column list showing 'Kommune_Stadt', 'E_Mail', and 'Telefax' to highlight missing values (marked as '-')." rationale="By examining the 'E_Mail' and 'Telefax' columns, users can assess the modernization of communication within these offices. The summary notes that 'Telefax' has several placeholders ('-'), and one 'E_Mail' is missing. A comparison helps users understand the most reliable way to contact these officers and identifies gaps in the contact registry."
+
+-> Code:
+packages <- c("readr","dplyr","tidyr","stringr","ggplot2","forcats","scales")
+install.packages(setdiff(packages, rownames(installed.packages())), repos = "https://cloud.r-project.org")
+lapply(packages, library, character.only = TRUE)
+
+data_dir <- file.path(".", "src", "resources", "data", "study", "32509")
+data_file <- file.path(data_dir, "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "32509")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+raw <- readr::read_csv(data_file, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE)
+
+ df <- raw %>% 
+  mutate(across(where(is.character), ~stringr::str_squish(.))) %>%
+  mutate(across(c(E_Mail, Telefax), ~na_if(., ""))) %>%
+  mutate(across(c(E_Mail, Telefax), ~na_if(., "-")))
+
+n_obs <- nrow(df)
+email_vorhanden <- sum(!is.na(df$E_Mail))
+fax_vorhanden <- sum(!is.na(df$Telefax))
+missing_props <- df %>% summarise(across(c(E_Mail, Telefax), ~mean(is.na(.))))
+
+order_levels <- df %>% 
+  mutate(avail_email = as.integer(!is.na(E_Mail)), avail_fax = as.integer(!is.na(Telefax))) %>%
+  arrange(desc(avail_email), desc(avail_fax), Kommune_Stadt) %>%
+  pull(Kommune_Stadt) %>% unique()
+
+plot_df <- df %>%
+  select(Kommune_Stadt, E_Mail, Telefax) %>%
+  pivot_longer(cols = c(E_Mail, Telefax), names_to = "Kanal", values_to = "Wert") %>%
+  mutate(Kanal = factor(Kanal, levels = c("E_Mail", "Telefax"), labels = c("E-Mail", "Telefax")),
+         Kommune_Stadt = factor(Kommune_Stadt, levels = rev(order_levels)),
+         Verfügbarkeit = if_else(is.na(Wert), "Fehlt", "Vorhanden"),
+         Wert_anzeige = if_else(is.na(Wert), "–", stringr::str_trunc(Wert, 28)),
+         Textfarbe = if_else(Verfügbarkeit == "Vorhanden", "white", "#525252"))
+
+p <- ggplot(plot_df, aes(x = Kanal, y = Kommune_Stadt, fill = Verfügbarkeit)) +
+  geom_tile(color = "#d9d9d9", width = 0.95, height = 0.95) +
+  geom_text(aes(label = Wert_anzeige, color = Textfarbe), size = 3.6, lineheight = 0.95) +
+  scale_fill_manual(values = c("Vorhanden" = "#1b9e77", "Fehlt" = "#f0f0f0")) +
+  scale_color_identity() +
+  labs(title = "Digitale vs. traditionelle Kommunikationswege der Gleichstellungsbeauftragten (2021)",
+       subtitle = paste0("E-Mail vorhanden: ", email_vorhanden, " von ", n_obs, " | Telefax vorhanden: ", fax_vorhanden, " von ", n_obs, ". Fehlende Angaben sind mit „–“ markiert."),
+       x = "Kommunikationskanal",
+       y = "Kommune/Stadt",
+       fill = "Verfügbarkeit",
+       caption = "Datenquelle: 'Gleichstellungsbeauftragte in den Kommunen 2021', Kreis Kleve") +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "top",
+        panel.grid = element_blank(),
+        axis.text.y = element_text(size = 10),
+        axis.text.x = element_text(size = 11),
+        plot.title = element_text(face = "bold", size = 14),
+        plot.subtitle = element_text(size = 11),
+        plot.caption = element_text(size = 9),
+        plot.margin = margin(12, 12, 12, 12))
+
+outfile <- file.path(output_dir, "2_kommunikationswege_email_vs_fax.png")
+ggsave(outfile, plot = p, width = 1800, height = 1200, units = "px", dpi = 320)
+
+-> SEVQ:
+
+

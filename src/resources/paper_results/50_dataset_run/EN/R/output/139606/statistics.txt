@@ -1,0 +1,427 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\139606\dataset.csv
+Programming Language: r
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-06 10:07:35
+Total Duration: 1107.42 seconds
+Total Token Usage: 105944 tokens
+Total Costs: $0.4810
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0061 seconds
+
+Method: analyse_dataset
+  Duration: 0.0058 seconds
+
+Method: analyse_metadata
+  Duration: 0.0078 seconds
+
+Method: llm_generate_summary
+  Duration: 177.2099 seconds
+
+Method: llm_generate_goals
+  Duration: 5.4156 seconds
+
+Method: llm_generate_r_code
+  Duration: 352.8692 seconds
+
+Method: test_generated_code
+  Duration: 7.2506 seconds
+
+Method: llm_regenerate_code
+  Duration: 9.2664 seconds
+
+Method: test_generated_code
+  Duration: 7.8613 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 547.5309 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7781 tokens
+  Costs total: $0.0067
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1636 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8303 tokens
+  Costs total: $0.0616
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8375 tokens
+  Costs total: $0.0621
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 9400 tokens
+  Costs total: $0.0726
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 322 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 329 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3370 tokens
+  Costs total: $0.0053
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 322 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6535 tokens
+  Costs total: $0.0479
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2371 tokens
+  Costs total: $0.0087
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2598 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5996 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4620 tokens
+  Costs total: $0.0293
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8238 tokens
+  Costs total: $0.0628
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2571 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2867 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4487 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4578 tokens
+  Costs total: $0.0257
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5394 tokens
+  Costs total: $0.0343
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2668 tokens
+  Costs total: $0.0098
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3305 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4495 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4627 tokens
+  Costs total: $0.0261
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What is the distribution of detectable vs. non-detectable radiological results across all tested parameters?' visualization="Bar chart showing the count of 'Ergebnis' values, categorized by whether they are 'n.n.' or a numerical value." rationale="In food safety monitoring, it is crucial to see how many substances were actually detected. By grouping the 'Ergebnis' column, we can visualize the proportion of 'n.n.' (not detectable) results compared to actual numerical measurements for the various 'Pruefmerkmal' entries."
+
+-> Code:
+options(encoding="UTF-8")
+pkgs <- c("readr","dplyr","ggplot2","stringr","scales","forcats","tidyr")
+need <- pkgs[!sapply(pkgs, requireNamespace, quietly = TRUE)]
+if (length(need) > 0) install.packages(need, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+in_path_raw <- "./src/resources/data/study\\139606\\dataset.csv"
+in_path <- gsub("\\\\", "/", in_path_raw)
+df <- readr::read_csv(in_path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE, progress = FALSE)
+probe_name <- df$Bezeichnung[1]
+probe_datum <- df$Probenahme_Beginn_Datum[1]
+if (is.na(probe_name) || probe_name == "") probe_name <- "Probe"
+if (is.na(probe_datum)) probe_datum <- ""
+missing_props <- sapply(df, function(x) mean(is.na(x)))
+numeric_cols <- names(df)[sapply(df, is.numeric)]
+if (length(numeric_cols) > 0) {
+  numeric_summary <- df %>% select(all_of(numeric_cols)) %>% summarise(across(everything(), list(mittelwert = ~mean(., na.rm = TRUE), sd = ~sd(., na.rm = TRUE), min = ~min(., na.rm = TRUE), median = ~median(., na.rm = TRUE), max = ~max(., na.rm = TRUE))))
+} else {
+  numeric_summary <- tibble()
+}
+df_bq <- df %>% filter(str_detect(as.character(Einheit), "Bq")) %>% mutate(Ergebnis_str = as.character(Ergebnis), Ergebnis_trim = str_trim(Ergebnis_str), is_nn = str_to_lower(Ergebnis_trim) %in% c("n.n.","n.n","nn","n. n.","n . n ."), Ergebnis_num = suppressWarnings(as.numeric(str_replace(Ergebnis_trim, ",", "."))), Kategorie = if_else(is_nn, "Nicht nachweisbar", if_else(!is.na(Ergebnis_num), "Nachweis", "Nicht nachweisbar")))
+counts <- df_bq %>% count(Kategorie, name = "Anzahl") %>% mutate(Anteil = Anzahl/sum(Anzahl))
+counts$Kategorie <- forcats::fct_relevel(counts$Kategorie, "Nicht nachweisbar", "Nachweis")
+detected_summary <- df_bq %>% filter(Kategorie == "Nachweis") %>% summarise(Anzahl = n(), Mittelwert = mean(Ergebnis_num, na.rm = TRUE), SD = sd(Ergebnis_num, na.rm = TRUE), Minimum = suppressWarnings(min(Ergebnis_num, na.rm = TRUE)), Median = median(Ergebnis_num, na.rm = TRUE), Maximum = suppressWarnings(max(Ergebnis_num, na.rm = TRUE)))
+p <- ggplot(counts, aes(x = Kategorie, y = Anzahl, fill = Kategorie)) +
+  geom_col(width = 0.6) +
+  geom_text(aes(label = paste0(Anzahl, " (", scales::percent(Anteil, accuracy = 0.1), ")")), vjust = -0.25, family = "sans", size = 4.2) +
+  scale_fill_manual(values = c("Nicht nachweisbar" = "#6BAED6", "Nachweis" = "#31A354"), guide = "none") +
+  labs(title = paste0("Verteilung der Nachweisstatus über alle Prüfmerkmale (", probe_name, ")"), subtitle = paste0("Anzahl der Messungen mit Nachweis (numerischer Messwert) vs. nicht nachweisbar (n.n.)", ifelse(!is.na(probe_datum) && probe_datum != "", paste0(" – ", probe_datum), "")), x = "Nachweisstatus", y = "Anzahl der Prüfmerkmale") +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold", size = 14), plot.subtitle = element_text(size = 11), axis.title = element_text(size = 12)) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.12)), breaks = function(x) pretty(x))
+out_path_raw <- "./src/resources/output\\139606/0_verteilung_nachweisstatus.png"
+out_path <- gsub("\\\\", "/", out_path_raw)
+dir.create(dirname(out_path), recursive = TRUE, showWarnings = FALSE)
+ggsave(filename = out_path, plot = p, width = 7.5, height = 5.2, dpi = 320)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Which specific radionuclides were detected in the pork sample and what were their activity levels?' visualization="Horizontal bar chart with 'Pruefmerkmal' on the Y-axis and the numerical 'Ergebnis' on the X-axis (excluding 'n.n.' and the 'Messzeit' parameter)." rationale="This goal focuses on the specific findings of the screening. By filtering for numerical values in 'Ergebnis' and plotting them against 'Pruefmerkmal', we can compare the levels of naturally occurring isotopes like K-40 versus artificial ones like Cs-137, measured in 'Bq/kg(FM)'."
+
+-> Code:
+options(stringsAsFactors=FALSE)
+options(repos=c(CRAN="https://cloud.r-project.org"))
+
+# Load necessary libraries
+if (!requireNamespace("tidyverse", quietly=TRUE)) install.packages("tidyverse")
+if (!requireNamespace("janitor", quietly=TRUE)) install.packages("janitor")
+if (!requireNamespace("scales", quietly=TRUE)) install.packages("scales")
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(janitor)
+  library(scales)
+})
+
+# Define paths
+input_path <- file.path(".", "src", "resources", "data", "study", "139606", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "139606")
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive=TRUE)
+
+# Read and clean data
+df <- readr::read_csv(input_path, locale=readr::locale(encoding="UTF-8"), show_col_types=FALSE)
+df <- janitor::clean_names(df)
+
+# Data cleaning: handle NA strings and numeric conversion
+df <- df %>% 
+  mutate(across(everything(), ~ifelse(. %in% c("", "NA", "NaN"), NA, .))) %>%
+  mutate(
+    ergebnis_clean = str_replace_all(ergebnis, ",", "."),
+    ergebnis_num = suppressWarnings(as.numeric(ergebnis_clean))
+  )
+
+# Extract metadata for labels
+meta_id <- if("hauptprobenummer" %in% names(df)) df$hauptprobenummer[1] else "Unknown"
+meta_bez <- if("bezeichnung" %in% names(df)) df$bezeichnung[1] else "Probe"
+meta_datum <- if("probenahme_beginn_datum" %in% names(df)) df$probenahme_beginn_datum[1] else ""
+meta_methode <- if("methode" %in% names(df)) df$methode[1] else ""
+
+# Extract Messzeit for caption
+messzeit_row <- df %>% 
+  filter(str_detect(tolower(pruefmerkmal), "messzeit")) %>% 
+  slice(1)
+messzeit_val <- if(nrow(messzeit_row) > 0) messzeit_row$ergebnis_num else NA
+
+# Filter for detected radionuclides (exclude n.n. and Messzeit)
+detected <- df %>% 
+  filter(
+    !is.na(ergebnis_num),
+    !str_detect(tolower(ergebnis), "^n\\.n\\."),
+    !str_detect(tolower(pruefmerkmal), "messzeit")
+  ) %>%
+  mutate(kategorie = case_when(
+    str_detect(tolower(pruefmerkmal), "kalium-40|k-40") ~ "Natürliche Radionuklide",
+    str_detect(tolower(pruefmerkmal), "cäsium-137|caesium-137|cs-137") ~ "Künstliche Radionuklide",
+    TRUE ~ "Weitere Radionuklide"
+  ))
+
+# Determine unit
+meta_einheit <- detected %>% 
+  filter(!is.na(einheit)) %>% 
+  slice(1) %>% 
+  pull(einheit)
+if (length(meta_einheit) == 0 || is.na(meta_einheit)) meta_einheit <- "Bq/kg(FM)"
+
+# Prepare Plot Text
+plot_title <- paste0("Nachgewiesene Radionuklide in ", meta_bez)
+plot_subtitle <- paste0("Aktivitätskonzentration in ", meta_einheit, " (ID: ", meta_id, ")")
+
+# Fix the caption logic to avoid string constant errors
+caption_base <- "Quelle: IMIS Routinemessprogramm"
+plot_caption <- if (!is.na(messzeit_val)) {
+  paste0(caption_base, "; Messzeit: ", format(messzeit_val, big.mark=".", decimal.mark=","), " s")
+} else {
+  caption_base
+}
+
+# Create Visualization
+p <- ggplot(detected, aes(x=ergebnis_num, y=forcats::fct_reorder(pruefmerkmal, ergebnis_num), fill=kategorie)) +
+  geom_col(width=0.7) +
+  geom_text(aes(label=scales::number(ergebnis_num, big.mark=".", decimal.mark=",", accuracy=0.01)), 
+            hjust=-0.2, size=3.5) +
+  scale_fill_manual(values=c("Natürliche Radionuklide"="#2E7D32", 
+                             "Künstliche Radionuklide"="#C62828", 
+                             "Weitere Radionuklide"="#546E7A")) +
+  scale_x_continuous(labels=label_number(big.mark=".", decimal.mark=","), 
+                     expand=expansion(mult=c(0, 0.2))) +
+  labs(
+    title=plot_title,
+    subtitle=plot_subtitle,
+    x=paste0("Aktivität [", meta_einheit, "]"),
+    y="Radionuklid (Prüfmerkmal)",
+    fill="Kategorie",
+    caption=plot_caption
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    legend.position = "bottom",
+    plot.title = element_text(face="bold"),
+    plot.margin = margin(10, 40, 10, 10)
+  )
+
+# Save plot
+plot_height <- max(4, 0.8 * nrow(detected) + 1.5)
+output_file <- file.path(output_dir, "1_radionuklide_aktivitaet_balken_horizontal.png")
+ggsave(filename=output_file, plot=p, width=10, height=plot_height, dpi=320)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What was the measurement duration (Messzeit) used for this high-resolution screening?' visualization="A single value indicator or a simple bar showing the 'Ergebnis' where 'Pruefmerkmal' is 'Messzeit'." rationale="The sensitivity of a radiological test is often determined by the counting time. Identifying the 'Ergebnis' for the 'Pruefmerkmal' labeled 'Messzeit' (measured in seconds) helps the user understand the technical rigor of the IMIS routine monitoring program."
+
+-> Code:
+options(warn=-1)
+pkgs <- c("readr","dplyr","ggplot2","scales","stringr","tidyr")
+to_install <- pkgs[!(pkgs %in% rownames(installed.packages()))]
+if(length(to_install) > 0) install.packages(to_install, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, function(p) suppressPackageStartupMessages(library(p, character.only = TRUE))))
+input_file <- file.path(".", "src", "resources", "data", "study", "139606", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "139606")
+if(!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+output_file <- file.path(output_dir, "2_messzeit_indicator.png")
+df <- readr::read_csv(input_file, locale = locale(encoding = "UTF-8"), col_types = cols(.default = col_character()))
+df <- df %>% mutate(across(everything(), ~ifelse(is.na(.x), NA_character_, stringr::str_squish(as.character(.x)))))
+df <- df %>% mutate(Ergebnis_num = readr::parse_double(Ergebnis, locale = locale(decimal_mark = ",", grouping_mark = ".", encoding = "UTF-8")))
+na_prop <- sapply(df, function(col) mean(is.na(col)))
+non_detect_prop <- mean(stringr::str_detect(df$Ergebnis, regex("^n\\.?n\\.?$", ignore_case = TRUE)), na.rm = TRUE)
+safe_min <- function(x) if(all(is.na(x))) NA_real_ else min(x, na.rm = TRUE)
+safe_q <- function(x, p) if(all(is.na(x))) NA_real_ else as.numeric(quantile(x, p, na.rm = TRUE, type = 7))
+safe_median <- function(x) if(all(is.na(x))) NA_real_ else median(x, na.rm = TRUE)
+safe_mean <- function(x) if(all(is.na(x))) NA_real_ else mean(x, na.rm = TRUE)
+safe_sd <- function(x) if(all(is.na(x))) NA_real_ else sd(x, na.rm = TRUE)
+safe_max <- function(x) if(all(is.na(x))) NA_real_ else max(x, na.rm = TRUE)
+summary_num <- tibble(
+  n = nrow(df),
+  n_messbar = sum(!is.na(df$Ergebnis_num)),
+  min = safe_min(df$Ergebnis_num),
+  q25 = safe_q(df$Ergebnis_num, 0.25),
+  median = safe_median(df$Ergebnis_num),
+  mean = safe_mean(df$Ergebnis_num),
+  sd = safe_sd(df$Ergebnis_num),
+  max = safe_max(df$Ergebnis_num),
+  anteil_nicht_nachweisbar = non_detect_prop
+)
+mess_df <- df %>% filter(stringr::str_detect(`Pruefmerkmal`, regex("messzeit", ignore_case = TRUE)))
+if(nrow(mess_df) == 0) stop("Kein Eintrag für 'Messzeit' gefunden.")
+mess_df <- mess_df %>% arrange(desc(!is.na(Ergebnis_num)))
+messwert_s <- suppressWarnings(as.numeric(mess_df$Ergebnis_num[1]))
+if(is.na(messwert_s)) stop("Der Eintrag 'Messzeit' enthält keinen numerisch interpretierbaren Wert.")
+einh <- mess_df$Einheit[1]
+if(is.na(einh) || einh == "") einh <- "s"
+messwert_h <- messwert_s/3600
+sec_label <- scales::number(messwert_s, accuracy = 1, big.mark = ".", decimal.mark = ",")
+h_label <- scales::number(messwert_h, accuracy = 0.1, big.mark = ".", decimal.mark = ",")
+probe_id <- if("Hauptprobenummer" %in% names(df)) df$Hauptprobenummer[1] else ""
+probe_bez <- if("Bezeichnung" %in% names(df)) df$Bezeichnung[1] else ""
+probe_datum <- if("Probenahme_Beginn_Datum" %in% names(df)) df$Probenahme_Beginn_Datum[1] else ""
+methode <- if("Methode" %in% names(df)) df$Methode[1] else ""
+unterschrift <- paste0("Probe ", probe_id, " • ", probe_bez, " • ", probe_datum, ifelse(methode != "", paste0(" • ", methode), ""))
+p <- ggplot() +
+  xlim(0, 1) + ylim(0, 1) +
+  annotate("rect", xmin = 0, xmax = 1, ymin = 0, ymax = 1, fill = "#0b7285", color = NA) +
+  annotate("text", x = 0.5, y = 0.72, label = "Messzeit der Hochauflösungsmessung", color = "white", size = 6, fontface = "bold") +
+  annotate("text", x = 0.5, y = 0.52, label = paste0(sec_label, " ", einh), color = "white", size = 14, fontface = "bold") +
+  annotate("text", x = 0.5, y = 0.38, label = paste0("≈ ", h_label, " Stunden Zählzeit"), color = "#dceef2", size = 5.5) +
+  annotate("text", x = 0.5, y = 0.16, label = unterschrift, color = "#dceef2", size = 4) +
+  theme_void()
+ggsave(filename = output_file, plot = p, width = 9, height = 5.5, dpi = 300, bg = "#0b7285")
+
+-> SEVQ:
+
+

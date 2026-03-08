@@ -1,0 +1,413 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32743\dataset.csv
+Programming Language: r
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-06 10:29:06
+Total Duration: 1198.28 seconds
+Total Token Usage: 102340 tokens
+Total Costs: $0.4618
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0078 seconds
+
+Method: analyse_dataset
+  Duration: 0.0061 seconds
+
+Method: analyse_metadata
+  Duration: 0.0076 seconds
+
+Method: llm_generate_summary
+  Duration: 205.4122 seconds
+
+Method: llm_generate_goals
+  Duration: 4.6707 seconds
+
+Method: llm_generate_r_code
+  Duration: 428.0986 seconds
+
+Method: test_generated_code
+  Duration: 13.9266 seconds
+
+Method: llm_regenerate_code
+  Duration: 5.7373 seconds
+
+Method: test_generated_code
+  Duration: 15.1400 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 525.2715 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 6157 tokens
+  Costs total: $0.0057
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1607 tokens
+  Costs total: $0.0018
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8325 tokens
+  Costs total: $0.0656
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8184 tokens
+  Costs total: $0.0642
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7656 tokens
+  Costs total: $0.0590
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 388 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 305 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 762 tokens
+  Costs total: $0.0020
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2364 tokens
+  Costs total: $0.0034
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 388 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 259 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 762 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6954 tokens
+  Costs total: $0.0478
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2823 tokens
+  Costs total: $0.0096
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3145 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6348 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5002 tokens
+  Costs total: $0.0267
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6047 tokens
+  Costs total: $0.0452
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2177 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2264 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3474 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3960 tokens
+  Costs total: $0.0234
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6181 tokens
+  Costs total: $0.0432
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2448 tokens
+  Costs total: $0.0085
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2758 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6882 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4720 tokens
+  Costs total: $0.0286
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How did the daily traffic volume fluctuate throughout December 2021?' visualization="Line chart with 'Datum' on the x-axis and 'Besuche' and 'Seitenaufrufe' on the y-axis." rationale="A line chart showing 'Besuche' (Visits) and 'Seitenaufrufe' (Page Views) over 'Datum' (Date) allows users to identify peak traffic days and the significant drop during the holiday season. This helps in understanding the website's usage patterns and identifying the impact of specific dates on engagement. Note: The aggregate 'nan' row in 'Datum' should be excluded for this time-series view."
+
+-> Code:
+options(stringsAsFactors=FALSE)
+pkgs <- c("readr","dplyr","tidyr","stringr","ggplot2","lubridate","scales","tibble")
+inst <- pkgs[!pkgs %in% rownames(installed.packages())]
+if(length(inst)>0) install.packages(inst, repos="https://cloud.r-project.org", quiet=TRUE, dependencies=TRUE)
+invisible(lapply(pkgs, library, character.only=TRUE))
+input_path <- file.path(".", "src", "resources", "data", "study", "32743", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "32743")
+dir.create(output_dir, showWarnings=FALSE, recursive=TRUE)
+df_raw <- suppressMessages(readr::read_csv(input_path, locale=locale(encoding="UTF-8"), na=c("", "NA", "NaN", "nan"), show_col_types=FALSE))
+empty_cols <- names(df_raw)[sapply(df_raw, function(x) all(is.na(x)))]
+df <- df_raw |> dplyr::select(-dplyr::any_of(c("Unnamed__11", empty_cols)))
+percent_cols <- intersect(c("Anteil_Besuche_mit_Cookies","Anteil_Besucher_mit_Cookies","Bounce_Rate"), names(df))
+if(length(percent_cols)>0){
+  df <- df |> dplyr::mutate(dplyr::across(dplyr::all_of(percent_cols), ~ as.numeric(readr::parse_number(as.character(.x)))/100))
+}
+time_cols <- intersect(c("Zeit_im_Besuch","Bounce_Zeit"), names(df))
+if(length(time_cols)>0){
+  for(tc in time_cols){
+    new_col <- paste0(tc, "_Sek")
+    df[[new_col]] <- suppressWarnings(as.numeric(lubridate::period_to_seconds(lubridate::hms(as.character(df[[tc]])))))
+  }
+}
+num_force_cols <- intersect(c("Besuche","Seitenaufrufe","Besucher","Besuchsh_ufigkeit","Seiten_pro_Besuch"), names(df))
+if(length(num_force_cols)>0){
+  df <- df |> dplyr::mutate(dplyr::across(dplyr::all_of(num_force_cols), ~ suppressWarnings(as.numeric(readr::parse_number(as.character(.x))))))
+}
+df <- df |> dplyr::mutate(Datum_parsed = suppressWarnings(lubridate::dmy(Datum)))
+ts <- df |> dplyr::filter(!is.na(Datum_parsed)) |> dplyr::arrange(Datum_parsed) |> dplyr::filter(lubridate::year(Datum_parsed)==2021, lubridate::month(Datum_parsed)==12)
+missing_tbl <- tibble::tibble(Spalte=names(df), Anteil_NA=sapply(df, function(x) mean(is.na(x)))) |> dplyr::arrange(dplyr::desc(Anteil_NA))
+readr::write_csv(missing_tbl, file.path(output_dir, "eda_anteil_missing.csv"))
+num_df <- df |> dplyr::select(dplyr::where(is.numeric))
+if(ncol(num_df)>0){
+  stats_tbl <- tibble::tibble(Variable=names(num_df)) |>
+    dplyr::mutate(
+      Mittelwert = sapply(num_df, function(x) mean(x, na.rm=TRUE)),
+      Stdabw = sapply(num_df, function(x) sd(x, na.rm=TRUE)),
+      Minimum = sapply(num_df, function(x) suppressWarnings(min(x, na.rm=TRUE))),
+      P25 = sapply(num_df, function(x) as.numeric(stats::quantile(x, 0.25, na.rm=TRUE))),
+      Median = sapply(num_df, function(x) median(x, na.rm=TRUE)),
+      P75 = sapply(num_df, function(x) as.numeric(stats::quantile(x, 0.75, na.rm=TRUE))),
+      Maximum = sapply(num_df, function(x) suppressWarnings(max(x, na.rm=TRUE))),
+      N = sapply(num_df, function(x) sum(!is.na(x))),
+      Fehlend = sapply(num_df, function(x) sum(is.na(x)))
+    )
+  readr::write_csv(stats_tbl, file.path(output_dir, "eda_numerik_statistiken.csv"))
+  if(ncol(num_df)>=2){
+    cor_mat <- suppressWarnings(cor(num_df, use="pairwise.complete.obs"))
+    cor_df <- as.data.frame(cor_mat) |> tibble::rownames_to_column("Variable")
+    readr::write_csv(cor_df, file.path(output_dir, "eda_korrelationen.csv"))
+  }
+}
+plot_df <- ts |> dplyr::select(Datum=Datum_parsed, Besuche, Seitenaufrufe) |> tidyr::pivot_longer(cols=c(Besuche, Seitenaufrufe), names_to="Metrik", values_to="Wert") |> dplyr::filter(!is.na(Wert))
+p <- ggplot2::ggplot(plot_df, ggplot2::aes(x=Datum, y=Wert, color=Metrik)) +
+  ggplot2::geom_line(size=1.1, alpha=0.9) +
+  ggplot2::geom_point(size=1.8, alpha=0.9) +
+  ggplot2::scale_color_manual(values=c("Besuche"="#1b9e77","Seitenaufrufe"="#7570b3"), name="Metrik", labels=c("Besuche","Seitenaufrufe")) +
+  ggplot2::scale_x_date(date_breaks="1 week", date_labels="%d.%m.%Y", expand=ggplot2::expansion(mult=c(0.01,0.01))) +
+  ggplot2::scale_y_continuous(labels=scales::label_number(big.mark=".", decimal.mark=",")) +
+  ggplot2::labs(title="Täglicher Verlauf von Besuchen und Seitenaufrufen – Dezember 2021",
+       subtitle="kreis-kleve.de • Monatssumme und ungültige Datumswerte ausgeschlossen",
+       x="Datum",
+       y="Anzahl",
+       caption="Quelle: Webanalyse Dezember 2021") +
+  ggplot2::theme_minimal(base_family = "sans") +
+  ggplot2::theme(legend.position="top", legend.title=ggplot2::element_blank(), axis.text.x=ggplot2::element_text(angle=45, hjust=1, vjust=1), plot.title=ggplot2::element_text(face="bold"), plot.subtitle=ggplot2::element_text(color="gray30"))
+ggplot2::ggsave(filename=file.path(output_dir, "0_tagesverlauf_besuche_seitenaufrufe.png"), plot=p, width=11, height=6.5, dpi=300, bg="white")
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the relationship between user engagement (Pages per Visit) and the Bounce Rate?' visualization="Scatter plot with 'Bounce_Rate' on the x-axis and 'Seiten_pro_Besuch' on the y-axis." rationale="By plotting 'Seiten_pro_Besuch' (Pages per Visit) against 'Bounce_Rate', we can see if higher bounce rates correlate with lower session depths. This is crucial for evaluating content effectiveness; if certain days show a high 'Bounce_Rate' and low 'Seiten_pro_Besuch', it indicates users are not finding what they need or are leaving immediately."
+
+-> Code:
+options(warn=-1)
+packages <- c("tidyverse", "lubridate", "janitor", "scales")
+for (p in packages) { 
+  if (!requireNamespace(p, quietly = TRUE)) install.packages(p, dependencies = TRUE, quiet = TRUE) 
+}
+invisible(lapply(packages, function(p) suppressPackageStartupMessages(library(p, character.only = TRUE))))
+
+# Create output directory
+output_dir <- "./src/resources/output/32743"
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Load data
+path_data <- "./src/resources/data/study/32743/dataset.csv"
+df <- readr::read_csv(path_data, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE)
+
+# Clean and transform
+df <- janitor::remove_empty(df, which = c("cols"))
+
+# Helper functions
+conv_pct <- function(x) suppressWarnings(readr::parse_number(as.character(x)) / 100)
+
+df_clean <- df %>%
+  mutate(
+    Datum = suppressWarnings(lubridate::dmy(as.character(Datum))),
+    Bounce_Rate_num = conv_pct(Bounce_Rate),
+    Seiten_pro_Besuch = as.numeric(Seiten_pro_Besuch)
+  ) %>%
+  filter(!is.na(Datum), !is.na(Bounce_Rate_num), !is.na(Seiten_pro_Besuch))
+
+# Statistics for subtitle
+n_days <- nrow(df_clean)
+r_pearson <- suppressWarnings(cor(df_clean$Bounce_Rate_num, df_clean$Seiten_pro_Besuch, use = "complete.obs", method = "pearson"))
+avg_pages <- mean(df_clean$Seiten_pro_Besuch, na.rm = TRUE)
+
+subtitle_txt <- paste0(
+  "n = ", n_days, " Tage; Korrelation (Pearson) = ", sprintf("%.2f", r_pearson),
+  "; Ø Seiten/Besuch = ", sprintf("%.2f", avg_pages)
+)
+
+# Visualization
+p <- ggplot(df_clean, aes(x = Bounce_Rate_num, y = Seiten_pro_Besuch)) +
+  geom_point(color = "#2C7FB8", fill = "#A6CEE3", size = 3, alpha = 0.8, shape = 21) +
+  geom_smooth(method = "lm", se = TRUE, color = "#D95F0E", fill = "#FDBB84", linewidth = 1) +
+  scale_x_continuous(labels = scales::label_percent(accuracy = 1), name = "Absprungrate (Bounce Rate)") +
+  scale_y_continuous(name = "Seiten pro Besuch") +
+  labs(
+    title = "Zusammenhang: Absprungrate vs. Seiten pro Besuch",
+    subtitle = subtitle_txt,
+    caption = "Quelle: Webanalyse kreis-kleve.de (Dezember 2021)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(size = 10, color = "grey30"),
+    panel.grid.minor = element_blank()
+  )
+
+# Save plot
+ggsave(
+  filename = "1_scatter_absprungrate_vs_seiten_pro_besuch.png", 
+  plot = p, 
+  path = output_dir, 
+  width = 8, 
+  height = 6, 
+  dpi = 300
+)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='How does the frequency of visits compare to the total number of unique visitors?' visualization="Dual-axis chart or Bar and Line combo chart showing 'Besucher' as bars and 'Besuchsh_ufigkeit' as a line over 'Datum'." rationale="Comparing 'Besucher' (Unique Visitors) and 'Besuchsh_ufigkeit' (Visit Frequency) helps determine if the traffic is driven by a large base of new users or a smaller group of highly loyal, returning users. This provides insight into the 'kreis-kleve.de' audience loyalty during the month of December."
+
+-> Code:
+packages <- c("tidyverse","lubridate","scales","hms")
+new_packages <- packages[!(packages %in% rownames(installed.packages()))]
+if (length(new_packages) > 0) install.packages(new_packages, repos = "https://cloud.r-project.org")
+invisible(lapply(packages, library, character.only = TRUE))
+options(stringsAsFactors = FALSE)
+input_path <- file.path(".","src","resources","data","study","32743","dataset.csv")
+output_dir <- file.path(".","src","resources","output","32743")
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+plot_path <- file.path(output_dir, "2_besucher_vs_besuchshaeufigkeit.png")
+df_raw <- readr::read_csv(input_path, na = c("","NA","NaN","nan"), locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE)
+cols_drop <- intersect(c("Unnamed__11"), names(df_raw))
+df <- df_raw %>% select(-any_of(cols_drop))
+pct_cols <- intersect(c("Anteil_Besuche_mit_Cookies","Anteil_Besucher_mit_Cookies","Bounce_Rate"), names(df))
+if (length(pct_cols) > 0) {
+  df <- df %>% mutate(across(all_of(pct_cols), ~ suppressWarnings(as.numeric(gsub("%","", as.character(.))))))
+}
+time_cols <- intersect(c("Zeit_im_Besuch","Bounce_Zeit"), names(df))
+if (length(time_cols) > 0) {
+  df <- df %>% mutate(across(all_of(time_cols), ~ suppressWarnings(as.numeric(hms::as_hms(as.character(.))))))
+}
+df <- df %>% mutate(Datum = suppressWarnings(lubridate::dmy(Datum)))
+num_candidates <- c("Besuche","Besucher","Besuchsh_ufigkeit","Seitenaufrufe","Seiten_pro_Besuch")
+num_cols <- intersect(num_candidates, names(df))
+if (length(num_cols) > 0) {
+  df <- df %>% mutate(across(all_of(num_cols), ~ suppressWarnings(as.numeric(.))))
+}
+df_clean <- df %>% filter(!is.na(Datum)) %>% arrange(Datum)
+missing_pct <- sapply(df_clean, function(x) mean(is.na(x)))
+num_df <- df_clean %>% select(where(is.numeric))
+if (ncol(num_df) > 0) {
+  summ_stats <- num_df %>% summarise(across(everything(), list(mean = ~mean(., na.rm = TRUE), sd = ~sd(., na.rm = TRUE), median = ~median(., na.rm = TRUE), min = ~min(., na.rm = TRUE), max = ~max(., na.rm = TRUE)), .names = "{.col}__{.fn}"))
+}
+if (ncol(num_df) >= 2) {
+  cor_mat <- suppressWarnings(cor(num_df, use = "pairwise.complete.obs", method = "pearson"))
+}
+max_visitors <- max(df_clean$Besucher, na.rm = TRUE)
+max_freq <- max(df_clean$`Besuchsh_ufigkeit`, na.rm = TRUE)
+scale_factor <- ifelse(is.finite(max_visitors) && is.finite(max_freq) && max_freq > 0, max_visitors / max_freq, 1)
+p <- ggplot(df_clean, aes(x = Datum)) +
+  geom_col(aes(y = Besucher, fill = "Besucher"), width = 0.8, alpha = 0.9) +
+  geom_line(aes(y = `Besuchsh_ufigkeit` * scale_factor, color = "Besuchshäufigkeit"), size = 1.2) +
+  scale_fill_manual(name = "", values = c("Besucher" = "#4C78A8")) +
+  scale_color_manual(name = "", values = c("Besuchshäufigkeit" = "#F58518")) +
+  scale_x_date(name = "Datum", date_breaks = "5 days", date_labels = "%d.%m.%Y", expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(name = "Besucher (Anzahl eindeutiger Besucher)", sec.axis = sec_axis(~ . / scale_factor, name = "Besuchshäufigkeit (Besuche pro Besucher)")) +
+  labs(title = "Besucher vs. Besuchshäufigkeit im Dezember 2021 – kreis-kleve.de", subtitle = "Tägliche Werte ohne Monatsgesamtsumme", caption = "Quelle: Webanalyse-Audit Dezember 2021") +
+  theme_minimal() +
+  theme(legend.position = "top", legend.title = element_text(size = 10), legend.text = element_text(size = 10), plot.title = element_text(face = "bold", size = 14), plot.subtitle = element_text(size = 11), axis.title.y.left = element_text(color = "#4C78A8"), axis.title.y.right = element_text(color = "#F58518"), axis.text.x = element_text(angle = 45, hjust = 1), panel.grid.minor = element_blank())
+ggsave(filename = plot_path, plot = p, width = 12, height = 7, dpi = 150)
+
+-> SEVQ:
+
+

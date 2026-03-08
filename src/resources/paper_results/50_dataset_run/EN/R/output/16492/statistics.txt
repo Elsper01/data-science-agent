@@ -1,0 +1,479 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\16492\dataset.csv
+Programming Language: r
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-06 10:25:50
+Total Duration: 1089.76 seconds
+Total Token Usage: 102411 tokens
+Total Costs: $0.4125
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0076 seconds
+
+Method: analyse_dataset
+  Duration: 0.0063 seconds
+
+Method: analyse_metadata
+  Duration: 0.0104 seconds
+
+Method: llm_generate_summary
+  Duration: 171.3481 seconds
+
+Method: llm_generate_goals
+  Duration: 3.4846 seconds
+
+Method: llm_generate_r_code
+  Duration: 370.7546 seconds
+
+Method: test_generated_code
+  Duration: 13.7474 seconds
+
+Method: llm_regenerate_code
+  Duration: 14.8963 seconds
+
+Method: test_generated_code
+  Duration: 10.3728 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 505.1308 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 8961 tokens
+  Costs total: $0.0071
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1601 tokens
+  Costs total: $0.0015
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8530 tokens
+  Costs total: $0.0647
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6252 tokens
+  Costs total: $0.0420
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7755 tokens
+  Costs total: $0.0569
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 306 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 426 tokens
+  Costs total: $0.0011
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3222 tokens
+  Costs total: $0.0049
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2938 tokens
+  Costs total: $0.0043
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 354 tokens
+  Costs total: $0.0009
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6655 tokens
+  Costs total: $0.0485
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2414 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2802 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6251 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4308 tokens
+  Costs total: $0.0240
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5157 tokens
+  Costs total: $0.0340
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2349 tokens
+  Costs total: $0.0083
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2607 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4202 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4255 tokens
+  Costs total: $0.0234
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4939 tokens
+  Costs total: $0.0327
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2290 tokens
+  Costs total: $0.0085
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2904 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5992 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4185 tokens
+  Costs total: $0.0246
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How does the Gamma Ambient Dose Rate fluctuate over time at the Lauf an der Pegnitz station?' visualization="Line chart of 'value' over 'end_measure'." rationale="A line chart is the most effective way to visualize a time series. By plotting 'value' against 'end_measure', users can identify trends, spikes, or periodic patterns in the radiation levels, which is the primary purpose of this monitoring dataset."
+
+-> Code:
+pkgs <- c("readr", "dplyr", "lubridate", "ggplot2", "scales", "tidyr", "stringr")
+inst <- rownames(installed.packages())
+need <- pkgs[!pkgs %in% inst]
+if (length(need) > 0) install.packages(need, repos = "https://cloud.r-project.org")
+
+suppressPackageStartupMessages({
+  library(readr)
+  library(dplyr)
+  library(lubridate)
+  library(ggplot2)
+  library(scales)
+  library(tidyr)
+  library(stringr)
+})
+
+# File paths
+infile <- file.path(".", "src", "resources", "data", "study", "16492", "dataset.csv")
+out_dir <- file.path(".", "src", "resources", "output", "16492")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Load data
+df <- suppressMessages(readr::read_csv(infile, locale = locale(encoding = "UTF-8"), show_col_types = FALSE))
+
+# Data cleaning and parsing
+parse_dt <- function(x) suppressWarnings(lubridate::ymd_hms(x, quiet = TRUE, tz = "UTC"))
+
+df <- df %>%
+  mutate(
+    start_measure = parse_dt(start_measure),
+    end_measure = parse_dt(end_measure),
+    value = suppressWarnings(as.numeric(value)),
+    validated = suppressWarnings(as.numeric(validated))
+  ) %>%
+  filter(!is.na(end_measure), !is.na(value)) %>%
+  # Filter for validated data if the column exists and has values
+  filter(is.na(validated) | validated == 1) %>%
+  arrange(end_measure)
+
+# Calculate statistics for the plot
+mu <- mean(df$value, na.rm = TRUE)
+sdv <- sd(df$value, na.rm = TRUE)
+xmin <- min(df$end_measure, na.rm = TRUE)
+xmax <- max(df$end_measure, na.rm = TRUE)
+
+# Create a ribbon for the standard deviation range
+ribbon_df <- data.frame(
+  end_measure = seq(xmin, xmax, length.out = 200),
+  ymin = mu - sdv,
+  ymax = mu + sdv
+)
+
+# Formatting strings for labels
+mu_str <- scales::number(mu, accuracy = 0.001, decimal.mark = ",", big.mark = ".")
+sd_str <- scales::number(sdv, accuracy = 0.001, decimal.mark = ",", big.mark = ".")
+start_str <- format(xmin, "%d.%m.%Y %H:%M")
+end_str <- format(xmax, "%d.%m.%Y %H:%M")
+
+title_txt <- "Zeitlicher Verlauf der Gamma-ODL-Dosisleistung (µSv/h) in Lauf an der Pegnitz"
+subtitle_txt <- paste0("Messzeitraum: ", start_str, " – ", end_str, " | n=", nrow(df), 
+                       " | Mittelwert=", mu_str, " µSv/h, SD=", sd_str, " µSv/h")
+
+# Plotting
+# Note: Using date_format() from scales instead of label_datetime() to ensure compatibility
+p <- ggplot() +
+  geom_ribbon(data = ribbon_df, aes(x = end_measure, ymin = ymin, ymax = ymax), fill = "#74a9cf", alpha = 0.15) +
+  geom_line(data = df, aes(x = end_measure, y = value), color = "#1368aa", linewidth = 0.7) +
+  geom_point(data = df, aes(x = end_measure, y = value), color = "#0b4f71", size = 1.2, alpha = 0.7) +
+  geom_hline(yintercept = mu, color = "#2b8cbe", linetype = "dashed", linewidth = 0.6) +
+  scale_x_datetime(labels = scales::date_format("%d.%m.%Y\n%H:%M")) +
+  scale_y_continuous(labels = scales::number_format(accuracy = 0.01, decimal.mark = ",", big.mark = ".")) +
+  labs(
+    title = title_txt,
+    subtitle = subtitle_txt,
+    x = "Ende der Messstunde (UTC)",
+    y = "Gamma-ODL-Dosisleistung (µSv/h)",
+    caption = "Datenquelle: BfS (ODL-Info) | Hellblauer Bereich: Mittelwert ± 1 Standardabweichung"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", color = "#1b1b1b"),
+    plot.subtitle = element_text(size = 10, color = "#333333"),
+    axis.title = element_text(color = "#1b1b1b"),
+    axis.text = element_text(color = "#1f1f1f"),
+    panel.grid.minor = element_blank()
+  )
+
+# Save output
+outfile <- file.path(out_dir, "0_zeitverlauf_gamma_odl_lauf.png")
+ggsave(filename = outfile, plot = p, width = 12, height = 7, dpi = 200, units = "in")
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the distribution of the measured radiation values?' visualization="Histogram of 'value'." rationale="A histogram of the 'value' column allows users to see the frequency of different radiation levels. This helps in understanding the 'normal' background radiation range for this specific location and identifying if any measurements are outliers compared to the mean of 0.117 µSv/h."
+
+-> Code:
+packages <- c("readr","dplyr","ggplot2","scales","lubridate","stringr")
+needs <- setdiff(packages, rownames(installed.packages()))
+if(length(needs)>0){install.packages(needs, repos="https://cloud.r-project.org", quiet=TRUE)}
+suppressPackageStartupMessages({
+  library(readr)
+  library(dplyr)
+  library(ggplot2)
+  library(scales)
+  library(lubridate)
+  library(stringr)
+})
+dir_data <- file.path(".", "src","resources","data","study","16492")
+file_data <- file.path(dir_data, "dataset.csv")
+locale_set <- locale(encoding = "UTF-8")
+df <- suppressMessages(readr::read_csv(file_data, locale = locale_set, show_col_types = FALSE, progress = FALSE))
+df <- df %>% mutate(
+  start_measure = suppressWarnings(lubridate::ymd_hms(start_measure, quiet=TRUE)),
+  end_measure = suppressWarnings(lubridate::ymd_hms(end_measure, quiet=TRUE)),
+  value = suppressWarnings(as.numeric(value)),
+  validated = suppressWarnings(as.numeric(validated))
+)
+na_prop <- sapply(df, function(x){
+  if(is.character(x)) return(mean(is.na(x) | trimws(x)==""))
+  mean(is.na(x))
+})
+df_valid <- df %>% filter(!is.na(value) & is.finite(value) & (is.na(validated) | validated==1))
+n_total <- nrow(df)
+n_used <- nrow(df_valid)
+mean_v <- mean(df_valid$value, na.rm=TRUE)
+sd_v <- sd(df_valid$value, na.rm=TRUE)
+median_v <- median(df_valid$value, na.rm=TRUE)
+min_v <- min(df_valid$value, na.rm=TRUE)
+max_v <- max(df_valid$value, na.rm=TRUE)
+iqr_v <- IQR(df_valid$value, na.rm=TRUE)
+bw_fd <- if(is.finite(iqr_v) && iqr_v>0 && n_used>0) 2*iqr_v/(n_used)^(1/3) else (max_v - min_v)/10
+if(!is.finite(bw_fd) || bw_fd<=0) bw_fd <- (max_v - min_v)/10
+if(!is.finite(bw_fd) || bw_fd<=0) bw_fd <- 0.001
+bw <- max(bw_fd, 0.0005)
+fmt <- function(x) scales::number(x, accuracy = 0.001, big.mark = ".", decimal.mark = ",")
+sub_txt <- paste0(
+  "Mittelwert ± SD: ", fmt(mean_v), " ± ", fmt(sd_v), " µSv/h · Median: ", fmt(median_v),
+  " µSv/h · Min–Max: ", fmt(min_v), "–", fmt(max_v), " µSv/h · N: ", n_used,
+  if(any(is.na(df$value))) paste0(" · Ausgeschlossene NAs: ", sum(is.na(df$value))) else ""
+)
+p <- ggplot(df_valid, aes(x=value))+
+  geom_histogram(aes(y=after_stat(density)), binwidth=bw, boundary=0, closed="left", fill="#3B8BC2", color="white", alpha=0.9)+
+  geom_density(color="#1B4F72", linewidth=1.1, adjust=1)+
+  geom_vline(xintercept=mean_v, color="#D55E00", linewidth=1, linetype="solid")+
+  geom_vline(xintercept=median_v, color="#009E73", linewidth=1, linetype="dashed")+
+  scale_x_continuous(labels = label_number(accuracy = 0.001, decimal.mark=","))+
+  labs(title = "Verteilung der Gamma-ODL-Messwerte (Lauf an der Pegnitz)", subtitle = sub_txt, x = "ODL [µSv/h]", y = "Dichte", caption = "Histogramm mit Dichteschätzer; vertikale Linien: Mittelwert (orange) und Median (grün, gestrichelt). Fehlende Werte wurden ausgeschlossen.")+
+  theme_minimal(base_size = 12)+
+  theme(
+    plot.title = element_text(face="bold"),
+    plot.subtitle = element_text(color="#333333"),
+    axis.title.x = element_text(margin=margin(t=8)),
+    axis.title.y = element_text(margin=margin(r=8)),
+    plot.caption = element_text(size=9, color="#555555")
+  )
+output_dir <- file.path(".", "src","resources","output","16492")
+if(!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+outfile <- file.path(output_dir, "1_histogramm_odl_wertverteilung.png")
+ggsave(filename = outfile, plot = p, width = 9, height = 6, dpi = 150, bg = "white")
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Are there any specific times of day when radiation levels are consistently higher or lower?' visualization="Scatter plot of 'value' vs 'end_measure'." rationale="By using a scatter plot of 'value' against 'end_measure', users can look for temporal clusters. Since the data spans a week, this can reveal if fluctuations are random or if they correlate with specific times, potentially indicating meteorological influences like morning dew or daily precipitation patterns."
+
+-> Code:
+# Load necessary libraries
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(scales)
+
+# Set paths
+input_path <- file.path(".", "src", "resources", "data", "study", "16492", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "16492")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+output_path <- file.path(output_dir, "2_streudiagramm_wert_vs_endzeit.png")
+
+# Read data
+df <- read_csv(input_path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE)
+
+# Data Cleaning and Transformation
+df_clean <- df %>%
+  mutate(
+    # Convert time strings to POSIXct
+    end_time = ymd_hms(end_measure, quiet = TRUE),
+    # Convert value to numeric
+    val_num = as.numeric(value),
+    # Convert validated to logical (assuming 1/0 or TRUE/FALSE)
+    is_valid = as.logical(as.integer(validated))
+  ) %>%
+  # Filter out rows with missing critical values
+  filter(!is.na(val_num), !is.na(end_time)) %>%
+  # Filter for validated data if the column exists and has values
+  filter(is.na(is_valid) | is_valid == TRUE) %>%
+  # Remove duplicates
+  distinct(end_time, .keep_all = TRUE) %>%
+  arrange(end_time)
+
+# Check if we have data left to plot
+if (nrow(df_clean) > 0) {
+  
+  # Calculate statistics for annotation and scaling
+  mean_val <- mean(df_clean$val_num, na.rm = TRUE)
+  min_time <- min(df_clean$end_time)
+  max_time <- max(df_clean$end_time)
+  time_range_hours <- as.numeric(difftime(max_time, min_time, units = "hours"))
+  
+  # Determine date breaks dynamically to avoid 'finite number' errors in seq.POSIXt
+  # If range is small, use hours; if large, use days.
+  date_break_str <- if(time_range_hours < 48) "6 hours" else "24 hours"
+  
+  # Create the plot
+  p <- ggplot(df_clean, aes(x = end_time, y = val_num)) +
+    # Scatter points colored by hour of day to highlight diurnal patterns
+    geom_point(aes(color = hour(end_time)), size = 2, alpha = 0.7) +
+    # LOESS smooth to show the trend
+    geom_smooth(method = "loess", formula = y ~ x, se = TRUE, color = "#2C7BB6", fill = "#D1E5F0") +
+    # Horizontal line for the mean
+    geom_hline(yintercept = mean_val, linetype = "dashed", color = "red", alpha = 0.6) +
+    # Scales
+    scale_x_datetime(
+      name = "Zeitpunkt der Messung (Ende)",
+      date_labels = "%d.%m. %H:%M",
+      date_breaks = date_break_str
+    ) +
+    scale_y_continuous(
+      name = "Ortsdosisleistung (µSv/h)",
+      labels = label_number(decimal.mark = ",", accuracy = 0.001)
+    ) +
+    scale_color_viridis_c(
+      name = "Stunde (0-23)",
+      option = "plasma",
+      guide = guide_colorbar(barwidth = 15, barheight = 0.5, title.position = "top")
+    ) +
+    # Labels and Theme
+    labs(
+      title = "Zeitlicher Verlauf der Gamma-Ortsdosisleistung",
+      subtitle = "Analyse von tageszeitlichen Schwankungen und Trends",
+      caption = paste0("Datenquelle: BfS | Anzahl Messpunkte: ", nrow(df_clean))
+    ) +
+    theme_minimal(base_size = 12) +
+    theme(
+      legend.position = "bottom",
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      plot.title = element_text(face = "bold"),
+      panel.grid.minor = element_blank()
+    )
+
+  # Save the plot
+  ggsave(filename = output_path, plot = p, width = 10, height = 6, dpi = 300)
+} else {
+  cat("No valid data points found for plotting.")
+}
+
+
+-> SEVQ:
+
+

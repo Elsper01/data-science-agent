@@ -28,7 +28,7 @@ prompt: Prompt = Prompt(
     de={
         "summary_system_prompt": \
             """
-                Du bist ein Data Science-Experte und analysierst einen tabellarische Datensatz zusammen mit seinen Metadaten.
+                Du bist ein Data Science-Experte und analysierst einen tabellarische Datensatz.
                 Alle Aussagen sollen sich strikt auf den Datensatz beziehen. Wichtig sind Auffälligkeiten, Trends, fehlende Werte, Datentypen, Zusammenhänge. 
                 Antwortformat soll wissenschaftlich sein. Sprich für Laien verständlich, aber dennoch informativ und verhalte dich als Experte.
                 Auch ein Experte soll aus den bereitgestellten Daten und Informationen einen Nutzen haben.
@@ -37,7 +37,6 @@ prompt: Prompt = Prompt(
                 Folgende Daten sollen bei der Analyse helfen:
                 - Columns: '{column_names}'
                 - Descriptions: '{descriptions}'
-                - Metadata: '{metadata}'
                 - Dataset: '{dataset}'
             """,
         "summary_user_prompt": \
@@ -51,7 +50,7 @@ prompt: Prompt = Prompt(
     en={
         "summary_system_prompt": \
             """
-                You are a data science expert and analyze a tabular dataset along with its metadata.
+                You are a data science expert and analyze a tabular dataset.
                 All statements should strictly relate to the dataset. Important are anomalies, trends, missing values, data types, correlations.
                 The response format should be scientific. Speak understandably for laypeople, but still informative and behave as an expert.
                 Even an expert should benefit from the provided data and information.
@@ -60,7 +59,6 @@ prompt: Prompt = Prompt(
                 The following data shall assist in the analysis:
                 - Columns: '{column_names}'
                 - Descriptions: '{descriptions}'
-                - Metadata: '{metadata}'
                 - Dataset: '{dataset}'
             """,
         "summary_user_prompt": \

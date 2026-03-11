@@ -1,0 +1,465 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\139606\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-11 10:40:45
+Total Duration: 972.57 seconds
+Total Token Usage: 98237 tokens
+Total Costs: $0.4316
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0073 seconds
+
+Method: analyse_dataset
+  Duration: 0.0080 seconds
+
+Method: analyse_metadata
+  Duration: 0.0042 seconds
+
+Method: llm_generate_summary
+  Duration: 186.8984 seconds
+
+Method: llm_generate_goals
+  Duration: 3.6576 seconds
+
+Method: llm_generate_python_code
+  Duration: 274.7261 seconds
+
+Method: test_generated_code
+  Duration: 3.4376 seconds
+
+Method: llm_regenerate_code
+  Duration: 10.0237 seconds
+
+Method: test_generated_code
+  Duration: 3.8326 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 489.9763 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7395 tokens
+  Costs total: $0.0060
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1745 tokens
+  Costs total: $0.0018
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7414 tokens
+  Costs total: $0.0523
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7067 tokens
+  Costs total: $0.0489
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7538 tokens
+  Costs total: $0.0535
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 258 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2915 tokens
+  Costs total: $0.0048
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6660 tokens
+  Costs total: $0.0483
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2421 tokens
+  Costs total: $0.0085
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2769 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4238 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4601 tokens
+  Costs total: $0.0271
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7160 tokens
+  Costs total: $0.0559
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2121 tokens
+  Costs total: $0.0077
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2411 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5744 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4219 tokens
+  Costs total: $0.0260
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5599 tokens
+  Costs total: $0.0388
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2383 tokens
+  Costs total: $0.0091
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2558 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5218 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4396 tokens
+  Costs total: $0.0261
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Which radionuclides were detected in the pork sample and at what levels?' visualization="Bar chart of 'Ergebnis' (filtered for numeric values) by 'Pruefmerkmal'." rationale="This dataset contains 40 different test parameters (Pruefmerkmal), but most are non-detectable. A bar chart showing the 'Ergebnis' for each 'Pruefmerkmal' (filtering for those that are not 'n.n.') allows the user to immediately identify which isotopes like Cs-137 or K-40 are present and their specific activity levels in Bq/kg(FM)."
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+try:
+    # Define paths
+    input_path = os.path.join('.', 'src', 'resources', 'data', 'study', '139606', 'dataset.csv')
+    output_dir = os.path.join('.', 'src', 'resources', 'output', '139606', 'run_5')
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Load data
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+
+    # Data Cleaning: Convert 'Ergebnis' to numeric
+    # pd.to_numeric does not have a 'decimal' argument. 
+    # We must replace the decimal comma with a dot before conversion.
+    df['Ergebnis_clean'] = df['Ergebnis'].astype(str).str.replace('\u202f', '', regex=True).str.strip()
+    df['Ergebnis_clean'] = df['Ergebnis_clean'].str.replace(',', '.', regex=False)
+    df['Ergebnis_num'] = pd.to_numeric(df['Ergebnis_clean'], errors='coerce')
+
+    # Identify non-detects (n.n.)
+    non_detect_mask = df['Ergebnis'].astype(str).str.lower().str.contains('n.n', regex=False)
+    total_params = len(df)
+    non_detects = int(non_detect_mask.sum())
+    
+    # Filter for detected values (numeric and not NaN)
+    det_df = df[df['Ergebnis_num'].notna()].copy()
+    
+    # Filter for relevant units if applicable (Bq/kg)
+    if 'Einheit' in det_df.columns:
+        det_df = det_df[det_df['Einheit'].astype(str).str.contains('Bq/kg', na=False)]
+    
+    detects = len(det_df)
+    det_df = det_df.sort_values('Ergebnis_num', ascending=False)
+
+    # Visualization
+    sns.set_theme(style='whitegrid', font_scale=1.1)
+    fig, ax = plt.subplots(figsize=(12, 7))
+
+    if det_df.empty:
+        ax.axis('off')
+        ax.text(0.5, 0.6, 'Keine nachweisbaren Radionuklide gefunden', ha='center', va='center', fontsize=16)
+        subtitle = f'Parameter gesamt: {total_params}, Nicht nachweisbar: {non_detects}, Nachweise: 0'
+        ax.text(0.5, 0.45, subtitle, ha='center', va='center', fontsize=11)
+    else:
+        # Create bar chart
+        palette = sns.color_palette('viridis', n_colors=len(det_df))
+        sns.barplot(data=det_df, x='Pruefmerkmal', y='Ergebnis_num', palette=palette, ax=ax)
+
+        # Use log scale if values vary significantly
+        if det_df['Ergebnis_num'].max() / det_df['Ergebnis_num'].min() > 20:
+            ax.set_yscale('log')
+            y_suffix = ' (log scale)'
+        else:
+            y_suffix = ''
+
+        ax.set_xlabel('Radionuklid (Prüfmerkmal)')
+        y_label_unit = det_df['Einheit'].iloc[0] if 'Einheit' in det_df.columns else 'Bq/kg'
+        ax.set_ylabel(f'Aktivität [{y_label_unit}]{y_suffix}')
+
+        # Add value labels on top of bars
+        for i, p in enumerate(ax.patches):
+            val = det_df['Ergebnis'].iloc[i]
+            ax.annotate(f'{val}', 
+                        (p.get_x() + p.get_width() / 2., p.get_height()), 
+                        ha='center', va='center', 
+                        xytext=(0, 9), 
+                        textcoords='offset points',
+                        fontsize=10, fontweight='bold')
+
+        # Title and Subtitle
+        title_parts = []
+        if 'Bezeichnung' in df.columns and not df['Bezeichnung'].isna().all():
+            title_parts.append(str(df['Bezeichnung'].dropna().iloc[0]))
+        title_context = f" ({' | '.join(title_parts)})" if title_parts else ""
+        
+        ax.set_title(f'Nachgewiesene Radionuklide in der Probe{title_context}', pad=20)
+        
+        subtitle = f'Gesamtanzahl Parameter: {total_params} | Nicht nachweisbar: {non_detects} | Nachweise: {detects}'
+        plt.figtext(0.5, 0.01, subtitle, ha='center', fontsize=10, bbox={"facecolor":"orange", "alpha":0.1, "pad":5})
+
+    plt.xticks(rotation=30, ha='right')
+    plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+
+    # Save output
+    output_path = os.path.join(output_dir, 'radionuklide_levels_barchart.png')
+    fig.savefig(output_path, dpi=300, bbox_inches='tight')
+    plt.close(fig)
+
+except Exception as e:
+    print(f"Error: {str(e)}")
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the distribution of detectable vs. non-detectable results across all tested radionuclides?' visualization="Bar chart showing the count of 'Ergebnis' categories (e.g., 'n.n.' vs specific numeric values) across all 'Pruefmerkmal'." rationale="The summary indicates a high proportion of 'non-detectable' (n.n.) results. Visualizing the frequency of 'Ergebnis' values across all 40 'Pruefmerkmal' entries helps the user understand the sensitivity and the 'clean' nature of the food sample within the IMIS routine monitoring program."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+input_path = './src/resources/data/study\\139606\\dataset.csv'
+output_dir = './src/resources/output\\139606\\run_5'
+plot_filename = '1_verteilung_nachweisbarkeit.png'
+plot_path = os.path.join(output_dir, plot_filename)
+os.makedirs(output_dir, exist_ok=True)
+
+df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+
+df['Ergebnis'] = df['Ergebnis'].astype(str).str.strip().replace({'': np.nan})
+
+def parse_german_number(x):
+    if pd.isna(x):
+        return np.nan
+    s = str(x).strip()
+    if s.lower() in ['n.n.', 'n.n', 'nn']:
+        return np.nan
+    if ',' in s:
+        s2 = s.replace('.', '').replace(',', '.')
+    else:
+        s2 = s
+    return pd.to_numeric(s2, errors='coerce')
+
+df['Ergebnis_num'] = df['Ergebnis'].apply(parse_german_number)
+
+non_detect_mask = df['Ergebnis'].str.lower().eq('n.n.') | df['Ergebnis'].str.lower().eq('n.n') | df['Ergebnis'].str.lower().eq('nn')
+cat = np.full(len(df), 'Fehlend/sonstiges', dtype=object)
+cat[non_detect_mask.fillna(False)] = 'Nicht nachweisbar (n.n.)'
+cat[df['Ergebnis_num'].notna()] = 'Nachweisbar'
+df['Ergebniskategorie'] = pd.Categorical(cat, categories=['Nicht nachweisbar (n.n.)', 'Nachweisbar', 'Fehlend/sonstiges'], ordered=True)
+
+missing_ratio = df.isna().mean()
+num_summary = df[['Ergebnis_num']].describe()
+
+counts = df['Ergebniskategorie'].value_counts(dropna=False).rename_axis('Kategorie').reset_index(name='Anzahl')
+counts['Prozent'] = counts['Anzahl'] / counts['Anzahl'].sum() * 100
+present_categories = [c for c in ['Nicht nachweisbar (n.n.)', 'Nachweisbar', 'Fehlend/sonstiges'] if c in counts['Kategorie'].tolist()]
+
+sns.set_theme(style='whitegrid')
+plt.figure(figsize=(8, 6), dpi=150)
+palette = {'Nicht nachweisbar (n.n.)': '#7f8c8d', 'Nachweisbar': '#2ecc71', 'Fehlend/sonstiges': '#f39c12'}
+ax = sns.barplot(data=counts, x='Kategorie', y='Anzahl', order=present_categories, palette=[palette.get(k, '#3498db') for k in present_categories])
+ax.set_xlabel('Kategorie des Ergebnisses')
+ax.set_ylabel(f'Anzahl der Prüfergebnisse (n={int(counts["Anzahl"].sum())})')
+ax.set_title('Verteilung nachweisbarer vs. nicht nachweisbarer Ergebnisse über alle Radionuklide')
+for p in ax.patches:
+    height = p.get_height()
+    if height is not None and not np.isnan(height):
+        total = counts['Anzahl'].sum()
+        pct = 100.0 * float(height) / float(total) if total else 0.0
+        ax.annotate(f'{int(height)}\n({pct:.1f}%)', (p.get_x() + p.get_width() / 2., height), ha='center', va='bottom', fontsize=10)
+plt.xticks(rotation=0)
+plt.tight_layout()
+plt.savefig(plot_path, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What was the measurement duration used to achieve these detection limits?' visualization="Table showing 'Pruefmerkmal', 'Ergebnis', and 'Einheit' for the record where 'Einheit' is 's' (seconds)." rationale="The dataset includes technical metadata like 'Messzeit' (measurement time) within the 'Pruefmerkmal' or 'Ergebnis' fields. Identifying the specific 'Pruefmerkmal' related to time and its corresponding 'Ergebnis' value (156,000 seconds) demonstrates the high-sensitivity approach of the 'Gammaspektrometrie' method."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+import sys
+
+try:
+    input_path = r'./src/resources/data/study\139606\dataset.csv'
+    output_dir = r'./src/resources/output\139606\run_5'
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+    str_cols = df.select_dtypes(include=['object', 'string']).columns
+    for c in str_cols:
+        df[c] = df[c].astype(str).str.strip()
+    def parse_num(x):
+        if pd.isna(x):
+            return np.nan
+        s = str(x).strip()
+        if s == '' or s.lower().startswith('n'):
+            return np.nan
+        s = s.replace('.', '')
+        s = s.replace(',', '.')
+        try:
+            return float(s)
+        except Exception:
+            return np.nan
+    df['Ergebnis_num'] = df['Ergebnis'].apply(parse_num)
+    _missing_ratio = df.replace({'': np.nan}).isna().mean()
+    _numeric_summary = df['Ergebnis_num'].describe()
+    _einheit_counts = df['Einheit'].fillna('').astype(str).str.strip().value_counts()
+    df_s = df[df['Einheit'].fillna('').astype(str).str.strip().str.lower() == 's'].copy()
+    sns.set_theme(style='whitegrid', font_scale=1.1)
+    cols = ['Pruefmerkmal', 'Ergebnis', 'Einheit']
+    if not df_s.empty:
+        table_df = df_s[cols].copy()
+        table_df.insert(0, 'Nr.', np.arange(1, len(table_df) + 1))
+        display_cols = ['Nr.'] + cols
+        n_rows = table_df.shape[0]
+        n_cols = len(display_cols)
+        fig_h = max(2.8, 0.7 * n_rows + 1.8)
+        fig_w = max(7.5, 1.4 * n_cols + 2)
+        fig, ax = plt.subplots(figsize=(fig_w, fig_h))
+        ax.axis('off')
+        cell_text = table_df[display_cols].values.tolist()
+        col_labels = display_cols
+        table = ax.table(cellText=cell_text, colLabels=col_labels, loc='center', cellLoc='left')
+        table.auto_set_font_size(False)
+        table.set_fontsize(11)
+        table.scale(1, 1.35)
+        for (r, c), cell in table.get_celld().items():
+            if r == 0:
+                cell.set_facecolor('#27496d')
+                cell.set_text_props(color='white', weight='bold')
+            else:
+                if r % 2 == 0:
+                    cell.set_facecolor('#f5f7fa')
+        title = 'Messdauer der Gammaspektrometrie-Messung (Sekunden)'
+        subtitle = 'Tabelle mit Einträgen, bei denen die Einheit "s" ist (z. B. Messzeit)'
+        ax.set_title(title + '\n' + subtitle, fontsize=14, loc='left', pad=20)
+        plt.tight_layout(rect=[0, 0, 1, 0.94])
+        out_path = os.path.join(output_dir, '2_messzeit_tabelle.png')
+        plt.savefig(out_path, dpi=300, bbox_inches='tight')
+        plt.close(fig)
+    else:
+        fig, ax = plt.subplots(figsize=(9, 3.8))
+        ax.axis('off')
+        ax.set_title('Messdauer der Gammaspektrometrie-Messung (Sekunden)', fontsize=14, loc='left', pad=20)
+        ax.text(0.0, 0.62, 'Keine Zeile mit Einheit "s" gefunden.', fontsize=14, weight='bold')
+        ax.text(0.0, 0.38, 'Hinweis: Die technische Messzeit könnte anders kodiert sein oder in den Daten fehlen.', fontsize=11)
+        plt.tight_layout(rect=[0, 0, 1, 0.94])
+        out_path = os.path.join(output_dir, '2_messzeit_tabelle.png')
+        plt.savefig(out_path, dpi=300, bbox_inches='tight')
+        plt.close(fig)
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+

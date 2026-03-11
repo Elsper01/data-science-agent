@@ -1,0 +1,510 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\110165\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-11 10:38:37
+Total Duration: 949.12 seconds
+Total Token Usage: 105201 tokens
+Total Costs: $0.4259
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0509 seconds
+
+Method: analyse_dataset
+  Duration: 0.0130 seconds
+
+Method: analyse_metadata
+  Duration: 0.0032 seconds
+
+Method: llm_generate_summary
+  Duration: 185.2776 seconds
+
+Method: llm_generate_goals
+  Duration: 5.1094 seconds
+
+Method: llm_generate_python_code
+  Duration: 257.3480 seconds
+
+Method: test_generated_code
+  Duration: 4.8359 seconds
+
+Method: llm_regenerate_code
+  Duration: 20.5115 seconds
+
+Method: test_generated_code
+  Duration: 4.2790 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 471.6919 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7390 tokens
+  Costs total: $0.0054
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1411 tokens
+  Costs total: $0.0015
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7441 tokens
+  Costs total: $0.0435
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8724 tokens
+  Costs total: $0.0562
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8373 tokens
+  Costs total: $0.0528
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 941 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 968 tokens
+  Costs total: $0.0025
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 941 tokens
+  Costs total: $0.0024
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3194 tokens
+  Costs total: $0.0043
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3259 tokens
+  Costs total: $0.0041
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3153 tokens
+  Costs total: $0.0045
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 277 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 322 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7102 tokens
+  Costs total: $0.0547
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2265 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2496 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4359 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4173 tokens
+  Costs total: $0.0242
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5877 tokens
+  Costs total: $0.0430
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2181 tokens
+  Costs total: $0.0083
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2356 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4423 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3945 tokens
+  Costs total: $0.0223
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5690 tokens
+  Costs total: $0.0405
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2220 tokens
+  Costs total: $0.0081
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2483 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4848 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4137 tokens
+  Costs total: $0.0233
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How are the cultural monuments distributed across the different districts of Schleswig-Holstein?' visualization="Horizontal bar chart with 'Kreis' on the y-axis and the count of 'Objektnummer' on the x-axis." rationale="A bar chart showing the count of monuments per 'Kreis' (District) allows users to quickly identify which regions have the highest density of protected sites. This is essential for understanding the geographic scope of the dataset and identifying regional focuses like Nordfriesland."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import StrMethodFormatter
+
+input_path = r'./src/resources/data/study/110165/dataset.csv'
+output_dir = os.path.normpath(r'./src/resources/output/110165/run_4')
+os.makedirs(output_dir, exist_ok=True)
+
+# The error 'UnicodeDecodeError: 'utf-8' codec can't decode byte 0xfc' 
+# suggests the file is likely encoded in 'latin-1' or 'iso-8859-1' (common for German data with umlauts like 'ü').
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+except UnicodeDecodeError:
+    try:
+        df = pd.read_csv(input_path, sep=',', encoding='latin-1')
+    except Exception:
+        df = pd.read_csv(input_path, sep=',', encoding='iso-8859-1')
+
+# Basic EDA outputs
+missing_ratio = df.isna().mean().sort_values(ascending=False)
+missing_ratio.to_csv(os.path.join(output_dir, 'eda_anteil_fehlwerte_spalten.csv'), encoding='utf-8', header=['Anteil_Fehlwerte'])
+
+numeric_df = df.select_dtypes(include=[np.number])
+if numeric_df.shape[1] > 0:
+    numeric_summary = numeric_df.describe().T
+    numeric_summary.to_csv(os.path.join(output_dir, 'eda_numerische_uebersicht.csv'), encoding='utf-8')
+
+# Visualization Logic
+# Ensure 'Objektnummer' is treated as a unique identifier
+if 'Objektnummer' in df.columns:
+    # We keep it as string or numeric to count unique occurrences
+    df['Objektnummer'] = df['Objektnummer'].astype(str)
+else:
+    # Fallback if column missing
+    df['Objektnummer'] = range(len(df))
+
+# Handle 'Kreis' column
+if 'Kreis' in df.columns:
+    kreis_series = df['Kreis'].fillna('Unbekannt').astype(str).str.strip()
+else:
+    kreis_series = pd.Series(['Unbekannt'] * len(df))
+
+# Aggregate data for the plot
+counts = (
+    df.assign(Kreis_Clean=kreis_series)
+      .groupby('Kreis_Clean')['Objektnummer']
+      .nunique()
+      .sort_values(ascending=False)
+      .reset_index(name='Anzahl_Denkmale')
+)
+counts.to_csv(os.path.join(output_dir, 'eda_analyse_denkmale_pro_kreis.csv'), index=False, encoding='utf-8')
+
+# Plotting
+sns.set_theme(style='whitegrid')
+plt.rcParams.update({'figure.dpi': 100, 'savefig.dpi': 300, 'font.size': 11})
+
+# Dynamic height based on number of categories
+height = max(6, 0.4 * len(counts))
+fig, ax = plt.subplots(figsize=(12, height))
+
+# Create bar chart
+palette = sns.color_palette('viridis', n_colors=len(counts))
+sns.barplot(data=counts, y='Kreis_Clean', x='Anzahl_Denkmale', ax=ax, palette=palette, hue='Kreis_Clean', legend=False)
+
+# Formatting
+ax.set_title('Verteilung der Kulturdenkmäler nach Kreis in Schleswig-Holstein', pad=20)
+ax.set_xlabel('Anzahl der Denkmale (eindeutige Objektnummern)')
+ax.set_ylabel('Kreis')
+
+# Add value labels to the end of bars
+max_val = counts['Anzahl_Denkmale'].max() if not counts.empty else 1
+for i, p in enumerate(ax.patches):
+    width = p.get_width()
+    ax.text(width + (max_val * 0.01), p.get_y() + p.get_height()/2, 
+            f'{int(width):,}', va='center', fontsize=10)
+
+plt.tight_layout()
+plot_path = os.path.join(output_dir, '0_verteilung_denkmale_pro_kreis.png')
+fig.savefig(plot_path, bbox_inches='tight')
+plt.close(fig)
+
+print(f"Successfully processed data and saved visualization to {plot_path}")
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What are the most common types of cultural monuments in the state?' visualization="Bar chart with 'Kulturdenkmaltyp' on the x-axis and the count of 'Objektnummer' on the y-axis." rationale="By analyzing the 'Kulturdenkmaltyp' (Monument Type), users can see the composition of the list. Since 'Bauliche Anlage' (Buildings) makes up the majority, a bar chart helps visualize the prevalence of buildings versus other categories like Ensembles or Green Monuments."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(style="whitegrid")
+
+# The error 'utf-8' codec can't decode byte 0xfc indicates the file is likely encoded in 'latin-1' or 'cp1252'
+# (0xfc is 'ü' in Latin-1, common in German datasets).
+file_path = r'./src/resources/data/study/110165/dataset.csv'
+
+try:
+    # Attempting to read with 'latin-1' which is common for German datasets containing umlauts
+    df = pd.read_csv(file_path, sep=',', encoding='latin-1')
+except Exception as e:
+    # Fallback to 'cp1252' if latin-1 fails
+    try:
+        df = pd.read_csv(file_path, sep=',', encoding='cp1252')
+    except Exception as e2:
+        print(f"Failed to read CSV: {e2}")
+        raise
+
+# Basic data cleaning and validation
+if 'Kulturdenkmaltyp' not in df.columns or 'Objektnummer' not in df.columns:
+    print('Required columns missing: Kulturdenkmaltyp and/or Objektnummer.')
+    raise SystemExit(1)
+
+# Handle missing values and clean the category column
+df['Kulturdenkmaltyp_clean'] = df['Kulturdenkmaltyp'].fillna('Unbekannt').astype(str).str.strip()
+pct_missing_type = (df['Kulturdenkmaltyp'].isna().mean() * 100)
+
+# Aggregate data: Count unique Objektnummer per type
+counts = (
+    df.groupby('Kulturdenkmaltyp_clean')['Objektnummer']
+    .nunique()
+    .reset_index(name='Anzahl')
+    .sort_values('Anzahl', ascending=False)
+)
+
+n_total = int(df['Objektnummer'].nunique())
+
+if counts.empty:
+    print('No data available for visualization.')
+    raise SystemExit(1)
+
+# Visualization setup
+ncat = len(counts)
+width = max(10, min(2 + 1.2 * ncat, 20))
+height = 7
+
+fig, ax = plt.subplots(figsize=(width, height), dpi=120)
+sns.barplot(data=counts, x='Kulturdenkmaltyp_clean', y='Anzahl', ax=ax, palette='viridis', edgecolor='0.3')
+
+# Labels and Title
+ax.set_xlabel('Kulturdenkmaltyp (Monument Type)', fontsize=11)
+ax.set_ylabel('Anzahl der Objekte (Count)', fontsize=11)
+ax.set_title(
+    f'Häufigste Kulturdenkmaltypen in Schleswig-Holstein\n'
+    f'(Gesamt n={n_total}, Fehlende Angaben: {pct_missing_type:.1f}%)',
+    fontsize=14, pad=20
+)
+
+# Rotate x-labels for readability
+plt.xticks(rotation=45, ha='right')
+
+# Add value labels on top of bars
+for p in ax.patches:
+    h = p.get_height()
+    if h > 0:
+        ax.annotate(f'{int(h)}', 
+                    (p.get_x() + p.get_width() / 2., h), 
+                    ha='center', va='bottom', 
+                    fontsize=10, xytext=(0, 5), 
+                    textcoords='offset points')
+
+# Clean up spines
+sns.despine()
+plt.tight_layout()
+
+# Save the plot
+output_path = r'./src/resources/output/110165/run_4/1_kulturdenkmaltypen_barchart.png'
+import os
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+try:
+    fig.savefig(output_path, bbox_inches='tight')
+    print(f"Successfully saved plot to {output_path}")
+except Exception as e:
+    print(f"Error saving plot: {e}")
+    raise
+
+plt.close(fig)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What are the primary legal and historical justifications for monument protection?' visualization="Bar chart of the top 10 most frequent values in the 'Begr_ndung' column." rationale="The 'Begr_ndung' field explains why a site is protected. Visualizing the most frequent justifications (e.g., 'Geschichtlich, Städtebaulich') helps researchers understand the criteria used by the State Office for Monument Preservation and the historical values prioritized in the region."
+
+-> Code:
+import os
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Paths
+input_path = os.path.normpath('./src/resources/data/study/110165/dataset.csv')
+output_dir = os.path.normpath('./src/resources/output/110165/run_4')
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, '2_top10_begruendung.png')
+
+# The error 'UnicodeDecodeError: utf-8 codec can't decode byte 0xfc' 
+# suggests the file is likely encoded in 'latin-1' (ISO-8859-1) or 'cp1252', 
+# which is common for German datasets containing umlauts (ü = 0xfc).
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8', low_memory=False)
+except UnicodeDecodeError:
+    # Fallback to latin-1 if utf-8 fails
+    df = pd.read_csv(input_path, sep=',', encoding='latin-1', low_memory=False)
+
+# Column name handling
+col_name = 'Begr_ndung'
+if col_name not in df.columns:
+    # Check if the encoding issue affected column names (e.g., 'Begründung')
+    # Look for columns that start with 'Begr'
+    potential_cols = [c for c in df.columns if c.startswith('Begr')]
+    if potential_cols:
+        col_name = potential_cols[0]
+    else:
+        print(f'Fehlende Spalte: {col_name}. Vorhandene Spalten: {df.columns.tolist()}')
+        raise SystemExit(1)
+
+# Data Cleaning
+total_rows = len(df)
+valid_series = df[col_name].dropna()
+valid_series = valid_series.astype(str).str.strip()
+# Replace multiple spaces with single space
+valid_series = valid_series.str.replace(r'\s+', ' ', regex=True)
+# Remove empty strings
+valid_series = valid_series[valid_series != '']
+
+valid_n = len(valid_series)
+missing_n = total_rows - valid_n
+missing_pct = (missing_n / total_rows * 100) if total_rows > 0 else 0
+
+# Frequency Analysis
+value_counts = valid_series.value_counts()
+
+if value_counts.empty:
+    fig, ax = plt.subplots(figsize=(10, 6), dpi=150)
+    ax.text(0.5, 0.5, 'Keine gültigen Werte in der Spalte "Begründung" vorhanden.', ha='center', va='center', fontsize=14)
+    ax.axis('off')
+    plt.savefig(output_path, dpi=150, bbox_inches='tight')
+    plt.close()
+    raise SystemExit(0)
+
+# Get Top 10
+top10 = value_counts.head(10)
+# Reverse for horizontal bar chart (highest at top)
+top10 = top10.iloc[::-1]
+percentages = (top10 / valid_n * 100)
+
+# Visualization
+sns.set_theme(style='whitegrid', context='talk')
+fig, ax = plt.subplots(figsize=(14, 8), dpi=150)
+
+# Use a color palette
+colors = sns.color_palette('viridis', n_colors=len(top10))
+bars = ax.barh(top10.index, top10.values, color=colors)
+
+# Labels and Title
+ax.set_xlabel('Anzahl der Einträge', fontsize=12)
+ax.set_ylabel('Begründung (Kriterienkombination)', fontsize=12)
+
+# Add value labels on bars
+max_val = top10.max()
+for i, (val, pct) in enumerate(zip(top10.values, percentages.values)):
+    ax.text(val + (max_val * 0.01), i, f'{int(val)} ({pct:.1f}%)', 
+            va='center', ha='left', fontsize=11, fontweight='bold')
+
+title_main = 'Top 10 häufigste Begründungen für den Denkmalschutz'
+title_sub = f'Grundlage: {total_rows} Objekte | Gültige Einträge: {valid_n} | Fehlend/Leer: {missing_pct:.1f}%'
+plt.title(f'{title_main}\n{title_sub}', fontsize=16, pad=20)
+
+# Adjust layout to prevent clipping
+plt.tight_layout()
+plt.savefig(output_path, dpi=150, bbox_inches='tight')
+plt.close()
+
+
+-> SEVQ:
+
+

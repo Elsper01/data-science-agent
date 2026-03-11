@@ -1,0 +1,472 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\137336\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-11 10:23:40
+Total Duration: 982.07 seconds
+Total Token Usage: 96093 tokens
+Total Costs: $0.4362
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0111 seconds
+
+Method: analyse_dataset
+  Duration: 0.0073 seconds
+
+Method: analyse_metadata
+  Duration: 0.0201 seconds
+
+Method: llm_generate_summary
+  Duration: 168.8707 seconds
+
+Method: llm_generate_goals
+  Duration: 4.7746 seconds
+
+Method: llm_generate_python_code
+  Duration: 301.1757 seconds
+
+Method: test_generated_code
+  Duration: 6.7785 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 500.4344 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7597 tokens
+  Costs total: $0.0061
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1690 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6465 tokens
+  Costs total: $0.0426
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 9783 tokens
+  Costs total: $0.0755
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7525 tokens
+  Costs total: $0.0531
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 314 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5376 tokens
+  Costs total: $0.0388
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2085 tokens
+  Costs total: $0.0080
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2280 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4781 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3950 tokens
+  Costs total: $0.0229
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7383 tokens
+  Costs total: $0.0492
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3224 tokens
+  Costs total: $0.0111
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3662 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4998 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5622 tokens
+  Costs total: $0.0313
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6229 tokens
+  Costs total: $0.0479
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1944 tokens
+  Costs total: $0.0071
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2224 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4322 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4135 tokens
+  Costs total: $0.0271
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What are the different analytical methods used to test the meadow litter sample?' visualization="Bar chart of the count of records grouped by 'Methode'." rationale='Understanding the variety of testing methods (Methode) provides insight into the scope of the monitoring program. A bar chart showing the count of tests performed per method helps users see which techniques (like Gamma Spectrometry or HRGC-MS) were most heavily utilized in this screening.'
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+try:
+    df = pd.read_csv('./src/resources/data/study\\137336\\dataset.csv', sep=',', encoding='utf-8')
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+for c in df.columns:
+    if df[c].dtype == object:
+        df[c] = df[c].astype(str).str.replace('\u200b', '', regex=False).str.strip()
+
+df = df.replace({'': np.nan, 'nan': np.nan, 'None': np.nan})
+
+missing_prop = df.isna().mean().sort_values(ascending=False)
+
+if 'Ergebnis' in df.columns:
+    erg_raw = df['Ergebnis'].astype(str)
+    erg_clean = erg_raw.str.replace(',', '.', regex=False)
+    erg_clean = erg_clean.str.replace('\s+', '', regex=True)
+    erg_clean = erg_clean.str.replace(r'^[<>]\s*', '', regex=True)
+    erg_clean = erg_clean.replace({'n.n.': np.nan, 'n.n': np.nan, 'nn': np.nan, 'N.N.': np.nan, 'N.N': np.nan})
+    df['Ergebnis_num'] = pd.to_numeric(erg_clean, errors='coerce')
+    _ = df['Ergebnis_num'].describe(include='all')
+
+methode_col = 'Methode' if 'Methode' in df.columns else None
+if methode_col is None:
+    print('Spalte "Methode" nicht gefunden.')
+    sys.exit(1)
+
+df['Methode_clean'] = df[methode_col].where(df[methode_col].notna(), 'Unbekannt').astype(str).str.strip()
+df.loc[df['Methode_clean'].str.len() == 0, 'Methode_clean'] = 'Unbekannt'
+
+method_counts = df['Methode_clean'].value_counts(dropna=False).sort_values(ascending=False)
+methods_df = method_counts.reset_index()
+methods_df.columns = ['Methode', 'Anzahl']
+
+sns.set_theme(style='whitegrid', context='talk')
+num_cats = len(methods_df)
+fig_height = max(4, 0.5 * num_cats + 1)
+fig, ax = plt.subplots(figsize=(12, fig_height), dpi=200)
+palette = sns.color_palette('crest', n_colors=num_cats)
+sns.barplot(data=methods_df, y='Methode', x='Anzahl', ax=ax, palette=palette, orient='h')
+ax.set_title('Analytische Methoden im IMIS-Screening des Wiesenstreus\nAnzahl der Messungen je Methode (22.11.2016)', loc='left')
+ax.set_xlabel('Anzahl der Messungen')
+ax.set_ylabel('Analysemethode (Methode)')
+for i, v in enumerate(methods_df['Anzahl'].values.tolist()):
+    ax.text(v + max(1, methods_df['Anzahl'].max() * 0.01), i, str(int(v)), va='center', ha='left', fontsize=11)
+ax.margins(x=0.05)
+plt.tight_layout()
+
+out_dir = os.path.normpath('./src/resources/output\\137336\\run_5')
+os.makedirs(out_dir, exist_ok=True)
+out_path = os.path.join(out_dir, '0_methode_counts.png')
+try:
+    fig.savefig(out_path, bbox_inches='tight')
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Which radioactive isotopes and chemical substances were successfully detected in the sample?' visualization="Bar chart showing 'Ergebnis' (filtered for numerical values) on the y-axis and 'Pruefmerkmal' on the x-axis." rationale="Since many results in the 'Ergebnis' column are 'n.n.' (not detectable), it is crucial to filter and visualize the actual numerical values. A bar chart of 'Ergebnis' for specific 'Pruefmerkmal' (where the result is a positive number) allows users to identify significant findings, such as the natural background radiation of Potassium-40 or specific organic pollutants."
+
+-> Code:
+import os
+import re
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+def load_dataset():
+    path_raw = './src/resources/data/study\\137336\\dataset.csv'
+    path_norm = path_raw.replace('\\', '/')
+    if os.path.exists(path_raw):
+        return pd.read_csv(path_raw, sep=',', encoding='utf-8')
+    if os.path.exists(path_norm):
+        return pd.read_csv(path_norm, sep=',', encoding='utf-8')
+    raise FileNotFoundError('Datendatei wurde nicht gefunden.')
+
+df = load_dataset()
+
+eda = {}
+eda['row_count'] = len(df)
+eda['col_count'] = df.shape[1]
+missing_prop = df.isna().mean()
+eda['missing_prop'] = missing_prop.to_dict()
+
+if 'Ergebnis' not in df.columns:
+    raise KeyError('Spalte "Ergebnis" fehlt in den Daten.')
+if 'Pruefmerkmal' not in df.columns:
+    raise KeyError('Spalte "Pruefmerkmal" fehlt in den Daten.')
+if 'Einheit' not in df.columns:
+    df['Einheit'] = np.nan
+
+def is_censored_value(x):
+    if pd.isna(x):
+        return False
+    s = str(x).strip().lower()
+    if s == '':
+        return False
+    if s.startswith('<') or s.startswith('≤'):
+        return True
+    if 'n.n' in s or 'nicht nachweis' in s or 'unter loq' in s or 'loq' in s:
+        return True
+    return False
+
+def parse_numeric(x):
+    if pd.isna(x):
+        return np.nan
+    s = str(x).strip().lower()
+    if s == '' or 'n.n' in s or 'nicht nachweis' in s or s.startswith('<') or s.startswith('≤'):
+        return np.nan
+    s = re.sub(r'[^0-9,\.\-]', '', s)
+    s = s.replace(',', '.')
+    try:
+        return float(s)
+    except Exception:
+        return np.nan
+
+erg_raw = df['Ergebnis'].astype(str).str.strip()
+
+df['Ergebnis_num'] = erg_raw.apply(parse_numeric)
+
+df['censored'] = erg_raw.apply(is_censored_value)
+
+df['detected'] = df['Ergebnis_num'] > 0
+
+total_n = len(df)
+n_detected = int(df['detected'].sum())
+n_zero = int((df['Ergebnis_num'] == 0).sum())
+n_censored = int(df['censored'].sum())
+n_missing = int(df['Ergebnis_num'].isna().sum() - df['censored'].sum())
+
+plot_df = df[(df['detected']) & df['Pruefmerkmal'].notna()].copy()
+
+if plot_df.empty:
+    sns.set_theme(style='whitegrid', context='talk')
+    fig, ax = plt.subplots(figsize=(10, 4))
+    ax.axis('off')
+    titel = "Keine nachgewiesenen Stoffe/Isotope (>0)"
+    text = (
+        f"Stichprobe: {df['Bezeichnung'].iloc[0] if 'Bezeichnung' in df.columns and len(df)>0 else ''}\n"
+        f"Gesamtmessungen: {total_n} | quantitativ nachgewiesen: {n_detected} | zensiert/n.n.: {n_censored} | numerisch = 0: {n_zero} | fehlend: {n_missing}"
+    )
+    ax.text(0.5, 0.6, titel, ha='center', va='center', fontsize=18)
+    ax.text(0.5, 0.35, text, ha='center', va='center', fontsize=12)
+    out_dir_1 = './src/resources/output\\137336\\run_5'
+    out_dir_2 = os.path.join('.', 'src', 'resources', 'output', '137336', 'run_5')
+    os.makedirs(out_dir_1, exist_ok=True)
+    os.makedirs(out_dir_2, exist_ok=True)
+    fp1 = f"{out_dir_1}/1_nachweise_balken.png"
+    fp2 = os.path.join(out_dir_2, '1_nachweise_balken.png')
+    plt.savefig(fp1, dpi=300, bbox_inches='tight', facecolor='white')
+    plt.savefig(fp2, dpi=300, bbox_inches='tight', facecolor='white')
+    plt.close()
+else:
+    plot_df['Einheit'] = plot_df['Einheit'].fillna('ohne Einheit')
+    order = plot_df.sort_values(['Einheit', 'Ergebnis_num'], ascending=[True, False])['Pruefmerkmal'].tolist()
+    plot_df = plot_df.set_index('Pruefmerkmal').loc[order].reset_index()
+    units = plot_df['Einheit'].unique().tolist()
+    palette = sns.color_palette('tab20', n_colors=max(3, len(units)))
+    color_map = {u: palette[i % len(palette)] for i, u in enumerate(units)}
+    colors = plot_df['Einheit'].map(color_map)
+    sns.set_theme(style='whitegrid', context='talk')
+    n_bars = len(plot_df)
+    fig_w = max(14, n_bars * 0.5)
+    fig_h = 8
+    fig, ax = plt.subplots(figsize=(fig_w, fig_h))
+    ax.bar(plot_df['Pruefmerkmal'], plot_df['Ergebnis_num'], color=colors)
+    try:
+        ax.set_yscale('log')
+    except Exception:
+        pass
+    ax.set_xlabel('Prüfmerkmal')
+    y_label = 'Ergebnis (jeweilige Einheit), logarithmische Skala'
+    ax.set_ylabel(y_label)
+    titel_teil = df['Bezeichnung'].iloc[0] if 'Bezeichnung' in df.columns and len(df)>0 else ''
+    datum_teil = df['Probenahme_Beginn_Datum'].iloc[0] if 'Probenahme_Beginn_Datum' in df.columns and len(df)>0 else ''
+    ax.set_title(f"Nachgewiesene radioaktive Isotope und chemische Substanzen in '{titel_teil}' ({datum_teil})\n{n_detected} von {total_n} Prüfmerkmalen mit quantitativen Nachweisen (>0). Einheiten farblich codiert.")
+    handles = []
+    labels = []
+    for u in units:
+        handles.append(plt.Line2D([0], [0], marker='s', color='w', markerfacecolor=color_map[u], markersize=10, linewidth=0))
+        labels.append(u)
+    ax.legend(handles, labels, title='Einheit', loc='upper right', bbox_to_anchor=(1.02, 1.02))
+    rot = 90
+    fsize = 8 if n_bars > 25 else 10
+    ax.tick_params(axis='x', labelrotation=rot, labelsize=fsize)
+    ax.tick_params(axis='y', labelsize=10)
+    caption = (
+        f"Gesamtmessungen: {total_n} | quantitativ nachgewiesen: {n_detected} | zensiert/n.n.: {n_censored} | numerisch = 0: {n_zero} | fehlend: {n_missing}. "
+        f"Achtung: Verschiedene Einheiten – Werte sind nicht direkt vergleichbar."
+    )
+    fig.text(0.01, 0.01, caption, ha='left', va='bottom', fontsize=9)
+    plt.tight_layout(rect=[0, 0.03, 1, 1])
+    out_dir_1 = './src/resources/output\\137336\\run_5'
+    out_dir_2 = os.path.join('.', 'src', 'resources', 'output', '137336', 'run_5')
+    os.makedirs(out_dir_1, exist_ok=True)
+    os.makedirs(out_dir_2, exist_ok=True)
+    fp1 = f"{out_dir_1}/1_nachweise_balken.png"
+    fp2 = os.path.join(out_dir_2, '1_nachweise_balken.png')
+    plt.savefig(fp1, dpi=300, bbox_inches='tight', facecolor='white')
+    plt.savefig(fp2, dpi=300, bbox_inches='tight', facecolor='white')
+    plt.close()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='How are the 104 analytical observations distributed across different measurement units?' visualization="Bar chart of the count of records grouped by 'Einheit'." rationale="The dataset covers radioactivity (Bq/kg), organic pollutants (ng/kg), and general chemistry. Visualizing the distribution of 'Einheit' (Units) helps the user quickly categorize the 104 'Pruefmerkmal' observations into their respective domains (e.g., radiological vs. chemical) based on the scale of measurement."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+try:
+    data_path = r'./src/resources/data/study\137336\dataset.csv'
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+except Exception as e:
+    print(str(e))
+    raise
+
+sns.set_theme(style='whitegrid', context='talk')
+
+df_eda = df.copy()
+for c in df_eda.columns:
+    if df_eda[c].dtype == object:
+        df_eda[c] = df_eda[c].astype(str).str.replace('\u00A0', ' ', regex=False).str.strip()
+        df_eda[c] = df_eda[c].replace({'': np.nan, 'nan': np.nan})
+
+missing_ratio = df_eda.isna().mean()
+
+def parse_ergebnis(v):
+    if pd.isna(v):
+        return np.nan
+    s = str(v).strip().lower()
+    if s in {'n.n.', 'n.n', 'nn', 'n. n.', 'nicht nachweisbar'}:
+        return np.nan
+    s = s.replace('<', '').replace('>', '').replace('~', '')
+    s = s.replace(' ', '').replace(',', '.')
+    try:
+        return float(s)
+    except Exception:
+        return np.nan
+
+if 'Ergebnis' in df_eda.columns:
+    df_eda['Ergebnis_num'] = df_eda['Ergebnis'].apply(parse_ergebnis)
+    _ = df_eda['Ergebnis_num'].describe()
+
+einheit_series = df_eda['Einheit'] if 'Einheit' in df_eda.columns else pd.Series([], dtype=object)
+einheit_series = einheit_series.fillna('Fehlend/keine Angabe').astype(str).str.replace('\u00A0', ' ', regex=False).str.strip()
+counts = einheit_series.value_counts(dropna=False).rename_axis('Einheit').reset_index(name='Anzahl')
+counts = counts.sort_values('Anzahl', ascending=True)
+
+fig_height = min(18, max(4, 0.5 * max(len(counts), 1) + 2))
+fig, ax = plt.subplots(figsize=(12, fig_height))
+palette = sns.color_palette('viridis', n_colors=len(counts))
+ax.barh(counts['Einheit'], counts['Anzahl'], color=palette)
+for i, (cnt) in enumerate(counts['Anzahl'].tolist()):
+    ax.text(cnt + max(counts['Anzahl']) * 0.01, i, str(int(cnt)), va='center', ha='left', fontsize=12, color='#333333')
+ax.set_xlabel('Anzahl der Messwerte')
+ax.set_ylabel('Einheit der Messung')
+ax.set_title(f'Verteilung der Messeinheiten über alle {len(df_eda)} Analysen')
+plt.tight_layout()
+
+output_path = r'./src/resources/output\137336\run_5/2_verteilung_messeinheiten.png'
+plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+

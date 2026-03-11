@@ -1,0 +1,5245 @@
+(.venv) PS C:\Users\jelsper\Desktop\open-data-preview\data-science-agent> python .\src\data_science_agent\rq_continous.py
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+Selected datasets for this run: ['137336', '110165', '139606', '13979', '13473']
+Starting parallel processing with 8 workers …
+Processing datasets:   0%|                                                                                                                                                                                  | 0/25 [00:00<?, ?it/s][nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data]   Package wordnet is already up-to-date!
+  Evaluation Metrics GPT-5: {'bleu': 0.009182806010286837, 'meteor': 0.07403521992050026, 'rouge1': 0.16070742022299114, 'rouge2': 0.046941131204309344, 'rougeL': 0.07074202229911572}
+  Evaluation Metrics GPT-4o: {'bleu': 0.0007419295258017288, 'meteor': 0.03788661164012271, 'rouge1': 0.11904761904761905, 'rouge2': 0.03883495145631068, 'rougeL': 0.08024691358024691}
+  Evaluation Metrics Gemini: {'bleu': 0.0015391182231118661, 'meteor': 0.05071103632267689, 'rouge1': 0.11883802816901409, 'rouge2': 0.04140969162995594, 'rougeL': 0.07482394366197183}
+  Evaluation Metrics Grok: {'bleu': 0.002372283053542241, 'meteor': 0.05942655023655077, 'rouge1': 0.15641025641025638, 'rouge2': 0.05132591958939264, 'rougeL': 0.07777777777777778}
+  Evaluation Metrics Claude: {'bleu': 0.011593891755224787, 'meteor': 0.07370582428644479, 'rouge1': 0.14194464158977999, 'rouge2': 0.044744318181818184, 'rougeL': 0.0660042583392477}
+Evaluation metrics saved to: ./src/resources/output\110165\run_3\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\110165\run_3\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: How are the cultural monuments distributed across the different districts of Schleswig-Holstein?
+- Goal Question: What are the most common types of cultural monuments in the dataset?
+- Goal Question: What is the status of the monument descriptions and how many require updates?
+  Evaluation Metrics GPT-5: {'bleu': 0.007025486473400747, 'meteor': 0.06868687435898453, 'rouge1': 0.16540755467196822, 'rouge2': 0.05093513728611221, 'rougeL': 0.07475149105367793}
+  Evaluation Metrics GPT-4o: {'bleu': 0.0009375667382779504, 'meteor': 0.04140699002981749, 'rouge1': 0.11666666666666667, 'rouge2': 0.038630377524143986, 'rougeL': 0.07982456140350877}
+  Evaluation Metrics Gemini: {'bleu': 0.0019231946421833287, 'meteor': 0.052383992121950614, 'rouge1': 0.11932555123216601, 'rouge2': 0.04154045867589788, 'rougeL': 0.07349762213575442}
+  Evaluation Metrics Grok: {'bleu': 0.0022220962347964026, 'meteor': 0.06436356174595839, 'rouge1': 0.15860566448801744, 'rouge2': 0.04709986916703009, 'rougeL': 0.08017429193899783}
+  Evaluation Metrics Claude: {'bleu': 0.00861238041381444, 'meteor': 0.06496857366128478, 'rouge1': 0.13829387448327696, 'rouge2': 0.04512974802557353, 'rougeL': 0.07065013152950018}
+Evaluation metrics saved to: ./src/resources/output\110165\run_1\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\110165\run_1\summary.txt
+Evaluation done.
+  Evaluation Metrics GPT-5: {'bleu': 0.008296609894208967, 'meteor': 0.07332459759383234, 'rouge1': 0.1590909090909091, 'rouge2': 0.047058823529411764, 'rougeL': 0.07366771159874608}
+  Evaluation Metrics GPT-4o: {'bleu': 0.0008256359655561133, 'meteor': 0.04054343702568193, 'rouge1': 0.11899515204936095, 'rouge2': 0.03970004411116013, 'rougeL': 0.08021154693697664}
+  Evaluation Metrics Gemini: {'bleu': 0.0010679774236529002, 'meteor': 0.046523922630922004, 'rouge1': 0.11453744493392072, 'rouge2': 0.03880070546737213, 'rougeL': 0.07488986784140969}
+  Evaluation Metrics Grok: {'bleu': 0.0020372570989058768, 'meteor': 0.060126671156727395, 'rouge1': 0.1455175400606323, 'rouge2': 0.0459471174685739, 'rougeL': 0.07968817669987006}
+  Evaluation Metrics Claude: {'bleu': 0.006338078095755023, 'meteor': 0.061216721538145995, 'rouge1': 0.14285714285714285, 'rouge2': 0.046636085626911315, 'rougeL': 0.07028265851795265}
+Evaluation metrics saved to: ./src/resources/output\110165\run_2\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\110165\run_2\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: How are cultural monuments distributed across the different districts of Schleswig-Holstein?
+- Goal Question: What are the most common types of cultural monuments in the state?
+- Goal Question: What are the primary legal and historical justifications for monument protection?
+Generated Visualization Goals:
+- Goal Question: How are cultural monuments distributed across the different districts of Schleswig-Holstein?
+- Goal Question: What are the most common types of cultural monuments in the state?
+- Goal Question: What are the primary legal and historical justifications for monument protection?
+  Evaluation Metrics GPT-5: {'bleu': 0.02687911055675257, 'meteor': 0.11466332621227064, 'rouge1': 0.22263450834879406, 'rouge2': 0.08020794652803565, 'rougeL': 0.10760667903525045}
+  Evaluation Metrics GPT-4o: {'bleu': 0.006620272291344706, 'meteor': 0.06464542016557968, 'rouge1': 0.16953528399311532, 'rouge2': 0.053402239448751075, 'rougeL': 0.1110154905335628}
+  Evaluation Metrics Gemini: {'bleu': 0.007532215054598711, 'meteor': 0.06978902745126976, 'rouge1': 0.1577152600170503, 'rouge2': 0.04522184300341297, 'rougeL': 0.09292412617220801}
+  Evaluation Metrics Grok: {'bleu': 0.014963423324933181, 'meteor': 0.09448093264865527, 'rouge1': 0.22332918223329182, 'rouge2': 0.07478188616535107, 'rougeL': 0.1145703611457036}
+  Evaluation Metrics Claude: {'bleu': 0.015172492274785341, 'meteor': 0.08954836088749708, 'rouge1': 0.2081237911025145, 'rouge2': 0.07278358497870693, 'rougeL': 0.10676982591876209}
+Evaluation metrics saved to: ./src/resources/output\137336\run_1\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\137336\run_1\summary.txt
+Evaluation done.
+  Evaluation Metrics GPT-5: {'bleu': 0.021683332121788336, 'meteor': 0.10817842281430386, 'rouge1': 0.2303262955854127, 'rouge2': 0.08759124087591241, 'rougeL': 0.10978886756238003}
+  Evaluation Metrics GPT-4o: {'bleu': 0.008303808057503241, 'meteor': 0.0682644108158135, 'rouge1': 0.18314077877620882, 'rouge2': 0.06423982869379015, 'rougeL': 0.11382113821138212}
+  Evaluation Metrics Gemini: {'bleu': 0.00923642716748816, 'meteor': 0.07298745834063082, 'rouge1': 0.16666666666666666, 'rouge2': 0.05106382978723404, 'rougeL': 0.09183673469387754}
+  Evaluation Metrics Grok: {'bleu': 0.015123787674348124, 'meteor': 0.09854391330668442, 'rouge1': 0.22378199834847232, 'rouge2': 0.0768595041322314, 'rougeL': 0.11312964492155243}
+Generated Visualization Goals:
+- Goal Question: What is the distribution of analytical methods used for this sample screening?
+- Goal Question: Which specific analytes (Pruefmerkmal) were successfully detected and what were their values?
+- Goal Question: What are the different measurement units used across the 104 test parameters?
+  Evaluation Metrics Claude: {'bleu': 0.0119546844305405, 'meteor': 0.07437468495765032, 'rouge1': 0.1740842851516345, 'rouge2': 0.05754828537642886, 'rougeL': 0.10555336746750689}
+Evaluation metrics saved to: ./src/resources/output\137336\run_5\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\137336\run_5\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: What are the different analytical methods used to test the meadow litter sample?
+- Goal Question: Which radioactive isotopes and chemical substances were successfully detected in the sample?
+- Goal Question: How are the 104 analytical observations distributed across different measurement units?
+  Evaluation Metrics GPT-5: {'bleu': 0.024520676464186073, 'meteor': 0.10755911387111233, 'rouge1': 0.2199623352165725, 'rouge2': 0.08895589898228422, 'rougeL': 0.10696798493408662}
+  Evaluation Metrics GPT-4o: {'bleu': 0.008450805342863977, 'meteor': 0.06972055100979294, 'rouge1': 0.18174061433447097, 'rouge2': 0.06148590947907771, 'rougeL': 0.11348122866894199}
+  Evaluation Metrics Gemini: {'bleu': 0.007432491055374298, 'meteor': 0.07151084738261212, 'rouge1': 0.16488680051260146, 'rouge2': 0.052159042325780246, 'rougeL': 0.09226826142674072}
+  Evaluation Metrics Grok: {'bleu': 0.009811410515607561, 'meteor': 0.08517960181343526, 'rouge1': 0.2047578589634664, 'rouge2': 0.06547619047619047, 'rougeL': 0.1112999150382328}
+  Evaluation Metrics Claude: {'bleu': 0.02830757709271419, 'meteor': 0.11426316833217037, 'rouge1': 0.2161198288159772, 'rouge2': 0.07780157030692363, 'rougeL': 0.10271041369472184}
+Evaluation metrics saved to: ./src/resources/output\137336\run_2\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\137336\run_2\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: What is the distribution of analytical methods used for the meadow litter sample?
+- Goal Question: Which measurement units are most frequently used in the screening results?
+- Goal Question: What is the ratio of detectable results versus non-detectable (n.n.) results?
+  Evaluation Metrics GPT-5: {'bleu': 0.02569046948840901, 'meteor': 0.11208375204214403, 'rouge1': 0.22533081285444234, 'rouge2': 0.08550889141127506, 'rougeL': 0.10207939508506617}
+  Evaluation Metrics GPT-4o: {'bleu': 0.0070214073628320165, 'meteor': 0.06634878646503224, 'rouge1': 0.1703038083012409, 'rouge2': 0.053961456102783724, 'rougeL': 0.11125374411638853}
+  Evaluation Metrics Gemini: {'bleu': 0.008379962929015751, 'meteor': 0.07391729034252346, 'rouge1': 0.1555367709213863, 'rouge2': 0.045685279187817264, 'rougeL': 0.09129332206255283}
+  Evaluation Metrics Grok: {'bleu': 0.014884086625393806, 'meteor': 0.09336297218971461, 'rouge1': 0.21214574898785424, 'rouge2': 0.06888168557536466, 'rougeL': 0.10931174089068825}
+  Evaluation Metrics Claude: {'bleu': 0.01802536691908343, 'meteor': 0.09143032949778386, 'rouge1': 0.20476545048399103, 'rouge2': 0.06333830104321907, 'rougeL': 0.10498883097542816}
+Evaluation metrics saved to: ./src/resources/output\137336\run_3\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\137336\run_3\summary.txt
+Evaluation done.
+  Evaluation Metrics GPT-5: {'bleu': 0.026957532677821253, 'meteor': 0.106761686832105, 'rouge1': 0.21080074487895717, 'rouge2': 0.08125232948192322, 'rougeL': 0.10428305400372438}
+Generated Visualization Goals:
+- Goal Question: What is the distribution of analytical methods used for the screening of the meadow litter sample?
+- Goal Question: Which specific analytes (Pruefmerkmal) were successfully detected versus those reported as not detectable (n.n.)?
+- Goal Question: What are the different units of measurement used across the various test parameters?
+  Evaluation Metrics GPT-4o: {'bleu': 0.008804997180776736, 'meteor': 0.0713543357542066, 'rouge1': 0.17295464179737177, 'rouge2': 0.056851930420025454, 'rougeL': 0.1119118270453582}
+  Evaluation Metrics Gemini: {'bleu': 0.006628429100149925, 'meteor': 0.07108407802963947, 'rouge1': 0.1567099567099567, 'rouge2': 0.04679376083188909, 'rougeL': 0.08484848484848485}
+  Evaluation Metrics Grok: {'bleu': 0.014042276796169064, 'meteor': 0.09380450356954452, 'rouge1': 0.229122954259337, 'rouge2': 0.0747585048299034, 'rougeL': 0.11582039446076373}
+  Evaluation Metrics Claude: {'bleu': 0.027758000395142885, 'meteor': 0.10540775137558168, 'rouge1': 0.21483942414174972, 'rouge2': 0.07609900258588843, 'rougeL': 0.10483573274270949}
+Evaluation metrics saved to: ./src/resources/output\137336\run_4\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\137336\run_4\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: What are the different analytical methods used to test the 'Feinstes Wiesenstreu' sample?
+- Goal Question: Which radiological and chemical parameters (Pruefmerkmal) had detectable numerical results?
+- Goal Question: What is the distribution of measurement units used across the 104 test parameters?
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+LLM generated visualization code.
+LLM generated visualization code.
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_1\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+Regenerating code for vis#1, attempt 0
+LLM generated visualization code.
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_3\VER_0.csv
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_2\VER_0.csv
+Regenerating code for vis#2, attempt 0
+Vis#0 - Regeneration decision: True
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+LLM generated visualization code.
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\137336\run_1\VER_0.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+Regenerating code for vis#1, attempt 0
+Testing generated code (py) for vis#0:
+Regenerating code for vis#1, attempt 0
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_1\VER_1.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+Regenerating code for vis#2, attempt 0
+Regenerating code for vis#2, attempt 0
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_2\VER_1.csv
+Vis#0 - Regeneration decision: False
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_3\VER_1.csv
+Vis#1 - Regeneration decision: True
+Vis#0 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+Regenerating code, attempt 2
+Regenerating code for vis#1, attempt 1
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+LLM generated visualization code.
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_2\VER_2.csv
+Testing generated code (py) for vis#0:
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\137336\run_4\VER_0.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\137336\run_2\VER_0.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\137336\run_5\VER_0.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 43.00/60
+
+  Average Score: 7.2/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 8 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 4 / 10
+   - transformation: 5 / 10
+   - compliance: 4 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 34.00/60
+
+  Average Score: 5.7/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 42.00/60
+
+  Average Score: 7.0/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 52.00/60
+
+  Average Score: 8.7/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.312227  6.070922    5   20  0.001417  [0.05, 0.78]
+Visualisierung 0: ICC=0.312
+LLM generated visualization code.
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 52.00/60
+
+  Average Score: 8.7/10
+Testing generated code (py) for vis#0:
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+Testing generated code (py) for vis#1:
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\137336\run_3\VER_0.csv
+Vis#0 - Regeneration decision: False
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 51.00/60
+
+  Average Score: 8.5/10
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+   Type           Description       ICC         F  df1  df2     pval         CI95%
+0  ICC2  Single random raters  0.171076  7.298701    5   20  0.00049  [0.01, 0.62]
+Visualisierung 0: ICC=0.171
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 5 / 10
+   - compliance: 5 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description       ICC          F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.241316  10.428571    5   20  0.000049  [0.03, 0.71]
+Visualisierung 0: ICC=0.241
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 4 / 10
+   - compliance: 4 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 37.00/60
+
+  Average Score: 6.2/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.208838  4.277405    5   20  0.008287  [0.01, 0.68]
+Visualisierung 0: ICC=0.209
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 52.00/60
+
+  Average Score: 8.7/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.192399  5.450549    5   20  0.002529  [0.01, 0.65]
+Visualisierung 0: ICC=0.192
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.185841  5.565217    5   20  0.002267  [0.01, 0.64]
+Visualisierung 0: ICC=0.186
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.180036  4.686131    5   20  0.005402  [0.01, 0.64]
+Visualisierung 0: ICC=0.180
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 7 / 10
+   - encoding: 5 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 37.00/60
+
+  Average Score: 6.2/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 6 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 5 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 36.00/60
+
+  Average Score: 6.0/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 51.00/60
+
+  Average Score: 8.5/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 8 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 7 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 9 / 10
+   - encoding: 6 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 3 / 10
+   - transformation: 10 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 6 / 10
+   - aesthetics: 5 / 10
+
+  Total Score: 43.00/60
+
+  Average Score: 7.2/10
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 55.00/60
+
+  Average Score: 9.2/10
+   Type           Description       ICC         F  df1  df2      pval        CI95%
+0  ICC2  Single random raters  0.142857  4.965517    5   20  0.004068  [0.0, 0.58]
+Visualisierung 0: ICC=0.143
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 43.00/60
+
+  Average Score: 7.2/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 8 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 8 / 10
+   - compliance: 6 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+   Type           Description       ICC         F  df1  df2      pval        CI95%
+0  ICC2  Single random raters  0.164823  3.991968    5   20  0.011283  [0.0, 0.62]
+Visualisierung 1: ICC=0.165
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC        F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.179979  2.54479    5   20  0.061401  [-0.03, 0.68]
+Visualisierung 1: ICC=0.180
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 5 / 10
+   - encoding: 5 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 35.00/60
+
+  Average Score: 5.8/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.080963  2.456693    5   20  0.068541  [-0.02, 0.47]
+Visualisierung 1: ICC=0.081
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 3 / 10
+   - transformation: 9 / 10
+   - compliance: 8 / 10
+   - type: 10 / 10
+   - encoding: 4 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 6 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.037075  2.451613    5   20  0.068979  [-0.01, 0.28]
+Visualisierung 1: ICC=0.037
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 51.00/60
+
+  Average Score: 8.5/10
+   Type           Description       ICC         F  df1  df2     pval         CI95%
+0  ICC2  Single random raters  0.219368  6.091743    5   20  0.00139  [0.02, 0.69]
+Visualisierung 1: ICC=0.219
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.029175  1.258467    5   20  0.320007  [-0.08, 0.45]
+Visualisierung 1: ICC=0.029
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 8 / 10
+   - compliance: 6 / 10
+   - type: 5 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.098259  2.501901    5   20  0.064773  [-0.02, 0.52]
+Visualisierung 1: ICC=0.098
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 5 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 37.00/60
+
+  Average Score: 6.2/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 5 / 10
+   - type: 4 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 37.00/60
+
+  Average Score: 6.2/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 7 / 10
+   - type: 4 / 10
+   - encoding: 5 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 43.00/60
+
+  Average Score: 7.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 9 / 10
+   - type: 7 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 52.00/60
+
+  Average Score: 8.7/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 42.00/60
+
+  Average Score: 7.0/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 43.00/60
+
+  Average Score: 7.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description      ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.07197  2.727273    5   20  0.049004  [-0.01, 0.43]
+Visualisierung 2: ICC=0.072
+Statistics saved to: src\resources\output\137336\run_1\statistics.txt
+✅ Finished in 928.9s
+Processing datasets:   4%|██████▋                                                                                                                                                                | 1/25 [15:51<6:20:34, 951.45s/it]LIDA Judge for vis#2 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 5 / 10
+   - type: 4 / 10
+   - encoding: 5 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 35.00/60
+
+  Average Score: 5.8/10
+   Type           Description       ICC         F  df1  df2      pval        CI95%
+0  ICC2  Single random raters  0.421937  9.243243    5   20  0.000111  [0.1, 0.84]
+Visualisierung 1: ICC=0.422
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 10 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 8 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 7 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 4 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 9 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.089253  2.416185    5   20  0.072114  [-0.02, 0.5]
+Visualisierung 2: ICC=0.089
+Statistics saved to: src\resources\output\110165\run_1\statistics.txt
+✅ Finished in 976.1s
+Processing datasets:   8%|█████████████▎                                                                                                                                                         | 2/25 [16:38<2:40:50, 419.57s/it]LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.065421  2.422764    5   20  0.071521  [-0.02, 0.42]
+Visualisierung 2: ICC=0.065
+Statistics saved to: src\resources\output\110165\run_3\statistics.txt
+✅ Finished in 978.0s
+Processing datasets:  12%|████████████████████                                                                                                                                                   | 3/25 [16:40<1:23:53, 228.81s/it]LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+   Type           Description      ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.12614  4.029197    5   20  0.010832  [-0.0, 0.55]
+Visualisierung 2: ICC=0.126
+Statistics saved to: src\resources\output\137336\run_4\statistics.txt
+✅ Finished in 984.3s
+Processing datasets:  16%|███████████████████████████                                                                                                                                              | 4/25 [16:46<49:20, 140.97s/it]LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description      ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.14734  5.576271    5   20  0.002243  [0.01, 0.58]
+Visualisierung 2: ICC=0.147
+Statistics saved to: src\resources\output\137336\run_5\statistics.txt
+✅ Finished in 984.5s
+Processing datasets:  20%|██████████████████████████████████                                                                                                                                        | 5/25 [16:47<30:04, 90.22s/it]LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 9 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 51.00/60
+
+  Average Score: 8.5/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.081309  1.738964    5   20  0.171745  [-0.06, 0.54]
+Visualisierung 2: ICC=0.081
+Statistics saved to: src\resources\output\137336\run_2\statistics.txt
+✅ Finished in 995.9s
+Processing datasets:  24%|████████████████████████████████████████▊                                                                                                                                 | 6/25 [16:58<20:04, 63.41s/it]LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.056338  2.785714    5   20  0.045622  [-0.01, 0.37]
+Visualisierung 2: ICC=0.056
+Statistics saved to: src\resources\output\110165\run_2\statistics.txt
+✅ Finished in 1034.0s
+Processing datasets:  28%|███████████████████████████████████████████████▌                                                                                                                          | 7/25 [17:36<16:32, 55.14s/it]LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 43.00/60
+
+  Average Score: 7.2/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+  Evaluation Metrics GPT-5: {'bleu': 0.01122699563147959, 'meteor': 0.08001848642495261, 'rouge1': 0.16078136739293766, 'rouge2': 0.04661654135338346, 'rougeL': 0.06912096168294515}
+  Evaluation Metrics GPT-4o: {'bleu': 0.0008357164174029421, 'meteor': 0.03786298208771208, 'rouge1': 0.11749232792634809, 'rouge2': 0.039491004826678375, 'rougeL': 0.07891275756247261}
+  Evaluation Metrics Gemini: {'bleu': 0.0015898492473572692, 'meteor': 0.049563129774551344, 'rouge1': 0.12248468941382326, 'rouge2': 0.03239929947460596, 'rougeL': 0.0699912510936133}
+  Evaluation Metrics Grok: {'bleu': 0.0044331278016343425, 'meteor': 0.07333025978247215, 'rouge1': 0.17002053388090352, 'rouge2': 0.05096588573777229, 'rougeL': 0.07720739219712526}
+  Evaluation Metrics Claude: {'bleu': 0.01019453514560474, 'meteor': 0.07160881877975468, 'rouge1': 0.15250544662309368, 'rouge2': 0.05232558139534883, 'rougeL': 0.07407407407407408}
+Evaluation metrics saved to: ./src/resources/output\110165\run_4\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\110165\run_4\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: How are the cultural monuments distributed across the different districts of Schleswig-Holstein?
+- Goal Question: What are the most common types of cultural monuments in the state?
+- Goal Question: What are the primary legal and historical justifications for monument protection?
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 42.00/60
+
+  Average Score: 7.0/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters -0.006849  0.860335    5   20  0.524393  [-0.04, 0.18]
+Visualisierung 2: ICC=-0.007
+Statistics saved to: src\resources\output\137336\run_3\statistics.txt
+✅ Finished in 1130.5s
+Processing datasets:  32%|██████████████████████████████████████████████████████▍                                                                                                                   | 8/25 [19:13<19:21, 68.31s/it]  Evaluation Metrics GPT-5: {'bleu': 0.009190036229851964, 'meteor': 0.07026487539528055, 'rouge1': 0.16111541440743612, 'rouge2': 0.050387596899224806, 'rougeL': 0.07126258714175057}
+  Evaluation Metrics GPT-4o: {'bleu': 0.0006865218072990246, 'meteor': 0.03901855058234626, 'rouge1': 0.1153504880212955, 'rouge2': 0.03996447602131439, 'rougeL': 0.07985803016858918}
+  Evaluation Metrics Gemini: {'bleu': 0.0013821870119897308, 'meteor': 0.04827828637452564, 'rouge1': 0.11204234671371854, 'rouge2': 0.03443708609271523, 'rougeL': 0.0670489633877371}
+  Evaluation Metrics Grok: {'bleu': 0.002963861931861915, 'meteor': 0.06550077811050516, 'rouge1': 0.15548003398470686, 'rouge2': 0.04761904761904762, 'rougeL': 0.07816482582837724}
+  Evaluation Metrics Claude: {'bleu': 0.008694795518058891, 'meteor': 0.06738880890052355, 'rouge1': 0.14523449319213314, 'rouge2': 0.046934140802422405, 'rougeL': 0.07034795763993949}
+Evaluation metrics saved to: ./src/resources/output\110165\run_5\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\110165\run_5\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: How are cultural monuments distributed across the different districts of Schleswig-Holstein?
+- Goal Question: What are the most common types of cultural monuments in the state?
+- Goal Question: What are the primary legal justifications used for protecting these monuments?
+  Evaluation Metrics GPT-5: {'bleu': 0.015869762651112528, 'meteor': 0.08452193913011515, 'rouge1': 0.1854934601664685, 'rouge2': 0.0658468861562872, 'rougeL': 0.10780816488307571}
+  Evaluation Metrics GPT-4o: {'bleu': 0.008823990677701253, 'meteor': 0.0732834583283366, 'rouge1': 0.17513882956001708, 'rouge2': 0.061564771269773416, 'rougeL': 0.1161896625373772}
+  Evaluation Metrics Gemini: {'bleu': 0.006238005987805138, 'meteor': 0.06323760921161174, 'rouge1': 0.14685314685314685, 'rouge2': 0.048993875765529306, 'rougeL': 0.08828671328671328}
+  Evaluation Metrics Grok: {'bleu': 0.015559762087108612, 'meteor': 0.09365618705179095, 'rouge1': 0.22119428090832632, 'rouge2': 0.08333333333333333, 'rougeL': 0.11606391925988226}
+  Evaluation Metrics Claude: {'bleu': 0.013552609625737849, 'meteor': 0.07662590801717288, 'rouge1': 0.17246835443037978, 'rouge2': 0.060174188440221696, 'rougeL': 0.10759493670886078}
+Evaluation metrics saved to: ./src/resources/output\139606\run_3\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\139606\run_3\summary.txt
+Evaluation done.
+  Evaluation Metrics GPT-5: {'bleu': 0.024013318416876452, 'meteor': 0.09646917332512002, 'rouge1': 0.20996168582375477, 'rouge2': 0.0789877300613497, 'rougeL': 0.10651340996168582}
+  Evaluation Metrics GPT-4o: {'bleu': 0.009633922917516007, 'meteor': 0.07246413490538652, 'rouge1': 0.1842887473460722, 'rouge2': 0.06799830004249893, 'rougeL': 0.1138004246284501}
+  Evaluation Metrics Gemini: {'bleu': 0.00818549997034936, 'meteor': 0.0705672550915476, 'rouge1': 0.155622060709705, 'rouge2': 0.04792468977321353, 'rougeL': 0.0940572894399316}
+Generated Visualization Goals:
+- Goal Question: What is the distribution of detectable vs. non-detectable results across all tested radionuclides?
+- Goal Question: Which specific radionuclides (Pruefmerkmal) were tested in this sample?
+- Goal Question: What are the specific numerical findings for the detected radionuclides?
+  Evaluation Metrics Grok: {'bleu': 0.011234148685743609, 'meteor': 0.08621834469749341, 'rouge1': 0.21272960273387442, 'rouge2': 0.079521162890124, 'rougeL': 0.11704399829132849}
+  Evaluation Metrics Claude: {'bleu': 0.024891506470616265, 'meteor': 0.09860147256430844, 'rouge1': 0.20311341734618232, 'rouge2': 0.0771513353115727, 'rougeL': 0.10600444773906598}
+Evaluation metrics saved to: ./src/resources/output\139606\run_1\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\139606\run_1\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: Which radionuclides were detected in the pork sample versus those that were not detectable?
+- Goal Question: What are the specific activity levels for the radionuclides that were successfully detected?
+- Goal Question: What was the total measurement duration for this radiological analysis?
+  Evaluation Metrics GPT-5: {'bleu': 0.02273541855613123, 'meteor': 0.09421977277563642, 'rouge1': 0.18714768883878244, 'rouge2': 0.06844678450545318, 'rougeL': 0.10221721157459603}
+  Evaluation Metrics GPT-4o: {'bleu': 0.01049355158810375, 'meteor': 0.07543753836097174, 'rouge1': 0.18856655290102387, 'rouge2': 0.06746370623398804, 'rougeL': 0.11689419795221842}
+  Evaluation Metrics Gemini: {'bleu': 0.0047388375378156905, 'meteor': 0.062376713310535986, 'rouge1': 0.14818101153504878, 'rouge2': 0.04795737122557727, 'rougeL': 0.09316770186335403}
+  Evaluation Metrics Grok: {'bleu': 0.014132197658509841, 'meteor': 0.09190667904014142, 'rouge1': 0.21479314667781033, 'rouge2': 0.08030112923462987, 'rougeL': 0.11366485582950273}
+  Evaluation Metrics Claude: {'bleu': 0.014599933256352513, 'meteor': 0.08176698868191593, 'rouge1': 0.1850980392156863, 'rouge2': 0.07064364207221349, 'rougeL': 0.10588235294117647}
+Evaluation metrics saved to: ./src/resources/output\139606\run_4\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\139606\run_4\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: What is the distribution of detectable vs. non-detectable radiological parameters in the pork sample?
+- Goal Question: Which specific radionuclides were detected and at what activity levels?
+- Goal Question: What was the scope of the radiological screening conducted under the IMIS routine monitoring program?
+LLM generated visualization code.
+  Evaluation Metrics GPT-5: {'bleu': 0.017522322424846436, 'meteor': 0.08628352353282008, 'rouge1': 0.1797323135755258, 'rouge2': 0.06199770378874857, 'rougeL': 0.10401529636711282}
+  Evaluation Metrics GPT-4o: {'bleu': 0.010267643501162561, 'meteor': 0.07234071755394719, 'rouge1': 0.18166596902469653, 'rouge2': 0.06535400083787181, 'rougeL': 0.11301799916282963}
+  Evaluation Metrics Gemini: {'bleu': 0.0048491464214730495, 'meteor': 0.06159038216374244, 'rouge1': 0.1433628318584071, 'rouge2': 0.04782993799822853, 'rougeL': 0.08672566371681416}
+  Evaluation Metrics Grok: {'bleu': 0.00790542785488931, 'meteor': 0.08460604955136114, 'rouge1': 0.20427760803142733, 'rouge2': 0.07863695937090433, 'rougeL': 0.11697948494107377}
+  Evaluation Metrics Claude: {'bleu': 0.0231153061670788, 'meteor': 0.09824935778289359, 'rouge1': 0.1901663051337672, 'rouge2': 0.06946454413892908, 'rougeL': 0.10267534345625452}
+Evaluation metrics saved to: ./src/resources/output\139606\run_2\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\139606\run_2\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: What is the distribution of detected vs. non-detectable (n.n.) results across all tested radionuclides?
+- Goal Question: Which specific radionuclides (Pruefmerkmal) were analyzed in this sample?
+- Goal Question: What are the specific numerical activity levels for the detected radionuclides?
+LLM generated visualization code.
+  Evaluation Metrics GPT-5: {'bleu': 0.029636671940437904, 'meteor': 0.1131971247733365, 'rouge1': 0.21372912801484228, 'rouge2': 0.08614927590048271, 'rougeL': 0.10538033395176252}
+  Evaluation Metrics GPT-4o: {'bleu': 0.007820605986984142, 'meteor': 0.07099462087339105, 'rouge1': 0.18851380973257345, 'rouge2': 0.06669591926283458, 'rougeL': 0.11749232792634809}
+  Evaluation Metrics Gemini: {'bleu': 0.00759956526306355, 'meteor': 0.06807910324137598, 'rouge1': 0.15639609009774755, 'rouge2': 0.049340706082518074, 'rougeL': 0.0926476838079048}
+  Evaluation Metrics Grok: {'bleu': 0.013610050925710078, 'meteor': 0.08126342571798426, 'rouge1': 0.20519159456118666, 'rouge2': 0.0775257731958763, 'rougeL': 0.11454470539761022}
+  Evaluation Metrics Claude: {'bleu': 0.019646364372732594, 'meteor': 0.08947994510522334, 'rouge1': 0.1967705595193391, 'rouge2': 0.06839534009770762, 'rougeL': 0.10364250844911753}
+Evaluation metrics saved to: ./src/resources/output\139606\run_5\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\139606\run_5\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: Which radionuclides were detected in the pork sample and at what levels?
+- Goal Question: What is the distribution of detectable vs. non-detectable results across all tested radionuclides?
+- Goal Question: What was the measurement duration used to achieve these detection limits?
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+  Evaluation Metrics GPT-5: {'bleu': 0.01828025637272614, 'meteor': 0.10028878086399999, 'rouge1': 0.2477095351204615, 'rouge2': 0.08828522920203735, 'rougeL': 0.12215812690872074}
+LLM generated visualization code.
+  Evaluation Metrics GPT-4o: {'bleu': 0.01009836573616667, 'meteor': 0.07014851584313209, 'rouge1': 0.21569329989251168, 'rouge2': 0.07386159913947651, 'rougeL': 0.12325331422429238}
+  Evaluation Metrics Gemini: {'bleu': 0.00032158484069677037, 'meteor': 0.037271456371882415, 'rouge1': 0.10429703796412183, 'rouge2': 0.036743215031315245, 'rougeL': 0.060075093867334166}
+  Evaluation Metrics Grok: {'bleu': 0.00637855798588219, 'meteor': 0.07808473016913338, 'rouge1': 0.22073578595317728, 'rouge2': 0.07363332093715136, 'rougeL': 0.12411742846525453}
+  Evaluation Metrics Claude: {'bleu': 0.0159163583649345, 'meteor': 0.09054686943557322, 'rouge1': 0.24457066488473106, 'rouge2': 0.08425275827482448, 'rougeL': 0.11827597728032074}
+Evaluation metrics saved to: ./src/resources/output\13979\run_1\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\13979\run_1\summary.txt
+Evaluation done.
+LLM generated visualization code.
+Generated Visualization Goals:
+- Goal Question: How has the total number of construction completions in Sünching evolved over time?
+- Goal Question: What is the distribution of apartment sizes (by room count) completed in Sünching across all years?
+- Goal Question: How has the mix of apartment sizes changed year-over-year?
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_4\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_5\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+Regenerating code for vis#1, attempt 0
+Regenerating code for vis#1, attempt 0
+Regenerating code for vis#2, attempt 0
+LLM generated visualization code.
+Regenerating code for vis#2, attempt 0
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+LLM generated visualization code.
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_4\VER_1.csv
+Vis#0 - Regeneration decision: False
+Testing generated code (py) for vis#0:
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_5\VER_1.csv
+LLM generated visualization code.
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: False
+Regenerating code, attempt 2
+Regenerating code for vis#1, attempt 1
+Testing generated code (py) for vis#0:
+LLM generated visualization code.
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\139606\run_4\VER_0.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+LLM generated visualization code.
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+Testing generated code (py) for vis#0:
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\139606\run_3\VER_0.csv
+Testing generated code (py) for vis#1:
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\139606\run_1\VER_0.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\139606\run_3\VER_1.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LLM generated visualization code.
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 42.00/60
+
+  Average Score: 7.0/10
+Testing generated code (py) for vis#1:
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 4 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 36.00/60
+
+  Average Score: 6.0/10
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\139606\run_5\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 8 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 7 / 10
+   - type: 7 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\139606\run_5\VER_1.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+LLM generated visualization code.
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\139606\run_2\VER_0.csv
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 4 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 8 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 2 / 10
+   - transformation: 3 / 10
+   - compliance: 5 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 37.00/60
+
+  Average Score: 6.2/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 9 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.038168  1.766871    5   20  0.165632  [-0.02, 0.35]
+Visualisierung 0: ICC=0.038
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13979\run_1\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.032977  1.197861    5   20  0.345741  [-0.12, 0.53]
+Visualisierung 0: ICC=0.033
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.190821  5.157895    5   20  0.003361  [0.01, 0.65]
+Visualisierung 0: ICC=0.191
+Regenerating code for vis#1, attempt 0
+Regenerating code for vis#2, attempt 0
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13979\run_1\VER_1.csv
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+   Type           Description       ICC        F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.109116  3.18232    5   20  0.028338  [-0.01, 0.53]
+Visualisierung 0: ICC=0.109
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 7 / 10
+   - encoding: 5 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 37.00/60
+
+  Average Score: 6.2/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 4 / 10
+   - transformation: 3 / 10
+   - compliance: 5 / 10
+   - type: 6 / 10
+   - encoding: 5 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 29.00/60
+
+  Average Score: 4.8/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 42.00/60
+
+  Average Score: 7.0/10
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+   Type           Description       ICC    F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.144737  6.0    5   20  0.001512  [0.01, 0.57]
+Visualisierung 0: ICC=0.145
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 7 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 55.00/60
+
+  Average Score: 9.2/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 3 / 10
+   - transformation: 5 / 10
+   - compliance: 8 / 10
+   - type: 10 / 10
+   - encoding: 4 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 37.00/60
+
+  Average Score: 6.2/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 9 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 9 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 9 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters -0.007042  0.909091    5   20  0.494803  [-0.06, 0.27]
+Visualisierung 0: ICC=-0.007
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2     pval        CI95%
+0  ICC2  Single random raters  0.121495  5.220779    5   20  0.00316  [0.0, 0.53]
+Visualisierung 1: ICC=0.121
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+   Type           Description      ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.07289  2.135458    5   20  0.102953  [-0.03, 0.47]
+Visualisierung 1: ICC=0.073
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description       ICC         F  df1  df2      pval        CI95%
+0  ICC2  Single random raters  0.130824  4.411215    5   20  0.007191  [0.0, 0.56]
+Visualisierung 1: ICC=0.131
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.185022  6.526316    5   20  0.000944  [0.01, 0.64]
+Visualisierung 0: ICC=0.185
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.033989  1.725191    5   20  0.174845  [-0.02, 0.32]
+Visualisierung 1: ICC=0.034
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 4 / 10
+   - compliance: 5 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 5 / 10
+   - type: 6 / 10
+   - encoding: 7 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 5 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 6 / 10
+   - encoding: 5 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 35.00/60
+
+  Average Score: 5.8/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 5 / 10
+   - encoding: 6 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 4 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 36.00/60
+
+  Average Score: 6.0/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 5 / 10
+   - type: 6 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.048751  1.452539    5   20  0.249163  [-0.07, 0.48]
+Visualisierung 1: ICC=0.049
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 43.00/60
+
+  Average Score: 7.2/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 55.00/60
+
+  Average Score: 9.2/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 5 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 42.00/60
+
+  Average Score: 7.0/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 8 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.109687  3.305389    5   20  0.024528  [-0.01, 0.52]
+Visualisierung 2: ICC=0.110
+Statistics saved to: src\resources\output\110165\run_4\statistics.txt
+✅ Finished in 953.2s
+Processing datasets:  36%|████████████████████████████████████████████████████████████                                                                                                           | 9/25 [31:44<1:15:10, 281.92s/it]LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 6 / 10
+   - transformation: 6 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 2 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+   Type           Description       ICC        F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.035187  1.52901    5   20  0.225626  [-0.04, 0.37]
+Visualisierung 2: ICC=0.035
+Statistics saved to: src\resources\output\139606\run_1\statistics.txt
+✅ Finished in 924.7s
+Processing datasets:  40%|███████████████████████████████████████████████████████████████████▏                                                                                                    | 10/25 [32:05<50:18, 201.23s/it]LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+   Type           Description     ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.1258  3.979798    5   20  0.011434  [-0.0, 0.55]
+Visualisierung 2: ICC=0.126
+Statistics saved to: src\resources\output\139606\run_3\statistics.txt
+✅ Finished in 928.6s
+Processing datasets:  44%|█████████████████████████████████████████████████████████████████████████▉                                                                                              | 11/25 [32:15<33:19, 142.83s/it]LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 5 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters -0.072685  0.340426    5   20  0.882296  [-0.11, 0.16]
+Visualisierung 1: ICC=-0.073
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description       ICC          F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.177143  10.567901    5   20  0.000045  [0.02, 0.62]
+Visualisierung 1: ICC=0.177
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 5 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 37.00/60
+
+  Average Score: 6.2/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters -0.104594  0.349939    5   20  0.876218  [-0.16, 0.19]
+Visualisierung 2: ICC=-0.105
+Statistics saved to: src\resources\output\139606\run_4\statistics.txt
+✅ Finished in 936.0s
+Processing datasets:  48%|████████████████████████████████████████████████████████████████████████████████▋                                                                                       | 12/25 [32:34<22:46, 105.11s/it]LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.057043  2.243655    5   20  0.089685  [-0.02, 0.39]
+Visualisierung 2: ICC=0.057
+Statistics saved to: src\resources\output\139606\run_5\statistics.txt
+✅ Finished in 976.2s
+Processing datasets:  52%|███████████████████████████████████████████████████████████████████████████████████████▉                                                                                 | 13/25 [33:52<19:23, 96.96s/it]LIDA Judge for vis#2 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 4 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 5 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 36.00/60
+
+  Average Score: 6.0/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+  Evaluation Metrics GPT-5: {'bleu': 0.01913780075234688, 'meteor': 0.1036582886514953, 'rouge1': 0.2370617696160267, 'rouge2': 0.08419645840294018, 'rougeL': 0.12020033388981637}
+  Evaluation Metrics GPT-4o: {'bleu': 0.004033589042555355, 'meteor': 0.06026068118008369, 'rouge1': 0.18782870022539444, 'rouge2': 0.06691729323308271, 'rougeL': 0.1217129977460556}
+  Evaluation Metrics Gemini: {'bleu': 0.0009950735401834763, 'meteor': 0.04817061106309934, 'rouge1': 0.14048934490923443, 'rouge2': 0.04660347551342811, 'rougeL': 0.07024467245461721}
+  Evaluation Metrics Grok: {'bleu': 0.006789752998448745, 'meteor': 0.08240789064210223, 'rouge1': 0.22955738934733688, 'rouge2': 0.07882882882882884, 'rougeL': 0.12603150787696923}
+  Evaluation Metrics Claude: {'bleu': 0.017047089359351113, 'meteor': 0.08972919819138099, 'rouge1': 0.23855024711696873, 'rouge2': 0.08374546653478404, 'rougeL': 0.11795716639209226}
+Evaluation metrics saved to: ./src/resources/output\13979\run_3\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\13979\run_3\summary.txt
+Evaluation done.
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+  Evaluation Metrics GPT-5: {'bleu': 0.019557495547223042, 'meteor': 0.10749290400899084, 'rouge1': 0.24734042553191493, 'rouge2': 0.09713905522288756, 'rougeL': 0.11502659574468087}
+  Evaluation Metrics GPT-4o: {'bleu': 0.006422719326823956, 'meteor': 0.0694578912715377, 'rouge1': 0.2106438407145515, 'rouge2': 0.07672253258845436, 'rougeL': 0.1287681429103089}
+  Evaluation Metrics Gemini: {'bleu': 0.0003997200804422121, 'meteor': 0.037652290093422185, 'rouge1': 0.11124845488257108, 'rouge2': 0.03628865979381444, 'rougeL': 0.05768438401318501}
+  Evaluation Metrics Grok: {'bleu': 0.011087288076650485, 'meteor': 0.09230178430211144, 'rouge1': 0.2532467532467533, 'rouge2': 0.0851985559566787, 'rougeL': 0.12987012987012986}
+  Evaluation Metrics Claude: {'bleu': 0.015502876612198863, 'meteor': 0.08400895315104959, 'rouge1': 0.2286096256684492, 'rouge2': 0.08093645484949832, 'rougeL': 0.11965240641711232}
+Evaluation metrics saved to: ./src/resources/output\13979\run_2\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\13979\run_2\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: How has the total number of residential completions in Sünching changed over time?
+- Goal Question: What is the distribution of apartment sizes (number of rooms) completed across all years?
+- Goal Question: How does the composition of housing sizes vary year-over-year?
+Generated Visualization Goals:
+- Goal Question: How has the total number of completed apartments in Sünching changed between 2014 and 2024?
+- Goal Question: What is the distribution of apartment sizes (number of rooms) completed in Sünching across the entire period?
+- Goal Question: How has the mix of apartment sizes evolved year-over-year?
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description       ICC    F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.039071  2.0    5   20  0.122507  [-0.02, 0.32]
+Visualisierung 2: ICC=0.039
+Statistics saved to: src\resources\output\13979\run_1\statistics.txt
+✅ Finished in 973.0s
+Processing datasets:  56%|██████████████████████████████████████████████████████████████████████████████████████████████▋                                                                          | 14/25 [35:26<17:34, 95.86s/it]  Evaluation Metrics GPT-5: {'bleu': 0.021131689044944373, 'meteor': 0.10311618252569227, 'rouge1': 0.24314502808060787, 'rouge2': 0.09917355371900827, 'rougeL': 0.11826891311529565}
+  Evaluation Metrics GPT-4o: {'bleu': 0.009188580105763683, 'meteor': 0.07270899419192833, 'rouge1': 0.20781082049444644, 'rouge2': 0.0702760846181427, 'rougeL': 0.1254030813328556}
+  Evaluation Metrics Gemini: {'bleu': 0.0007318996658478839, 'meteor': 0.043045027993928515, 'rouge1': 0.12717699473471042, 'rouge2': 0.04377786785569518, 'rougeL': 0.0688537869582827}
+  Evaluation Metrics Grok: {'bleu': 0.00804087028969996, 'meteor': 0.08827619697178042, 'rouge1': 0.2360340362560118, 'rouge2': 0.09033691225472047, 'rougeL': 0.12134665186829448}
+  Evaluation Metrics Claude: {'bleu': 0.017488571446857337, 'meteor': 0.09427912334292202, 'rouge1': 0.24582104228121926, 'rouge2': 0.08461790751065923, 'rougeL': 0.11864962307440183}
+Evaluation metrics saved to: ./src/resources/output\13979\run_4\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\13979\run_4\summary.txt
+Evaluation done.
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description       ICC         F  df1  df2      pval        CI95%
+0  ICC2  Single random raters  0.133333  5.237288    5   20  0.003109  [0.0, 0.55]
+Visualisierung 2: ICC=0.133
+Statistics saved to: src\resources\output\139606\run_2\statistics.txt
+✅ Finished in 1131.0s
+Processing datasets:  60%|█████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                   | 15/25 [35:37<11:45, 70.54s/it]Generated Visualization Goals:
+- Goal Question: How has the total number of completed apartments in Sünching changed from 2014 to 2024?
+- Goal Question: What is the distribution of apartment sizes (number of rooms) for all completions between 2014 and 2024?
+- Goal Question: How has the mix of apartment sizes evolved year-over-year?
+  Evaluation Metrics GPT-5: {'bleu': 0.018084669328060885, 'meteor': 0.10260206789425573, 'rouge1': 0.23406408094435074, 'rouge2': 0.08437394532568343, 'rougeL': 0.12074198988195615}
+  Evaluation Metrics GPT-4o: {'bleu': 0.010415672562641885, 'meteor': 0.0750075260189206, 'rouge1': 0.21712647796488713, 'rouge2': 0.0760129078522768, 'rougeL': 0.12468649229666787}
+  Evaluation Metrics Gemini: {'bleu': 0.0004513856083236968, 'meteor': 0.03979777137270888, 'rouge1': 0.11275720164609053, 'rouge2': 0.042009884678747944, 'rougeL': 0.05925925925925926}
+  Evaluation Metrics Grok: {'bleu': 0.0073543579477612945, 'meteor': 0.08528651694562006, 'rouge1': 0.24306076519129782, 'rouge2': 0.08708708708708708, 'rougeL': 0.12978244561140287}
+  Evaluation Metrics Claude: {'bleu': 0.015531008006933727, 'meteor': 0.08947856621537281, 'rouge1': 0.2429095762429096, 'rouge2': 0.08814691151919865, 'rougeL': 0.11745078411745077}
+Evaluation metrics saved to: ./src/resources/output\13979\run_5\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\13979\run_5\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: How has the total number of completed dwellings in Sünching changed from 2014 to 2024?
+- Goal Question: What is the distribution of dwelling sizes (number of rooms) completed across the entire period?
+- Goal Question: How has the composition of dwelling sizes evolved year-over-year?
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\110165\run_5\VER_2.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LLM generated visualization code.
+  Evaluation Metrics GPT-5: {'bleu': 0.03825690453590122, 'meteor': 0.13986961800039252, 'rouge1': 0.29764762361977914, 'rouge2': 0.11436809226333494, 'rougeL': 0.1555448871819491}
+  Evaluation Metrics GPT-4o: {'bleu': 0.022225250920156873, 'meteor': 0.10751239813328306, 'rouge1': 0.30446194225721784, 'rouge2': 0.10825013137151865, 'rougeL': 0.1679790026246719}
+  Evaluation Metrics Gemini: {'bleu': 0.0036518832746192794, 'meteor': 0.0731217735879355, 'rouge1': 0.177153329260843, 'rouge2': 0.0672782874617737, 'rougeL': 0.10507025045815517}
+  Evaluation Metrics Grok: {'bleu': 0.020045997359912537, 'meteor': 0.12040401295942196, 'rouge1': 0.2925559604372723, 'rouge2': 0.10005211047420531, 'rougeL': 0.16345653305570018}
+  Evaluation Metrics Claude: {'bleu': 0.03997855718270388, 'meteor': 0.13550682540620376, 'rouge1': 0.27929096411586685, 'rouge2': 0.09952401557767199, 'rougeL': 0.14267185473411154}
+Evaluation metrics saved to: ./src/resources/output\13473\run_1\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\13473\run_1\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: What is the gender distribution of the population in Hof?
+- Goal Question: How does the population count vary across different administrative levels (District vs. Municipality)?
+- Goal Question: What is the total population of Hof as of the reference date?
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 42.00/60
+
+  Average Score: 7.0/10
+  Evaluation Metrics GPT-5: {'bleu': 0.03469026563108622, 'meteor': 0.14052183763687556, 'rouge1': 0.29791271347248577, 'rouge2': 0.10826210826210826, 'rougeL': 0.15654648956356734}
+  Evaluation Metrics GPT-4o: {'bleu': 0.025443927461265947, 'meteor': 0.10666340510768119, 'rouge1': 0.2787761049052938, 'rouge2': 0.0904229460379193, 'rougeL': 0.15930063137445363}
+  Evaluation Metrics Gemini: {'bleu': 0.004741851743080829, 'meteor': 0.07766865274283066, 'rouge1': 0.19277108433734935, 'rouge2': 0.06996381182147164, 'rougeL': 0.11325301204819277}
+  Evaluation Metrics Grok: {'bleu': 0.01530202742851167, 'meteor': 0.12206538241331254, 'rouge1': 0.2959130884635282, 'rouge2': 0.10150181253236665, 'rougeL': 0.16864976720124158}
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+  Evaluation Metrics Claude: {'bleu': 0.03724163403437834, 'meteor': 0.13075428041216183, 'rouge1': 0.29130434782608694, 'rouge2': 0.09834638816362054, 'rougeL': 0.1426086956521739}
+Evaluation metrics saved to: ./src/resources/output\13473\run_3\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\13473\run_3\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: What is the gender distribution of the population in Hof?
+- Goal Question: What is the total population of Hof compared to the gender-specific counts?
+- Goal Question: Are the population figures consistent across different administrative classification levels (KREISE vs GEMEINDEN)?
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+  Evaluation Metrics GPT-5: {'bleu': 0.0396153446318792, 'meteor': 0.14128846866345524, 'rouge1': 0.29746532759445243, 'rouge2': 0.11393011010052656, 'rougeL': 0.15494978479196556}
+  Evaluation Metrics GPT-4o: {'bleu': 0.01866149728734241, 'meteor': 0.1024395582227125, 'rouge1': 0.2864502833590933, 'rouge2': 0.09902011346054666, 'rougeL': 0.16486347243688818}
+  Evaluation Metrics Gemini: {'bleu': 0.005025453016186553, 'meteor': 0.0763126665432287, 'rouge1': 0.17986896962477666, 'rouge2': 0.06559332140727489, 'rougeL': 0.10005955926146516}
+  Evaluation Metrics Grok: {'bleu': 0.03110159711532434, 'meteor': 0.1362728250805037, 'rouge1': 0.3144784639335755, 'rouge2': 0.11428571428571431, 'rougeL': 0.16709911779968864}
+  Evaluation Metrics Claude: {'bleu': 0.0322648804190812, 'meteor': 0.1345849224769602, 'rouge1': 0.28182205193699444, 'rouge2': 0.09032807839795484, 'rougeL': 0.140485312899106}
+Evaluation metrics saved to: ./src/resources/output\13473\run_2\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\13473\run_2\summary.txt
+Evaluation done.
+LLM generated visualization code.
+LLM generated visualization code.
+Generated Visualization Goals:
+- Goal Question: What is the gender distribution of the population in Hof?
+- Goal Question: How does the total population compare across the different administrative hierarchy levels?
+- Goal Question: What is the total population of Hof as of the 2024 reference date?
+LLM generated visualization code.
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LLM generated visualization code.
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.118199  3.889908    5   20  0.012624  [-0.0, 0.53]
+Visualisierung 0: ICC=0.118
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13979\run_2\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+LLM generated visualization code.
+Regenerating code for vis#1, attempt 0
+Regenerating code for vis#2, attempt 0
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13979\run_2\VER_1.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LLM generated visualization code.
+LLM generated visualization code.
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+LLM generated visualization code.
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 5 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LLM generated visualization code.
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13979\run_5\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13979\run_4\VER_0.csv
+Vis#0 - Regeneration decision: True
+Regenerating code for vis#1, attempt 0
+Vis#1 - Regeneration decision: True
+LLM generated visualization code.
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+Regenerating code for vis#2, attempt 0
+Regenerating code for vis#1, attempt 0
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#0:
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\run_1\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13979\run_5\VER_1.csv
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+Regenerating code for vis#2, attempt 0
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.145642  7.287129    5   20  0.000495  [0.01, 0.57]
+Visualisierung 1: ICC=0.146
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+Regenerating code for vis#1, attempt 0
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#1:
+Regenerating code for vis#2, attempt 0
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13979\run_3\VER_0.csv
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13979\run_4\VER_1.csv
+Vis#0 - Regeneration decision: True
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: True
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Regenerating code for vis#1, attempt 0
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\run_3\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+Regenerating code for vis#2, attempt 0
+Testing generated code (py) for vis#0:
+Regenerating code for vis#1, attempt 0
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\run_1\VER_1.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: False
+Regenerating code, attempt 2
+Regenerating code for vis#1, attempt 1
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13979\run_3\VER_1.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Testing generated code (py) for vis#0:
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+Regenerating code for vis#2, attempt 0
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+   Type           Description       ICC         F  df1  df2      pval        CI95%
+0  ICC2  Single random raters  0.135714  4.991597    5   20  0.003964  [0.0, 0.56]
+Visualisierung 0: ICC=0.136
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\run_3\VER_1.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 4 / 10
+   - compliance: 5 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 37.00/60
+
+  Average Score: 6.2/10
+LLM generated visualization code.
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 5 / 10
+   - transformation: 3 / 10
+   - compliance: 5 / 10
+   - type: 8 / 10
+   - encoding: 4 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 31.00/60
+
+  Average Score: 5.2/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 5 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 36.00/60
+
+  Average Score: 6.0/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 5 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 51.00/60
+
+  Average Score: 8.5/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.148148  5.237288    5   20  0.003109  [0.01, 0.58]
+Visualisierung 0: ICC=0.148
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 52.00/60
+
+  Average Score: 8.7/10
+   Type           Description       ICC         F  df1  df2     pval       CI95%
+0  ICC2  Single random raters  0.153499  4.820225    5   20  0.00471  [0.0, 0.6]
+Visualisierung 0: ICC=0.153
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 52.00/60
+
+  Average Score: 8.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 10 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.172185  5.756098    5   20  0.001894  [0.01, 0.62]
+Visualisierung 2: ICC=0.172
+Statistics saved to: src\resources\output\110165\run_5\statistics.txt
+✅ Finished in 1723.9s
+Processing datasets:  64%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                            | 16/25 [45:22<33:47, 225.31s/it]LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.183824  6.630631    5   20  0.000862  [0.01, 0.64]
+Visualisierung 0: ICC=0.184
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.063169  3.153285    5   20  0.029327  [-0.01, 0.38]
+Visualisierung 1: ICC=0.063
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\run_2\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.120567  3.179487    5   20  0.028433  [-0.01, 0.55]
+Visualisierung 0: ICC=0.121
+Regenerating code for vis#1, attempt 0
+Regenerating code for vis#2, attempt 0
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\run_2\VER_1.csv
+Vis#0 - Regeneration decision: False
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 7 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 42.00/60
+
+  Average Score: 7.0/10
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 37.00/60
+
+  Average Score: 6.2/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 6 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 3 / 10
+   - compliance: 4 / 10
+   - type: 7 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 34.00/60
+
+  Average Score: 5.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 7 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 7 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 6 / 10
+   - type: 7 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 3 / 10
+   - transformation: 4 / 10
+   - compliance: 5 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+   Type           Description     ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.0625  3.065217    5   20  0.032561  [-0.01, 0.38]
+Visualisierung 1: ICC=0.062
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 5 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 42.00/60
+
+  Average Score: 7.0/10
+   Type           Description       ICC         F  df1  df2    pval          CI95%
+0  ICC2  Single random raters  0.132712  3.226562    5   20  0.0269  [-0.01, 0.58]
+Visualisierung 1: ICC=0.133
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+   Type           Description      ICC         F  df1  df2      pval        CI95%
+0  ICC2  Single random raters  0.10847  6.447761    5   20  0.001011  [0.0, 0.49]
+Visualisierung 2: ICC=0.108
+Statistics saved to: src\resources\output\13979\run_2\statistics.txt
+✅ Finished in 951.6s
+Processing datasets:  68%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                     | 17/25 [47:36<26:21, 197.75s/it]LIDA Judge for vis#0 with gpt-5
+   - bugs: 4 / 10
+   - transformation: 3 / 10
+   - compliance: 4 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 32.00/60
+
+  Average Score: 5.3/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.263711  4.062827    5   20  0.010442  [0.02, 0.74]
+Visualisierung 1: ICC=0.264
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.065097  3.701149    5   20  0.015583  [-0.0, 0.38]
+Visualisierung 1: ICC=0.065
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 41.00/60
+
+  Average Score: 6.8/10
+   Type           Description       ICC    F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.165289  6.0    5   20  0.001512  [0.01, 0.61]
+Visualisierung 0: ICC=0.165
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+  Evaluation Metrics GPT-5: {'bleu': 0.042102706153487365, 'meteor': 0.1528868411107389, 'rouge1': 0.32447817836812143, 'rouge2': 0.144349477682811, 'rougeL': 0.1555977229601518}
+  Evaluation Metrics GPT-4o: {'bleu': 0.019601806461197132, 'meteor': 0.10690827811362105, 'rouge1': 0.2905894519131334, 'rouge2': 0.09627329192546584, 'rougeL': 0.16752843846949328}
+  Evaluation Metrics Gemini: {'bleu': 0.0032452036377754526, 'meteor': 0.06744959087896855, 'rouge1': 0.17097170971709716, 'rouge2': 0.057881773399014784, 'rougeL': 0.10455104551045509}
+  Evaluation Metrics Grok: {'bleu': 0.033781612406558706, 'meteor': 0.13976098882686688, 'rouge1': 0.32749123685528286, 'rouge2': 0.11528822055137844, 'rougeL': 0.16925388082123186}
+  Evaluation Metrics Claude: {'bleu': 0.035632243888583603, 'meteor': 0.1289397663224562, 'rouge1': 0.2900355871886121, 'rouge2': 0.09528049866429208, 'rougeL': 0.14590747330960854}
+Evaluation metrics saved to: ./src/resources/output\13473\run_4\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\13473\run_4\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: What is the gender distribution of the population in Hof?
+- Goal Question: How does the population count compare across different regional classification levels?
+- Goal Question: What is the total population of Hof as of the latest reference date?
+Testing generated code (py) for vis#1:
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 7 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 42.00/60
+
+  Average Score: 7.0/10
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\run_1\VER_2.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 5 / 10
+   - transformation: 3 / 10
+   - compliance: 3 / 10
+   - type: 8 / 10
+   - encoding: 5 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 30.00/60
+
+  Average Score: 5.0/10
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.067227  3.272727    5   20  0.025482  [-0.01, 0.4]
+Visualisierung 2: ICC=0.067
+Statistics saved to: src\resources\output\13979\run_4\statistics.txt
+✅ Finished in 1026.1s
+Processing datasets:  72%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                               | 18/25 [49:21<19:50, 170.02s/it]LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC        F  df1  df2      pval        CI95%
+0  ICC2  Single random raters  0.146758  4.52459    5   20  0.006385  [0.0, 0.59]
+Visualisierung 2: ICC=0.147
+Statistics saved to: src\resources\output\13979\run_3\statistics.txt
+✅ Finished in 1050.1s
+Processing datasets:  76%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                        | 19/25 [49:35<12:18, 123.04s/it]LIDA Judge for vis#1 with gpt-5
+   - bugs: 4 / 10
+   - transformation: 3 / 10
+   - compliance: 4 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 31.00/60
+
+  Average Score: 5.2/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LLM generated visualization code.
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+   Type           Description     ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.0625  3.468354    5   20  0.020308  [-0.01, 0.37]
+Visualisierung 2: ICC=0.063
+Statistics saved to: src\resources\output\13979\run_5\statistics.txt
+✅ Finished in 1062.6s
+Processing datasets:  80%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                 | 20/25 [50:17<08:13, 98.64s/it]LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 5 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 5 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 35.00/60
+
+  Average Score: 5.8/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 4 / 10
+   - transformation: 5 / 10
+   - compliance: 4 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 34.00/60
+
+  Average Score: 5.7/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.107872  3.863777    5   20  0.012995  [-0.0, 0.51]
+Visualisierung 2: ICC=0.108
+Statistics saved to: src\resources\output\13473\run_3\statistics.txt
+✅ Finished in 904.1s
+Processing datasets:  84%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                           | 21/25 [50:41<05:05, 76.49s/it]LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 5 / 10
+   - type: 6 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.118098  3.830882    5   20  0.013478  [-0.0, 0.53]
+Visualisierung 1: ICC=0.118
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 51.00/60
+
+  Average Score: 8.5/10
+LLM generated visualization code.
+  Evaluation Metrics GPT-5: {'bleu': 0.03474156258957662, 'meteor': 0.13409549070976048, 'rouge1': 0.28941063727839006, 'rouge2': 0.1170263788968825, 'rougeL': 0.1562050790608529}
+  Evaluation Metrics GPT-4o: {'bleu': 0.01698070422022996, 'meteor': 0.10371478532444434, 'rouge1': 0.29448491155046824, 'rouge2': 0.09791666666666668, 'rougeL': 0.16649323621227888}
+  Evaluation Metrics Gemini: {'bleu': 0.0026846121340299185, 'meteor': 0.06471475926389038, 'rouge1': 0.15507692307692308, 'rouge2': 0.05668515095502157, 'rougeL': 0.09107692307692307}
+  Evaluation Metrics Grok: {'bleu': 0.023794246904717105, 'meteor': 0.12829987332294518, 'rouge1': 0.30392656807751145, 'rouge2': 0.11230219499744767, 'rougeL': 0.16216216216216214}
+  Evaluation Metrics Claude: {'bleu': 0.03315345647029651, 'meteor': 0.1303228963977582, 'rouge1': 0.2826086956521739, 'rouge2': 0.0948651000870322, 'rougeL': 0.1426086956521739}
+Evaluation metrics saved to: ./src/resources/output\13473\run_5\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\13473\run_5\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: What is the gender distribution of the population in Hof?
+- Goal Question: How does the total population compare to the gender-specific counts?
+- Goal Question: Is there a difference in population reporting between the District (KREISE) and Municipal (GEMEIN) levels?
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.086758  3.021277    5   20  0.034315  [-0.01, 0.47]
+Visualisierung 0: ICC=0.087
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 4 / 10
+   - transformation: 3 / 10
+   - compliance: 3 / 10
+   - type: 9 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 32.00/60
+
+  Average Score: 5.3/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LLM generated visualization code.
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 4 / 10
+   - transformation: 3 / 10
+   - compliance: 4 / 10
+   - type: 6 / 10
+   - encoding: 5 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 28.00/60
+
+  Average Score: 4.7/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 51.00/60
+
+  Average Score: 8.5/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.088617  2.526055    5   20  0.062851  [-0.02, 0.49]
+Visualisierung 2: ICC=0.089
+Statistics saved to: src\resources\output\13473\run_2\statistics.txt
+✅ Finished in 1042.7s
+Processing datasets:  88%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                    | 22/25 [52:48<04:34, 91.59s/it]LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\run_4\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 10 / 10
+   - encoding: 7 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+Regenerating code for vis#1, attempt 0
+Regenerating code for vis#2, attempt 0
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\run_4\VER_1.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 5 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.154519  6.196078    5   20  0.001265  [0.01, 0.59]
+Visualisierung 1: ICC=0.155
+LLM generated visualization code.
+LIDA Judge for vis#0 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 3 / 10
+   - compliance: 4 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 36.00/60
+
+  Average Score: 6.0/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 4 / 10
+   - compliance: 5 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\run_5\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+Regenerating code for vis#1, attempt 0
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+Regenerating code for vis#2, attempt 0
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\run_5\VER_1.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+   Type           Description       ICC        F  df1  df2      pval        CI95%
+0  ICC2  Single random raters  0.169082  4.04878    5   20  0.010603  [0.0, 0.63]
+Visualisierung 0: ICC=0.169
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.104167  2.760563    5   20  0.047046  [-0.02, 0.53]
+Visualisierung 2: ICC=0.104
+Statistics saved to: src\resources\output\13473\run_1\statistics.txt
+✅ Finished in 1365.6s
+Processing datasets:  92%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌             | 23/25 [56:38<04:25, 133.00s/it]LIDA Judge for vis#0 with gpt-5
+   - bugs: 4 / 10
+   - transformation: 3 / 10
+   - compliance: 3 / 10
+   - type: 8 / 10
+   - encoding: 4 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 28.00/60
+
+  Average Score: 4.7/10
+LIDA Judge for vis#0 with gpt-4o
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 43.00/60
+
+  Average Score: 7.2/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 5 / 10
+   - transformation: 6 / 10
+   - compliance: 5 / 10
+   - type: 5 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 34.00/60
+
+  Average Score: 5.7/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 42.00/60
+
+  Average Score: 7.0/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 8 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 2 / 10
+   - transformation: 2 / 10
+   - compliance: 2 / 10
+   - type: 10 / 10
+   - encoding: 4 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 28.00/60
+
+  Average Score: 4.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 3 / 10
+   - transformation: 6 / 10
+   - compliance: 5 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+   Type           Description       ICC        F  df1  df2      pval        CI95%
+0  ICC2  Single random raters  0.174409  4.11463    5   20  0.009871  [0.0, 0.64]
+Visualisierung 0: ICC=0.174
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 5 / 10
+   - type: 4 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 37.00/60
+
+  Average Score: 6.2/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.032258  1.313589    5   20  0.298151  [-0.07, 0.44]
+Visualisierung 1: ICC=0.032
+LIDA Judge for vis#1 with gpt-5
+   - bugs: 4 / 10
+   - transformation: 3 / 10
+   - compliance: 5 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 33.00/60
+
+  Average Score: 5.5/10
+LIDA Judge for vis#1 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 55.00/60
+
+  Average Score: 9.2/10
+LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 4 / 10
+   - compliance: 5 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+   Type           Description       ICC         F  df1  df2     pval         CI95%
+0  ICC2  Single random raters  0.203899  7.182266    5   20  0.00054  [0.02, 0.66]
+Visualisierung 1: ICC=0.204
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 10 / 10
+
+  Total Score: 55.00/60
+
+  Average Score: 9.2/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.294311  7.497585    5   20  0.000417  [0.04, 0.76]
+Visualisierung 2: ICC=0.294
+Statistics saved to: src\resources\output\13473\run_4\statistics.txt
+✅ Finished in 970.9s
+Processing datasets:  96%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎      | 24/25 [1:01:33<03:01, 181.65s/it]LIDA Judge for vis#2 with gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 6 / 10
+   - encoding: 5 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 34.00/60
+
+  Average Score: 5.7/10
+LIDA Judge for vis#2 with gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 9 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 8 / 10
+   - type: 7 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 4 / 10
+   - type: 6 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 35.00/60
+
+  Average Score: 5.8/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.046346  2.226415    5   20  0.091673  [-0.02, 0.35]
+Visualisierung 2: ICC=0.046
+Statistics saved to: src\resources\output\13473\run_5\statistics.txt
+✅ Finished in 941.1s
+Processing datasets: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [1:03:17<00:00, 151.89s/it]
+
+Total time: 63.3 min
+Generations successful: 25
+Generations failed: 0

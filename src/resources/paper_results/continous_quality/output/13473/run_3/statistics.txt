@@ -1,0 +1,523 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\13473\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-11 10:57:35
+Total Duration: 899.82 seconds
+Total Token Usage: 99393 tokens
+Total Costs: $0.4004
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0075 seconds
+
+Method: analyse_dataset
+  Duration: 0.0069 seconds
+
+Method: analyse_metadata
+  Duration: 0.0026 seconds
+
+Method: llm_generate_summary
+  Duration: 158.0633 seconds
+
+Method: llm_generate_goals
+  Duration: 5.6582 seconds
+
+Method: llm_generate_python_code
+  Duration: 242.7406 seconds
+
+Method: test_generated_code
+  Duration: 7.7395 seconds
+
+Method: llm_regenerate_code
+  Duration: 40.0428 seconds
+
+Method: test_generated_code
+  Duration: 7.9957 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 437.5657 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4587 tokens
+  Costs total: $0.0038
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1338 tokens
+  Costs total: $0.0016
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5240 tokens
+  Costs total: $0.0365
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6142 tokens
+  Costs total: $0.0457
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6404 tokens
+  Costs total: $0.0480
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 943 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 268 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 955 tokens
+  Costs total: $0.0024
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3199 tokens
+  Costs total: $0.0044
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2941 tokens
+  Costs total: $0.0047
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3292 tokens
+  Costs total: $0.0044
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 288 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5084 tokens
+  Costs total: $0.0342
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2252 tokens
+  Costs total: $0.0082
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2509 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6249 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4053 tokens
+  Costs total: $0.0222
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5971 tokens
+  Costs total: $0.0425
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2314 tokens
+  Costs total: $0.0083
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2713 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3890 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4507 tokens
+  Costs total: $0.0275
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6975 tokens
+  Costs total: $0.0532
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2333 tokens
+  Costs total: $0.0091
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2484 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 7695 tokens
+  Costs total: $0.0032
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4214 tokens
+  Costs total: $0.0248
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What is the gender distribution of the population in Hof?' visualization="Bar chart showing 'value' (population count) on the y-axis and '2_variable_attribute_label' (excluding 'Insgesamt') on the x-axis." rationale="A bar chart comparing male and female counts allows for a quick visual assessment of the gender balance in the city. Using the '2_variable_attribute_label' to filter for 'männlich' and 'weiblich' against the 'value' provides a clear comparison of the two groups."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+# Set visual style
+sns.set_theme(style='whitegrid', font='DejaVu Sans')
+
+input_path = './src/resources/data/study/13473/dataset.csv'
+output_dir = './src/resources/output/13473/run_3'
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, '0_geschlechterverteilung_hof.png')
+
+# The error was a UnicodeDecodeError with utf-8. 
+# German datasets often use 'latin-1' or 'iso-8859-1' due to umlauts (ä, ö, ü).
+try:
+    df = pd.read_csv(input_path, sep=';', encoding='utf-8')
+except UnicodeDecodeError:
+    df = pd.read_csv(input_path, sep=';', encoding='latin-1')
+
+# Clean string columns
+for col in df.columns:
+    if df[col].dtype == object:
+        df[col] = df[col].astype(str).str.strip()
+
+# Convert value to numeric
+df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+# Filter for Gender (Geschlecht) and exclude the total (Insgesamt)
+# We look for 'Geschlecht' in the variable label and filter out 'Insgesamt'
+mask_topic = df['2_variable_label'].str.contains('Geschlecht', case=False, na=False)
+subset = df[mask_topic].copy()
+
+# Exclude 'Insgesamt' (Total)
+subset = subset[~subset['2_variable_attribute_label'].str.contains('Insgesamt', case=False, na=False)]
+
+# Group by gender attribute
+plot_df = subset.groupby('2_variable_attribute_label', as_index=False)['value'].sum(min_count=1)
+
+# Ensure we have data to plot
+if not plot_df.empty:
+    # Sort for consistent display (männlich, weiblich)
+    order = ['männlich', 'weiblich']
+    plot_df['2_variable_attribute_label'] = pd.Categorical(
+        plot_df['2_variable_attribute_label'], 
+        categories=[c for c in order if c in plot_df['2_variable_attribute_label'].values] or plot_df['2_variable_attribute_label'].unique(),
+        ordered=True
+    )
+    plot_df = plot_df.sort_values('2_variable_attribute_label')
+
+    # Calculate percentages for labels
+    total = plot_df['value'].sum()
+    plot_df['anteil'] = (plot_df['value'] / total * 100) if total > 0 else 0
+
+    # Plotting
+    plt.figure(figsize=(8, 6), dpi=150)
+    # Use a color palette suitable for gender comparison
+    colors = ['#2C7BB6', '#D7191C'] if len(plot_df) == 2 else sns.color_palette("viridis", len(plot_df))
+    
+    ax = sns.barplot(data=plot_df, x='2_variable_attribute_label', y='value', palette=colors)
+    
+    ax.set_title('Geschlechterverteilung der Bevölkerung in Hof', fontsize=14, pad=20)
+    ax.set_xlabel('Geschlecht', fontsize=12)
+    ax.set_ylabel('Bevölkerung (Anzahl)', fontsize=12)
+
+    # Format Y-axis with German thousands separator
+    ax.yaxis.set_major_formatter(FuncFormatter(lambda x, p: f'{int(x):,}'.replace(',', '.')))
+
+    # Add value labels on top of bars
+    for i, row in plot_df.iterrows():
+        val = row['value']
+        pct = row['anteil']
+        if pd.notna(val):
+            val_str = f'{int(val):,}'.replace(',', '.')
+            label = f'{val_str}\n({pct:.1f}%)'.replace('.', ',')
+            ax.text(i, val, label, ha='center', va='bottom', fontsize=11, fontweight='bold')
+
+    # Adjust Y-limit to make room for labels
+    ymax = plot_df['value'].max() if not plot_df['value'].empty else 100
+    ax.set_ylim(0, ymax * 1.2)
+
+    sns.despine()
+    plt.tight_layout()
+    plt.savefig(output_path, bbox_inches='tight')
+    plt.close()
+else:
+    print("No data found for the specified filters.")
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the total population of Hof compared to the gender-specific counts?' visualization="Horizontal bar chart with '2_variable_attribute_label' on the y-axis and 'value' on the x-axis." rationale="This visualization helps users understand the composition of the total population. By plotting all three categories from '2_variable_attribute_label' (männlich, weiblich, Insgesamt) against 'value', the user can see the scale of the total population relative to its components."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib.ticker import FuncFormatter
+import os
+import sys
+
+def run_visualization():
+    try:
+        sns.set_theme(style="whitegrid")
+        
+        # File paths
+        input_path = os.path.normpath('./src/resources/data/study/13473/dataset.csv')
+        output_dir = os.path.normpath('./src/resources/output/13473/run_3')
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Fix for encoding error: Try 'latin-1' or 'iso-8859-1' if 'utf-8' fails
+        # The error '0xf6' corresponds to 'ö' in latin-1, common in German datasets
+        try:
+            df = pd.read_csv(input_path, sep=';', encoding='utf-8')
+        except UnicodeDecodeError:
+            df = pd.read_csv(input_path, sep=';', encoding='latin-1')
+
+        # Data Cleaning
+        if 'value' in df.columns:
+            df['value'] = pd.to_numeric(df['value'], errors='coerce')
+        
+        # EDA Exports
+        missing_fraction = df.isna().mean().to_frame('fehlende_anteil')
+        missing_fraction.to_csv(os.path.join(output_dir, 'eda_missing_fraction.csv'), encoding='utf-8')
+        
+        numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+        if len(numeric_cols) > 0:
+            numeric_summary = df[numeric_cols].describe().T
+            numeric_summary.to_csv(os.path.join(output_dir, 'eda_numeric_summary.csv'), encoding='utf-8')
+        
+        # Filter for relevant data (Hof / Kreise level)
+        # We look for 'männlich', 'weiblich', 'Insgesamt' in '2_variable_attribute_label'
+        target_labels = ['männlich', 'weiblich', 'Insgesamt']
+        
+        # Filter rows containing our target labels
+        df_filtered = df[df['2_variable_attribute_label'].isin(target_labels)].copy()
+        
+        # If multiple entries exist (e.g. different years or regions), 
+        # we take the most recent/highest value for the specific study context
+        plot_df = df_filtered.groupby('2_variable_attribute_label', as_index=False)['value'].max()
+        
+        # Sort categories for logical display
+        cat_type = pd.CategoricalDtype(categories=['männlich', 'weiblich', 'Insgesamt'], ordered=True)
+        plot_df['2_variable_attribute_label'] = plot_df['2_variable_attribute_label'].astype(cat_type)
+        plot_df = plot_df.sort_values('2_variable_attribute_label')
+        
+        # Plotting
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
+        
+        palette = {'männlich': '#4C78A8', 'weiblich': '#F58518', 'Insgesamt': '#54A24B'}
+        colors = [palette.get(x, '#888888') for x in plot_df['2_variable_attribute_label']]
+        
+        bars = ax.barh(plot_df['2_variable_attribute_label'].astype(str), 
+                       plot_df['value'], 
+                       color=colors, 
+                       edgecolor='black', 
+                       linewidth=0.5)
+        
+        # Formatting
+        ax.set_xlabel('Einwohnerzahl (Anzahl)', fontsize=12)
+        ax.set_ylabel('Kategorie', fontsize=12)
+        ax.set_title('Gesamtbevölkerung von Hof im Vergleich nach Geschlecht', fontsize=14, pad=20)
+        
+        def de_formatter(x, pos):
+            return f"{int(x):,}".replace(',', '.')
+        
+        ax.xaxis.set_major_formatter(FuncFormatter(de_formatter))
+        
+        # Add value labels
+        max_val = plot_df['value'].max() if not plot_df['value'].empty else 0
+        for bar in bars:
+            width = bar.get_width()
+            ax.text(width + (max_val * 0.01), bar.get_y() + bar.get_height()/2,
+                    de_formatter(width, None),
+                    va='center', ha='left', fontsize=11, fontweight='bold')
+            
+        ax.set_xlim(0, max_val * 1.15)
+        sns.despine()
+        plt.tight_layout()
+        
+        # Save
+        plot_path = os.path.join(output_dir, '1_bevoelkerung_geschlecht_hof.png')
+        plt.savefig(plot_path, bbox_inches='tight', dpi=300)
+        plt.close()
+
+    except Exception as e:
+        print(f"Error occurred: {e}")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    run_visualization()
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Are the population figures consistent across different administrative classification levels (KREISE vs GEMEINDEN)?' visualization="Grouped bar chart with '2_variable_attribute_label' on the x-axis, 'value' on the y-axis, and colored by '1_variable_code'." rationale="The dataset contains records for both 'KREISE' and 'GEMEINDEN' levels. Since Hof is an independent city, these values should be identical. A grouped bar chart using '1_variable_code' and '2_variable_attribute_label' to show 'value' will confirm the data consistency across these administrative classifications."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+# The error 'UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf6' 
+# suggests the file is likely encoded in 'latin-1' or 'iso-8859-1' (common for German data with umlauts like 'ö').
+try:
+    df = pd.read_csv(r'./src/resources/data/study/13473/dataset.csv', sep=';', encoding='utf-8')
+except UnicodeDecodeError:
+    df = pd.read_csv(r'./src/resources/data/study/13473/dataset.csv', sep=';', encoding='latin-1')
+
+# Data Cleaning
+df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+# Filter for relevant administrative levels
+levels_to_compare = ['KREISE', 'GEMEIN']
+df_filtered = df[df['1_variable_code'].isin(levels_to_compare)].copy()
+
+# Handle missing values and labels
+df_filtered = df_filtered.dropna(subset=['2_variable_attribute_label', 'value'])
+
+# Define order for x-axis (Gender)
+x_order = ['männlich', 'weiblich', 'Insgesamt']
+# Ensure categories exist in data before setting order
+available_categories = [cat for cat in x_order if cat in df_filtered['2_variable_attribute_label'].unique()]
+df_filtered['2_variable_attribute_label'] = pd.Categorical(
+    df_filtered['2_variable_attribute_label'], 
+    categories=available_categories, 
+    ordered=True
+)
+
+# Visualization setup
+sns.set_theme(style='whitegrid')
+fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
+
+# Plotting
+palette = {'KREISE': '#1f77b4', 'GEMEIN': '#ff7f0e'}
+sns.barplot(
+    data=df_filtered, 
+    x='2_variable_attribute_label', 
+    y='value', 
+    hue='1_variable_code', 
+    palette=palette,
+    ax=ax
+)
+
+# Formatting
+ax.set_xlabel('Geschlecht (Gender)')
+ax.set_ylabel('Bevölkerung (Population)')
+
+# Try to get a date for the title
+try:
+    tdate = pd.to_datetime(df['time'].dropna().iloc[0]).strftime('%d.%m.%Y')
+    title_suffix = f" am {tdate}"
+except Exception:
+    title_suffix = ""
+
+ax.set_title(f'Konsistenzprüfung: Bevölkerung Hof (Krfr.St){title_suffix}\nVergleich KREISE vs GEMEINDEN')
+ax.legend(title='Verwaltungsebene')
+
+# German number formatting (dot as thousands separator)
+def format_de(x, pos=None):
+    return f"{int(x):,}".replace(',', '.')
+
+ax.yaxis.set_major_formatter(FuncFormatter(format_de))
+
+# Add value labels on top of bars
+for p in ax.patches:
+    h = p.get_height()
+    if np.isfinite(h) and h > 0:
+        ax.annotate(format_de(h), 
+                    (p.get_x() + p.get_width() / 2, h), 
+                    ha='center', va='bottom', 
+                    fontsize=9, xytext=(0, 3), 
+                    textcoords='offset points')
+
+# Consistency Check Calculation for EDA text
+pivot = df_filtered.pivot_table(index='2_variable_attribute_label', columns='1_variable_code', values='value')
+consistency_msg = "Daten sind konsistent"
+if 'KREISE' in pivot.columns and 'GEMEIN' in pivot.columns:
+    diff = (pivot['KREISE'] - pivot['GEMEIN']).abs().sum()
+    if diff > 0:
+        consistency_msg = f"Abweichung erkannt: {format_de(diff)}"
+
+ax.text(0.02, 0.95, consistency_msg, transform=ax.transAxes, 
+        fontsize=10, fontweight='bold', bbox=dict(facecolor='white', alpha=0.8))
+
+plt.tight_layout()
+plt.savefig(r'./src/resources/output/13473/run_3/2_vergleich_kreise_gemeinden_geschlecht.png', bbox_inches='tight')
+plt.close()
+
+
+-> SEVQ:
+
+

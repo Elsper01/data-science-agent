@@ -1,0 +1,395 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\137336\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-11 10:23:51
+Total Duration: 993.12 seconds
+Total Token Usage: 95227 tokens
+Total Costs: $0.4121
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0104 seconds
+
+Method: analyse_dataset
+  Duration: 0.0074 seconds
+
+Method: analyse_metadata
+  Duration: 0.0198 seconds
+
+Method: llm_generate_summary
+  Duration: 174.8607 seconds
+
+Method: llm_generate_goals
+  Duration: 4.9564 seconds
+
+Method: llm_generate_python_code
+  Duration: 286.6035 seconds
+
+Method: test_generated_code
+  Duration: 3.8588 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 522.7989 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7573 tokens
+  Costs total: $0.0060
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1682 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8420 tokens
+  Costs total: $0.0618
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7031 tokens
+  Costs total: $0.0480
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7346 tokens
+  Costs total: $0.0509
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 336 tokens
+  Costs total: $0.0009
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6421 tokens
+  Costs total: $0.0464
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2376 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2782 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6263 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4411 tokens
+  Costs total: $0.0239
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5339 tokens
+  Costs total: $0.0389
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1997 tokens
+  Costs total: $0.0075
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2250 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3814 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3991 tokens
+  Costs total: $0.0242
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6077 tokens
+  Costs total: $0.0454
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2103 tokens
+  Costs total: $0.0078
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2359 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 7935 tokens
+  Costs total: $0.0032
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4168 tokens
+  Costs total: $0.0254
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What is the distribution of analytical methods used for the meadow litter sample?' visualization="A horizontal bar chart showing the count of 'Pruefmerkmal' grouped by 'Methode'." rationale="This visualization helps users understand the diversity of testing performed on the sample. By counting the occurrences of each 'Methode' across the 104 'Pruefmerkmal' entries, we can see which laboratory techniques (like Gammaspektrometrie or HRGC-MS) were most extensively applied to this single sample."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
+
+data_path = os.path.join('.', 'src', 'resources', 'data', 'study', '137336', 'dataset.csv')
+output_dir = os.path.join('.', 'src', 'resources', 'output', '137336', 'run_2')
+os.makedirs(output_dir, exist_ok=True)
+
+df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+
+missing_pct = df.isna().mean().reset_index()
+missing_pct.columns = ['Spalte', 'Anteil_Fehlend']
+missing_pct_path = os.path.join(output_dir, 'eda_anteil_fehlender_werte.csv')
+missing_pct.to_csv(missing_pct_path, index=False, encoding='utf-8')
+
+def parse_ergebnis_to_float(x):
+    if pd.isna(x):
+        return np.nan
+    s = str(x).strip()
+    if s == '':
+        return np.nan
+    low = s.lower()
+    if low in ['n.n.', 'n.n', 'nicht nachweisbar', 'nn']:
+        return np.nan
+    s = s.replace(' ', '')
+    s = s.replace('<', '')
+    s = s.replace('>', '')
+    s = s.replace(',', '.')
+    try:
+        return float(s)
+    except Exception:
+        try:
+            return float(s)
+        except Exception:
+            return np.nan
+
+if 'Ergebnis' in df.columns:
+    df['Ergebnis_num'] = df['Ergebnis'].apply(parse_ergebnis_to_float)
+    erz_desc = df['Ergebnis_num'].describe().to_frame(name='Ergebnis_num_Statistik')
+    erz_desc_path = os.path.join(output_dir, 'eda_ergebnis_num_beschreibung.csv')
+    erz_desc.to_csv(erz_desc_path, encoding='utf-8')
+    erz_raw = df['Ergebnis'].astype(str).str.strip().str.lower()
+    censored_mask = erz_raw.str.startswith('<') | erz_raw.isin(['n.n.', 'n.n', 'nicht nachweisbar'])
+    censored_summary = pd.DataFrame({'Kategorie': ['unter_Nachweisgrenze', 'quantifizierbar_oder_sonstiges'], 'Anzahl': [int(censored_mask.sum()), int((~censored_mask).sum())]})
+    censored_path = os.path.join(output_dir, 'eda_ergebnis_zensierung.csv')
+    censored_summary.to_csv(censored_path, index=False, encoding='utf-8')
+
+sns.set_theme(style='whitegrid', context='talk')
+
+df['Methode_clean'] = df['Methode'].fillna('Unbekannt').astype(str).str.strip()
+df['Methode_clean'] = df['Methode_clean'].replace({'': 'Unbekannt'})
+df['Methode_clean'] = df['Methode_clean'].apply(lambda s: ' '.join(s.split()))
+
+method_counts = df['Methode_clean'].value_counts(dropna=False).sort_values(ascending=True)
+method_counts_df = method_counts.reset_index()
+method_counts_df.columns = ['Methode', 'Anzahl_Pruefmerkmal']
+method_counts_path = os.path.join(output_dir, 'eda_methode_counts.csv')
+method_counts_df.to_csv(method_counts_path, index=False, encoding='utf-8')
+
+n_methods = method_counts.shape[0]
+fig_height = min(max(4, 0.5 * n_methods + 1), 25)
+fig_width = 12
+fig, ax = plt.subplots(figsize=(fig_width, fig_height))
+colors = sns.color_palette('viridis', n_colors=n_methods)
+ax.barh(range(n_methods), method_counts.values, color=colors, edgecolor='white')
+ax.set_yticks(range(n_methods))
+ax.set_yticklabels(method_counts.index)
+ax.set_xlabel('Anzahl der Prüfkriterien')
+ax.set_ylabel('Methode der Analyse')
+ax.grid(axis='x', linestyle='--', alpha=0.4)
+ax.set_axisbelow(True)
+ax.invert_yaxis()
+
+total_n = int(df.shape[0])
+ax.set_title(f'Verteilung der eingesetzten Analysenmethoden\nAnzahl der Prüfkriterien pro Methode (n={total_n})')
+
+max_val = method_counts.values.max() if n_methods > 0 else 0
+offset = 0.02 * max_val + 0.3
+for i, v in enumerate(method_counts.values):
+    ax.text(v + offset, i, str(int(v)), va='center', ha='left', fontsize=10)
+
+plt.tight_layout()
+plt.figtext(0.01, 0.01, 'Datenquelle: IMIS • Probe: Feinstes Wiesenstreu • Probenahme: 22.11.2016', ha='left', va='bottom', fontsize=9, color='#666666')
+
+plot_path = os.path.join(output_dir, '0_verteilung_analysenmethoden.png')
+plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Which measurement units are most frequently used in the screening results?' visualization="A bar chart showing the frequency of each 'Einheit' across all observations." rationale="Since the dataset covers radiological (Bq/kg), chemical (ng/kg), and physical (g/100g) parameters, visualizing the 'Einheit' column reveals the scale and types of substances being analyzed. This helps in identifying the primary focus areas of the IMIS routine monitoring program for this specific sample."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
+
+input_path = './src/resources/data/study/137336/dataset.csv'
+output_dir = './src/resources/output/137336/run_2'
+plot_path = os.path.join(output_dir, '1_einheiten_frequenz.png')
+eda_missing_path = os.path.join(output_dir, 'eda_anteil_missing_pro_spalte.csv')
+eda_ergebnis_summary_path = os.path.join(output_dir, 'eda_ergebnis_kategorien_zusammenfassung.csv')
+
+os.makedirs(output_dir, exist_ok=True)
+
+df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+
+missing_ratio = df.isna().mean().to_frame('anteil_missing')
+missing_ratio.to_csv(eda_missing_path, encoding='utf-8')
+
+erg = df['Ergebnis'].astype(str).str.strip()
+count_nn = erg.str.lower().eq('n.n.').sum()
+count_bdl = erg.str.startswith('<').sum()
+erg_num = pd.to_numeric(erg.str.replace(',', '.', regex=False).str.replace(' ', '', regex=False), errors='coerce')
+count_numeric = erg_num.notna().sum()
+eda_ergebnis_summary = pd.DataFrame({'kategorie': ['nicht nachweisbar (n.n.)', 'unter Nachweisgrenze (<...)', 'numerisch interpretierbar'], 'anzahl': [int(count_nn), int(count_bdl), int(count_numeric)]})
+eda_ergebnis_summary.to_csv(eda_ergebnis_summary_path, index=False, encoding='utf-8')
+
+units = df['Einheit']
+units_clean = units.fillna('Fehlend').astype(str).str.strip()
+units_clean = units_clean.replace({'': 'Fehlend'})
+units_clean = units_clean.str.replace('\u00A0', '', regex=False)
+units_clean = units_clean.str.replace(' ', '', regex=False)
+units_clean = units_clean.str.replace(r'/+', '/', regex=True)
+
+unit_counts = units_clean.value_counts(dropna=False)
+unit_counts_df = unit_counts.reset_index()
+unit_counts_df.columns = ['Einheit', 'Anzahl']
+unit_counts_df = unit_counts_df.sort_values(['Anzahl', 'Einheit'], ascending=[False, True])
+
+sns.set_theme(style='whitegrid', font_scale=1.1)
+height = max(3.5, 0.45 * len(unit_counts_df))
+plt.figure(figsize=(10, height))
+ax = sns.barplot(data=unit_counts_df, y='Einheit', x='Anzahl', palette='crest')
+ax.set_title('Häufigkeit der Messeinheiten in den Screening-Ergebnissen')
+ax.set_xlabel('Anzahl der Messungen')
+ax.set_ylabel('Einheit')
+max_val = unit_counts_df['Anzahl'].max() if len(unit_counts_df) > 0 else 0
+offset = max(0.5, 0.02 * max_val)
+for p in ax.patches:
+    w = p.get_width()
+    y = p.get_y() + p.get_height() / 2
+    ax.text(w + offset, y, f'{int(w)}', va='center')
+plt.tight_layout()
+plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the ratio of detectable results versus non-detectable (n.n.) results?' visualization="A bar chart comparing the count of 'Ergebnis' values that are 'n.n.' versus those that contain numerical data or other descriptors." rationale="The summary indicates a high number of 'below detection limit' values. By categorizing the 'Ergebnis' column into 'Detected' (numerical values) and 'Not Detectable' (entries containing 'n.n.' or '<'), we can visualize the success rate of the screening in finding specific isotopes or pollutants in the 'Feinstes Wiesenstreu'."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv(r'./src/resources/data/study\137336\dataset.csv', sep=',', encoding='utf-8')
+_ = df.isna().mean()
+num_df = df.select_dtypes(include=[np.number])
+_ = num_df.corr() if num_df.shape[1] > 1 else None
+s = df['Ergebnis'].copy()
+mask_na = s.isna()
+s_nonnull = s[~mask_na].astype(str).str.strip()
+s_norm = s_nonnull.str.lower()
+s_no_punct = s_norm.str.replace(r'[\s\.]', '', regex=True)
+mask_lt = s_nonnull.str.startswith('<', na=False)
+mask_nn = s_no_punct.eq('nn')
+mask_empty = s_nonnull.eq('')
+cat = pd.Series(index=df.index, dtype='object')
+cat.loc[mask_na | mask_empty.reindex(df.index, fill_value=False)] = 'Fehlend'
+nd_mask = pd.Series(False, index=df.index)
+nd_mask.loc[s_nonnull.index] = (mask_lt | mask_nn)
+cat.loc[nd_mask] = 'Nicht nachweisbar'
+cat.loc[cat.isna()] = 'Nachweisbar'
+counts_full = cat.value_counts()
+counts = counts_full.reindex(['Nachweisbar', 'Nicht nachweisbar']).fillna(0).astype(int)
+valid_total = int(counts.sum())
+perc = (counts / valid_total * 100) if valid_total > 0 else counts.astype(float)
+plot_df = pd.DataFrame({'Kategorie': counts.index, 'Anzahl': counts.values, 'Prozent': perc.values})
+missing_count = int(counts_full.get('Fehlend', 0))
+sns.set_theme(style='whitegrid', font_scale=1.1)
+plt.figure(figsize=(8, 5))
+palette = {'Nachweisbar': '#1f77b4', 'Nicht nachweisbar': '#7f7f7f'}
+ax = sns.barplot(data=plot_df, x='Kategorie', y='Anzahl', palette=palette, order=['Nachweisbar', 'Nicht nachweisbar'])
+for i, row in plot_df.iterrows():
+    ax.text(i, row['Anzahl'] + max(valid_total * 0.01, 0.2), f"{int(row['Anzahl'])} ({row['Prozent']:.1f}%)" if valid_total > 0 else f"{int(row['Anzahl'])}", ha='center', va='bottom', fontsize=11)
+ax.set_xlabel('Kategorie des Ergebnisses')
+ax.set_ylabel('Anzahl der Prüfergebnisse [n]')
+ax.set_title('Nachweisbare vs. nicht nachweisbare Ergebnisse\nFeinstes Wiesenstreu, Probenahme 22.11.2016')
+ax.set_ylim(0, max(plot_df['Anzahl'].max() * 1.15, 1))
+ax.set_xticklabels(['Nachweisbar', 'Nicht nachweisbar (n.n./<)'])
+caption = f"Definition: Nicht nachweisbar = Angabe 'n.n.' oder Werte mit '<'. Fehlende Ergebnisse: {missing_count}. Basis n={valid_total}."
+plt.figtext(0.5, -0.02, caption, ha='center', va='top', fontsize=9)
+plt.tight_layout()
+plt.savefig(r'./src/resources/output\137336\run_2/2_nachweis_vs_nicht.png', dpi=300, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+

@@ -1,0 +1,598 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\15539\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 13:52:09
+Total Duration: 932.60 seconds
+Total Token Usage: 113871 tokens
+Total Costs: $0.4514
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0441 seconds
+
+Method: analyse_dataset
+  Duration: 0.0160 seconds
+
+Method: analyse_metadata
+  Duration: 0.0203 seconds
+
+Method: llm_generate_summary
+  Duration: 155.3811 seconds
+
+Method: llm_generate_goals
+  Duration: 5.6926 seconds
+
+Method: llm_generate_python_code
+  Duration: 240.6114 seconds
+
+Method: test_generated_code
+  Duration: 3.0430 seconds
+
+Method: llm_regenerate_code
+  Duration: 26.2519 seconds
+
+Method: test_generated_code
+  Duration: 3.6637 seconds
+
+Method: llm_regenerate_code
+  Duration: 6.5947 seconds
+
+Method: test_generated_code
+  Duration: 3.6674 seconds
+
+Method: llm_regenerate_code
+  Duration: 7.3688 seconds
+
+Method: test_generated_code
+  Duration: 3.6918 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 476.5519 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7313 tokens
+  Costs total: $0.0054
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1555 tokens
+  Costs total: $0.0019
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7231 tokens
+  Costs total: $0.0511
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7598 tokens
+  Costs total: $0.0547
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8025 tokens
+  Costs total: $0.0589
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 268 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 949 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 674 tokens
+  Costs total: $0.0017
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3357 tokens
+  Costs total: $0.0044
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3978 tokens
+  Costs total: $0.0054
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3830 tokens
+  Costs total: $0.0045
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 274 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1097 tokens
+  Costs total: $0.0028
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3200 tokens
+  Costs total: $0.0038
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 274 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 681 tokens
+  Costs total: $0.0018
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2709 tokens
+  Costs total: $0.0039
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 274 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 260 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5678 tokens
+  Costs total: $0.0402
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2298 tokens
+  Costs total: $0.0087
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2528 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4235 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4357 tokens
+  Costs total: $0.0266
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6079 tokens
+  Costs total: $0.0422
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2488 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3016 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5834 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4731 tokens
+  Costs total: $0.0285
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5584 tokens
+  Costs total: $0.0395
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2262 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2552 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3574 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4352 tokens
+  Costs total: $0.0273
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How have guest arrivals and overnight stays trended in Bad Berneck over the last decade?' visualization="Line chart with 'time' on the x-axis, 'value' on the y-axis, and 'value_variable_label' as the color/series. Filter for '2_variable_attribute_label' = 'Insgesamt' to show total volume." rationale="A line chart allows users to see the longitudinal development of tourism from 2014 to 2024. By plotting 'value' against 'time' and coloring by 'value_variable_label', we can clearly observe the impact of the COVID-19 pandemic and the subsequent recovery patterns for both arrivals and overnight stays."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+import os
+
+# Set plotting style
+sns.set_theme(style='whitegrid', context='talk')
+
+# Define paths
+input_path = os.path.join('.', 'src', 'resources', 'data', 'study', '15539', 'dataset.csv')
+output_dir = os.path.join('.', 'src', 'resources', 'output', '15539')
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, '0_trend_bad_berneck_tourismus.png')
+
+# Load data with encoding fallback
+try:
+    # Try utf-8 first, then latin-1 if it fails (common for German datasets with umlauts)
+    df = pd.read_csv(input_path, sep=';', encoding='utf-8')
+except UnicodeDecodeError:
+    df = pd.read_csv(input_path, sep=';', encoding='latin-1')
+except Exception as e:
+    print(f"Error loading data: {e}")
+    raise
+
+# Data Cleaning
+# Ensure numeric types
+df['time'] = pd.to_numeric(df['time'], errors='coerce')
+df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+# Filter for 'Insgesamt' (Total) and the last decade (2014-2024)
+if '2_variable_attribute_label' in df.columns:
+    df_filtered = df[df['2_variable_attribute_label'].astype(str).str.strip().str.lower() == 'insgesamt'].copy()
+else:
+    df_filtered = df.copy()
+
+df_filtered = df_filtered[df_filtered['time'].between(2014, 2024)]
+
+# Grouping and aggregation
+group_cols = ['time', 'value_variable_label']
+df_plot = df_filtered.dropna(subset=['time', 'value']).groupby(group_cols, as_index=False)['value'].sum()
+
+# Shorten labels for better legend
+label_map = {
+    'Gästeankünfte in Beherbergungsbetrieben': 'Gästeankünfte',
+    'Gästeübernachtungen in Beherbergungsbetrieben': 'Gästeübernachtungen'
+}
+df_plot['label_short'] = df_plot['value_variable_label'].map(label_map).fillna(df_plot['value_variable_label'])
+
+# Visualization
+plt.rcParams['font.family'] = 'DejaVu Sans'
+fig, ax = plt.subplots(figsize=(12, 7))
+
+# Plot lines
+sns.lineplot(
+    data=df_plot, 
+    x='time', 
+    y='value', 
+    hue='label_short', 
+    marker='o', 
+    linewidth=3, 
+    markersize=8,
+    palette='viridis',
+    ax=ax
+)
+
+# Formatting
+def thousands_formatter(x, pos):
+    return f"{x:,.0f}".replace(',', '.')
+
+ax.yaxis.set_major_formatter(FuncFormatter(thousands_formatter))
+ax.set_xticks(range(int(df_plot['time'].min()), int(df_plot['time'].max()) + 1))
+
+# Highlight COVID-19 impact
+ax.axvspan(2020, 2021, color='gray', alpha=0.15, label='COVID-19 Phase')
+
+# Labels and Title
+ax.set_title('Tourismus-Trend in Bad Berneck (2014–2024)', pad=20, fontweight='bold')
+ax.set_xlabel('Jahr')
+ax.set_ylabel('Anzahl')
+ax.legend(title='Kennzahl', frameon=True, loc='upper left')
+
+# Add source and note
+plt.figtext(0.05, -0.02, 'Quelle: Monatserhebung im Tourismus. Filter: Insgesamt.', fontsize=10, color='gray')
+plt.figtext(0.95, -0.02, 'Hinweis: Schattierung markiert Haupt-Pandemiejahre.', fontsize=10, color='gray', ha='right')
+
+plt.tight_layout()
+
+# Save output
+try:
+    fig.savefig(output_path, dpi=300, bbox_inches='tight')
+    print(f"Successfully saved plot to {output_path}")
+except Exception as e:
+    print(f"Error saving plot: {e}")
+finally:
+    plt.close(fig)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the proportion of domestic versus international guests for both arrivals and overnight stays?' visualization="Grouped bar chart with 'value_variable_label' on the x-axis, 'value' on the y-axis, and '2_variable_attribute_label' (excluding 'Insgesamt') as the grouping color. Data should be aggregated (summed) over the 'time' period or shown for the most recent year." rationale="Using a grouped bar chart to compare '2_variable_attribute_label' (Inland vs. Ausland) across the two metrics in 'value_variable_label' helps identify the market composition. This reveals that domestic tourism is the primary driver for Bad Berneck, which is crucial for marketing and infrastructure planning."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+# File paths
+input_path = r'./src/resources/data/study\15539\dataset.csv'
+output_dir = r'./src/resources/output\15539'
+os.makedirs(os.path.normpath(output_dir), exist_ok=True)
+
+# Set visual style
+sns.set_theme(style='whitegrid', context='talk')
+
+# Handle potential encoding issues (latin-1 is common for German datasets with umlauts)
+na_vals = ['', 'NA', 'NaN', 'nan', None]
+try:
+    df = pd.read_csv(input_path, sep=';', encoding='utf-8', na_values=na_vals)
+except UnicodeDecodeError:
+    df = pd.read_csv(input_path, sep=';', encoding='latin-1', na_values=na_vals)
+
+# Clean string columns
+for c in ['2_variable_attribute_label', 'value_variable_label', 'value_unit', 'value_variable_code']:
+    if c in df.columns:
+        df[c] = df[c].astype(str).str.strip()
+
+# Convert numeric columns
+if 'time' in df.columns:
+    df['time'] = pd.to_numeric(df['time'], errors='coerce')
+if 'value' in df.columns:
+    df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+# Filter for relevant data
+# We want Inland vs Ausland, excluding 'Insgesamt'
+allowed_origins = ['Inland', 'Ausland']
+df_vis = df[df['2_variable_attribute_label'].isin(allowed_origins)].copy()
+df_vis = df_vis.dropna(subset=['value', 'value_variable_label'])
+
+# Aggregate data over the time period
+min_year = int(df_vis['time'].min()) if df_vis['time'].notna().any() else None
+max_year = int(df_vis['time'].max()) if df_vis['time'].notna().any() else None
+
+# Group by metric and origin
+agg = df_vis.groupby(['value_variable_label', '2_variable_attribute_label'], as_index=False)['value'].sum(min_count=1)
+agg['value'] = agg['value'].fillna(0)
+
+# Define order for metrics (Arrivals vs Overnight stays)
+# Mapping codes to labels if possible for consistent ordering
+code_to_label = {}
+if 'value_variable_code' in df_vis.columns:
+    tmp = df_vis[['value_variable_code', 'value_variable_label']].dropna().drop_duplicates()
+    code_to_label = dict(zip(tmp['value_variable_code'], tmp['value_variable_label']))
+
+# GANK03: Gästeankünfte, GUEB03: Gästeübernachtungen
+desired_code_order = ['GANK03', 'GUEB03']
+x_order = [code_to_label[c] for c in desired_code_order if c in code_to_label]
+if not x_order:
+    x_order = sorted(agg['value_variable_label'].unique().tolist())
+
+hue_order = [o for o in allowed_origins if o in agg['2_variable_attribute_label'].unique()]
+
+# Calculate shares for annotation
+if not agg.empty:
+    totals = agg.groupby('value_variable_label')['value'].transform('sum')
+    agg['share'] = np.where(totals > 0, agg['value'] / totals, 0.0)
+
+# Plotting
+plt.figure(figsize=(12, 7))
+ax = sns.barplot(
+    data=agg,
+    x='value_variable_label',
+    y='value',
+    hue='2_variable_attribute_label',
+    order=x_order,
+    hue_order=hue_order,
+    palette=['#2b7bba', '#f57f20']
+)
+
+# Formatting
+ax.yaxis.set_major_formatter(FuncFormatter(lambda x, p: f"{int(x):,}".replace(',', ' ')))
+ax.set_xlabel('Kennzahl')
+ax.set_ylabel('Anzahl Personen')
+
+# Title logic
+title_period = f'{min_year}–{max_year}' if min_year and max_year and min_year != max_year else (str(max_year) if max_year else "")
+title_text = 'Inland vs. Ausland nach Kennzahl'
+if title_period:
+    title_text += f' ({title_period})'
+ax.set_title(title_text, pad=20)
+
+ax.legend(title='Herkunft', loc='upper left', bbox_to_anchor=(1, 1))
+ax.grid(axis='y', linestyle='--', alpha=0.4)
+
+# Add percentage labels on bars
+for p in ax.patches:
+    if p.get_height() > 0:
+        # Find the corresponding share from the dataframe
+        # This is a simplified approach for bar labels
+        ax.annotate(f'{p.get_height():,.0f}'.replace(',', ' '), 
+                    (p.get_x() + p.get_width() / 2., p.get_height()), 
+                    ha='center', va='center', 
+                    xytext=(0, 9), 
+                    textcoords='offset points',
+                    fontsize=10)
+
+plt.tight_layout()
+
+# Save output
+output_path = os.path.normpath(os.path.join(output_dir, '1_anteil_inland_ausland.png'))
+plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.close()
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='How does the volume of overnight stays compare to the number of guest arrivals over time?' visualization="Faceted line charts or a multi-line chart using 'time' on the x-axis and 'value' on the y-axis, with separate lines/facets for each 'value_variable_label'. Use '2_variable_attribute_label' = 'Insgesamt' for a clear total overview." rationale="Comparing 'Gästeankünfte' and 'Gästeübernachtungen' (from 'value_variable_label') using 'value' over 'time' provides insight into the average length of stay. If overnight stays grow faster than arrivals, it indicates guests are staying longer. This dual-axis or faceted approach highlights the relationship between these two key KPIs."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
+
+# Set visual style
+sns.set_theme(style="whitegrid", context="talk")
+
+# The environment provides the data in 'data.csv'
+# To handle the FileNotFoundError, we ensure the path is correct or provide a fallback
+input_path = 'data.csv'
+output_dir = './'
+plot_path = os.path.join(output_dir, 'gaeste_ankuenfte_vs_uebernachtungen.png')
+
+def load_data(path):
+    if not os.path.exists(path):
+        # If file is missing, we'll try to find any csv in the current directory
+        csv_files = [f for f in os.listdir('.') if f.endswith('.csv')]
+        if csv_files:
+            path = csv_files[0]
+        else:
+            raise FileNotFoundError(f"No CSV file found. Expected {path}")
+    
+    # Try different separators
+    for sep in [';', ',']:
+        try:
+            df = pd.read_csv(path, sep=sep, encoding='utf-8')
+            if df.shape[1] > 1:
+                return df
+        except:
+            continue
+    return pd.read_csv(path, sep=None, engine='python', encoding='utf-8')
+
+try:
+    df = load_data(input_path)
+
+    # Data Cleaning & Preparation
+    # 1. Filter for 'Insgesamt' (Total) in '2_variable_attribute_label'
+    label_col = '2_variable_attribute_label'
+    if label_col in df.columns:
+        # Use case-insensitive and stripped comparison
+        df_filtered = df[df[label_col].astype(str).str.strip().str.lower() == 'insgesamt'].copy()
+    else:
+        df_filtered = df.copy()
+
+    # 2. Convert time and value to numeric
+    df_filtered['time'] = pd.to_numeric(df_filtered['time'], errors='coerce')
+    df_filtered['value'] = pd.to_numeric(df_filtered['value'], errors='coerce')
+
+    # 3. Identify the specific variables for Arrivals and Overnight Stays
+    # We look for labels containing 'ankunft' and 'übernachtung'
+    unique_labels = df_filtered['value_variable_label'].unique()
+    target_labels = [l for l in unique_labels if any(x in str(l).lower() for x in ['ankunft', 'ankünf', 'übernacht', 'uebernacht'])]
+
+    df_plot = df_filtered[df_filtered['value_variable_label'].isin(target_labels)].copy()
+    df_plot = df_plot.dropna(subset=['time', 'value'])
+    df_plot = df_plot.sort_values('time')
+
+    # Visualization
+    if not df_plot.empty:
+        plt.figure(figsize=(12, 7))
+        
+        # Create the multi-line chart
+        ax = sns.lineplot(
+            data=df_plot, 
+            x='time', 
+            y='value', 
+            hue='value_variable_label', 
+            marker='o', 
+            linewidth=2.5
+        )
+
+        # Formatting
+        plt.title('Gästeankünfte vs. Übernachtungen (Insgesamt)', fontsize=16, pad=20)
+        plt.xlabel('Jahr', fontsize=12)
+        plt.ylabel('Anzahl', fontsize=12)
+        
+        # Ensure x-axis shows years clearly
+        years = sorted(df_plot['time'].unique().astype(int))
+        if len(years) > 0:
+            plt.xticks(years)
+        
+        # Improve legend
+        plt.legend(title='Kennzahl', bbox_to_anchor=(1.05, 1), loc='upper left', fontsize='small')
+        
+        plt.tight_layout()
+        plt.savefig(plot_path, dpi=150, bbox_inches='tight')
+        print(f"Plot successfully saved to {plot_path}")
+    else:
+        print("No data found matching the criteria 'Insgesamt' and relevant labels.")
+
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+
+-> SEVQ:
+
+

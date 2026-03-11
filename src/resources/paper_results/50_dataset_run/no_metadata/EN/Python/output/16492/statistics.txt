@@ -1,0 +1,498 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\16492\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 13:52:47
+Total Duration: 799.74 seconds
+Total Token Usage: 99195 tokens
+Total Costs: $0.3998
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0110 seconds
+
+Method: analyse_dataset
+  Duration: 0.0200 seconds
+
+Method: analyse_metadata
+  Duration: 0.0242 seconds
+
+Method: llm_generate_summary
+  Duration: 154.1316 seconds
+
+Method: llm_generate_goals
+  Duration: 4.8145 seconds
+
+Method: llm_generate_python_code
+  Duration: 191.9852 seconds
+
+Method: test_generated_code
+  Duration: 3.8878 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 444.8623 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 8580 tokens
+  Costs total: $0.0064
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1574 tokens
+  Costs total: $0.0015
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7378 tokens
+  Costs total: $0.0525
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6158 tokens
+  Costs total: $0.0403
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6211 tokens
+  Costs total: $0.0408
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 296 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6967 tokens
+  Costs total: $0.0486
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2733 tokens
+  Costs total: $0.0092
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3129 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6508 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4810 tokens
+  Costs total: $0.0250
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6951 tokens
+  Costs total: $0.0502
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2539 tokens
+  Costs total: $0.0088
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2936 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5271 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4554 tokens
+  Costs total: $0.0250
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6200 tokens
+  Costs total: $0.0432
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2519 tokens
+  Costs total: $0.0090
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2768 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6237 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4372 tokens
+  Costs total: $0.0233
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How does the ambient dose equivalent rate fluctuate over time in Lauf an der Pegnitz?' visualization="Line chart showing 'value' on the y-axis and 'start_measure' on the x-axis." rationale="A line chart is the most effective way to visualize temporal trends. By plotting 'value' against 'start_measure', users can identify patterns, cycles, or sudden spikes in radiation levels over the recorded week, which is essential for environmental safety monitoring."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib.dates import AutoDateLocator, ConciseDateFormatter
+
+input_path = os.path.normpath('./src/resources/data/study\\16492\\dataset.csv')
+output_dir = os.path.normpath('./src/resources/output\\16492')
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, '0_zeitverlauf_odl_lauf.png')
+
+df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+if 'start_measure' in df.columns:
+    df['start_measure'] = pd.to_datetime(df['start_measure'], errors='coerce')
+if 'end_measure' in df.columns:
+    df['end_measure'] = pd.to_datetime(df['end_measure'], errors='coerce')
+if 'value' in df.columns:
+    df['value'] = pd.to_numeric(df['value'], errors='coerce')
+if 'validated' in df.columns:
+    df['validated'] = pd.to_numeric(df['validated'], errors='coerce')
+
+if 'unit' in df.columns:
+    df = df[df['unit'].astype(str).str.contains('Sv', na=False)]
+
+eda_cols = ['start_measure', 'end_measure', 'value', 'validated']
+for c in eda_cols:
+    if c not in df.columns:
+        df[c] = np.nan
+
+missing_prop = df[eda_cols].isna().mean()
+
+if 'validated' in df.columns and df['validated'].notna().any():
+    validated_rate = float(np.nanmean((df['validated'] == 1).astype(float)))
+else:
+    validated_rate = np.nan
+
+ts = df[['start_measure', 'value']].dropna().copy()
+ts = ts.groupby('start_measure', as_index=False)['value'].mean()
+ts = ts.sort_values('start_measure')
+
+n = int(ts.shape[0])
+mean_v = float(ts['value'].mean()) if n > 0 else np.nan
+std_v = float(ts['value'].std(ddof=1)) if n > 1 else np.nan
+min_idx = ts['value'].idxmin() if n > 0 else None
+max_idx = ts['value'].idxmax() if n > 0 else None
+min_t = ts.loc[min_idx, 'start_measure'] if min_idx is not None else pd.NaT
+max_t = ts.loc[max_idx, 'start_measure'] if max_idx is not None else pd.NaT
+min_v = float(ts.loc[min_idx, 'value']) if min_idx is not None else np.nan
+max_v = float(ts.loc[max_idx, 'value']) if max_idx is not None else np.nan
+lower_band = mean_v - 2 * std_v if np.isfinite(mean_v) and np.isfinite(std_v) else np.nan
+upper_band = mean_v + 2 * std_v if np.isfinite(mean_v) and np.isfinite(std_v) else np.nan
+
+sns.set_theme(style='whitegrid', context='talk', font='DejaVu Sans')
+fig, ax = plt.subplots(figsize=(13, 6.5))
+
+if n > 0:
+    ax.plot(ts['start_measure'], ts['value'], color=sns.color_palette('deep')[0], linewidth=2.2, label='Stündliche Messung')
+    if np.isfinite(mean_v):
+        ax.axhline(mean_v, color='tab:orange', linestyle='--', linewidth=1.8, label=f'Mittelwert = {mean_v:.3f} µSv/h')
+    if np.isfinite(lower_band) and np.isfinite(upper_band):
+        ax.fill_between(ts['start_measure'], lower_band, upper_band, color='tab:blue', alpha=0.12, label='±2σ-Bereich')
+    if np.isfinite(min_v):
+        ax.scatter([min_t], [min_v], color='tab:red', s=60, zorder=5)
+        ax.annotate(f'Min: {min_v:.3f} µSv/h', xy=(min_t, min_v), xytext=(10, -20), textcoords='offset points', fontsize=10, color='tab:red', arrowprops=dict(arrowstyle='-|>', color='tab:red', lw=1))
+    if np.isfinite(max_v):
+        ax.scatter([max_t], [max_v], color='tab:green', s=60, zorder=5)
+        ax.annotate(f'Max: {max_v:.3f} µSv/h', xy=(max_t, max_v), xytext=(10, 15), textcoords='offset points', fontsize=10, color='tab:green', arrowprops=dict(arrowstyle='-|>', color='tab:green', lw=1))
+
+locator = AutoDateLocator()
+formatter = ConciseDateFormatter(locator)
+ax.xaxis.set_major_locator(locator)
+ax.xaxis.set_major_formatter(formatter)
+
+ax.set_xlabel('Start der Messung (Datum/Zeit)')
+ax.set_ylabel('Ortsdosisleistungsrate [µSv/h]')
+ax.set_title('Zeitverlauf der Ortsdosisleistungsrate (ODL) in Lauf an der Pegnitz')
+
+period_start = ts['start_measure'].min() if n > 0 else pd.NaT
+period_end = ts['start_measure'].max() if n > 0 else pd.NaT
+period_txt = ''
+if pd.notna(period_start) and pd.notna(period_end):
+    period_txt = f'Zeitraum: {period_start.strftime("%d.%m.%Y %H:%M")} – {period_end.strftime("%d.%m.%Y %H:%M")}'
+
+miss_v_share = float(missing_prop.get('value', np.nan))
+validated_txt = f'Validierte Messungen: {validated_rate*100:.1f}%' if np.isfinite(validated_rate) else 'Validierte Messungen: n/v'
+stats_line = f'{period_txt} | n={n} | Mittelwert={mean_v:.3f} µSv/h | Std={std_v:.3f} µSv/h | Fehlende Werte (value)={miss_v_share*100:.1f}%'
+
+fig.text(0.01, 0.01, f'{stats_line}\n{validated_txt} | Station: DEZ1715 | Nuklid: Gamma-ODL-Brutto', ha='left', va='bottom', fontsize=10, color='#444444')
+
+ax.legend(frameon=True, loc='upper right')
+ax.margins(x=0.01)
+for spine in ['top', 'right']:
+    ax.spines[spine].set_visible(False)
+plt.tight_layout()
+fig.subplots_adjust(bottom=0.18)
+
+plt.savefig(output_path, dpi=200, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the distribution of the measured radiation values?' visualization="Histogram of the 'value' column to show the frequency distribution of radiation measurements." rationale="A histogram allows users to understand the frequency and spread of the radiation levels. By analyzing the 'value' column, we can see if the measurements follow a normal distribution around the mean of 0.117 µSv/h or if there are outliers that deviate significantly from the natural background radiation."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(style="whitegrid", context="talk")
+
+file_path = r"./src/resources/data/study\16492\dataset.csv"
+output_path = r"./src/resources/output\16492/1_histogram_strahlungswerte.png"
+
+df = pd.read_csv(file_path, sep=",", encoding="utf-8")
+
+for col in df.columns:
+    if df[col].dtype == object:
+        try:
+            df[col] = df[col].str.strip()
+        except Exception:
+            pass
+
+missing_prop = df.isna().mean()
+
+value = pd.to_numeric(df.get("value"), errors="coerce")
+unit_col = df.get("unit")
+validated_col = pd.to_numeric(df.get("validated"), errors="coerce") if "validated" in df.columns else None
+
+if unit_col is not None:
+    mask_unit = unit_col == "µSv/h"
+else:
+    mask_unit = pd.Series([True] * len(df))
+
+if validated_col is not None:
+    mask_valid = validated_col == 1
+else:
+    mask_valid = pd.Series([True] * len(df))
+
+mask_numeric = value.notna()
+mask = mask_unit & mask_valid & mask_numeric
+v = value[mask]
+
+n = int(v.shape[0])
+mean_v = float(v.mean()) if n > 0 else np.nan
+std_v = float(v.std(ddof=1)) if n > 1 else np.nan
+min_v = float(v.min()) if n > 0 else np.nan
+max_v = float(v.max()) if n > 0 else np.nan
+median_v = float(v.median()) if n > 0 else np.nan
+skew_v = float(v.skew()) if n > 0 else np.nan
+miss_value_pct = float((~mask_numeric).mean() * 100)
+
+bins = "auto"
+if n > 1:
+    q75, q25 = np.percentile(v, [75, 25])
+    iqr = q75 - q25
+    data_range = max_v - min_v if max_v is not None and min_v is not None else 0
+    if iqr > 0 and data_range > 0:
+        bw = 2 * iqr * (n ** (-1/3))
+        if bw > 0:
+            est_bins = int(np.ceil(data_range / bw))
+            est_bins = max(5, min(est_bins, 40))
+            bins = est_bins
+    elif data_range > 0:
+        est_bins = int(np.ceil(np.sqrt(n)))
+        est_bins = max(5, min(est_bins, 40))
+        bins = est_bins
+
+plt.figure(figsize=(10, 6))
+ax = plt.gca()
+
+hist_color = "#4C78A8"
+kde_color = "#B279A2"
+norm_color = "#59A14F"
+
+sns.histplot(v, bins=bins, stat="density", kde=False, color=hist_color, edgecolor="white", linewidth=0.7, alpha=0.9, ax=ax)
+
+try:
+    sns.kdeplot(v, color=kde_color, linewidth=2.0, ax=ax, label="KDE-Dichte")
+except Exception:
+    pass
+
+if np.isfinite(mean_v) and np.isfinite(std_v) and std_v > 0:
+    x_min = min_v - 3 * std_v
+    x_max = max_v + 3 * std_v
+    if np.isfinite(x_min) and np.isfinite(x_max) and x_max > x_min:
+        xs = np.linspace(x_min, x_max, 300)
+        pdf = (1 / (std_v * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((xs - mean_v) / std_v) ** 2)
+        ax.plot(xs, pdf, color=norm_color, linewidth=2.0, label="Normalverteilung (μ, σ)")
+
+if np.isfinite(mean_v):
+    ax.axvline(mean_v, color="#E15759", linestyle="-", linewidth=2, label=f"Mittelwert: {mean_v:.3f} µSv/h")
+if np.isfinite(median_v):
+    ax.axvline(median_v, color="#F28E2B", linestyle="--", linewidth=2, label=f"Median: {median_v:.3f} µSv/h")
+
+ax.set_title("Verteilung der Gamma-ODL-Messwerte (µSv/h) – Station DEZ1715, Jan 2026", pad=14)
+ax.set_xlabel("Ortsdosisleistungswert (µSv/h)")
+ax.set_ylabel("Dichte")
+
+stats_text = (
+    f"n: {n}\n"
+    f"Fehlende Werte (value): {miss_value_pct:.1f}%\n"
+    f"Mittelwert: {mean_v:.3f} µSv/h\n"
+    f"Std.-Abw.: {std_v:.3f} µSv/h\n"
+    f"Min: {min_v:.3f} µSv/h\n"
+    f"Median: {median_v:.3f} µSv/h\n"
+    f"Max: {max_v:.3f} µSv/h\n"
+    f"Schiefe: {skew_v:.2f}"
+)
+
+ax.text(0.98, 0.98, stats_text, transform=ax.transAxes, va="top", ha="right", fontsize=10, bbox=dict(boxstyle="round,pad=0.4", fc="white", ec="#CCCCCC", alpha=0.9))
+
+ax.legend(frameon=True, loc="upper right")
+plt.tight_layout()
+
+plt.savefig(output_path, dpi=200, bbox_inches="tight")
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the range and central tendency of the radiation measurements?' visualization="Box plot of the 'value' column." rationale="A box plot of the 'value' field provides a clear summary of the data's statistical profile, including the median, quartiles, and potential outliers. This helps in quickly assessing the stability of the 'Gamma-ODL-Brutto' readings at the 'Lauf an der Pegnitz' station."
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+try:
+    input_path = os.path.normpath(r'./src/resources/data/study\16492\dataset.csv')
+    output_dir = os.path.normpath(r'./src/resources/output\16492')
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+    for col in ['start_measure', 'end_measure']:
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col], errors='coerce')
+    numeric_value = pd.to_numeric(df['value'], errors='coerce') if 'value' in df.columns else pd.Series(dtype=float)
+    unit = df['unit'].dropna().astype(str).mode().iloc[0] if 'unit' in df.columns and df['unit'].notna().any() else 'µSv/h'
+    value_missing_ratio = float(numeric_value.isna().mean()) if len(numeric_value) > 0 else 1.0
+    values = numeric_value.dropna()
+    if values.empty:
+        print('Fehler: Keine numerischen Werte in der Spalte value verfügbar.')
+        sys.exit(1)
+    n = int(values.shape[0])
+    vmin = float(values.min())
+    q1 = float(values.quantile(0.25))
+    median = float(values.median())
+    q3 = float(values.quantile(0.75))
+    vmax = float(values.max())
+    mean = float(values.mean())
+    std = float(values.std(ddof=1)) if n > 1 else 0.0
+    iqr = q3 - q1
+    p5 = float(values.quantile(0.05))
+    p95 = float(values.quantile(0.95))
+    start_dt = df['start_measure'].min() if 'start_measure' in df.columns else None
+    end_dt = df['end_measure'].max() if 'end_measure' in df.columns else None
+    period_str = ''
+    if pd.notna(start_dt) and pd.notna(end_dt):
+        period_str = f" ({start_dt.strftime('%d.%m.%Y')}–{end_dt.strftime('%d.%m.%Y')})"
+    sns.set_theme(style='whitegrid', context='talk')
+    fig, ax = plt.subplots(figsize=(8, 6))
+    bp = ax.boxplot(values.values, vert=True, notch=True, patch_artist=True, labels=['Gamma-ODL-Brutto'], whis=1.5, showmeans=True, meanline=False, meanprops=dict(marker='D', markerfacecolor='#D62728', markeredgecolor='white', markersize=8))
+    for box in bp['boxes']:
+        box.set(facecolor='#4C78A8', alpha=0.35, edgecolor='#4C78A8', linewidth=2)
+    for whisker in bp['whiskers']:
+        whisker.set(color='#4C78A8', linewidth=2)
+    for cap in bp['caps']:
+        cap.set(color='#4C78A8', linewidth=2)
+    for median_line in bp['medians']:
+        median_line.set(color='#2CA02C', linewidth=2.5)
+    if 'fliers' in bp:
+        for flier in bp['fliers']:
+            flier.set(marker='o', markerfacecolor='#FF7F0E', markeredgecolor='white', alpha=0.7)
+    ax.set_title(f'Verteilung der Ortsdosisleistungsrate in Lauf an der Pegnitz{period_str}', fontsize=14)
+    ax.set_ylabel(f'ODL Dosisleistungsrate ({unit})', fontsize=12)
+    ax.set_xlabel('Messgröße', fontsize=12)
+    rng = vmax - vmin
+    pad = rng * 0.1 if rng > 0 else 0.01
+    ax.set_ylim(vmin - pad, vmax + pad)
+    ytxt = (
+        f'N = {n}\n'
+        f'Mittelwert = {mean:.3f} {unit}\n'
+        f'Median = {median:.3f} {unit}\n'
+        f'Stdabw. = {std:.3f} {unit}\n'
+        f'Min/Max = {vmin:.3f}/{vmax:.3f} {unit}\n'
+        f'Q1/Q3 = {q1:.3f}/{q3:.3f} {unit}\n'
+        f'IQR = {iqr:.3f} {unit}\n'
+        f'P5/P95 = {p5:.3f}/{p95:.3f} {unit}\n'
+        f'Fehlende Werte (value) = {value_missing_ratio*100:.1f}%'
+    )
+    ax.text(0.97, 0.5, ytxt, transform=ax.transAxes, va='center', ha='right', fontsize=11, bbox=dict(boxstyle='round,pad=0.4', facecolor='white', alpha=0.9, edgecolor='#CCCCCC'))
+    for spine in ['top', 'right']:
+        ax.spines[spine].set_visible(False)
+    output_path = os.path.join(output_dir, '2_boxplot_odl_value.png')
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=200, bbox_inches='tight')
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+
+-> SEVQ:
+
+

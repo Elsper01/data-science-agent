@@ -1,0 +1,16 @@
+Spalte,n,Anzahl_fehlend,Anteil_fehlend
+Hauptprobenummer,4,0,0
+Bezeichnung,4,0,0
+Probe_Entnahmeart,4,0,0
+Probenahme_Beginn_Datum,4,0,0
+Probenahme_Beginn_Zeit,4,0,0
+Probenahme_Ende_Datum,4,0,0
+Probenahme_Ende_Zeit,4,0,0
+Umweltbereich,4,0,0
+Messprogrammgruppe,4,0,0
+Entnahmestelle,4,0,0
+Herkunftsstaat,4,0,0
+Methode,4,0,0
+Pruefmerkmal,4,0,0
+Ergebnis,4,1,0.25
+Einheit,4,0,0

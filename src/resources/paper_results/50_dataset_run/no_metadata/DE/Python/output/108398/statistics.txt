@@ -1,0 +1,597 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\108398\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-08 15:46:25
+Total Duration: 1549.82 seconds
+Total Token Usage: 170746 tokens
+Total Costs: $0.5669
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 2
+  - Exactly One Visualization: 1 / 3 = (33.33%)
+  - One or More Visualization: 1 / 3 =  (33.33%)
+VER for generation attempt #2:
+  - No Visualization: 2
+  - Exactly One Visualization: 1 / 3 = (33.33%)
+  - One or More Visualization: 1 / 3 =  (33.33%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0279 seconds
+
+Method: analyse_dataset
+  Duration: 0.0389 seconds
+
+Method: llm_generate_summary
+  Duration: 489.3380 seconds
+
+Method: llm_generate_goals
+  Duration: 4.0670 seconds
+
+Method: llm_generate_python_code
+  Duration: 404.4267 seconds
+
+Method: test_generated_code
+  Duration: 7.1956 seconds
+
+Method: llm_regenerate_code
+  Duration: 23.9255 seconds
+
+Method: test_generated_code
+  Duration: 8.1950 seconds
+
+Method: llm_regenerate_code
+  Duration: 9.6468 seconds
+
+Method: test_generated_code
+  Duration: 8.9810 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 593.9784 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 28603 tokens
+  Costs total: $0.0164
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1910 tokens
+  Costs total: $0.0024
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 15127 tokens
+  Costs total: $0.0634
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 16100 tokens
+  Costs total: $0.0727
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 15591 tokens
+  Costs total: $0.0681
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 843 tokens
+  Costs total: $0.0022
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 843 tokens
+  Costs total: $0.0022
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 323 tokens
+  Costs total: $0.0009
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3673 tokens
+  Costs total: $0.0054
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4891 tokens
+  Costs total: $0.0068
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3051 tokens
+  Costs total: $0.0047
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 615 tokens
+  Costs total: $0.0016
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 324 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3646 tokens
+  Costs total: $0.0056
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 325 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 324 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7668 tokens
+  Costs total: $0.0536
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3007 tokens
+  Costs total: $0.0099
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3276 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5171 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5932 tokens
+  Costs total: $0.0345
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8691 tokens
+  Costs total: $0.0619
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3183 tokens
+  Costs total: $0.0101
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3569 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4758 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 6631 tokens
+  Costs total: $0.0426
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6384 tokens
+  Costs total: $0.0427
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2689 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2997 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4384 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5601 tokens
+  Costs total: $0.0337
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verläuft die Ortsdosisleistung (ODL) im Zeitverlauf an den verschiedenen Standorten?' visualization="Liniendiagramm mit 'Datum_Uhrzeit' auf der x-Achse und den ODL-Werten aus 'KBR_ / KKB_ / KKB_..._IMK' auf der y-Achse." rationale="Ein Liniendiagramm ist ideal, um zeitliche Trends und Schwankungen der Strahlungswerte darzustellen. Durch die Verwendung von 'Datum_Uhrzeit' auf der x-Achse und 'KBR_ / KKB_ / KKK_..._IMK' auf der y-Achse kann der Nutzer sofort erkennen, ob die Werte stabil im Bereich der natürlichen Hintergrundstrahlung liegen oder ob es signifikante Abweichungen gibt."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib.dates as mdates
+
+# Pfade definieren
+input_path = os.path.normpath(os.path.join('.', 'src', 'resources', 'data', 'study', '108398', 'dataset.csv'))
+output_dir = os.path.normpath(os.path.join('.', 'src', 'resources', 'output', '108398'))
+os.makedirs(output_dir, exist_ok=True)
+
+# Daten einlesen
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8', dtype=str)
+except UnicodeDecodeError:
+    df = pd.read_csv(input_path, sep=',', encoding='latin-1', dtype=str)
+
+# Zeitstempel konvertieren
+if 'Datum_Uhrzeit' in df.columns:
+    df['Datum_Uhrzeit'] = pd.to_datetime(df['Datum_Uhrzeit'], dayfirst=True, errors='coerce')
+else:
+    # Fallback falls Spalte fehlt
+    df['Datum_Uhrzeit'] = pd.NaT
+
+# Numerische Konvertierung (Komma zu Punkt)
+non_time_cols = [c for c in df.columns if c != 'Datum_Uhrzeit']
+for c in non_time_cols:
+    df[c] = df[c].str.replace(',', '.', regex=False)
+    df[c] = pd.to_numeric(df[c], errors='coerce')
+
+# Zeilen ohne Datum entfernen und sortieren
+df = df.dropna(subset=['Datum_Uhrzeit']).sort_values('Datum_Uhrzeit')
+
+# Relevante ODL-Spalten identifizieren (_IMK Suffix für die Standorte KBR, KKB, KKK)
+# Wir suchen Spalten, die mit den Standortkürzeln beginnen und auf _IMK enden
+imk_cols = [c for c in df.columns if c.endswith('_IMK') and (c.startswith('KBR_') or c.startswith('KKB_') or c.startswith('KKK_'))]
+
+# Aggregation pro Standort
+site_map = {'KBR': 'Brokdorf (KBR)', 'KKB': 'Brunsbüttel (KKB)', 'KKK': 'Krümmel (KKK)'}
+site_series = pd.DataFrame(index=df['Datum_Uhrzeit'])
+
+for prefix, name in site_map.items():
+    # Finde alle Sensoren für diesen Standort
+    site_cols = [c for c in imk_cols if c.startswith(prefix + '_')]
+    if site_cols:
+        # Median berechnen, um Ausreißer einzelner Sensoren zu glätten
+        site_series[name] = df[site_cols].median(axis=1, skipna=True)
+
+# WICHTIG: Entferne Zeilen, in denen alle Standorte NaN sind
+site_series = site_series.dropna(how='all')
+
+# Fehlerbehebung: Prüfen, ob site_series Spalten hat, bevor describe() aufgerufen wird
+if not site_series.empty and len(site_series.columns) > 0:
+    # Statistiken speichern
+    stats = site_series.describe(percentiles=[0.05, 0.5, 0.95]).T
+    corr = site_series.corr()
+    
+    stats.to_csv(os.path.join(output_dir, 'eda_odl_standorte_kennwerte.csv'), encoding='utf-8', float_format='%.6g')
+    corr.to_csv(os.path.join(output_dir, 'eda_odl_standorte_korrelationen.csv'), encoding='utf-8', float_format='%.6g')
+
+    # Visualisierung
+    sns.set_theme(style='whitegrid', context='talk')
+    fig, ax = plt.subplots(figsize=(14, 7))
+
+    colors = sns.color_palette('viridis', n_colors=site_series.shape[1])
+    for i, col in enumerate(site_series.columns):
+        ax.plot(site_series.index, site_series[col], label=col, color=colors[i], linewidth=1.5, alpha=0.8)
+
+    # X-Achse formatieren
+    locator = mdates.AutoDateLocator()
+    formatter = mdates.ConciseDateFormatter(locator)
+    ax.xaxis.set_major_locator(locator)
+    ax.xaxis.set_major_formatter(formatter)
+
+    ax.set_xlabel('Zeitverlauf')
+    ax.set_ylabel('Ortsdosisleistung (µSv/h)')
+
+    # Titel mit Datumsbereich
+    start_dt = site_series.index.min()
+    end_dt = site_series.index.max()
+    title_range = f" ({start_dt.strftime('%d.%m.%Y')} - {end_dt.strftime('%d.%m.%Y')})"
+    ax.set_title('Zeitlicher Verlauf der Ortsdosisleistung (ODL)' + title_range, pad=20)
+    
+    # Y-Achse optimieren (nur positive Werte, da Strahlung nicht negativ sein kann)
+    vals = site_series.values.flatten()
+    valid_vals = vals[np.isfinite(vals)]
+    if len(valid_vals) > 0:
+        ax.set_ylim(0, np.max(valid_vals) * 1.2)
+
+    ax.legend(loc='upper right', fontsize='small', frameon=True)
+    plt.tight_layout()
+
+    # Speichern
+    plot_path = os.path.join(output_dir, '0_odl_verlauf_standorte.png')
+    plt.savefig(plot_path, dpi=300)
+    plt.close()
+    print(f"Visualisierung erfolgreich unter {plot_path} gespeichert.")
+else:
+    print("Keine Daten für die Standorte KBR, KKB oder KKK gefunden. Prüfe Spaltennamen.")
+
+# Fehlende Werte Statistik (immer nützlich)
+missing_share = df.isna().mean().sort_values(ascending=False)
+missing_share.to_csv(os.path.join(output_dir, 'eda_anteil_fehlender_werte.csv'), encoding='utf-8', header=['Anteil_fehlend'])
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Gibt es einen Zusammenhang zwischen Niederschlagsereignissen und kurzzeitigen Erhöhungen der Strahlungswerte?' visualization="Kombiniertes Diagramm (Dual-Axis): Balkendiagramm für 'KBR_NID1_MET / KKB_NIED_MET / KKK_NIED_MET' und Liniendiagramm für 'KBR_ / KKB_ / KKK_..._IMK' über 'Datum_Uhrzeit'." rationale="Die Zusammenfassung weist auf den physikalischen Effekt hin, dass Niederschlag die ODL beeinflussen kann (Wash-out Effekt). Ein kombiniertes Diagramm (z.B. Linie für ODL und Balken für Niederschlag) unter Verwendung von 'KBR_NID1_MET / KKB_NIED_MET / KKK_NIED_MET' und 'KBR_ / KKB_ / KKK_..._IMK' über die Zeitachse 'Datum_Uhrzeit' macht diese Korrelation für den Nutzer visuell prüfbar."
+
+-> Code:
+import os
+import re
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib.dates as mdates
+
+# Set style
+sns.set_style("whitegrid")
+
+input_path = os.path.normpath('./src/resources/data/study/108398/dataset.csv')
+output_dir = os.path.normpath('./src/resources/output/108398')
+os.makedirs(output_dir, exist_ok=True)
+
+# The error 'UnicodeDecodeError: utf-8 codec can't decode byte 0xfc' indicates 
+# that the file is likely encoded in 'latin-1' (ISO-8859-1) or 'cp1252' 
+# (common for German data with umlauts like 'ü' = 0xfc).
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8', dtype=str)
+except UnicodeDecodeError:
+    df = pd.read_csv(input_path, sep=',', encoding='latin-1', dtype=str)
+
+# Clean column names
+df = df.rename(columns=lambda c: c.strip() if isinstance(c, str) else c)
+if 'Unnamed__87' in df.columns:
+    df = df.drop(columns=['Unnamed__87'])
+
+# Handle missing values
+df = df.replace({'': np.nan, 'nan': np.nan, 'NaN': np.nan, 'None': np.nan})
+
+# Parse DateTime
+if 'Datum_Uhrzeit' in df.columns:
+    # Try common formats, dayfirst=True is typical for German datasets
+    dt = pd.to_datetime(df['Datum_Uhrzeit'], dayfirst=True, errors='coerce')
+    df['Datum_Uhrzeit'] = dt
+    df = df[df['Datum_Uhrzeit'].notna()].copy()
+else:
+    print("Error: Column 'Datum_Uhrzeit' not found.")
+    exit(1)
+
+df = df.sort_values('Datum_Uhrzeit').reset_index(drop=True)
+
+# Identify relevant columns
+all_cols = list(df.columns)
+site_prefixes = ['KBR', 'KKB', 'KKK']
+odl_cols = [c for c in all_cols if re.match(r'^(KBR|KKB|KKK)_[0-9]{4}_IMK$', str(c))]
+
+def find_precip_col(site, columns):
+    exact_map = {'KBR': 'KBR_NID1_MET', 'KKB': 'KKB_NIED_MET', 'KKK': 'KKK_NIED_MET'}
+    if exact_map[site] in columns:
+        return exact_map[site]
+    cands = [c for c in columns if c.startswith(site + '_') and c.endswith('_MET') and (('NIED' in c) or ('NID' in c))]
+    return cands[0] if len(cands) > 0 else None
+
+precip_cols = {s: find_precip_col(s, all_cols) for s in site_prefixes}
+
+# Convert numeric columns
+def to_float_series(s):
+    if s.dtype.kind in ('f', 'i', 'b'): 
+        return pd.to_numeric(s, errors='coerce')
+    # Handle German decimal commas
+    return pd.to_numeric(s.astype(str).str.replace(',', '.', regex=False).str.strip(), errors='coerce')
+
+num_candidate_cols = list(set(odl_cols + [c for c in precip_cols.values() if c is not None]))
+for c in num_candidate_cols:
+    df[c] = to_float_series(df[c])
+
+# Calculate medians for ODL per site to simplify visualization
+for s in site_prefixes:
+    site_odl_cols = [c for c in odl_cols if c.startswith(s + '_')]
+    if site_odl_cols:
+        df[f'ODL_{s}'] = df[site_odl_cols].median(axis=1, skipna=True)
+
+# Visualization
+palette = sns.color_palette('Set2', 3)
+bar_colors = {'KBR': palette[0], 'KKB': palette[1], 'KKK': palette[2]}
+line_colors = {k: tuple([min(max(ch * 0.7, 0), 1) for ch in bar_colors[k]]) for k in bar_colors}
+
+t = df['Datum_Uhrzeit']
+xd = mdates.date2num(t)
+width = 0.015 # Adjusted width for bars
+offsets = {'KBR': -width, 'KKB': 0.0, 'KKK': width}
+
+fig, ax1 = plt.subplots(figsize=(14, 8), dpi=150)
+ax2 = ax1.twinx()
+
+handles = []
+labels = []
+
+# Plot Precipitation as bars
+for s in site_prefixes:
+    pcol = precip_cols.get(s)
+    if pcol and pcol in df.columns:
+        y = df[pcol].fillna(0).values
+        h = ax1.bar(xd + offsets[s], y, width=width, color=bar_colors[s], alpha=0.3, label=f'Niederschlag {s}')
+        handles.append(h)
+        labels.append(f'Niederschlag {s}')
+
+# Plot ODL as lines
+for s in site_prefixes:
+    ocol = f'ODL_{s}'
+    if ocol in df.columns:
+        l, = ax2.plot(t, df[ocol], color=line_colors[s], linewidth=1.8, label=f'ODL {s} (Median)')
+        handles.append(l)
+        labels.append(f'ODL {s}')
+
+ax1.set_xlabel('Zeitverlauf')
+ax1.set_ylabel('Niederschlag [mm/h]', fontsize=12)
+ax2.set_ylabel('Ortsdosisleistung ODL [µSv/h]', fontsize=12)
+
+# Formatting X-Axis
+locator = mdates.AutoDateLocator(minticks=5, maxticks=10)
+formatter = mdates.ConciseDateFormatter(locator)
+ax1.xaxis.set_major_locator(locator)
+ax1.xaxis.set_major_formatter(formatter)
+
+ax1.set_ylim(bottom=0)
+ax2.grid(True, axis='y', linestyle='--', alpha=0.5)
+
+# Legend
+ax1.legend(handles, labels, loc='upper center', bbox_to_anchor=(0.5, -0.12), ncol=3, frameon=True)
+
+plt.title('Zusammenhang zwischen Niederschlag und ODL-Werten (Wash-out Effekt)', fontsize=14, pad=20)
+plt.tight_layout()
+
+plot_path = os.path.join(output_dir, 'niederschlag_odl_korrelation.png')
+plt.savefig(plot_path, dpi=200, bbox_inches='tight')
+plt.close(fig)
+
+print(f"Visualization saved to {plot_path}")
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie ist die Verteilung der Windgeschwindigkeiten an den Standorten während des Messzeitraums?' visualization="Histogramm der Windgeschwindigkeiten unter Verwendung der Spalte 'KBR_WGK_TIS / KKB_WGK_TIS / KKK_WGK_TIS'." rationale="Die Windgeschwindigkeit ist ein kritischer Faktor für die Ausbreitungsrechnung. Ein Histogramm der Spalte 'KBR_WGK_TIS / KKB_WGK_TIS / KKK_WGK_TIS' zeigt die Häufigkeitsverteilung der Windstärken. Dies hilft dem Nutzer zu verstehen, welche meteorologischen Bedingungen (z.B. windstille Lagen vs. Starkwind) während der ODL-Messungen vorherrschten."
+
+-> Code:
+import os
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+try:
+    # Pfade definieren
+    input_path = './src/resources/data/study/108398/dataset.csv'
+    output_dir = os.path.join('.', 'src', 'resources', 'output', '108398')
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Fehlerbehebung: Encoding auf 'latin-1' (ISO-8859-1) ändern, da 'utf-8' fehlschlug (0xfc deutet auf ein 'ü' in latin-1 hin)
+    # Zudem wird 'engine="python"' genutzt, um robuster gegenüber Formatierungsproblemen zu sein
+    df = pd.read_csv(input_path, sep=',', encoding='latin-1', dtype=str, na_values=['', ' ', 'nan', 'NaN', 'NA', None])
+
+    # Spaltenbereinigung
+    if 'Unnamed__87' in df.columns:
+        df = df.drop(columns=['Unnamed__87'])
+
+    # Zeitstempel verarbeiten
+    if 'Datum_Uhrzeit' in df.columns:
+        df['Datum_Uhrzeit'] = pd.to_datetime(df['Datum_Uhrzeit'], format='%d.%m.%Y %H:%M:%S', errors='coerce', dayfirst=True)
+        df = df[~df['Datum_Uhrzeit'].isna()].copy()
+
+    # Zielspalten für Windgeschwindigkeit
+    target_cols = ['KBR_WGK_TIS', 'KKB_WGK_TIS', 'KKK_WGK_TIS']
+    available_cols = [c for c in target_cols if c in df.columns]
+
+    if len(available_cols) == 0:
+        raise ValueError(f'Benötigte Spalten für Windgeschwindigkeit nicht gefunden. Vorhanden: {df.columns.tolist()}')
+
+    # Numerische Konvertierung (Komma zu Punkt)
+    def to_num(x):
+        if pd.isna(x):
+            return np.nan
+        if isinstance(x, (int, float, np.floating)):
+            return float(x)
+        if isinstance(x, str):
+            s = x.strip()
+            if s == '' or s.lower() in {'nan', 'na', 'none'}:
+                return np.nan
+            s = s.replace(',', '.')
+            try:
+                return float(s)
+            except ValueError:
+                return np.nan
+        return np.nan
+
+    for c in available_cols:
+        df[c] = df[c].apply(to_num)
+
+    # Daten für Visualisierung vorbereiten
+    df_ws = df[available_cols].copy()
+    df_ws = df_ws.dropna(how='all')
+
+    # Statistiken speichern
+    miss = df_ws.isna().mean().to_frame(name='Anteil_fehlender_Werte')
+    miss.to_csv(os.path.join(output_dir, 'eda_anteil_fehlender_werte_wind.csv'), encoding='utf-8')
+    
+    desc = df_ws.describe(percentiles=[0.05, 0.25, 0.5, 0.75, 0.95]).T
+    desc.to_csv(os.path.join(output_dir, 'eda_kennwerte_wind.csv'), encoding='utf-8')
+
+    # Visualisierung
+    sns.set_theme(style='whitegrid', context='talk', palette='colorblind')
+    plt.figure(figsize=(12, 7))
+    
+    site_map = {'KBR_WGK_TIS': 'KBR', 'KKB_WGK_TIS': 'KKB', 'KKK_WGK_TIS': 'KKK'}
+    colors = sns.color_palette('colorblind', n_colors=len(available_cols))
+
+    # Histogramm erstellen
+    for col, color in zip(available_cols, colors):
+        data = df_ws[col].dropna().to_numpy()
+        if data.size == 0:
+            continue
+        
+        # Histogramm mit Transparenz für Überlagerung
+        sns.histplot(data, bins=25, kde=True, label=site_map.get(col, col), 
+                     color=color, alpha=0.4, element="step")
+        
+        # Median-Linie
+        med = float(np.median(data))
+        plt.axvline(med, color=color, linestyle='--', linewidth=2, alpha=0.8)
+
+    plt.xlabel('Windgeschwindigkeit (m/s)')
+    plt.ylabel('Häufigkeit')
+    plt.title('Verteilung der Windgeschwindigkeiten an den Standorten\nMesszeitraum: 2023')
+    plt.legend(title='Standort', frameon=True)
+    
+    plt.tight_layout()
+    plot_path = os.path.join(output_dir, '2_windgeschwindigkeit_histogramm.png')
+    plt.savefig(plot_path, dpi=300)
+    plt.close()
+
+except Exception as e:
+    print(f"Fehler aufgetreten: {str(e)}")
+
+
+-> SEVQ:
+
+

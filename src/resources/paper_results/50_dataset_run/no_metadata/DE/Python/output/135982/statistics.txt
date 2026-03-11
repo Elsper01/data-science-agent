@@ -1,0 +1,461 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\135982\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-08 15:38:53
+Total Duration: 1100.91 seconds
+Total Token Usage: 104697 tokens
+Total Costs: $0.4734
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0058 seconds
+
+Method: analyse_dataset
+  Duration: 0.0074 seconds
+
+Method: llm_generate_summary
+  Duration: 245.5789 seconds
+
+Method: llm_generate_goals
+  Duration: 4.4314 seconds
+
+Method: llm_generate_python_code
+  Duration: 313.9533 seconds
+
+Method: test_generated_code
+  Duration: 7.7799 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 529.1570 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 6026 tokens
+  Costs total: $0.0054
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1958 tokens
+  Costs total: $0.0022
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8353 tokens
+  Costs total: $0.0597
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6393 tokens
+  Costs total: $0.0404
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7728 tokens
+  Costs total: $0.0537
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8003 tokens
+  Costs total: $0.0573
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3150 tokens
+  Costs total: $0.0107
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3486 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4772 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 6191 tokens
+  Costs total: $0.0372
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7264 tokens
+  Costs total: $0.0542
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2504 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2620 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5987 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5287 tokens
+  Costs total: $0.0342
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7081 tokens
+  Costs total: $0.0501
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2702 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3041 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5518 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5562 tokens
+  Costs total: $0.0340
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Welche Radionuklide konnten in der Probe tatsächlich nachgewiesen werden und wie hoch ist deren Aktivität?' visualization="Balkendiagramm mit 'Pruefmerkmal' auf der x-Achse und 'Ergebnis' auf der y-Achse (gefiltert auf Werte ungleich 'n.n.' und 'Messzeit')." rationale="Da der Großteil der Messungen unter der Nachweisgrenze liegt, ist es für den Nutzer entscheidend, sofort zu sehen, welche spezifischen 'Pruefmerkmal'-Einträge positive 'Ergebnis'-Werte (ungleich 'n.n.') aufweisen. Ein Balkendiagramm ermöglicht den direkten Vergleich der Aktivitätskonzentrationen von Kalium-40 und Thorium-228 in der Einheit 'Bq/l'."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+plt.switch_backend('Agg')
+sns.set_theme(style='whitegrid')
+plt.rcParams['figure.dpi'] = 150
+plt.rcParams['font.sans-serif'] = ['DejaVu Sans']
+
+input_path = os.path.join('.', 'src', 'resources', 'data', 'study', '135982', 'dataset.csv')
+output_dir = os.path.join('.', 'src', 'resources', 'output', '135982')
+os.makedirs(output_dir, exist_ok=True)
+
+plot_path = os.path.join(output_dir, '0_balkendiagramm_nachgewiesene_radionuklide.png')
+
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+except Exception as e:
+    raise SystemExit(str(e))
+
+for col in df.columns:
+    if df[col].dtype == object:
+        df[col] = df[col].astype(str).str.strip()
+
+def parse_ergebnis(x):
+    if pd.isna(x):
+        return np.nan
+    s = str(x).strip()
+    if s.lower() in ['n.n.', 'n.n', 'nn']:
+        return np.nan
+    s = s.replace(' ', '')
+    s = s.replace('Bq/l', '').replace('bq/l', '').replace('Bq', '')
+    s = s.replace('<', '')
+    s = s.replace(',', '.')
+    try:
+        return float(s)
+    except Exception:
+        try:
+            return pd.to_numeric(s, errors='coerce')
+        except Exception:
+            return np.nan
+
+if 'Ergebnis' in df.columns:
+    df['Ergebnis_num'] = df['Ergebnis'].apply(parse_ergebnis)
+else:
+    df['Ergebnis_num'] = np.nan
+
+if 'Ergebnis' in df.columns:
+    df['nachgewiesen'] = ~df['Ergebnis'].str.lower().isin(['n.n.', 'n.n', 'nn']) & df['Ergebnis_num'].notna()
+else:
+    df['nachgewiesen'] = False
+
+missing_df = pd.DataFrame({'merkmal': df.columns, 'anzahl_missing': df.isna().sum().values, 'anteil_missing': df.isna().mean().values})
+missing_df.to_csv(os.path.join(output_dir, 'eda_missing_values.csv'), index=False, encoding='utf-8')
+
+dtypes_df = pd.DataFrame({'merkmal': df.columns, 'dtype': df.dtypes.astype(str).values})
+dtypes_df.to_csv(os.path.join(output_dir, 'eda_dtypes.csv'), index=False, encoding='utf-8')
+
+unique_counts = pd.DataFrame({'merkmal': df.columns, 'anzahl_eindeutige_werte': df.nunique(dropna=False).values})
+unique_counts.to_csv(os.path.join(output_dir, 'eda_unique_counts.csv'), index=False, encoding='utf-8')
+
+num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+if len(num_cols) > 0:
+    desc = df[num_cols].describe().T.reset_index().rename(columns={'index': 'merkmal'})
+    desc.to_csv(os.path.join(output_dir, 'eda_numeric_summary.csv'), index=False, encoding='utf-8')
+
+det_summary_cols = [c for c in ['Pruefmerkmal', 'Einheit', 'Methode', 'nachgewiesen', 'Ergebnis', 'Ergebnis_num'] if c in df.columns]
+if len(det_summary_cols) > 0:
+    df[det_summary_cols].to_csv(os.path.join(output_dir, 'eda_detection_overview_rows.csv'), index=False, encoding='utf-8')
+
+plot_df = df.copy()
+if 'Einheit' in plot_df.columns:
+    plot_df = plot_df[plot_df['Einheit'].str.lower() == 'bq/l']
+if 'Pruefmerkmal' in plot_df.columns:
+    plot_df = plot_df[~plot_df['Pruefmerkmal'].str.lower().eq('messzeit')]
+plot_df = plot_df[plot_df['Ergebnis_num'].notna()]
+plot_df = plot_df.sort_values('Ergebnis_num', ascending=False)
+
+fig, ax = plt.subplots(figsize=(10, 6))
+if len(plot_df) > 0 and 'Pruefmerkmal' in plot_df.columns:
+    sns.barplot(data=plot_df, x='Pruefmerkmal', y='Ergebnis_num', palette='viridis', ax=ax)
+    ax.set_xlabel('Prüfmerkmal (Radionuklid)')
+    ax.set_ylabel('Aktivität [Bq/l]')
+    titel_ort = df['Entnahmestelle'].iloc[0] if 'Entnahmestelle' in df.columns and len(df['Entnahmestelle']) > 0 else ''
+    titel_datum = df['Probenahme_Beginn_Datum'].iloc[0] if 'Probenahme_Beginn_Datum' in df.columns and len(df['Probenahme_Beginn_Datum']) > 0 else ''
+    if titel_ort or titel_datum:
+        ax.set_title(f'Nachgewiesene Radionuklide in Reinwasserprobe {titel_ort} ({titel_datum})')
+    else:
+        ax.set_title('Nachgewiesene Radionuklide in der Probe')
+    for p in ax.patches:
+        h = p.get_height()
+        if np.isfinite(h):
+            ax.annotate(f'{h:.2e}', (p.get_x() + p.get_width() / 2., h), ha='center', va='bottom', fontsize=9, rotation=0, xytext=(0, 3), textcoords='offset points')
+    ax.set_ylim(0, max(plot_df['Ergebnis_num'].max() * 1.15, 1e-6))
+    ax.tick_params(axis='x', rotation=25)
+    ax.grid(axis='y', linestyle='--', alpha=0.4)
+else:
+    ax.axis('off')
+    ax.text(0.5, 0.5, 'Keine Radionuklide nachgewiesen (Ergebnisse ungleich "n.n.")', ha='center', va='center', fontsize=12)
+
+plt.tight_layout()
+plt.savefig(plot_path, dpi=200)
+plt.close(fig)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie verteilt sich die Anwendung der verschiedenen Messverfahren auf die untersuchten Prüfmerkmale?' visualization="Balkendiagramm mit 'Methode' auf der x-Achse und der Anzahl (Count) von 'Pruefmerkmal' auf der y-Achse." rationale="Die Zusammenfassung erwähnt zwei Methoden (Gammaspektrometrie und LSC). Ein gestapeltes Balkendiagramm oder ein Balkendiagramm, das die Anzahl der 'Pruefmerkmal'-Einträge pro 'Methode' zählt, hilft dem Nutzer zu verstehen, wie umfassend die radiologische Analyse technisch aufgestellt war und welches Verfahren den Großteil der Daten liefert."
+
+-> Code:
+import os
+import sys
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.rcParams["figure.dpi"] = 150
+plt.rcParams["savefig.dpi"] = 150
+plt.rcParams["font.size"] = 11
+plt.rcParams["axes.titlesize"] = 13
+plt.rcParams["axes.labelsize"] = 11
+plt.rcParams["xtick.labelsize"] = 10
+plt.rcParams["ytick.labelsize"] = 10
+sns.set_theme(style="whitegrid")
+
+input_path = os.path.normpath(r"./src/resources/data/study\135982\dataset.csv")
+output_dir = os.path.normpath(r"./src/resources/output\135982")
+plot_path = os.path.join(output_dir, "1_methoden_nach_pruefmerkmal.png")
+
+try:
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(input_path, sep=",", encoding="utf-8")
+    df.columns = [c.strip() for c in df.columns]
+    for c in df.select_dtypes(include=[object]).columns:
+        df[c] = df[c].astype(str).str.strip()
+    def _to_num(x):
+        if x is None:
+            return np.nan
+        s = str(x).strip()
+        if s == "" or s.lower() in {"n.n.", "n.n", "nn", "<ldl", "<nachweisgrenze"}:
+            return np.nan
+        s = s.replace(" ", "")
+        s = s.replace(",", ".")
+        try:
+            return float(s)
+        except Exception:
+            return np.nan
+    if "Ergebnis" in df.columns:
+        df["Ergebnis_num"] = df["Ergebnis"].apply(_to_num)
+    miss_share = df.isna().mean()
+    num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    desc = df[num_cols].describe().T if len(num_cols) > 0 else pd.DataFrame()
+    df["Methode"] = df["Methode"].replace({"": np.nan})
+    df["Methode_filled"] = df["Methode"].fillna("Unbekannt")
+    counts = df.groupby("Methode_filled", dropna=False)["Pruefmerkmal"].count().sort_values(ascending=False)
+    plot_df = counts.reset_index().rename(columns={"Methode_filled": "Methode", "Pruefmerkmal": "Anzahl"})
+    plt.figure(figsize=(8, 5))
+    ax = sns.barplot(data=plot_df, x="Methode", y="Anzahl", palette="viridis")
+    total_n = int(len(df))
+    ax.set_title(f"Verteilung der Messverfahren über Prüfmerkmale (n={total_n})")
+    ax.set_xlabel("Messverfahren (Methode)")
+    ax.set_ylabel("Anzahl der geprüften Prüfmerkmale")
+    for p in ax.patches:
+        h = p.get_height()
+        if np.isfinite(h):
+            ax.annotate(f"{int(h)}", (p.get_x() + p.get_width() / 2., h), ha="center", va="bottom", xytext=(0, 4), textcoords="offset points")
+    plt.xticks(rotation=15, ha="right")
+    plt.tight_layout()
+    plt.savefig(plot_path, format="png")
+    plt.close()
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie ist das Verhältnis von nachweisbaren zu nicht nachweisbaren Messergebnissen über alle Prüfmerkmale hinweg?' visualization="Balkendiagramm (Häufigkeitsverteilung) der Kategorien in der Spalte 'Ergebnis'." rationale="Um die Reinheit des Wassers im Wasserwerk Curslack Nord zu bewerten, ist das Verhältnis von 'n.n.' zu numerischen Werten in der Spalte 'Ergebnis' zentral. Da fast alle Proben unter der Nachweisgrenze liegen, visualisiert dies die Sicherheit des Trinkwassers. Ein Balkendiagramm der Häufigkeiten der Kategorien in 'Ergebnis' verdeutlicht die Dominanz der 'n.n.'-Befunde."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+try:
+    data_path = r'./src/resources/data/study\135982\dataset.csv'
+    output_dir = r'./src/resources/output\135982'
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+    df_columns_lower = {c: c for c in df.columns}
+    if 'Ergebnis' not in df.columns:
+        raise ValueError('Spalte "Ergebnis" nicht gefunden.')
+
+    def parse_numeric(x):
+        if pd.isna(x):
+            return np.nan
+        s = str(x).strip()
+        if s == '':
+            return np.nan
+        s_low = s.lower().replace(' ', '')
+        if s_low in {'n.n.', 'n.n', 'nn'}:
+            return np.nan
+        if s_low.startswith('<') or s_low.startswith('>'):
+            s = s[1:]
+        s = s.replace('−', '-').replace(',', '.')
+        allowed = set('0123456789eE+-.')
+        cleaned = ''.join(ch for ch in s if ch in allowed)
+        try:
+            if cleaned in {'', '.', '-.', '+.', 'e', 'E'}:
+                return np.nan
+            return float(cleaned)
+        except Exception:
+            return np.nan
+
+    def categorize_detection(x):
+        if pd.isna(x):
+            return 'Nicht nachweisbar (n.n.)'
+        s = str(x).strip()
+        s_low = s.lower().replace(' ', '')
+        if s_low in {'n.n.', 'n.n', 'nn'}:
+            return 'Nicht nachweisbar (n.n.)'
+        v = parse_numeric(x)
+        if pd.isna(v):
+            return 'Nicht nachweisbar (n.n.)'
+        return 'Nachweisbar' if v > 0 else 'Nicht nachweisbar (n.n.)'
+
+    df['Ergebnis_num'] = df['Ergebnis'].apply(parse_numeric)
+    df['Ergebnis_Kategorie'] = df['Ergebnis'].apply(categorize_detection)
+
+    missing = df.isna().mean().reset_index()
+    missing.columns = ['Spalte', 'Anteil_Fehlend']
+    missing.to_csv(os.path.join(output_dir, '2_missing_values.csv'), index=False, encoding='utf-8')
+
+    desc_num = df[['Ergebnis_num']].describe(include='all').T
+    desc_num.to_csv(os.path.join(output_dir, '2_numeric_summary_ergebnis.csv'), encoding='utf-8')
+
+    num_df = df.select_dtypes(include=[np.number])
+    if not num_df.empty:
+        corr = num_df.corr(numeric_only=True)
+        corr.to_csv(os.path.join(output_dir, '2_correlations_numeric.csv'), encoding='utf-8')
+
+    order = ['Nicht nachweisbar (n.n.)', 'Nachweisbar']
+    counts = df['Ergebnis_Kategorie'].value_counts().reindex(order).fillna(0).astype(int)
+    total = int(counts.sum()) if counts.sum() > 0 else 1
+    plot_df = counts.reset_index()
+    plot_df.columns = ['Kategorie', 'Anzahl']
+    plot_df['Anteil'] = plot_df['Anzahl'] / total
+
+    sns.set_theme(style='whitegrid', context='talk')
+    plt.figure(figsize=(9, 6))
+    ax = sns.barplot(data=plot_df, x='Kategorie', y='Anzahl', palette=['#4C78A8', '#F58518'])
+    ax.set_title('Verhältnis von nachweisbaren zu nicht nachweisbaren Ergebnissen', fontsize=16)
+    ax.set_xlabel('Ergebniskategorie', fontsize=12)
+    ax.set_ylabel('Anzahl der Messungen', fontsize=12)
+    ax.set_ylim(0, max(1, plot_df['Anzahl'].max() * 1.15))
+    for p, (_, row) in zip(ax.patches, plot_df.iterrows()):
+        height = p.get_height()
+        ax.annotate(f"{int(row['Anzahl'])} ({row['Anteil']:.1%})", 
+                    (p.get_x() + p.get_width() / 2.0, height), 
+                    ha='center', va='bottom', fontsize=11, xytext=(0, 6), textcoords='offset points')
+    plt.tight_layout()
+    plt.savefig(os.path.join(output_dir, '2_ergebniskategorien_barchart.png'), dpi=300)
+    plt.close()
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+

@@ -1,0 +1,396 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32509\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 13:59:37
+Total Duration: 780.61 seconds
+Total Token Usage: 74488 tokens
+Total Costs: $0.3503
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0084 seconds
+
+Method: analyse_dataset
+  Duration: 0.0084 seconds
+
+Method: analyse_metadata
+  Duration: 0.0155 seconds
+
+Method: llm_generate_summary
+  Duration: 127.7521 seconds
+
+Method: llm_generate_goals
+  Duration: 3.2992 seconds
+
+Method: llm_generate_python_code
+  Duration: 199.2533 seconds
+
+Method: test_generated_code
+  Duration: 4.0104 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 446.2639 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3278 tokens
+  Costs total: $0.0031
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1207 tokens
+  Costs total: $0.0013
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5497 tokens
+  Costs total: $0.0398
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4903 tokens
+  Costs total: $0.0337
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5311 tokens
+  Costs total: $0.0378
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 268 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5824 tokens
+  Costs total: $0.0437
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1974 tokens
+  Costs total: $0.0072
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2197 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4505 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3880 tokens
+  Costs total: $0.0237
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5426 tokens
+  Costs total: $0.0410
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1829 tokens
+  Costs total: $0.0069
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2037 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3150 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3860 tokens
+  Costs total: $0.0250
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6222 tokens
+  Costs total: $0.0455
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2238 tokens
+  Costs total: $0.0080
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2496 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3799 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4034 tokens
+  Costs total: $0.0217
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Which municipalities and cities in the Kreis Kleve have designated Equal Opportunities Officers?' visualization="Table showing 'Kommune_Stadt' and 'Name'." rationale="A table or list visualization allows users to quickly identify all administrative entities (Kommune_Stadt) and their corresponding officers (Name). This provides a clear overview of the dataset's coverage across the region."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(style="white")
+
+file_path = r'./src/resources/data/study\32509\dataset.csv'
+out_path = r'./src/resources/output\32509/0_tabelle_kommune_name.png'
+
+df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+obj_cols = df.select_dtypes(include=['object']).columns.tolist()
+for c in obj_cols:
+    df[c] = df[c].apply(lambda x: np.nan if pd.isna(x) or str(x).strip() in {'', '-'} else str(x).strip())
+
+missing_prop = df.isna().mean()
+row_count = int(df.shape[0])
+unit_count = int(df['Kommune_Stadt'].nunique()) if 'Kommune_Stadt' in df.columns else row_count
+
+vis_df = df[['Kommune_Stadt', 'Name']].copy()
+vis_df['Name'] = vis_df['Name'].fillna('k. A.')
+vis_df = vis_df.sort_values(by='Kommune_Stadt', key=lambda s: s.str.lower())
+
+cell_text = vis_df.values.tolist()
+col_labels = ['Kommune/Stadt', 'Name']
+
+nrows = len(cell_text)
+fig_w = 10
+fig_h = max(3.5, 1.6 + nrows * 0.42)
+
+plt.rcParams.update({'font.size': 10})
+fig, ax = plt.subplots(figsize=(fig_w, fig_h))
+ax.axis('off')
+
+cell_colours = [['#f7f7f7' if i % 2 == 0 else '#ffffff' for _ in range(len(col_labels))] for i in range(nrows)]
+
+table = ax.table(cellText=cell_text, colLabels=col_labels, cellLoc='left', colLoc='left', cellColours=cell_colours, loc='center')
+
+table.auto_set_font_size(False)
+table.set_fontsize(10)
+table.scale(1, 1.5)
+
+for (row, col), cell in table.get_celld().items():
+    if row == 0:
+        cell.set_text_props(weight='bold', color='#1f1f1f')
+        cell.set_facecolor('#e6e6e6')
+
+ax.set_title('Gleichstellungsbeauftragte nach Kommune/Stadt im Kreis Kleve (2021)', fontsize=14, pad=16, loc='left')
+
+missing_parts = []
+for col in ['Name', 'E_Mail', 'Telefax']:
+    if col in df.columns and missing_prop[col] > 0:
+        missing_parts.append(f"{col}: {int(df[col].isna().sum())} ({int(round(missing_prop[col]*100, 0))}%)")
+eda_line = f"Einträge: {row_count}; Kommunale Einheiten: {unit_count}. " + (f"Fehlende Angaben – {'; '.join(missing_parts)}. " if missing_parts else "") + "k. A. = keine Angabe."
+
+plt.figtext(0.01, 0.02, eda_line, ha='left', va='bottom', fontsize=9, color='#444444')
+
+plt.savefig(out_path, dpi=300, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the geographic distribution of administrative offices by postal code?' visualization="Bar chart of the count of records grouped by 'Postleitzahl_Ort'." rationale="By grouping the data by 'Postleitzahl_Ort', we can see which areas serve as administrative hubs. For example, '47533 Kleve' appears twice, indicating it is a central location for both the city and district administrations. A bar chart of counts per postal code highlights these clusters."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+sns.set_theme(style="whitegrid", context="talk")
+
+fp = r"./src/resources/data/study\32509\dataset.csv"
+df = pd.read_csv(fp, sep=",", encoding="utf-8")
+
+for c in df.columns:
+    if df[c].dtype == object:
+        df[c] = df[c].apply(lambda x: x.strip() if isinstance(x, str) else x)
+        df[c] = df[c].replace({"-": np.nan, "–": np.nan, "—": np.nan, "": np.nan})
+
+missing_prop = df.isna().mean()
+num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+if len(num_cols) > 0:
+    corr_num = df[num_cols].corr()
+
+post_series = df["Postleitzahl_Ort"].apply(lambda x: x.strip() if isinstance(x, str) else x)
+post_series = post_series.replace({"-": np.nan, "–": np.nan, "—": np.nan, "": np.nan})
+counts = post_series.fillna("Unbekannt").value_counts(dropna=False).reset_index()
+counts.columns = ["Postleitzahl_Ort", "Anzahl"]
+counts = counts.sort_values(["Anzahl", "Postleitzahl_Ort"], ascending=[False, True]).reset_index(drop=True)
+
+plt.figure(figsize=(12, 7))
+palette = sns.color_palette("viridis", n_colors=len(counts))
+ax = sns.barplot(data=counts, x="Postleitzahl_Ort", y="Anzahl", palette=palette)
+ax.set_title("Geografische Verteilung der Verwaltungsstellen nach Postleitzahl/Ort (Kreis Kleve, 2021)")
+ax.set_xlabel("Postleitzahl und Ort")
+ax.set_ylabel("Anzahl der Einträge [Stück]")
+plt.xticks(rotation=35, ha="right")
+for p in ax.patches:
+    h = p.get_height()
+    ax.annotate(f"{int(h)}", (p.get_x() + p.get_width() / 2, h), ha="center", va="bottom", fontsize=11)
+plt.tight_layout()
+
+out_dir = r"./src/resources/output\32509"
+os.makedirs(out_dir, exist_ok=True)
+out_path = os.path.join(out_dir, "1_balkendiagramm_verteilung_postleitzahl_ort.png")
+plt.savefig(out_path, dpi=200, bbox_inches="tight")
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What are the primary contact methods available for each Equal Opportunities Officer?' visualization="Table showing 'Kommune_Stadt', 'Telefon', and 'E_Mail'." rationale="This goal helps users understand the accessibility of the officers. By displaying 'Kommune_Stadt' alongside 'Telefon' and 'E_Mail', users can see the direct contact channels. It also highlights data gaps, such as the missing email for 'Gemeinde Kranenburg'."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(context='notebook', style='white')
+
+input_path = r'./src/resources/data/study\32509\dataset.csv'
+output_dir = r'./src/resources/output\32509'
+os.makedirs(output_dir, exist_ok=True)
+
+df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+
+def _strip(x):
+    if isinstance(x, str):
+        return x.strip()
+    return x
+
+df = df.applymap(_strip)
+df.replace({'-': np.nan, '': np.nan}, inplace=True)
+
+contacts_df = df[['Kommune_Stadt', 'Telefon', 'E_Mail']].copy()
+
+n_rows = len(df)
+missing_counts_all = df.isna().sum()
+missing_props_all = (df.isna().mean()).round(3)
+missing_counts = contacts_df.isna().sum()
+missing_props = (contacts_df.isna().mean()).round(3)
+unique_kommune = df['Kommune_Stadt'].nunique(dropna=True)
+complete_contacts = int(((~contacts_df['Telefon'].isna()) & (~contacts_df['E_Mail'].isna())).sum())
+
+contacts_df_sorted = contacts_df.sort_values(by=['Kommune_Stadt'], key=lambda s: s.str.lower() if s.dtype == 'O' else s)
+contacts_df_display = contacts_df_sorted.fillna('Keine Angabe')
+
+fig, ax = plt.subplots(figsize=(18, 9))
+ax.axis('off')
+
+header_labels = ['Kommune/Stadt', 'Telefon', 'E-Mail']
+cell_text = contacts_df_display.values.tolist()
+
+rows = contacts_df_display.shape[0]
+cols = contacts_df_display.shape[1]
+cell_colours = [[(1, 1, 1, 1) for _ in range(cols)] for _ in range(rows)]
+for i, (_, row) in enumerate(contacts_df_sorted.iterrows()):
+    if pd.isna(row['Telefon']):
+        cell_colours[i][1] = (1.0, 0.88, 0.88, 1)
+    if pd.isna(row['E_Mail']):
+        cell_colours[i][2] = (1.0, 0.88, 0.88, 1)
+
+header_colours = [(0.90, 0.94, 0.98, 1)] * cols
+
+table = ax.table(cellText=cell_text,
+                 colLabels=header_labels,
+                 cellColours=cell_colours,
+                 colColours=header_colours,
+                 loc='center')
+
+table.auto_set_font_size(False)
+table.set_fontsize(11)
+table.scale(1, 1.4)
+
+for (row, col), cell in table.get_celld().items():
+    if row == 0:
+        cell.set_text_props(weight='bold', color='black')
+        cell.set_height(cell.get_height() * 1.2)
+    cell.set_edgecolor((0.85, 0.85, 0.85, 1))
+
+try:
+    table.auto_set_column_width(col=list(range(cols)))
+except Exception:
+    pass
+
+fig.suptitle('Primäre Kontaktwege je Kommune: Telefon und E-Mail\nGleichstellungsbeauftragte, Kreis Kleve (2021)', x=0.5, y=0.97, fontsize=16, fontweight='bold')
+
+eda_lines = []
+eda_lines.append(f'Einträge: {n_rows}, Kommunen: {unique_kommune}, vollständige Kontakte (Telefon & E-Mail): {complete_contacts}')
+eda_lines.append(f'Fehlende Angaben – Telefon: {int(missing_counts["Telefon"])} ({int(missing_props["Telefon"]*100)}%), E-Mail: {int(missing_counts["E_Mail"])} ({int(missing_props["E_Mail"]*100)}%)')
+eda_lines.append('Hinweis: "-" wurde als fehlend interpretiert; fehlende Felder in Hellrot hervorgehoben.')
+footer_text = '\n'.join(eda_lines)
+
+fig.text(0.5, 0.06, footer_text, ha='center', va='center', fontsize=10, color='dimgray')
+
+output_path = os.path.join(output_dir, '2_kontakt_wege_tabelle.png')
+plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.close(fig)
+
+
+-> SEVQ:
+
+

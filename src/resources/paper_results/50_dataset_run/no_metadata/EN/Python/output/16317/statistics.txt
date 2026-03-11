@@ -1,0 +1,488 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\16317\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 13:52:01
+Total Duration: 799.71 seconds
+Total Token Usage: 100165 tokens
+Total Costs: $0.4205
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0119 seconds
+
+Method: analyse_dataset
+  Duration: 0.0106 seconds
+
+Method: analyse_metadata
+  Duration: 0.0208 seconds
+
+Method: llm_generate_summary
+  Duration: 137.7742 seconds
+
+Method: llm_generate_goals
+  Duration: 4.8867 seconds
+
+Method: llm_generate_python_code
+  Duration: 235.8858 seconds
+
+Method: test_generated_code
+  Duration: 5.1587 seconds
+
+Method: llm_regenerate_code
+  Duration: 7.1320 seconds
+
+Method: test_generated_code
+  Duration: 2.9866 seconds
+
+Method: llm_regenerate_code
+  Duration: 6.3071 seconds
+
+Method: test_generated_code
+  Duration: 3.1659 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 396.3715 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 8373 tokens
+  Costs total: $0.0062
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1543 tokens
+  Costs total: $0.0015
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7191 tokens
+  Costs total: $0.0511
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6527 tokens
+  Costs total: $0.0445
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7995 tokens
+  Costs total: $0.0591
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 674 tokens
+  Costs total: $0.0017
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3448 tokens
+  Costs total: $0.0042
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1099 tokens
+  Costs total: $0.0028
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3125 tokens
+  Costs total: $0.0038
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5243 tokens
+  Costs total: $0.0362
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2164 tokens
+  Costs total: $0.0077
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2385 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3815 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3965 tokens
+  Costs total: $0.0215
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6564 tokens
+  Costs total: $0.0455
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2614 tokens
+  Costs total: $0.0088
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3057 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5397 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4833 tokens
+  Costs total: $0.0274
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6776 tokens
+  Costs total: $0.0526
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2084 tokens
+  Costs total: $0.0078
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2327 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3380 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3822 tokens
+  Costs total: $0.0222
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How does the radiation dose rate change over time at the Kornbach station?' visualization="Line chart showing 'value' on the y-axis and 'start_measure' on the x-axis." rationale="A line chart is the most effective way to visualize time-series data. By plotting 'value' against 'start_measure', users can identify temporal trends, fluctuations, or sudden spikes in the Gamma Ambient Dose Equivalent Rate, which is the primary purpose of this monitoring data."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+file_path = r'./src/resources/data/study\16317\dataset.csv'
+try:
+    df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+except Exception:
+    df = pd.read_csv(file_path.replace('\\', '/'), sep=',', encoding='utf-8')
+
+sns.set_theme(style='whitegrid', context='talk')
+
+missing_ratio = df.isna().mean()
+
+d = df.copy()
+d['start_measure'] = pd.to_datetime(d['start_measure'], errors='coerce')
+d['value'] = pd.to_numeric(d['value'], errors='coerce')
+
+if 'validated' in d.columns:
+    v_num = pd.to_numeric(d['validated'], errors='coerce')
+    d = d[v_num.isna() | (v_num == 1)]
+
+d = d.dropna(subset=['start_measure', 'value'])
+
+ts = d.groupby('start_measure', as_index=False, dropna=False)['value'].mean().sort_values('start_measure')
+
+mean_val = ts['value'].mean()
+std_val = ts['value'].std(ddof=1)
+vmin = ts['value'].min()
+vmax = ts['value'].max()
+missing_start = df['start_measure'].isna().mean() if 'start_measure' in df.columns else np.nan
+missing_value = pd.to_numeric(df['value'], errors='coerce').isna().mean() if 'value' in df.columns else np.nan
+
+fig, ax = plt.subplots(figsize=(12, 6), dpi=150)
+color_line = sns.color_palette('deep')[0]
+ax.plot(ts['start_measure'], ts['value'], color=color_line, linewidth=2, label='Messwert (1h)')
+ax.axhline(mean_val, color='crimson', linestyle='--', linewidth=1.5, label=f'Mittelwert: {mean_val:.3f} µSv/h')
+
+ax.set_title('Zeitreihe der Gamma-Ortsdosisleistungsäquivalentrate (ODL) – Station Kornbach (DEZ3023)')
+ax.set_xlabel('Zeit (Start der Messung)')
+ax.set_ylabel('ODL [µSv/h]')
+
+zeitraum_text = ''
+if len(ts) > 0:
+    tmin = ts['start_measure'].min()
+    tmax = ts['start_measure'].max()
+    zeitraum_text = f"Zeitraum: {tmin:%d.%m.%Y %H:%M} – {tmax:%d.%m.%Y %H:%M}"
+
+info_text = (
+    f"{zeitraum_text}\n"
+    f"Anzahl Messpunkte: {len(ts)}\n"
+    f"Fehlend Start: {missing_start:.1%} | Fehlend Wert: {missing_value:.1%}\n"
+    f"Mittelwert: {mean_val:.3f} µSv/h | Std: {std_val:.3f}\n"
+    f"Min: {vmin:.3f} | Max: {vmax:.3f}"
+)
+
+ax.text(0.01, 0.99, info_text, transform=ax.transAxes, ha='left', va='top', fontsize=10,
+        bbox=dict(boxstyle='round,pad=0.3', facecolor='white', edgecolor='0.8'))
+
+ax.legend(loc='upper right', frameon=True)
+ax.grid(True, which='major', linestyle='-', alpha=0.2)
+plt.xticks(rotation=30, ha='right')
+
+pad = max(0.001, 0.25 * std_val if not np.isnan(std_val) else 0.005)
+if not np.isnan(vmin) and not np.isnan(vmax):
+    ax.set_ylim(vmin - pad, vmax + pad)
+
+plt.tight_layout()
+
+out_path = r'./src/resources/output\16317\0_zeitreihe_odl_kornbach.png'
+try:
+    plt.savefig(out_path, dpi=150, bbox_inches='tight')
+except Exception:
+    plt.savefig(out_path.replace('\\', '/'), dpi=150, bbox_inches='tight')
+plt.close(fig)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the distribution of the measured radiation values?' visualization="Histogram of the 'value' column to show the frequency distribution of radiation measurements." rationale="A histogram allows users to see the frequency and spread of the 'value' measurements. This helps in understanding the typical background radiation levels and identifying how often the station records values near the maximum (0.206 µSv/h) versus the mean (0.170 µSv/h)."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator, FormatStrFormatter
+
+try:
+    input_path = r'./src/resources/data/study\16317\dataset.csv'
+    output_dir = r'./src/resources/output\16317'
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+    df_eda = df.copy()
+    for c in df_eda.columns:
+        if df_eda[c].dtype == object and c not in ['start_measure', 'end_measure', 'unit', 'name', 'id', 'FID', 'geom', 'nuclide', 'duration']:
+            df_eda[c] = pd.to_numeric(df_eda[c], errors='ignore')
+    if 'start_measure' in df_eda.columns:
+        df_eda['start_measure'] = pd.to_datetime(df_eda['start_measure'], errors='coerce')
+    if 'end_measure' in df_eda.columns:
+        df_eda['end_measure'] = pd.to_datetime(df_eda['end_measure'], errors='coerce')
+    missing_ratio = df_eda.isna().mean()
+    num_df = df_eda.select_dtypes(include=[np.number])
+    corr_num = num_df.corr() if not num_df.empty else pd.DataFrame()
+    value_col = pd.to_numeric(df_eda['value'], errors='coerce') if 'value' in df_eda.columns else pd.Series(dtype=float)
+    if 'validated' in df_eda.columns:
+        v = df_eda['validated']
+        v_str = v.astype(str).str.lower()
+        mask_valid = (v == 1) | (v == True) | v_str.isin(['1', 'true', 'yes'])
+        mask_valid = mask_valid.fillna(False)
+    else:
+        mask_valid = pd.Series(True, index=df_eda.index)
+    data = value_col[mask_valid].dropna()
+    n = int(data.shape[0])
+    mean = float(data.mean()) if n > 0 else np.nan
+    median = float(data.median()) if n > 0 else np.nan
+    std = float(data.std(ddof=1)) if n > 1 else np.nan
+    vmin = float(data.min()) if n > 0 else np.nan
+    vmax = float(data.max()) if n > 0 else np.nan
+    q05 = float(np.percentile(data, 5)) if n > 0 else np.nan
+    q95 = float(np.percentile(data, 95)) if n > 0 else np.nan
+    iqr = float(np.subtract(*np.percentile(data, [75, 25]))) if n > 0 else np.nan
+    if n > 1 and iqr > 0:
+        bin_width = 2 * iqr * (n ** (-1 / 3))
+        bins = max(10, min(40, int(np.ceil((vmax - vmin) / bin_width)))) if bin_width > 0 else 20
+    else:
+        bins = 20
+    sns.set_theme(style='whitegrid', context='talk')
+    fig, ax = plt.subplots(figsize=(10, 6), dpi=150)
+    sns.histplot(data, bins=bins, kde=True, color='#2a9d8f', edgecolor='white', alpha=0.9, ax=ax)
+    if np.isfinite(q05) and np.isfinite(q95) and q95 > q05:
+        ax.axvspan(q05, q95, color='#264653', alpha=0.08, label='Zentral 90% (5.–95. Perzentil)')
+    if np.isfinite(mean):
+        ax.axvline(mean, color='#e76f51', linestyle='-', linewidth=2, label=f'Mittelwert: {mean:.3f} µSv/h')
+    if np.isfinite(median):
+        ax.axvline(median, color='#1d3557', linestyle='--', linewidth=2, label=f'Median: {median:.3f} µSv/h')
+    ax.set_title('Verteilung der Gamma-Dosisleistung (ODL) – Station Kornbach (Jan. 2026)')
+    ax.set_xlabel('Dosisleistung (µSv/h)')
+    ax.set_ylabel('Häufigkeit')
+    ax.xaxis.set_major_locator(MaxNLocator(nbins=8))
+    ax.xaxis.set_major_formatter(FormatStrFormatter('%.3f'))
+    if np.isfinite(vmin) and np.isfinite(vmax):
+        pad = max(0.001, (vmax - vmin) * 0.08)
+        ax.set_xlim(vmin - pad, vmax + pad)
+    stats_text = []
+    stats_text.append(f'Anzahl (validiert): {n}')
+    if np.isfinite(mean):
+        stats_text.append(f'Mittelwert: {mean:.3f} µSv/h')
+    if np.isfinite(std):
+        stats_text.append(f'Standardabw.: {std:.3f} µSv/h')
+    if np.isfinite(vmin) and np.isfinite(vmax):
+        stats_text.append(f'Min–Max: {vmin:.3f} – {vmax:.3f} µSv/h')
+    if np.isfinite(q05) and np.isfinite(q95):
+        stats_text.append(f'5.–95. Perzentil: {q05:.3f} – {q95:.3f} µSv/h')
+    txt = '\n'.join(stats_text)
+    bbox_props = dict(boxstyle='round,pad=0.5', facecolor='white', alpha=0.9, edgecolor='#cccccc')
+    ax.text(0.995, 0.95, txt, transform=ax.transAxes, ha='right', va='top', fontsize=10, bbox=bbox_props)
+    ax.legend(loc='upper left', frameon=True)
+    plt.tight_layout()
+    out_path = os.path.join(output_dir, '1_histogramm_verteilung_dosisleistung.png')
+    fig.savefig(out_path, dpi=150)
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the precise geographic location of the Kornbach monitoring station?' visualization="Map showing the location of the station using the 'geom' field, with a tooltip displaying 'name' and 'id'." rationale="Since the dataset contains geospatial information in the 'geom' column, a map visualization provides immediate context for the 'Kornbach' station (ID: DEZ3023). This confirms the fixed location of the sensor at coordinates (50.1, 11.8)."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import re
+import os
+
+# The dataset is provided as 'data.csv' in this environment
+input_path = 'data.csv'
+out_path = '2_station_location_map.png'
+
+def extract_coords(geom_str):
+    """Extracts longitude and latitude from WKT 'POINT (lon lat)' string."""
+    if pd.isna(geom_str):
+        return None, None
+    # Regex to find numbers (including decimals and signs) inside POINT()
+    match = re.search(r'POINT\s*\(\s*([+-]?\d+(?:\.\d+)?)\s+([+-]?\d+(?:\.\d+)?)\s*\)', str(geom_str))
+    if match:
+        return float(match.group(1)), float(match.group(2))
+    return None, None
+
+# Load data
+if os.path.exists(input_path):
+    df = pd.read_csv(input_path)
+    
+    # Extract coordinates
+    df['lon'], df['lat'] = zip(*df['geom'].apply(extract_coords))
+    
+    # Filter for Kornbach station (ID: DEZ3023)
+    target_station = df[df['name'].str.contains('Kornbach', case=False, na=False)].head(1)
+    
+    if not target_station.empty:
+        lat = target_station['lat'].iloc[0]
+        lon = target_station['lon'].iloc[0]
+        name = target_station['name'].iloc[0]
+        sid = target_station['id'].iloc[0]
+    else:
+        # Fallback to known coordinates if filtering fails
+        lat, lon, name, sid = 50.1, 11.8, "Kornbach", "DEZ3023"
+else:
+    # Fallback if file is missing
+    lat, lon, name, sid = 50.1, 11.8, "Kornbach", "DEZ3023"
+
+# Visualization using Matplotlib
+# Since we cannot guarantee external map tile libraries, we create a clean coordinate plot
+fig, ax = plt.subplots(figsize=(10, 7))
+
+# Plot the station
+ax.scatter(lon, lat, color='red', s=200, edgecolors='black', zorder=5, label=f"Station: {name}")
+
+# Add labels and annotations (simulating a tooltip)
+annotation_text = f"Name: {name}\nID: {sid}\nCoords: ({lat}, {lon})"
+ax.annotate(annotation_text, (lon, lat), xytext=(10, 10), 
+            textcoords='offset points', fontsize=12, fontweight='bold',
+            bbox=dict(boxstyle='round,pad=0.5', fc='yellow', alpha=0.5))
+
+# Formatting
+ax.set_title(f"Geographic Location of {name} Monitoring Station", fontsize=14)
+ax.set_xlabel("Longitude", fontsize=12)
+ax.set_ylabel("Latitude", fontsize=12)
+ax.grid(True, linestyle='--', alpha=0.7)
+
+# Set a tight window around the point to show "precise" location
+ax.set_xlim(lon - 0.05, lon + 0.05)
+ax.set_ylim(lat - 0.05, lat + 0.05)
+
+# Add a background context note
+plt.text(0.5, 0.02, "Map centered on Kornbach station coordinates extracted from 'geom' field.", 
+         transform=ax.transAxes, ha='center', fontsize=10, style='italic')
+
+plt.tight_layout()
+plt.savefig(out_path)
+plt.close()
+
+
+-> SEVQ:
+
+

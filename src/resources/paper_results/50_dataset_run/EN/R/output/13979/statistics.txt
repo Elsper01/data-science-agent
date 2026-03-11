@@ -1,0 +1,459 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\13979\dataset.csv
+Programming Language: r
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-06 10:09:03
+Total Duration: 1156.47 seconds
+Total Token Usage: 108937 tokens
+Total Costs: $0.4552
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 2
+  - Exactly One Visualization: 1 / 3 = (33.33%)
+  - One or More Visualization: 1 / 3 =  (33.33%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0209 seconds
+
+Method: analyse_dataset
+  Duration: 0.0080 seconds
+
+Method: analyse_metadata
+  Duration: 0.0072 seconds
+
+Method: llm_generate_summary
+  Duration: 203.7044 seconds
+
+Method: llm_generate_goals
+  Duration: 4.5432 seconds
+
+Method: llm_generate_r_code
+  Duration: 322.0214 seconds
+
+Method: test_generated_code
+  Duration: 8.8758 seconds
+
+Method: llm_regenerate_code
+  Duration: 16.8187 seconds
+
+Method: test_generated_code
+  Duration: 8.9180 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 591.5488 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7264 tokens
+  Costs total: $0.0053
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1569 tokens
+  Costs total: $0.0019
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7163 tokens
+  Costs total: $0.0511
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6771 tokens
+  Costs total: $0.0471
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7522 tokens
+  Costs total: $0.0546
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 895 tokens
+  Costs total: $0.0023
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 322 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1118 tokens
+  Costs total: $0.0029
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4596 tokens
+  Costs total: $0.0065
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3554 tokens
+  Costs total: $0.0047
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 322 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 322 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 770 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7110 tokens
+  Costs total: $0.0503
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2780 tokens
+  Costs total: $0.0099
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3142 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6002 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4875 tokens
+  Costs total: $0.0275
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6900 tokens
+  Costs total: $0.0511
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2390 tokens
+  Costs total: $0.0085
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3019 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4704 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4358 tokens
+  Costs total: $0.0250
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6615 tokens
+  Costs total: $0.0489
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2411 tokens
+  Costs total: $0.0093
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3049 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4734 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4660 tokens
+  Costs total: $0.0303
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How has the total number of construction completions in Sünching evolved from 2014 to 2024?' visualization="Line chart with 'time' on the x-axis and 'value' on the y-axis, filtered where '2_variable_attribute_label' is 'Insgesamt'." rationale="By filtering '2_variable_attribute_label' for 'Insgesamt' and plotting 'value' against 'time', we can identify the overall growth or decline in housing supply over the decade. This provides a high-level overview of the local construction market's health."
+
+-> Code:
+options(warn=-1)
+packages <- c("readr", "dplyr", "ggplot2", "scales", "stringr", "tidyr")
+new_pkgs <- packages[!(packages %in% installed.packages()[, "Package"])]
+if (length(new_pkgs)) install.packages(new_pkgs, dependencies = TRUE)
+invisible(lapply(packages, library, character.only = TRUE))
+
+set.seed(1)
+base_dir <- file.path(".", "src", "resources", "output", "13979")
+dir.create(base_dir, recursive = TRUE, showWarnings = FALSE)
+input_path <- file.path(".", "src", "resources", "data", "study", "13979", "dataset.csv")
+
+# Fix for UTF-8 / Encoding issues: Read with guess_encoding or explicit Latin1 if UTF-8 fails
+# The error "input string 1 is invalid UTF-8" suggests the file might be encoded in Latin1 (ISO-8859-1)
+df <- suppressWarnings(readr::read_delim(input_path, delim = ";", locale = locale(encoding = "ISO-8859-1"), trim_ws = TRUE, show_col_types = FALSE))
+
+# Basic validation
+if (!("time" %in% names(df))) stop("Spalte 'time' fehlt im Datensatz.")
+if (!("value" %in% names(df))) stop("Spalte 'value' fehlt im Datensatz.")
+
+# Clean character columns safely
+df <- df %>% 
+  mutate(across(where(is.character), ~ {
+    # Convert to UTF-8 and handle potential encoding artifacts
+    x <- iconv(., from = "ISO-8859-1", to = "UTF-8", sub = "")
+    x <- trimws(x)
+    na_if(x, "")
+  }))
+
+df <- df %>% mutate(
+  time = suppressWarnings(as.integer(time)), 
+  value = suppressWarnings(as.numeric(value))
+)
+
+# EDA Reports
+miss_prop <- sapply(df, function(x) mean(is.na(x)))
+miss_df <- data.frame(spalte = names(miss_prop), fehlanteil = as.numeric(miss_prop)) %>% arrange(desc(fehlanteil))
+readr::write_csv(miss_df, file.path(base_dir, "eda_missing_report_13979.csv"))
+
+numeric_df <- df %>% select(where(is.numeric))
+if (ncol(numeric_df) > 0) {
+  num_summary <- data.frame(
+    merkmal = names(numeric_df),
+    anzahl = sapply(numeric_df, function(x) sum(!is.na(x))),
+    mittelwert = sapply(numeric_df, function(x) mean(x, na.rm = TRUE)),
+    median = sapply(numeric_df, function(x) median(x, na.rm = TRUE)),
+    sd = sapply(numeric_df, function(x) sd(x, na.rm = TRUE)),
+    minimum = sapply(numeric_df, function(x) min(x, na.rm = TRUE)),
+    maximum = sapply(numeric_df, function(x) max(x, na.rm = TRUE))
+  )
+  readr::write_csv(num_summary, file.path(base_dir, "eda_numeric_summary_13979.csv"))
+}
+
+# Visualization Logic
+label_col <- "2_variable_attribute_label"
+if (!(label_col %in% names(df))) stop(paste("Spalte", label_col, "fehlt im Datensatz."))
+
+# Filter for 'Insgesamt' (Total)
+plot_df <- df %>%
+  filter(str_detect(tolower(trimws(.data[[label_col]])), "^insgesamt$")) %>%
+  filter(!is.na(time), !is.na(value)) %>%
+  group_by(time) %>%
+  summarise(gesamt = sum(value, na.rm = TRUE), .groups = "drop") %>%
+  arrange(time)
+
+if (nrow(plot_df) == 0) stop("Keine Daten für 'Insgesamt' gefunden.")
+
+min_year <- min(plot_df$time, na.rm = TRUE)
+max_year <- max(plot_df$time, na.rm = TRUE)
+
+# Calculate changes for subtitle
+first_pt <- plot_df %>% filter(time == min_year) %>% slice(1)
+last_pt <- plot_df %>% filter(time == max_year) %>% slice(1)
+chg_abs <- last_pt$gesamt - first_pt$gesamt
+chg_pct <- if(first_pt$gesamt != 0) (last_pt$gesamt / first_pt$gesamt - 1) * 100 else NA
+
+subtitle_txt <- paste0(
+  "Verlauf der Jahresgesamtzahl; Veränderung ", min_year, "–", max_year, ": ",
+  scales::number(chg_abs, accuracy = 1, big.mark = "."),
+  if(!is.na(chg_pct)) paste0(" (", scales::number(chg_pct, accuracy = 0.1, suffix = "%"), ")") else ""
+)
+
+plt <- ggplot(plot_df, aes(x = time, y = gesamt)) +
+  geom_line(color = "#1f78b4", linewidth = 1.2) +
+  geom_point(color = "#1f78b4", size = 3) +
+  scale_x_continuous(breaks = seq(min_year, max_year, by = 1)) +
+  scale_y_continuous(labels = scales::label_number(accuracy = 1, big.mark = "."), 
+                     expand = expansion(mult = c(0.1, 0.2))) +
+  labs(title = "Baufertigstellungen in Sünching: Gesamtzahl 2014–2024",
+       subtitle = subtitle_txt,
+       x = "Jahr",
+       y = "Anzahl Wohnungen",
+       caption = "Datenquelle: Statistik der Baufertigstellungen") +
+  theme_minimal(base_family = "sans") +
+  theme(
+    plot.title = element_text(face = "bold", size = 14, color = "#222222"),
+    plot.subtitle = element_text(size = 11, color = "#444444"),
+    axis.title = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_line(color = "#eaeaea"),
+    panel.grid.major.y = element_line(color = "#eaeaea")
+  ) +
+  geom_text(aes(label = gesamt), vjust = -1.2, color = "#1f78b4", fontface = "bold")
+
+output_file <- file.path(base_dir, "0_baufertigstellungen_insgesamt_zeitreihe.png")
+ggsave(filename = output_file, plot = plt, width = 10, height = 6, dpi = 300)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the distribution of dwelling sizes (number of rooms) for the most recent year?' visualization="Bar chart with '2_variable_attribute_label' (excluding 'Insgesamt') on the x-axis and 'value' on the y-axis for the year 2024." rationale="Using '2_variable_attribute_label' (excluding 'Insgesamt') and 'value' for the latest 'time' period (2024) allows us to see what types of housing (e.g., 1-room vs. 5-room) are currently being prioritized by developers. This is crucial for understanding if the supply meets modern family size needs."
+
+-> Code:
+options(scipen=999)
+required_pkgs <- c("readr","dplyr","ggplot2","stringr","forcats","tidyr","scales","RColorBrewer")
+new_pkgs <- setdiff(required_pkgs, rownames(installed.packages()))
+if (length(new_pkgs) > 0) install.packages(new_pkgs, dependencies = TRUE)
+invisible(lapply(required_pkgs, library, character.only = TRUE))
+input_path <- file.path(".", "src", "resources", "data", "study", "13979", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "13979")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+out_file <- file.path(output_dir, "1_verteilung_raumzahl_2024.png")
+df <- readr::read_delim(input_path, delim = ";", locale = readr::locale(encoding = "UTF-8"), col_types = cols(.default = readr::col_guess()))
+missing_summary <- df %>% summarise(across(everything(), ~mean(is.na(.x) | (.x %in% c("", NA))), .names = "prop_missing_{.col}"))
+value_stats_by_year <- df %>% filter(!is.na(value)) %>% group_by(time) %>% summarise(n = dplyr::n(), sum = sum(value), mean = mean(value), sd = sd(value), median = median(value), min = min(value), max = max(value), .groups = "drop")
+num_df <- df %>% select(where(is.numeric))
+cor_mat <- if (ncol(num_df) >= 2) suppressWarnings(cor(num_df, use = "pairwise.complete.obs", method = "spearman")) else matrix(NA_real_, nrow = 0, ncol = 0)
+df_2024 <- df %>% filter(time == 2024) %>% mutate(cat_label = as.character(`2_variable_attribute_label`), cat_code = as.character(`2_variable_attribute_code`)) %>% filter(!is.na(cat_label)) %>% filter(!stringr::str_detect(stringr::str_to_lower(cat_label), "^insgesamt\\s*$")) %>% filter(!is.na(value)) %>% mutate(order_key = dplyr::case_when(stringr::str_detect(cat_code, "7") & stringr::str_detect(cat_code, "UM") ~ 7.5, stringr::str_detect(cat_code, "^[A-Za-z-]*([0-9]+).*$") ~ as.numeric(stringr::str_replace(cat_code, "^[A-Za-z-]*([0-9]+).*$", "\\1")), TRUE ~ NA_real_)) %>% arrange(order_key, cat_label)
+if (nrow(df_2024) == 0) stop("Keine passenden Daten für 2024 ohne 'Insgesamt' verfügbar.")
+total_2024 <- sum(df_2024$value, na.rm = TRUE)
+df_2024 <- df_2024 %>% mutate(cat_label = forcats::fct_reorder(cat_label, order_key, .fun = identity, .desc = FALSE), anteil = ifelse(total_2024 > 0, value/total_2024, NA_real_))
+p <- ggplot(df_2024, aes(x = cat_label, y = value, fill = cat_label)) + geom_col(width = 0.7, color = "grey25") + geom_text(aes(label = paste0(value, " (", scales::percent(anteil, accuracy = 0.1, decimal.mark = ","), ")")), vjust = -0.3, size = 4, color = "#1a1a1a") + scale_fill_brewer(palette = "Set2", guide = "none") + scale_y_continuous(expand = expansion(mult = c(0, 0.12)), breaks = scales::breaks_pretty(n = 6), labels = scales::label_number(big.mark = ".", decimal.mark = ",")) + labs(title = "Sünching: Verteilung der fertiggestellten Wohnungen nach Raumzahl (2024)", subtitle = "Anteile bezogen auf die Summe 2024; Kategorie 'Insgesamt' ausgeschlossen", x = "Raumzahl der Wohnung", y = "Anzahl Wohnungen (Stück)", caption = "Quelle: Statistik der Baufertigstellungen (Gemeinde Sünching)") + theme_minimal(base_size = 13) + theme(plot.title = element_text(face = "bold"), axis.title.x = element_text(margin = margin(t = 10)), axis.title.y = element_text(margin = margin(r = 10)), axis.text.x = element_text(angle = 15, hjust = 1), panel.grid.minor = element_blank())
+ggplot2::ggsave(filename = out_file, plot = p, width = 10, height = 6, dpi = 320)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='How has the composition of dwelling sizes changed over time?' visualization="Stacked bar chart showing 'time' on the x-axis, 'value' on the y-axis, and '2_variable_attribute_label' (excluding 'Insgesamt') as the color/stack category." rationale="A stacked area or bar chart using 'time', 'value', and '2_variable_attribute_label' (excluding 'Insgesamt') reveals shifts in architectural trends, such as a potential move from large family homes (7+ rooms) to smaller urban-style apartments (1-2 rooms) over the 11-year period."
+
+-> Code:
+library(tidyverse)
+library(janitor)
+library(scales)
+library(viridis)
+
+# Set options
+options(stringsAsFactors = FALSE)
+options(scipen = 100)
+
+# Define paths
+input_path <- file.path(".", "src", "resources", "data", "study", "13979", "dataset.csv")
+out_dir <- file.path(".", "src", "resources", "output", "13979")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Read data
+# Using read_delim with semicolon as seen in previous attempt
+df <- readr::read_delim(input_path, delim = ";", locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE)
+
+# The error "Objekt '2_variable_attribute_code' nicht gefunden" happened because 
+# janitor::clean_names() converts "2_variable_attribute_code" to "x2_variable_attribute_code" 
+# (R variables cannot start with numbers).
+# We will clean names but be mindful of the transformation.
+df_clean <- janitor::clean_names(df)
+
+# Identify the correct column names after cleaning
+# "2_variable_attribute_label" becomes "x2_variable_attribute_label"
+# "2_variable_attribute_code" becomes "x2_variable_attribute_code"
+label_col <- "x2_variable_attribute_label"
+code_col <- "x2_variable_attribute_code"
+
+# Filter and prepare data
+# 1. Exclude 'Insgesamt'
+# 2. Ensure time is numeric
+# 3. Ensure value is numeric
+comp_data <- df_clean %>%
+  filter(!is.na(value)) %>%
+  filter(!is.na(!!sym(label_col))) %>%
+  filter(!!sym(label_col) != "Insgesamt") %>%
+  mutate(time = suppressWarnings(as.integer(time))) %>%
+  filter(!is.na(time))
+
+# Define a logical order for the room categories if possible
+# Usually RAUM-1 to RAUM-7UM
+raum_order_codes <- c("RAUM-1", "RAUM-2", "RAUM-3", "RAUM-4", "RAUM-5", "RAUM-6", "RAUM-7UM")
+
+# Create a factor for the labels based on the code order
+label_map <- comp_data %>% 
+  select(all_of(c(code_col, label_col))) %>% 
+  distinct()
+
+ordered_labels <- label_map %>% 
+  mutate(ord = match(!!sym(code_col), raum_order_codes)) %>% 
+  arrange(ord) %>% 
+  filter(!is.na(ord)) %>% 
+  pull(!!sym(label_col)) %>% 
+  unique()
+
+# If the codes don't match the expected RAUM-X pattern, fallback to alphabetical or existing order
+if(length(ordered_labels) == 0) {
+  ordered_labels <- sort(unique(comp_data[[label_col]]))
+}
+
+comp_data <- comp_data %>% 
+  mutate(raumzahl = factor(!!sym(label_col), levels = ordered_labels))
+
+# Create the visualization
+p <- ggplot(comp_data, aes(x = time, y = value, fill = raumzahl)) +
+  geom_col(position = "stack", width = 0.8, color = "white", linewidth = 0.1) +
+  scale_fill_viridis_d(option = "viridis", name = "Wohnungsgröße") +
+  scale_x_continuous(breaks = sort(unique(comp_data$time))) +
+  scale_y_continuous(labels = label_number(accuracy = 1)) +
+  labs(
+    title = "Zusammensetzung der fertiggestellten Wohnungen nach Raumzahl",
+    subtitle = "Zeitverlauf (Kategorie 'Insgesamt' ausgeschlossen)",
+    x = "Jahr",
+    y = "Anzahl der Wohnungen",
+    caption = "Quelle: Statistik der Baufertigstellungen"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    legend.position = "bottom",
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(angle = 0)
+  )
+
+# Save the plot
+plot_path <- file.path(out_dir, "dwelling_size_composition.png")
+ggsave(plot_path, p, width = 10, height = 6, dpi = 300)
+
+# Save a summary CSV for reference
+summary_stats <- comp_data %>%
+  group_by(time, raumzahl) %>%
+  summarise(count = sum(value, na.rm = TRUE), .groups = "drop")
+readr::write_csv(summary_stats, file.path(out_dir, "dwelling_size_summary.csv"))
+
+
+-> SEVQ:
+
+

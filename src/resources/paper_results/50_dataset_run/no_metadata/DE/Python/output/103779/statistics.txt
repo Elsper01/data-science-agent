@@ -1,0 +1,422 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\103779\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-08 15:36:29
+Total Duration: 957.66 seconds
+Total Token Usage: 94673 tokens
+Total Costs: $0.4197
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0122 seconds
+
+Method: analyse_dataset
+  Duration: 0.0054 seconds
+
+Method: llm_generate_summary
+  Duration: 200.0023 seconds
+
+Method: llm_generate_goals
+  Duration: 3.2564 seconds
+
+Method: llm_generate_python_code
+  Duration: 252.5351 seconds
+
+Method: test_generated_code
+  Duration: 14.9173 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 486.9343 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 5504 tokens
+  Costs total: $0.0048
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1708 tokens
+  Costs total: $0.0018
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7776 tokens
+  Costs total: $0.0533
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6066 tokens
+  Costs total: $0.0361
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7166 tokens
+  Costs total: $0.0472
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 392 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6977 tokens
+  Costs total: $0.0518
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2542 tokens
+  Costs total: $0.0087
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2781 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5115 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 6153 tokens
+  Costs total: $0.0345
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7413 tokens
+  Costs total: $0.0541
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2541 tokens
+  Costs total: $0.0079
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2958 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4870 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5316 tokens
+  Costs total: $0.0315
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5195 tokens
+  Costs total: $0.0341
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2334 tokens
+  Costs total: $0.0077
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2643 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3479 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5030 tokens
+  Costs total: $0.0314
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verteilen sich die Kulturdenkmale auf die verschiedenen Gemeinden im Kreis Segeberg?' visualization="Ein horizontales Balkendiagramm, das die Häufigkeit der Einträge pro 'Gemeinde' zeigt." rationale="Ein Balkendiagramm der Spalte 'Gemeinde' ermöglicht es dem Nutzer, sofort zu erkennen, welche Orte (wie z.B. Bad Segeberg) eine besonders hohe Dichte an geschützten Objekten aufweisen. Dies hilft bei der Identifizierung regionaler Schwerpunkte des kulturellen Erbes."
+
+-> Code:
+import os
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(style='whitegrid', context='notebook')
+
+data_path = r'./src/resources/data/study\103779\dataset.csv'
+output_dir = r'./src/resources/output\103779'
+plot_path = os.path.join(output_dir, '0_kulturdenkmale_pro_gemeinde.png')
+eda_missing_path = os.path.join(output_dir, 'eda_missing_values.csv')
+eda_numeric_path = os.path.join(output_dir, 'eda_numeric_summary.csv')
+eda_categorical_path = os.path.join(output_dir, 'eda_categorical_summary.csv')
+eda_overview_path = os.path.join(output_dir, 'eda_overview.csv')
+os.makedirs(output_dir, exist_ok=True)
+
+df = pd.read_csv(data_path, sep=',', encoding='utf-8', na_values=['', ' ', 'NA', 'NaN', 'nan', 'None'])
+
+missing_pct = df.isna().mean().sort_values(ascending=False).rename('anteil_fehlend')
+missing_pct.to_csv(eda_missing_path, encoding='utf-8')
+
+num_df = df.select_dtypes(include=[np.number])
+if num_df.shape[1] > 0:
+    num_summary = num_df.describe().T
+    num_summary.to_csv(eda_numeric_path, encoding='utf-8')
+else:
+    pd.DataFrame().to_csv(eda_numeric_path, encoding='utf-8')
+
+cat_df = df.select_dtypes(include=['object', 'bool'])
+if cat_df.shape[1] > 0:
+    cat_summary = cat_df.describe().T
+    cat_summary.to_csv(eda_categorical_path, encoding='utf-8')
+else:
+    pd.DataFrame().to_csv(eda_categorical_path, encoding='utf-8')
+
+overview = {
+    'anzahl_zeilen': [int(df.shape[0])],
+    'anzahl_spalten': [int(df.shape[1])],
+    'anzahl_duplikate_Objektnummer': [int(df.duplicated(subset=['Objektnummer']).sum()) if 'Objektnummer' in df.columns else np.nan],
+}
+pd.DataFrame(overview).to_csv(eda_overview_path, index=False, encoding='utf-8')
+
+if 'Gemeinde' not in df.columns:
+    raise ValueError('Erforderliche Spalte "Gemeinde" fehlt im Datensatz.')
+
+gemeinde = df['Gemeinde']
+gemeinde = gemeinde.astype(str)
+gemeinde = gemeinde.str.strip()
+gemeinde = gemeinde.replace({'': np.nan, 'nan': np.nan, 'NaN': np.nan, 'None': np.nan})
+gemeinde = gemeinde.str.replace(r'\s+', ' ', regex=True)
+gemeinde = gemeinde.fillna('Unbekannt')
+
+counts = gemeinde.value_counts(dropna=False).sort_values(ascending=False)
+plot_df = counts.reset_index()
+plot_df.columns = ['Gemeinde', 'Anzahl']
+plot_df['Gemeinde'] = pd.Categorical(plot_df['Gemeinde'], categories=plot_df['Gemeinde'].tolist(), ordered=True)
+
+height = min(max(6, 0.35 * len(plot_df) + 1), 30)
+fig, ax = plt.subplots(figsize=(12, height))
+palette = sns.color_palette('Blues_r', n_colors=max(3, len(plot_df)))
+sns.barplot(data=plot_df, y='Gemeinde', x='Anzahl', palette=palette, orient='h', ax=ax)
+ax.set_title('Verteilung der Kulturdenkmale nach Gemeinde (Kreis Segeberg)')
+ax.set_xlabel('Anzahl der Einträge')
+ax.set_ylabel('Gemeinde')
+ax.grid(axis='x', linestyle='--', alpha=0.3)
+for container in ax.containers:
+    ax.bar_label(container, fmt='%d', padding=3, fontsize=8)
+plt.tight_layout()
+plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Welche Arten von Denkmalen sind im Kreis am häufigsten vertreten?' visualization="Ein Balkendiagramm, das die Anzahl der Objekte gruppiert nach 'Kulturdenkmaltyp' darstellt." rationale="Durch die Visualisierung der Spalte 'Kulturdenkmaltyp' wird deutlich, ob der Datensatz eher von Gebäuden ('Bauliche Anlagen'), Gartenkunst ('Gründenkmalen') oder Ensembles ('Sachgesamtheiten') geprägt ist. Ein Balkendiagramm ist hier ideal, um die Dominanz der baulichen Anlagen im Vergleich zu den anderen Kategorien darzustellen."
+
+-> Code:
+import os
+import sys
+import traceback
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+try:
+    input_path = os.path.join('.', 'src', 'resources', 'data', 'study', '103779', 'dataset.csv')
+    output_dir = os.path.join('.', 'src', 'resources', 'output', '103779')
+    os.makedirs(output_dir, exist_ok=True)
+
+    df = pd.read_csv(
+        input_path,
+        sep=',',
+        encoding='utf-8',
+        na_values=['nan', 'NaN', 'None', 'NULL', ''],
+        keep_default_na=True,
+        engine='python'
+    )
+
+    df = df.replace(r'^\s+$', np.nan, regex=True)
+
+    missing_share = df.isna().mean().sort_values(ascending=False).to_frame('anteil_fehlend_prozent') * 100
+    missing_share.index.name = 'spalte'
+    missing_share = missing_share.reset_index()
+    missing_share['anteil_fehlend_prozent'] = missing_share['anteil_fehlend_prozent'].round(2)
+    missing_path = os.path.join(output_dir, '1_missing_values.csv')
+    missing_share.to_csv(missing_path, index=False, encoding='utf-8')
+
+    num_df = df.select_dtypes(include=[np.number])
+    if num_df.shape[1] > 0:
+        desc = num_df.describe().T
+        desc_path = os.path.join(output_dir, '1_numeric_summary.csv')
+        desc.to_csv(desc_path, encoding='utf-8')
+        if num_df.shape[1] > 1:
+            corr = num_df.corr(numeric_only=True)
+            corr_path = os.path.join(output_dir, '1_numeric_correlations.csv')
+            corr.to_csv(corr_path, encoding='utf-8')
+    else:
+        pd.DataFrame().to_csv(os.path.join(output_dir, '1_numeric_summary.csv'), encoding='utf-8')
+
+    col_candidates = {c.lower().strip(): c for c in df.columns}
+    target_col_key = None
+    for key in col_candidates.keys():
+        if key == 'kulturdenkmaltyp':
+            target_col_key = key
+            break
+    if target_col_key is None:
+        raise KeyError('Spalte "Kulturdenkmaltyp" nicht gefunden.')
+    target_col = col_candidates[target_col_key]
+
+    typ_series = df[target_col].astype(str).where(~df[target_col].isna(), other=np.nan)
+    typ_series = typ_series.str.strip()
+    typ_series = typ_series.replace({'': np.nan})
+    typ_series = typ_series.fillna('Unbekannt')
+
+    counts = typ_series.value_counts(dropna=False).rename_axis('Kulturdenkmaltyp').reset_index(name='Anzahl')
+    counts_path = os.path.join(output_dir, '1_kulturdenkmaltyp_counts.csv')
+    counts.to_csv(counts_path, index=False, encoding='utf-8')
+
+    sns.set_theme(style='whitegrid', context='talk')
+    plt.rcParams['figure.dpi'] = 120
+    plt.rcParams['savefig.dpi'] = 300
+
+    fig, ax = plt.subplots(figsize=(12, max(4, 0.6 * len(counts))))
+    palette = sns.color_palette('Blues_r', n_colors=max(3, len(counts)))
+    sns.barplot(data=counts, y='Kulturdenkmaltyp', x='Anzahl', ax=ax, palette=palette)
+
+    ax.set_title('Häufigkeit der Kulturdenkmaltypen im Kreis Segeberg')
+    ax.set_xlabel('Anzahl der Objekte')
+    ax.set_ylabel('Kulturdenkmaltyp')
+
+    for p in ax.patches:
+        width = p.get_width()
+        y = p.get_y() + p.get_height() / 2
+        ax.text(width + max(counts['Anzahl']) * 0.01, y, f'{int(width)}', va='center', ha='left', fontsize=11)
+
+    ax.margins(x=0.05)
+    plt.tight_layout()
+    plot_path = os.path.join(output_dir, '1_kulturdenkmaltyp_balken.png')
+    plt.savefig(plot_path, bbox_inches='tight', facecolor='white')
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+    traceback.print_exc()
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Was sind die primären rechtlichen Begründungen für den Denkmalschutz im Kreis Segeberg?' visualization="Ein Balkendiagramm der häufigsten Werte in der Spalte 'Begr_ndung'." rationale="Die Analyse der Spalte 'Begr_ndung' gibt Aufschluss darüber, warum Objekte geschützt werden (z.B. aus geschichtlichen oder städtebaulichen Gründen). Da viele Einträge Kombinationen enthalten, hilft eine Häufigkeitsverteilung dieser Kriterien dabei, den fachlichen Fokus des Denkmalschutzes in dieser Region zu verstehen."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+try:
+    file_path = os.path.normpath(r'./src/resources/data/study\103779\dataset.csv')
+    output_dir = os.path.normpath(r'./src/resources/output\103779')
+    os.makedirs(output_dir, exist_ok=True)
+    plot_path = os.path.join(output_dir, '2_begruendung_balkendiagramm.png')
+
+    df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+
+    _missing_ratio = df.isna().mean().sort_values(ascending=False)
+    _num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    if len(_num_cols) > 0:
+        _desc = df[_num_cols].describe().T
+        _corr = df[_num_cols].corr()
+    else:
+        _desc = pd.DataFrame()
+        _corr = pd.DataFrame()
+
+    if 'Begr_ndung' in df.columns:
+        col = df['Begr_ndung'].astype(str)
+        col = col[~col.str.lower().isin(['nan', 'none', ''])]
+        exploded = col.str.split(',').explode().astype(str).str.strip()
+        exploded = exploded[~exploded.str.lower().isin(['nan', 'none', ''])]
+        exploded = exploded.replace('', np.nan).dropna()
+        counts = exploded.value_counts().sort_values(ascending=False)
+    else:
+        counts = pd.Series(dtype=int)
+
+    if counts.empty:
+        fig, ax = plt.subplots(figsize=(8, 4))
+        ax.axis('off')
+        ax.text(0.5, 0.5, 'Keine gültigen Daten in der Spalte "Begr_ndung" verfügbar', ha='center', va='center', fontsize=12)
+        plt.savefig(plot_path, dpi=200, bbox_inches='tight')
+        plt.close(fig)
+    else:
+        sns.set_theme(style='whitegrid', font_scale=1.05)
+        fig, ax = plt.subplots(figsize=(12, 7))
+        palette = sns.color_palette('Blues_d', n_colors=len(counts))
+        sns.barplot(x=counts.index, y=counts.values, palette=palette, ax=ax)
+        ax.set_title('Häufigkeit der Begründungskategorien für Denkmalschutz im Kreis Segeberg')
+        ax.set_xlabel('Begründungskategorie')
+        ax.set_ylabel('Anzahl der Nennungen')
+        ax.set_xticklabels(ax.get_xticklabels(), rotation=25, ha='right')
+        y_max = counts.values.max()
+        total = counts.values.sum()
+        for i, v in enumerate(counts.values):
+            ax.text(i, v + max(0.01 * y_max, 0.1), f'{int(v)} ({(v/total)*100:.1f}%)', ha='center', va='bottom', fontsize=9)
+        ax.set_ylim(0, y_max + max(0.1 * y_max, 1))
+        plt.tight_layout()
+        plt.savefig(plot_path, dpi=200, bbox_inches='tight')
+        plt.close(fig)
+except Exception as e:
+    print(str(e))
+
+
+-> SEVQ:
+
+

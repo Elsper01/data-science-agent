@@ -1,0 +1,558 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\13473\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-08 15:37:55
+Total Duration: 1041.21 seconds
+Total Token Usage: 108681 tokens
+Total Costs: $0.4650
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0085 seconds
+
+Method: analyse_dataset
+  Duration: 0.0078 seconds
+
+Method: llm_generate_summary
+  Duration: 187.2532 seconds
+
+Method: llm_generate_goals
+  Duration: 3.9806 seconds
+
+Method: llm_generate_python_code
+  Duration: 322.9938 seconds
+
+Method: test_generated_code
+  Duration: 7.2081 seconds
+
+Method: llm_regenerate_code
+  Duration: 24.4687 seconds
+
+Method: test_generated_code
+  Duration: 8.3721 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 486.9124 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3214 tokens
+  Costs total: $0.0029
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1491 tokens
+  Costs total: $0.0019
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6272 tokens
+  Costs total: $0.0450
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7326 tokens
+  Costs total: $0.0558
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7291 tokens
+  Costs total: $0.0553
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 324 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 324 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 324 tokens
+  Costs total: $0.0009
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2498 tokens
+  Costs total: $0.0041
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3154 tokens
+  Costs total: $0.0051
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3802 tokens
+  Costs total: $0.0061
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 324 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6250 tokens
+  Costs total: $0.0424
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2649 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2896 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4897 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5429 tokens
+  Costs total: $0.0336
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7321 tokens
+  Costs total: $0.0512
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2878 tokens
+  Costs total: $0.0096
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3106 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4648 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 7851 tokens
+  Costs total: $0.0405
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6047 tokens
+  Costs total: $0.0367
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3068 tokens
+  Costs total: $0.0100
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3472 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5001 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 6208 tokens
+  Costs total: $0.0379
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie verteilt sich die Bevölkerung der Stadt Hof nach Geschlecht?' visualization="Balkendiagramm mit '2_variable_attribute_label' auf der x-Achse (gefiltert auf 'männlich' und 'weiblich') und 'value' auf der y-Achse." rationale="Ein Balkendiagramm ist die effektivste Methode, um die absoluten Zahlen der männlichen und weiblichen Bevölkerung direkt miteinander zu vergleichen. Durch die Verwendung von '2_variable_attribute_label' (Geschlecht) und 'value' (Anzahl) wird sofort ersichtlich, wie groß der Frauenüberhang in der Stadt Hof zum Stichtag tatsächlich ist. Die Kategorie 'insgesamt' sollte hierbei gefiltert werden, um die Teilmengen zu vergleichen."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+# Set visual style
+sns.set_theme(style="whitegrid", context="talk")
+
+input_path = os.path.normpath(r"./src/resources/data/study/13473/dataset.csv")
+output_dir = os.path.normpath(r"./src/resources/output/13473")
+plot_filename = "0_bevoelkerung_nach_geschlecht.png"
+
+try:
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # The error 'utf-8' codec can't decode byte 0xf6 (ö) indicates the file is likely encoded in ISO-8859-1 (Latin-1)
+    # which is common for German datasets containing umlauts like 'männlich'.
+    try:
+        df = pd.read_csv(input_path, sep=';', encoding='utf-8', dtype=str)
+    except UnicodeDecodeError:
+        df = pd.read_csv(input_path, sep=';', encoding='iso-8859-1', dtype=str)
+
+    # Data Cleaning
+    df = df.applymap(lambda x: np.nan if isinstance(x, str) and x.strip().lower() in {"nan", ""} else x)
+    df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+    # EDA Exports
+    eda_missing = df.isna().mean().sort_values(ascending=False).rename("missing_share")
+    eda_missing.to_csv(os.path.join(output_dir, "eda_missing_share.csv"), encoding="utf-8")
+    
+    # Filtering for the specific visualization goal
+    # We need 'männlich' and 'weiblich' from the gender variable
+    subset = df[
+        df['1_variable_code'].eq('KREISE') & 
+        df['2_variable_label'].str.contains('Geschlecht', na=False, case=False)
+    ].copy()
+
+    # Filter for specific gender labels (handling potential encoding/case issues)
+    target_labels = ["männlich", "weiblich"]
+    subset = subset[subset['2_variable_attribute_label'].fillna("").str.lower().isin(target_labels)]
+    
+    # Aggregate values
+    grouped = subset.groupby('2_variable_attribute_label', as_index=False)['value'].sum(min_count=1)
+    
+    # Ensure order and categorical type for plotting
+    grouped['2_variable_attribute_label'] = pd.Categorical(
+        grouped['2_variable_attribute_label'], 
+        categories=target_labels, 
+        ordered=True
+    )
+    grouped = grouped.sort_values('2_variable_attribute_label')
+
+    # Visualization
+    if not grouped.empty and grouped['value'].notna().any():
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=150)
+        palette = {"männlich": "#1f77b4", "weiblich": "#e377c2"}
+        
+        sns.barplot(
+            data=grouped, 
+            x='2_variable_attribute_label', 
+            y='value', 
+            palette=palette, 
+            ax=ax,
+            hue='2_variable_attribute_label',
+            legend=False
+        )
+        
+        ax.set_title("Bevölkerung der Stadt Hof nach Geschlecht", pad=20)
+        ax.set_xlabel("Geschlecht")
+        ax.set_ylabel("Anzahl Personen")
+        
+        # Format Y-Axis with German thousands separator
+        ax.yaxis.set_major_formatter(FuncFormatter(lambda x, p: f"{int(x):,}".replace(",", ".")))
+        
+        # Add value labels on top of bars
+        for p in ax.patches:
+            h = p.get_height()
+            if np.isfinite(h):
+                ax.annotate(
+                    f"{int(h):,}".replace(",", "."), 
+                    (p.get_x() + p.get_width() / 2., h), 
+                    ha='center', va='bottom', 
+                    fontsize=12, fontweight='bold',
+                    xytext=(0, 5), textcoords='offset points'
+                )
+        
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, plot_filename), bbox_inches='tight', facecolor='white')
+        plt.close(fig)
+    else:
+        print("No data found for the specified filters.")
+
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie hoch ist der Anteil von Männern und Frauen an der Gesamtbevölkerung?' visualization="Tortendiagramm unter Verwendung von '2_variable_attribute_label' (Kategorien: männlich, weiblich) und 'value'." rationale="Um die Verhältnismäßigkeit der Geschlechterverteilung innerhalb der Gesamtstadt zu verstehen, eignet sich ein Tortendiagramm. Es visualisiert den Anteil der Werte aus 'value' basierend auf den Kategorien in '2_variable_attribute_label'. Dies hilft dem Nutzer, die demografische Struktur der Stadt Hof auf einen Blick zu erfassen."
+
+-> Code:
+import os
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+try:
+    # Der Fehler 'utf-8' codec can't decode byte 0xf6 deutet auf eine ISO-8859-1 (Latin-1) Kodierung hin (0xf6 ist 'ö').
+    input_path = r'./src/resources/data/study/13473/dataset.csv'
+    
+    # Versuche zuerst latin-1, da deutsche Umlaute oft so kodiert sind
+    try:
+        df = pd.read_csv(input_path, sep=';', encoding='latin-1')
+    except Exception:
+        df = pd.read_csv(input_path, sep=';', encoding='utf-8-sig')
+
+    if 'time' in df.columns:
+        df['time'] = pd.to_datetime(df['time'], errors='coerce')
+    if 'value' in df.columns:
+        df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+    out_dir = r'./src/resources/output/13473'
+    os.makedirs(out_dir, exist_ok=True)
+
+    # EDA
+    eda_missing = df.isna().mean().rename('missing_share')
+    eda_missing.to_csv(os.path.join(out_dir, 'eda_missing_share.csv'), header=True)
+
+    num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    if len(num_cols) > 0:
+        df[num_cols].describe().to_csv(os.path.join(out_dir, 'eda_numeric_summary.csv'))
+
+    # Filterung für die Visualisierung
+    subset = df.copy()
+    
+    # 1. Zeitfilter: Aktuellster Zeitpunkt
+    if 'time' in subset.columns and subset['time'].notna().any():
+        latest_time = subset['time'].max()
+        subset = subset[subset['time'] == latest_time]
+
+    # 2. Variablenfilter: Geschlecht
+    if '2_variable_label' in subset.columns:
+        subset = subset[subset['2_variable_label'].str.contains('Geschlecht', na=False, case=False)]
+
+    # 3. Regionaler Filter: Bevorzuge KREISE oder GEMEIN falls vorhanden, um Doppelzählungen zu vermeiden
+    if '1_variable_code' in subset.columns and not subset.empty:
+        levels = subset['1_variable_code'].dropna().unique().tolist()
+        for lvl in ['KREISE', 'GEMEIN']:
+            if lvl in levels:
+                subset = subset[subset['1_variable_code'] == lvl]
+                break
+
+    # Daten für das Tortendiagramm vorbereiten
+    # Wir suchen explizit nach 'männlich' und 'weiblich'
+    male_female = subset[subset['2_variable_attribute_label'].isin(['männlich', 'weiblich'])].copy()
+    
+    # Falls keine Daten gefunden wurden, versuche Teilstrings (wegen Kodierungsproblemen)
+    if male_female.empty:
+        male_female = subset[subset['2_variable_attribute_label'].str.contains('männ|weib', na=False, case=False)].copy()
+
+    pie_df = male_female.groupby('2_variable_attribute_label', as_index=False)['value'].sum()
+
+    if pie_df.empty or pie_df['value'].sum() == 0:
+        raise ValueError('Keine passenden Daten für die Geschlechterverteilung gefunden.')
+
+    # Sortierung sicherstellen
+    pie_df = pie_df.sort_values('2_variable_attribute_label', ascending=False) # 'weiblich' vor 'männlich' oder umgekehrt
+
+    values = pie_df['value'].to_numpy(dtype=float)
+    labels = pie_df['2_variable_attribute_label'].astype(str).to_numpy()
+
+    def format_thousands(n):
+        return f"{int(round(n)):,}".replace(',', '.')
+
+    def autopct_factory(vals):
+        total = np.nansum(vals)
+        def _autopct(pct):
+            val = pct * total / 100.0
+            return f"{pct:.1f}%\n({format_thousands(val)})"
+        return _autopct
+
+    # Visualisierung
+    sns.set_theme(context='talk', style='white')
+    fig, ax = plt.subplots(figsize=(10, 8), dpi=150)
+    colors = ['#66b3ff', '#ff9999'] # Blau für männlich, Rosa für weiblich (oder Set2)
+    
+    wedges, texts, autotexts = ax.pie(
+        values,
+        labels=labels,
+        colors=sns.color_palette('Pastel1', n_colors=len(labels)),
+        autopct=autopct_factory(values),
+        startangle=140,
+        pctdistance=0.75,
+        labeldistance=1.1,
+        textprops={'fontsize': 12}
+    )
+    
+    ax.axis('equal')
+    title_date = ""
+    if 'time' in subset.columns and not subset['time'].empty:
+        title_date = f" ({subset['time'].max().strftime('%d.%m.%Y')})"
+        
+    ax.set_title(f'Anteil von Männern und Frauen an der Gesamtbevölkerung{title_date}', fontsize=14, pad=20)
+    
+    plt.tight_layout()
+    output_png = os.path.join(out_dir, '1_anteil_geschlechter.png')
+    fig.savefig(output_png, dpi=200, bbox_inches='tight')
+    plt.close(fig)
+
+except Exception as e:
+    print(f"Fehler aufgetreten: {str(e)}")
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Was ist die amtliche Gesamtbevölkerungszahl der Stadt Hof zum Stichtag?' visualization="Statistischer Kennwert (Big Number) des Feldes 'value', gefiltert nach '2_variable_attribute_label' mit dem Wert 'insgesamt'." rationale="Da der Datensatz redundant aufgebaut ist (KREISE vs. GEMEINDEN), ist es für einen Nutzer wichtig, den aggregierten Gesamtwert schnell zu identifizieren. Eine einfache Kennzahl (Big Number) basierend auf dem Feld 'value', gefiltert auf '2_variable_attribute_label' = 'insgesamt' und '1_variable_label' = 'KREISE', liefert die wichtigste Information des Datensatzes ohne Umwege."
+
+-> Code:
+# -*- coding: utf-8 -*-
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set(style="whitegrid", context="talk")
+
+input_path = './src/resources/data/study/13473/dataset.csv'
+output_dir = './src/resources/output/13473'
+plot_path = os.path.join(output_dir, '2_big_number_gesamtbevoelkerung.png')
+eda_missing_path = os.path.join(output_dir, 'eda_missing_values.csv')
+eda_numeric_desc_path = os.path.join(output_dir, 'eda_numeric_describe.csv')
+eda_cat_nunique_path = os.path.join(output_dir, 'eda_categorical_nunique.csv')
+eda_corr_path = os.path.join(output_dir, 'eda_numeric_correlation.csv')
+
+try:
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Behebung des UnicodeDecodeError durch Verwendung von 'latin-1' oder 'iso-8859-1'
+    # Da 0xf6 oft für 'ö' in westeuropäischen Encodings steht.
+    try:
+        df = pd.read_csv(input_path, sep=';', encoding='utf-8')
+    except UnicodeDecodeError:
+        df = pd.read_csv(input_path, sep=';', encoding='latin-1')
+
+    if 'time' in df.columns:
+        df['time'] = pd.to_datetime(df['time'], errors='coerce')
+    if 'value' in df.columns:
+        df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+    # EDA Exports
+    missing_df = df.isna().mean().to_frame('fehlenden_anteil').reset_index().rename(columns={'index': 'spalte'})
+    missing_df.to_csv(eda_missing_path, index=False, encoding='utf-8')
+
+    numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    if len(numeric_cols) > 0:
+        desc_df = df[numeric_cols].describe().T.reset_index().rename(columns={'index': 'variable'})
+        desc_df.to_csv(eda_numeric_desc_path, index=False, encoding='utf-8')
+
+    cat_cols = df.select_dtypes(include=['object', 'category', 'bool']).columns.tolist()
+    if len(cat_cols) > 0:
+        nunique_df = df[cat_cols].nunique(dropna=False).to_frame('anzahl_auspraegungen').reset_index().rename(columns={'index': 'variable'})
+        nunique_df.to_csv(eda_cat_nunique_path, index=False, encoding='utf-8')
+
+    if len(numeric_cols) >= 2:
+        corr_df = df[numeric_cols].corr(numeric_only=True)
+        corr_df.to_csv(eda_corr_path, encoding='utf-8')
+
+    # Hilfsfunktion für deutsche Tausendertrennung
+    def format_german_int(x):
+        try:
+            s = f"{int(round(float(x))):,}"
+            return s.replace(',', '.')
+        except Exception:
+            return str(x)
+
+    # Filterung gemäß Rationale: '2_variable_attribute_label' = 'insgesamt' und '1_variable_label' = 'KREISE'
+    mask_insgesamt = df.get('2_variable_attribute_label', pd.Series(index=df.index, dtype=object)).astype(str).str.strip().str.lower() == 'insgesamt'
+    mask_kreise = df.get('1_variable_label', pd.Series(index=df.index, dtype=object)).astype(str).str.upper() == 'KREISE'
+    
+    # Zeitfilter: Nur den aktuellsten Stichtag nehmen
+    if 'time' in df.columns and not df['time'].isna().all():
+        latest_time = df['time'].dropna().max()
+        time_mask = df['time'] == latest_time
+    else:
+        time_mask = pd.Series(True, index=df.index)
+        latest_time = None
+
+    df_filtered = df[mask_insgesamt & mask_kreise & time_mask].copy()
+    
+    # Fallback falls Filter zu restriktiv
+    if df_filtered.empty:
+        df_filtered = df[mask_insgesamt & mask_kreise].copy()
+    if df_filtered.empty:
+        df_filtered = df[mask_insgesamt].copy()
+
+    total_value = pd.to_numeric(df_filtered.get('value', pd.Series([], dtype=float)), errors='coerce').sum(min_count=1)
+
+    # Datumsstring für Titel
+    date_str = ""
+    if latest_time is not None and not pd.isna(latest_time):
+        date_str = pd.to_datetime(latest_time).strftime('%d.%m.%Y')
+
+    # Visualisierung
+    fig, ax = plt.subplots(figsize=(8, 6))
+    ax.axis('off')
+
+    title_text = 'Amtliche Gesamtbevölkerung der Stadt Hof'
+    if date_str:
+        title_text += f'\nzum Stichtag {date_str}'
+
+    ax.text(0.5, 0.85, title_text, ha='center', va='center', fontsize=18, fontweight='bold', color='#1a1a1a', transform=ax.transAxes)
+
+    if not pd.isna(total_value):
+        big_number = format_german_int(total_value)
+    else:
+        big_number = 'k.A.'
+
+    ax.text(0.5, 0.50, big_number, ha='center', va='center', fontsize=72, fontweight='bold', color='#2E86AB', transform=ax.transAxes)
+    ax.text(0.5, 0.32, 'Personen', ha='center', va='center', fontsize=18, color='#333333', transform=ax.transAxes)
+
+    ax.text(0.5, 0.15, 'Filter: Geschlecht = Insgesamt, Ebene = Kreise', ha='center', va='center', fontsize=10, color='#555555', transform=ax.transAxes)
+    ax.text(0.5, 0.08, 'Quelle: Statistik 12411 – Fortschreibung des Bevölkerungsstandes', ha='center', va='center', fontsize=9, color='#777777', transform=ax.transAxes)
+
+    plt.savefig(plot_path, dpi=200, bbox_inches='tight', facecolor='white')
+    plt.close(fig)
+
+except Exception as e:
+    print(f"Fehler aufgetreten: {str(e)}")
+
+
+-> SEVQ:
+
+

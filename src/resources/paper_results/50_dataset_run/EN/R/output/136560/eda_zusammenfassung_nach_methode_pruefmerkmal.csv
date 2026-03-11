@@ -1,0 +1,4 @@
+Methode,Pruefmerkmal,n,Mittelwert,SD,Minimum,Maximum
+Gesamt-Alpha,Messzeit,1,12000,NA,12000,12000
+Radon-LSC,Messzeit,1,6000,NA,6000,6000
+Radon-LSC,Radon-222 Rn-222,1,4.04,NA,4.04,4.04

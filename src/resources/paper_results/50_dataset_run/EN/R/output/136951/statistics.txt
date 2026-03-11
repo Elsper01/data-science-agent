@@ -1,0 +1,503 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\136951\dataset.csv
+Programming Language: r
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-06 09:50:54
+Total Duration: 1016.23 seconds
+Total Token Usage: 107222 tokens
+Total Costs: $0.4637
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0073 seconds
+
+Method: analyse_dataset
+  Duration: 0.0096 seconds
+
+Method: analyse_metadata
+  Duration: 0.0163 seconds
+
+Method: llm_generate_summary
+  Duration: 180.9840 seconds
+
+Method: llm_generate_goals
+  Duration: 3.5647 seconds
+
+Method: llm_generate_r_code
+  Duration: 256.4365 seconds
+
+Method: test_generated_code
+  Duration: 10.2275 seconds
+
+Method: llm_regenerate_code
+  Duration: 23.9014 seconds
+
+Method: test_generated_code
+  Duration: 9.9506 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 531.1327 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4596 tokens
+  Costs total: $0.0047
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1628 tokens
+  Costs total: $0.0018
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7856 tokens
+  Costs total: $0.0657
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5644 tokens
+  Costs total: $0.0434
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7100 tokens
+  Costs total: $0.0582
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1183 tokens
+  Costs total: $0.0030
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 401 tokens
+  Costs total: $0.0011
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 351 tokens
+  Costs total: $0.0009
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3790 tokens
+  Costs total: $0.0046
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2734 tokens
+  Costs total: $0.0039
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3731 tokens
+  Costs total: $0.0058
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 703 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 321 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 369 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6162 tokens
+  Costs total: $0.0451
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2306 tokens
+  Costs total: $0.0088
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2656 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5550 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4405 tokens
+  Costs total: $0.0277
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5579 tokens
+  Costs total: $0.0395
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2238 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2489 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4480 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4039 tokens
+  Costs total: $0.0229
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8486 tokens
+  Costs total: $0.0645
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2757 tokens
+  Costs total: $0.0100
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3005 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 7998 tokens
+  Costs total: $0.0032
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4665 tokens
+  Costs total: $0.0255
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What are the specific parameters measured for the sample at WW Großensee?' visualization="Bar chart of 'Pruefmerkmal' on the x-axis and 'Ergebnis' on the y-axis." rationale="This goal identifies the different types of data recorded for the sample. By plotting 'Pruefmerkmal' against 'Ergebnis', the user can see that the dataset tracks both the physical measurement (Radon-222) and the technical quality parameter (Messzeit), providing a complete picture of the monitoring event."
+
+-> Code:
+library(tidyverse)
+library(scales)
+
+# Define paths
+input_path <- file.path(".", "src", "resources", "data", "study", "136951", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "136951")
+dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+
+# Read data with explicit encoding and handling potential UTF-8 issues
+# Using read_csv with guess_max to ensure column types are handled well
+raw <- readr::read_csv(input_path, 
+                       locale = readr::locale(encoding = "UTF-8"), 
+                       show_col_types = FALSE)
+
+# Fix the UTF-8 error in trimws/sub by using stringr::str_trim which is more robust
+# and avoiding purrr::map_dbl with trimws on raw character vectors that might contain invalid bytes
+clean_raw <- raw %>%
+  mutate(across(where(is.character), ~stringr::str_trim(.)))
+
+# Calculate missingness safely
+missingness <- tibble(
+  Spalte = names(clean_raw),
+  Fehlendenanteil = map_dbl(names(clean_raw), function(nm) {
+    x <- clean_raw[[nm]]
+    if (is.character(x)) {
+      sum(is.na(x) | x == "", na.rm = TRUE) / length(x)
+    } else {
+      sum(is.na(x)) / length(x)
+    }
+  })
+)
+readr::write_csv(missingness, file.path(output_dir, "eda_missingness.csv"))
+
+# Process 'Ergebnis' column: handle commas, units, and censored values (<)
+df <- clean_raw %>%
+  mutate(
+    Ergebnis_clean = stringr::str_replace_all(Ergebnis, ",", "."),
+    Zensiert = stringr::str_detect(Ergebnis_clean, "<"),
+    Ergebnis_num = as.numeric(stringr::str_extract(Ergebnis_clean, "[-+]?[0-9]*\\.?[0-9]+"))
+  )
+
+# Summary statistics
+summary_by_pm <- df %>%
+  group_by(Pruefmerkmal) %>%
+  summarise(
+    anzahl = n(),
+    anzahl_nicht_na = sum(!is.na(Ergebnis_num)),
+    minimum = min(Ergebnis_num, na.rm = TRUE),
+    maximum = max(Ergebnis_num, na.rm = TRUE),
+    mittelwert = mean(Ergebnis_num, na.rm = TRUE),
+    .groups = "drop"
+  )
+readr::write_csv(summary_by_pm, file.path(output_dir, "eda_erg_summary_by_pruefmerkmal.csv"))
+
+# Visualization: Bar chart of Pruefmerkmal vs Ergebnis
+# Since units differ (Bq/l vs s), we use facets with free scales
+plot_df <- df %>%
+  mutate(
+    Label = paste(Ergebnis, Einheit)
+  )
+
+g <- ggplot(plot_df, aes(x = Pruefmerkmal, y = Ergebnis_num, fill = Pruefmerkmal)) +
+  geom_col(show.legend = FALSE, width = 0.6, color = "black") +
+  geom_text(aes(label = Label), vjust = -0.5, fontface = "bold") +
+  facet_wrap(~Pruefmerkmal, scales = "free") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
+  scale_fill_brewer(palette = "Set1") +
+  labs(
+    title = "Measured Parameters for WW Großensee (2017-11-28)",
+    subtitle = "Comparison of Radon-222 activity and Measurement Time",
+    x = "Parameter (Prüfmerkmal)",
+    y = "Result (Ergebnis)",
+    caption = "Data source: dataset.csv"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    strip.text = element_text(size = 12, face = "bold"),
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    panel.grid.major.x = element_blank()
+  )
+
+# Save the plot
+outfile <- file.path(output_dir, "0_pruefmerkmal_gegen_ergebnis.png")
+ggsave(outfile, plot = g, width = 10, height = 6, dpi = 320, device = "png")
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What was the activity concentration of Radon-222 in the drinking water sample?' visualization="Table showing 'Pruefmerkmal', 'Ergebnis', and 'Einheit' filtered for 'Radon-222 Rn-222'." rationale="The primary purpose of this dataset is radiological monitoring. Visualizing the 'Ergebnis' and 'Einheit' for the 'Pruefmerkmal' 'Radon-222 Rn-222' allows the user to immediately see if the water meets safety standards. In this case, it highlights that the result was below the detection limit (<0,82 Bq/l)."
+
+-> Code:
+# Set encoding options to handle potential UTF-8 issues in the environment
+options(encoding = "UTF-8")
+
+# Load necessary libraries
+library(readr)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(gridExtra)
+library(grid)
+
+# Define file paths
+read_path <- './src/resources/data/study/136951/dataset.csv'
+out_dir <- './src/resources/output/136951'
+
+# Create output directory if it doesn't exist
+if (!dir.exists(out_dir)) {
+  dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+}
+
+# Read the dataset with explicit UTF-8 encoding
+# Using check_problems = FALSE to avoid stopping on minor encoding mismatches
+df <- read_csv(read_path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE)
+
+# Filter for Radon-222
+# We use str_detect or exact match. The goal specifies 'Radon-222 Rn-222'
+radon_data <- df %>%
+  filter(Pruefmerkmal == "Radon-222 Rn-222") %>%
+  select(Pruefmerkmal, Ergebnis, Einheit)
+
+# Handle potential NA or empty strings in the result
+radon_data <- radon_data %>%
+  mutate(
+    Ergebnis = ifelse(is.na(Ergebnis) | trimws(as.character(Ergebnis)) == "", "k.A.", as.character(Ergebnis)),
+    Einheit = ifelse(is.na(Einheit), "", as.character(Einheit))
+  )
+
+# Rename columns for display
+radon_disp <- radon_data %>%
+  rename(
+    "Prüfmerkmal" = Pruefmerkmal,
+    "Ergebnis" = Ergebnis,
+    "Einheit" = Einheit
+  )
+
+# Extract metadata for the title/subtitle safely
+get_meta <- function(col_name) {
+  val <- df %>% filter(!is.na(!!sym(col_name))) %>% pull(!!sym(col_name))
+  if (length(val) > 0) as.character(val[1]) else "k.A."
+}
+
+ort <- get_meta("Entnahmestelle")
+datum <- get_meta("Probenahme_Beginn_Datum")
+methode <- get_meta("Methode")
+hp <- get_meta("Hauptprobenummer")
+
+# Define table theme
+tbl_theme <- ttheme_minimal(
+  core = list(fg_params = list(fontsize = 12), bg_params = list(fill = "white", col = "lightgrey")),
+  colhead = list(fg_params = list(fontsize = 13, fontface = "bold", col = "white"), 
+                 bg_params = list(fill = "#2C3E50", col = "white"))
+)
+
+# Create the table grob
+tbl_grob <- tableGrob(radon_disp, rows = NULL, theme = tbl_theme)
+
+# Create titles and captions
+title_text <- "Aktivitätskonzentration von Radon-222 (Rn-222)"
+subtitle_text <- paste0("Entnahmestelle: ", ort, " | Datum: ", datum)
+caption_text <- paste0("Methode: ", methode, " | Hauptprobenummer: ", hp)
+
+# Combine into a final plot
+final_plot <- arrangeGrob(
+  tbl_grob,
+  top = textGrob(paste0(title_text, "\n", subtitle_text), 
+                 gp = gpar(fontsize = 14, fontface = "bold"), 
+                 just = "center", y = 0.6),
+  bottom = textGrob(caption_text, 
+                    gp = gpar(fontsize = 10, fontface = "italic", col = "grey30"), 
+                    just = "center", y = 1.5),
+  padding = unit(2, "line")
+)
+
+# Save the output
+out_file <- file.path(out_dir, "1_tabelle_radon222.png")
+ggsave(filename = out_file, plot = final_plot, width = 8, height = 4, dpi = 300, bg = "white")
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What was the measurement duration used for the Radon-LSC method?' visualization="Value indicator or summary card showing 'Ergebnis' where 'Pruefmerkmal' is 'Messzeit'." rationale="Measurement time ('Messzeit') is a critical metadata field for laboratory quality control in Liquid Scintillation Counting. Showing the 'Ergebnis' for the 'Pruefmerkmal' 'Messzeit' (6000 seconds) confirms the scientific rigor of the analysis and ensures the detection limit is statistically sound."
+
+-> Code:
+# Load necessary libraries
+packages <- c("readr", "dplyr", "ggplot2", "stringr", "tidyr", "scales")
+new_packages <- packages[!(packages %in% installed.packages()[, "Package"])]
+if (length(new_packages)) install.packages(new_packages, repos = "https://cloud.r-project.org")
+invisible(lapply(packages, library, character.only = TRUE))
+
+# Set encoding
+options(encoding = "UTF-8")
+
+# Handle file paths for cross-platform compatibility
+path1 <- "./src/resources/data/study/136951/dataset.csv"
+path2 <- "./src/resources/data/study/136951/dataset.csv" # Standardized to forward slashes
+input_path <- if (file.exists(path1)) path1 else path2
+
+# Read dataset
+df <- readr::read_csv(input_path, locale = readr::locale(encoding = "UTF-8"), show_col_types = FALSE)
+
+# Clean character columns
+char_cols <- names(df)[vapply(df, is.character, logical(1))]
+if (length(char_cols) > 0) {
+  df <- df %>% mutate(across(all_of(char_cols), ~ stringr::str_squish(as.character(.))))
+}
+
+# Check for required column
+if (!"Ergebnis" %in% names(df)) stop("Spalte 'Ergebnis' fehlt im Datensatz.")
+
+# Fix the regex error: Use double backslash for escaping the hyphen in character classes
+# or place the hyphen at the start/end of the class.
+df <- df %>% mutate(
+  Ergebnis_raw = Ergebnis,
+  Ergebnis_num = suppressWarnings(as.numeric(stringr::str_replace_all(stringr::str_replace_all(Ergebnis, ",", "."), "[^0-9.\\-]", ""))),
+  Unter_Nachweisgrenze = stringr::str_detect(Ergebnis_raw, "^\\s*<")
+)
+
+# Filter for Messzeit
+mess_row <- df %>% filter(tolower(Pruefmerkmal) == "messzeit") %>% slice(1)
+if (nrow(mess_row) == 0) stop("Kein Eintrag mit Pruefmerkmal 'Messzeit' gefunden.")
+
+# Extract numeric value for display
+mess_value_raw <- mess_row$Ergebnis[1]
+mess_value_num <- suppressWarnings(as.numeric(stringr::str_replace_all(stringr::str_replace_all(mess_value_raw, ",", "."), "[^0-9.\\-]", "")))
+
+# Metadata for subtitle
+mess_unit <- if ("Einheit" %in% names(mess_row)) as.character(mess_row$Einheit[1]) else "s"
+location <- if ("Entnahmestelle" %in% names(df)) unique(na.omit(df$Entnahmestelle))[1] else NA_character_
+date_val <- if ("Probenahme_Beginn_Datum" %in% names(df)) unique(na.omit(df$Probenahme_Beginn_Datum))[1] else NA_character_
+method <- if ("Methode" %in% names(df)) unique(na.omit(df$Methode))[1] else "Radon-LSC"
+
+# Format the display label
+value_label <- if(!is.na(mess_value_num)) {
+  paste0(scales::number(mess_value_num, big.mark = ".", decimal.mark = ","), " ", mess_unit)
+} else {
+  paste0(mess_value_raw, " ", mess_unit)
+}
+
+# Construct subtitle
+subtitle_parts <- c()
+if (!is.na(location) && nzchar(location)) subtitle_parts <- c(subtitle_parts, paste0("Entnahmestelle: ", location))
+if (!is.na(date_val) && nzchar(date_val)) subtitle_parts <- c(subtitle_parts, paste0("Probenahme: ", date_val))
+if (!is.na(method) && nzchar(method)) subtitle_parts <- c(subtitle_parts, paste0("Methode: ", method))
+subtitle_txt <- paste(subtitle_parts, collapse = " • ")
+
+# Create the visualization (Value Indicator Card)
+p <- ggplot() +
+  annotate("rect", xmin = 0, xmax = 1, ymin = 0, ymax = 1, fill = "#F8F9FA", color = NA) +
+  annotate("rect", xmin = 0.1, xmax = 0.9, ymin = 0.2, ymax = 0.8, fill = "white", color = "#DEE2E6", linewidth = 0.5, r = unit(0.1, "snpc")) +
+  annotate("text", x = 0.5, y = 0.58, label = value_label, size = 14, fontface = "bold", color = "#2C3E50") +
+  annotate("text", x = 0.5, y = 0.38, label = "Messzeit (Dauer)", size = 6, color = "#7F8C8D") +
+  coord_cartesian(xlim = c(0, 1), ylim = c(0, 1), expand = FALSE) +
+  labs(
+    title = "Messzeit der Radon-LSC-Messung",
+    subtitle = subtitle_txt,
+    caption = "Quelle: Laborbericht Trinkwasser-Analyse"
+  ) +
+  theme_void() +
+  theme(
+    plot.title = element_text(face = "bold", size = 20, color = "#2C3E50", hjust = 0.5, margin = margin(t = 20, b = 10)),
+    plot.subtitle = element_text(size = 11, color = "#34495E", hjust = 0.5, margin = margin(b = 20)),
+    plot.caption = element_text(size = 9, color = "#95A5A6", hjust = 0.95, margin = margin(b = 10)),
+    plot.background = element_rect(fill = "#F8F9FA", color = NA)
+  )
+
+# Save the output
+out_dir <- "./src/resources/output/136951"
+if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
+out_path <- file.path(out_dir, "2_messzeit_indicator.png")
+
+ggsave(filename = out_path, plot = p, width = 8, height = 5, dpi = 300, bg = "white")
+
+
+-> SEVQ:
+
+

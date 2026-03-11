@@ -1,0 +1,545 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\52874\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 14:07:50
+Total Duration: 938.38 seconds
+Total Token Usage: 110068 tokens
+Total Costs: $0.4391
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0396 seconds
+
+Method: analyse_dataset
+  Duration: 0.0225 seconds
+
+Method: analyse_metadata
+  Duration: 0.0165 seconds
+
+Method: llm_generate_summary
+  Duration: 164.1283 seconds
+
+Method: llm_generate_goals
+  Duration: 3.1883 seconds
+
+Method: llm_generate_python_code
+  Duration: 272.2837 seconds
+
+Method: test_generated_code
+  Duration: 3.0150 seconds
+
+Method: llm_regenerate_code
+  Duration: 26.2663 seconds
+
+Method: test_generated_code
+  Duration: 3.8508 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 465.5668 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 8901 tokens
+  Costs total: $0.0061
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1399 tokens
+  Costs total: $0.0016
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7510 tokens
+  Costs total: $0.0540
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7246 tokens
+  Costs total: $0.0514
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7121 tokens
+  Costs total: $0.0501
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 963 tokens
+  Costs total: $0.0025
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 943 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 942 tokens
+  Costs total: $0.0024
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3344 tokens
+  Costs total: $0.0043
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4578 tokens
+  Costs total: $0.0064
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3975 tokens
+  Costs total: $0.0058
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5930 tokens
+  Costs total: $0.0430
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2320 tokens
+  Costs total: $0.0092
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2468 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4414 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4246 tokens
+  Costs total: $0.0260
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6714 tokens
+  Costs total: $0.0466
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2742 tokens
+  Costs total: $0.0098
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3033 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4602 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4737 tokens
+  Costs total: $0.0256
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6013 tokens
+  Costs total: $0.0405
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2627 tokens
+  Costs total: $0.0094
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2941 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4796 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4807 tokens
+  Costs total: $0.0283
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How have student enrollment and teaching capacity evolved over time in Stadtlauringen?' visualization="Line chart showing 'value' over 'time', color-coded by 'value_variable_label' (specifically for 'SCHUEL' and 'UWOSTD')." rationale="By plotting 'value' against 'time' and filtering for 'SCHUEL' (Students) and 'UWOSTD' (Weekly Teaching Hours) from the 'value_variable_label' column, we can visualize the reported trend of demographic growth and increasing educational requirements. A line chart is the best practice for showing these trends over the 11-year period."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
+import re
+
+# Set visual style
+sns.set_theme(style="whitegrid", context="talk")
+
+input_path = r'./src/resources/data/study/52874/dataset.csv'
+output_plot_path = r'./src/resources/output/52874/0_schueler_und_uwostd_trend.png'
+output_dir = os.path.dirname(output_plot_path)
+os.makedirs(output_dir, exist_ok=True)
+
+# The error 'utf-8' codec can't decode byte 0xe4 (ä) suggests the file is likely encoded in ISO-8859-1 (latin1) or cp1252
+# common in German datasets. We try latin1 which handles German umlauts.
+try:
+    df = pd.read_csv(input_path, sep=';', encoding='latin1')
+except Exception as e:
+    # Fallback to cp1252 if latin1 fails
+    df = pd.read_csv(input_path, sep=';', encoding='cp1252')
+
+# Clean whitespace and handle numeric conversion
+for col in df.columns:
+    if df[col].dtype == object:
+        df[col] = df[col].str.strip()
+        df[col] = df[col].replace('', np.nan)
+
+if 'value' in df.columns:
+    df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+# Filter for the specific variables requested: SCHUEL (Students) and UWOSTD (Teaching Hours)
+# We check both code and label columns to be safe
+subset = df.copy()
+if 'value_variable_code' in subset.columns:
+    subset = subset[subset['value_variable_code'].isin(['SCHUEL', 'UWOSTD'])]
+elif 'value_variable_label' in subset.columns:
+    # If codes aren't available, we look for keywords in labels
+    subset = subset[subset['value_variable_label'].str.contains('Schüler|Unterrichtswochenstunden', case=False, na=False)]
+
+# Process 'time' to extract a numeric year for plotting
+if 'time' in subset.columns:
+    def extract_year(x):
+        if pd.isna(x): return np.nan
+        m = re.search(r'(\d{4})', str(x))
+        return int(m.group(1)) if m else np.nan
+    subset['Jahr'] = subset['time'].apply(extract_year)
+else:
+    subset['Jahr'] = np.nan
+
+# Drop rows missing critical plotting data
+subset = subset.dropna(subset=['Jahr', 'value'])
+subset['Jahr'] = subset['Jahr'].astype(int)
+subset = subset.sort_values('Jahr')
+
+# Determine the label column for the legend
+hue_col = 'value_variable_label' if 'value_variable_label' in subset.columns else 'value_variable_code'
+
+# Create the plot
+plt.figure(figsize=(12, 7), dpi=150)
+ax = sns.lineplot(
+    data=subset, 
+    x='Jahr', 
+    y='value', 
+    hue=hue_col, 
+    marker='o', 
+    linewidth=2.5, 
+    palette='viridis'
+)
+
+# Formatting X-axis for school years (e.g., 2010/11)
+years = sorted(subset['Jahr'].unique().tolist())
+if years:
+    ax.set_xticks(years)
+    ax.set_xticklabels([f"{y}/{str(y+1)[-2:]}" for y in years], rotation=45)
+
+ax.set_xlabel('Schuljahr')
+ax.set_ylabel('Anzahl / Stunden')
+ax.set_title('Entwicklung von Schülerzahlen und Unterrichtswochenstunden\nin Stadtlauringen', pad=20)
+ax.legend(title='Messgröße', bbox_to_anchor=(1.05, 1), loc='upper left')
+
+plt.tight_layout()
+plt.savefig(output_plot_path, bbox_inches='tight')
+plt.close()
+
+# Save some basic metadata for verification
+subset[[hue_col, 'Jahr', 'value']].to_csv(os.path.join(output_dir, 'plot_data_summary.csv'), index=False)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the relationship between the number of students and the number of classes over the years?' visualization="Grouped bar chart or multi-line chart comparing 'value' for 'SCHUEL' and 'KLASSE' across the 'time' dimension." rationale="Comparing 'SCHUEL' (Students) and 'KLASSE' (Classes) from the 'value_variable_label' column using a dual-axis or grouped bar chart allows users to see if class sizes are remaining stable or if the increase in students is leading to more classes. This helps in understanding the operational efficiency of the schools."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set visual style
+sns.set_theme(style="whitegrid", context="talk")
+
+# File paths
+input_path = r"./src/resources/data/study/52874/dataset.csv"
+output_dir = r"./src/resources/output/52874"
+os.makedirs(output_dir, exist_ok=True)
+plot_name = "1_schueler_klassen_beziehung_zeit.png"
+output_path = os.path.join(output_dir, plot_name)
+
+# Fix for UnicodeDecodeError: Try 'latin-1' or 'iso-8859-1' which are common for German datasets
+try:
+    df = pd.read_csv(input_path, sep=';', encoding='utf-8')
+except UnicodeDecodeError:
+    try:
+        df = pd.read_csv(input_path, sep=';', encoding='latin-1')
+    except Exception:
+        df = pd.read_csv(input_path, sep=';', encoding='iso-8859-1')
+
+# Basic cleaning
+for c in df.columns:
+    if df[c].dtype == object:
+        df[c] = df[c].astype(str).str.strip()
+
+# Calculate missing ratio for the note
+missing_ratio_total = float(df.isna().sum().sum()) / float(df.size) if df.size > 0 else 0.0
+
+# Convert value to numeric
+if 'value' in df.columns:
+    df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+# Extract year from 'time' (e.g., "1990/91" -> 1990)
+if 'time' in df.columns:
+    df['jahr'] = pd.to_numeric(df['time'].str.extract(r'^(\d{4})', expand=False), errors='coerce')
+else:
+    df['jahr'] = np.nan
+
+# Filter for Students (SCHUEL) and Classes (KLASSE)
+# Using value_variable_code as it is more robust for filtering
+mask_vars = df['value_variable_code'].isin(['SCHUEL', 'KLASSE'])
+subset = df.loc[mask_vars, ['jahr', 'value_variable_code', 'value']].dropna(subset=['jahr', 'value'])
+
+# Aggregate in case of duplicates
+subset = subset.groupby(['jahr', 'value_variable_code'], as_index=False)['value'].sum()
+
+# Pivot for plotting
+pivot = subset.pivot(index='jahr', columns='value_variable_code', values='value').sort_index()
+
+# Check if we have data to plot
+if 'SCHUEL' not in pivot.columns or 'KLASSE' not in pivot.columns or pivot.dropna(subset=['SCHUEL', 'KLASSE']).empty:
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.text(0.5, 0.5, 'Nicht genügend Daten für SCHUEL und KLASSE vorhanden', ha='center', va='center', transform=ax.transAxes)
+    ax.axis('off')
+    fig.savefig(output_path, dpi=150, bbox_inches='tight')
+else:
+    data_aligned = pivot.dropna(subset=['SCHUEL', 'KLASSE'])
+    
+    # Calculate metrics for the title/subtitle
+    r = float(data_aligned['SCHUEL'].corr(data_aligned['KLASSE'])) if data_aligned.shape[0] > 1 else np.nan
+    pivot['KLASSENGROESSE'] = np.where(pivot['KLASSE'] > 0, pivot['SCHUEL'] / pivot['KLASSE'], np.nan)
+    mean_class_size = float(np.nanmean(pivot['KLASSENGROESSE'])) if 'KLASSENGROESSE' in pivot.columns else np.nan
+    
+    # Plotting
+    fig, ax1 = plt.subplots(figsize=(12, 7))
+    color_students = '#1f77b4' # Blue
+    color_classes = '#d62728'  # Red
+
+    x_vals = pivot.index.values
+    
+    # Primary axis: Students
+    line1, = ax1.plot(x_vals, pivot['SCHUEL'], color=color_students, marker='o', linewidth=3, label='Schüler (links)')
+    ax1.set_ylabel('Anzahl Schüler', color=color_students, fontweight='bold')
+    ax1.tick_params(axis='y', labelcolor=color_students)
+
+    # Secondary axis: Classes
+    ax2 = ax1.twinx()
+    line2, = ax2.plot(x_vals, pivot['KLASSE'], color=color_classes, marker='s', linestyle='--', linewidth=3, label='Klassen (rechts)')
+    ax2.set_ylabel('Anzahl Klassen', color=color_classes, fontweight='bold')
+    ax2.tick_params(axis='y', labelcolor=color_classes)
+
+    ax1.set_xlabel('Schuljahr (Beginn)')
+    
+    # Formatting X-axis
+    if len(x_vals) > 0:
+        ax1.set_xticks(x_vals)
+        ax1.set_xticklabels([str(int(x)) for x in x_vals], rotation=45)
+
+    # Title and Subtitle
+    min_year = int(np.nanmin(x_vals))
+    max_year = int(np.nanmax(x_vals))
+    title_main = f'Entwicklung der Schüler- und Klassenzahlen ({min_year}–{max_year})'
+    subtitle = f"Korrelation: {r:.2f} | Ø Klassengröße: {mean_class_size:.1f} Schüler"
+    
+    plt.title(f"{title_main}\n", fontsize=16, fontweight='bold', pad=20)
+    fig.text(0.5, 0.92, subtitle, ha='center', fontsize=12, color='#333333')
+
+    # Legend
+    lines = [line1, line2]
+    labels = [l.get_label() for l in lines]
+    ax1.legend(lines, labels, loc='upper left', frameon=True)
+
+    ax1.grid(True, which='major', axis='both', linestyle=':', alpha=0.6)
+
+    # Footer note
+    missing_note = f'Datenqualität: {missing_ratio_total:.1%} fehlende Werte im Gesamtdatensatz.'
+    fig.text(0.02, 0.01, missing_note, ha='left', va='bottom', fontsize=9, color='gray')
+
+    plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+    fig.savefig(output_path, dpi=200, bbox_inches='tight')
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='How has the teacher-to-student ratio or teaching intensity changed?' visualization="Multi-line chart showing 'value' for 'HBLEHR', 'UWOSTD', and 'SCHUEL' over 'time'." rationale="By comparing 'HBLEHR' (Full-time/part-time teachers) and 'UWOSTD' (Weekly teaching hours) against 'SCHUEL' (Students) from the 'value_variable_label' column, we can identify if the staffing levels are keeping pace with student growth. This provides insight into the workload and resource allocation within the municipality's schools."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+# Set visual style
+sns.set_theme(style="whitegrid")
+
+# Path to the dataset
+path = r'./src/resources/data/study/52874/dataset.csv'
+
+# The error 'UnicodeDecodeError' with byte 0xe4 (ä) suggests 'latin-1' or 'iso-8859-1' encoding
+# instead of 'utf-8'. We will try 'iso-8859-1' which is common for German datasets.
+try:
+    df = pd.read_csv(path, sep=';', encoding='utf-8')
+except UnicodeDecodeError:
+    df = pd.read_csv(path, sep=';', encoding='iso-8859-1')
+
+# Clean data: replace empty strings with NaN
+for c in df.columns:
+    if df[c].dtype == 'object':
+        df[c] = df[c].replace({"": np.nan})
+
+# Convert value to numeric
+df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+# Extract year from 'time' column (assuming format like 2022 or 2022/23)
+df['Jahr'] = pd.to_numeric(df['time'].astype(str).str.extract(r'^(\d{4})')[0], errors='coerce')
+
+# Filter for specific municipality (Stadtlauringen 9678181) and school type
+# Based on previous code logic, we filter for the relevant variables
+mask_gem = df['1_variable_attribute_code'].astype(str) == '9678181'
+mask_cat = df['2_variable_attribute_label'].astype(str).str.contains('Grund- sowie Mittel-/Hauptschulen', na=False)
+mask_vars = df['value_variable_code'].isin(['HBLEHR', 'UWOSTD', 'SCHUEL'])
+
+dfs = df.loc[mask_gem & mask_cat & mask_vars, ['Jahr', 'value_variable_code', 'value']].dropna(subset=['Jahr', 'value'])
+
+# Pivot data for plotting
+pivot = dfs.pivot_table(index='Jahr', columns='value_variable_code', values='value', aggfunc='first')
+pivot = pivot.sort_index()
+
+# Ensure we have the required columns
+required_cols = ['HBLEHR', 'UWOSTD', 'SCHUEL']
+pivot = pivot.dropna(subset=required_cols, how='any')
+
+if not pivot.empty:
+    # Calculate ratios for the subtitle
+    ratio_students_per_teacher = pivot['SCHUEL'] / pivot['HBLEHR']
+    hours_per_student = pivot['UWOSTD'] / pivot['SCHUEL']
+
+    r_first, r_last = ratio_students_per_teacher.iloc[0], ratio_students_per_teacher.iloc[-1]
+    r_pct = (r_last - r_first) / r_first if r_first != 0 else 0
+    h_first, h_last = hours_per_student.iloc[0], hours_per_student.iloc[-1]
+    h_pct = (h_last - h_first) / h_first if h_first != 0 else 0
+
+    # Plotting
+    fig, ax1 = plt.subplots(figsize=(11, 6), dpi=150)
+    years = pivot.index.astype(int)
+
+    c_students = '#1f77b4'
+    c_teachers = '#2ca02c'
+    c_hours = '#d62728'
+
+    ax1.plot(years, pivot['SCHUEL'], color=c_students, marker='o', linewidth=2, label='Schüler (Anzahl)')
+    ax1.plot(years, pivot['HBLEHR'], color=c_teachers, marker='s', linewidth=2, label='Lehrkräfte (Anzahl)')
+    ax1.set_xlabel('Schuljahr (Beginn)')
+    ax1.set_ylabel('Anzahl (Schüler, Lehrkräfte)')
+
+    ax2 = ax1.twinx()
+    ax2.plot(years, pivot['UWOSTD'], color=c_hours, marker='D', linewidth=2, label='Unterrichtswochenstunden (Anzahl)')
+    ax2.set_ylabel('Unterrichtswochenstunden (Anzahl)', color=c_hours)
+    ax2.tick_params(axis='y', labelcolor=c_hours)
+
+    # Combine legends
+    h1, l1 = ax1.get_legend_handles_labels()
+    h2, l2 = ax2.get_legend_handles_labels()
+    ax1.legend(h1 + h2, l1 + l2, loc='upper left', frameon=True)
+
+    ax1.set_xticks(years)
+    ax1.set_xticklabels([str(y) for y in years])
+
+    subtitle = f'Schüler je Lehrkraft: {r_first:.1f} → {r_last:.1f} ({r_pct:+.0%}); Wochenstunden je Schüler: {h_first:.2f} → {h_last:.2f} ({h_pct:+.0%})'
+    ax1.set_title('Entwicklung von Lehrkräften, Unterrichtsstunden und Schülern in Stadtlauringen', pad=20)
+    fig.suptitle(subtitle, y=0.92, fontsize=10, color='#444444')
+
+    fig.text(0.01, 0.01, 'Quelle: Statistik der allgemeinbildenden Schulen • Gemeinde: Stadtlauringen (GEM 9678181)', fontsize=8, color='#666666')
+    fig.tight_layout(rect=[0, 0.03, 1, 0.95])
+
+    # Save output
+    out_dir = r'./src/resources/output/52874'
+    if not os.path.exists(out_dir):
+        os.makedirs(out_dir)
+    out_path = os.path.join(out_dir, '2_mehrlinien_hblehr_uwostd_schuel_zeit.png')
+    plt.savefig(out_path, dpi=150, bbox_inches='tight')
+    plt.close(fig)
+else:
+    print("No data available for the selected filters.")
+
+
+-> SEVQ:
+
+

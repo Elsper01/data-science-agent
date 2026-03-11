@@ -1,0 +1,14 @@
+,FID,id,kenn,name,geom,start_measure,end_measure,value,unit,validated,nuclide,duration,value_num
+FID,,,,,,,,,,,,,
+id,,,,,,,,,,,,,
+kenn,,,,,,,,,,,,,
+name,,,,,,,,,,,,,
+geom,,,,,,,,,,,,,
+start_measure,,,,,,,,,,,,,
+end_measure,,,,,,,,,,,,,
+value,,,,,,,,1.0,,,,,1.0
+unit,,,,,,,,,,,,,
+validated,,,,,,,,,,,,,
+nuclide,,,,,,,,,,,,,
+duration,,,,,,,,,,,,,
+value_num,,,,,,,,1.0,,,,,1.0

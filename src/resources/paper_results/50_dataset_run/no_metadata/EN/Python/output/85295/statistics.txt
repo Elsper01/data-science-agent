@@ -1,0 +1,446 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\85295\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 14:08:22
+Total Duration: 970.40 seconds
+Total Token Usage: 92849 tokens
+Total Costs: $0.3958
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0254 seconds
+
+Method: analyse_dataset
+  Duration: 0.0157 seconds
+
+Method: analyse_metadata
+  Duration: 0.0172 seconds
+
+Method: llm_generate_summary
+  Duration: 191.0369 seconds
+
+Method: llm_generate_goals
+  Duration: 3.3343 seconds
+
+Method: llm_generate_python_code
+  Duration: 213.4276 seconds
+
+Method: test_generated_code
+  Duration: 4.0067 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 558.5371 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7134 tokens
+  Costs total: $0.0054
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1403 tokens
+  Costs total: $0.0014
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6668 tokens
+  Costs total: $0.0455
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6563 tokens
+  Costs total: $0.0445
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6318 tokens
+  Costs total: $0.0420
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5884 tokens
+  Costs total: $0.0407
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2497 tokens
+  Costs total: $0.0094
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2650 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4485 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4347 tokens
+  Costs total: $0.0235
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6234 tokens
+  Costs total: $0.0464
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2150 tokens
+  Costs total: $0.0078
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2463 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4758 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3955 tokens
+  Costs total: $0.0217
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7464 tokens
+  Costs total: $0.0563
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2467 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2931 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6998 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4675 tokens
+  Costs total: $0.0275
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How are the cultural monuments distributed across different municipalities in Stormarn?' visualization="A horizontal bar chart showing the count of 'Objektnummer' grouped by 'Gemeinde', sorted in descending order." rationale="By counting the occurrences of 'Objektnummer' for each 'Gemeinde', users can identify which towns have the highest density of heritage sites. This is essential for urban planners and tourists to understand the geographical focus of the dataset."
+
+-> Code:
+import os
+import sys
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+try:
+    sns.set_theme(style="whitegrid", context="talk")
+    input_path = os.path.normpath('./src/resources/data/study/85295/dataset.csv')
+    output_dir = os.path.normpath('./src/resources/output/85295')
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+    if 'Objektnummer' in df.columns:
+        df['Objektnummer'] = pd.to_numeric(df['Objektnummer'], errors='coerce')
+    if 'Gemeinde' in df.columns:
+        df['Gemeinde'] = df['Gemeinde'].astype(str)
+        df.loc[df['Gemeinde'].isin([None, 'None', 'nan', 'NaN', 'NaT']), 'Gemeinde'] = np.nan
+        df['Gemeinde'] = df['Gemeinde'].str.strip()
+        df['Gemeinde'] = df['Gemeinde'].fillna('Unbekannt')
+    missing_share = df.isna().mean().sort_values(ascending=False)
+    missing_share.to_frame('anteil_missing').to_csv(os.path.join(output_dir, 'eda_anteile_missing.csv'), encoding='utf-8-sig')
+    num_df = df.select_dtypes(include=[np.number])
+    if not num_df.empty:
+        desc = num_df.describe(include='all').T
+        desc.to_csv(os.path.join(output_dir, 'eda_numerische_uebersicht.csv'), encoding='utf-8-sig')
+        corr = num_df.corr(numeric_only=True)
+        corr.to_csv(os.path.join(output_dir, 'eda_korrelationen.csv'), encoding='utf-8-sig')
+    if 'Kulturdenkmaltyp' in df.columns:
+        typ_counts = df['Kulturdenkmaltyp'].astype(str)
+        typ_counts.loc[typ_counts.isin([None, 'None', 'nan', 'NaN', 'NaT'])] = np.nan
+        typ_counts = typ_counts.fillna('Unbekannt')
+        vc = typ_counts.value_counts(dropna=False)
+        vc_rel = (vc / vc.sum()).rename('anteil')
+        pd.concat([vc.rename('anzahl'), vc_rel], axis=1).to_csv(os.path.join(output_dir, 'eda_kulturdenkmaltyp_verteilung.csv'), encoding='utf-8-sig')
+    if 'Gemeinde' not in df.columns or 'Objektnummer' not in df.columns:
+        raise ValueError('Erforderliche Spalten fehlen: Gemeinde und/oder Objektnummer')
+    valid = df[df['Objektnummer'].notna()].copy()
+    valid['Gemeinde'] = valid['Gemeinde'].fillna('Unbekannt')
+    group_counts = valid.groupby('Gemeinde')['Objektnummer'].nunique().sort_values(ascending=False)
+    counts = group_counts.copy()
+    n = len(counts)
+    if n == 0:
+        raise ValueError('Keine Daten für die Visualisierung verfügbar')
+    height = max(8, min(0.45 * n, 25))
+    fig, ax = plt.subplots(figsize=(14, height))
+    values = counts.values.astype(float)
+    vmin, vmax = float(values.min()), float(values.max())
+    if vmax - vmin == 0:
+        normed = np.ones_like(values) * 0.6
+    else:
+        normed = (values - vmin) / (vmax - vmin)
+    cmap = sns.color_palette("viridis", as_cmap=True)
+    colors = [cmap(x) for x in normed]
+    ax.barh(counts.index, counts.values, color=colors, edgecolor='none')
+    ax.set_xlabel('Anzahl der Kulturdenkmale (Objektnummern)')
+    ax.set_ylabel('Gemeinde')
+    ax.set_title('Verteilung der Kulturdenkmale nach Gemeinden im Kreis Stormarn')
+    for i, (y, v) in enumerate(zip(counts.index, counts.values)):
+        ax.text(v + max(values) * 0.01, i, f'{int(v)}', va='center', ha='left', fontsize=11)
+    ax.invert_yaxis()
+    ax.xaxis.grid(True, which='major', linestyle='-', alpha=0.2)
+    ax.yaxis.grid(False)
+    for spine in ['top', 'right', 'left']:
+        ax.spines[spine].set_visible(False)
+    max_label_len = int(max(len(str(s)) for s in counts.index)) if n > 0 else 10
+    left_margin = max(0.18, min(0.04 * max_label_len, 0.45))
+    plt.subplots_adjust(left=left_margin, right=0.96, top=0.9, bottom=0.06)
+    output_path = os.path.normpath('./src/resources/output/85295/0_verteilung_kulturdenkmale_nach_gemeinden.png')
+    fig.savefig(output_path, dpi=300)
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What are the most common types of cultural monuments in the district?' visualization="A bar chart showing the frequency of each category in the 'Kulturdenkmaltyp' column." rationale="Visualizing the 'Kulturdenkmaltyp' column allows users to quickly see the composition of the registry (e.g., how many are 'Bauliche Anlagen' versus other categories). This provides insight into the nature of the protected heritage in the region."
+
+-> Code:
+import os
+import re
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter, MaxNLocator
+
+try:
+    input_path = os.path.normpath('./src/resources/data/study\\85295\\dataset.csv')
+    output_dir = os.path.normpath('./src/resources/output\\85295')
+    os.makedirs(output_dir, exist_ok=True)
+
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+    df = df.replace({"": np.nan, "nan": np.nan, "NaN": np.nan, "None": np.nan, "NULL": np.nan, "null": np.nan})
+
+    missing_prop = df.isna().mean()
+    numeric_df = df.select_dtypes(include=[np.number])
+    numeric_desc = numeric_df.describe().T if not numeric_df.empty else pd.DataFrame()
+    numeric_corr = numeric_df.corr() if numeric_df.shape[1] > 1 else pd.DataFrame()
+
+    if 'Kulturdenkmaltyp' not in df.columns:
+        raise KeyError('Spalte "Kulturdenkmaltyp" wurde im Datensatz nicht gefunden.')
+
+    def clean_cat(x):
+        if pd.isna(x):
+            return np.nan
+        if isinstance(x, (str, bytes)):
+            s = str(x).strip()
+            s = re.sub(r'\s+', ' ', s)
+            if s.lower() in {"nan", "none", "null", ""}:
+                return np.nan
+            return s
+        return str(x)
+
+    cat_clean = df['Kulturdenkmaltyp'].apply(clean_cat).fillna('Unbekannt')
+
+    counts = cat_clean.value_counts(dropna=False)
+    plot_df = counts.rename('Anzahl').to_frame()
+    plot_df['Anteil_%'] = plot_df['Anzahl'] / plot_df['Anzahl'].sum() * 100
+    plot_df = plot_df.reset_index().rename(columns={'index': 'Kulturdenkmaltyp'})
+    plot_df = plot_df.sort_values('Anzahl', ascending=False).reset_index(drop=True)
+
+    sns.set_theme(style='whitegrid', context='talk')
+
+    n_cats = plot_df.shape[0]
+    height = min(max(0.6 * n_cats + 2, 6), 20)
+    fig, ax = plt.subplots(figsize=(12, height))
+
+    palette = sns.color_palette('viridis', n_colors=n_cats)
+    order = plot_df['Kulturdenkmaltyp'].tolist()
+    sns.barplot(data=plot_df, y='Kulturdenkmaltyp', x='Anzahl', order=order, palette=palette, ax=ax, orient='h')
+
+    total_n = int(plot_df['Anzahl'].sum())
+    ax.set_title(f'Häufigkeit der Kulturdenkmaltypen im Kreis Stormarn (n = {total_n})', pad=14)
+    ax.set_xlabel('Anzahl der Denkmäler')
+    ax.set_ylabel('Kulturdenkmaltyp')
+
+    max_count = plot_df['Anzahl'].max() if not plot_df.empty else 0
+    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+    ax.xaxis.set_major_formatter(FuncFormatter(lambda x, p: f'{int(x):,}'.replace(',', '.')))
+
+    offset = max(max_count * 0.01, 0.2)
+    for i, (cnt, pct) in enumerate(zip(plot_df['Anzahl'], plot_df['Anteil_%'])):
+        ax.text(cnt + offset, i, f'{int(cnt)} ({pct:.1f}%)', va='center', ha='left', fontsize=11)
+
+    ax.set_xlim(0, max_count * 1.15 if max_count > 0 else 1)
+    plt.tight_layout()
+
+    output_path = os.path.join(output_dir, '1_kulturdenkmaltypen_balkendiagramm.png')
+    plt.savefig(output_path, dpi=300)
+    plt.close()
+
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What are the primary legal and historical justifications for monument protection?' visualization="A bar chart of the top 10 most frequent values in the 'Begr_ndung' column." rationale="The 'Begr_ndung' column explains why a site is protected. Analyzing the most frequent values in this column (like 'Geschichtlich' or 'Städtebaulich') helps researchers understand the criteria used by the heritage office to grant protected status."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from pathlib import Path
+
+try:
+    input_path = Path('./src/resources/data/study\\85295\\dataset.csv')
+    output_dir = Path('./src/resources/output\\85295')
+    output_dir.mkdir(parents=True, exist_ok=True)
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+    df_columns = df.columns.tolist()
+    missing_pct = df.isna().mean().to_frame('fehlanteil').sort_values('fehlanteil', ascending=False)
+    missing_pct.to_csv(output_dir / '2_missing_values.csv', encoding='utf-8')
+    num_df = df.select_dtypes(include=[np.number])
+    if num_df.shape[1] > 0:
+        num_desc = num_df.describe(include='all').T
+        num_desc.to_csv(output_dir / '2_numeric_describe.csv', encoding='utf-8')
+    if num_df.shape[1] > 1:
+        corr = num_df.corr(numeric_only=True)
+        corr.to_csv(output_dir / '2_numeric_correlation.csv', encoding='utf-8')
+    obj_df = df.select_dtypes(include=['object', 'bool'])
+    if obj_df.shape[1] > 0:
+        obj_summary = []
+        for c in obj_df.columns:
+            s = obj_df[c]
+            s_nonnull = s.dropna()
+            val_counts = s_nonnull.astype(str).value_counts()
+            top_val = val_counts.index[0] if len(val_counts) > 0 else np.nan
+            top_cnt = int(val_counts.iloc[0]) if len(val_counts) > 0 else 0
+            obj_summary.append({
+                'spalte': c,
+                'anzahl_eintraege': int(len(s)),
+                'anzahl_na': int(s.isna().sum()),
+                'fehlanteil': float(s.isna().mean()),
+                'anzahl_eindeutige_werte': int(s_nonnull.astype(str).nunique()),
+                'haeufigster_wert': top_val,
+                'haeufigster_wert_anzahl': top_cnt
+            })
+        pd.DataFrame(obj_summary).sort_values(['fehlanteil','anzahl_eindeutige_werte'], ascending=[False, True]).to_csv(output_dir / '2_object_overview.csv', index=False, encoding='utf-8')
+    col_name = 'Begr_ndung'
+    if col_name in df_columns:
+        s = df[col_name].dropna()
+        if not s.empty:
+            tokens = []
+            for val in s.astype(str):
+                parts = [p.strip().strip(' ;:.') for p in val.split(',')]
+                for p in parts:
+                    if p and str(p).strip() and str(p).strip().lower() not in {'nan', 'none', 'na', 'n/a'}:
+                        tokens.append(p)
+            if len(tokens) > 0:
+                vc = pd.Series(tokens).value_counts()
+                top = vc.head(10)[::-1]
+                sns.set_theme(style='whitegrid', context='talk')
+                fig, ax = plt.subplots(figsize=(12, 7))
+                palette = sns.color_palette('viridis', n_colors=len(top))
+                ax.barh(top.index, top.values, color=palette)
+                for i, v in enumerate(top.values):
+                    ax.text(v + max(top.values)*0.01, i, f"{int(v)}", va='center')
+                ax.set_xlabel('Häufigkeit [Anzahl]')
+                ax.set_ylabel('Begründungskategorie')
+                ax.set_title('Top 10 der Begründungen für den Denkmalschutz im Kreis Stormarn')
+                plt.tight_layout()
+                fig.savefig(output_dir / '2_begruendung_top10.png', dpi=200)
+                plt.close(fig)
+            else:
+                sns.set_theme(style='whitegrid', context='talk')
+                fig, ax = plt.subplots(figsize=(10, 4))
+                ax.axis('off')
+                ax.text(0.5, 0.5, "Keine gültigen Einträge in 'Begr_ndung' vorhanden.", ha='center', va='center')
+                plt.tight_layout()
+                fig.savefig(output_dir / '2_begruendung_top10.png', dpi=200)
+                plt.close(fig)
+        else:
+            sns.set_theme(style='whitegrid', context='talk')
+            fig, ax = plt.subplots(figsize=(10, 4))
+            ax.axis('off')
+            ax.text(0.5, 0.5, "Spalte 'Begr_ndung' enthält nur fehlende Werte.", ha='center', va='center')
+            plt.tight_layout()
+            fig.savefig(output_dir / '2_begruendung_top10.png', dpi=200)
+            plt.close(fig)
+    else:
+        sns.set_theme(style='whitegrid', context='talk')
+        fig, ax = plt.subplots(figsize=(10, 4))
+        ax.axis('off')
+        ax.text(0.5, 0.5, "Spalte 'Begr_ndung' nicht gefunden.", ha='center', va='center')
+        plt.tight_layout()
+        fig.savefig(output_dir / '2_begruendung_top10.png', dpi=200)
+        plt.close(fig)
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+

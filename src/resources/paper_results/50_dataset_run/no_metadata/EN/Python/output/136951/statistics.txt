@@ -1,0 +1,488 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\136951\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 13:33:05
+Total Duration: 650.08 seconds
+Total Token Usage: 94434 tokens
+Total Costs: $0.3993
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0150 seconds
+
+Method: analyse_dataset
+  Duration: 0.0228 seconds
+
+Method: analyse_metadata
+  Duration: 0.0297 seconds
+
+Method: llm_generate_summary
+  Duration: 149.4611 seconds
+
+Method: llm_generate_goals
+  Duration: 3.3492 seconds
+
+Method: llm_generate_python_code
+  Duration: 127.7728 seconds
+
+Method: test_generated_code
+  Duration: 6.9598 seconds
+
+Method: llm_regenerate_code
+  Duration: 21.7987 seconds
+
+Method: test_generated_code
+  Duration: 7.1254 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 333.5456 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4282 tokens
+  Costs total: $0.0043
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1601 tokens
+  Costs total: $0.0016
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5418 tokens
+  Costs total: $0.0407
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5961 tokens
+  Costs total: $0.0461
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5555 tokens
+  Costs total: $0.0420
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 941 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 966 tokens
+  Costs total: $0.0025
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 802 tokens
+  Costs total: $0.0021
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3040 tokens
+  Costs total: $0.0041
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2639 tokens
+  Costs total: $0.0031
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4535 tokens
+  Costs total: $0.0063
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 273 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5214 tokens
+  Costs total: $0.0359
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2229 tokens
+  Costs total: $0.0083
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2398 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4651 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4258 tokens
+  Costs total: $0.0261
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5171 tokens
+  Costs total: $0.0381
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1931 tokens
+  Costs total: $0.0076
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2115 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3381 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3873 tokens
+  Costs total: $0.0249
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7170 tokens
+  Costs total: $0.0513
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2705 tokens
+  Costs total: $0.0095
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2999 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4834 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4939 tokens
+  Costs total: $0.0292
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What are the specific parameters measured for the sample at WW Großensee?' visualization='Bar chart of Pruefmerkmal counts.' rationale="This dataset uses a long-format structure where different types of information (activity and duration) are stored in the same column. A bar chart showing the count of records for each 'Pruefmerkmal' will immediately clarify to the user that the dataset contains one measurement result for 'Radon-222 Rn-222' and one record for 'Messzeit'."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# The error 'UnicodeDecodeError: 'utf-8' codec can't decode byte 0xfc' 
+# suggests the file is likely encoded in 'latin-1' or 'iso-8859-1' (common for German datasets with umlauts like 'ü').
+file_path = './src/resources/data/study/136951/dataset.csv'
+
+try:
+    df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+except UnicodeDecodeError:
+    # Fallback to latin-1 if utf-8 fails
+    df = pd.read_csv(file_path, sep=',', encoding='latin-1')
+
+# Data cleaning and parsing
+def parse_result(x):
+    if pd.isna(x):
+        return np.nan, False
+    s = str(x).strip()
+    # Handle common German decimal comma and comparison operators
+    censored = s.startswith('<') or s.startswith('≤')
+    s_clean = s.replace('<', '').replace('≤', '').replace('>', '').replace(',', '.').strip()
+    try:
+        val = float(s_clean)
+    except Exception:
+        val = np.nan
+    return val, censored
+
+if 'Ergebnis' in df.columns:
+    parsed = df['Ergebnis'].apply(parse_result)
+    df['Ergebnis_num'] = parsed.apply(lambda t: t[0])
+    df['Ergebnis_zensiert'] = parsed.apply(lambda t: t[1])
+
+# Count occurrences of each Pruefmerkmal
+if 'Pruefmerkmal' in df.columns:
+    counts = df['Pruefmerkmal'].astype(str).value_counts()
+    # Sort by index to keep order consistent
+    counts = counts.sort_index()
+else:
+    counts = pd.Series(dtype=int)
+
+# Extract metadata for title
+wasserwerk = df['Entnahmestelle'].dropna().unique()[0] if 'Entnahmestelle' in df.columns and not df['Entnahmestelle'].dropna().empty else "Großensee"
+sample_id = str(df['Hauptprobenummer'].iloc[0]) if 'Hauptprobenummer' in df.columns and len(df) > 0 else ""
+date_str = df['Probenahme_Beginn_Datum'].dropna().unique()[0] if 'Probenahme_Beginn_Datum' in df.columns and not df['Probenahme_Beginn_Datum'].dropna().empty else ""
+
+# Visualization
+sns.set_theme(style='whitegrid', font_scale=1.1)
+plt.figure(figsize=(10, 6))
+
+if not counts.empty:
+    ax = sns.barplot(x=counts.index, y=counts.values, palette='viridis')
+    
+    # Add labels on top of bars
+    for i, v in enumerate(counts.values):
+        ax.text(i, v + (max(counts.values) * 0.02), str(int(v)), ha='center', va='bottom', fontweight='bold')
+
+    ax.set_xlabel('Prüfmerkmal (Parameter)')
+    ax.set_ylabel('Anzahl der Datensätze')
+    
+    # Construct Title
+    title = f'Gemessene Parameter für WW {wasserwerk}'
+    if sample_id or date_str:
+        subtitle = f"Probe: {sample_id} | Datum: {date_str}".strip(" | ")
+        plt.title(f"{title}\n({subtitle})", fontsize=14)
+    else:
+        plt.title(title, fontsize=14)
+
+    # Adjust Y-axis to give space for labels
+    plt.ylim(0, max(counts.values) * 1.2)
+    plt.xticks(rotation=15, ha='right')
+else:
+    plt.text(0.5, 0.5, "Keine Daten für Prüfmerkmale gefunden", ha='center')
+
+plt.tight_layout()
+
+# Save output
+output_path = './src/resources/output/136951/0_pruefmerkmal_counts.png'
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
+plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What was the measured result and unit for Radon-222 in the drinking water?' visualization='Table showing Pruefmerkmal, Ergebnis, and Einheit.' rationale="The primary goal of this radiological monitoring is to check the concentration of Radon-222. By creating a table or visualization that pairs 'Pruefmerkmal' with 'Ergebnis' and 'Einheit', the user can see the specific finding ('<0,82') and its unit ('Bq/l'), confirming the water is below the detection limit."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+
+# The error was a UnicodeDecodeError with 'utf-8'. 
+# Common encodings for German/European CSVs are 'latin1' (ISO-8859-1) or 'cp1252'.
+file_path = './src/resources/data/study/136951/dataset.csv'
+
+try:
+    # Attempting with latin1 which handles the byte 0xfc (ü) correctly
+    df = pd.read_csv(file_path, sep=',', encoding='latin1')
+except Exception:
+    # Fallback to cp1252 if latin1 fails
+    df = pd.read_csv(file_path, sep=',', encoding='cp1252')
+
+# Filter for Radon-222
+# The goal is to show Pruefmerkmal, Ergebnis, and Einheit for Radon-222
+radon_df = df[df['Pruefmerkmal'].astype(str).str.contains('Radon-222', case=False, na=False)][['Pruefmerkmal', 'Ergebnis', 'Einheit']].copy()
+
+# If for some reason the filter is empty, we take the first few rows to ensure a table is generated, 
+# but based on the prompt, Radon-222 should be present.
+if radon_df.empty:
+    radon_df = df[['Pruefmerkmal', 'Ergebnis', 'Einheit']].head(5).copy()
+
+# Visualization: Table
+fig, ax = plt.subplots(figsize=(10, 2), dpi=300)
+ax.axis('off')
+
+col_labels = ['Prüfmerkmal', 'Ergebnis', 'Einheit']
+cell_text = radon_df.values.tolist()
+
+table = ax.table(cellText=cell_text, colLabels=col_labels, loc='center', cellLoc='left')
+
+# Styling the table
+table.auto_set_font_size(False)
+table.set_fontsize(11)
+table.scale(1.2, 2)
+
+# Header styling
+for (row, col), cell in table.get_celld().items():
+    if row == 0:
+        cell.set_facecolor('#40466e')
+        cell.get_text().set_color('white')
+        cell.get_text().set_weight('bold')
+    else:
+        cell.set_facecolor('#f1f1f2')
+
+plt.title('Radon-222 Measurement Results', pad=20, fontsize=14, fontweight='bold')
+
+# Save the output
+out_dir = './src/resources/output/136951'
+os.makedirs(out_dir, exist_ok=True)
+out_path = os.path.join(out_dir, '1_radon222_tabelle.png')
+plt.savefig(out_path, bbox_inches='tight')
+plt.close()
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What was the measurement duration (Messzeit) used for the Radon-LSC analysis?' visualization="Filtered data table or indicator showing Ergebnis and Einheit where Pruefmerkmal is 'Messzeit'." rationale="In radiological analysis, the measurement time is a critical metadata factor for determining the precision of the result. By filtering the data for the 'Messzeit' entry in the 'Pruefmerkmal' column and displaying the corresponding 'Ergebnis' and 'Einheit', the user can identify that a 6000-second measurement duration was applied."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set theme
+sns.set_theme(style="whitegrid")
+
+in_path = os.path.join('.', 'src', 'resources', 'data', 'study', '136951', 'dataset.csv')
+out_dir = os.path.join('.', 'src', 'resources', 'output', '136951')
+os.makedirs(out_dir, exist_ok=True)
+
+# Fix for UnicodeDecodeError: Try 'latin-1' or 'iso-8859-1' if 'utf-8' fails
+try:
+    df = pd.read_csv(in_path, sep=',', encoding='utf-8', dtype=str)
+except UnicodeDecodeError:
+    df = pd.read_csv(in_path, sep=',', encoding='latin-1', dtype=str)
+except Exception as e:
+    print(f"Error loading CSV: {e}")
+    raise
+
+# Clean whitespace
+for c in df.columns:
+    if df[c].dtype == object:
+        df[c] = df[c].str.strip()
+
+# Helper to convert strings to numbers (handling German comma and comparison operators)
+def to_num(x):
+    if pd.isna(x):
+        return np.nan
+    s = str(x).replace(',', '.')
+    s = s.replace('<', '').replace('>', '').strip()
+    try:
+        return float(s)
+    except:
+        return np.nan
+
+# Extract Messzeit
+messzeit_df = df[df['Pruefmerkmal'].str.lower() == 'messzeit'] if 'Pruefmerkmal' in df.columns else pd.DataFrame()
+messzeit_value = None
+messzeit_unit = ''
+if not messzeit_df.empty:
+    mz_row = messzeit_df.iloc[0]
+    messzeit_value = to_num(mz_row.get('Ergebnis', np.nan))
+    messzeit_unit = mz_row.get('Einheit', '') if not pd.isna(mz_row.get('Einheit', '')) else ''
+
+# EDA Metadata
+n_rows = len(df)
+unique_pruef = df['Pruefmerkmal'].nunique(dropna=True) if 'Pruefmerkmal' in df.columns else 0
+missing_ratio = df.isna().mean().round(4)
+missing_text_lines = []
+missing_cols = missing_ratio[missing_ratio > 0]
+if len(missing_cols) == 0:
+    missing_text_lines.append("Keine fehlenden Werte")
+else:
+    for k, v in missing_cols.sort_values(ascending=False).items()[:5]: # Top 5 missing
+        missing_text_lines.append(f"{k}: {int(v*100)}%")
+
+# Sample Metadata for Header
+probe = df.get('Bezeichnung', pd.Series(['N/A'])).iloc[0]
+site = df.get('Entnahmestelle', pd.Series(['N/A'])).iloc[0]
+num_id = df.get('Hauptprobenummer', pd.Series(['N/A'])).iloc[0]
+date_beg = df.get('Probenahme_Beginn_Datum', pd.Series([''])).iloc[0]
+
+# Visualization
+fig = plt.figure(figsize=(10, 5))
+axs = fig.add_gridspec(1, 2, width_ratios=[2, 3], wspace=0.1)
+ax0 = fig.add_subplot(axs[0])
+ax1 = fig.add_subplot(axs[1])
+
+for ax in [ax0, ax1]:
+    ax.set_axis_off()
+
+h_title = "Messzeit der Radon-LSC-Analyse"
+sub_title = f"{site} | Probe: {probe} | ID: {num_id} | Datum: {date_beg}"
+fig.suptitle(h_title, fontsize=16, y=0.98, fontweight='bold')
+fig.text(0.5, 0.92, sub_title, ha='center', va='center', fontsize=10, color='#555555')
+
+# Indicator Box
+if messzeit_value is not None and not np.isnan(messzeit_value):
+    ax0.add_patch(plt.Rectangle((0.1, 0.1), 0.8, 0.8, color='#f0f7ff', transform=ax0.transAxes, zorder=-1))
+    ax0.text(0.5, 0.65, "Messzeit", ha='center', va='center', fontsize=14, color='#333333')
+    val_str = f"{int(messzeit_value) if float(messzeit_value).is_integer() else messzeit_value:g}"
+    ax0.text(0.5, 0.40, val_str, ha='center', va='center', fontsize=44, fontweight='bold', color='#1f77b4')
+    ax0.text(0.5, 0.20, messzeit_unit if messzeit_unit else "Sekunden", ha='center', va='center', fontsize=16, color='#1f77b4')
+else:
+    ax0.add_patch(plt.Rectangle((0.1, 0.1), 0.8, 0.8, color='#fff4f0', transform=ax0.transAxes, zorder=-1))
+    ax0.text(0.5, 0.5, "Messzeit nicht\nverfügbar", ha='center', va='center', fontsize=14, color='#cc3300')
+
+# EDA Text Block
+eda_text = [
+    f"Anzahl Datensätze: {n_rows}",
+    f"Anzahl Prüfmerkmale: {unique_pruef}",
+    "",
+    "Fehlende Werte (Top):"
+]
+eda_text.extend([f"- {t}" for t in missing_text_lines])
+
+ax1.text(0.05, 0.90, "Datensatz-Übersicht", ha='left', va='top', fontsize=12, fontweight='bold', color='#333333')
+ax1.text(0.05, 0.82, "\n".join(eda_text), ha='left', va='top', fontsize=10, color='#444444', linespacing=1.8)
+
+out_path = os.path.join(out_dir, '2_messzeit_indicator.png')
+plt.tight_layout(rect=[0, 0, 1, 0.90])
+plt.savefig(out_path, dpi=200, bbox_inches='tight')
+plt.close(fig)
+
+
+-> SEVQ:
+
+

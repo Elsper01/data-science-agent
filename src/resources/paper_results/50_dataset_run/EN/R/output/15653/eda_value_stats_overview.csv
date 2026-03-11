@@ -1,0 +1,7 @@
+2_variable_attribute_label,value_variable_label,n,anzahl_na,mittelwert,sd,minimum,maximum
+Ausland,Gästeankünfte in Beherbergungsbetrieben,11,0,692.5454545454545,343.89921885237356,170,1146
+Ausland,Gästeübernachtungen in Beherbergungsbetrieben,11,0,2440.7272727272725,1241.84363676826,495,3860
+Inland,Gästeankünfte in Beherbergungsbetrieben,11,0,16068.272727272728,6184.631922611225,4977,23323
+Inland,Gästeübernachtungen in Beherbergungsbetrieben,11,0,75622.36363636363,24643.36854519985,32355,98731
+Insgesamt,Gästeankünfte in Beherbergungsbetrieben,11,0,16760.81818181818,6508.232537612371,5147,24469
+Insgesamt,Gästeübernachtungen in Beherbergungsbetrieben,11,0,78063.09090909091,25760.145703992228,32850,102156

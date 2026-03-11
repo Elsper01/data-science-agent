@@ -1,0 +1,654 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\108398\dataset.csv
+Programming Language: r
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-06 09:57:27
+Total Duration: 1466.65 seconds
+Total Token Usage: 175620 tokens
+Total Costs: $0.5856
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0468 seconds
+
+Method: analyse_dataset
+  Duration: 0.0492 seconds
+
+Method: analyse_metadata
+  Duration: 0.0146 seconds
+
+Method: llm_generate_summary
+  Duration: 477.6467 seconds
+
+Method: llm_generate_goals
+  Duration: 4.3335 seconds
+
+Method: llm_generate_r_code
+  Duration: 305.7021 seconds
+
+Method: test_generated_code
+  Duration: 6.4747 seconds
+
+Method: llm_regenerate_code
+  Duration: 28.8966 seconds
+
+Method: test_generated_code
+  Duration: 7.7243 seconds
+
+Method: llm_regenerate_code
+  Duration: 9.0380 seconds
+
+Method: test_generated_code
+  Duration: 8.3488 seconds
+
+Method: llm_regenerate_code
+  Duration: 10.1470 seconds
+
+Method: test_generated_code
+  Duration: 7.8303 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 600.3943 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 29789 tokens
+  Costs total: $0.0166
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1202 tokens
+  Costs total: $0.0014
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 15480 tokens
+  Costs total: $0.0705
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 16022 tokens
+  Costs total: $0.0759
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 14567 tokens
+  Costs total: $0.0613
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 302 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 325 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 429 tokens
+  Costs total: $0.0011
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3838 tokens
+  Costs total: $0.0065
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3700 tokens
+  Costs total: $0.0058
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3477 tokens
+  Costs total: $0.0060
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 690 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 474 tokens
+  Costs total: $0.0012
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3962 tokens
+  Costs total: $0.0061
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 753 tokens
+  Costs total: $0.0019
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 474 tokens
+  Costs total: $0.0012
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4088 tokens
+  Costs total: $0.0062
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 753 tokens
+  Costs total: $0.0019
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 474 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 9212 tokens
+  Costs total: $0.0700
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2885 tokens
+  Costs total: $0.0099
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3285 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5424 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5280 tokens
+  Costs total: $0.0312
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7900 tokens
+  Costs total: $0.0584
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2705 tokens
+  Costs total: $0.0094
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3127 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4283 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5110 tokens
+  Costs total: $0.0314
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7336 tokens
+  Costs total: $0.0522
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2860 tokens
+  Costs total: $0.0104
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3432 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6230 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4996 tokens
+  Costs total: $0.0287
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How does the Gamma Ambient Dose Rate (ODL) fluctuate over time across the different monitoring sites?' visualization='Line chart with Datum_Uhrzeit on the x-axis and KBR/KKB/KKK_####_IMK on the y-axis.' rationale='A line chart of the dose rate over time allows users to see the baseline radiation levels and identify any spikes or trends during the 7-day monitoring period. This is the primary purpose of the KFÜ system.'
+
+-> Code:
+options(warn=-1)
+# Ensure required packages are loaded
+req_pkgs <- c("readr", "dplyr", "tidyr", "lubridate", "stringr", "ggplot2", "scales", "purrr")
+suppressPackageStartupMessages({
+  library(readr)
+  library(dplyr)
+  library(tidyr)
+  library(lubridate)
+  library(stringr)
+  library(ggplot2)
+  library(scales)
+  library(purrr)
+})
+
+# Define paths
+in_path <- file.path(".", "src", "resources", "data", "study", "108398", "dataset.csv")
+out_dir <- file.path(".", "src", "resources", "output", "108398")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Load data
+loc <- locale(encoding = "UTF-8")
+df_raw <- readr::read_csv(in_path, col_types = cols(.default = col_character()), na = c("nan","NaN","NA","","null"), locale = loc, progress = FALSE)
+
+# Clean and filter time column
+df_raw <- df_raw %>% mutate(Datum_Uhrzeit = str_trim(Datum_Uhrzeit))
+time_regex <- "^\\d{2}\\.\\d{2}\\.\\d{4}\\s+\\d{2}:\\d{2}:\\d{2}$"
+df <- df_raw %>% filter(!is.na(Datum_Uhrzeit) & str_detect(Datum_Uhrzeit, time_regex))
+
+if(nrow(df) == 0) stop("Keine gültigen Zeitstempelzeilen gefunden.")
+
+# Parse datetime
+df <- df %>% mutate(Datum_Uhrzeit = dmy_hms(Datum_Uhrzeit, tz = "Europe/Berlin")) %>% arrange(Datum_Uhrzeit)
+
+# Identify ODL columns
+all_cols <- names(df)
+odl_cols <- all_cols[str_detect(all_cols, "^(KBR|KKB|KKK)_\\d{4}_IMK$")]
+
+if(length(odl_cols) == 0) stop("Keine ODL-Sensor-Spalten gefunden.")
+
+# Parse numeric values (handling German decimal comma)
+num_locale <- locale(decimal_mark = ",", grouping_mark = ".", encoding = "UTF-8")
+df[odl_cols] <- lapply(df[odl_cols], function(x) readr::parse_double(x, locale = num_locale))
+
+# Missing values report
+miss_tbl <- tibble(Spalte = c("Datum_Uhrzeit", odl_cols)) %>% 
+  mutate(Anteil_NA = map_dbl(Spalte, function(nm){ mean(is.na(df[[nm]])) }))
+readr::write_csv(miss_tbl, file.path(out_dir, "eda_missing_odl.csv"))
+
+# Pivot to long format and extract site
+long_odl <- df %>% 
+  select(Datum_Uhrzeit, all_of(odl_cols)) %>% 
+  pivot_longer(cols = -Datum_Uhrzeit, names_to = "Sensor", values_to = "ODL") %>% 
+  mutate(Standort = str_sub(Sensor, 1, 3))
+
+# Calculate median per site and time
+site_time_median <- long_odl %>% 
+  group_by(Datum_Uhrzeit, Standort) %>% 
+  summarise(ODL = if(all(is.na(ODL))) NA_real_ else median(ODL, na.rm = TRUE), .groups = "drop") %>% 
+  arrange(Datum_Uhrzeit, Standort)
+
+# Statistics per site
+site_stats <- site_time_median %>% 
+  group_by(Standort) %>% 
+  summarise(
+    Mittelwert = mean(ODL, na.rm = TRUE), 
+    SD = sd(ODL, na.rm = TRUE), 
+    Minimum = suppressWarnings(min(ODL, na.rm = TRUE)), 
+    Q1 = quantile(ODL, 0.25, na.rm = TRUE), 
+    Median = median(ODL, na.rm = TRUE), 
+    Q3 = quantile(ODL, 0.75, na.rm = TRUE), 
+    Maximum = suppressWarnings(max(ODL, na.rm = TRUE)), 
+    .groups = "drop"
+  )
+readr::write_csv(site_stats, file.path(out_dir, "eda_odl_standort_statistik.csv"))
+
+# Correlation matrix
+wide_corr <- site_time_median %>% pivot_wider(names_from = Standort, values_from = ODL)
+if(ncol(wide_corr) >= 3) {
+  corr_mat <- suppressWarnings(cor(wide_corr %>% select(where(is.numeric)), use = "pairwise.complete.obs"))
+  corr_df <- as.data.frame(corr_mat)
+  corr_df <- tibble::rownames_to_column(corr_df, var = "Standort")
+  readr::write_csv(corr_df, file.path(out_dir, "eda_korrelation_standorte.csv"))
+}
+
+# Plotting
+zeit_von <- min(site_time_median$Datum_Uhrzeit, na.rm = TRUE)
+zeit_bis <- max(site_time_median$Datum_Uhrzeit, na.rm = TRUE)
+
+farben <- c(KBR = "#1b9e77", KKB = "#d95f02", KKK = "#7570b3")
+
+# Fix: Use date_format() or label_date() instead of label_datetime() which might be missing in older scales versions
+# Or simply use the format string directly in scale_x_datetime
+p <- ggplot(site_time_median, aes(x = Datum_Uhrzeit, y = ODL, color = Standort)) +
+  geom_line(linewidth = 0.7, alpha = 0.95, na.rm = TRUE) +
+  scale_color_manual(values = farben, name = "Standort") +
+  scale_y_continuous(labels = label_number(accuracy = 0.001)) +
+  scale_x_datetime(
+    date_breaks = "1 day", 
+    date_minor_breaks = "6 hours", 
+    labels = date_format("%d.%m. %H:%M")
+  ) +
+  labs(title = "Verlauf der Gamma-Ortsdosisleistung (ODL) nach Standort",
+       subtitle = paste0("Zeitraum: ", format(zeit_von, "%d.%m.%Y %H:%M"), " – ", format(zeit_bis, "%d.%m.%Y %H:%M")),
+       x = "Datum und Uhrzeit",
+       y = "Gamma-Ortsdosisleistung (µSv/h) – Median über Sensoren") +
+  guides(color = guide_legend(override.aes = list(linewidth = 1.2))) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "top", 
+    legend.title = element_text(size = 11), 
+    legend.text = element_text(size = 10), 
+    axis.text.x = element_text(angle = 0, hjust = 0.5), 
+    plot.title = element_text(face = "bold")
+  )
+
+out_file <- file.path(out_dir, "0_odl_verlauf_standorte.png")
+ggsave(out_file, plot = p, width = 1600, height = 900, dpi = 150, units = "px", bg = "white")
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Is there a correlation between precipitation intensity and the measured Gamma Ambient Dose Rate?' visualization='Dual-axis line chart or scatter plot comparing KBR/KKB/KKK_NIED_MET (Precipitation) and KBR/KKB/KKK_####_IMK (Dose Rate) over the Datum_Uhrzeit.' rationale="Scientific monitoring often looks for 'wash-out' effects where rain increases measured radiation levels. Comparing these two variables helps determine if fluctuations are linked to weather events."
+
+-> Code:
+library(tidyverse)
+library(lubridate)
+library(scales)
+
+# Set options to handle potential encoding issues and suppress warnings
+options(warn = -1)
+set.seed(123)
+
+# Define paths
+input_path <- file.path(".", "src", "resources", "data", "study", "108398", "dataset.csv")
+out_dir <- file.path(".", "src", "resources", "output", "108398")
+if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
+
+# Load data with explicit encoding and error handling for invalid UTF-8
+if (!file.exists(input_path)) {
+  stop("Dataset not found at: ", input_path)
+}
+
+# Using read_csv with a fallback for potential encoding issues
+df_raw <- tryCatch({
+  readr::read_csv(file = input_path, col_types = cols(.default = col_character()), locale = locale(encoding = "UTF-8"))
+}, error = function(e) {
+  # Fallback to latin1 if UTF-8 fails
+  readr::read_csv(file = input_path, col_types = cols(.default = col_character()), locale = locale(encoding = "ISO-8859-1"))
+})
+
+names(df_raw) <- trimws(names(df_raw))
+
+# Helper functions for cleaning
+na_like <- function(x) {
+  x2 <- tolower(trimws(x))
+  is.na(x) | x2 %in% c("nan", "na", "null", "", "n/a")
+}
+
+conv_num <- function(x) {
+  x <- ifelse(na_like(x), NA, x)
+  x <- gsub(",", ".", x, fixed = TRUE)
+  suppressWarnings(as.numeric(x))
+}
+
+# Process Date - using a more robust parsing approach
+if (!("Datum_Uhrzeit" %in% names(df_raw))) stop("Column 'Datum_Uhrzeit' missing.")
+df <- df_raw
+# Try multiple formats to be safe
+df$Datum_Uhrzeit <- suppressWarnings(lubridate::parse_date_time(df$Datum_Uhrzeit, orders = c("dmy HMS", "ymd HMS", "dmy HM")))
+df <- df[!is.na(df$Datum_Uhrzeit), , drop = FALSE]
+
+# Convert numeric columns
+other_cols <- setdiff(names(df), "Datum_Uhrzeit")
+if (length(other_cols) > 0) {
+  df <- df %>% mutate(across(all_of(other_cols), conv_num))
+}
+
+# Define sites and identify columns
+site_codes <- c("KBR", "KKB", "KKK")
+
+get_imk_cols <- function(site, nms) {
+  grep(paste0("^", site, "_\\d{4}_IMK$"), nms, value = TRUE)
+}
+
+get_precip_col <- function(site, nms) {
+  opts <- c(paste0(site, "_NIED_MET"), paste0(site, "_NID1_MET"))
+  cand <- opts[opts %in% nms]
+  if (length(cand) == 0) {
+    pat <- paste0("^", site, ".*NIED.*")
+    cand <- grep(pat, nms, value = TRUE, ignore.case = TRUE)
+  }
+  if (length(cand) == 0) NA_character_ else cand[1]
+}
+
+# Calculate median Dose Rate per site
+comp_median <- function(d, cols) {
+  if (length(cols) == 0) return(rep(NA_real_, nrow(d)))
+  # Use rowMeans or apply(..., 1, median)
+  apply(as.matrix(d[, cols, drop = FALSE]), 1, function(x) {
+    if(all(is.na(x))) return(NA_real_)
+    median(x, na.rm = TRUE)
+  })
+}
+
+# Prepare data for dual-axis line chart
+plot_data_list <- list()
+
+for (s in site_codes) {
+  imk_cols <- get_imk_cols(s, names(df))
+  precip_col <- get_precip_col(s, names(df))
+  
+  dose_median <- comp_median(df, imk_cols)
+  precip_val <- if (!is.na(precip_col)) df[[precip_col]] else rep(NA_real_, nrow(df))
+  
+  plot_data_list[[s]] <- tibble(
+    Datum_Uhrzeit = df$Datum_Uhrzeit,
+    Standort = s,
+    Niederschlag = precip_val,
+    Dosisrate = dose_median
+  )
+}
+
+df_long <- bind_rows(plot_data_list) %>%
+  filter(!is.na(Dosisrate))
+
+# Visualization: Dual-axis line chart to show temporal correlation
+# We scale precipitation to fit the dose rate axis for visualization
+# Dose rate is typically ~0.07-0.15, Precip can be 0-10+
+coeff <- 0.05 # Scaling factor for precipitation
+
+p <- ggplot(df_long, aes(x = Datum_Uhrzeit)) +
+  # Precipitation as bars or area (scaled)
+  geom_area(aes(y = Niederschlag * coeff, fill = "Precipitation"), alpha = 0.3) +
+  # Dose rate as line
+  geom_line(aes(y = Dosisrate, color = "Dose Rate"), size = 0.7) +
+  facet_wrap(~Standort, ncol = 1, scales = "free_y") +
+  scale_y_continuous(
+    name = "Gamma Ambient Dose Rate [µSv/h]",
+    sec.axis = sec_axis(~./coeff, name = "Precipitation [mm/h]")
+  ) +
+  scale_color_manual(values = c("Dose Rate" = "firebrick")) +
+  scale_fill_manual(values = c("Precipitation" = "steelblue")) +
+  labs(
+    title = "Temporal Correlation: Precipitation vs. Gamma Ambient Dose Rate",
+    subtitle = "Comparing median IMK sensor readings with MET precipitation data",
+    x = "Time",
+    color = "",
+    fill = "",
+    caption = "Note: Precipitation is scaled for visualization. Peaks in dose rate often coincide with rain events (wash-out effect)."
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    strip.text = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+
+# Save output
+out_file <- file.path(out_dir, "1_korrelation_niederschlag_dosis.png")
+ggsave(filename = out_file, plot = p, width = 12, height = 10, dpi = 300)
+
+cat("Plot saved to:", out_file)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the relationship between wind speed and wind direction at the nuclear power plant sites?' visualization='Scatter plot with KBR/KKB/KKK_WRK_TIS (Wind Direction) on the x-axis and KBR/KKB/KKK_WGK_TIS (Wind Speed) on the y-axis.' rationale='Understanding the dispersion parameters is crucial for nuclear safety. A scatter plot or wind rose-style visualization helps characterize the local meteorological conditions (wind profile) during the monitoring period.'
+
+-> Code:
+# Load necessary libraries
+packages <- c("readr", "dplyr", "tidyr", "ggplot2", "lubridate", "stringr", "scales")
+invisible(lapply(packages, function(pkg) {
+  if (!require(pkg, character.only = TRUE)) {
+    install.packages(pkg, repos = "https://cloud.r-project.org")
+    library(pkg, character.only = TRUE)
+  }
+}))
+
+# Helper function to parse numbers safely
+parse_num <- function(x) {
+  x <- as.character(x)
+  x <- ifelse(x %in% c("nan", "NaN", "NA", "", "NULL"), NA, x)
+  x <- gsub(",", ".", x, fixed = TRUE)
+  suppressWarnings(as.numeric(x))
+}
+
+# Define paths
+input_path <- file.path(".", "src", "resources", "data", "study", "108398", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "108398")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Read data with explicit encoding and handling potential UTF-8 issues
+# Using read_csv with guess_max to improve type detection, but keeping col_character for safety
+raw <- readr::read_csv(input_path, 
+                       col_types = cols(.default = col_character()), 
+                       locale = locale(encoding = "UTF-8"), 
+                       show_col_types = FALSE, 
+                       na = c("", "NA", "NaN", "nan", "NULL"))
+
+# Define columns of interest
+needed_cols <- c("Datum_Uhrzeit", "KBR_WRK_TIS", "KBR_WGK_TIS", "KKB_WRK_TIS", "KKB_WGK_TIS", "KKK_WRK_TIS", "KKK_WGK_TIS")
+existing_cols <- intersect(needed_cols, colnames(raw))
+df <- raw[, existing_cols, drop = FALSE]
+
+# Robust Date Parsing: Fix for 'invalid UTF-8' error in lubridate
+if ("Datum_Uhrzeit" %in% colnames(df)) {
+  # Clean the string: remove non-ASCII characters that might cause gsub/regex failures in lubridate
+  df$Datum_Uhrzeit <- iconv(df$Datum_Uhrzeit, "UTF-8", "UTF-8", sub = "")
+  df$Datum_Uhrzeit <- ifelse(df$Datum_Uhrzeit %in% c("nan", "NaN", "NA", ""), NA, df$Datum_Uhrzeit)
+  
+  # Use a more robust parsing approach: try dmy_hms, then fallback
+  df$Datum_Uhrzeit <- suppressWarnings(dmy_hms(df$Datum_Uhrzeit, tz = "Europe/Berlin", quiet = TRUE))
+}
+
+# Parse numeric columns
+num_cols <- setdiff(existing_cols, "Datum_Uhrzeit")
+for (nc in num_cols) {
+  df[[nc]] <- parse_num(df[[nc]])
+}
+
+# Reshape data for plotting (Long format)
+kbr <- df %>% select(any_of(c("Datum_Uhrzeit", "KBR_WRK_TIS", "KBR_WGK_TIS"))) %>% 
+  rename(wrk = any_of("KBR_WRK_TIS"), wgk = any_of("KBR_WGK_TIS")) %>% 
+  mutate(Standort = "KBR")
+
+kkb <- df %>% select(any_of(c("Datum_Uhrzeit", "KKB_WRK_TIS", "KKB_WGK_TIS"))) %>% 
+  rename(wrk = any_of("KKB_WRK_TIS"), wgk = any_of("KKB_WGK_TIS")) %>% 
+  mutate(Standort = "KKB")
+
+kkk <- df %>% select(any_of(c("Datum_Uhrzeit", "KKK_WRK_TIS", "KKK_WGK_TIS"))) %>% 
+  rename(wrk = any_of("KKK_WRK_TIS"), wgk = any_of("KKK_WGK_TIS")) %>% 
+  mutate(Standort = "KKK")
+
+wind <- bind_rows(kbr, kkb, kkk) %>% 
+  filter(!is.na(wrk) & !is.na(wgk)) %>% 
+  mutate(wrk = pmin(pmax(wrk, 0), 360)) # Clamp wind direction to 0-360
+
+# Visualization
+if (nrow(wind) > 0) {
+  p <- ggplot(wind, aes(x = wrk, y = wgk)) +
+    geom_point(aes(color = Standort), alpha = 0.4, size = 1.2) +
+    # Add a trend line to see if there's a relationship
+    geom_smooth(aes(color = Standort), method = "gam", formula = y ~ s(x, bs = "cc"), se = FALSE, size = 1) +
+    scale_color_manual(values = c("KBR" = "#1f77b4", "KKB" = "#2ca02c", "KKK" = "#d62728")) +
+    scale_x_continuous(limits = c(0, 360), breaks = seq(0, 360, 45), labels = function(x) paste0(x, "°")) +
+    scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
+    facet_wrap(~Standort, ncol = 3) +
+    labs(
+      title = "Relationship between Wind Direction and Wind Speed",
+      subtitle = "Comparison across Nuclear Power Plant Sites (KBR, KKB, KKK)",
+      x = "Wind Direction (Degrees)",
+      y = "Wind Speed (m/s)",
+      caption = "Data source: Meteorological monitoring stations"
+    ) +
+    theme_minimal(base_size = 12) +
+    theme(
+      legend.position = "none",
+      panel.grid.minor = element_blank(),
+      strip.text = element_text(face = "bold", size = 12),
+      plot.title = element_text(face = "bold"),
+      plot.subtitle = element_text(color = "grey30")
+    )
+  
+  ggsave(filename = file.path(output_dir, "2_windrichtung_geschwindigkeit_scatter.png"), 
+         plot = p, width = 12, height = 5, dpi = 300)
+} else {
+  # Create empty plot if no data
+  p <- ggplot() + 
+    annotate("text", x = 0.5, y = 0.5, label = "No valid wind data available for plotting") +
+    theme_void()
+  ggsave(filename = file.path(output_dir, "2_windrichtung_geschwindigkeit_scatter.png"), 
+         plot = p, width = 12, height = 5, dpi = 300)
+}
+
+
+-> SEVQ:
+
+

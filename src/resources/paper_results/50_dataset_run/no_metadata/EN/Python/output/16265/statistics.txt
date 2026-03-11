@@ -1,0 +1,465 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\16265\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 13:50:42
+Total Duration: 830.60 seconds
+Total Token Usage: 99981 tokens
+Total Costs: $0.4364
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0372 seconds
+
+Method: analyse_dataset
+  Duration: 0.0252 seconds
+
+Method: analyse_metadata
+  Duration: 0.0301 seconds
+
+Method: llm_generate_summary
+  Duration: 134.8151 seconds
+
+Method: llm_generate_goals
+  Duration: 4.3688 seconds
+
+Method: llm_generate_python_code
+  Duration: 238.1667 seconds
+
+Method: test_generated_code
+  Duration: 3.8947 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 449.2658 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 8531 tokens
+  Costs total: $0.0063
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1533 tokens
+  Costs total: $0.0015
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6620 tokens
+  Costs total: $0.0455
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6103 tokens
+  Costs total: $0.0403
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 9931 tokens
+  Costs total: $0.0784
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4921 tokens
+  Costs total: $0.0327
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2277 tokens
+  Costs total: $0.0085
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2484 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4215 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4384 tokens
+  Costs total: $0.0272
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7265 tokens
+  Costs total: $0.0543
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2404 tokens
+  Costs total: $0.0082
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2820 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4998 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4447 tokens
+  Costs total: $0.0244
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7913 tokens
+  Costs total: $0.0579
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2746 tokens
+  Costs total: $0.0092
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3293 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 7413 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4927 tokens
+  Costs total: $0.0267
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How has the Ambient Dose Equivalent Rate (ODL) changed over the recorded year?' visualization="Line chart with 'start_measure' on the x-axis and 'value' on the y-axis." rationale="A line chart is the most effective way to visualize time-series data. By plotting 'value' against 'start_measure', users can identify seasonal trends, fluctuations, or sudden spikes in radiation levels at the Dorfprozelten station."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+from matplotlib.dates import MonthLocator, DateFormatter
+
+df = pd.read_csv(r'./src/resources/data/study\16265\dataset.csv', sep=',', encoding='utf-8')
+unit = df['unit'].dropna().astype(str).iloc[0] if 'unit' in df.columns and df['unit'].notna().any() else 'µSv/h'
+df['start_measure'] = pd.to_datetime(df['start_measure'], errors='coerce')
+df['value'] = pd.to_numeric(df['value'], errors='coerce')
+missing_prop = df.isna().mean()
+value_missing_pct = float(missing_prop.get('value', 0.0) * 100)
+df = df[df['validated'].astype(str).isin(['1', 'True', 'true'])] if 'validated' in df.columns else df
+df = df.dropna(subset=['start_measure', 'value']).sort_values('start_measure')
+if df.empty:
+    raise ValueError('Die gefilterte Datenmenge ist leer. Prüfen Sie die Eingabedatei und Spaltenformate.')
+start_date = df['start_measure'].min()
+end_date = df['start_measure'].max()
+count_days = df.shape[0]
+mean_val = df['value'].mean()
+std_val = df['value'].std(ddof=1)
+min_val = df['value'].min()
+max_val = df['value'].max()
+df['roll7'] = df['value'].rolling(window=7, min_periods=1).mean()
+sns.set_theme(style='whitegrid')
+fig, ax = plt.subplots(figsize=(12, 6), dpi=150)
+palette = sns.color_palette('deep')
+ax.plot(df['start_measure'], df['value'], color=palette[0], linewidth=1.2, alpha=0.8, label='Täglicher Wert')
+ax.plot(df['start_measure'], df['roll7'], color=palette[3], linewidth=2.0, alpha=0.95, label='7-Tage gleitender Mittelwert')
+ax.axhline(mean_val, color=palette[2], linestyle='--', linewidth=1.2, alpha=0.8, label='Gesamtmittel')
+ax.set_title('Entwicklung der Ortsdosisleistung (ODL) in Dorfprozelten (DEZ1778) – tägliche 24h-Mittelwerte', fontsize=14)
+ax.set_xlabel('Datum (Start der Messung)', fontsize=12)
+ax.set_ylabel(f'Ortsdosisleistung ODL [{unit}]', fontsize=12)
+ax.xaxis.set_major_locator(MonthLocator(interval=1))
+ax.xaxis.set_major_formatter(DateFormatter('%Y-%m'))
+plt.setp(ax.get_xticklabels(), rotation=0, ha='center')
+min_ylim = max(0, min_val - 0.01)
+max_ylim = max_val + 0.01
+ax.set_ylim(min_ylim, max_ylim)
+ax.legend(loc='upper right', frameon=True)
+ax.grid(True, which='major', axis='both', linestyle='-', alpha=0.2)
+stat_text = (
+    f'Zeitraum: {start_date.strftime("%Y-%m-%d")} bis {end_date.strftime("%Y-%m-%d")}\n'
+    f'Anzahl Tage: {count_days}\n'
+    f'Mittelwert: {mean_val:.3f} {unit}\n'
+    f'Standardabweichung: {std_val:.3f} {unit}\n'
+    f'Min–Max: {min_val:.3f}–{max_val:.3f} {unit}\n'
+    f'Fehlende Werte (value): {value_missing_pct:.1f}%'
+)
+ax.text(0.01, 0.99, stat_text, transform=ax.transAxes, va='top', ha='left', fontsize=9, bbox=dict(boxstyle='round', facecolor='white', alpha=0.8, edgecolor='#cccccc'))
+plt.tight_layout()
+os.makedirs(r'./src/resources/output\16265', exist_ok=True)
+plt.savefig(os.path.join(r'./src/resources/output\16265', '0_odl_zeitverlauf.png'), dpi=150, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the distribution of radiation measurement values at the Dorfprozelten station?' visualization="Histogram of the 'value' column." rationale="A histogram or box plot of the 'value' column allows users to understand the frequency of specific radiation levels. This helps in establishing the 'normal' baseline for this location and identifying how often the measurements deviate from the mean of 0.1075 µSv/h."
+
+-> Code:
+import os
+import sys
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+input_candidates = [
+    Path(r'./src/resources/data/study\16265\dataset.csv'),
+    Path('./src/resources/data/study/16265/dataset.csv'),
+]
+input_path = None
+for p in input_candidates:
+    if p.exists():
+        input_path = p
+        break
+if input_path is None:
+    input_path = input_candidates[0]
+
+output_dir = Path(r'./src/resources/output\16265')
+output_dir.mkdir(parents=True, exist_ok=True)
+output_path = output_dir.joinpath('1_histogram_value.png')
+
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+for col in ['start_measure', 'end_measure']:
+    if col in df.columns:
+        df[col] = pd.to_datetime(df[col], errors='coerce')
+
+if 'value' in df.columns:
+    df['value_num'] = pd.to_numeric(df['value'], errors='coerce')
+else:
+    df['value_num'] = pd.Series(dtype=float)
+
+if 'validated' in df.columns:
+    df['validated_num'] = pd.to_numeric(df['validated'], errors='coerce')
+    df_use = df[df['validated_num'] == 1].copy()
+else:
+    df_use = df.copy()
+
+value_series = df_use['value_num'].dropna()
+if value_series.empty:
+    print('Keine gültigen numerischen Werte in der Spalte value gefunden.')
+    sys.exit(1)
+
+n = int(value_series.shape[0])
+mean_v = float(value_series.mean())
+std_v = float(value_series.std(ddof=1))
+min_v = float(value_series.min())
+q1_v = float(value_series.quantile(0.25))
+med_v = float(value_series.median())
+q3_v = float(value_series.quantile(0.75))
+max_v = float(value_series.max())
+iqr_v = q3_v - q1_v
+skew_v = float(value_series.skew()) if n > 2 else np.nan
+
+bin_count = 20
+if iqr_v > 0 and max_v > min_v:
+    bw = 2 * iqr_v / (n ** (1 / 3))
+    if bw > 0:
+        bin_count = int(np.ceil((max_v - min_v) / bw))
+        bin_count = int(np.clip(bin_count, 10, 50))
+
+miss_ratio_value = float(df['value'].isna().mean() * 100) if 'value' in df.columns else 100.0
+
+period_text = ''
+if 'start_measure' in df.columns and 'end_measure' in df.columns:
+    start_dt = pd.to_datetime(df['start_measure'], errors='coerce').min()
+    end_dt = pd.to_datetime(df['end_measure'], errors='coerce').max()
+    if pd.notna(start_dt) and pd.notna(end_dt):
+        period_text = f"Zeitraum: {start_dt.date()} bis {end_dt.date()}"
+
+sns.set_theme(style='whitegrid', context='talk')
+fig, ax = plt.subplots(figsize=(10, 6))
+sns.histplot(value_series, bins=bin_count, kde=True, stat='density', color='#2B6CB0', edgecolor='white', linewidth=0.8, ax=ax)
+ax.axvline(mean_v, color='#D61F06', linestyle='-', linewidth=2, label=f"Mittelwert = {mean_v:.4f} µSv/h")
+ax.axvline(med_v, color='#10A37F', linestyle='--', linewidth=2, label=f"Median = {med_v:.4f} µSv/h")
+
+stats_text = (
+    f"n = {n}\n"
+    f"Mittelwert = {mean_v:.4f} µSv/h\n"
+    f"StdAbw = {std_v:.4f} µSv/h\n"
+    f"Min–Max = {min_v:.3f}–{max_v:.3f} µSv/h\n"
+    f"IQR = {iqr_v:.4f} µSv/h\n"
+    f"Schiefe = {skew_v:.3f}\n"
+    f"Fehlende Werte (value) = {miss_ratio_value:.1f}%"
+)
+
+bbox_props = dict(boxstyle='round', facecolor='white', alpha=0.9, edgecolor='#CCCCCC')
+ax.text(0.98, 0.98, stats_text, transform=ax.transAxes, ha='right', va='top', fontsize=11, bbox=bbox_props)
+
+ax.set_title('Verteilung der ODL-Messwerte in Dorfprozelten (tägliche 24h-Mittelwerte)')
+if period_text:
+    ax.set_xlabel(f'ODL Messwert (µSv/h) – {period_text}')
+else:
+    ax.set_xlabel('ODL Messwert (µSv/h)')
+ax.set_ylabel('Dichte')
+ax.legend(frameon=True, loc='upper left')
+plt.tight_layout()
+
+try:
+    fig.savefig(output_path, dpi=300, bbox_inches='tight')
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+plt.close(fig)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Are there any gaps or inconsistencies in the daily measurement periods?' visualization="Bar chart showing the count of 'FID' grouped by month (extracted from 'start_measure')." rationale="By comparing 'start_measure' and 'end_measure' alongside the 'duration' and 'validated' status, we can confirm the data's continuity. A Gantt-style timeline or a simple bar chart showing the count of records per month ensures the dataset is complete and that all 364 observations are indeed validated (validated=1)."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+data_path = './src/resources/data/study\\16265\\dataset.csv'
+df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+for c in ['start_measure', 'end_measure']:
+    df[c] = pd.to_datetime(df[c], errors='coerce')
+df['value'] = pd.to_numeric(df.get('value', np.nan), errors='coerce')
+df['validated'] = pd.to_numeric(df.get('validated', np.nan), errors='coerce')
+min_date = df['start_measure'].min()
+max_date = df['start_measure'].max()
+total_values = int(df.shape[0] * df.shape[1])
+total_missing = int(df.isna().sum().sum())
+missing_overall_pct = (total_missing / total_values * 100) if total_values > 0 else np.nan
+valid_nonnull = int(df['validated'].notna().sum()) if 'validated' in df.columns else 0
+validated_rate = float(((df['validated'] == 1).sum() / valid_nonnull) * 100) if valid_nonnull > 0 else np.nan
+mask_both_dates = df['start_measure'].notna() & df['end_measure'].notna()
+dauer_tage = pd.Series(np.nan, index=df.index)
+dauer_tage.loc[mask_both_dates] = (df.loc[mask_both_dates, 'end_measure'] - df.loc[mask_both_dates, 'start_measure']).dt.total_seconds() / 86400.0
+abweichungen_dauer = int(((dauer_tage - 1.0).abs() > 1e-6).sum())
+df_sorted = df.sort_values('start_measure')
+delta_days = df_sorted['start_measure'].diff().dt.total_seconds() / 86400.0
+gaps_count = int(((delta_days - 1.0).abs() > 1e-6).fillna(False).sum())
+df_valid_dates = df[df['start_measure'].notna()].copy()
+df_valid_dates['monat'] = df_valid_dates['start_measure'].dt.to_period('M')
+monthly_counts = df_valid_dates.groupby('monat')['FID'].count().sort_index()
+if len(df_valid_dates) == 0 or len(monthly_counts) == 0:
+    sns.set_theme(style='whitegrid')
+    fig, ax = plt.subplots(figsize=(8, 4))
+    ax.text(0.5, 0.5, 'Keine gültigen Datumswerte für die Monatszählung verfügbar', ha='center', va='center')
+    ax.set_axis_off()
+    output_path = './src/resources/output\\16265/2_monatszaehlung_FID.png'
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    plt.savefig(output_path, dpi=200, bbox_inches='tight')
+    plt.close(fig)
+else:
+    start_global = df_valid_dates['start_measure'].min().normalize()
+    end_global = df_valid_dates['start_measure'].max().normalize()
+    exp_counts = []
+    labels = []
+    for p, cnt in monthly_counts.items():
+        year = int(p.year)
+        month = int(p.month)
+        month_start = pd.Timestamp(year=year, month=month, day=1)
+        month_end = month_start + pd.offsets.MonthEnd(1)
+        effective_start = month_start if month_start >= start_global else start_global
+        effective_end = month_end if month_end <= end_global else end_global
+        expected = int((effective_end - effective_start).days + 1)
+        exp_counts.append(expected)
+        labels.append(f"{year}-{month:02d}")
+    monats_df = pd.DataFrame({'monat': list(monthly_counts.index), 'anzahl': monthly_counts.values, 'erwartet': exp_counts, 'label': labels})
+    monats_df['status_ok'] = monats_df['anzahl'] == monats_df['erwartet']
+    sns.set_theme(style='whitegrid')
+    n = len(monats_df)
+    fig_width = max(8.0, min(22.0, 0.6 * n + 2.0))
+    fig, ax = plt.subplots(figsize=(fig_width, 5.2))
+    x = np.arange(n)
+    heights = monats_df['anzahl'].values.astype(float)
+    labels = monats_df['label'].tolist()
+    ok_mask = monats_df['status_ok'].values
+    not_mask = ~ok_mask
+    if ok_mask.any():
+        ax.bar(x[ok_mask], heights[ok_mask], color='#2ca02c', label='Vollständig')
+    if not_mask.any():
+        ax.bar(x[not_mask], heights[not_mask], color='#d62728', label='Unvollständig')
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, rotation=45, ha='right')
+    ax.set_ylabel('Anzahl Messungen (Tage)')
+    ax.set_xlabel('Monat')
+    ax.set_title('Anzahl täglicher Messungen pro Monat – ODL (Dorfprozelten, Station DEZ1778)')
+    ax.legend(loc='upper left', frameon=True)
+    if len(heights) > 0:
+        y_max = np.nanmax(heights)
+        y_off = max(0.5, y_max * 0.03)
+        for xi, hi in zip(x, heights):
+            if np.isfinite(hi):
+                ax.text(xi, hi + y_off, str(int(hi)), ha='center', va='bottom', fontsize=9)
+        ax.set_ylim(0, y_max + y_off * 4)
+    zeitraum_str = ''
+    if pd.notna(min_date) and pd.notna(max_date):
+        zeitraum_str = f"Zeitraum: {min_date.date()} bis {max_date.date()}"
+    eda_line = f"{zeitraum_str} • Datensätze: {len(df)} • Fehlende Werte gesamt: {missing_overall_pct:.2f}% • Validiert=1: {validated_rate:.2f}% • Lücken in Startzeiten: {gaps_count} • Abweichungen Messdauer≠1d: {abweichungen_dauer}"
+    plt.tight_layout(rect=[0, 0.08, 1, 1])
+    fig.text(0.5, 0.015, eda_line, ha='center', va='bottom', fontsize=9)
+    output_path = './src/resources/output\\16265/2_monatszaehlung_FID.png'
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    plt.savefig(output_path, dpi=200, bbox_inches='tight')
+    plt.close(fig)
+
+
+-> SEVQ:
+
+

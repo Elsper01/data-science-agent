@@ -1,0 +1,16 @@
+Spalte,DatenTyp
+Hauptprobenummer,int64
+Bezeichnung,object
+Probe_Entnahmeart,object
+Probenahme_Beginn_Datum,object
+Probenahme_Beginn_Zeit,object
+Probenahme_Ende_Datum,object
+Probenahme_Ende_Zeit,object
+Umweltbereich,object
+Messprogrammgruppe,object
+Entnahmestelle,object
+Herkunftsstaat,object
+Methode,object
+Pruefmerkmal,object
+Ergebnis,object
+Einheit,object

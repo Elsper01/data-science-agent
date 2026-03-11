@@ -1,0 +1,7 @@
+spalte,anzahl_auspraegungen,beispiel
+id,1,DEZ1715
+name,1,Lauf an der Pegnitz
+nuclide,1,Gamma-ODL-Brutto
+unit,1,µSv/h
+duration,1,1h
+geom,1,POINT (49.52 11.27)

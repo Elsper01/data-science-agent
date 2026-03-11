@@ -1,0 +1,469 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\16492\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-08 16:13:22
+Total Duration: 1297.29 seconds
+Total Token Usage: 104984 tokens
+Total Costs: $0.4672
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0110 seconds
+
+Method: analyse_dataset
+  Duration: 0.0058 seconds
+
+Method: llm_generate_summary
+  Duration: 218.4716 seconds
+
+Method: llm_generate_goals
+  Duration: 5.9676 seconds
+
+Method: llm_generate_python_code
+  Duration: 423.4582 seconds
+
+Method: test_generated_code
+  Duration: 4.0044 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 645.3762 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 6278 tokens
+  Costs total: $0.0051
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1763 tokens
+  Costs total: $0.0019
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6970 tokens
+  Costs total: $0.0472
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8529 tokens
+  Costs total: $0.0631
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8521 tokens
+  Costs total: $0.0626
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 352 tokens
+  Costs total: $0.0009
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5180 tokens
+  Costs total: $0.0321
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2593 tokens
+  Costs total: $0.0087
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2848 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5951 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5246 tokens
+  Costs total: $0.0315
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 9474 tokens
+  Costs total: $0.0705
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3185 tokens
+  Costs total: $0.0107
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3572 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4625 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5929 tokens
+  Costs total: $0.0334
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6154 tokens
+  Costs total: $0.0371
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3159 tokens
+  Costs total: $0.0116
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3520 tokens
+  Costs total: $0.0031
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4488 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 6031 tokens
+  Costs total: $0.0354
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie hat sich die Gamma-Ortsdosisleistung im Zeitverlauf an der Station Lauf an der Pegnitz verändert?' visualization="Liniendiagramm mit 'start_measure' auf der x-Achse und 'value' auf der y-Achse." rationale="Da es sich um eine univariate Zeitreihe handelt, ist ein Liniendiagramm die beste Wahl, um Trends, Zyklen oder plötzliche Spitzen in der Strahlungsbelastung über den Zeitraum von 167 Stunden zu erkennen. Die Verwendung von 'start_measure' auf der X-Achse und 'value' auf der Y-Achse zeigt direkt die Dynamik der Messwerte."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme(style="whitegrid", context="notebook", font_scale=1.0)
+
+data_path = r'./src/resources/data/study\16492\dataset.csv'
+output_path = r'./src/resources/output\16492/0_zeitverlauf_gamma_odl_lauf.png'
+
+try:
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+except Exception as e:
+    print(e)
+    raise
+
+for col in ['start_measure', 'end_measure']:
+    if col in df.columns:
+        df[col] = pd.to_datetime(df[col], errors='coerce')
+
+if 'value' in df.columns:
+    df['value'] = pd.to_numeric(df['value'], errors='coerce')
+
+missing_counts = df.isna().sum()
+missing_ratio = (df.isna().mean() * 100).round(2)
+
+df = df.drop_duplicates(subset=['start_measure']).dropna(subset=['start_measure', 'value']).sort_values('start_measure')
+
+value_stats = df['value'].agg(['count', 'mean', 'std', 'min', 'median', 'max']).to_dict()
+
+fig, ax = plt.subplots(figsize=(12, 5), dpi=150)
+color_line = sns.color_palette('deep')[0]
+ax.plot(df['start_measure'], df['value'], color=color_line, linewidth=2)
+
+try:
+    idx_max = df['value'].idxmax()
+    x_max = df.loc[idx_max, 'start_measure']
+    y_max = df.loc[idx_max, 'value']
+    ax.scatter([x_max], [y_max], color='#d62728', s=50, zorder=5)
+    ax.annotate(f"Max: {y_max:.3f} µSv/h\n{x_max:%d.%m.%Y %H:%M}", xy=(x_max, y_max), xytext=(10, 20), textcoords='offset points', arrowprops=dict(arrowstyle='->', color='#666666'), fontsize=9, bbox=dict(boxstyle='round', facecolor='white', edgecolor='#dddddd', alpha=0.9))
+except Exception:
+    pass
+
+ax.set_title('Verlauf der Gamma-Ortsdosisleistung (µSv/h) – Lauf an der Pegnitz, Jan 2026', pad=12)
+ax.set_xlabel('Start der Messung (Zeit)')
+ax.set_ylabel('Ortsdosisleistung (µSv/h)')
+
+try:
+    y_min = float(np.nanmin(df['value']))
+    y_max_val = float(np.nanmax(df['value']))
+    y_pad = max(0.001, (y_max_val - y_min) * 0.15)
+    ax.set_ylim(y_min - y_pad, y_max_val + y_pad)
+except Exception:
+    pass
+
+fig.autofmt_xdate()
+
+stats_text = (
+    f"n = {int(value_stats.get('count', np.nan))}\n"
+    f"Mittelwert = {value_stats.get('mean', np.nan):.3f} µSv/h\n"
+    f"Stdabw. = {value_stats.get('std', np.nan):.3f} µSv/h\n"
+    f"Median = {value_stats.get('median', np.nan):.3f} µSv/h\n"
+    f"Min = {value_stats.get('min', np.nan):.3f} µSv/h\n"
+    f"Max = {value_stats.get('max', np.nan):.3f} µSv/h\n"
+    f"Fehlende Werte (value) = {int(missing_counts.get('value', 0))} ({missing_ratio.get('value', 0)}%)"
+)
+ax.text(0.01, 0.99, stats_text, transform=ax.transAxes, va='top', ha='left', fontsize=9, bbox=dict(boxstyle='round', facecolor='white', edgecolor='#cccccc', alpha=0.9))
+
+plt.tight_layout()
+plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.close(fig)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie verteilen sich die gemessenen ODL-Werte und gibt es häufig auftretende Messwertbereiche?' visualization="Histogramm der Spalte 'value'." rationale="Ein Histogramm der Spalte 'value' hilft dem Nutzer zu verstehen, ob die Strahlungswerte normalverteilt sind oder ob es Ausreißer (wie den Maximalwert von 0,155 µSv/h) gibt, die deutlich vom Mittelwert (0,117 µSv/h) abweichen. Dies gibt Aufschluss über die Stabilität der natürlichen Hintergrundstrahlung."
+
+-> Code:
+import os
+import sys
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+try:
+    data_path = os.path.normpath('./src/resources/data/study\\16492\\dataset.csv')
+    output_dir = os.path.normpath('./src/resources/output\\16492')
+    os.makedirs(output_dir, exist_ok=True)
+
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8', low_memory=False)
+    df = df.replace(r'^\s*$', np.nan, regex=True)
+
+    df['value_num'] = pd.to_numeric(df['value'], errors='coerce') if 'value' in df.columns else np.nan
+    s = df['value_num'].dropna() if 'value_num' in df.columns else pd.Series(dtype=float)
+    if s.empty:
+        print('Fehler: Keine numerischen Werte in der Spalte "value" gefunden oder Datensatz leer.', file=sys.stderr)
+        sys.exit(1)
+
+    missing_pct = df.isna().mean().mul(100).round(2).rename('Anteil_Fehlende_%').to_frame()
+    missing_pct.to_csv(os.path.join(output_dir, '1_eda_missing_values.csv'), encoding='utf-8')
+
+    stats_series = pd.Series({
+        'Anzahl': int(s.count()),
+        'Mittelwert_µSv/h': float(s.mean()),
+        'Median_µSv/h': float(s.median()),
+        'Stdabw_µSv/h': float(s.std(ddof=1)),
+        'Varianz_µSv/h²': float(s.var(ddof=1)),
+        'Min_µSv/h': float(s.min()),
+        'Q1_µSv/h': float(s.quantile(0.25)),
+        'Q3_µSv/h': float(s.quantile(0.75)),
+        'Max_µSv/h': float(s.max()),
+        'IQR_µSv/h': float(s.quantile(0.75) - s.quantile(0.25)),
+        'Schiefe': float(s.skew()),
+        'Wölbung': float(s.kurt())
+    })
+    stats_series.to_frame(name='Wert').to_csv(os.path.join(output_dir, '1_eda_stats_value.csv'), encoding='utf-8')
+
+    df_num = df.apply(pd.to_numeric, errors='coerce')
+    if df_num.shape[1] > 0 and df_num.notna().sum().sum() > 0:
+        corr = df_num.corr()
+        corr.to_csv(os.path.join(output_dir, '1_eda_correlation_numeric.csv'), encoding='utf-8')
+
+    sns.set_theme(style='whitegrid', context='talk', font_scale=0.9)
+
+    n = s.shape[0]
+    q25, q75 = s.quantile([0.25, 0.75])
+    iqr = q75 - q25
+    data_range = float(s.max() - s.min())
+    if data_range == 0:
+        center = float(s.iloc[0])
+        edges = np.linspace(center - 0.005, center + 0.005, 11)
+    else:
+        if iqr > 0:
+            bw = 2 * iqr * np.power(n, -1/3)
+        else:
+            bw = None
+        if bw is None or bw <= 0:
+            bins = int(np.ceil(np.log2(n) + 1))
+            bins = min(50, max(5, bins))
+            counts, edges = np.histogram(s, bins=bins)
+        else:
+            bins = int(np.ceil(data_range / bw))
+            bins = min(60, max(5, bins))
+            counts, edges = np.histogram(s, bins=bins)
+
+    counts, edges = np.histogram(s, bins=edges)
+    idx_max = int(np.argmax(counts)) if counts.size > 0 else 0
+    left = float(edges[idx_max]) if edges.size > 1 else float(s.min())
+    right = float(edges[idx_max + 1]) if edges.size > 1 else float(s.max())
+    max_count = int(counts[idx_max]) if counts.size > 0 else 0
+    max_pct = (max_count / n * 100.0) if n > 0 else 0.0
+
+    fig, ax = plt.subplots(figsize=(10, 6), constrained_layout=True)
+    sns.histplot(s, bins=edges, color='#2b8cbe', edgecolor='white', alpha=0.9, ax=ax, stat='count')
+
+    mean_v = float(s.mean())
+    median_v = float(s.median())
+    max_v = float(s.max())
+
+    ax.axvline(mean_v, color='#e6550d', linestyle='-', linewidth=1.8, label=f'Mittelwert {mean_v:.3f} µSv/h')
+    ax.axvline(median_v, color='#31a354', linestyle='--', linewidth=1.8, label=f'Median {median_v:.3f} µSv/h')
+    ax.axvline(max_v, color='#756bb1', linestyle=':', linewidth=1.5, label=f'Max {max_v:.3f} µSv/h')
+
+    ymax = counts.max() if counts.size > 0 else 0
+    if ymax > 0:
+        ax.annotate(
+            f'Häufigster Bereich: [{left:.3f}, {right:.3f}] µSv/h\nn={max_count} ({max_pct:.1f}%)',
+            xy=((left + right) / 2.0, max_count),
+            xytext=((left + right) / 2.0, ymax * 1.15),
+            ha='center', va='bottom',
+            arrowprops=dict(arrowstyle='->', color='black', lw=1.0),
+            bbox=dict(boxstyle='round,pad=0.25', fc='white', ec='gray', alpha=0.95),
+            fontsize=10,
+        )
+
+    ax.set_title('Verteilung der Gamma-Ortsdosisleistung (ODL) – Lauf an der Pegnitz, Januar 2026')
+    ax.set_xlabel('Gamma-Ortsdosisleistung (µSv/h)')
+    ax.set_ylabel('Häufigkeit (Anzahl)')
+    ax.legend(frameon=True, title='Referenzwerte')
+
+    plot_path = os.path.join(output_dir, '1_histogram_odl_value.png')
+    fig.savefig(plot_path, dpi=300, bbox_inches='tight')
+    plt.close(fig)
+except Exception as e:
+    print(f'Fehler bei der Verarbeitung: {e}', file=sys.stderr)
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wo befindet sich die Messstation geografisch und welche konstanten Parameter sind ihr zugeordnet?' visualization="Karte basierend auf 'geom' mit einem Marker für 'name' und zusätzlichen Informationen aus 'id', 'nuclide' und 'unit' im Tooltip." rationale="Da alle Datenpunkte denselben Standort ('geom', 'name') betreffen, ist eine Karte mit einem einzelnen Marker sinnvoll, um den räumlichen Kontext zu verdeutlichen. In einem Tooltip können die konstanten Metadaten wie 'id' (DEZ1715), 'nuclide' (Gamma-ODL-Brutto) und 'unit' (µSv/h) angezeigt werden, damit der Nutzer sofort weiß, welche Art von Daten an diesem Ort erhoben werden."
+
+-> Code:
+import os
+import re
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import geopandas as gpd
+
+try:
+    data_path = './src/resources/data/study\\16492\\dataset.csv'
+    output_dir = os.path.normpath('./src/resources/output\\16492')
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+    for c in df.columns:
+        if df[c].dtype == object:
+            df[c] = df[c].astype(str).str.strip()
+    for c in ['value', 'validated', 'kenn']:
+        if c in df.columns:
+            df[c] = pd.to_numeric(df[c], errors='coerce')
+    for c in ['start_measure', 'end_measure']:
+        if c in df.columns:
+            df[c] = pd.to_datetime(df[c], errors='coerce')
+    missing = df.isna().mean().to_frame('anteil_fehlend').reset_index().rename(columns={'index': 'spalte'})
+    missing_path = os.path.join(output_dir, '2_eda_anteil_fehlender_werte.csv')
+    missing.to_csv(missing_path, index=False, encoding='utf-8')
+    num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    if len(num_cols) > 0:
+        desc = df[num_cols].describe().T.reset_index().rename(columns={'index': 'variable'})
+        desc_path = os.path.join(output_dir, '2_eda_numerische_kennwerte.csv')
+        desc.to_csv(desc_path, index=False, encoding='utf-8')
+    if len(num_cols) >= 2:
+        corr = df[num_cols].corr(method='pearson')
+        corr_path = os.path.join(output_dir, '2_eda_korrelationen.csv')
+        corr.to_csv(corr_path, encoding='utf-8')
+    const_cols = [c for c in ['id', 'name', 'nuclide', 'unit', 'duration', 'geom'] if c in df.columns]
+    if len(const_cols) > 0:
+        const_info = pd.DataFrame({
+            'spalte': const_cols,
+            'anzahl_auspraegungen': [df[c].nunique(dropna=True) for c in const_cols],
+            'beispiel': [df[c].dropna().astype(str).iloc[0] if df[c].notna().any() else '' for c in const_cols]
+        })
+        const_path = os.path.join(output_dir, '2_eda_konstante_parameter.csv')
+        const_info.to_csv(const_path, index=False, encoding='utf-8')
+    if 'geom' not in df.columns or df['geom'].dropna().empty:
+        raise ValueError('Spalte geom fehlt oder enthält keine gültigen Werte.')
+    geom_str = df['geom'].dropna().astype(str).iloc[0]
+    m = re.search(r'POINT\s*\(\s*([+-]?\d+\.?\d*)\s+([+-]?\d+\.?\d*)\s*\)', geom_str)
+    if not m:
+        raise ValueError('Geom-Format nicht als WKT POINT erkennbar.')
+    a = float(m.group(1))
+    b = float(m.group(2))
+    def plausible_germany(lat, lon):
+        return (47.0 <= lat <= 56.0) and (5.0 <= lon <= 16.0)
+    if plausible_germany(a, b):
+        lat, lon = a, b
+    elif plausible_germany(b, a):
+        lat, lon = b, a
+    else:
+        lon, lat = a, b
+    name = df['name'].dropna().astype(str).iloc[0] if 'name' in df.columns and df['name'].notna().any() else 'Unbekannt'
+    sid = df['id'].dropna().astype(str).iloc[0] if 'id' in df.columns and df['id'].notna().any() else 'n/a'
+    nuclide = df['nuclide'].dropna().astype(str).iloc[0] if 'nuclide' in df.columns and df['nuclide'].notna().any() else 'n/a'
+    unit = df['unit'].dropna().astype(str).iloc[0] if 'unit' in df.columns and df['unit'].notna().any() else 'n/a'
+    world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+    sns.set_theme(style='white', context='talk')
+    fig, ax = plt.subplots(figsize=(8, 8), dpi=150)
+    world.plot(ax=ax, color='#f2f2f2', edgecolor='#9e9e9e', linewidth=0.5, zorder=1)
+    ax.scatter(lon, lat, s=140, c='#d62728', edgecolors='white', linewidths=1.2, zorder=5)
+    dx = 3.0
+    dy = 3.0
+    ax.set_xlim(lon - dx, lon + dx)
+    ax.set_ylim(lat - dy, lat + dy)
+    info_text = f"{name}\nID: {sid}\nNuklid: {nuclide}\nEinheit: {unit}"
+    ax.annotate(info_text, xy=(lon, lat), xycoords='data', xytext=(lon + 0.2, lat + 0.9), textcoords='data', fontsize=10, ha='left', va='bottom', bbox=dict(boxstyle='round,pad=0.35', fc='white', ec='#333333', alpha=0.95), arrowprops=dict(arrowstyle='->', color='#333333', lw=1.0), zorder=6)
+    ax.set_title('Geografische Lage der Messstation und zugehörige Metadaten', fontsize=14, pad=12)
+    ax.set_xlabel('Längengrad [°]')
+    ax.set_ylabel('Breitengrad [°]')
+    ax.grid(True, which='major', linestyle='--', linewidth=0.5, color='#d0d0d0')
+    ax.set_aspect('equal', adjustable='box')
+    plot_path = os.path.join(output_dir, '2_karte_messstation.png')
+    plt.tight_layout()
+    plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+

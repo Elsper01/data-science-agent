@@ -1,0 +1,517 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\52874\dataset.csv
+Programming Language: r
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-06 10:31:09
+Total Duration: 1200.60 seconds
+Total Token Usage: 115313 tokens
+Total Costs: $0.4546
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0210 seconds
+
+Method: analyse_dataset
+  Duration: 0.0072 seconds
+
+Method: analyse_metadata
+  Duration: 0.0080 seconds
+
+Method: llm_generate_summary
+  Duration: 251.4548 seconds
+
+Method: llm_generate_goals
+  Duration: 5.5143 seconds
+
+Method: llm_generate_r_code
+  Duration: 346.6787 seconds
+
+Method: test_generated_code
+  Duration: 13.5468 seconds
+
+Method: llm_regenerate_code
+  Duration: 7.6799 seconds
+
+Method: test_generated_code
+  Duration: 9.4515 seconds
+
+Method: llm_regenerate_code
+  Duration: 8.7856 seconds
+
+Method: test_generated_code
+  Duration: 8.8208 seconds
+
+Method: llm_regenerate_code
+  Duration: 7.6070 seconds
+
+Method: test_generated_code
+  Duration: 10.6384 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 530.3811 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 8776 tokens
+  Costs total: $0.0057
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1211 tokens
+  Costs total: $0.0014
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6757 tokens
+  Costs total: $0.0470
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7559 tokens
+  Costs total: $0.0550
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6393 tokens
+  Costs total: $0.0435
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 703 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 325 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 372 tokens
+  Costs total: $0.0010
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3348 tokens
+  Costs total: $0.0048
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 703 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 730 tokens
+  Costs total: $0.0019
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 372 tokens
+  Costs total: $0.0010
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3350 tokens
+  Costs total: $0.0050
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 703 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 735 tokens
+  Costs total: $0.0019
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 372 tokens
+  Costs total: $0.0010
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3493 tokens
+  Costs total: $0.0052
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 703 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 703 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 372 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6817 tokens
+  Costs total: $0.0486
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2611 tokens
+  Costs total: $0.0093
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2954 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 7963 tokens
+  Costs total: $0.0032
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4565 tokens
+  Costs total: $0.0246
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7153 tokens
+  Costs total: $0.0527
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2526 tokens
+  Costs total: $0.0091
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3228 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3983 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4982 tokens
+  Costs total: $0.0321
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6242 tokens
+  Costs total: $0.0435
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2481 tokens
+  Costs total: $0.0085
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2878 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4616 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4634 tokens
+  Costs total: $0.0270
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How have student enrollment and teaching hours evolved over time in Stadtlauringen?' visualization="Line chart with 'time' on the x-axis, 'value' on the y-axis, and colored by 'value_variable_label' (specifically for 'Schüler' and 'Wöchentliche Unterrichtsstunden')." rationale="By plotting 'value' against 'time' and filtering for specific 'value_variable_label' categories (Students and Weekly Teaching Hours), we can identify trends in educational demand and resource allocation over the 11-year period."
+
+-> Code:
+packages <- c("tidyverse","readr","dplyr","tidyr","stringr","scales","lubridate")
+missing_pkgs <- packages[!packages %in% rownames(installed.packages())]
+if (length(missing_pkgs) > 0) install.packages(missing_pkgs, repos = "https://cloud.r-project.org", dependencies = TRUE)
+invisible(lapply(packages, library, character.only = TRUE))
+options(stringsAsFactors = FALSE)
+
+input_path <- "./src/resources/data/study\\52874\\dataset.csv"
+output_dir <- "./src/resources/output\\52874"
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+raw <- suppressWarnings(readr::read_delim(
+  file = input_path,
+  delim = ";",
+  locale = locale(encoding = "UTF-8"),
+  na = c("", "NA", "NaN", "null", "NULL"),
+  trim_ws = TRUE,
+  show_col_types = FALSE
+))
+
+cols_all <- names(raw)
+na_prop <- sapply(raw, function(x) mean(is.na(x)))
+na_df <- tibble(variable = names(na_prop), anteil_na = as.numeric(na_prop))
+readr::write_csv(na_df, file = file.path(output_dir, "eda_anteil_na_pro_spalte.csv"))
+
+safe_num <- function(x) suppressWarnings(as.numeric(as.character(x)))
+df <- raw %>% mutate(
+  value = safe_num(value),
+  jahr = suppressWarnings(as.integer(str_replace(time, "^([0-9]{4}).*", "\\1")))
+)
+
+summ_stats <- df %>%
+  group_by(value_variable_label) %>%
+  summarise(
+    n = sum(!is.na(value)),
+    mittelwert = mean(value, na.rm = TRUE),
+    sd = sd(value, na.rm = TRUE),
+    minimum = min(value, na.rm = TRUE),
+    maximum = max(value, na.rm = TRUE),
+    .groups = "drop"
+  ) %>% arrange(desc(n))
+readr::write_csv(summ_stats, file = file.path(output_dir, "eda_uebersicht_kennzahlen.csv"))
+
+wide <- df %>% select(jahr, value_variable_code, value) %>% distinct() %>%
+  filter(!is.na(jahr)) %>%
+  pivot_wider(names_from = value_variable_code, values_from = value)
+
+if (ncol(wide) > 1) {
+  num_mat <- wide %>% select(where(is.numeric)) %>% as.data.frame()
+  if (ncol(num_mat) > 1) {
+    cor_mat <- suppressWarnings(cor(num_mat, use = "pairwise.complete.obs", method = "pearson"))
+    cor_tbl <- as_tibble(cor_mat, rownames = "variable")
+    readr::write_csv(cor_tbl, file = file.path(output_dir, "eda_korrelationsmatrix.csv"))
+  }
+}
+
+corr_sel <- NA
+if (all(c("SCHUEL","UWOSTD") %in% names(wide))) {
+  corr_sel <- suppressWarnings(cor(wide$SCHUEL, wide$UWOSTD, use = "pairwise.complete.obs"))
+  readr::write_csv(tibble(kennzahl_x = "SCHUEL", kennzahl_y = "UWOSTD", pearson_r = corr_sel),
+                   file = file.path(output_dir, "eda_korrelation_schuel_uwostd.csv"))
+}
+
+plot_df <- df %>% filter(value_variable_code %in% c("SCHUEL","UWOSTD")) %>%
+  filter(!is.na(jahr), !is.na(value)) %>%
+  mutate(value_variable_label = case_when(
+    value_variable_code == "SCHUEL" ~ "Schüler",
+    value_variable_code == "UWOSTD" ~ "Unterrichtswochenstunden",
+    TRUE ~ value_variable_label
+  ))
+
+min_year <- suppressWarnings(min(plot_df$jahr, na.rm = TRUE))
+max_year <- suppressWarnings(max(plot_df$jahr, na.rm = TRUE))
+
+palette_vals <- c("Schüler" = "#1f77b4", "Unterrichtswochenstunden" = "#ff7f0e")
+
+p <- ggplot(plot_df, aes(x = jahr, y = value, color = value_variable_label, group = value_variable_label)) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 2.5) +
+  scale_color_manual(values = palette_vals, name = "Kennzahl") +
+  scale_x_continuous(breaks = sort(unique(plot_df$jahr))) +
+  scale_y_continuous(labels = label_number(accuracy = 1, big.mark = " ")) +
+  labs(
+    title = paste0("Entwicklung von Schülerzahlen und Unterrichtswochenstunden in Stadtlauringen (", min_year, "–", max_year, ")"),
+    subtitle = "Grund- sowie Mittel-/Hauptschulen; Zeitreihe pro Schuljahr",
+    x = "Jahr",
+    y = "Anzahl",
+    caption = if (is.finite(corr_sel)) paste0("Pearson-Korrelation Schüler vs. Unterrichtswochenstunden: r = ", round(corr_sel, 2)) else NULL
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    legend.position = "top",
+    legend.title = element_text(size = 11),
+    legend.text = element_text(size = 10),
+    plot.title = element_text(face = "bold"),
+    axis.title.x = element_text(margin = margin(t = 8)),
+    axis.title.y = element_text(margin = margin(r = 8))
+  )
+
+out_file <- file.path(output_dir, "0_entwicklung_schueler_unterrichtswochenstunden.png")
+ggsave(filename = out_file, plot = p, width = 10, height = 6, dpi = 300, bg = "white")
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the relationship between the number of students and the number of teachers?' visualization="Dual-axis line chart or grouped bar chart showing 'value' over 'time', filtered to compare 'Schüler' and 'Voll- und teilzeitbeschäftigte Lehrkräfte' from the 'value_variable_label' column." rationale="Comparing the 'value' of 'Schüler' (students) and 'Voll- und teilzeitbeschäftigte Lehrkräfte' (teachers) across the 'time' periods helps determine if the teaching staff size is scaling proportionally with the student population."
+
+-> Code:
+# Load necessary libraries
+library(tidyverse)
+library(scales)
+
+# Define paths
+in_path <- file.path(".", "src", "resources", "data", "study", "52874", "dataset.csv")
+out_dir <- file.path(".", "src", "resources", "output", "52874")
+dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+
+# Read the dataset
+# Using semicolon as delimiter based on typical German CSV formats
+# Using locale with latin1 or UTF-8 depending on the source, but we'll handle encoding carefully
+raw <- readr::read_delim(in_path, delim = ";", show_col_types = FALSE)
+
+# Data Preparation
+# The error "Required variables ... not found" suggests encoding issues or exact string mismatch.
+# We will use string detection to be more robust against encoding artifacts.
+
+plot_data <- raw %>%
+  # Filter using regex to handle potential encoding issues with 'ü' and 'ä'
+  filter(str_detect(value_variable_label, "Sch.ler") | 
+         str_detect(value_variable_label, "Voll- und teilzeitbesch.ftigte Lehrkr.fte")) %>%
+  mutate(
+    # Standardize labels for internal logic
+    category = case_when(
+      str_detect(value_variable_label, "Sch.ler") ~ "Schüler",
+      str_detect(value_variable_label, "Voll- und teilzeitbesch.ftigte Lehrkr.fte") ~ "Lehrkräfte",
+      TRUE ~ NA_character_
+    ),
+    # Ensure value is numeric (handling potential comma as decimal separator)
+    value = as.numeric(gsub(",", ".", as.character(value))),
+    year_label = as.character(time)
+  ) %>%
+  filter(!is.na(value), !is.na(category)) %>%
+  group_by(year_label, category) %>%
+  summarise(value = sum(value, na.rm = TRUE), .groups = "drop")
+
+# Pivot wider to calculate scaling factors for the dual axis
+wide_data <- plot_data %>%
+  tidyr::pivot_wider(names_from = category, values_from = value)
+
+# Check if we have both variables to plot
+if ("Schüler" %in% names(wide_data) && "Lehrkräfte" %in% names(wide_data)) {
+  
+  # Calculate scaling parameters for dual axis
+  s_min <- min(wide_data$Schüler, na.rm = TRUE)
+  s_max <- max(wide_data$Schüler, na.rm = TRUE)
+  l_min <- min(wide_data$Lehrkräfte, na.rm = TRUE)
+  l_max <- max(wide_data$Lehrkräfte, na.rm = TRUE)
+  
+  # Avoid division by zero if range is 0
+  l_range <- l_max - l_min
+  if(l_range == 0) l_range <- 1
+  s_range <- s_max - s_min
+  if(s_range == 0) s_range <- 1
+  
+  # Linear transformation: y_scaled = (value - l_min) * (s_range / l_range) + s_min
+  scale_factor <- s_range / l_range
+  
+  # Prepare data for plotting
+  plot_df <- plot_data %>%
+    mutate(y_scaled = ifelse(category == "Schüler", 
+                             value, 
+                             (value - l_min) * scale_factor + s_min))
+
+  # Create the plot
+  p <- ggplot(plot_df, aes(x = year_label, y = y_scaled, color = category, group = category)) +
+    geom_line(linewidth = 1.2) +
+    geom_point(size = 3) +
+    scale_y_continuous(
+      name = "Anzahl Schüler",
+      sec.axis = sec_axis(~ (. - s_min) / scale_factor + l_min, 
+                          name = "Anzahl Lehrkräfte",
+                          labels = label_number(big.mark = ".", decimal.mark = ",")),
+      labels = label_number(big.mark = ".", decimal.mark = ",")
+    ) +
+    scale_color_manual(
+      values = c("Schüler" = "#2C3E50", "Lehrkräfte" = "#E74C3C")
+    ) +
+    labs(
+      title = "Verhältnis von Schülern zu Lehrkräften",
+      subtitle = "Entwicklung der Schülerzahlen und des Lehrpersonals (Voll- und Teilzeit)",
+      x = "Schuljahr",
+      color = "Kategorie",
+      caption = "Datenquelle: Statistik der allgemeinbildenden Schulen"
+    ) +
+    theme_minimal(base_size = 11) +
+    theme(
+      legend.position = "bottom",
+      plot.title = element_text(face = "bold", size = 14),
+      axis.title.y.right = element_text(color = "#E74C3C", face = "bold"),
+      axis.title.y.left = element_text(color = "#2C3E50", face = "bold"),
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      panel.grid.minor = element_blank()
+    )
+
+  # Save the plot
+  ggsave(file.path(out_dir, "schueler_lehrkraefte_verhaeltnis.png"), plot = p, width = 10, height = 6, dpi = 300)
+  
+} else {
+  # Fallback if data is missing - print available labels to help debugging
+  available_labels <- unique(raw$value_variable_label)
+  cat("Available labels in dataset:\n")
+  print(available_labels)
+  stop("Required variables not found in dataset. Check encoding or column names.")
+}
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='How has the average class size changed across the recorded school years?' visualization="Grouped bar chart showing the 'value' for 'Klassen' and 'Schüler' side-by-side for each 'time' period." rationale="By analyzing the 'value' for 'Klassen' (classes) and 'Schüler' (students) over 'time', users can understand the classroom density. This is a key indicator of educational quality and infrastructure utilization in the municipality."
+
+-> Code:
+options(stringsAsFactors=FALSE)
+pkgs <- c("readr","dplyr","tidyr","ggplot2","stringr","scales","forcats")
+inst <- pkgs[!pkgs %in% installed.packages()[,"Package"]]
+if(length(inst)>0) install.packages(inst, dependencies=TRUE)
+invisible(lapply(pkgs, library, character.only=TRUE))
+input_path <- file.path(".", "src", "resources", "data", "study", "52874", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "52874")
+dir.create(output_dir, recursive=TRUE, showWarnings=FALSE)
+df <- readr::read_delim(file=input_path, delim=";", locale=locale(encoding="UTF-8"), show_col_types=FALSE, trim_ws=TRUE, progress=FALSE)
+if(!"value" %in% names(df)) stop("Spalte 'value' fehlt im Datensatz.")
+df <- df %>% mutate(across(everything(), ~ifelse(.x %in% c("", "NA", "NaN"), NA, .x)))
+if(!is.numeric(df$value)) df <- df %>% mutate(value = suppressWarnings(as.numeric(value)))
+na_prop <- df %>% summarise(across(everything(), ~mean(is.na(.x)))) %>% pivot_longer(cols=everything(), names_to="variable", values_to="na_prop")
+num_df <- df %>% select(where(is.numeric))
+cor_mat <- if(ncol(num_df) >= 2) suppressWarnings(stats::cor(num_df, use="pairwise.complete.obs")) else NA
+stats_value <- df %>% filter(!is.na(value)) %>% group_by(value_variable_code, value_variable_label) %>% summarise(n=dplyr::n(), mean=mean(value), sd=sd(value), min=min(value), max=max(value), .groups="drop")
+students_by_year <- df %>% filter(value_variable_code=="SCHUEL") %>% mutate(year = suppressWarnings(as.integer(stringr::str_extract(time, "^\\d{4}")))) %>% group_by(year) %>% summarise(students = sum(value, na.rm=TRUE), .groups="drop")
+classes_by_year <- df %>% filter(value_variable_code=="KLASSE") %>% mutate(year = suppressWarnings(as.integer(stringr::str_extract(time, "^\\d{4}")))) %>% group_by(year) %>% summarise(classes = sum(value, na.rm=TRUE), .groups="drop")
+avg_class_size <- students_by_year %>% inner_join(classes_by_year, by="year") %>% mutate(avg = ifelse(classes>0, students/classes, NA_real_), schuljahr = paste0(year, "/", stringr::str_sub(year+1, -2, -1))) %>% arrange(year)
+plot_df <- df %>% filter(value_variable_code %in% c("KLASSE","SCHUEL")) %>% mutate(year = suppressWarnings(as.integer(stringr::str_extract(time, "^\\d{4}")))) %>% mutate(Kategorie = dplyr::recode(value_variable_code, KLASSE="Klassen", SCHUEL="Schüler")) %>% group_by(year, Kategorie) %>% summarise(Wert = sum(value, na.rm=TRUE), .groups="drop") %>% mutate(Schuljahr = paste0(year, "/", stringr::str_sub(year+1, -2, -1))) %>% arrange(year, Kategorie)
+plot_df$Schuljahr <- factor(plot_df$Schuljahr, levels=unique(plot_df$Schuljahr[order(plot_df$year)]))
+min_year <- suppressWarnings(min(plot_df$year, na.rm=TRUE))
+max_year <- suppressWarnings(max(plot_df$year, na.rm=TRUE))
+col_scale <- c("Klassen"="#1b9e77", "Schüler"="#3a86ff")
+p <- ggplot(plot_df, aes(x=Schuljahr, y=Wert, fill=Kategorie)) + geom_col(position=position_dodge(width=0.75), width=0.7, color="white", linewidth=0.2) + geom_text(aes(label=scales::comma(Wert)), position=position_dodge(width=0.75), vjust=-0.3, size=3.2, color="#333333") + scale_fill_manual(values=col_scale, name="Kategorie") + scale_y_continuous(labels=scales::label_number(accuracy=1, big.mark="."), expand=expansion(mult=c(0, 0.08))) + labs(title=paste0("Klassen und Schüler je Schuljahr – Stadtlauringen (Grund- sowie Mittel-/Hauptschulen)"), subtitle=paste0("Vergleich der Indikatoren zur Abschätzung der Klassengröße, Schuljahre ", min_year, "/", substr(min_year+1,3,4), "–", max_year, "/", substr(max_year+1,3,4)), x="Schuljahr", y="Anzahl", caption="Visualisierung: EDA auf kommunaler Ebene") + theme_minimal(base_size=12) + theme(plot.title=element_text(face="bold", size=14), plot.subtitle=element_text(size=11, color="#444444"), axis.text.x=element_text(angle=45, hjust=1, vjust=1), legend.position="top", panel.grid.minor=element_blank(), panel.grid.major.x=element_blank())
+outfile <- file.path(output_dir, "2_klassen_schueler_verlauf.png")
+ggsave(filename=outfile, plot=p, width=11, height=6.5, dpi=320)
+
+-> SEVQ:
+
+

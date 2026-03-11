@@ -1,0 +1,538 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\13979\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 13:46:43
+Total Duration: 764.17 seconds
+Total Token Usage: 103637 tokens
+Total Costs: $0.4223
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0419 seconds
+
+Method: analyse_dataset
+  Duration: 0.0222 seconds
+
+Method: analyse_metadata
+  Duration: 0.0142 seconds
+
+Method: llm_generate_summary
+  Duration: 154.5899 seconds
+
+Method: llm_generate_goals
+  Duration: 3.2382 seconds
+
+Method: llm_generate_python_code
+  Duration: 184.0739 seconds
+
+Method: test_generated_code
+  Duration: 3.1642 seconds
+
+Method: llm_regenerate_code
+  Duration: 28.3418 seconds
+
+Method: test_generated_code
+  Duration: 6.0898 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 384.5910 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7201 tokens
+  Costs total: $0.0051
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1377 tokens
+  Costs total: $0.0016
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7207 tokens
+  Costs total: $0.0522
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7294 tokens
+  Costs total: $0.0530
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5868 tokens
+  Costs total: $0.0388
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 956 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 941 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 267 tokens
+  Costs total: $0.0007
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3374 tokens
+  Costs total: $0.0045
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3615 tokens
+  Costs total: $0.0051
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2862 tokens
+  Costs total: $0.0046
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6673 tokens
+  Costs total: $0.0500
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2243 tokens
+  Costs total: $0.0081
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2516 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5328 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4120 tokens
+  Costs total: $0.0232
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6044 tokens
+  Costs total: $0.0424
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2413 tokens
+  Costs total: $0.0086
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2695 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4709 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4270 tokens
+  Costs total: $0.0228
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6170 tokens
+  Costs total: $0.0443
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2381 tokens
+  Costs total: $0.0088
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2705 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4959 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4644 tokens
+  Costs total: $0.0291
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How has the total number of construction completions in Sünching evolved from 2014 to 2024?' visualization="Line chart showing 'value' (y-axis) over 'time' (x-axis), filtered where '2_variable_attribute_label' is 'Insgesamt'." rationale="By filtering '2_variable_attribute_label' for the value 'Insgesamt' and plotting 'value' against 'time', we can identify the overall growth or decline in housing construction over the decade. This provides a high-level overview of the municipality's development activity."
+
+-> Code:
+import os
+import sys
+import traceback
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+def load_csv_with_encodings(path, sep=';'):
+    """Try different encodings to handle potential UnicodeDecodeErrors."""
+    encodings = ['utf-8', 'latin1', 'iso-8859-1', 'cp1252']
+    for enc in encodings:
+        try:
+            return pd.read_csv(path, sep=sep, encoding=enc)
+        except (UnicodeDecodeError, pd.errors.ParserError):
+            continue
+    # If all fail, try with engine='python' and errors='replace'
+    return pd.read_csv(path, sep=sep, encoding='utf-8', errors='replace')
+
+try:
+    sns.set_theme(style="whitegrid", context="talk")
+    
+    input_path = './src/resources/data/study/13979/dataset.csv'
+    df = load_csv_with_encodings(input_path, sep=';')
+    
+    # Data Cleaning
+    if 'time' in df.columns:
+        df['time'] = pd.to_numeric(df['time'], errors='coerce')
+    if 'value' in df.columns:
+        # Handle potential string numbers with commas or dots
+        if df['value'].dtype == object:
+            df['value'] = df['value'].str.replace(',', '.')
+        df['value'] = pd.to_numeric(df['value'], errors='coerce')
+    
+    # Filter for 'Insgesamt' (Total)
+    label_col = '2_variable_attribute_label'
+    if label_col in df.columns:
+        # Use case-insensitive and stripped comparison to be robust
+        df_filtered = df[df[label_col].astype(str).str.strip().str.lower() == 'insgesamt'].copy()
+    else:
+        # Fallback if column is missing
+        df_filtered = df.copy()
+        
+    # Filter for the requested time range 2014-2024
+    df_filtered = df_filtered[(df_filtered['time'] >= 2014) & (df_filtered['time'] <= 2024)]
+    
+    # Aggregate and sort
+    plot_data = df_filtered.groupby('time', as_index=False)['value'].sum().sort_values('time')
+    
+    # Visualization
+    plt.figure(figsize=(12, 7))
+    
+    if not plot_data.empty:
+        line_color = '#2c7fb8'
+        sns.lineplot(data=plot_data, x='time', y='value', marker='o', 
+                     linewidth=3, markersize=10, color=line_color)
+        
+        plt.xlabel('Jahr', fontsize=14, fontweight='bold')
+        plt.ylabel('Anzahl Baufertigstellungen', fontsize=14, fontweight='bold')
+        
+        # Ensure x-axis shows all years as integers
+        years = plot_data['time'].astype(int).unique()
+        plt.xticks(years)
+        
+        # Set y-axis to start at 0 and have sensible ticks
+        y_max = plot_data['value'].max()
+        plt.ylim(0, y_max * 1.15 if y_max > 0 else 10)
+        
+        # Add data labels
+        for x, y in zip(plot_data['time'], plot_data['value']):
+            plt.text(x, y + (y_max * 0.02), f'{int(y)}', 
+                     ha='center', va='bottom', fontsize=12, fontweight='bold', color=line_color)
+            
+        plt.title('Entwicklung der Baufertigstellungen in Sünching (2014–2024)', 
+                  fontsize=16, fontweight='bold', pad=20)
+    else:
+        plt.text(0.5, 0.5, 'Keine Daten für den Zeitraum 2014-2024 verfügbar', 
+                 ha='center', va='center', transform=plt.gca().transAxes)
+        plt.axis('off')
+
+    plt.tight_layout()
+    
+    # Output handling
+    output_dir = './src/resources/output/13979'
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, '0_baufertigstellungen_insgesamt_linie.png')
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    plt.close()
+
+except Exception as e:
+    print(f"An error occurred: {e}")
+    traceback.print_exc()
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the distribution of apartment sizes (by room count) completed in Sünching over the entire period?' visualization="Bar chart with '2_variable_attribute_label' on the x-axis (excluding 'Insgesamt') and the sum of 'value' on the y-axis." rationale="Using '2_variable_attribute_label' (excluding 'Insgesamt') and the sum of 'value', we can see which apartment sizes are most common. This helps determine if the municipality is focusing more on small units (1-2 rooms) or larger family homes (5+ rooms)."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set visual style
+sns.set_theme(style='whitegrid', context='talk')
+
+# File paths
+input_path = os.path.join('.', 'src', 'resources', 'data', 'study', '13979', 'dataset.csv')
+output_dir = os.path.join('.', 'src', 'resources', 'output', '13979')
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, '1_verteilung_wohnungsraumzahl.png')
+
+# Handle encoding error: 'utf-8' failed with 0xfc (ü), which suggests 'latin-1' or 'iso-8859-1'
+try:
+    df = pd.read_csv(input_path, sep=';', encoding='utf-8')
+except UnicodeDecodeError:
+    df = pd.read_csv(input_path, sep=';', encoding='latin-1')
+
+# Clean string columns
+for c in df.select_dtypes(include=['object', 'string']).columns:
+    df[c] = df[c].astype(str).str.strip()
+
+# Filter for Sünching and Room Count variable
+# Note: 'Sünching' might be encoded differently depending on the file, 
+# but 'latin-1' usually handles the 'ü' correctly.
+subset = df[(df['1_variable_attribute_label'] == 'Sünching') & (df['2_variable_label'] == 'Raumzahl')]
+
+# Convert value to numeric
+pre_len = len(subset)
+subset['value_num'] = pd.to_numeric(subset['value'], errors='coerce')
+value_missing_pct = 0.0
+if pre_len > 0:
+    value_missing_pct = (subset['value_num'].isna().sum() / pre_len) * 100
+
+# Drop missing values and exclude 'Insgesamt' (Total)
+subset = subset[subset['value_num'].notna()]
+subset = subset[~subset['2_variable_attribute_label'].str.contains('insgesamt', case=False, na=False)]
+
+# Get time range for title
+subset['time_num'] = pd.to_numeric(subset['time'], errors='coerce')
+year_min = int(subset['time_num'].min()) if subset['time_num'].notna().any() else None
+year_max = int(subset['time_num'].max()) if subset['time_num'].notna().any() else None
+
+# Aggregate values by room count label
+agg = subset.groupby(['2_variable_attribute_code', '2_variable_attribute_label'], dropna=False, as_index=False)['value_num'].sum()
+
+# Custom sorting for room counts (RAUM-1, RAUM-2, ..., RAUM-7UM)
+def _sort_key(code):
+    s = str(code)
+    if 'RAUM-' in s:
+        r = s.split('RAUM-')[-1]
+        if 'UM' in r:
+            return 99  # Put "7 or more" at the end
+        try:
+            return int(r)
+        except ValueError:
+            return 100
+    return 101
+
+agg['sort_key'] = agg['2_variable_attribute_code'].apply(_sort_key)
+agg = agg.sort_values('sort_key').reset_index(drop=True)
+
+labels = agg['2_variable_attribute_label'].tolist()
+values = agg['value_num'].astype(float).tolist()
+total_units = sum(values) if values else 0
+
+# Plotting
+plt.figure(figsize=(12, 7))
+if values:
+    ax = sns.barplot(x=labels, y=values, palette='viridis')
+    
+    # Add labels on top of bars
+    ymax = max(values) if values else 1
+    y_offset = ymax * 0.02
+    for i, p in enumerate(ax.patches):
+        h = p.get_height()
+        pct = (h / total_units * 100) if total_units > 0 else 0
+        ax.text(p.get_x() + p.get_width()/2., h + y_offset, f'{int(h)}\n({pct:.1f}%)', 
+                ha="center", va="bottom", fontsize=10)
+    
+    ax.set_ylim(0, ymax * 1.15)
+else:
+    plt.text(0.5, 0.5, "Keine Daten verfügbar", ha='center')
+
+# Labels and Title
+ax.set_xlabel('Wohnungsgröße (Anzahl Räume)')
+ax.set_ylabel('Summe fertiggestellter Wohnungen')
+title = 'Verteilung der fertiggestellten Wohnungen nach Raumzahl in Sünching'
+if year_min and year_max:
+    title += f' ({year_min}–{year_max})'
+ax.set_title(title, pad=20)
+
+# Footnote
+note = f"Gesamt: {int(total_units)} Wohnungen | Datenquelle: Statistik der Baufertigstellungen"
+plt.gcf().text(0.02, 0.01, note, fontsize=10, alpha=0.7)
+
+plt.tight_layout()
+plt.savefig(output_path, dpi=200, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='How has the mix of apartment sizes changed year-over-year?' visualization="Stacked bar chart showing 'time' on the x-axis, 'value' on the y-axis, and '2_variable_attribute_label' as the color/stack category (excluding 'Insgesamt')." rationale="A stacked area or bar chart using 'time', 'value', and '2_variable_attribute_label' (excluding 'Insgesamt') allows us to see shifts in housing trends, such as whether there has been a recent increase in larger units compared to previous years."
+
+-> Code:
+import os
+import re
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+def solve():
+    # Define paths
+    data_path = r"./src/resources/data/study/13979/dataset.csv"
+    output_dir = os.path.normpath(r"./src/resources/output/13979")
+    os.makedirs(output_dir, exist_ok=True)
+
+    # The error 'utf-8' codec can't decode byte 0xfc suggests the file is likely encoded in 'latin-1' or 'iso-8859-1'
+    # (0xfc is 'ü' in latin-1, common in German datasets like Sünching).
+    try:
+        df = pd.read_csv(data_path, sep=';', encoding='utf-8')
+    except UnicodeDecodeError:
+        df = pd.read_csv(data_path, sep=';', encoding='latin-1')
+
+    # Clean string columns
+    for col in df.select_dtypes(include=['object', 'string']).columns:
+        df[col] = df[col].astype(str).str.strip()
+        df[col] = df[col].replace({'': np.nan, 'nan': np.nan})
+
+    # Convert numeric columns
+    df['time'] = pd.to_numeric(df.get('time'), errors='coerce')
+    df['value'] = pd.to_numeric(df.get('value'), errors='coerce')
+
+    # Filter for apartment size variables (Raumzahl) and exclude 'Insgesamt'
+    # Based on the goal: '2_variable_attribute_label' as category, excluding 'Insgesamt'
+    df_filtered = df.copy()
+    
+    # Filter for rows related to room counts if the column exists
+    if '2_variable_label' in df_filtered.columns:
+        df_filtered = df_filtered[df_filtered['2_variable_label'].fillna('').str.contains('Raumzahl|Wohnungen', case=False, na=False)]
+
+    # Exclude 'Insgesamt' (Total)
+    if '2_variable_attribute_label' in df_filtered.columns:
+        df_filtered = df_filtered[~df_filtered['2_variable_attribute_label'].str.lower().str.contains('insgesamt', na=False)]
+    
+    # Drop rows with missing essential data
+    df_filtered = df_filtered.dropna(subset=['time', 'value', '2_variable_attribute_label'])
+
+    # Helper to sort room labels numerically (e.g., "1 Raum", "2 Räume")
+    def extract_room_order(label):
+        m = re.findall(r"\d+", str(label))
+        return int(m[0]) if m else 999
+
+    df_filtered['room_order'] = df_filtered['2_variable_attribute_label'].apply(extract_room_order)
+
+    # Aggregate data
+    grouped = (
+        df_filtered
+        .groupby(['time', '2_variable_attribute_label', 'room_order'], as_index=False)['value']
+        .sum()
+    )
+
+    # Pivot for stacked bar chart
+    pivot = grouped.pivot_table(
+        index='time', 
+        columns='2_variable_attribute_label', 
+        values='value', 
+        aggfunc='sum', 
+        fill_value=0
+    )
+
+    # Sort columns based on the room order
+    sorted_cols = grouped[['2_variable_attribute_label', 'room_order']].drop_duplicates().sort_values('room_order')['2_variable_attribute_label'].tolist()
+    pivot = pivot.reindex(columns=[c for c in sorted_cols if c in pivot.columns])
+
+    # Plotting
+    sns.set_theme(style="whitegrid", context="talk")
+    fig, ax = plt.subplots(figsize=(12, 7))
+    
+    colors = sns.color_palette("viridis", n_colors=len(pivot.columns))
+    pivot.plot(kind='bar', stacked=True, ax=ax, color=colors, width=0.8, edgecolor='white', linewidth=0.5)
+
+    # Formatting
+    start_year = int(pivot.index.min())
+    end_year = int(pivot.index.max())
+    ax.set_title(f"Mix der Wohnungsgrößen bei Baufertigstellungen ({start_year}–{end_year})", pad=20)
+    ax.set_xlabel("Berichtsjahr")
+    ax.set_ylabel("Anzahl fertiggestellter Wohnungen")
+    
+    ax.legend(title="Wohnungsgröße", bbox_to_anchor=(1.02, 1), loc='upper left')
+    
+    # Clean up x-axis labels
+    ax.set_xticklabels([str(int(x)) for x in pivot.index], rotation=45)
+    ax.yaxis.set_major_locator(plt.MaxNLocator(integer=True))
+
+    plt.tight_layout()
+    
+    # Save
+    output_path = os.path.join(output_dir, "apartment_size_mix_year_over_year.png")
+    plt.savefig(output_path, dpi=200, bbox_inches='tight')
+    plt.close(fig)
+
+if __name__ == "__main__":
+    solve()
+
+
+-> SEVQ:
+
+

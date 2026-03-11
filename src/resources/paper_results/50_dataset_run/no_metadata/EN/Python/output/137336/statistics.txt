@@ -1,0 +1,448 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\137336\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 13:39:25
+Total Duration: 770.73 seconds
+Total Token Usage: 97665 tokens
+Total Costs: $0.4330
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0078 seconds
+
+Method: analyse_dataset
+  Duration: 0.0062 seconds
+
+Method: analyse_metadata
+  Duration: 0.0081 seconds
+
+Method: llm_generate_summary
+  Duration: 183.0512 seconds
+
+Method: llm_generate_goals
+  Duration: 3.1763 seconds
+
+Method: llm_generate_python_code
+  Duration: 162.8196 seconds
+
+Method: test_generated_code
+  Duration: 8.7551 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 412.9012 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7577 tokens
+  Costs total: $0.0061
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1669 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5737 tokens
+  Costs total: $0.0355
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 9324 tokens
+  Costs total: $0.0711
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7025 tokens
+  Costs total: $0.0484
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5581 tokens
+  Costs total: $0.0410
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2060 tokens
+  Costs total: $0.0079
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2264 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4245 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3972 tokens
+  Costs total: $0.0235
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8620 tokens
+  Costs total: $0.0627
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3078 tokens
+  Costs total: $0.0106
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3512 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 8433 tokens
+  Costs total: $0.0032
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5663 tokens
+  Costs total: $0.0330
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5884 tokens
+  Costs total: $0.0436
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2075 tokens
+  Costs total: $0.0076
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2298 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3657 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4137 tokens
+  Costs total: $0.0255
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question="What are the different analytical methods used to test the 'Feinstes Wiesenstreu' sample?" visualization="Bar chart of the count of records grouped by 'Methode'." rationale="This dataset contains 104 different tests on a single sample. Visualizing the frequency of each 'Methode' helps the user understand the diversity of the laboratory analysis (e.g., Gamma spectrometry vs. HRGC-MS) and which techniques were most heavily utilized in this study."
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+try:
+    data_path = os.path.join('.', 'src', 'resources', 'data', 'study', '137336', 'dataset.csv')
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+eda_missing = df.isna().mean()
+num_cols = [c for c in df.columns if pd.api.types.is_numeric_dtype(df[c])]
+eda_describe = df[num_cols].describe().T if len(num_cols) > 0 else pd.DataFrame()
+
+col = 'Methode'
+if col not in df.columns:
+    print('Spalte Methode nicht gefunden')
+    sys.exit(1)
+
+m = df[col].astype(str).str.strip()
+m = m.replace({'': np.nan, 'nan': np.nan, 'None': np.nan})
+m = m.fillna('Unbekannt/fehlend')
+vc = m.value_counts(dropna=False)
+unique_methods = vc.shape[0]
+max_categories = 12
+if unique_methods > max_categories:
+    top = vc.iloc[:max_categories]
+    other_sum = int(vc.iloc[max_categories:].sum())
+    plot_df = top.reset_index()
+    plot_df.columns = ['Methode', 'Anzahl']
+    if other_sum > 0:
+        plot_df = pd.concat([plot_df, pd.DataFrame({'Methode': ['Weitere Methoden'], 'Anzahl': [other_sum]})], ignore_index=True)
+else:
+    plot_df = vc.reset_index()
+    plot_df.columns = ['Methode', 'Anzahl']
+
+plot_df = plot_df.sort_values('Anzahl', ascending=True)
+
+sns.set_theme(style='whitegrid', context='talk')
+bar_count = plot_df.shape[0]
+height_per_bar = 0.6
+fig_height = max(6, height_per_bar * bar_count + 2)
+fig, ax = plt.subplots(figsize=(14, fig_height))
+palette = sns.color_palette('viridis', n_colors=bar_count)
+sns.barplot(data=plot_df, y='Methode', x='Anzahl', ax=ax, palette=palette, orient='h')
+ax.set_title('Analytische Methoden für "Feinstes Wiesenstreu" – Anzahl der Prüfungen', pad=16)
+ax.set_xlabel('Anzahl der Prüfungen')
+ax.set_ylabel('Methode')
+for patch in ax.patches:
+    width = patch.get_width()
+    y = patch.get_y() + patch.get_height() / 2
+    ax.text(width + max(plot_df['Anzahl']) * 0.01 + 0.1, y, f'{int(width)}', va='center', ha='left', fontsize=11)
+ax.margins(x=0.05)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+plt.tight_layout()
+
+try:
+    output_dir = os.path.join('.', 'src', 'resources', 'output', '137336')
+    os.makedirs(output_dir, exist_ok=True)
+    out_path = os.path.join(output_dir, '0_methoden_haeufigkeit.png')
+    fig.savefig(out_path, dpi=300, bbox_inches='tight')
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question="Which specific 'Pruefmerkmal' (test characteristics) yielded detectable numerical results?" visualization="Table or Bar chart showing 'Pruefmerkmal' and 'Ergebnis' for all rows where 'Ergebnis' is not 'n.n.'." rationale="Since the 'Ergebnis' column is highly sparse and contains many 'n.n.' (not detectable) values, a table or filtered bar chart showing only the 'Pruefmerkmal' where 'Ergebnis' is a numerical value (like Potassium-40 at 317 Bq/kg) is crucial for identifying the actual findings of the study."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+try:
+    df = pd.read_csv(r'./src/resources/data/study\137336\dataset.csv', sep=',', encoding='utf-8')
+    for col in ['Ergebnis', 'Pruefmerkmal', 'Einheit']:
+        if col not in df.columns:
+            raise ValueError('Erforderliche Spalte fehlt: ' + col)
+    df['Ergebnis_raw'] = df['Ergebnis']
+    erg = df['Ergebnis_raw'].astype(str).str.strip().str.replace('\xa0', ' ', regex=False)
+    erg_lower = erg.str.lower().str.replace(' ', '', regex=False)
+    mask_missing = df['Ergebnis_raw'].isna()
+    mask_nn = erg_lower.str.contains('n.n') | erg_lower.eq('nn') | erg_lower.eq('n.n.') | erg_lower.eq('n.n')
+    mask_censored = erg.str.startswith('<') | erg.str.startswith('>')
+    numeric_candidates = ~(mask_missing | mask_nn | mask_censored)
+    erg_num_str = erg.where(numeric_candidates, None)
+    erg_num_str = erg_num_str.str.replace(',', '.', regex=False)
+    erg_num = pd.to_numeric(erg_num_str, errors='coerce')
+    df['Ergebnis_num'] = erg_num
+    detectable_df = df[df['Ergebnis_num'].notna()].copy()
+    detectable_df['Pruefmerkmal'] = detectable_df['Pruefmerkmal'].astype(str).str.strip()
+    detectable_df['Einheit'] = detectable_df['Einheit'].astype(str).str.strip()
+    detectable_df['Label'] = detectable_df['Pruefmerkmal'] + ' [' + detectable_df['Einheit'] + ']'
+    detectable_df = detectable_df.sort_values('Ergebnis_num', ascending=True)
+    total_n = len(df)
+    nn_n = int(mask_nn.sum())
+    cens_n = int(mask_censored.sum())
+    num_n = int(detectable_df.shape[0])
+    miss_n = int(mask_missing.sum())
+    num_zero_n = int((detectable_df['Ergebnis_num'] == 0).sum())
+    units = detectable_df['Einheit'].fillna('k.A.').astype(str)
+    unique_units = units.unique().tolist()
+    if len(unique_units) <= 10:
+        palette = sns.color_palette('Set2', n_colors=len(unique_units))
+    elif len(unique_units) <= 20:
+        palette = sns.color_palette('tab20', n_colors=len(unique_units))
+    else:
+        palette = sns.color_palette('hls', n_colors=len(unique_units))
+    color_map = {u: palette[i % len(palette)] for i, u in enumerate(unique_units)}
+    colors = [color_map[u] for u in units]
+    sns.set_theme(style='whitegrid', font_scale=1.0)
+    if num_n > 0:
+        n_bars = detectable_df.shape[0]
+        height = min(1.5 + 0.35 * n_bars, 18)
+        fig, ax = plt.subplots(figsize=(12, height))
+        y_pos = np.arange(n_bars)
+        values = detectable_df['Ergebnis_num'].values
+        labels = detectable_df['Label'].values
+        ax.barh(y_pos, values, color=colors, edgecolor='black', linewidth=0.3)
+        ax.set_yticks(y_pos)
+        ax.set_yticklabels(labels, fontsize=9)
+        ax.invert_yaxis()
+        vmin = np.nanmin(values)
+        vmax = np.nanmax(values)
+        use_log = (vmin > 0) and (vmax / max(vmin, 1e-12) > 100)
+        if use_log:
+            ax.set_xscale('log')
+        ax.set_xlabel('Ergebnis (numerisch; Einheiten nach Farbe)', fontsize=11)
+        ax.set_title('Nachweisbare numerische Ergebnisse je Prüfmerkmal\nFeinstes Wiesenstreu, Probe 201600429', fontsize=13, pad=12)
+        handles = []
+        from matplotlib.patches import Patch
+        for u in unique_units:
+            handles.append(Patch(facecolor=color_map[u], edgecolor='black', label=u))
+        leg = ax.legend(handles=handles, title='Einheit', loc='lower right', fontsize=9, title_fontsize=10, frameon=True)
+        ax.grid(True, axis='x', linestyle='--', alpha=0.3)
+        if n_bars <= 30:
+            for i, v in enumerate(values):
+                txt = ('{:.3g} ' + detectable_df.iloc[i]['Einheit']).format(v)
+                xoff = v * 0.01 if (use_log and v > 0) else (vmax * 0.01 if vmax > 0 else 0.05)
+                ax.text(v + (xoff if not np.isnan(v) else 0), i, txt, va='center', ha='left', fontsize=8, color='black')
+        summary = (
+            f'Anzahl Prüfmerkmale gesamt: {total_n}\n'
+            f'Numerische Werte: {num_n} ({(num_n/total_n*100):.1f}%)\n'
+            f'Werte mit Nachweisgrenze (<,>): {cens_n} ({(cens_n/total_n*100):.1f}%)\n'
+            f"'n.n.' (nicht nachweisbar): {nn_n} ({(nn_n/total_n*100):.1f}%)\n"
+            f'Fehlende Angaben: {miss_n} ({(miss_n/total_n*100):.1f}%)\n'
+            f'Numerische Nullen: {num_zero_n}'
+        )
+        ax.text(0.99, 0.02, summary, transform=ax.transAxes, ha='right', va='bottom', fontsize=9,
+                bbox=dict(boxstyle='round,pad=0.4', fc='white', ec='gray', alpha=0.9))
+        warn = 'Hinweis: Unterschiedliche Einheiten; Werte sind einheitenübergreifend nicht direkt vergleichbar.'
+        ax.text(0.01, 1.02, warn, transform=ax.transAxes, ha='left', va='bottom', fontsize=9, color='dimgray')
+        plt.tight_layout()
+        plt.savefig(r'./src/resources/output\137336/1_detectable_results.png', dpi=200, bbox_inches='tight')
+        plt.close(fig)
+    else:
+        subset = df[~mask_nn & ~mask_missing].copy()
+        subset = subset[['Pruefmerkmal', 'Ergebnis', 'Einheit']].head(25)
+        if subset.empty:
+            subset = df[['Pruefmerkmal', 'Ergebnis', 'Einheit']].head(10)
+        data_table = subset.values.tolist()
+        col_labels = ['Prüfmerkmal', 'Ergebnis', 'Einheit']
+        fig, ax = plt.subplots(figsize=(12, 1 + 0.4 * (len(data_table) + 1)))
+        ax.axis('off')
+        tbl = ax.table(cellText=data_table, colLabels=col_labels, loc='center', cellLoc='left')
+        tbl.auto_set_font_size(False)
+        tbl.set_fontsize(9)
+        tbl.scale(1, 1.2)
+        ax.set_title('Prüfmerkmale mit angegebenem Ergebnis (keine numerischen Werte gefunden)\nFeinstes Wiesenstreu, Probe 201600429', fontsize=13, pad=12)
+        plt.tight_layout()
+        plt.savefig(r'./src/resources/output\137336/1_detectable_results.png', dpi=200, bbox_inches='tight')
+        plt.close(fig)
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the distribution of measurement units used across the 104 tests?' visualization="Bar chart of the count of records grouped by 'Einheit'." rationale="The 'Einheit' column indicates the scale and type of pollutants being measured (e.g., Bq/kg for radioactivity vs. ng/kg for dioxins). Visualizing the distribution of units provides a high-level overview of the different types of contamination being monitored (Radioactivity, Organic Pollutants, or General Chemistry)."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+file_path = r'./src/resources/data/study\137336\dataset.csv'
+output_path = r'./src/resources/output\137336/2_verteilung_einheiten.png'
+
+sns.set_theme(style='whitegrid')
+
+df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+
+df = df.replace(r'^\s*$', np.nan, regex=True)
+
+missing_ratio = df.isna().mean()
+
+if 'Ergebnis' in df.columns:
+    ergebnis_clean = df['Ergebnis'].astype(str).str.strip()
+    ergebnis_clean = ergebnis_clean.replace(r'^(n\.?n\.?|nn|NA|NaN|null)$', np.nan, regex=True)
+    ergebnis_clean = ergebnis_clean.str.replace('<', '', regex=False).str.replace('>', '', regex=False)
+    ergebnis_clean = ergebnis_clean.str.replace(',', '.', regex=False)
+    ergebnis_num = pd.to_numeric(ergebnis_clean, errors='coerce')
+    ergebnis_stats = ergebnis_num.describe()
+
+if 'Einheit' not in df.columns:
+    raise SystemExit('Spalte "Einheit" fehlt in den Daten.')
+
+einheit_series = df['Einheit'].copy()
+einheit_series = einheit_series.astype(str).str.strip()
+einheit_series = einheit_series.replace(['', 'nan', 'None'], np.nan)
+einheit_series = einheit_series.str.replace(r'\s*/\s*', '/', regex=True)
+einheit_series = einheit_series.fillna('Unbekannt')
+
+counts = einheit_series.value_counts(dropna=False)
+order = counts.index.tolist()
+counts_df = counts.reset_index()
+counts_df.columns = ['Einheit', 'Anzahl']
+
+n_total = len(einheit_series)
+
+fig_width = max(8, min(0.7 * len(order) + 2, 22))
+fig_height = 6
+fig, ax = plt.subplots(figsize=(fig_width, fig_height))
+sns.barplot(data=counts_df, x='Einheit', y='Anzahl', order=order, palette='viridis', ax=ax)
+ax.set_xlabel('Messeinheit')
+ax.set_ylabel('Anzahl der Messungen')
+
+häufigste_einheit = counts_df.iloc[0, 0] if len(counts_df) > 0 else ''
+häufigste_wert = counts_df.iloc[0, 1] if len(counts_df) > 0 else 0
+anteil_top = (häufigste_wert / n_total * 100) if n_total > 0 else 0
+ax.set_title(f'Verteilung der Messeinheiten über {n_total} Prüfmerkmale\nHäufigste Einheit: {häufigste_einheit} ({häufigste_wert}, {anteil_top:.1f}%)')
+
+for p in ax.patches:
+    h = p.get_height()
+    if np.isnan(h):
+        continue
+    x = p.get_x() + p.get_width() / 2
+    proz = h / n_total * 100 if n_total > 0 else 0
+    ax.text(x, h + max(counts_df['Anzahl']) * 0.01, f'{int(h)} ({proz:.1f}%)', ha='center', va='bottom', fontsize=9, rotation=0)
+
+plt.xticks(rotation=30, ha='right')
+ax.margins(y=0.1)
+plt.tight_layout()
+plt.savefig(output_path, dpi=200, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+

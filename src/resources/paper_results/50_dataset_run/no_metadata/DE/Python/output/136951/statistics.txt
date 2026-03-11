@@ -1,0 +1,576 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\136951\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-08 15:36:50
+Total Duration: 975.04 seconds
+Total Token Usage: 104848 tokens
+Total Costs: $0.4466
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0096 seconds
+
+Method: analyse_dataset
+  Duration: 0.0065 seconds
+
+Method: llm_generate_summary
+  Duration: 171.0540 seconds
+
+Method: llm_generate_goals
+  Duration: 5.4084 seconds
+
+Method: llm_generate_python_code
+  Duration: 272.7853 seconds
+
+Method: test_generated_code
+  Duration: 8.3320 seconds
+
+Method: llm_regenerate_code
+  Duration: 22.5861 seconds
+
+Method: test_generated_code
+  Duration: 9.9245 seconds
+
+Method: llm_regenerate_code
+  Duration: 7.0949 seconds
+
+Method: test_generated_code
+  Duration: 7.6763 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 470.1640 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2888 tokens
+  Costs total: $0.0036
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1821 tokens
+  Costs total: $0.0020
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5978 tokens
+  Costs total: $0.0441
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5625 tokens
+  Costs total: $0.0409
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6527 tokens
+  Costs total: $0.0498
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 323 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 334 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 322 tokens
+  Costs total: $0.0009
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2596 tokens
+  Costs total: $0.0041
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2472 tokens
+  Costs total: $0.0039
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3266 tokens
+  Costs total: $0.0049
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 330 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 331 tokens
+  Costs total: $0.0009
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2546 tokens
+  Costs total: $0.0041
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 331 tokens
+  Costs total: $0.0009
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6316 tokens
+  Costs total: $0.0428
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2617 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2961 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4874 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5610 tokens
+  Costs total: $0.0358
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6600 tokens
+  Costs total: $0.0460
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2600 tokens
+  Costs total: $0.0085
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2906 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5416 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5522 tokens
+  Costs total: $0.0344
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7087 tokens
+  Costs total: $0.0496
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2694 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3077 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4166 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5690 tokens
+  Costs total: $0.0345
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Welche Prüfmerkmale wurden bei der Analyse der Trinkwasserprobe untersucht und wie lauten die entsprechenden Ergebnisse?' visualization='Balkendiagramm mit Pruefmerkmal auf der x-Achse und Ergebnis auf der y-Achse, wobei die Einheit zur Beschriftung genutzt wird.' rationale='Da der Datensatz nur eine einzige Probe (Hauptprobenummer 201700572) umfasst, ist es für den Nutzer wichtig, auf einen Blick zu sehen, welche unterschiedlichen Dimensionen (Pruefmerkmal) gemessen wurden. Ein Balkendiagramm zeigt hier die Gegenüberstellung von Messdauer und dem radiologischen Befund (Ergebnis) unter Angabe der jeweiligen Einheit. Dies verdeutlicht sofort, dass sowohl ein technischer Parameter als auch ein physikalischer Wert vorliegen.'
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+try:
+    input_path = r'./src/resources/data/study/136951/dataset.csv'
+    output_dir = r'./src/resources/output/136951'
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # The error 'utf-8' codec can't decode byte 0xfc indicates Latin-1 (ISO-8859-1) or cp1252 encoding (0xfc is 'ü')
+    # We try 'latin-1' which is common for German datasets containing umlauts.
+    try:
+        df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+    except UnicodeDecodeError:
+        df = pd.read_csv(input_path, sep=',', encoding='latin-1')
+
+    df.columns = [str(c) for c in df.columns]
+    
+    # Data Preparation
+    df_vis = df[['Pruefmerkmal', 'Ergebnis', 'Einheit']].copy()
+    
+    # Clean 'Ergebnis' for numeric plotting
+    df_vis['Ergebnis_str'] = df_vis['Ergebnis'].astype(str)
+    df_vis['censored'] = df_vis['Ergebnis_str'].str.contains('<', na=False)
+    
+    # Replace German decimal comma with dot and remove comparison operators
+    df_vis['Wert'] = df_vis['Ergebnis_str'].str.replace(',', '.', regex=False)
+    df_vis['Wert'] = df_vis['Wert'].str.replace('<', '', regex=False).str.replace('>', '', regex=False)
+    df_vis['Wert'] = pd.to_numeric(df_vis['Wert'], errors='coerce')
+    
+    # Drop rows where we can't get a numeric value or label
+    df_vis = df_vis.dropna(subset=['Pruefmerkmal', 'Wert'])
+    
+    # Create a label combining result and unit
+    df_vis['Label'] = (df_vis['Ergebnis'].astype(str) + ' ' + df_vis['Einheit'].astype(str)).str.strip()
+    
+    # Visualization
+    sns.set_theme(style='whitegrid', context='talk')
+    plt.figure(figsize=(10, 7))
+    
+    # Use a barplot
+    ax = sns.barplot(
+        data=df_vis, 
+        x='Pruefmerkmal', 
+        y='Wert', 
+        palette='viridis'
+    )
+    
+    # Use log scale if values differ significantly in magnitude
+    if df_vis['Wert'].max() / (df_vis['Wert'].min() + 1e-9) > 100:
+        ax.set_yscale('log')
+        ax.set_ylabel('Ergebnis (log-Skala)')
+    else:
+        ax.set_ylabel('Ergebnis')
+
+    ax.set_xlabel('Prüfmerkmal')
+    
+    title_main = 'Prüfmerkmale und Ergebnisse der Trinkwasseranalyse\nProbe: 201700572 (Radon-LSC)'
+    ax.set_title(title_main, pad=20)
+    
+    # Add labels on top of bars
+    for i, p in enumerate(ax.patches):
+        h = p.get_height()
+        if not np.isfinite(h) or h <= 0:
+            # For log scale or zero values, place label at bottom
+            y_pos = 0.1 if ax.get_yscale() == 'log' else 0.1
+        else:
+            y_pos = h * 1.05 if ax.get_yscale() != 'log' else h * 1.1
+            
+        x = p.get_x() + p.get_width() / 2
+        label = df_vis.iloc[i]['Label']
+        ax.text(x, y_pos, label, ha='center', va='bottom', fontsize=12, fontweight='bold')
+        
+        # Hatching for censored data (e.g. < 0.5)
+        if i < len(df_vis) and df_vis.iloc[i]['censored']:
+            p.set_hatch('//')
+            p.set_alpha(0.7)
+
+    plt.tight_layout()
+    plot_path = os.path.join(output_dir, '0_pruefmerkmal_ergebnis.png')
+    plt.savefig(plot_path, dpi=200)
+    plt.close()
+
+except Exception as e:
+    print(f"An error occurred: {e}")
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie ist die Verteilung der Messwerte im Verhältnis zur angewandten Methode für diese Probe?' visualization='Tabelle oder gruppiertes Balkendiagramm mit den Spalten Methode, Pruefmerkmal und Ergebnis.' rationale='Diese Visualisierung verknüpft die Methode (Radon-LSC) mit den Feldern Pruefmerkmal und Ergebnis. Der Nutzer erkennt dadurch, dass für die Methode Radon-LSC spezifische Werte wie die Messzeit in Sekunden und die Aktivität in Bq/l erfasst wurden. Es hilft zu verstehen, dass die Methode direkt die Art der Ergebnisse beeinflusst.'
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+
+try:
+    # Pfad zur Datei
+    input_path = './src/resources/data/study/136951/dataset.csv'
+    
+    if not os.path.exists(input_path):
+        input_path = 'dataset.csv'
+
+    # BEHEBUNG DES FEHLERS: 'utf-8' codec can't decode byte 0xfc (ü)
+    # Da die Daten deutsche Umlaute enthalten (Prüfmerkmal), ist 'latin-1' oder 'iso-8859-1' oft die richtige Wahl,
+    # wenn utf-8 fehlschlägt.
+    try:
+        df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+    except UnicodeDecodeError:
+        df = pd.read_csv(input_path, sep=',', encoding='latin-1')
+    
+    # Datenbereinigung: Whitespace-Strings zu NaN
+    df = df.replace(r'^\s*$', np.nan, regex=True)
+    
+    # Sicherstellen, dass notwendige Spalten existieren (Case-insensitive Check)
+    required_cols = ['Methode', 'Pruefmerkmal', 'Ergebnis', 'Einheit']
+    # Mapping für flexiblere Spaltennamen (falls Pruefmerkmal vs Prüfmerkmal)
+    col_map = {c.lower(): c for c in df.columns}
+    
+    final_cols = []
+    for col in required_cols:
+        found = False
+        for actual_col in df.columns:
+            if col.lower() == actual_col.lower():
+                final_cols.append(actual_col)
+                found = True
+                break
+        if not found:
+            df[col] = 'k.A.'
+            final_cols.append(col)
+
+    # Ergebnis-Anzeige formatieren (Wert + Einheit)
+    def format_result(row):
+        res = str(row[final_cols[2]]).strip()
+        einheit = str(row[final_cols[3]]).strip()
+        if res.lower() in ['nan', '', 'none']:
+            return 'k.A.'
+        if einheit.lower() not in ['nan', '', 'none']:
+            return f"{res} {einheit}"
+        return res
+
+    df['Ergebnis_Anzeige'] = df.apply(format_result, axis=1)
+    
+    # Relevante Daten für die Tabelle extrahieren
+    tdf = df[[final_cols[0], final_cols[1], 'Ergebnis_Anzeige']].copy()
+    tdf.columns = ['Methode', 'Prüfmerkmal', 'Ergebnis']
+    
+    # Fehlende Werte füllen
+    tdf = tdf.fillna('k.A.')
+
+    # Visualisierung als Tabelle
+    rows_count = len(tdf)
+    # Dynamische Höhe basierend auf Zeilenanzahl
+    fig_h = max(2, 1.0 + 0.4 * rows_count)
+    fig_w = 10
+    
+    fig, ax = plt.subplots(figsize=(fig_w, fig_h), dpi=200)
+    ax.axis('off')
+
+    # Tabelle erstellen
+    table = ax.table(
+        cellText=tdf.values, 
+        colLabels=tdf.columns, 
+        loc='center', 
+        cellLoc='left'
+    )
+
+    # Tabellen-Styling
+    table.auto_set_font_size(False)
+    table.set_fontsize(10)
+    table.scale(1, 1.5) 
+
+    for (row, col), cell in table.get_celld().items():
+        if row == 0:
+            cell.set_text_props(weight='bold', color='white')
+            cell.set_facecolor('#2c3e50') 
+        else:
+            cell.set_facecolor('#ffffff' if row % 2 != 0 else '#f9f9f9')
+        cell.set_edgecolor('#dddddd')
+
+    plt.title('Verteilung der Messwerte nach Methode und Prüfmerkmal', 
+              fontsize=12, weight='bold', pad=10)
+
+    # Speicherpfad
+    save_dir = './src/resources/output/136951'
+    os.makedirs(save_dir, exist_ok=True)
+    save_path = os.path.join(save_dir, '1_methode_pruefmerkmal_ergebnis_tabelle.png')
+    
+    plt.savefig(save_path, bbox_inches='tight', dpi=300)
+    plt.close(fig)
+
+except Exception as e:
+    print(f"Fehler aufgetreten: {str(e)}")
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='An welchem Ort und zu welchem Zeitpunkt wurde die Probe entnommen und was war der Umweltbereich?' visualization='Infokarte oder Tabelle mit den Feldern Entnahmestelle, Probenahme_Zeitraum und Umweltbereich.' rationale='Für einen Open-Data Nutzer ist der Kontext der Probenahme (Wo, Wann, Was) essenziell. Durch die Darstellung von Entnahmestelle, Probenahme_Zeitraum und Umweltbereich in einer Übersicht wird der dokumentarische Charakter des Datensatzes unterstrichen. Da es sich um einen Einzelwert handelt, dient dies der schnellen geografischen und zeitlichen Einordnung der Untersuchung im Wasserwerk Großensee.'
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Behebung des Encoding-Fehlers: 'latin-1' oder 'iso-8859-1' wird oft für deutsche Datensätze verwendet,
+# wenn utf-8 fehlschlägt (wegen Umlauten wie ü, ä, ö).
+input_path = './src/resources/data/study/136951/dataset.csv'
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+except UnicodeDecodeError:
+    try:
+        df = pd.read_csv(input_path, sep=',', encoding='latin-1')
+    except Exception as e:
+        sys.stderr.write(f"Fehler beim Laden der Datei: {str(e)}")
+        sys.exit(1)
+except Exception as e:
+    sys.stderr.write(f"Fehler beim Laden der Datei: {str(e)}")
+    sys.exit(1)
+
+try:
+    # Hilfsfunktion zur Extraktion des ersten gültigen Wertes
+    def first_non_null(series):
+        if series is None or series.empty:
+            return None
+        s = series.dropna()
+        if s.empty:
+            return None
+        # Entferne leere Strings oder 'nan' Strings
+        v = s.astype(str).str.strip()
+        v = v[v != '']
+        v = v[v.str.lower() != 'nan']
+        if v.empty:
+            return None
+        return v.iloc[0]
+
+    # Datenextraktion
+    beg_date = first_non_null(df.get('Probenahme_Beginn_Datum', pd.Series(dtype=object)))
+    beg_time = first_non_null(df.get('Probenahme_Beginn_Zeit', pd.Series(dtype=object)))
+    end_date = first_non_null(df.get('Probenahme_Ende_Datum', pd.Series(dtype=object)))
+    end_time = first_non_null(df.get('Probenahme_Ende_Zeit', pd.Series(dtype=object)))
+
+    def combine_display(date_str, time_str):
+        if not date_str:
+            return None
+        if not time_str:
+            return str(date_str)
+        return f"{date_str} {time_str}"
+
+    start_disp = combine_display(beg_date, beg_time)
+    end_disp = combine_display(end_date, end_time)
+
+    # Zeitraum-Logik
+    if start_disp and end_disp:
+        zeitraum = start_disp if start_disp == end_disp else f"{start_disp} – {end_disp}"
+    elif start_disp:
+        zeitraum = start_disp
+    elif end_disp:
+        zeitraum = end_disp
+    else:
+        zeitraum = 'k.A.'
+
+    entnahmestelle = first_non_null(df.get('Entnahmestelle', pd.Series(dtype=object))) or 'k.A.'
+    umweltbereich = first_non_null(df.get('Umweltbereich', pd.Series(dtype=object))) or 'k.A.'
+
+    # Erstellung des Info-DataFrames für die Tabelle
+    info_df = pd.DataFrame([
+        {
+            'Entnahmestelle': entnahmestelle,
+            'Probenahme_Zeitraum': zeitraum,
+            'Umweltbereich': umweltbereich,
+        }
+    ])
+
+    # Visualisierung
+    sns.set_theme(context='talk', style='white')
+    fig, ax = plt.subplots(figsize=(12, 3), dpi=150)
+    ax.axis('off')
+
+    header_colors = ['#1f77b4', '#1f77b4', '#1f77b4']
+    table = ax.table(
+        cellText=info_df.values,
+        colLabels=info_df.columns,
+        loc='center',
+        cellLoc='center',
+        colLoc='center',
+        colColours=header_colors
+    )
+
+    table.auto_set_font_size(False)
+    table.set_fontsize(12)
+    table.scale(1, 2.5)
+
+    # Styling der Zellen
+    for (row, col), cell in table.get_celld().items():
+        if row == 0:
+            cell.set_text_props(color='white', weight='bold')
+        else:
+            cell.set_facecolor('#f9f9f9')
+            cell.set_edgecolor('#dddddd')
+
+    plt.title('Kontext der Probenahme: Ort, Zeitraum und Umweltbereich', 
+              fontsize=16, fontweight='bold', pad=20)
+
+    # Speicherpfad sicherstellen
+    output_dir = os.path.join('.', 'src', 'resources', 'output', '136951')
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, '2_probenahme_uebersicht.png')
+    
+    plt.savefig(output_path, bbox_inches='tight')
+    plt.close(fig)
+    
+    print(f"Visualisierung erfolgreich gespeichert unter: {output_path}")
+
+except Exception as e:
+    sys.stderr.write(f"Fehler bei der Verarbeitung: {str(e)}")
+    sys.exit(1)
+
+
+-> SEVQ:
+
+

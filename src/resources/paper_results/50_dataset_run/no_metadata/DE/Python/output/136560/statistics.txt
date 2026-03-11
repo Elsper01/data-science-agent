@@ -1,0 +1,442 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\136560\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-08 15:36:15
+Total Duration: 943.38 seconds
+Total Token Usage: 98463 tokens
+Total Costs: $0.4523
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0051 seconds
+
+Method: analyse_dataset
+  Duration: 0.0068 seconds
+
+Method: llm_generate_summary
+  Duration: 182.9228 seconds
+
+Method: llm_generate_goals
+  Duration: 4.4227 seconds
+
+Method: llm_generate_python_code
+  Duration: 299.8570 seconds
+
+Method: test_generated_code
+  Duration: 8.5364 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 447.6304 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3106 tokens
+  Costs total: $0.0036
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1827 tokens
+  Costs total: $0.0021
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5799 tokens
+  Costs total: $0.0411
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8346 tokens
+  Costs total: $0.0664
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6724 tokens
+  Costs total: $0.0504
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 334 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5663 tokens
+  Costs total: $0.0370
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2563 tokens
+  Costs total: $0.0097
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2983 tokens
+  Costs total: $0.0030
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4285 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5326 tokens
+  Costs total: $0.0324
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8878 tokens
+  Costs total: $0.0615
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 3428 tokens
+  Costs total: $0.0106
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4019 tokens
+  Costs total: $0.0033
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5818 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 6676 tokens
+  Costs total: $0.0386
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6384 tokens
+  Costs total: $0.0427
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2757 tokens
+  Costs total: $0.0091
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2965 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4568 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5349 tokens
+  Costs total: $0.0305
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie unterscheiden sich die Messzeiten für die verschiedenen Untersuchungsmethoden?' visualization="Balkendiagramm mit 'Methode' auf der x-Achse und 'Ergebnis' (gefiltert auf 'Pruefmerkmal' == 'Messzeit') auf der y-Achse." rationale="Durch die Filterung der Spalte 'Pruefmerkmal' nach 'Messzeit' und den Vergleich mit der Spalte 'Methode' kann der Nutzer sehen, wie viel Zeit (in der Spalte 'Ergebnis' mit der 'Einheit' s) für die Analyse von Radon-222 im Vergleich zur Gesamt-Alpha-Aktivität aufgewendet wurde. Dies gibt Aufschluss über die Intensität der jeweiligen Laboruntersuchung."
+
+-> Code:
+import sys
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+try:
+    input_path = './src/resources/data/study\\136560/dataset.csv'
+    output_dir = './src/resources/output\\136560'
+    plot_name = '0_messzeit_nach_methode.png'
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8', dtype=str)
+    df.columns = [c.strip() for c in df.columns]
+    for c in df.columns:
+        if df[c].dtype == object:
+            df[c] = df[c].astype(str).str.strip()
+    df_eda = df.copy()
+    df_eda['Ergebnis_clean'] = df_eda['Ergebnis'].str.replace('\u00a0', ' ', regex=False)
+    df_eda['Ergebnis_clean'] = df_eda['Ergebnis_clean'].replace({'n.n.': np.nan, 'N.N.': np.nan, 'nn': np.nan, 'NN': np.nan})
+    df_eda['Ergebnis_clean'] = df_eda['Ergebnis_clean'].str.replace(',', '.', regex=False)
+    df_eda['Ergebnis_num'] = pd.to_numeric(df_eda['Ergebnis_clean'], errors='coerce')
+    miss = df_eda.replace({'': np.nan}).isna().mean().rename('Anteil_fehlend')
+    miss.to_frame().to_csv(os.path.join(output_dir, '0_eda_anteil_fehlender_werte.csv'), encoding='utf-8')
+    numeric_summary = df_eda[['Ergebnis_num']].describe().T
+    numeric_summary.to_csv(os.path.join(output_dir, '0_eda_numerische_zusammenfassung.csv'), encoding='utf-8')
+    df_time = df_eda[df_eda['Pruefmerkmal'].str.lower() == 'messzeit'].copy()
+    if 'Einheit' in df_time.columns:
+        df_time = df_time[df_time['Einheit'].str.lower() == 's']
+    df_time = df_time.dropna(subset=['Ergebnis_num'])
+    if df_time.empty:
+        raise ValueError('Keine Messzeit-Daten mit Einheit s gefunden.')
+    times = df_time.groupby('Methode', as_index=False)['Ergebnis_num'].max()
+    times = times.rename(columns={'Ergebnis_num': 'Messzeit_s'}).sort_values('Messzeit_s', ascending=False)
+    probe_id = None
+    if 'Hauptprobenummer' in df.columns and not df['Hauptprobenummer'].isna().all():
+        probe_id = str(df['Hauptprobenummer'].dropna().iloc[0])
+    sns.set_theme(style='whitegrid', context='talk')
+    plt.figure(figsize=(9, 5.5))
+    ax = sns.barplot(data=times, x='Methode', y='Messzeit_s', palette=['#4C78A8', '#F58518', '#54A24B', '#E45756'][:len(times)])
+    ax.set_xlabel('Untersuchungsmethode')
+    ax.set_ylabel('Messzeit (s)')
+    if probe_id:
+        ax.set_title(f'Vergleich der Messzeiten nach Untersuchungsmethode\nTrinkwasserprobe {probe_id}')
+    else:
+        ax.set_title('Vergleich der Messzeiten nach Untersuchungsmethode')
+    for p in ax.patches:
+        val = p.get_height()
+        label = f"{int(round(val)):,}".replace(',', '.') + ' s'
+        ax.annotate(label, (p.get_x() + p.get_width() / 2, val), ha='center', va='bottom', xytext=(0, 6), textcoords='offset points', fontsize=11)
+    plt.tight_layout()
+    plt.savefig(os.path.join(output_dir, plot_name), dpi=300, bbox_inches='tight')
+    plt.close()
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Welche Aktivitätskonzentrationen wurden für die untersuchten Parameter gemessen?' visualization="Tabelle oder gruppiertes Balkendiagramm mit 'Methode' und 'Ergebnis', wobei 'Pruefmerkmal' auf 'Aktivitätskonzentration' eingeschränkt wird." rationale="Diese Visualisierung nutzt die Spalten 'Methode' und 'Ergebnis' (gefiltert auf 'Pruefmerkmal' == 'Aktivitätskonzentration'), um die radiologischen Befunde direkt gegenüberzustellen. Da die Gesamt-Alpha-Aktivität als 'n.n.' (nicht nachweisbar) in der Spalte 'Ergebnis' geführt wird, verdeutlicht dies den signifikanten Nachweis von Radon-222 (4,04 Bq/l) im Trinkwasser."
+
+-> Code:
+import os
+import sys
+import re
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib.patches import Patch
+
+try:
+    data_path = os.path.normpath('./src/resources/data/study\\136560\\dataset.csv')
+    output_dir = os.path.normpath('./src/resources/output\\136560')
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+    df_columns = [c for c in df.columns]
+    df_eda = df.copy()
+    missing = df_eda.isna().sum().to_frame('fehlend_anzahl')
+    missing['fehlend_anteil'] = (missing['fehlend_anzahl'] / max(len(df_eda), 1)).round(6)
+    missing.to_csv(os.path.join(output_dir, 'eda_missing_values.csv'), encoding='utf-8')
+    def to_num_series(s):
+        s_str = s.astype(str).str.replace(',', '.', regex=False)
+        s_str = s_str.str.replace(r'[^0-9eE+\-\.]', '', regex=True)
+        return pd.to_numeric(s_str, errors='coerce')
+    df_eda['Ergebnis_num_all'] = to_num_series(df_eda['Ergebnis']) if 'Ergebnis' in df_columns else np.nan
+    numeric_cols = list(df_eda.select_dtypes(include=[np.number]).columns)
+    if 'Ergebnis_num_all' in df_eda.columns and 'Ergebnis_num_all' not in numeric_cols:
+        numeric_cols.append('Ergebnis_num_all')
+    if len(numeric_cols) > 0:
+        desc = df_eda[numeric_cols].describe(include='all').T
+        desc.to_csv(os.path.join(output_dir, 'eda_numeric_summary.csv'), encoding='utf-8')
+        corr = df_eda[numeric_cols].corr(min_periods=1)
+        corr.to_csv(os.path.join(output_dir, 'eda_correlation_matrix.csv'), encoding='utf-8')
+    df_plot = df.copy()
+    for col in ['Einheit', 'Pruefmerkmal', 'Methode']:
+        if col in df_plot.columns:
+            df_plot[col] = df_plot[col].astype(str)
+    if 'Einheit' in df_plot.columns:
+        mask_unit = df_plot['Einheit'].str.contains('bq', case=False, na=False)
+    else:
+        mask_unit = pd.Series([False] * len(df_plot))
+    if 'Pruefmerkmal' in df_plot.columns:
+        mask_not_time = ~df_plot['Pruefmerkmal'].str.contains('messzeit', case=False, na=False)
+    else:
+        mask_not_time = pd.Series([True] * len(df_plot))
+    df_act = df_plot[mask_unit & mask_not_time].copy()
+    if 'Ergebnis' in df_act.columns:
+        original_result = df_act['Ergebnis'].astype(str)
+    else:
+        original_result = pd.Series([''] * len(df_act))
+    nd_pattern = r'(^\s*n\.?\s*n\.?\s*\.?\s*$)|(^\s*<\s*.*$)'
+    is_nd = original_result.str.contains(nd_pattern, regex=True, case=False, na=False)
+    cleaned = original_result.str.replace(',', '.', regex=False)
+    cleaned = cleaned.str.replace(r'[^0-9eE+\-\.]', '', regex=True)
+    values_num = pd.to_numeric(cleaned, errors='coerce')
+    df_act['wert_num'] = values_num
+    df_act['ist_nd'] = is_nd | df_act['wert_num'].isna()
+    df_act['wert_plot'] = df_act.apply(lambda r: 0.0 if r['ist_nd'] else float(r['wert_num']), axis=1)
+    if 'Methode' in df_act.columns:
+        x_labels = df_act['Methode'].astype(str).tolist()
+    else:
+        x_labels = [f'Parameter {i+1}' for i in range(len(df_act))]
+    colors = ['#9e9e9e' if nd else '#1f77b4' for nd in df_act['ist_nd'].tolist()]
+    hatches = ['//' if nd else '' for nd in df_act['ist_nd'].tolist()]
+    sns.set_theme(style='whitegrid', context='talk')
+    fig, ax = plt.subplots(figsize=(9, 5), dpi=150)
+    x = np.arange(len(df_act))
+    bars = ax.bar(x, df_act['wert_plot'].values, color=colors, edgecolor='#333333', linewidth=1.0)
+    for bar, hatch in zip(bars, hatches):
+        bar.set_hatch(hatch)
+    y_max = float(np.nanmax(df_act['wert_plot'].values)) if len(df_act) > 0 else 0.0
+    y_max = 1.0 if y_max <= 0.0 else y_max * 1.3
+    ax.set_ylim(0, y_max)
+    ax.set_xticks(x)
+    ax.set_xticklabels(x_labels, rotation=0, ha='center')
+    ax.set_ylabel('Aktivitätskonzentration [Bq/l]')
+    probe_nr = None
+    datum = None
+    if 'Hauptprobenummer' in df.columns and len(df['Hauptprobenummer'].unique()) > 0:
+        probe_nr = str(df['Hauptprobenummer'].dropna().astype(str).iloc[0])
+    if 'Probenahme_Beginn_Datum' in df.columns and len(df['Probenahme_Beginn_Datum'].dropna()) > 0:
+        datum = str(df['Probenahme_Beginn_Datum'].dropna().astype(str).iloc[0])
+    title_parts = ['Aktivitätskonzentrationen nach Methode']
+    if probe_nr is not None:
+        title_parts.append(f'Trinkwasserprobe {probe_nr}')
+    if datum is not None:
+        title_parts.append(f'{datum}')
+    ax.set_title(' – '.join(title_parts))
+    for i, bar in enumerate(bars):
+        height = bar.get_height()
+        if i < len(df_act):
+            if bool(df_act['ist_nd'].iloc[i]):
+                label = 'n.n.' if not isinstance(original_result.iloc[i], str) or len(original_result.iloc[i].strip()) == 0 else original_result.iloc[i]
+                ax.text(bar.get_x() + bar.get_width() / 2.0, max(height, y_max * 0.03), label, ha='center', va='bottom', fontsize=10, color='#333333')
+            else:
+                val = float(df_act['wert_plot'].iloc[i])
+                txt = (f"{val:,.2f}").replace(',', 'X').replace('.', ',').replace('X', '.')
+                ax.text(bar.get_x() + bar.get_width() / 2.0, height + y_max * 0.03, txt, ha='center', va='bottom', fontsize=10, color='#333333')
+    handles = []
+    labels = []
+    if any(~df_act['ist_nd']):
+        handles.append(Patch(facecolor='#1f77b4', edgecolor='#333333'))
+        labels.append('Nachweis')
+    if any(df_act['ist_nd']):
+        handles.append(Patch(facecolor='#9e9e9e', edgecolor='#333333', hatch='//'))
+        labels.append('Nicht nachweisbar (n.n.)')
+    if len(handles) > 0:
+        ax.legend(handles, labels, frameon=True, loc='upper right')
+    ax.margins(x=0.05)
+    plt.tight_layout()
+    out_path = os.path.join(output_dir, '1_aktivitaetskonzentrationen_balken.png')
+    fig.savefig(out_path, dpi=150, bbox_inches='tight', facecolor='white')
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='An welchem Standort und zu welchem Zeitpunkt wurde die Probe entnommen?' visualization="Infokarte oder einfache Tabelle mit den Feldern 'Entnahmestelle', 'Probenahme_Zeitraum' und 'Umweltbereich'." rationale="Um den Kontext der Messwerte zu verstehen, ist eine Übersicht der Metadaten wichtig. Die Verwendung der Felder 'Entnahmestelle', 'Probenahme_Zeitraum' und 'Umweltbereich' zeigt dem Nutzer sofort, dass es sich um eine spezifische Eigenversorgung handelt. Da alle Werte für die 'Hauptprobenummer' 201700234 identisch sind, dient dies der schnellen geografischen und zeitlichen Einordnung des Datensatzes."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+try:
+    dataset_path = os.path.join('.', 'src', 'resources', 'data', 'study', '136560', 'dataset.csv')
+    df = pd.read_csv(dataset_path, sep=',', encoding='utf-8')
+    df_eda = df.replace({'n.n.': np.nan, 'n. n.': np.nan})
+    _ = df_eda.isna().mean()
+    df_num = df_eda.copy()
+    if 'Ergebnis' in df_num.columns:
+        df_num['Ergebnis_num'] = pd.to_numeric(df_num['Ergebnis'].astype(str).str.replace(',', '.', regex=False), errors='coerce')
+    _ = df_num.select_dtypes(include=[np.number]).describe().T
+    entnahmestelle = ''
+    if 'Entnahmestelle' in df.columns and df['Entnahmestelle'].notna().any():
+        entnahmestelle = str(df['Entnahmestelle'].dropna().astype(str).iloc[0])
+    umweltbereich = ''
+    if 'Umweltbereich' in df.columns and df['Umweltbereich'].notna().any():
+        umweltbereich = str(df['Umweltbereich'].dropna().astype(str).iloc[0])
+    beginn_datum = ''
+    beginn_zeit = ''
+    ende_datum = ''
+    ende_zeit = ''
+    if 'Probenahme_Beginn_Datum' in df.columns and df['Probenahme_Beginn_Datum'].notna().any():
+        beginn_datum = str(df['Probenahme_Beginn_Datum'].dropna().astype(str).iloc[0])
+    if 'Probenahme_Beginn_Zeit' in df.columns and df['Probenahme_Beginn_Zeit'].notna().any():
+        beginn_zeit = str(df['Probenahme_Beginn_Zeit'].dropna().astype(str).iloc[0])
+    if 'Probenahme_Ende_Datum' in df.columns and df['Probenahme_Ende_Datum'].notna().any():
+        ende_datum = str(df['Probenahme_Ende_Datum'].dropna().astype(str).iloc[0])
+    if 'Probenahme_Ende_Zeit' in df.columns and df['Probenahme_Ende_Zeit'].notna().any():
+        ende_zeit = str(df['Probenahme_Ende_Zeit'].dropna().astype(str).iloc[0])
+    start_str = (beginn_datum + ' ' + beginn_zeit).strip()
+    end_str = (ende_datum + ' ' + ende_zeit).strip()
+    start_dt = pd.to_datetime(start_str, dayfirst=True, errors='coerce') if len(start_str.strip()) > 0 else pd.NaT
+    end_dt = pd.to_datetime(end_str, dayfirst=True, errors='coerce') if len(end_str.strip()) > 0 else pd.NaT
+    if pd.notna(start_dt) and pd.notna(end_dt):
+        zeitraum = start_dt.strftime('%d.%m.%Y %H:%M') + ' – ' + end_dt.strftime('%d.%m.%Y %H:%M')
+    else:
+        zeitraum = (start_str + ' – ' + end_str).strip()
+    vis_df = pd.DataFrame({
+        'Entnahmestelle': [entnahmestelle],
+        'Probenahme_Zeitraum': [zeitraum],
+        'Umweltbereich': [umweltbereich]
+    })
+    fig, ax = plt.subplots(figsize=(14, 2.8))
+    ax.axis('off')
+    table = ax.table(cellText=vis_df.values, colLabels=vis_df.columns, cellLoc='left', colLoc='left', loc='center')
+    table.auto_set_font_size(False)
+    table.set_fontsize(12)
+    table.scale(1, 1.8)
+    for (row, col), cell in table.get_celld().items():
+        if row == 0:
+            cell.set_text_props(weight='bold', color='#000000')
+            cell.set_facecolor('#eaeaea')
+        else:
+            cell.set_facecolor('#ffffff')
+    title_text = 'Standort und Zeitpunkt der Probenahme'
+    ax.set_title(title_text, fontsize=14, fontweight='bold', pad=12)
+    output_dir = os.path.join('.', 'src', 'resources', 'output', '136560')
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, '2_info_tabelle.png')
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+

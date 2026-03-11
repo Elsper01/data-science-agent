@@ -1,0 +1,11 @@
+{
+  "min_start_measure": "2026-01-22T10:00:00",
+  "max_start_measure": "2026-01-29T08:00:00",
+  "n_rows": 167,
+  "n_rows_valid_for_plot": 167,
+  "station_ids_unique": 1,
+  "station_names_unique": 1,
+  "value_unit_unique": [
+    "µSv/h"
+  ]
+}

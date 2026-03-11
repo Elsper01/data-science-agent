@@ -1,0 +1,448 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\135982\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 13:36:48
+Total Duration: 872.84 seconds
+Total Token Usage: 96532 tokens
+Total Costs: $0.4152
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0113 seconds
+
+Method: analyse_dataset
+  Duration: 0.0219 seconds
+
+Method: analyse_metadata
+  Duration: 0.0191 seconds
+
+Method: llm_generate_summary
+  Duration: 220.0979 seconds
+
+Method: llm_generate_goals
+  Duration: 3.9919 seconds
+
+Method: llm_generate_python_code
+  Duration: 241.8398 seconds
+
+Method: test_generated_code
+  Duration: 8.5616 seconds
+
+Method: llm_regenerate_code
+  Duration: 8.1637 seconds
+
+Method: test_generated_code
+  Duration: 9.0372 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 381.0962 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7397 tokens
+  Costs total: $0.0061
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1737 tokens
+  Costs total: $0.0018
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6345 tokens
+  Costs total: $0.0419
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7645 tokens
+  Costs total: $0.0550
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6933 tokens
+  Costs total: $0.0479
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 678 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3063 tokens
+  Costs total: $0.0046
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5433 tokens
+  Costs total: $0.0368
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2399 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2691 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4234 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4644 tokens
+  Costs total: $0.0290
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8037 tokens
+  Costs total: $0.0623
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2430 tokens
+  Costs total: $0.0088
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2748 tokens
+  Costs total: $0.0024
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6923 tokens
+  Costs total: $0.0028
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4578 tokens
+  Costs total: $0.0269
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4873 tokens
+  Costs total: $0.0334
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2097 tokens
+  Costs total: $0.0078
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2423 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3682 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4184 tokens
+  Costs total: $0.0261
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Which radionuclides were successfully detected in the water sample and at what levels?' visualization="Bar chart of 'Ergebnis' (filtered for numerical values and excluding 'Messzeit') by 'Pruefmerkmal'." rationale="The dataset contains many 'n.n.' (not detectable) results. Identifying the specific 'Pruefmerkmal' (radionuclides) that have numerical values in the 'Ergebnis' column (excluding technical metadata like 'Messzeit') allows users to see the actual radiological footprint of the 'Reinwasser'. A bar chart is the best way to compare these specific activity levels."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import ScalarFormatter
+import os
+
+# Define paths
+data_path = r'./src/resources/data/study/135982/dataset.csv'
+output_path = r'./src/resources/output/135982/0_detektierte_radionuklide.png'
+
+# Ensure output directory exists
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+# Set visual style
+sns.set_theme(style='whitegrid', context='talk')
+
+# Load data
+df = pd.read_csv(data_path, sep=',', encoding='utf-8')
+
+# Clean string columns
+for c in df.columns:
+    if df[c].dtype == object:
+        df[c] = df[c].astype(str).str.strip()
+
+# Identify technical metadata (Messzeit)
+df['is_messzeit'] = df['Pruefmerkmal'].str.contains('Messzeit', case=False, na=False)
+
+# Extract numerical values from 'Ergebnis'
+# Handles commas as decimal separators and scientific notation
+erg_raw = df['Ergebnis'].astype(str).str.strip()
+erg_dot = erg_raw.str.replace(',', '.', regex=False)
+num_extracted = erg_dot.str.extract(r'([+-]?\d*\.?\d+(?:[eE][+-]?\d+)?)')[0]
+df['Ergebnis_num'] = pd.to_numeric(num_extracted, errors='coerce')
+
+# Filter for radionuclides (exclude Messzeit)
+rad_df = df.loc[~df['is_messzeit']].copy()
+rad_df['is_numeric'] = rad_df['Ergebnis_num'].notna()
+
+# Prepare data for plotting: only numeric results, typically in Bq units
+plot_df = rad_df.loc[rad_df['is_numeric']].copy()
+if 'Einheit' in plot_df.columns:
+    # Filter for activity units (Bq/l, Bq/kg, etc.)
+    plot_df = plot_df.loc[plot_df['Einheit'].str.contains('Bq', na=False)]
+
+# Aggregate by radionuclide (Pruefmerkmal)
+plot_df = plot_df[['Pruefmerkmal', 'Ergebnis_num']].groupby('Pruefmerkmal', as_index=False).agg({'Ergebnis_num':'mean'})
+plot_df = plot_df.sort_values('Ergebnis_num', ascending=True)
+
+# Dynamic figure height based on number of items
+fig_height = max(5, 0.6 * max(1, len(plot_df)))
+fig, ax = plt.subplots(figsize=(12, fig_height))
+
+if len(plot_df) > 0:
+    palette = sns.color_palette('viridis', n_colors=len(plot_df))
+    bars = ax.barh(plot_df['Pruefmerkmal'], plot_df['Ergebnis_num'], color=palette)
+    
+    # Add text labels. Note: ax.annotate is used instead of ax.text with xytext to avoid AttributeError
+    for i, v in enumerate(plot_df['Ergebnis_num']):
+        ax.annotate(f"{v:.2e}", 
+                    xy=(v, i), 
+                    xytext=(5, 0), 
+                    textcoords='offset points', 
+                    va='center', 
+                    ha='left', 
+                    fontsize=10)
+else:
+    ax.text(0.5, 0.5, 'Keine nachgewiesenen Radionuklide (numerische Werte) gefunden', 
+            ha='center', va='center', transform=ax.transAxes)
+    ax.set_yticks([])
+
+# Formatting
+ax.set_xlabel('Aktivität (Bq/l)')
+ax.set_ylabel('Radionuklid (Prüfmerkmal)')
+ax.set_title('Nachgewiesene Radionuklide im Reinwasser\nWW Curslack Nord, 24.11.2015', pad=20)
+ax.tick_params(axis='y', labelsize=11)
+
+# Use scientific notation for x-axis if values are very small
+formatter = ScalarFormatter(useMathText=True)
+formatter.set_powerlimits((-3, 3))
+ax.xaxis.set_major_formatter(formatter)
+
+# Add footer with metadata summary
+rad_gesamt = int(len(rad_df))
+rad_num = int(rad_df['is_numeric'].sum())
+rad_nonum = int(rad_gesamt - rad_num)
+footer = f'Datengrundlage: {rad_gesamt} Messgrößen; davon numerisch: {rad_num}, nicht numerisch/n.n.: {rad_nonum}.'
+fig.text(0.01, 0.01, footer, ha='left', va='bottom', fontsize=9, color='gray')
+
+plt.tight_layout(rect=[0, 0.05, 1, 1])
+plt.savefig(output_path, dpi=300, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the distribution of detectable vs. non-detectable results across the tested parameters?' visualization="Bar chart showing the count of 'Ergebnis' grouped by whether the value is 'n.n.' or a numerical detection." rationale="The summary highlights that 39 out of 44 entries are 'n.n.'. Visualizing the count of 'Ergebnis' categories (detectable vs. 'n.n.') across all 'Pruefmerkmal' entries provides an immediate overview of the sample's purity and the sensitivity of the 'IMIS Routinemessprogramm'."
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.rcParams['font.family'] = 'DejaVu Sans'
+
+file_path = r'./src/resources/data/study\135982\dataset.csv'
+output_dir = os.path.normpath(r'./src/resources/output\135982')
+plot_filename = '1_verteilung_nachweis_vs_nichtnachweis.png'
+output_path = os.path.join(output_dir, plot_filename)
+
+try:
+    os.makedirs(output_dir, exist_ok=True)
+    df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+    df_columns = df.columns.tolist()
+    missing_ratio = df.isna().mean()
+    if 'Ergebnis' in df_columns:
+        ergebnis_raw = df['Ergebnis'].astype(str).str.strip()
+    else:
+        raise KeyError('Spalte "Ergebnis" fehlt in den Daten.')
+    is_nn = ergebnis_raw.str.replace(r'\s+', '', regex=True).str.lower().isin(['n.n.', 'n.n', 'nn', 'nichtnachweisbar'])
+    ergebnis_num = pd.to_numeric(ergebnis_raw.str.replace(',', '.', regex=False).str.replace(r'[^0-9eE\.\-\+]+', '', regex=True), errors='coerce')
+    df['Ergebnis_num'] = ergebnis_num
+    df['Nachweisstatus'] = np.where((~is_nn) & (df['Ergebnis_num'].notna()), 'Nachweis', 'Nicht nachweisbar')
+    numeric_stats = df['Ergebnis_num'].dropna().describe()
+    counts = df['Nachweisstatus'].value_counts(dropna=False)
+    counts = counts.reindex(['Nachweis', 'Nicht nachweisbar']).fillna(0).astype(int)
+    total = int(counts.sum())
+    plot_df = pd.DataFrame({'Kategorie': ['Nachweis', 'Nicht nachweisbar'], 'Anzahl': [int(counts.get('Nachweis', 0)), int(counts.get('Nicht nachweisbar', 0))]})
+    plot_df['Prozent'] = np.where(total > 0, plot_df['Anzahl'] / total * 100.0, 0.0)
+    sns.set_theme(style='whitegrid', context='talk')
+    fig, ax = plt.subplots(figsize=(9, 6))
+    palette = {'Nachweis': '#1b9e77', 'Nicht nachweisbar': '#9e9e9e'}
+    order = ['Nachweis', 'Nicht nachweisbar']
+    sns.barplot(data=plot_df, x='Kategorie', y='Anzahl', order=order, palette=palette, ax=ax)
+    for i, row in plot_df.set_index('Kategorie').loc[order].reset_index().iterrows():
+        ax.text(i, row['Anzahl'] + max(0.02 * total, 0.5), f"{int(row['Anzahl'])} ({row['Prozent']:.1f}%)", ha='center', va='bottom', fontsize=12)
+    sid = None
+    site = None
+    date = None
+    if 'Hauptprobenummer' in df_columns and df['Hauptprobenummer'].notna().any():
+        sid = str(df['Hauptprobenummer'].dropna().astype(str).unique()[0])
+    if 'Entnahmestelle' in df_columns and df['Entnahmestelle'].notna().any():
+        site = str(df['Entnahmestelle'].dropna().astype(str).unique()[0])
+    if 'Probenahme_Beginn_Datum' in df_columns and df['Probenahme_Beginn_Datum'].notna().any():
+        date = str(df['Probenahme_Beginn_Datum'].dropna().astype(str).unique()[0])
+    subtitle_bits = []
+    if sid: subtitle_bits.append(f"Probe {sid}")
+    if site: subtitle_bits.append(site)
+    if date: subtitle_bits.append(date)
+    subtitle = ' – '.join(subtitle_bits) if len(subtitle_bits) > 0 else ''
+    title_main = 'Verteilung der Messergebnisse: Nachweis vs. nicht nachweisbar (Bq/l)'
+    if subtitle:
+        ax.set_title(title_main + "\n" + subtitle, fontsize=18, pad=14)
+    else:
+        ax.set_title(title_main, fontsize=18, pad=14)
+    ax.set_xlabel('Ergebnis-Kategorie', fontsize=14)
+    ax.set_ylabel('Anzahl der Prüfmerkmale [n]', fontsize=14)
+    ax.set_ylim(0, max(plot_df['Anzahl'].max() * 1.15, plot_df['Anzahl'].max() + 2))
+    for label in ax.get_xticklabels():
+        label.set_rotation(0)
+        label.set_ha('center')
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    plt.close(fig)
+except Exception as e:
+    print(str(e))
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What analytical methods were used to screen the sample?' visualization="Heatmap or grouped bar chart showing 'Pruefmerkmal' categorized by 'Methode'." rationale="The dataset uses different laboratory techniques to achieve high-resolution screening. By looking at the 'Methode' column in relation to the 'Pruefmerkmal', users can understand which technology (e.g., Gammaspektrometrie vs. Tritium-LSC) was applied to which isotopes to ensure the safety of the 'WW Curslack Nord' water source."
+
+-> Code:
+import os
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.set_theme(style="white", context="talk")
+
+input_path = os.path.normpath(r"./src/resources/data/study\135982\dataset.csv")
+output_dir = os.path.normpath(r"./src/resources/output\135982")
+os.makedirs(output_dir, exist_ok=True)
+
+df = pd.read_csv(input_path, sep=",", encoding="utf-8")
+df.columns = [c.strip() for c in df.columns]
+for col in ["Methode", "Pruefmerkmal", "Ergebnis", "Einheit"]:
+    if col in df.columns:
+        df[col] = df[col].astype(str).str.strip()
+
+if "Ergebnis" in df.columns:
+    ser = df["Ergebnis"].astype(str).str.strip()
+    ser = ser.mask(ser.str.lower().isin(["n.n.", "n.n", "nn", "nicht nachweisbar", "nan"]))
+    ser = ser.str.replace(" ", "", regex=False).str.replace(",", ".", regex=False)
+    df["Ergebnis_num"] = pd.to_numeric(ser, errors="coerce")
+else:
+    df["Ergebnis_num"] = np.nan
+
+missing_ratio = df.replace({"n.n.": np.nan, "N.N.": np.nan}).isna().mean()
+num_desc = df.select_dtypes(include=[np.number]).describe().T
+method_counts = df.groupby("Methode", dropna=False)["Pruefmerkmal"].nunique()
+
+plot_df = df[["Methode", "Pruefmerkmal"]].dropna()
+plot_df["Methode"] = plot_df["Methode"].astype(str).str.strip()
+plot_df["Pruefmerkmal"] = plot_df["Pruefmerkmal"].astype(str).str.strip()
+plot_df = plot_df.dropna(subset=["Methode", "Pruefmerkmal"]).drop_duplicates()
+
+presence = plot_df.assign(val=1).pivot_table(index="Methode", columns="Pruefmerkmal", values="val", aggfunc="max", fill_value=0)
+presence = presence.sort_index().reindex(sorted(presence.columns), axis=1)
+
+ncols = presence.shape[1]
+fig_width = max(14, min(42, ncols * 0.38))
+fig_height = max(2.5, min(12, presence.shape[0] * 0.9 + 1.5))
+fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=150)
+mask = presence.eq(0)
+sns.heatmap(presence, mask=mask, cmap="YlGn", cbar=False, linewidths=0.5, linecolor="#E0E0E0", ax=ax, square=False)
+ax.set_title("Analytische Methoden und zugeordnete Prüfmerkmale\nWW Curslack Nord – Probe 201500428", pad=18)
+ax.set_xlabel("Prüfmerkmal")
+ax.set_ylabel("Methode")
+xtick_size = 7 if ncols > 28 else 8 if ncols > 20 else 9
+ax.set_xticklabels(ax.get_xticklabels(), rotation=90, ha="center", va="top", fontsize=xtick_size)
+ax.set_yticklabels(ax.get_yticklabels(), rotation=0, ha="right")
+plt.tight_layout()
+
+out_path = os.path.join(output_dir, "2_methoden_pruefmerkmal_heatmap.png")
+plt.savefig(out_path, bbox_inches="tight", dpi=300)
+plt.close()
+
+-> SEVQ:
+
+

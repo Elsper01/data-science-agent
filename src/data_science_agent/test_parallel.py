@@ -1,13 +1,13 @@
 import os
 import random
 import traceback
-from time import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
+from time import time
+
 from tqdm import tqdm
 
 from data_science_agent.graph import build_graph, AgentState
 from data_science_agent.utils import print_color, enums
-
 
 STUDY_DIR = "./src/resources/data/study"
 OUTPUT_BASE = "./src/resources/output"

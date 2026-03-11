@@ -1,0 +1,460 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\69089\dataset.csv
+Programming Language: py
+Language: de
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-08 16:17:44
+Total Duration: 1139.80 seconds
+Total Token Usage: 95398 tokens
+Total Costs: $0.4503
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0535 seconds
+
+Method: analyse_dataset
+  Duration: 0.0098 seconds
+
+Method: llm_generate_summary
+  Duration: 222.4577 seconds
+
+Method: llm_generate_goals
+  Duration: 4.4871 seconds
+
+Method: llm_generate_python_code
+  Duration: 300.4574 seconds
+
+Method: test_generated_code
+  Duration: 3.8754 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 608.4567 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4012 tokens
+  Costs total: $0.0041
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1821 tokens
+  Costs total: $0.0020
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6435 tokens
+  Costs total: $0.0468
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6535 tokens
+  Costs total: $0.0477
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6589 tokens
+  Costs total: $0.0482
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 308 tokens
+  Costs total: $0.0008
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6359 tokens
+  Costs total: $0.0429
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2831 tokens
+  Costs total: $0.0093
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3113 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5129 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5734 tokens
+  Costs total: $0.0341
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7869 tokens
+  Costs total: $0.0609
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2384 tokens
+  Costs total: $0.0083
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2578 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3743 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5643 tokens
+  Costs total: $0.0409
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 6717 tokens
+  Costs total: $0.0445
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2878 tokens
+  Costs total: $0.0090
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3404 tokens
+  Costs total: $0.0032
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4667 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5984 tokens
+  Costs total: $0.0365
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Wie hat sich der Zustrom der Personen im Zeitverlauf entwickelt?' visualization="Liniendiagramm mit 'Einzugsdatum' auf der X-Achse und der Anzahl der Datensätze auf der Y-Achse." rationale="Durch die Visualisierung des 'Einzugsdatum' als Zeitreihe lässt sich die Dynamik der Migrationsbewegung im Jahr 2022 nachvollziehen. Dies hilft dem Nutzer zu bestätigen, ob der Datensatz den erwarteten Peak im März 2022 (Ukraine-Kontext) widerspiegelt. Ein Liniendiagramm ist hierfür die Standarddarstellung für zeitliche Trends."
+
+-> Code:
+import os
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.switch_backend('Agg')
+
+output_dir = os.path.join('.', 'src', 'resources', 'output', '69089')
+os.makedirs(output_dir, exist_ok=True)
+
+data_path = os.path.join('.', 'src', 'resources', 'data', 'study', '69089', 'dataset.csv')
+
+try:
+    df = pd.read_csv(data_path, sep=',', encoding='utf-8', na_values=['', 'NA', 'NaN', 'nan'])
+except Exception as e:
+    print(f'Fehler beim Laden der Datei: {e}', file=sys.stderr)
+    sys.exit(1)
+
+for col in df.select_dtypes(include='object').columns:
+    try:
+        df[col] = df[col].str.strip()
+    except Exception:
+        pass
+
+missing_df = pd.DataFrame({'fehlende_werte': df.isna().sum(), 'anteil_prozent': df.isna().mean() * 100}).sort_values('anteil_prozent', ascending=False)
+missing_df.to_csv(os.path.join(output_dir, 'eda_missing_values.csv'), encoding='utf-8')
+
+num_df = df.select_dtypes(include=[np.number])
+if not num_df.empty:
+    desc = num_df.describe().T
+    desc.to_csv(os.path.join(output_dir, 'eda_numeric_summary.csv'), encoding='utf-8')
+    corr = num_df.corr(numeric_only=True)
+    corr.to_csv(os.path.join(output_dir, 'eda_correlations.csv'), encoding='utf-8')
+
+if 'Unterkunftsart' in df.columns:
+    ua_counts = df['Unterkunftsart'].fillna('Unbekannt').value_counts(dropna=False)
+    ua_share = df['Unterkunftsart'].fillna('Unbekannt').value_counts(normalize=True, dropna=False) * 100
+    ua = pd.DataFrame({'anzahl': ua_counts, 'anteil_prozent': ua_share}).sort_values('anzahl', ascending=False)
+    ua.to_csv(os.path.join(output_dir, 'eda_unterkunftsart_verteilung.csv'), encoding='utf-8')
+
+reg_candidates = ['Registrierungssdatum', 'Registrierungsdatum', 'Registrierung_Datum', 'Registrierungsdatum '] 
+reg_col = next((c for c in reg_candidates if c in df.columns), None)
+
+df['Einzugsdatum_dt'] = pd.to_datetime(df['Einzugsdatum'], dayfirst=True, errors='coerce') if 'Einzugsdatum' in df.columns else pd.NaT
+if reg_col is not None:
+    df['Registrierungsdatum_dt'] = pd.to_datetime(df[reg_col], dayfirst=True, errors='coerce')
+    try:
+        df['Tage_bis_Registrierung'] = (df['Registrierungsdatum_dt'] - df['Einzugsdatum_dt']).dt.days
+    except Exception:
+        pass
+
+if 'Einzugsdatum_dt' not in df.columns:
+    print('Fehler: Spalte "Einzugsdatum" nicht gefunden.', file=sys.stderr)
+    sys.exit(1)
+
+ts = df[['Einzugsdatum_dt']].dropna()
+if ts.empty:
+    print('Fehler: Keine gültigen Datumsangaben in Spalte "Einzugsdatum".', file=sys.stderr)
+    sys.exit(1)
+
+ts = ts.set_index('Einzugsdatum_dt').sort_index()
+
+daily_counts = ts.assign(count=1).resample('D').count()['count']
+rolling7 = daily_counts.rolling(window=7, min_periods=1).mean()
+
+pd.DataFrame({'datum': daily_counts.index, 'anzahl': daily_counts.values}).to_csv(os.path.join(output_dir, 'eda_daily_counts.csv'), index=False, encoding='utf-8')
+
+sns.set_theme(style='whitegrid')
+fig, ax = plt.subplots(figsize=(13, 7))
+ax.plot(daily_counts.index, daily_counts.values, color='tab:gray', alpha=0.5, linewidth=1.2, label='Tägliche Anzahl')
+ax.plot(rolling7.index, rolling7.values, color='tab:blue', linewidth=2.0, label='7-Tage gleitender Mittelwert')
+
+try:
+    import matplotlib.dates as mdates
+    ax.xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+    ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))
+except Exception:
+    pass
+
+min_year = int(daily_counts.index.min().year)
+max_year = int(daily_counts.index.max().year)
+zeitraum = f'{min_year}' if min_year == max_year else f'{min_year}–{max_year}'
+
+title = f'Zustrom von Personen im Zeitverlauf (nach Einzugsdatum), {zeitraum}'
+ax.set_title(title)
+ax.set_xlabel('Einzugsdatum')
+ax.set_ylabel('Anzahl Personen')
+ax.legend(loc='upper right', frameon=True)
+plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
+ax.margins(x=0.01)
+fig.tight_layout()
+
+plot_path = os.path.join(output_dir, '0_zustrom_einzugsdatum_linie.png')
+fig.savefig(plot_path, dpi=200, bbox_inches='tight')
+plt.close(fig)
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Wie verteilen sich die verschiedenen Unterbringungsformen?' visualization="Balkendiagramm mit 'Unterkunftsart' auf der X-Achse und der Anzahl der Personen auf der Y-Achse." rationale="Die Spalte 'Unterkunftsart' gibt Aufschluss darüber, wie die Last der Unterbringung verteilt ist. Da die Zusammenfassung eine starke Dominanz privater Unterbringung erwähnt, hilft ein Balkendiagramm dabei, die Verhältnisse zwischen 'Privat', 'EAE', 'GWg' und anderen Kategorien exakt zu vergleichen. Ein Balkendiagramm ist hier präziser als ein Kreisdiagramm, um auch kleinere Kategorien sichtbar zu machen."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+try:
+    df = pd.read_csv('./src/resources/data/study\\69089/dataset.csv', sep=',', encoding='utf-8')
+except Exception as e:
+    print(str(e))
+    raise
+
+numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+_ = df[numeric_cols].describe().T if len(numeric_cols) > 0 else None
+missing_rates = df.isna().mean().sort_values(ascending=False)
+
+col = 'Unterkunftsart'
+if col not in df.columns:
+    print(f'Spalte {col} nicht gefunden.')
+    raise SystemExit(1)
+
+total_n = len(df)
+ser = df[col].astype('string')
+ser = ser.str.strip()
+missing_share = float(ser.isna().mean()) if total_n > 0 else 0.0
+ser_filled = ser.fillna('Unbekannt')
+counts = ser_filled.value_counts(dropna=False)
+percent = counts / total_n * 100 if total_n > 0 else counts * 0
+plot_df = pd.DataFrame({
+    'Unterkunftsart': counts.index.tolist(),
+    'Anzahl': counts.values.tolist(),
+    'Prozent': percent.values.tolist()
+})
+
+sns.set_theme(style='whitegrid')
+fig, ax = plt.subplots(figsize=(10, 6))
+order = plot_df.sort_values('Anzahl', ascending=False)['Unterkunftsart']
+sns.barplot(data=plot_df, x='Unterkunftsart', y='Anzahl', order=order, palette='Blues_r', ax=ax)
+ax.set_title('Verteilung der Unterbringungsformen (Unterkunftsart)')
+ax.set_xlabel('Unterkunftsart')
+ax.set_ylabel('Anzahl Personen')
+ax.set_ylim(0, max(plot_df['Anzahl']) * 1.12 if len(plot_df) > 0 else 1)
+for p in ax.patches:
+    height = p.get_height()
+    if np.isnan(height):
+        continue
+    x = p.get_x() + p.get_width() / 2
+    kat = p.get_x()
+    val = int(round(height))
+    perc = (height / total_n * 100) if total_n > 0 else 0
+    ax.text(x, height + max(plot_df['Anzahl']) * 0.02, f'{val}\n({perc:.1f}%)', ha='center', va='bottom', fontsize=9)
+plt.xticks(rotation=0)
+fig.text(0.01, 0.01, f'Gesamt N={total_n} | Fehlend in "{col}": {missing_share*100:.1f}% (als "Unbekannt" aggregiert)', ha='left', va='bottom', fontsize=9)
+plt.tight_layout()
+try:
+    fig.savefig('./src/resources/output\\69089/1_unterkunftsarten_balken.png', dpi=150, bbox_inches='tight')
+except Exception as e:
+    print(str(e))
+    raise
+plt.close(fig)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='Wie ist die Alters- und Geschlechterstruktur der registrierten Personen?' visualization="Histogramm der Spalte 'Alter', farblich gruppiert nach 'Geschlecht' (1=m, 2=w)." rationale="Die Kombination aus 'Alter' und 'Geschlecht' ist entscheidend für die demografische Analyse. Da der Mittelwert von 1,64 bei 'Geschlecht' auf einen hohen Frauenanteil hindeutet, erlaubt ein Histogramm (oder eine Alterspyramide), die Altersverteilung getrennt nach Geschlecht zu sehen. Dies zeigt dem Nutzer sofort, ob es sich primär um eine bestimmte Gruppe (z.B. Mütter mit Kindern) handelt."
+
+-> Code:
+import os
+import sys
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.switch_backend('Agg')
+sns.set_theme(style='whitegrid', context='talk')
+
+input_path = os.path.normpath('./src/resources/data/study\\69089\\dataset.csv')
+output_dir = os.path.normpath('./src/resources/output/69089')
+plot_filename = '2_hist_alter_nach_geschlecht.png'
+
+try:
+    os.makedirs(output_dir, exist_ok=True)
+except Exception as e:
+    print(f'Fehler beim Erstellen des Output-Verzeichnisses: {e}')
+    sys.exit(1)
+
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8', keep_default_na=True)
+except Exception as e:
+    print(f'Fehler beim Einlesen der Datei: {e}')
+    sys.exit(1)
+
+if 'Einzugsdatum' in df.columns:
+    df['Einzugsdatum'] = pd.to_datetime(df['Einzugsdatum'], errors='coerce', dayfirst=True)
+if 'Registrierungssdatum' in df.columns:
+    df['Registrierungssdatum'] = pd.to_datetime(df['Registrierungssdatum'], errors='coerce', dayfirst=True)
+
+missing_share = df.isna().mean().rename('anteil_fehlend')
+missing_share.to_csv(os.path.join(output_dir, '2_eda_anteil_fehlender_werte.csv'), encoding='utf-8')
+
+num_df = df.apply(pd.to_numeric, errors='coerce')
+describe_num = num_df.describe().T
+describe_num.to_csv(os.path.join(output_dir, '2_eda_kennwerte_numerisch.csv'), encoding='utf-8')
+
+corr_num = num_df.corr(numeric_only=True)
+corr_num.to_csv(os.path.join(output_dir, '2_eda_korrelationen_numerisch.csv'), encoding='utf-8')
+
+alter_series = pd.to_numeric(df['Alter'], errors='coerce') if 'Alter' in df.columns else pd.Series(dtype=float)
+geschl_series = pd.to_numeric(df['Geschlecht'], errors='coerce') if 'Geschlecht' in df.columns else pd.Series(dtype=float)
+
+map_geschl = {1: 'männlich', 2: 'weiblich'}
+
+df_plot = pd.DataFrame({'Alter': alter_series, 'Geschlecht': geschl_series}).copy()
+df_plot['Geschlecht'] = df_plot['Geschlecht'].map(map_geschl)
+df_plot = df_plot.dropna(subset=['Alter', 'Geschlecht'])
+df_plot = df_plot[(df_plot['Alter'] >= 0) & (df_plot['Alter'] <= 99)]
+
+if not df_plot.empty:
+    age_gender_stats = df_plot.groupby('Geschlecht')['Alter'].agg(['count', 'mean', 'median', 'std', 'min', 'max']).rename(columns={'count': 'n'})
+    age_gender_stats.to_csv(os.path.join(output_dir, '2_eda_alter_nach_geschlecht.csv'), encoding='utf-8')
+else:
+    pd.DataFrame(columns=['Geschlecht', 'n', 'mean', 'median', 'std', 'min', 'max']).to_csv(os.path.join(output_dir, '2_eda_alter_nach_geschlecht.csv'), index=False, encoding='utf-8')
+
+palette = {'männlich': '#4C78A8', 'weiblich': '#F58518'}
+
+plt.figure(figsize=(12, 7))
+if df_plot.empty:
+    fig = plt.gcf()
+    fig.patch.set_facecolor('white')
+    plt.axis('off')
+    plt.text(0.5, 0.6, 'Keine gültigen Daten für Alter und Geschlecht verfügbar', ha='center', va='center', fontsize=16)
+    plt.text(0.5, 0.45, 'Erwartet: Alter in [0, 99] und Geschlecht ∈ {1, 2}', ha='center', va='center', fontsize=12)
+else:
+    bins = np.arange(0, 105, 5)
+    ax = sns.histplot(data=df_plot, x='Alter', hue='Geschlecht', bins=bins, multiple='layer', stat='count', palette=palette, edgecolor='white', alpha=0.65)
+    ax.set_xlim(0, 100)
+    ax.set_xlabel('Alter (Jahre)')
+    ax.set_ylabel('Anzahl Personen')
+    counts = df_plot['Geschlecht'].value_counts().to_dict()
+    legend = ax.get_legend()
+    if legend is not None:
+        labels = []
+        for text in legend.texts:
+            key = text.get_text()
+            n = counts.get(key, 0)
+            labels.append(f'{key} (n={n})')
+        for txt, new_label in zip(legend.texts, labels):
+            txt.set_text(new_label)
+    plt.xticks(np.arange(0, 101, 10))
+    plt.yticks()
+    plt.grid(axis='y', alpha=0.25)
+    total_n = len(df_plot)
+    n_m = counts.get('männlich', 0)
+    n_w = counts.get('weiblich', 0)
+    plt.title(f'Altersverteilung nach Geschlecht der registrierten Personen (2022)\nInsgesamt n={total_n}, männlich n={n_m}, weiblich n={n_w}')
+    plt.tight_layout()
+
+out_path = os.path.join(output_dir, plot_filename)
+try:
+    plt.savefig(out_path, dpi=200, bbox_inches='tight', facecolor='white')
+    plt.close()
+except Exception as e:
+    print(f'Fehler beim Speichern der Grafik: {e}')
+    sys.exit(1)
+
+
+-> SEVQ:
+
+

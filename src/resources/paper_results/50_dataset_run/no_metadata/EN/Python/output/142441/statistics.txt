@@ -1,0 +1,532 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\142441\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-09 13:52:08
+Total Duration: 949.64 seconds
+Total Token Usage: 108819 tokens
+Total Costs: $0.4769
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0360 seconds
+
+Method: analyse_dataset
+  Duration: 0.0108 seconds
+
+Method: analyse_metadata
+  Duration: 0.0148 seconds
+
+Method: llm_generate_summary
+  Duration: 149.2908 seconds
+
+Method: llm_generate_goals
+  Duration: 5.4597 seconds
+
+Method: llm_generate_python_code
+  Duration: 268.0672 seconds
+
+Method: test_generated_code
+  Duration: 3.0171 seconds
+
+Method: llm_regenerate_code
+  Duration: 29.6716 seconds
+
+Method: test_generated_code
+  Duration: 4.1619 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 489.9123 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7258 tokens
+  Costs total: $0.0057
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1583 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8140 tokens
+  Costs total: $0.0601
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8198 tokens
+  Costs total: $0.0607
+
+Method: llm_generate_python_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8149 tokens
+  Costs total: $0.0603
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 941 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 267 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 267 tokens
+  Costs total: $0.0007
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3872 tokens
+  Costs total: $0.0047
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3375 tokens
+  Costs total: $0.0051
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2301 tokens
+  Costs total: $0.0039
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7283 tokens
+  Costs total: $0.0561
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2302 tokens
+  Costs total: $0.0087
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2518 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6312 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4431 tokens
+  Costs total: $0.0274
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7756 tokens
+  Costs total: $0.0588
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2503 tokens
+  Costs total: $0.0089
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2723 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4798 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4478 tokens
+  Costs total: $0.0247
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5702 tokens
+  Costs total: $0.0403
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2241 tokens
+  Costs total: $0.0080
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2524 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3909 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4183 tokens
+  Costs total: $0.0239
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Which radionuclides were detected in the Atlantic Cod sample and at what concentrations?' visualization="Bar chart showing 'Ergebnis' (filtered for numeric values) on the Y-axis and 'Pruefmerkmal' on the X-axis." rationale="This is the most critical question for radiological safety. By filtering the 'Ergebnis' column for values other than 'n.n.' (not detectable) and plotting them against 'Pruefmerkmal', we can clearly see which isotopes are present. This highlights the naturally occurring K-40 and the trace levels of Cs-137 mentioned in the summary."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
+
+# Set visual style
+sns.set_theme(style="whitegrid", context="talk")
+
+# File paths
+input_path = r'./src/resources/data/study/142441/dataset.csv'
+out_dir = r'./src/resources/output/142441'
+os.makedirs(out_dir, exist_ok=True)
+out_path = os.path.join(out_dir, '0_nachgewiesene_radionuklide.png')
+
+# The error 'UnicodeDecodeError: utf-8 codec can't decode byte 0xdf' 
+# usually indicates ISO-8859-1 (Latin-1) or cp1252 encoding (common in German datasets for 'ß').
+try:
+    df = pd.read_csv(input_path, sep=',', encoding='utf-8')
+except UnicodeDecodeError:
+    try:
+        df = pd.read_csv(input_path, sep=',', encoding='latin-1')
+    except Exception:
+        df = pd.read_csv(input_path, sep=',', encoding='cp1252')
+
+# Data Cleaning
+# Convert 'Ergebnis' to numeric, handling German decimal commas and 'n.n.' (not detectable)
+if 'Ergebnis' in df.columns:
+    # Remove whitespace and handle German comma
+    erg_clean = df['Ergebnis'].astype(str).str.strip()
+    # Replace 'n.n.' variants with NaN
+    erg_clean = erg_clean.replace({'n.n.': np.nan, 'n.n': np.nan, 'N.N.': np.nan, 'N.N': np.nan}, regex=False)
+    # Replace comma with dot for float conversion
+    erg_clean = erg_clean.str.replace(',', '.', regex=False)
+    df['Ergebnis_num'] = pd.to_numeric(erg_clean, errors='coerce')
+else:
+    df['Ergebnis_num'] = np.nan
+
+# Filter for detected radionuclides (numeric and > 0)
+subset = df.loc[df['Ergebnis_num'].notna() & (df['Ergebnis_num'] > 0)].copy()
+
+# Metadata for labels
+prod_vals = df.get('Bezeichnung', pd.Series(['Probe'])).dropna().unique()
+produkt_label = prod_vals[0] if len(prod_vals) > 0 else 'Probe'
+
+unit_vals = df.get('Einheit', pd.Series(['Bq/kg'])).dropna().unique()
+unit_label = unit_vals[0] if len(unit_vals) > 0 else 'Bq/kg'
+
+# Visualization
+plt.figure(figsize=(12, 8))
+ax = plt.gca()
+
+if subset.empty:
+    ax.text(0.5, 0.5, f'Keine Radionuklide nachgewiesen in\n{produkt_label}', 
+            ha='center', va='center', fontsize=16)
+    ax.axis('off')
+else:
+    # Sort by concentration for better visualization
+    subset = subset.sort_values('Ergebnis_num', ascending=False)
+    
+    # Create bar plot
+    # We use a log scale because K-40 is usually orders of magnitude higher than Cs-137
+    sns.barplot(data=subset, x='Pruefmerkmal', y='Ergebnis_num', palette='viridis', ax=ax)
+    
+    ax.set_yscale('log')
+    
+    # Add value labels on top of bars
+    for p in ax.patches:
+        val = p.get_height()
+        ax.annotate(f'{val:.2f}'.replace('.', ','), 
+                    (p.get_x() + p.get_width() / 2., val), 
+                    ha='center', va='bottom', fontsize=12, xytext=(0, 5),
+                    textcoords='offset points')
+
+    ax.set_title(f'Nachgewiesene Radionuklide: {produkt_label}', pad=20)
+    ax.set_xlabel('Radionuklid (Prüfmerkmal)')
+    ax.set_ylabel(f'Konzentration [{unit_label}] (Log-Skala)')
+    
+    # Adjust y-axis limits to make room for labels
+    ax.set_ylim(subset['Ergebnis_num'].min() * 0.5, subset['Ergebnis_num'].max() * 5)
+
+plt.xticks(rotation=0)
+plt.tight_layout()
+plt.savefig(out_path, dpi=200, bbox_inches='tight')
+plt.close()
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the proportion of detected versus non-detected radionuclides in the screening?' visualization="Bar chart or Count plot of the 'Ergebnis' column, grouping all numeric values as 'Detected' and 'n.n.' as 'Not Detected'." rationale="The summary indicates that most isotopes were not detected. A visualization showing the frequency of 'n.n.' versus actual numeric values in the 'Ergebnis' column provides an immediate visual confirmation of the sample's overall radiological cleanliness and the comprehensiveness of the 'IMIS Routinemessprogramm'."
+
+-> Code:
+import os
+import sys
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+def load_data(file_path):
+    # Try common encodings for German datasets if utf-8 fails
+    encodings = ['utf-8', 'latin1', 'iso-8859-1', 'cp1252']
+    for enc in encodings:
+        try:
+            return pd.read_csv(file_path, sep=',', encoding=enc)
+        except (UnicodeDecodeError, pd.errors.ParserError):
+            continue
+    # If all fail, try with engine='python' and no encoding specified
+    return pd.read_csv(file_path, sep=',', engine='python')
+
+try:
+    input_path = os.path.normpath('./src/resources/data/study/142441/dataset.csv')
+    output_dir = os.path.normpath('./src/resources/output/142441')
+    os.makedirs(output_dir, exist_ok=True)
+    
+    df = load_data(input_path)
+    
+    # Clean object columns
+    obj_cols = df.select_dtypes(include=['object']).columns.tolist()
+    for c in obj_cols:
+        df[c] = df[c].astype(str).str.strip()
+        df.loc[df[c].isin(['', 'nan', 'NaN', 'None']), c] = np.nan
+
+    # Function to identify numeric results vs non-detected
+    def classify_result(val):
+        if pd.isna(val):
+            return 'Missing'
+        s = str(val).strip().lower()
+        # Common German indicators for "not detected"
+        not_detected_terms = {'n.n.', 'n.n', 'n. n.', 'nn', 'n n', 'nicht nachgewiesen', 'unter nachweisgrenze'}
+        if s in not_detected_terms:
+            return 'Nicht nachgewiesen'
+        
+        # Try to convert to float to see if it's a numeric detection
+        try:
+            # Handle German decimal commas and spaces
+            clean_val = s.replace(' ', '').replace(',', '.')
+            float(clean_val)
+            return 'Nachgewiesen'
+        except ValueError:
+            return 'Sonstige/Fehler'
+
+    df['Nachweisstatus'] = df['Ergebnis'].apply(classify_result)
+    
+    # Filter for the two main categories for the plot
+    plot_df = df[df['Nachweisstatus'].isin(['Nicht nachgewiesen', 'Nachgewiesen'])].copy()
+    categories = ['Nicht nachgewiesen', 'Nachgewiesen']
+    counts = plot_df['Nachweisstatus'].value_counts().reindex(categories).fillna(0).astype(int)
+    total_n = int(counts.sum())
+    
+    # Visualization
+    sns.set_theme(style='whitegrid', font_scale=1.1)
+    fig, ax = plt.subplots(figsize=(9, 6))
+    
+    # Colors: Grey for non-detected, Green for detected
+    palette = {'Nicht nachgewiesen': '#9aa0a6', 'Nachgewiesen': '#2ca02c'}
+    sns.barplot(x=counts.index, y=counts.values, ax=ax, palette=palette, hue=counts.index, legend=False)
+    
+    # Title and Labels
+    ax.set_xlabel('Nachweisstatus', fontweight='bold')
+    ax.set_ylabel('Anzahl der Messungen', fontweight='bold')
+    
+    title = 'Nachweisstatus der Radionuklide'
+    subtitle = 'Kabeljaufilet (IMIS Routinemessprogramm)'
+    if 'Probenahme_Beginn_Datum' in df.columns and df['Probenahme_Beginn_Datum'].notna().any():
+        date_val = df['Probenahme_Beginn_Datum'].dropna().iloc[0]
+        subtitle += f' | Stand: {date_val}'
+    
+    plt.suptitle(title, fontsize=16, fontweight='bold', y=0.98)
+    ax.set_title(subtitle, fontsize=12, pad=10)
+
+    # Annotate bars with counts and percentages
+    for i, p in enumerate(ax.patches):
+        h = p.get_height()
+        perc = (h / total_n * 100) if total_n > 0 else 0
+        ax.annotate(f'{int(h)}\n({perc:.1f}%)', 
+                    (p.get_x() + p.get_width() / 2., h), 
+                    ha='center', va='bottom', 
+                    xytext=(0, 5), 
+                    textcoords='offset points',
+                    fontsize=11, fontweight='bold')
+
+    # Add metadata footer
+    det_rate = (counts['Nachgewiesen'] / total_n * 100) if total_n > 0 else 0
+    footer_text = f'Gesamtanzahl Messungen (n) = {total_n} | Detektionsrate = {det_rate:.1f}%'
+    plt.figtext(0.5, 0.01, footer_text, ha='center', fontsize=10, bbox={"facecolor":"orange", "alpha":0.1, "pad":5})
+
+    plt.tight_layout(rect=[0, 0.05, 1, 0.95])
+    
+    output_path = os.path.join(output_dir, 'nachweisstatus_radionuklide.png')
+    plt.savefig(output_path, dpi=200, bbox_inches='tight')
+    plt.close(fig)
+
+except Exception as e:
+    print(f"Error: {str(e)}")
+    sys.exit(1)
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What specific radionuclides were included in the Gamma Spectrometry screening?' visualization="Table or horizontal bar chart listing all unique values in the 'Pruefmerkmal' column." rationale="To understand the scope of the 'Gammaspektrometrie (fest - FM)' method used, it is important to see the full list of 'Pruefmerkmal' (radionuclides) tested. This confirms that the monitoring covers a wide range of potential contaminants beyond just Cesium, such as Cobalt or Iodine."
+
+-> Code:
+import os
+import sys
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+def load_data(file_path):
+    """Try multiple encodings to handle potential special characters like 'ß' or 'ü'."""
+    encodings = ['utf-8', 'latin1', 'iso-8859-1', 'cp1252']
+    for enc in encodings:
+        try:
+            return pd.read_csv(file_path, sep=',', encoding=enc, dtype=str)
+        except (UnicodeDecodeError, pd.errors.ParserError):
+            continue
+    raise ValueError(f"Could not decode file {file_path} with common encodings.")
+
+try:
+    pd.set_option('display.max_columns', None)
+    sns.set_theme(style='whitegrid', context='talk')
+    plt.rcParams['font.family'] = 'DejaVu Sans'
+
+    data_path = os.path.join('.', 'src', 'resources', 'data', 'study', '142441', 'dataset.csv')
+    out_dir = os.path.join('.', 'src', 'resources', 'output', '142441')
+    os.makedirs(out_dir, exist_ok=True)
+    out_path = os.path.join(out_dir, '2_radionuklide_pruefmerkmal.png')
+
+    df = load_data(data_path)
+
+    # Clean whitespace
+    df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
+
+    if 'Pruefmerkmal' not in df.columns:
+        raise ValueError("Column 'Pruefmerkmal' missing from dataset.")
+
+    # Helper to check if a result is a valid detection
+    def is_detected(x):
+        if pd.isna(x): return False
+        s = str(x).strip().lower()
+        if s in {'n.n.', 'n.n', 'nn', 'na', 'k.a.', '', '0', '0.0'}:
+            return False
+        # Try to see if it's a number > 0
+        try:
+            val = float(s.replace(',', '.'))
+            return val > 0
+        except:
+            return True # If it's a string that isn't 'n.n.', assume it's a descriptive detection
+
+    if 'Ergebnis' in df.columns:
+        df['detected'] = df['Ergebnis'].apply(is_detected)
+    else:
+        df['detected'] = False
+
+    # Aggregate to get unique radionuclides and their detection status
+    grp = df.groupby('Pruefmerkmal', dropna=False).agg(
+        Anzahl=('Pruefmerkmal', 'size'),
+        HatNachweis=('detected', 'max')
+    ).reset_index()
+
+    grp['Pruefmerkmal'] = grp['Pruefmerkmal'].fillna('Unbekannt')
+    grp['Status'] = np.where(grp['HatNachweis'], 'Nachgewiesen', 'Nicht nachweisbar (n.n.)')
+
+    # Sort: Detected first, then alphabetically
+    grp = grp.sort_values(['HatNachweis', 'Pruefmerkmal'], ascending=[False, True])
+
+    # Visualization
+    height = max(6, 0.4 * len(grp))
+    plt.figure(figsize=(12, height))
+    
+    ax = sns.barplot(
+        data=grp,
+        y='Pruefmerkmal',
+        x='Anzahl',
+        hue='Status',
+        dodge=False,
+        palette={'Nachgewiesen': '#2E7D32', 'Nicht nachweisbar (n.n.)': '#B0BEC5'}
+    )
+
+    plt.title('Im Gammaspektrometrie-Screening untersuchte Radionuklide', pad=20)
+    plt.xlabel('Anzahl der Messungen')
+    plt.ylabel('Radionuklid (Prüfmerkmal)')
+    
+    # Adjust x-axis to show integers if counts are small
+    max_val = grp['Anzahl'].max()
+    if max_val < 10:
+        plt.xticks(range(int(max_val) + 2))
+
+    plt.legend(title='Nachweisstatus', loc='lower right')
+    plt.tight_layout()
+    
+    # Ensure labels aren't cut off
+    plt.subplots_adjust(left=0.35)
+    
+    plt.savefig(out_path, dpi=300)
+    plt.close()
+
+except Exception as e:
+    print(f"Error: {str(e)}")
+    sys.exit(1)
+
+
+-> SEVQ:
+
+

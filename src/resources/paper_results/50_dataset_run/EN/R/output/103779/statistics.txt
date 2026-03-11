@@ -1,0 +1,444 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\103779\dataset.csv
+Programming Language: r
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-06 09:49:54
+Total Duration: 1018.06 seconds
+Total Token Usage: 110186 tokens
+Total Costs: $0.4839
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0176 seconds
+
+Method: analyse_dataset
+  Duration: 0.0087 seconds
+
+Method: analyse_metadata
+  Duration: 0.0168 seconds
+
+Method: llm_generate_summary
+  Duration: 167.3330 seconds
+
+Method: llm_generate_goals
+  Duration: 3.6108 seconds
+
+Method: llm_generate_r_code
+  Duration: 235.5251 seconds
+
+Method: test_generated_code
+  Duration: 12.1393 seconds
+
+Method: llm_regenerate_code
+  Duration: 11.6748 seconds
+
+Method: test_generated_code
+  Duration: 13.5826 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 574.1535 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7480 tokens
+  Costs total: $0.0055
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1541 tokens
+  Costs total: $0.0017
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7081 tokens
+  Costs total: $0.0485
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8418 tokens
+  Costs total: $0.0619
+
+Method: llm_generate_r_code
+  Model: openai/gpt-5-2025-08-07
+  Token total: 8757 tokens
+  Costs total: $0.0649
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 770 tokens
+  Costs total: $0.0020
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 351 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 1322 tokens
+  Costs total: $0.0034
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4557 tokens
+  Costs total: $0.0060
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 770 tokens
+  Costs total: $0.0020
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 351 tokens
+  Costs total: $0.0009
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 357 tokens
+  Costs total: $0.0010
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7324 tokens
+  Costs total: $0.0561
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2313 tokens
+  Costs total: $0.0084
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2865 tokens
+  Costs total: $0.0023
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6224 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4114 tokens
+  Costs total: $0.0232
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7517 tokens
+  Costs total: $0.0549
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2640 tokens
+  Costs total: $0.0090
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3025 tokens
+  Costs total: $0.0025
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4545 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4815 tokens
+  Costs total: $0.0272
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 7226 tokens
+  Costs total: $0.0524
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2608 tokens
+  Costs total: $0.0090
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 3302 tokens
+  Costs total: $0.0029
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4893 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 5020 tokens
+  Costs total: $0.0317
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='Which municipalities in the District of Segeberg have the highest concentration of cultural monuments?' visualization="Horizontal bar chart of the top 15 'Gemeinde' by count of 'Objektnummer'." rationale="A bar chart showing the count of monuments per 'Gemeinde' (Municipality) allows users to quickly identify the primary clusters of cultural heritage, such as Bad Segeberg, and see how monuments are distributed across the 65 different locations."
+
+-> Code:
+options(scipen=999, encoding="UTF-8")
+pkgs <- c("tidyverse","janitor","scales","viridis")
+inst <- pkgs[!sapply(pkgs, requireNamespace, quietly = TRUE)]
+if (length(inst) > 0) install.packages(inst, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+set.seed(123)
+input_path <- normalizePath(file.path(".", "src", "resources", "data", "study", "103779", "dataset.csv"), mustWork = FALSE)
+dir_out <- file.path(".", "src", "resources", "output", "103779")
+dir.create(dir_out, recursive = TRUE, showWarnings = FALSE)
+df <- readr::read_csv(input_path, locale = readr::locale(encoding = "UTF-8"), na = c("", "NA", "NaN", "nan"), show_col_types = FALSE)
+df <- janitor::clean_names(df)
+if ("gemeinde" %in% names(df)) df$gemeinde <- stringr::str_squish(df$gemeinde)
+if ("kulturdenkmaltyp" %in% names(df)) df$kulturdenkmaltyp <- stringr::str_squish(df$kulturdenkmaltyp)
+missing_prop <- df |>
+  summarise(across(everything(), ~mean(is.na(.)))) |>
+  tidyr::pivot_longer(everything(), names_to = "variable", values_to = "anteil_na") |>
+  arrange(desc(anteil_na))
+readr::write_csv(missing_prop, file.path(dir_out, "eda_fehlwerte_anteil_spalten.csv"))
+verteilung_typ <- df |>
+  filter(!is.na(kulturdenkmaltyp)) |>
+  count(kulturdenkmaltyp, name = "anzahl", sort = TRUE) |>
+  mutate(anteil = anzahl/sum(anzahl))
+readr::write_csv(verteilung_typ, file.path(dir_out, "eda_kulturdenkmaltyp_verteilung.csv"))
+anzahl_gemeinden <- df |>
+  filter(!is.na(gemeinde)) |>
+  summarise(n = n_distinct(gemeinde)) |>
+  pull(n)
+gesamt_eintraege <- nrow(df)
+counts_gemeinde <- df |>
+  filter(!is.na(gemeinde)) |>
+  group_by(gemeinde) |>
+  summarise(anzahl = n_distinct(objektnummer, na.rm = TRUE), .groups = "drop") |>
+  arrange(desc(anzahl))
+readr::write_csv(counts_gemeinde, file.path(dir_out, "eda_gemeinde_anzahl_denkmale.csv"))
+top15 <- counts_gemeinde |>
+  slice_max(order_by = anzahl, n = 15, with_ties = FALSE) |>
+  mutate(gemeinde = forcats::fct_reorder(gemeinde, anzahl))
+p <- ggplot(top15, aes(x = gemeinde, y = anzahl, fill = anzahl)) +
+  geom_col(width = 0.7) +
+  coord_flip() +
+  geom_text(aes(label = scales::comma(anzahl, accuracy = 1)), hjust = -0.05, size = 3.8, color = "#222222") +
+  scale_fill_viridis_c(option = "plasma", direction = -1, begin = 0.2, end = 0.95) +
+  labs(title = "Top 15 Gemeinden im Kreis Segeberg nach Anzahl der Kulturdenkmale",
+       subtitle = paste0("Zählung eindeutiger Objektnummern; Gemeinden gesamt: ", scales::comma(anzahl_gemeinden), ", Einträge gesamt: ", scales::comma(gesamt_eintraege)),
+       x = "Gemeinde",
+       y = "Anzahl der Kulturdenkmale",
+       fill = "Anzahl") +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "none",
+        plot.title = element_text(face = "bold", size = 14),
+        plot.subtitle = element_text(size = 11),
+        axis.title.x = element_text(margin = margin(t = 8)),
+        axis.title.y = element_text(margin = margin(r = 8)),
+        panel.grid.major.y = element_blank()) +
+  expand_limits(y = max(top15$anzahl) * 1.12)
+ggsave(filename = file.path(dir_out, "0_top15_gemeinden_monumente.png"), plot = p, width = 10, height = 7, dpi = 320)
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What are the most common types of cultural monuments in the district?' visualization="Bar chart of 'Kulturdenkmaltyp' frequencies." rationale="By analyzing the 'Kulturdenkmaltyp' (Monument Type), we can understand the nature of the protected sites. This visualization highlights whether the heritage is primarily architectural ('Bauliche Anlage'), green spaces, or other categories, providing a high-level profile of the dataset's composition."
+
+-> Code:
+options(stringsAsFactors = FALSE)
+pkgs <- c("readr","dplyr","ggplot2","forcats","janitor","stringr","scales","tibble")
+to_install <- pkgs[!pkgs %in% installed.packages()[, "Package"]]
+if (length(to_install) > 0) install.packages(to_install, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+raw_path <- "./src/resources/data/study\\103779/dataset.csv"
+alt_path <- "./src/resources/data/study/103779/dataset.csv"
+input_path <- if (file.exists(raw_path)) raw_path else alt_path
+out_dir <- file.path(".", "src", "resources", "output", "103779")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+df <- readr::read_csv(input_path, locale = locale(encoding = "UTF-8"), na = c("", "NA", "NaN", "nan", "N/A", "null", "NULL"), show_col_types = FALSE)
+miss_tbl <- tibble(Spalte = names(df), Fehlend = sapply(df, function(x) sum(is.na(x))), Anteil_Fehlend = sapply(df, function(x) mean(is.na(x)))) |> arrange(desc(Anteil_Fehlend))
+readr::write_csv(miss_tbl, file.path(out_dir, "eda_anteil_fehlender_werte.csv"))
+num_df <- dplyr::select(df, where(is.numeric))
+if (ncol(num_df) > 0) {
+  stats_df <- tibble(
+    Variable = names(num_df),
+    N = sapply(num_df, function(x) sum(!is.na(x))),
+    Missing = sapply(num_df, function(x) sum(is.na(x))),
+    Mean = sapply(num_df, function(x) if (all(is.na(x))) NA_real_ else mean(x, na.rm = TRUE)),
+    SD = sapply(num_df, function(x) if (sum(!is.na(x)) < 2) NA_real_ else sd(x, na.rm = TRUE)),
+    Min = sapply(num_df, function(x) if (all(is.na(x))) NA_real_ else suppressWarnings(min(x, na.rm = TRUE))),
+    Q1 = sapply(num_df, function(x) if (all(is.na(x))) NA_real_ else suppressWarnings(as.numeric(quantile(x, 0.25, na.rm = TRUE)))),
+    Median = sapply(num_df, function(x) if (all(is.na(x))) NA_real_ else median(x, na.rm = TRUE)),
+    Q3 = sapply(num_df, function(x) if (all(is.na(x))) NA_real_ else suppressWarnings(as.numeric(quantile(x, 0.75, na.rm = TRUE)))),
+    Max = sapply(num_df, function(x) if (all(is.na(x))) NA_real_ else suppressWarnings(max(x, na.rm = TRUE)))
+  )
+} else {
+  stats_df <- tibble(Variable = character(), N = integer(), Missing = integer(), Mean = double(), SD = double(), Min = double(), Q1 = double(), Median = double(), Q3 = double(), Max = double())
+}
+readr::write_csv(stats_df, file.path(out_dir, "eda_zusammenfassung_numerisch.csv"))
+if (ncol(num_df) > 1) {
+  cor_mat <- suppressWarnings(cor(num_df, use = "pairwise.complete.obs"))
+  cor_tbl <- as.data.frame(cor_mat)
+  cor_tbl <- tibble::rownames_to_column(cor_tbl, var = "Variable")
+} else {
+  cor_tbl <- tibble(Hinweis = "Keine oder nur eine numerische Spalte; Korrelationen nicht berechenbar")
+}
+readr::write_csv(cor_tbl, file.path(out_dir, "eda_korrelationen_numerisch.csv"))
+df$Kulturdenkmaltyp <- ifelse(is.na(df$Kulturdenkmaltyp) | stringr::str_trim(df$Kulturdenkmaltyp) == "", "(Fehlend)", df$Kulturdenkmaltyp)
+df$Kulturdenkmaltyp <- stringr::str_squish(df$Kulturdenkmaltyp)
+freq <- df |> dplyr::count(Kulturdenkmaltyp, name = "Anzahl") |> dplyr::arrange(dplyr::desc(Anzahl)) |> dplyr::mutate(Anteil = Anzahl / sum(Anzahl), Kulturdenkmaltyp = forcats::fct_reorder(Kulturdenkmaltyp, Anzahl))
+readr::write_csv(freq, file.path(out_dir, "eda_kulturdenkmaltyp_frequenzen.csv"))
+p <- ggplot(freq, aes(x = Kulturdenkmaltyp, y = Anzahl, fill = Kulturdenkmaltyp)) +
+  geom_col(width = 0.7, color = "grey30") +
+  coord_flip() +
+  geom_text(aes(label = paste0(Anzahl, " (", scales::percent(Anteil, accuracy = 0.1, decimal.mark = ",", big.mark = "."), ")")), hjust = -0.05, size = 3.8) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.08))) +
+  scale_fill_brewer(palette = "Set3", guide = "none") +
+  labs(title = "Kulturdenkmaltypen im Kreis Segeberg", subtitle = paste0("Häufigkeiten und Anteile an allen Einträgen (n = ", sum(freq$Anzahl), ")"), x = "Kulturdenkmaltyp", y = "Anzahl der Denkmale", caption = "Quelle: Offizielle Denkmalliste Kreis Segeberg; Fehlende Typen als „(Fehlend)“ behandelt") +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold"), axis.title.y = element_text(margin = margin(r = 10)), axis.title.x = element_text(margin = margin(t = 10)), plot.caption = element_text(size = 9))
+ggsave(filename = file.path(out_dir, "1_kulturdenkmaltyp_frequenzen.png"), plot = p, width = 12, height = 8, dpi = 320, bg = "white")
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the availability of visual documentation and detailed justifications for these monuments?' visualization="Grouped bar chart or stacked bar chart showing the count of non-missing values for 'FotoURL' and 'Begr_ndung' compared to the total count of 'Objektnummer'." rationale="This goal assesses the completeness of the dataset for researchers. By comparing the presence of 'FotoURL' (visuals) and 'Begr_ndung' (legal/historical reasoning) against the total number of 'Objektnummer', users can see how much of the list is fully documented versus how much is still awaiting updates."
+
+-> Code:
+library(readr)
+library(dplyr)
+library(stringr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+
+# Set encoding options
+options(encoding = "UTF-8")
+
+# Define paths
+input_path <- file.path(".", "src", "resources", "data", "study", "103779", "dataset.csv")
+output_dir <- file.path(".", "src", "resources", "output", "103779")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+# Load data
+raw <- readr::read_csv(input_path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE)
+
+# Data Cleaning
+df <- raw %>%
+  mutate(across(where(is.character), function(x) {
+    y <- x
+    y <- stringr::str_squish(y)
+    y[!is.na(y) & tolower(y) %in% c("nan", "na", "null", "none")] <- NA_character_
+    y
+  }))
+
+n_total <- nrow(df)
+
+# Logic for "Available"
+# 1. FotoURL: must be non-NA and look like a URL
+valid_url <- !is.na(df$FotoURL) & stringr::str_detect(df$FotoURL, "^https?://")
+
+# 2. Begründung: must be non-NA and not the specific placeholder
+placeholder <- tolower("Alteintragung (Aktualisierung vorgesehen)")
+# Note: The column name in the CSV might be 'Begr_ndung' due to encoding/import
+begr_col <- if ("Begr_ndung" %in% names(df)) "Begr_ndung" else "Begründung"
+valid_begr <- !is.na(df[[begr_col]]) & tolower(stringr::str_squish(df[[begr_col]])) != placeholder
+
+n_foto <- sum(valid_url, na.rm = TRUE)
+n_begr <- sum(valid_begr, na.rm = TRUE)
+
+# Prepare data for plotting
+summary_long <- tibble(
+  Feld = rep(c("FotoURL", "Begründung"), each = 2),
+  Status = rep(c("vorhanden", "fehlend"), times = 2),
+  Anzahl = c(n_foto, n_total - n_foto, n_begr, n_total - n_begr)
+) %>%
+  group_by(Feld) %>%
+  mutate(Prozent = if (sum(Anzahl) > 0) Anzahl / sum(Anzahl) else 0) %>%
+  ungroup() %>%
+  mutate(Feld = factor(Feld, levels = c("FotoURL", "Begründung")),
+         Status = factor(Status, levels = c("vorhanden", "fehlend")))
+
+# Create labels for the 'vorhanden' segments
+# Using big.mark = "'" to avoid confusion with decimal.mark = ","
+labels_avail <- summary_long %>%
+  filter(Status == "vorhanden") %>%
+  mutate(Label = paste0(format(Anzahl, big.mark = "'", scientific = FALSE),
+                        " (", scales::percent(Prozent, accuracy = 0.1, decimal.mark = ","), ")"))
+
+# Create total labels for the top of the bars
+totals_df <- summary_long %>%
+  group_by(Feld) %>%
+  summarise(Total = sum(Anzahl), .groups = "drop") %>%
+  mutate(Total_lab = paste0("N=", format(Total, big.mark = "'", scientific = FALSE)))
+
+# Visualization
+title_txt <- "Verfügbarkeit von Foto-URLs und Begründungen"
+subtitle_txt <- paste0("Gesamtzahl Objekte: ", format(n_total, big.mark = "'", scientific = FALSE))
+
+p <- ggplot(summary_long, aes(x = Feld, y = Anzahl, fill = Status)) +
+  geom_col(width = 0.6, color = "grey25", linewidth = 0.3) +
+  # Explicitly map Status in geom_text to avoid 'Status not found' error if inherited incorrectly
+  geom_text(data = labels_avail, 
+            aes(x = Feld, y = Anzahl, label = Label, fill = Status), 
+            position = position_stack(vjust = 0.5), 
+            color = "white", size = 4.2, fontface = "bold", inherit.aes = FALSE) +
+  geom_text(data = totals_df, 
+            aes(x = Feld, y = Total, label = Total_lab), 
+            vjust = -0.5, size = 4, inherit.aes = FALSE) +
+  scale_fill_manual(values = c("vorhanden" = "#2E7D32", "fehlend" = "#D3D3D3"), 
+                    labels = c("Vorhanden", "Fehlend/Platzhalter")) +
+  scale_y_continuous(labels = label_number(big.mark = "'", decimal.mark = ","), 
+                     expand = expansion(mult = c(0, 0.15))) +
+  labs(title = title_txt, 
+       subtitle = subtitle_txt, 
+       x = "Datenfeld", 
+       y = "Anzahl der Denkmale", 
+       fill = "Status", 
+       caption = "Quelle: Denkmalliste Kreis Segeberg") +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "top", 
+        plot.title = element_text(face = "bold", size = 16),
+        axis.title.x = element_text(margin = margin(t = 10)),
+        axis.title.y = element_text(margin = margin(r = 10)))
+
+# Save output
+plot_path <- file.path(output_dir, "2_verfuegbarkeit_foto_begruendung.png")
+ggsave(filename = plot_path, plot = p, width = 10, height = 6, dpi = 300)
+
+# Save CSV summaries
+readr::write_csv(summary_long, file.path(output_dir, "eda_availability_summary.csv"))
+
+
+-> SEVQ:
+
+

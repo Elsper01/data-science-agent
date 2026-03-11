@@ -40,7 +40,7 @@ def process_dataset(dataset: str) -> tuple[str, bool, str]:
             "dataset_path": os.path.join(dataset_path, "dataset.csv"),
             "metadata_path": os.path.join(dataset_path, "metadata.rdf"),
             "regeneration_attempts": 0,
-            "programming_language": enums.ProgrammingLanguage.PYTHON,
+            "programming_language": enums.ProgrammingLanguage.R,
             "is_refactoring": False,
             "output_path": output_dir,
             "durations": [],

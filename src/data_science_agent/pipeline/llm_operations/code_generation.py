@@ -290,7 +290,7 @@ def _get_generate_code_agent(state: AgentState, goal: Goal):
 
     # create the agent
     temp_agent = create_agent(
-        model=get_llm_model(LLMModel.GPT_5),
+        model=get_llm_model(LLMModel.GROK),
         response_format=Code,
         system_prompt=system_prompt
     )

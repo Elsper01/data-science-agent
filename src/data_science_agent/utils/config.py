@@ -21,6 +21,6 @@ def __load_language() -> Language:
 load_dotenv()
 
 MAX_REGENERATION_ATTEMPTS = int(os.getenv("MAX_REGENERATION_ATTEMPTS", "3"))
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+OPENROUTER_API_KEY = os.getenv("PRIVAT_OPENROUTER_API_KEY")
 BASE_URL = "https://openrouter.ai/api/v1"
 AGENT_LANGUAGE = __load_language()

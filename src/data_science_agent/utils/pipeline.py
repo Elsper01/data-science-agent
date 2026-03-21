@@ -16,6 +16,9 @@ def get_llm_model(model: LLMModel) -> ChatOpenAI:
         temperature=0,  # for less hallucination
         max_tokens=50000,
         timeout=60,
+        default_headers={
+            "X-Provider": "openai",
+        }
     )
     return llm
 

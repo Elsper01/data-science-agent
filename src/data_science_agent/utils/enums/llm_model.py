@@ -2,8 +2,8 @@ from enum import StrEnum
 
 class LLMModel(StrEnum):
     """Contains all supported and tested LLM models"""
-    GPT_4o = "gpt-4o"
-    GPT_5 = "gpt-5" # nehmen wir
+    GPT_4o = "openai/gpt-4o"
+    GPT_5 = "openai/gpt-5" # nehmen wir
     GROK = "x-ai/grok-4.1-fast"
     CLAUDE_4 = "anthropic/claude-sonnet-4.5" # nehmen wir
     GEMINI = "google/gemini-3-flash-preview" # nehmen wir

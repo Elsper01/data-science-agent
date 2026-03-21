@@ -1,0 +1,327 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32830\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-19 16:03:43
+Total Duration: 589.01 seconds
+Total Token Usage: 72526 tokens
+Total Costs: $0.2197
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0122 seconds
+
+Method: analyse_dataset
+  Duration: 0.0156 seconds
+
+Method: analyse_metadata
+  Duration: 0.0194 seconds
+
+Method: llm_generate_summary
+  Duration: 199.9325 seconds
+
+Method: llm_generate_goals
+  Duration: 6.4777 seconds
+
+Method: llm_generate_python_code
+  Duration: 61.9878 seconds
+
+Method: test_generated_code
+  Duration: 15.2919 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 305.2763 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 6614 tokens
+  Costs total: $0.0059
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1856 tokens
+  Costs total: $0.0018
+
+Method: llm_generate_python_code
+  Model: x-ai/grok-4.1-fast
+  Token total: 4331 tokens
+  Costs total: $0.0013
+
+Method: llm_generate_python_code
+  Model: x-ai/grok-4.1-fast
+  Token total: 5355 tokens
+  Costs total: $0.0019
+
+Method: llm_generate_python_code
+  Model: x-ai/grok-4.1-fast
+  Token total: 4858 tokens
+  Costs total: $0.0016
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 344 tokens
+  Costs total: $0.0009
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4464 tokens
+  Costs total: $0.0317
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1916 tokens
+  Costs total: $0.0080
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2082 tokens
+  Costs total: $0.0022
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3804 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3752 tokens
+  Costs total: $0.0241
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5301 tokens
+  Costs total: $0.0396
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1919 tokens
+  Costs total: $0.0077
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2126 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4763 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3856 tokens
+  Costs total: $0.0247
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4336 tokens
+  Costs total: $0.0314
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1686 tokens
+  Costs total: $0.0066
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1830 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3423 tokens
+  Costs total: $0.0011
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3406 tokens
+  Costs total: $0.0206
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How did the daily traffic volume fluctuate throughout September 2024?' visualization="Line chart with 'Datum' on the x-axis and both 'Besuche' and 'Besucher' on the y-axis." rationale="A line chart showing 'Besuche' (Visits) and 'Besucher' (Unique Visitors) over the 'Datum' (Date) allows users to identify peak traffic days and weekly patterns. This helps distinguish between regular usage and potential outliers or high-traffic events. Note: The summary row (where Datum is NaN) should be excluded for this visualization."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_style('whitegrid')
+
+
+df = pd.read_csv('./src/resources/data/study/32830/dataset.csv', sep=',', encoding='utf-8')
+
+df.drop('Unnamed__14', axis=1, inplace=True)
+
+
+df_viz = df.dropna(subset=['Datum']).copy()
+df_viz['Datum'] = pd.to_datetime(df_viz['Datum'], format='%d.%m.%Y')
+df_viz = df_viz.sort_values('Datum')
+
+df_viz['Besuche'] = pd.to_numeric(df_viz['Besuche'], errors='coerce')
+df_viz['Besucher'] = pd.to_numeric(df_viz['Besucher'], errors='coerce')
+
+
+fig, ax1 = plt.subplots(figsize=(14, 7))
+
+color = 'tab:blue'
+line1 = ax1.plot(df_viz['Datum'], df_viz['Besuche'], color=color, linewidth=2.5, marker='o', markersize=4)
+ax1.set_xlabel('Datum', fontsize=12, fontweight='bold')
+ax1.set_ylabel('Besuche', color=color, fontsize=12, fontweight='bold')
+ax1.tick_params(axis='y', labelcolor=color)
+ax1.grid(True, alpha=0.3)
+
+
+ax2 = ax1.twinx()
+color = 'tab:orange'
+line2 = ax2.plot(df_viz['Datum'], df_viz['Besucher'], color=color, linewidth=2.5, marker='s', markersize=4)
+ax2.set_ylabel('Besucher', color=color, fontsize=12, fontweight='bold')
+ax2.tick_params(axis='y', labelcolor=color)
+
+
+plt.title('Tagesverlauf der Besuche und Besucher im September 2024', fontsize=16, fontweight='bold', pad=20)
+
+lines = line1 + line2
+labels = [l.get_label() for l in lines]
+fig.legend(lines, labels, loc='upper right', fontsize=11)
+
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+plt.savefig('./src/resources/output/32830/0_tagesverlauf_besuche_besucher.png', dpi=300, bbox_inches='tight', facecolor='white')
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the relationship between session depth and the bounce rate on a daily basis?' visualization="Dual-axis line chart or scatter plot using 'Seiten_pro_Besuch' and 'Bounce_Rate' over 'Datum'." rationale="By comparing 'Seiten_pro_Besuch' (Pages per Visit) and 'Bounce_Rate' across the month, we can see if days with higher engagement (more pages) correlate with lower bounce rates. This provides insight into the quality of user sessions and whether visitors are finding the information they need immediately or exploring the site."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import seaborn as sns
+sns.set_style('whitegrid')
+df = pd.read_csv('./src/resources/data/study\\32830\\dataset.csv', sep=',', encoding='utf-8')
+df.drop(columns=['Unnamed__14'], inplace=True, errors='ignore')
+df_daily = df[df['Datum'].notna()].copy()
+df_daily['Datum'] = pd.to_datetime(df_daily['Datum'], format='%d.%m.%Y')
+df_daily = df_daily.sort_values('Datum').reset_index(drop=True)
+df_daily['Seiten_pro_Besuch'] = pd.to_numeric(df_daily['Seiten_pro_Besuch'].astype(str).str.strip(), errors='coerce')
+df_daily['Bounce_Rate'] = pd.to_numeric(df_daily['Bounce_Rate'].astype(str).str.strip().str.replace('%', ''), errors='coerce') / 100
+df_daily = df_daily.dropna(subset=['Seiten_pro_Besuch', 'Bounce_Rate'])
+corr = df_daily['Seiten_pro_Besuch'].corr(df_daily['Bounce_Rate'])
+fig, ax1 = plt.subplots(figsize=(14, 7))
+line1 = ax1.plot(df_daily['Datum'], df_daily['Seiten_pro_Besuch'], color='tab:blue', linewidth=2, marker='o')
+ax1.set_xlabel('Datum', fontsize=12)
+ax1.set_ylabel('Seiten pro Besuch', color='tab:blue', fontsize=12)
+ax1.tick_params(axis='y', labelcolor='tab:blue')
+ax1.grid(True, alpha=0.3)
+ax2 = ax1.twinx()
+line2 = ax2.plot(df_daily['Datum'], df_daily['Bounce_Rate'], color='tab:red', linewidth=2, marker='s')
+ax2.set_ylabel('Bounce Rate', color='tab:red', fontsize=12)
+ax2.tick_params(axis='y', labelcolor='tab:red')
+lines = line1 + line2
+labels = [l.get_label() for l in lines]
+ax1.legend(lines, labels, loc='upper right', fontsize=10)
+plt.title('Täglicher Zusammenhang zwischen Seiten pro Besuch und Bounce Rate\n(Korrelation: {:.3f})'.format(corr), fontsize=14, pad=20)
+fig.autofmt_xdate(rotation=45)
+plt.tight_layout()
+plt.savefig('./src/resources/output\\32830/1_seiten_bounce_zusammenhang.png', dpi=300, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='How does the cookie consent rate vary across the month?' visualization="Area chart or line chart showing 'Anteil_Besuche_mit_Cookies' over 'Datum'." rationale="The summary highlights a technical anomaly where 'Anteil_Besuche_mit_Cookies' (Percentage of visits with cookies) drops significantly. Visualizing this field over 'Datum' will pinpoint exactly when the drop occurred, helping administrators determine if it was a technical failure or a specific policy change in tracking."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_style('whitegrid')
+
+
+df = pd.read_csv(r'./src/resources/data/study\32830\dataset.csv', sep=',', encoding='utf-8')
+
+df.drop('Unnamed__14', axis=1, inplace=True)
+
+df = df[df['Datum'].notna()].copy()
+
+df['Datum'] = pd.to_datetime(df['Datum'], format='%d.%m.%Y')
+
+df.sort_values('Datum', inplace=True)
+
+
+df['Anteil_Besuche_mit_Cookies_num'] = pd.to_numeric(df['Anteil_Besuche_mit_Cookies'].str.rstrip('%'), errors='coerce') / 100
+
+
+print('Statistiken für Anteil_Besuche_mit_Cookies:')
+print(df['Anteil_Besuche_mit_Cookies_num'].describe())
+
+
+plt.figure(figsize=(14, 7))
+plt.plot(df['Datum'], df['Anteil_Besuche_mit_Cookies_num'], marker='o', linewidth=2, markersize=6, color='steelblue')
+plt.fill_between(df['Datum'], df['Anteil_Besuche_mit_Cookies_num'], alpha=0.3, color='steelblue')
+
+plt.title('Entwicklung des Anteils der Besuche mit Cookies (Anteil_Besuche_mit_Cookies) im September 2024', fontsize=16, pad=20)
+plt.xlabel('Datum', fontsize=12)
+plt.ylabel('Anteil in %', fontsize=12)
+
+plt.xticks(rotation=45)
+plt.grid(True, alpha=0.3)
+
+plt.tight_layout()
+
+plt.savefig(r'./src/resources/output\32830\2_anteil_besuche_mit_cookies_over_datum.png', dpi=300, bbox_inches='tight')
+plt.close()
+
+-> SEVQ:
+
+

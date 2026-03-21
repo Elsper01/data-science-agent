@@ -1,0 +1,448 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\13473\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-19 15:14:24
+Total Duration: 623.15 seconds
+Total Token Usage: 73309 tokens
+Total Costs: $0.2542
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0225 seconds
+
+Method: analyse_dataset
+  Duration: 0.0237 seconds
+
+Method: analyse_metadata
+  Duration: 0.0231 seconds
+
+Method: llm_generate_summary
+  Duration: 178.0625 seconds
+
+Method: llm_generate_goals
+  Duration: 7.2262 seconds
+
+Method: llm_generate_python_code
+  Duration: 17.6621 seconds
+
+Method: test_generated_code
+  Duration: 13.7787 seconds
+
+Method: llm_regenerate_code
+  Duration: 17.9352 seconds
+
+Method: test_generated_code
+  Duration: 17.8215 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 370.5930 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 4601 tokens
+  Costs total: $0.0038
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1364 tokens
+  Costs total: $0.0016
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 943 tokens
+  Costs total: $0.0024
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 968 tokens
+  Costs total: $0.0025
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 943 tokens
+  Costs total: $0.0024
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2511 tokens
+  Costs total: $0.0032
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2622 tokens
+  Costs total: $0.0033
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2773 tokens
+  Costs total: $0.0038
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5871 tokens
+  Costs total: $0.0444
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2034 tokens
+  Costs total: $0.0080
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2163 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3683 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3883 tokens
+  Costs total: $0.0239
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4962 tokens
+  Costs total: $0.0354
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2061 tokens
+  Costs total: $0.0083
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2195 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6708 tokens
+  Costs total: $0.0027
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4012 tokens
+  Costs total: $0.0257
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5384 tokens
+  Costs total: $0.0385
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2140 tokens
+  Costs total: $0.0082
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2296 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4319 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 4117 tokens
+  Costs total: $0.0255
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What is the gender distribution of the population in Hof?' visualization="Bar chart showing '2_variable_attribute_label' on the x-axis and 'value' on the y-axis, filtered to exclude the 'Total' (Insgesamt) category." rationale="This goal allows users to immediately see the demographic split between male and female residents. Using a bar chart to compare '2_variable_attribute_label' against 'value' (filtering out the 'Total' category) provides a clear visual comparison of the gender balance."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+# Load the dataset
+# The error 'UnicodeDecodeError' with byte 0xf6 (ö) suggests 'latin-1' or 'iso-8859-1' encoding
+file_path = './src/resources/data/study/13473/dataset.csv'
+
+try:
+    df = pd.read_csv(file_path, sep=';', encoding='utf-8')
+except UnicodeDecodeError:
+    # Fallback to latin-1 if utf-8 fails
+    df = pd.read_csv(file_path, sep=';', encoding='latin-1')
+
+# Filter the dataset for the visualization goal
+# Goal: Bar chart showing '2_variable_attribute_label' on the x-axis and 'value' on the y-axis, 
+# filtered to exclude the 'Total' (Insgesamt) category.
+# We also filter for 'KREISE' to avoid double counting with 'GEMEINDEN' if both exist for the same region.
+plot_df = df[(df['2_variable_attribute_label'] != 'Insgesamt')].copy()
+
+# If there are multiple regional levels, we take the highest level (KREISE) to represent the city/district
+if '1_variable_code' in plot_df.columns and 'KREISE' in plot_df['1_variable_code'].values:
+    plot_df = plot_df[plot_df['1_variable_code'] == 'KREISE']
+
+# Set aesthetic style
+sns.set_theme(style="whitegrid")
+plt.figure(figsize=(10, 6))
+
+# Create the bar chart
+# Mapping colors: Blue for Männlich, Pink/Red for Weiblich
+palette = {'männlich': '#3498db', 'weiblich': '#e74c3c'}
+
+ax = sns.barplot(
+    data=plot_df, 
+    x='2_variable_attribute_label', 
+    y='value', 
+    palette='viridis', # Defaulting to viridis if specific labels don't match
+    hue='2_variable_attribute_label',
+    legend=False
+)
+
+# Add labels and title
+plt.title('Geschlechterverteilung der Bevölkerung in Hof', fontsize=14, fontweight='bold', pad=20)
+plt.xlabel('Geschlecht', fontsize=12)
+plt.ylabel('Anzahl der Personen', fontsize=12)
+
+# Add data labels on top of bars
+for p in ax.patches:
+    if p.get_height() > 0:
+        ax.annotate(format(p.get_height(), ',.0f').replace(',', '.'), 
+                    (p.get_x() + p.get_width() / 2., p.get_height()), 
+                    ha = 'center', va = 'center', 
+                    xytext = (0, 9), 
+                    textcoords = 'offset points',
+                    fontsize=11,
+                    fontweight='bold')
+
+# Adjust layout
+plt.tight_layout()
+
+# Ensure output directory exists
+output_dir = './src/resources/output/13473'
+os.makedirs(output_dir, exist_ok=True)
+
+# Save the plot
+plt.savefig(f'{output_dir}/0_geschlechterverteilung_hof.png', dpi=300)
+plt.close()
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='How does the total population compare across different administrative levels (District vs. Municipality)?' visualization="Grouped bar chart comparing '1_variable_code' (KREISE vs GEMEIN) with 'value', specifically for the 'Total' category in '2_variable_attribute_label'." rationale="The dataset contains records for both 'KREISE' and 'GEMEIN' in the '1_variable_code' column. Visualizing this confirms the summary's statement that for an independent city like Hof, these values are identical, helping the user understand the data structure and regional hierarchy."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+def create_visualization():
+    file_path = './src/resources/data/study/13473/dataset.csv'
+    output_dir = './src/resources/output/13473'
+    output_file = os.path.join(output_dir, '1_population_comparison_levels.png')
+    
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    # The error 'UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf6' 
+    # suggests the file is likely encoded in 'latin-1' or 'iso-8859-1' (common for German data with umlauts like 'ö').
+    try:
+        df = pd.read_csv(file_path, sep=';', encoding='utf-8')
+    except UnicodeDecodeError:
+        df = pd.read_csv(file_path, sep=';', encoding='latin-1')
+
+    # Filter for 'Total' category in '2_variable_attribute_label'
+    # 'Insgesamt' is the German label for 'Total'
+    df_total = df[df['2_variable_attribute_label'] == 'Insgesamt'].copy()
+
+    # Ensure we have data to plot
+    if df_total.empty:
+        print("No data found for 'Insgesamt' in '2_variable_attribute_label'.")
+        return
+
+    # Prepare data for plotting
+    # We want to compare KREISE vs GEMEIN
+    plot_data = df_total[df_total['1_variable_code'].isin(['KREISE', 'GEMEIN'])].copy()
+    
+    # Set aesthetic style
+    sns.set_theme(style="whitegrid")
+    plt.figure(figsize=(10, 6))
+
+    # Create bar chart
+    ax = sns.barplot(
+        data=plot_data, 
+        x='1_variable_label', 
+        y='value', 
+        palette='viridis',
+        hue='1_variable_label',
+        legend=False
+    )
+
+    # Add data labels on top of bars
+    for p in ax.patches:
+        height = p.get_height()
+        ax.annotate(f'{height:,.0f}'.replace(',', '.'), 
+                   (p.get_x() + p.get_width() / 2., height), 
+                   ha = 'center', va = 'center', 
+                   xytext = (0, 9), 
+                   textcoords = 'offset points',
+                   fontsize=12,
+                   fontweight='bold')
+
+    # Labels and Title
+    plt.title('Vergleich der Gesamtbevölkerung: Kreisebene vs. Gemeindeebene\n(Stadt Hof)', fontsize=14, pad=20)
+    plt.xlabel('Administrative Ebene', fontsize=12)
+    plt.ylabel('Gesamtbevölkerung (Anzahl)', fontsize=12)
+    
+    # Adjust y-axis to give space for labels
+    plt.ylim(0, plot_data['value'].max() * 1.2)
+
+    plt.tight_layout()
+    plt.savefig(output_file)
+    plt.close()
+
+if __name__ == "__main__":
+    create_visualization()
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the total population of Hof as of the latest reference date?' visualization="Summary metric/KPI card showing the 'value' for the 'Total' category in '2_variable_attribute_label' at the reference 'time'." rationale="A single indicator or summary card showing the 'value' where '2_variable_attribute_label' is 'Total' and 'time' is '2024-12-31' provides the most critical headline figure for any user interested in urban planning or demographic snapshots."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import os
+
+# Load the dataset
+file_path = './src/resources/data/study/13473/dataset.csv'
+
+# The error 'UnicodeDecodeError' with byte 0xf6 (ö) suggests 'latin-1' or 'iso-8859-1' encoding
+# common in German datasets.
+try:
+    df = pd.read_csv(file_path, sep=';', encoding='utf-8')
+except UnicodeDecodeError:
+    df = pd.read_csv(file_path, sep=';', encoding='latin-1')
+
+# Exploratory Data Analysis (EDA)
+# The goal is to find the total population for the latest reference date.
+# Based on the previous code, the label is 'Insgesamt' (Total) and date is '2024-12-31'.
+
+# Filter for the specific KPI: Total population
+# We look for 'Insgesamt' in '2_variable_attribute_label'
+kpi_data = df[df['2_variable_attribute_label'].str.contains('Insgesamt', na=False, case=False)]
+
+# Sort by time to get the latest date if 2024-12-31 is not available or to be dynamic
+kpi_data = kpi_data.sort_values(by='time', ascending=False)
+
+if not kpi_data.empty:
+    latest_row = kpi_data.iloc[0]
+    total_population = latest_row['value']
+    reference_date_raw = latest_row['time']
+    # Format date for display (assuming YYYY-MM-DD)
+    try:
+        reference_date = pd.to_datetime(reference_date_raw).strftime('%d.%m.%Y')
+    except:
+        reference_date = reference_date_raw
+else:
+    total_population = 0
+    reference_date = "N/A"
+
+# Create the visualization (KPI Card)
+fig, ax = plt.subplots(figsize=(8, 5))
+
+# Remove axes for a clean card look
+ax.axis('off')
+
+# Add a background rectangle for the card
+rect = plt.Rectangle((0.1, 0.2), 0.8, 0.6, color='#f8f9fa', ec='#dee2e6', lw=2, transform=ax.transAxes)
+ax.add_patch(rect)
+
+# Add Title
+plt.text(0.5, 0.72, 'Gesamtbevölkerung Hof', 
+         horizontalalignment='center', verticalalignment='center', 
+         fontsize=22, fontweight='bold', color='#212529', transform=ax.transAxes)
+
+# Add the KPI Value
+# Format with thousands separator
+formatted_val = f"{int(total_population):,}".replace(',', '.') if not pd.isna(total_population) else "k.A."
+plt.text(0.5, 0.52, formatted_val, 
+         horizontalalignment='center', verticalalignment='center', 
+         fontsize=55, fontweight='bold', color='#007bff', transform=ax.transAxes)
+
+# Add Subtitle/Reference Date
+plt.text(0.5, 0.38, f'Stand: {reference_date}', 
+         horizontalalignment='center', verticalalignment='center', 
+         fontsize=16, color='#6c757d', transform=ax.transAxes)
+
+# Add Unit
+plt.text(0.5, 0.28, 'Einwohner', 
+         horizontalalignment='center', verticalalignment='center', 
+         fontsize=14, color='#6c757d', transform=ax.transAxes)
+
+# Ensure output directory exists
+output_dir = './src/resources/output/13473'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+# Save the plot
+plt.tight_layout()
+plt.savefig(f'{output_dir}/2_total_population_kpi.png', dpi=300, bbox_inches='tight')
+plt.close()
+
+
+-> SEVQ:
+
+

@@ -1,0 +1,1295 @@
+(.venv) PS C:\Users\jelsper\Desktop\open-data-preview\data-science-agent> python .\src\data_science_agent\test_parallel.py
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+Starting parallel processing with 8 workers …
+Processing datasets:   0%|                                                                                                                                                                                                  | 0/10 [00:00<?, ?it/s][nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jelsper\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data]   Package wordnet is already up-to-date![nltk_data]   Package wordnet is already up-to-date!
+[nltk_data]   Package wordnet is already up-to-date!
+
+[nltk_data]   Package wordnet is already up-to-date!
+Failed to read file: ./src/resources/data/study\117073\dataset.csv. Error: bad delimiter value
+Failed to read file: ./src/resources/data/study\117190\dataset.csv. Error: Expected 1 fields in line 7, saw 10
+Failed to read file: ./src/resources/data/study\116051\dataset.csv. Error: Expected 1 fields in line 7, saw 60
+❌ Failed: bad delimiter value
+Traceback (most recent call last):
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\test_parallel.py", line 53, in process_dataset
+    agent.invoke(state)
+    ~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\decorator\duration_tracking.py", line 15, in wrapper
+    result_state = func(state, *args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 43, in load_dataset
+    state["dataset_df"], state["dataset_delimiter"], state["dataset_encoding"] = read_dataframe(state["dataset_path"])
+                                                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 123, in read_dataframe
+    df = read_funcs[file_extension]()
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 111, in <lambda>
+    'csv': lambda: pd.read_csv(file_location, engine='python', encoding=encoding_guess, delimiter=delimiter),
+                   ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 123, in __init__
+    self.data = self._make_reader(f)
+                ~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 229, in _make_reader
+    reader = csv.reader(f, dialect=dia, strict=True)
+ValueError: bad delimiter value
+During task with name 'load_data' and id 'acdd8134-bd44-0505-47f7-a0e6ad1d370c'
+
+Processing datasets:  10%|██████████████████▌                                                                                                                                                                       | 1/10 [00:38<05:50, 38.94s/it]❌ Failed: Expected 1 fields in line 7, saw 10
+Traceback (most recent call last):
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\test_parallel.py", line 53, in process_dataset
+    agent.invoke(state)
+    ~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\decorator\duration_tracking.py", line 15, in wrapper
+    result_state = func(state, *args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 43, in load_dataset
+    state["dataset_df"], state["dataset_delimiter"], state["dataset_encoding"] = read_dataframe(state["dataset_path"])
+                                                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 123, in read_dataframe
+    df = read_funcs[file_extension]()
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 111, in <lambda>
+    'csv': lambda: pd.read_csv(file_location, engine='python', encoding=encoding_guess, delimiter=delimiter),
+                   ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        nrows
+        ^^^^^
+    )
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 288, in read
+    alldata = self._rows_to_cols(content)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 1063, in _rows_to_cols
+    self._alert_malformed(msg, row_num + 1)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 781, in _alert_malformed
+    raise ParserError(msg)
+pandas.errors.ParserError: Expected 1 fields in line 7, saw 10
+During task with name 'load_data' and id 'b77e72f4-0d52-97b0-518c-83010a968547'
+
+❌ Failed: Expected 1 fields in line 7, saw 60
+Traceback (most recent call last):
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\test_parallel.py", line 53, in process_dataset
+    agent.invoke(state)
+    ~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\decorator\duration_tracking.py", line 15, in wrapper
+    result_state = func(state, *args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 43, in load_dataset
+    state["dataset_df"], state["dataset_delimiter"], state["dataset_encoding"] = read_dataframe(state["dataset_path"])
+                                                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 123, in read_dataframe
+    df = read_funcs[file_extension]()
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 111, in <lambda>
+    'csv': lambda: pd.read_csv(file_location, engine='python', encoding=encoding_guess, delimiter=delimiter),
+                   ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        nrows
+        ^^^^^
+    )
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 288, in read
+    alldata = self._rows_to_cols(content)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 1063, in _rows_to_cols
+    self._alert_malformed(msg, row_num + 1)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 781, in _alert_malformed
+    raise ParserError(msg)
+pandas.errors.ParserError: Expected 1 fields in line 7, saw 60
+During task with name 'load_data' and id 'e0d0bd76-af53-0e99-4232-fdc30b86d24c'
+
+Failed to read file: ./src/resources/data/study\12586\dataset.csv. Error: bad delimiter value
+❌ Failed: bad delimiter value
+Traceback (most recent call last):
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\test_parallel.py", line 53, in process_dataset
+    agent.invoke(state)
+    ~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\decorator\duration_tracking.py", line 15, in wrapper
+    result_state = func(state, *args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 43, in load_dataset
+    state["dataset_df"], state["dataset_delimiter"], state["dataset_encoding"] = read_dataframe(state["dataset_path"])
+                                                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 123, in read_dataframe
+    df = read_funcs[file_extension]()
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 111, in <lambda>
+    'csv': lambda: pd.read_csv(file_location, engine='python', encoding=encoding_guess, delimiter=delimiter),
+                   ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 123, in __init__
+    self.data = self._make_reader(f)
+                ~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 229, in _make_reader
+    reader = csv.reader(f, dialect=dia, strict=True)
+ValueError: bad delimiter value
+During task with name 'load_data' and id '6d77d149-1740-013f-5e8a-fb60d51658e6'
+
+Processing datasets:  40%|██████████████████████████████████████████████████████████████████████████▍                                                                                                               | 4/10 [00:39<00:44,  7.40s/it]Failed to read file: ./src/resources/data/study\115488\dataset.csv. Error: Expected 1 fields in line 7, saw 14
+❌ Failed: Expected 1 fields in line 7, saw 14
+Traceback (most recent call last):
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\test_parallel.py", line 53, in process_dataset
+    agent.invoke(state)
+    ~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\decorator\duration_tracking.py", line 15, in wrapper
+    result_state = func(state, *args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 43, in load_dataset
+    state["dataset_df"], state["dataset_delimiter"], state["dataset_encoding"] = read_dataframe(state["dataset_path"])
+                                                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 123, in read_dataframe
+    df = read_funcs[file_extension]()
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 111, in <lambda>
+    'csv': lambda: pd.read_csv(file_location, engine='python', encoding=encoding_guess, delimiter=delimiter),
+                   ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        nrows
+        ^^^^^
+    )
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 288, in read
+    alldata = self._rows_to_cols(content)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 1063, in _rows_to_cols
+    self._alert_malformed(msg, row_num + 1)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 781, in _alert_malformed
+    raise ParserError(msg)
+pandas.errors.ParserError: Expected 1 fields in line 7, saw 14
+During task with name 'load_data' and id '518d1222-cd6e-454c-6895-9844bb90537c'
+
+Failed to read file: ./src/resources/data/study\12204\dataset.csv. Error: bad delimiter value
+❌ Failed: bad delimiter value
+Traceback (most recent call last):
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\test_parallel.py", line 53, in process_dataset
+    agent.invoke(state)
+    ~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\decorator\duration_tracking.py", line 15, in wrapper
+    result_state = func(state, *args, **kwargs)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 43, in load_dataset
+    state["dataset_df"], state["dataset_delimiter"], state["dataset_encoding"] = read_dataframe(state["dataset_path"])
+                                                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 123, in read_dataframe
+    df = read_funcs[file_extension]()
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\src\data_science_agent\pipeline\data_loading.py", line 111, in <lambda>
+    'csv': lambda: pd.read_csv(file_location, engine='python', encoding=encoding_guess, delimiter=delimiter),
+                   ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 123, in __init__
+    self.data = self._make_reader(f)
+                ~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\jelsper\Desktop\open-data-preview\data-science-agent\.venv\Lib\site-packages\pandas\io\parsers\python_parser.py", line 229, in _make_reader
+    reader = csv.reader(f, dialect=dia, strict=True)
+ValueError: bad delimiter value
+During task with name 'load_data' and id 'c05f1dcf-74f3-7bda-2623-2c45527f8e9e'
+
+Processing datasets:  40%|██████████████████████████████████████████████████████████████████████████▍                                                                                                               | 4/10 [00:50<00:44,  7.40s/it]  Evaluation Metrics GPT-5: {'bleu': 0.015527687718561963, 'meteor': 0.09027172364758058, 'rouge1': 0.22981878088962107, 'rouge2': 0.08985985160758451, 'rougeL': 0.1169686985172982}
+  Evaluation Metrics GPT-4o: {'bleu': 0.007325570743418173, 'meteor': 0.06881590650406597, 'rouge1': 0.18829268292682927, 'rouge2': 0.08007812499999999, 'rougeL': 0.13365853658536586}
+  Evaluation Metrics Gemini: {'bleu': 0.01071478149792168, 'meteor': 0.07604068101440817, 'rouge1': 0.1884526558891455, 'rouge2': 0.07212205270457697, 'rougeL': 0.11916859122401849}
+  Evaluation Metrics Grok: {'bleu': 0.016777474300265237, 'meteor': 0.0901543724338681, 'rouge1': 0.25495495495495496, 'rouge2': 0.11181244364292155, 'rougeL': 0.12792792792792793}
+  Evaluation Metrics Claude: {'bleu': 0.017654735993455014, 'meteor': 0.08840945526681222, 'rouge1': 0.22065378900445765, 'rouge2': 0.08327137546468401, 'rougeL': 0.11367013372956909}
+Evaluation metrics saved to: ./src/resources/output\32830\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\32830\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: How does the daily traffic volume fluctuate throughout September 2024?
+- Goal Question: What is the relationship between the number of pages viewed per visit and the bounce rate?
+- Goal Question: How does the total volume of page views change daily compared to the average session duration?
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\32830\VER_0.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+  Evaluation Metrics GPT-5: {'bleu': 0.01143651425960651, 'meteor': 0.07719392541290035, 'rouge1': 0.16549165120593692, 'rouge2': 0.05050129966580022, 'rougeL': 0.06382189239332096}
+  Evaluation Metrics GPT-4o: {'bleu': 0.0007926964856491363, 'meteor': 0.03865344872689916, 'rouge1': 0.12213740458015268, 'rouge2': 0.041595925297113756, 'rougeL': 0.07888040712468192}
+  Evaluation Metrics Gemini: {'bleu': 0.0017388603574920753, 'meteor': 0.05062912227168749, 'rouge1': 0.11833333333333332, 'rouge2': 0.03419516263552961, 'rougeL': 0.06583333333333333}
+  Evaluation Metrics Grok: {'bleu': 0.002593020189860302, 'meteor': 0.06116758151341896, 'rouge1': 0.15689512799339386, 'rouge2': 0.050413223140495865, 'rougeL': 0.07597027250206441}
+  Evaluation Metrics Claude: {'bleu': 0.009293849679272924, 'meteor': 0.06666245488778064, 'rouge1': 0.1457875457875458, 'rouge2': 0.04765395894428153, 'rougeL': 0.06813186813186814}
+Evaluation metrics saved to: ./src/resources/output\103779\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\103779\summary.txt
+Evaluation done.
+Generated Visualization Goals:
+- Goal Question: What are the most common types of cultural monuments in the Segeberg district?
+- Goal Question: Which municipalities in Segeberg have the highest concentration of registered monuments?
+- Goal Question: What is the status of documentation and visual evidence for these monuments?
+LLM generated visualization code.
+LLM generated visualization code.
+  Evaluation Metrics GPT-5: {'bleu': 0.03872478524613727, 'meteor': 0.1401802503958828, 'rouge1': 0.30859375, 'rouge2': 0.11925708699902247, 'rougeL': 0.1591796875}
+  Evaluation Metrics GPT-4o: {'bleu': 0.023569644922981768, 'meteor': 0.10559616672656356, 'rouge1': 0.29571577847439917, 'rouge2': 0.10774058577405857, 'rougeL': 0.1724137931034483}
+  Evaluation Metrics Gemini: {'bleu': 0.004862191011580243, 'meteor': 0.07609333847974832, 'rouge1': 0.1940119760479042, 'rouge2': 0.06954436450839328, 'rougeL': 0.11377245508982035}
+  Evaluation Metrics Grok: {'bleu': 0.03181945610661018, 'meteor': 0.1349829890054739, 'rouge1': 0.3176229508196721, 'rouge2': 0.11897435897435896, 'rougeL': 0.16290983606557377}
+  Evaluation Metrics Claude: {'bleu': 0.03151267548034837, 'meteor': 0.1330041051131891, 'rouge1': 0.2760103181427343, 'rouge2': 0.08864027538726335, 'rougeL': 0.14359415305245055}
+Evaluation metrics saved to: ./src/resources/output\13473\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\13473\summary.txt
+Evaluation done.
+LIDA Judge for vis#0 with openai/gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+Generated Visualization Goals:
+- Goal Question: What is the gender distribution of the population in Hof?
+- Goal Question: How does the total population compare to the gender-specific subgroups?
+- Goal Question: What is the population count for the city of Hof at different administrative levels?
+LLM generated visualization code.
+LIDA Judge for vis#0 with openai/gpt-4o
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+Testing generated code (py) for vis#0:
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LLM generated visualization code.
+  Evaluation Metrics GPT-5: {'bleu': 0.01784084702377761, 'meteor': 0.10629414651321811, 'rouge1': 0.26516700749829586, 'rouge2': 0.0927694406548431, 'rougeL': 0.12406271301976825}
+  Evaluation Metrics GPT-4o: {'bleu': 0.00784499653835214, 'meteor': 0.06943949077104843, 'rouge1': 0.20771727371078252, 'rouge2': 0.07001082641645616, 'rougeL': 0.1254958528669311}
+Testing generated code (py) for vis#1:
+  Evaluation Metrics Gemini: {'bleu': 0.007467417185900745, 'meteor': 0.07815441617010395, 'rouge1': 0.19920029080334425, 'rouge2': 0.0691160421971626, 'rougeL': 0.1148673209741912}
+  Evaluation Metrics Grok: {'bleu': 0.010254382779848968, 'meteor': 0.0947703318297929, 'rouge1': 0.2588149763722283, 'rouge2': 0.08948708621316842, 'rougeL': 0.13449654671028718}
+  Evaluation Metrics Claude: {'bleu': 0.013603061022193629, 'meteor': 0.09087159948254535, 'rouge1': 0.2498321020819342, 'rouge2': 0.08803763440860216, 'rougeL': 0.12155809267965077}
+Evaluation metrics saved to: ./src/resources/output\51886\summary_evaluation.csv
+Generated Dataset Summary.
+Summary saved to: ./src/resources/output\51886\summary.txt
+Evaluation done.
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\103779\VER_0.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+Generated Visualization Goals:
+- Goal Question: How has the total number of completed apartments in Oberschleißheim changed between 2014 and 2024?
+- Goal Question: What is the distribution of apartment sizes (number of rooms) completed over the entire period?
+- Goal Question: How has the composition of apartment sizes evolved year-over-year?
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+LLM generated visualization code.
+LLM generated visualization code.
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\VER_0.csv
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 51.00/60
+
+  Average Score: 8.5/10
+LLM generated visualization code.
+Vis#0 - Regeneration decision: True
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.244048  4.546713    5   20  0.006239  [0.02, 0.72]
+Visualisierung 0: ICC=0.244
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+Regenerating code for vis#1, attempt 0
+LLM generated visualization code.
+Testing generated code (py) for vis#0:
+Regenerating code for vis#2, attempt 0
+LIDA Judge for vis#0 with openai/gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 9 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\51886\VER_0.csv
+Vis#0 - Regeneration decision: True
+Vis#1 - Regeneration decision: True
+Vis#2 - Regeneration decision: True
+Regenerating code, attempt 1
+Regenerating code for vis#0, attempt 0
+LIDA Judge for vis#0 with openai/gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+Testing generated code (py) for vis#0:
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+Regenerating code for vis#1, attempt 0
+Testing generated code (py) for vis#1:
+Regenerating code for vis#2, attempt 0
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\13473\VER_1.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+Testing generated code (py) for vis#0:
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+Testing generated code (py) for vis#1:
+Testing generated code (py) for vis#2:
+💾 Saved VER CSV → ./src/resources/output\51886\VER_1.csv
+Vis#0 - Regeneration decision: False
+Vis#1 - Regeneration decision: False
+Vis#2 - Regeneration decision: False
+All visualizations are functionally working.
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.154161  6.280374    5   20  0.001173  [0.01, 0.59]
+Visualisierung 0: ICC=0.154
+LIDA Judge for vis#1 with openai/gpt-5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+LIDA Judge for vis#1 with openai/gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 4 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 46.00/60
+
+  Average Score: 7.7/10
+LIDA Judge for vis#0 with openai/gpt-5
+   - bugs: 6 / 10
+   - transformation: 3 / 10
+   - compliance: 5 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 34.00/60
+
+  Average Score: 5.7/10
+LIDA Judge for vis#0 with openai/gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.227829  3.670251    5   20  0.016135  [0.01, 0.71]
+Visualisierung 1: ICC=0.228
+LIDA Judge for vis#1 with openai/gpt-5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LIDA Judge for vis#1 with openai/gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#0 with openai/gpt-5
+   - bugs: 6 / 10
+   - transformation: 5 / 10
+   - compliance: 6 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+LIDA Judge for vis#2 with openai/gpt-5
+   - bugs: 6 / 10
+   - transformation: 4 / 10
+   - compliance: 5 / 10
+   - type: 6 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 33.00/60
+
+  Average Score: 5.5/10
+LIDA Judge for vis#0 with openai/gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+LIDA Judge for vis#0 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#2 with openai/gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 9 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 55.00/60
+
+  Average Score: 9.2/10
+   Type           Description     ICC         F  df1  df2     pval         CI95%
+0  ICC2  Single random raters  0.1354  9.137255    5   20  0.00012  [0.01, 0.55]
+Visualisierung 1: ICC=0.135
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 51.00/60
+
+  Average Score: 8.5/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.068807  2.777251    5   20  0.046096  [-0.01, 0.42]
+Visualisierung 0: ICC=0.069
+LIDA Judge for vis#0 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 55.00/60
+
+  Average Score: 9.2/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 9 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 57.00/60
+
+  Average Score: 9.5/10
+LIDA Judge for vis#0 with anthropic/claude-sonnet-4.5
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.100295  3.073171    5   20  0.032254  [-0.01, 0.51]
+Visualisierung 0: ICC=0.100
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 49.00/60
+
+  Average Score: 8.2/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.021622  1.793651    5   20  0.159975  [-0.01, 0.22]
+Visualisierung 2: ICC=0.022
+Statistics saved to: src\resources\output\32830\statistics.txt
+✅ Finished in 602.1s
+Processing datasets:  70%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                       | 7/10 [10:41<05:33, 111.11s/it]LIDA Judge for vis#2 with openai/gpt-5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 6 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+LIDA Judge for vis#1 with openai/gpt-5
+   - bugs: 7 / 10
+   - transformation: 4 / 10
+   - compliance: 5 / 10
+   - type: 5 / 10
+   - encoding: 5 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 32.00/60
+
+  Average Score: 5.3/10
+LIDA Judge for vis#2 with openai/gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 6 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+LIDA Judge for vis#1 with openai/gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 59.00/60
+
+  Average Score: 9.8/10
+LIDA Judge for vis#1 with openai/gpt-5
+   - bugs: 6 / 10
+   - transformation: 6 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 40.00/60
+
+  Average Score: 6.7/10
+LIDA Judge for vis#1 with openai/gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 50.00/60
+
+  Average Score: 8.3/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 10 / 10
+   - encoding: 10 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 52.00/60
+
+  Average Score: 8.7/10
+LIDA Judge for vis#1 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 56.00/60
+
+  Average Score: 9.3/10
+LIDA Judge for vis#1 with x-ai/grok-4.1-fast
+   - bugs: 10 / 10
+   - transformation: 7 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 7 / 10
+   - encoding: 8 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 45.00/60
+
+  Average Score: 7.5/10
+   Type           Description       ICC         F  df1  df2      pval         CI95%
+0  ICC2  Single random raters  0.309878  6.325581    5   20  0.001127  [0.05, 0.77]
+Visualisierung 2: ICC=0.310
+Statistics saved to: src\resources\output\103779\statistics.txt
+✅ Finished in 735.5s
+Processing datasets:  80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                     | 8/10 [12:53<03:51, 115.54s/it]LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 9 / 10
+   - type: 10 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 51.00/60
+
+  Average Score: 8.5/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.133449  3.305389    5   20  0.024528  [-0.01, 0.58]
+Visualisierung 1: ICC=0.133
+LIDA Judge for vis#1 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 7 / 10
+   - compliance: 8 / 10
+   - type: 9 / 10
+   - encoding: 8 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 48.00/60
+
+  Average Score: 8.0/10
+   Type           Description      ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.04936  2.824324    5   20  0.043524  [-0.01, 0.33]
+Visualisierung 1: ICC=0.049
+LIDA Judge for vis#2 with openai/gpt-5
+   - bugs: 7 / 10
+   - transformation: 5 / 10
+   - compliance: 7 / 10
+   - type: 7 / 10
+   - encoding: 6 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+LIDA Judge for vis#2 with openai/gpt-4o
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 47.00/60
+
+  Average Score: 7.8/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 8 / 10
+   - encoding: 7 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 53.00/60
+
+  Average Score: 8.8/10
+LIDA Judge for vis#2 with openai/gpt-5
+   - bugs: 5 / 10
+   - transformation: 3 / 10
+   - compliance: 4 / 10
+   - type: 5 / 10
+   - encoding: 4 / 10
+   - aesthetics: 6 / 10
+
+  Total Score: 27.00/60
+
+  Average Score: 4.5/10
+LIDA Judge for vis#2 with openai/gpt-4o
+   - bugs: 8 / 10
+   - transformation: 7 / 10
+   - compliance: 6 / 10
+   - type: 5 / 10
+   - encoding: 6 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 39.00/60
+
+  Average Score: 6.5/10
+LIDA Judge for vis#2 with google/gemini-3-flash-preview
+   - bugs: 10 / 10
+   - transformation: 10 / 10
+   - compliance: 10 / 10
+   - type: 10 / 10
+   - encoding: 9 / 10
+   - aesthetics: 9 / 10
+
+  Total Score: 58.00/60
+
+  Average Score: 9.7/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 9 / 10
+   - transformation: 9 / 10
+   - compliance: 10 / 10
+   - type: 9 / 10
+   - encoding: 9 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 54.00/60
+
+  Average Score: 9.0/10
+LIDA Judge for vis#2 with x-ai/grok-4.1-fast
+   - bugs: 3 / 10
+   - transformation: 4 / 10
+   - compliance: 3 / 10
+   - type: 4 / 10
+   - encoding: 6 / 10
+   - aesthetics: 8 / 10
+
+  Total Score: 28.00/60
+
+  Average Score: 4.7/10
+LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 9 / 10
+   - transformation: 8 / 10
+   - compliance: 7 / 10
+   - type: 6 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 44.00/60
+
+  Average Score: 7.3/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.105351  2.536585    5   20  0.062031  [-0.02, 0.54]
+Visualisierung 2: ICC=0.105
+Statistics saved to: src\resources\output\51886\statistics.txt
+✅ Finished in 909.1s
+Processing datasets:  90%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                  | 9/10 [15:47<02:08, 128.62s/it]LIDA Judge for vis#2 with anthropic/claude-sonnet-4.5
+   - bugs: 7 / 10
+   - transformation: 6 / 10
+   - compliance: 5 / 10
+   - type: 6 / 10
+   - encoding: 7 / 10
+   - aesthetics: 7 / 10
+
+  Total Score: 38.00/60
+
+  Average Score: 6.3/10
+   Type           Description       ICC         F  df1  df2      pval          CI95%
+0  ICC2  Single random raters  0.026013  1.570292    5   20  0.213843  [-0.02, 0.29]
+Visualisierung 2: ICC=0.026
+Statistics saved to: src\resources\output\13473\statistics.txt
+✅ Finished in 921.1s
+Processing datasets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [15:59<00:00, 95.95s/it]
+
+Total time: 16.0min
+Generations successful: 4
+Generations failed: 6
+(.venv) PS C:\Users\jelsper\Desktop\open-data-preview\data-science-agent>

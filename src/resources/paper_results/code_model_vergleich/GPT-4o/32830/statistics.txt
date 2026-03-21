@@ -1,0 +1,422 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32830\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-19 15:46:21
+Total Duration: 877.21 seconds
+Total Token Usage: 74991 tokens
+Total Costs: $0.2569
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0229 seconds
+
+Method: analyse_dataset
+  Duration: 0.0372 seconds
+
+Method: analyse_metadata
+  Duration: 0.0329 seconds
+
+Method: llm_generate_summary
+  Duration: 189.4255 seconds
+
+Method: llm_generate_goals
+  Duration: 3.5572 seconds
+
+Method: llm_generate_python_code
+  Duration: 17.1002 seconds
+
+Method: test_generated_code
+  Duration: 3.8865 seconds
+
+Method: llm_regenerate_code
+  Duration: 14.5847 seconds
+
+Method: test_generated_code
+  Duration: 220.1715 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 428.3963 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 6690 tokens
+  Costs total: $0.0061
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1917 tokens
+  Costs total: $0.0018
+
+Method: llm_generate_python_code
+  Model: openai/gpt-4o
+  Token total: 2678 tokens
+  Costs total: $0.0092
+
+Method: llm_generate_python_code
+  Model: openai/gpt-4o
+  Token total: 2738 tokens
+  Costs total: $0.0099
+
+Method: llm_generate_python_code
+  Model: openai/gpt-4o
+  Token total: 2620 tokens
+  Costs total: $0.0089
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 684 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 684 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 684 tokens
+  Costs total: $0.0018
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1748 tokens
+  Costs total: $0.0024
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2031 tokens
+  Costs total: $0.0030
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1735 tokens
+  Costs total: $0.0025
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 266 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4855 tokens
+  Costs total: $0.0357
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1875 tokens
+  Costs total: $0.0077
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1929 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3947 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3581 tokens
+  Costs total: $0.0217
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4780 tokens
+  Costs total: $0.0334
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2013 tokens
+  Costs total: $0.0078
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2170 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4691 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3853 tokens
+  Costs total: $0.0233
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4900 tokens
+  Costs total: $0.0359
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1830 tokens
+  Costs total: $0.0070
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1986 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3900 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3702 tokens
+  Costs total: $0.0232
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How does the website traffic volume fluctuate throughout the month of September 2024?' visualization="Line chart of 'Besuche' and 'Besucher' over 'Datum'." rationale="A line chart showing 'Besuche' (Visits) and 'Besucher' (Visitors) over 'Datum' (Date) allows users to identify weekly patterns, such as the drop in traffic during weekends mentioned in the summary. This helps in understanding the peak usage times for the governmental portal. Note: The summary row (index 0) should be excluded to avoid skewing the scale."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import os
+
+# Fix the file path using raw strings or forward slashes to avoid escape sequence errors
+file_path = './src/resources/data/study/32830/dataset.csv'
+
+# Load the dataset
+try:
+    df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+except Exception as e:
+    # Fallback for different encodings if utf-8 fails
+    df = pd.read_csv(file_path, sep=',', encoding='latin1')
+
+# Data Cleaning
+# The summary row is usually the first row in these exports. 
+# We drop the first row as per the rationale to avoid skewing the scale.
+df_clean = df.iloc[1:].copy()
+
+# Drop the empty column if it exists
+if 'Unnamed__14' in df_clean.columns:
+    df_clean = df_clean.drop(columns=['Unnamed__14'])
+
+# Convert 'Datum' to datetime
+df_clean['Datum'] = pd.to_datetime(df_clean['Datum'], format='%d.%m.%Y')
+
+# Ensure numeric types for plotting
+df_clean['Besuche'] = pd.to_numeric(df_clean['Besuche'], errors='coerce')
+df_clean['Besucher'] = pd.to_numeric(df_clean['Besucher'], errors='coerce')
+
+# Sort by date to ensure the line chart is chronological
+df_clean = df_clean.sort_values('Datum')
+
+# Plotting
+plt.figure(figsize=(12, 6))
+plt.plot(df_clean['Datum'], df_clean['Besuche'], label='Besuche (Visits)', marker='o', linestyle='-', linewidth=2)
+plt.plot(df_clean['Datum'], df_clean['Besucher'], label='Besucher (Visitors)', marker='s', linestyle='--', linewidth=2)
+
+plt.title('Website Traffic Volume (September 2024)', fontsize=14)
+plt.xlabel('Date', fontsize=12)
+plt.ylabel('Count', fontsize=12)
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.xticks(rotation=45)
+plt.legend()
+plt.tight_layout()
+
+# Save the plot
+output_dir = './src/resources/output/32830/'
+os.makedirs(output_dir, exist_ok=True)
+plt.savefig(os.path.join(output_dir, '0_website_traffic_volume.png'))
+plt.show()
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the relationship between the depth of a visit and the average time spent on the site?' visualization="Scatter plot of 'Seiten_pro_Besuch' vs 'Zeit_im_Besuch'." rationale="By plotting 'Seiten_pro_Besuch' (Pages per Visit) against 'Zeit_im_Besuch' (Time in Visit), we can see if users who explore more pages also spend significantly more time on the site. This helps evaluate content engagement and whether users are finding information quickly or browsing extensively."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import os
+
+# Fix file path issues by using raw strings or forward slashes to avoid escape sequence errors
+file_path = r'./src/resources/data/study/32830/dataset.csv'
+
+# Ensure the directory exists for output
+output_dir = r'./src/resources/output/32830'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+# Load the dataset
+try:
+    df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+except FileNotFoundError:
+    # Fallback for different environments if necessary
+    df = pd.read_csv('dataset.csv', sep=',', encoding='utf-8')
+
+# Data Cleaning
+# Drop the first row if it's a summary/header-like row (based on previous code logic)
+if len(df) > 0:
+    df = df.drop(index=0)
+
+# Drop columns that are likely empty or irrelevant
+if 'Unnamed__14' in df.columns:
+    df = df.drop(columns=['Unnamed__14'])
+
+def convert_time_to_seconds(time_str):
+    if pd.isnull(time_str) or not isinstance(time_str, str) or ':' not in time_str:
+        return np.nan
+    try:
+        parts = list(map(int, time_str.split(':')))
+        if len(parts) == 3:
+            h, m, s = parts
+            return h * 3600 + m * 60 + s
+        elif len(parts) == 2:
+            m, s = parts
+            return m * 60 + s
+    except ValueError:
+        return np.nan
+    return np.nan
+
+# Process 'Zeit_im_Besuch' (Time in Visit)
+if 'Zeit_im_Besuch' in df.columns:
+    df['Zeit_im_Besuch_sec'] = df['Zeit_im_Besuch'].apply(convert_time_to_seconds)
+
+# Process 'Seiten_pro_Besuch' (Pages per Visit)
+if 'Seiten_pro_Besuch' in df.columns:
+    df['Seiten_pro_Besuch'] = pd.to_numeric(df['Seiten_pro_Besuch'].astype(str).str.replace(',', '.'), errors='coerce')
+
+# Drop rows with NaN in the columns we want to plot
+plot_df = df.dropna(subset=['Seiten_pro_Besuch', 'Zeit_im_Besuch_sec'])
+
+# Plotting
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=plot_df, x='Seiten_pro_Besuch', y='Zeit_im_Besuch_sec', alpha=0.6)
+
+plt.title('Relationship between Pages per Visit and Time Spent', fontsize=14)
+plt.xlabel('Pages per Visit (Seiten_pro_Besuch)', fontsize=12)
+plt.ylabel('Time in Visit (Seconds)', fontsize=12)
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.tight_layout()
+
+# Save the plot using forward slashes for cross-platform compatibility
+output_path = os.path.join(output_dir, '1_scatter_plot_seiten_vs_zeit.png')
+plt.savefig(output_path)
+plt.show()
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='How does the Bounce Rate vary daily across the month?' visualization="Bar chart of 'Bounce_Rate' by 'Datum'." rationale="A bar chart of 'Bounce_Rate' over 'Datum' helps visualize the consistency of user engagement. Since the summary indicates a high bounce rate (60-70%), this visualization helps identify specific days where engagement was unusually high or low, which could correlate with specific events or information releases."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+# Use raw strings for file paths to avoid escape sequence errors (like \32830 being interpreted as octal)
+file_path = r'./src/resources/data/study/32830/dataset.csv'
+
+# Load the dataset
+try:
+    df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+except FileNotFoundError:
+    # Fallback for different environments if the relative path structure varies
+    file_path = 'dataset.csv'
+    df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+
+# Data Cleaning
+# 1. Remove the summary row (usually the first row in this dataset format)
+# We check if the first row contains 'Summe' or similar in the 'Datum' column
+if 'Summe' in str(df.iloc[0]['Datum']):
+    df = df.drop(index=0)
+
+# 2. Drop columns that are entirely empty or 'Unnamed'
+df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
+
+# 3. Convert 'Datum' to datetime
+df['Datum'] = pd.to_datetime(df['Datum'], format='%d.%m.%Y', errors='coerce')
+
+# 4. Clean 'Bounce_Rate' - remove '%' and convert to float
+if df['Bounce_Rate'].dtype == object:
+    df['Bounce_Rate'] = df['Bounce_Rate'].str.replace('%', '').str.replace(',', '.').astype(float)
+
+# Sort by date to ensure the bar chart follows chronological order
+df = df.sort_values('Datum')
+
+# Plotting
+plt.figure(figsize=(12, 6))
+# Format dates for better display on X-axis
+df['Date_Str'] = df['Datum'].dt.strftime('%d.%m')
+
+sns.barplot(data=df, x='Date_Str', y='Bounce_Rate', color='skyblue')
+
+plt.title('Daily Bounce Rate Variation (September 2024)', fontsize=14)
+plt.xlabel('Day of Month', fontsize=12)
+plt.ylabel('Bounce Rate (%)', fontsize=12)
+plt.xticks(rotation=45)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+
+# Ensure output directory exists
+output_dir = r'./src/resources/output/32830'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+output_path = os.path.join(output_dir, '2_bounce_rate_variation.png')
+plt.savefig(output_path)
+print(f"Visualization saved to {output_path}")
+
+
+-> SEVQ:
+
+

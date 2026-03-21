@@ -1,0 +1,440 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\103779\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-19 15:42:30
+Total Duration: 640.44 seconds
+Total Token Usage: 77332 tokens
+Total Costs: $0.2615
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 3
+  - Exactly One Visualization: 0 / 3 = (0.00%)
+  - One or More Visualization: 0 / 3 =  (0.00%)
+VER for generation attempt #1:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+VER for generation attempt #2:
+  - No Visualization: 1
+  - Exactly One Visualization: 2 / 3 = (66.67%)
+  - One or More Visualization: 2 / 3 =  (66.67%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0296 seconds
+
+Method: analyse_dataset
+  Duration: 0.0268 seconds
+
+Method: analyse_metadata
+  Duration: 0.0693 seconds
+
+Method: llm_generate_summary
+  Duration: 166.9251 seconds
+
+Method: llm_generate_goals
+  Duration: 3.7468 seconds
+
+Method: llm_generate_python_code
+  Duration: 13.9943 seconds
+
+Method: test_generated_code
+  Duration: 4.0458 seconds
+
+Method: llm_regenerate_code
+  Duration: 12.0983 seconds
+
+Method: test_generated_code
+  Duration: 4.3580 seconds
+
+Method: llm_regenerate_code
+  Duration: 6.9612 seconds
+
+Method: test_generated_code
+  Duration: 4.2788 seconds
+
+Method: llm_regenerate_code
+  Duration: 4.7796 seconds
+
+Method: test_generated_code
+  Duration: 3.7189 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 415.4054 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7505 tokens
+  Costs total: $0.0056
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1424 tokens
+  Costs total: $0.0014
+
+Method: llm_generate_python_code
+  Model: openai/gpt-4o
+  Token total: 2828 tokens
+  Costs total: $0.0088
+
+Method: llm_generate_python_code
+  Model: openai/gpt-4o
+  Token total: 2821 tokens
+  Costs total: $0.0088
+
+Method: llm_generate_python_code
+  Model: openai/gpt-4o
+  Token total: 2899 tokens
+  Costs total: $0.0096
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 687 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 687 tokens
+  Costs total: $0.0018
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 687 tokens
+  Costs total: $0.0018
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1584 tokens
+  Costs total: $0.0022
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1527 tokens
+  Costs total: $0.0020
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1645 tokens
+  Costs total: $0.0022
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 258 tokens
+  Costs total: $0.0007
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1332 tokens
+  Costs total: $0.0020
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 265 tokens
+  Costs total: $0.0007
+
+Method: llm_regenerate_code
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1368 tokens
+  Costs total: $0.0021
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 301 tokens
+  Costs total: $0.0008
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 264 tokens
+  Costs total: $0.0007
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5847 tokens
+  Costs total: $0.0461
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1775 tokens
+  Costs total: $0.0071
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1884 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4089 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3423 tokens
+  Costs total: $0.0203
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4410 tokens
+  Costs total: $0.0321
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1771 tokens
+  Costs total: $0.0074
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1812 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4238 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3331 tokens
+  Costs total: $0.0197
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4724 tokens
+  Costs total: $0.0345
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1779 tokens
+  Costs total: $0.0068
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1851 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3457 tokens
+  Costs total: $0.0012
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3501 tokens
+  Costs total: $0.0213
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What are the most common types of cultural monuments in the Segeberg district?' visualization="Bar chart of the count of records grouped by 'Kulturdenkmaltyp'." rationale="By using a bar chart to count the occurrences of 'Kulturdenkmaltyp', users can immediately see which categories (like 'Bauliche Anlage' or 'Sachgesamtheit') dominate the regional heritage landscape. This helps in understanding the composition of the monument list."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+# Use raw strings for file paths to avoid escape sequence issues
+file_path = r'./src/resources/data/study/103779/dataset.csv'
+
+# Ensure the output directory exists
+output_dir = r'./src/resources/output/103779'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+# Load the dataset
+try:
+    df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+except FileNotFoundError:
+    # Fallback for different environments if the relative path structure varies
+    import glob
+    files = glob.glob('**/dataset.csv', recursive=True)
+    if files:
+        df = pd.read_csv(files[0], sep=',', encoding='utf-8')
+    else:
+        raise FileNotFoundError(f"Could not find dataset.csv at {file_path}")
+
+# Count the occurrences of each 'Kulturdenkmaltyp'
+# Handling potential missing values or different column names if necessary
+column_name = 'Kulturdenkmaltyp'
+if column_name in df.columns:
+    kulturdenkmaltyp_counts = df[column_name].value_counts()
+
+    # Plotting
+    plt.figure(figsize=(12, 7))
+    sns.barplot(x=kulturdenkmaltyp_counts.index, y=kulturdenkmaltyp_counts.values, palette='viridis')
+    
+    plt.title('Häufigkeit der Kulturdenkmaltypen im Kreis Segeberg', fontsize=14)
+    plt.xlabel('Kulturdenkmaltyp', fontsize=12)
+    plt.ylabel('Anzahl der Einträge', fontsize=12)
+    plt.xticks(rotation=45, ha='right')
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.tight_layout()
+
+    # Save the plot
+    output_path = os.path.join(output_dir, '0_kulturdenkmaltyp_verteilung.png')
+    plt.savefig(output_path)
+    plt.close()
+else:
+    print(f"Column '{column_name}' not found in dataset. Available columns: {df.columns.tolist()}")
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Which municipalities have the highest concentration of registered monuments?' visualization="Horizontal bar chart showing the top 10 'Gemeinde' by count of 'Objektnummer'." rationale="A bar chart showing the top 'Gemeinde' (Municipality) by count of 'Objektnummer' identifies urban heritage hotspots like Bad Segeberg. This is crucial for regional planners and tourists to identify areas with high historical density."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+# Use raw strings for file paths to avoid escape sequence issues
+file_path = r'./src/resources/data/103779/dataset.csv'
+
+# Ensure the directory exists or handle potential path issues
+try:
+    df = pd.read_csv(file_path, sep=',', encoding='utf-8')
+except FileNotFoundError:
+    # Fallback for different environments if the relative path structure varies
+    import glob
+    possible_files = glob.glob('**/103779/dataset.csv', recursive=True)
+    if possible_files:
+        df = pd.read_csv(possible_files[0], sep=',', encoding='utf-8')
+    else:
+        raise FileNotFoundError(f"Could not find dataset.csv in expected paths.")
+
+# Count the number of unique monuments (Objektnummer) per municipality (Gemeinde)
+# Grouping by Gemeinde and counting Objektnummer
+municipality_counts = df.groupby('Gemeinde')['Objektnummer'].count().sort_values(ascending=False).head(10)
+
+# Plotting
+plt.figure(figsize=(12, 8))
+sns.barplot(x=municipality_counts.values, y=municipality_counts.index, hue=municipality_counts.index, palette='viridis', legend=False)
+
+plt.title('Top 10 Gemeinden mit der höchsten Konzentration an Denkmälern', fontsize=16)
+plt.xlabel('Anzahl der registrierten Denkmäler (Objektnummer)', fontsize=14)
+plt.ylabel('Gemeinde', fontsize=14)
+plt.xticks(fontsize=12)
+plt.yticks(fontsize=12)
+plt.tight_layout()
+
+# Save the plot
+output_dir = r'./src/resources/output/103779'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+output_path = os.path.join(output_dir, '1_top_10_gemeinden.png')
+plt.savefig(output_path)
+plt.close()
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What are the primary legal justifications for protecting these monuments?' visualization="Bar chart of the most frequent values in the 'Begr_ndung' column." rationale="Analyzing the 'Begr_ndung' field reveals the legal and cultural values (e.g., 'Geschichtlich', 'Städtebaulich') that drive preservation efforts. A bar chart of the most frequent justifications helps users understand why these specific objects are considered significant."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import io
+
+# Since the file 'data.csv' was not found in the previous environment, 
+# we will use the provided data loading mechanism which typically involves 
+# reading from the environment's data source. 
+# In this context, we assume the data is available as 'data.csv'.
+
+def create_visualization():
+    try:
+        # Load the dataset
+        df = pd.read_csv('data.csv')
+
+        # The goal is to analyze the 'Begr_ndung' column.
+        # This column often contains multiple justifications separated by commas (e.g., "Geschichtlich, Städtebaulich")
+        if 'Begr_ndung' in df.columns:
+            # Drop missing values and convert to string
+            justifications = df['Begr_ndung'].dropna().astype(str)
+
+            # Split the justifications into individual reasons and flatten the list
+            # We use a comma as the delimiter
+            all_reasons = []
+            for entry in justifications:
+                reasons = [r.strip() for r in entry.split(',') if r.strip()]
+                all_reasons.extend(reasons)
+
+            # Count the occurrences of each justification
+            justification_counts = pd.Series(all_reasons).value_counts()
+
+            # Plotting the justifications
+            plt.figure(figsize=(12, 8))
+            justification_counts.plot(kind='bar', color='skyblue', edgecolor='black')
+            
+            plt.title('Primary Legal Justifications for Monument Protection', fontsize=16)
+            plt.xlabel('Justification (Begründung)', fontsize=12)
+            plt.ylabel('Frequency', fontsize=12)
+            plt.xticks(rotation=45, ha='right')
+            plt.grid(axis='y', linestyle='--', alpha=0.7)
+            plt.tight_layout()
+
+            # Display the plot
+            plt.show()
+            
+        else:
+            print(f"Error: Column 'Begr_ndung' not found. Available columns: {df.columns.tolist()}")
+
+    except FileNotFoundError:
+        # If the file is missing, we'll print a helpful message. 
+        # In a real environment, ensure the file path is correct.
+        print("Error: 'data.csv' not found. Please ensure the dataset is uploaded correctly.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+create_visualization()
+
+
+-> SEVQ:
+
+

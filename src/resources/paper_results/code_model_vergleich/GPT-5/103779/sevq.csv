@@ -1,0 +1,16 @@
+vis_index,model,bugs,transformation,compliance,type,encoding,aesthetics
+0,openai/gpt-5,7,5,6,9,7,7
+0,openai/gpt-4o,9,6,5,8,7,9
+0,google/gemini-3-flash-preview,10,10,10,10,9,9
+0,x-ai/grok-4.1-fast,4,3,5,10,8,9
+0,anthropic/claude-sonnet-4.5,9,7,8,10,9,8
+1,openai/gpt-5,7,7,7,8,6,6
+1,openai/gpt-4o,9,8,7,9,8,8
+1,google/gemini-3-flash-preview,10,10,10,8,7,8
+1,x-ai/grok-4.1-fast,10,9,10,10,7,8
+1,anthropic/claude-sonnet-4.5,7,8,8,7,7,6
+2,openai/gpt-5,7,6,8,8,7,6
+2,openai/gpt-4o,9,8,7,6,8,7
+2,google/gemini-3-flash-preview,10,10,10,10,9,8
+2,x-ai/grok-4.1-fast,10,10,10,10,10,9
+2,anthropic/claude-sonnet-4.5,9,8,7,7,8,7

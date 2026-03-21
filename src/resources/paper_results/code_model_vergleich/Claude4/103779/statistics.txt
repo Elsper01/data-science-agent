@@ -1,0 +1,359 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\103779\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-19 14:41:27
+Total Duration: 732.72 seconds
+Total Token Usage: 63048 tokens
+Total Costs: $0.2214
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0136 seconds
+
+Method: analyse_dataset
+  Duration: 0.0131 seconds
+
+Method: analyse_metadata
+  Duration: 0.0247 seconds
+
+Method: llm_generate_summary
+  Duration: 259.5955 seconds
+
+Method: llm_generate_goals
+  Duration: 5.7459 seconds
+
+Method: llm_generate_python_code
+  Duration: 31.5628 seconds
+
+Method: test_generated_code
+  Duration: 14.7138 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 421.0493 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 7520 tokens
+  Costs total: $0.0056
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1451 tokens
+  Costs total: $0.0015
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 614 tokens
+  Costs total: $0.0016
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 664 tokens
+  Costs total: $0.0017
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 623 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4207 tokens
+  Costs total: $0.0285
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1892 tokens
+  Costs total: $0.0072
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2052 tokens
+  Costs total: $0.0018
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 4210 tokens
+  Costs total: $0.0016
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3717 tokens
+  Costs total: $0.0224
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5142 tokens
+  Costs total: $0.0389
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1789 tokens
+  Costs total: $0.0071
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1872 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3619 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3418 tokens
+  Costs total: $0.0203
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5810 tokens
+  Costs total: $0.0434
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2061 tokens
+  Costs total: $0.0080
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2233 tokens
+  Costs total: $0.0020
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 6270 tokens
+  Costs total: $0.0026
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3884 tokens
+  Costs total: $0.0227
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='What are the most common types of cultural monuments in the Segeberg district?' visualization='Bar chart of Kulturdenkmaltyp counts.' rationale="By using a bar chart to count the occurrences of 'Kulturdenkmaltyp', users can immediately see the distribution of monument categories. This highlights that 'Bauliche Anlage' (structural systems) are the dominant type compared to 'Sachgesamtheit' (ensembles) or 'Gründenkmal' (green monuments)."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+df = pd.read_csv('./src/resources/data/study/103779/dataset.csv', sep=',', encoding='utf-8')
+
+print("Dataset shape:", df.shape)
+print("\nColumn names:", df.columns.tolist())
+print("\nFirst few rows:")
+print(df.head())
+
+print("\n=== Missing Values Analysis ===")
+missing_values = df.isnull().sum()
+missing_percentage = (df.isnull().sum() / len(df)) * 100
+missing_df = pd.DataFrame({
+    'Missing Count': missing_values,
+    'Percentage': missing_percentage
+})
+print(missing_df[missing_df['Missing Count'] > 0])
+
+print("\n=== Kulturdenkmaltyp Analysis ===")
+print("\nValue counts for Kulturdenkmaltyp:")
+kulturdenkmaltyp_counts = df['Kulturdenkmaltyp'].value_counts()
+print(kulturdenkmaltyp_counts)
+
+print("\nPercentage distribution:")
+kulturdenkmaltyp_percentage = (df['Kulturdenkmaltyp'].value_counts() / len(df)) * 100
+print(kulturdenkmaltyp_percentage)
+
+plt.figure(figsize=(12, 7))
+colors = sns.color_palette("Set2", n_colors=len(kulturdenkmaltyp_counts))
+
+bars = plt.bar(range(len(kulturdenkmaltyp_counts)), 
+               kulturdenkmaltyp_counts.values, 
+               color=colors, 
+               edgecolor='black', 
+               linewidth=1.2)
+
+plt.xticks(range(len(kulturdenkmaltyp_counts)), 
+           kulturdenkmaltyp_counts.index, 
+           rotation=45, 
+           ha='right', 
+           fontsize=11)
+
+plt.xlabel('Kulturdenkmaltyp', fontsize=13, fontweight='bold')
+plt.ylabel('Anzahl', fontsize=13, fontweight='bold')
+plt.title('Verteilung der Kulturdenkmäler nach Typ im Kreis Segeberg', 
+          fontsize=15, 
+          fontweight='bold', 
+          pad=20)
+
+for i, (bar, count) in enumerate(zip(bars, kulturdenkmaltyp_counts.values)):
+    height = bar.get_height()
+    percentage = (count / len(df)) * 100
+    plt.text(bar.get_x() + bar.get_width()/2., height,
+             f'{count}\n({percentage:.1f}%)',
+             ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+plt.grid(axis='y', alpha=0.3, linestyle='--')
+plt.tight_layout()
+
+plt.savefig('./src/resources/output/103779/0_kulturdenkmaltyp_verteilung.png', 
+            dpi=300, 
+            bbox_inches='tight')
+print("\nVisualization saved successfully!")
+
+plt.close()
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='Which municipalities in Segeberg have the highest concentration of registered monuments?' visualization='Horizontal bar chart of the top 10 Gemeinde by frequency.' rationale="A horizontal bar chart showing the top 'Gemeinde' (municipality) entries by count allows users to identify heritage hotspots. The summary indicates 'Bad Segeberg, Stadt' is a major location, and this visualization helps compare it against the other 64 municipalities."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+df = pd.read_csv('./src/resources/data/study/103779/dataset.csv', sep=',', encoding='utf-8')
+
+print("Dataset shape:", df.shape)
+print("\nColumn names:", df.columns.tolist())
+print("\nData types:\n", df.dtypes)
+print("\nMissing values per column:\n", df.isnull().sum())
+print("\nMissing values percentage per column:\n", (df.isnull().sum() / len(df) * 100).round(2))
+
+print("\n--- Gemeinde Analysis ---")
+gemeinde_counts = df['Gemeinde'].value_counts()
+print("\nTop 10 Gemeinde by frequency:")
+print(gemeinde_counts.head(10))
+print("\nTotal number of unique Gemeinde:", df['Gemeinde'].nunique())
+
+top_10_gemeinde = gemeinde_counts.head(10)
+
+plt.figure(figsize=(12, 8))
+colors = sns.color_palette("viridis", len(top_10_gemeinde))
+bars = plt.barh(range(len(top_10_gemeinde)), top_10_gemeinde.values, color=colors)
+plt.yticks(range(len(top_10_gemeinde)), top_10_gemeinde.index)
+plt.xlabel('Anzahl der Denkmäler', fontsize=12, fontweight='bold')
+plt.ylabel('Gemeinde', fontsize=12, fontweight='bold')
+plt.title('Top 10 Gemeinden mit den meisten registrierten Denkmälern\nim Kreis Segeberg (April 2021)', 
+          fontsize=14, fontweight='bold', pad=20)
+plt.gca().invert_yaxis()
+
+for i, (value, bar) in enumerate(zip(top_10_gemeinde.values, bars)):
+    plt.text(value + 1, i, str(value), va='center', fontsize=10, fontweight='bold')
+
+plt.grid(axis='x', alpha=0.3, linestyle='--')
+plt.tight_layout()
+plt.savefig('./src/resources/output/103779/1_top_10_gemeinde_denkmäler.png', dpi=300, bbox_inches='tight')
+plt.close()
+
+print("\nVisualization saved successfully!")
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='What is the status of documentation and visual evidence for these monuments?' visualization='Stacked bar chart or grouped bar chart comparing the count of records with/without a FotoURL across different Kulturdenkmaltyp.' rationale="By comparing the presence of 'FotoURL' (visual documentation) and the content of 'Beschreibung' (specifically identifying 'Alteintragung' vs. updated descriptions), users can assess the data quality and modernization progress of the monument list. This is crucial for researchers looking for complete records versus legacy entries."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+df = pd.read_csv('./src/resources/data/study/103779/dataset.csv', sep=',', encoding='utf-8')
+
+df['has_FotoURL'] = df['FotoURL'].notna()
+df['is_Alteintragung'] = df['Beschreibung'].astype(str).str.contains('Alteintragung', case=False, na=False)
+
+print("=== Datenqualitätsanalyse ===")
+print(f"\nGesamtanzahl der Einträge: {len(df)}")
+print(f"\nAnteil mit FotoURL: {df['has_FotoURL'].sum() / len(df) * 100:.1f}%")
+print(f"Anteil ohne FotoURL: {(~df['has_FotoURL']).sum() / len(df) * 100:.1f}%")
+print(f"\nAnteil Alteintragung: {df['is_Alteintragung'].sum() / len(df) * 100:.1f}%")
+
+print("\n=== Verteilung nach Kulturdenkmaltyp ===")
+print(df['Kulturdenkmaltyp'].value_counts())
+
+foto_by_type = df.groupby(['Kulturdenkmaltyp', 'has_FotoURL']).size().unstack(fill_value=0)
+print("\n=== FotoURL-Status nach Kulturdenkmaltyp ===")
+print(foto_by_type)
+
+foto_by_type_pct = foto_by_type.div(foto_by_type.sum(axis=1), axis=0) * 100
+print("\n=== FotoURL-Status nach Kulturdenkmaltyp (Prozent) ===")
+print(foto_by_type_pct)
+
+fig, ax = plt.subplots(figsize=(12, 7))
+
+x = np.arange(len(foto_by_type.index))
+width = 0.35
+
+bars1 = ax.bar(x - width/2, foto_by_type[False], width, label='Ohne FotoURL', color='#d62728', alpha=0.8)
+bars2 = ax.bar(x + width/2, foto_by_type[True], width, label='Mit FotoURL', color='#2ca02c', alpha=0.8)
+
+ax.set_xlabel('Kulturdenkmaltyp', fontsize=12, fontweight='bold')
+ax.set_ylabel('Anzahl der Einträge', fontsize=12, fontweight='bold')
+ax.set_title('Dokumentationsstatus der Kulturdenkmäler:\nVisuelle Dokumentation nach Denkmaltyp', 
+             fontsize=14, fontweight='bold', pad=20)
+ax.set_xticks(x)
+ax.set_xticklabels(foto_by_type.index, rotation=45, ha='right')
+ax.legend(fontsize=11, loc='upper right')
+ax.grid(axis='y', alpha=0.3, linestyle='--')
+
+for bars in [bars1, bars2]:
+    for bar in bars:
+        height = bar.get_height()
+        if height > 0:
+            ax.text(bar.get_x() + bar.get_width()/2., height,
+                   f'{int(height)}',
+                   ha='center', va='bottom', fontsize=9)
+
+plt.tight_layout()
+plt.savefig('./src/resources/output/103779/2_dokumentationsstatus_nach_denkmaltyp.png', dpi=300, bbox_inches='tight')
+plt.close()
+
+print("\n=== Visualisierung erfolgreich erstellt ===")
+
+
+-> SEVQ:
+
+

@@ -1,0 +1,337 @@
+============================================================
+Graph Statistics Report
+============================================================
+Dataset Path: ./src/resources/data/study\32830\dataset.csv
+Programming Language: py
+Language: en
+Numer of maximum Regeneration Attempts: 3
+Timestamp: 2026-03-19 14:39:15
+Total Duration: 598.35 seconds
+Total Token Usage: 59303 tokens
+Total Costs: $0.2201
+============================================================VER Statistics
+============================================================
+
+VER for generation attempt #0:
+  - No Visualization: 0
+  - Exactly One Visualization: 3 / 3 = (100.00%)
+  - One or More Visualization: 3 / 3 =  (100.00%)
+VER for generation attempt #1: already done.
+VER for generation attempt #1:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+VER for generation attempt #2: already done.
+VER for generation attempt #2:
+  - No Visualization: 0
+  - Exactly One Visualization: 0 / 1 = (0.00%)
+  - One or More Visualization: 0 / 1 =  (0.00%)
+============================================================
+============================================================
+Duration Statistics:
+============================================================
+Method: load_dataset
+  Duration: 0.0180 seconds
+
+Method: analyse_dataset
+  Duration: 0.0193 seconds
+
+Method: analyse_metadata
+  Duration: 0.0199 seconds
+
+Method: llm_generate_summary
+  Duration: 175.7994 seconds
+
+Method: llm_generate_goals
+  Duration: 3.7353 seconds
+
+Method: llm_generate_python_code
+  Duration: 31.1490 seconds
+
+Method: test_generated_code
+  Duration: 14.0438 seconds
+
+Method: llm_evaluate_visualizations
+  Duration: 373.5636 seconds
+
+
+============================================================
+LLM Cost & Token Statistics:
+============================================================
+Method: llm_generate_summary
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 6541 tokens
+  Costs total: $0.0057
+
+Method: llm_generate_goals
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1773 tokens
+  Costs total: $0.0017
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 252 tokens
+  Costs total: $0.0007
+
+Method: decide_regenerate_code
+  Model: openai/gpt-4o
+  Token total: 493 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 4668 tokens
+  Costs total: $0.0343
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1719 tokens
+  Costs total: $0.0065
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1872 tokens
+  Costs total: $0.0017
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3532 tokens
+  Costs total: $0.0013
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3453 tokens
+  Costs total: $0.0205
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5425 tokens
+  Costs total: $0.0422
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 1750 tokens
+  Costs total: $0.0071
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 1761 tokens
+  Costs total: $0.0015
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 3704 tokens
+  Costs total: $0.0014
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3431 tokens
+  Costs total: $0.0209
+
+Method: _get_SEVQ
+  Model: openai/gpt-5-2025-08-07
+  Token total: 5298 tokens
+  Costs total: $0.0379
+
+Method: _get_SEVQ
+  Model: openai/gpt-4o
+  Token total: 2079 tokens
+  Costs total: $0.0078
+
+Method: _get_SEVQ
+  Model: google/gemini-3-flash-preview-20251217
+  Token total: 2294 tokens
+  Costs total: $0.0021
+
+Method: _get_SEVQ
+  Model: x-ai/grok-4.1-fast
+  Token total: 5065 tokens
+  Costs total: $0.0019
+
+Method: _get_SEVQ
+  Model: anthropic/claude-4.5-sonnet-20250929
+  Token total: 3941 tokens
+  Costs total: $0.0230
+
+
+============================================================
+Visualization Results:
+============================================================
+Visualization #0
+-> Goal:
+question='How does the daily traffic volume fluctuate throughout September 2024?' visualization="Line chart of 'Besuche' and 'Besucher' over 'Datum' (excluding the aggregate row)." rationale="A line chart showing 'Besuche' (Visits) and 'Besucher' (Visitors) over 'Datum' (Date) will reveal the cyclical nature of the traffic. This helps users identify peak usage days and confirm the weekend drops mentioned in the summary, providing a clear view of the portal's demand patterns."
+
+-> Code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+df = pd.read_csv('./src/resources/data/study/32830/dataset.csv', sep=',', encoding='utf-8')
+
+df_clean = df[df['Datum'].notna()].copy()
+
+df_clean['Datum'] = pd.to_datetime(df_clean['Datum'], format='%d.%m.%Y', errors='coerce')
+
+df_clean = df_clean.dropna(subset=['Datum'])
+
+df_clean = df_clean.sort_values('Datum')
+
+missing_values = df.isnull().sum()
+missing_percentage = (missing_values / len(df)) * 100
+
+numeric_cols = ['Besuche', 'Besucher', 'Seitenaufrufe', 'Seiten_pro_Besuch']
+desc_stats = df_clean[numeric_cols].describe()
+
+fig, ax = plt.subplots(figsize=(14, 7))
+
+ax.plot(df_clean['Datum'], df_clean['Besuche'], marker='o', linewidth=2, 
+        markersize=6, label='Besuche', color='#2E86AB', alpha=0.8)
+ax.plot(df_clean['Datum'], df_clean['Besucher'], marker='s', linewidth=2, 
+        markersize=6, label='Besucher', color='#A23B72', alpha=0.8)
+
+ax.set_xlabel('Datum', fontsize=12, fontweight='bold')
+ax.set_ylabel('Anzahl', fontsize=12, fontweight='bold')
+ax.set_title('Tägliche Traffic-Entwicklung im September 2024\n(Besuche und Besucher)', 
+             fontsize=14, fontweight='bold', pad=20)
+
+ax.legend(loc='upper left', fontsize=11, frameon=True, shadow=True)
+
+ax.grid(True, alpha=0.3, linestyle='--', linewidth=0.5)
+
+plt.xticks(rotation=45, ha='right')
+
+plt.tight_layout()
+
+plt.savefig('./src/resources/output/32830/0_traffic_entwicklung_september_2024.png', 
+            dpi=300, bbox_inches='tight')
+
+plt.close()
+
+
+-> SEVQ:
+
+
+Visualization #1
+-> Goal:
+question='What is the relationship between the number of pages viewed per visit and the bounce rate?' visualization="Scatter plot of 'Seiten_pro_Besuch' vs 'Bounce_Rate'." rationale="By plotting 'Seiten_pro_Besuch' (Pages per Visit) against 'Bounce_Rate', we can visualize the engagement depth. This helps verify the observation that higher engagement (more pages per visit) typically correlates with a lower bounce rate, indicating how effectively the site retains users."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv('./src/resources/data/study/32830/dataset.csv', sep=',', encoding='utf-8')
+
+df_clean = df[df['Datum'].notna()].copy()
+
+df_clean['Bounce_Rate_numeric'] = df_clean['Bounce_Rate'].str.replace('%', '').astype(float)
+
+df_analysis = df_clean[['Seiten_pro_Besuch', 'Bounce_Rate_numeric']].dropna()
+
+correlation = df_analysis['Seiten_pro_Besuch'].corr(df_analysis['Bounce_Rate_numeric'])
+
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=df_analysis, x='Seiten_pro_Besuch', y='Bounce_Rate_numeric', 
+                s=100, alpha=0.6, color='#2E86AB')
+
+z = np.polyfit(df_analysis['Seiten_pro_Besuch'], df_analysis['Bounce_Rate_numeric'], 1)
+p = np.poly1d(z)
+plt.plot(df_analysis['Seiten_pro_Besuch'], p(df_analysis['Seiten_pro_Besuch']), 
+         "r--", alpha=0.8, linewidth=2, label=f'Trendlinie (r={correlation:.3f})')
+
+plt.xlabel('Seiten pro Besuch', fontsize=12, fontweight='bold')
+plt.ylabel('Absprungrate (%)', fontsize=12, fontweight='bold')
+plt.title('Zusammenhang zwischen Seiten pro Besuch und Absprungrate', 
+          fontsize=14, fontweight='bold', pad=20)
+plt.legend(fontsize=10)
+plt.grid(True, alpha=0.3, linestyle='--')
+
+plt.tight_layout()
+plt.savefig('./src/resources/output/32830/1_seiten_pro_besuch_vs_bounce_rate.png', 
+            dpi=300, bbox_inches='tight')
+plt.close()
+
+
+-> SEVQ:
+
+
+Visualization #2
+-> Goal:
+question='How does the total volume of page views change daily compared to the average session duration?' visualization="Dual-axis line chart showing 'Seitenaufrufe' and 'Zeit_im_Besuch' over 'Datum'." rationale="Comparing 'Seitenaufrufe' (Total Page Views) and 'Zeit_im_Besuch' (Average Session Duration) over 'Datum' allows us to see if days with high traffic also result in longer user sessions. This provides insight into whether the content on high-traffic days is more engaging or if users are simply performing quick tasks."
+
+-> Code:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from datetime import datetime
+
+df = pd.read_csv('./src/resources/data/study/32830/dataset.csv', sep=',', encoding='utf-8')
+
+df = df[df['Datum'].notna()]
+df = df[df['Datum'] != 'nan']
+
+df['Datum'] = pd.to_datetime(df['Datum'], format='%d.%m.%Y', errors='coerce')
+df = df.dropna(subset=['Datum'])
+
+df = df.sort_values('Datum')
+
+def convert_time_to_seconds(time_str):
+    if pd.isna(time_str) or time_str == '-':
+        return np.nan
+    try:
+        parts = time_str.split(':')
+        if len(parts) == 3:
+            hours, minutes, seconds = map(int, parts)
+            return hours * 3600 + minutes * 60 + seconds
+        return np.nan
+    except:
+        return np.nan
+
+df['Zeit_im_Besuch_Sekunden'] = df['Zeit_im_Besuch'].apply(convert_time_to_seconds)
+
+print("Missing values per column:")
+print(df[['Datum', 'Seitenaufrufe', 'Zeit_im_Besuch_Sekunden']].isnull().sum())
+print("\nBasic statistics:")
+print(df[['Seitenaufrufe', 'Zeit_im_Besuch_Sekunden']].describe())
+print("\nCorrelation between Seitenaufrufe and Zeit_im_Besuch_Sekunden:")
+print(df[['Seitenaufrufe', 'Zeit_im_Besuch_Sekunden']].corr())
+
+fig, ax1 = plt.subplots(figsize=(14, 7))
+
+color1 = '#2E86AB'
+ax1.set_xlabel('Datum', fontsize=12, fontweight='bold')
+ax1.set_ylabel('Seitenaufrufe (Anzahl)', color=color1, fontsize=12, fontweight='bold')
+line1 = ax1.plot(df['Datum'], df['Seitenaufrufe'], color=color1, linewidth=2.5, marker='o', markersize=5, label='Seitenaufrufe')
+ax1.tick_params(axis='y', labelcolor=color1)
+ax1.grid(True, alpha=0.3, linestyle='--')
+
+ax2 = ax1.twinx()
+color2 = '#A23B72'
+ax2.set_ylabel('Durchschnittliche Sitzungsdauer (Sekunden)', color=color2, fontsize=12, fontweight='bold')
+line2 = ax2.plot(df['Datum'], df['Zeit_im_Besuch_Sekunden'], color=color2, linewidth=2.5, marker='s', markersize=5, label='Sitzungsdauer')
+ax2.tick_params(axis='y', labelcolor=color2)
+
+plt.title('Tägliche Seitenaufrufe vs. Durchschnittliche Sitzungsdauer\nSeptember 2024', fontsize=14, fontweight='bold', pad=20)
+
+lines1, labels1 = ax1.get_legend_handles_labels()
+lines2, labels2 = ax2.get_legend_handles_labels()
+ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper left', fontsize=10, framealpha=0.9)
+
+plt.xticks(rotation=45, ha='right')
+fig.tight_layout()
+
+plt.savefig('./src/resources/output/32830/2_seitenaufrufe_vs_sitzungsdauer.png', dpi=300, bbox_inches='tight')
+plt.close()
+
+
+-> SEVQ:
+
+

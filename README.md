@@ -23,7 +23,7 @@ This project uses `uv` for dependency management. To set up the project, follow 
     cd ./src/data_science_agent/
     touch .env
     cd ../..
-    python ./src/data_science_agent/agent.py
+    python ./src/data_science_agent/test.py
     ```
    
 5. **Run Jupyter Notebooks**: Run and edit Jupyter Notebooks in the repo with `uv`.
@@ -44,7 +44,7 @@ MAX_REGENERATION_ATTEMPTS=<your_max_regeneration_attempts> # Optional. Default i
 ## Project Structure
 
 ```
-my-project/
+data-science-agent/
 ├── src/
 │   └── data_science_agent/
 │       ├── dtos/       # language specific DTO's used for structered LLM outputs
@@ -55,13 +55,17 @@ my-project/
 │       ├── __init__.py
 │       ├── agent.py    # main script to run the Data-Science-Agent
 │       └── test.py     # script for fast forward testing the functionality of the agent pipeline
+│   ├── test.py             # example script used for most experiments
+│   ├── test_parallel.py    # example script for parallel experiment execution (time speedup)
+│   └── rq_continous.py     # example script for experiment with multiple runs on the same input      
 ├── pyproject.toml
 ├── README.md
 └── uv.lock
 ```
 
+All tests and experiments have been done with data from [GovData](https://govdata.de)
+
 ## Agent Workflow
 ![Agent Workflow Graph](src/resources/img/graph.png)
 
-[//]: # (# TODO: Add more details about the agent's workflow and functionalities.)
-
+In the branch "ablation-study-metadata" is a version of the Agent that runs without the metadata step.

@@ -45,6 +45,7 @@ MAX_REGENERATION_ATTEMPTS=<your_max_regeneration_attempts> # Optional. Default i
 
 ```
 data-science-agent/
+├── results             # contains all jupter notebooks for the thesis experiments (in german)
 ├── src/
 │   └── data_science_agent/
 │       ├── dtos/       # language specific DTO's used for structered LLM outputs
@@ -58,6 +59,7 @@ data-science-agent/
 │   ├── test.py             # example script used for most experiments
 │   ├── test_parallel.py    # example script for parallel experiment execution (time speedup)
 │   └── rq_continous.py     # example script for experiment with multiple runs on the same input      
+├── study               # contains a copy of the conducted study
 ├── pyproject.toml
 ├── README.md
 └── uv.lock
